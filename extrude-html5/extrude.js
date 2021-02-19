@@ -20376,7 +20376,7 @@ function __ZL5framev() {
   +_fonsDrawText($20, $mul38, $19 * 20.0, (HEAP8[$agg$tmp25$byval_copy + 11 >> 0] | 0) < 0 ? HEAP32[$agg$tmp25$byval_copy >> 2] | 0 : $agg$tmp25$byval_copy, 0);
   __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp25$byval_copy);
   __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($ref$tmp19);
-  __ZNSt3__29to_stringEi($ref$tmp19, HEAP32[3178] | 0);
+  __ZNSt3__29to_stringEi($ref$tmp19, (HEAP32[3178] | 0) + 1 | 0);
   $call$i23 = __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6insertEmPKc($ref$tmp19, 0, 45675) | 0;
   HEAP32[$agg$tmp25$byval_copy >> 2] = HEAP32[$call$i23 >> 2];
   HEAP32[$agg$tmp25$byval_copy + 4 >> 2] = HEAP32[$call$i23 + 4 >> 2];
