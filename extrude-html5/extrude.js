@@ -1361,7 +1361,7 @@ function _stm_js_perfnow(){ return performance.now(); }
 
 
 // STATICTOP = STATIC_BASE + 2193976;
-/* global initializers */  __ATINIT__.push({ func: function() { globalCtors() } });
+/* global initializers */  __ATINIT__.push({ func: function() { __GLOBAL__sub_I_main_cpp() } }, { func: function() { __GLOBAL__sub_I_bind_cpp() } });
 
 
 memoryInitializer = "extrude.html.mem";
@@ -4385,7 +4385,6 @@ var asm = (/** @suppress {uselessCode} */ function(global, env, buffer) {
   tempFloat = 0.0;
 
 // EMSCRIPTEN_START_FUNCS
-
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E9parseExprEv($this) {
  $this = $this | 0;
  var $0 = 0, $Ex = 0, $Global = 0, $Names = 0, $Names297 = 0, $Names684 = 0, $Names745 = 0, $RHS538 = 0, $agg$tmp = 0, $agg$tmp121 = 0, $agg$tmp127 = 0, $agg$tmp170 = 0, $agg$tmp225 = 0, $agg$tmp231 = 0, $agg$tmp242 = 0, $agg$tmp248 = 0, $agg$tmp254 = 0, $agg$tmp265 = 0, $agg$tmp271 = 0, $agg$tmp30 = 0, $agg$tmp327 = 0, $agg$tmp333 = 0, $agg$tmp339 = 0, $agg$tmp345 = 0, $agg$tmp356 = 0, $agg$tmp36 = 0, $agg$tmp362 = 0, $agg$tmp368 = 0, $agg$tmp374 = 0, $agg$tmp382 = 0, $agg$tmp405 = 0, $agg$tmp411 = 0, $agg$tmp417 = 0, $agg$tmp42 = 0, $agg$tmp442 = 0, $agg$tmp448 = 0, $agg$tmp454 = 0, $agg$tmp465 = 0, $agg$tmp471 = 0, $agg$tmp477 = 0, $agg$tmp48 = 0, $agg$tmp485 = 0, $agg$tmp500 = 0, $agg$tmp54 = 0, $agg$tmp575 = 0, $agg$tmp581 = 0, $agg$tmp587 = 0, $agg$tmp593 = 0, $agg$tmp593$byval_copy = 0, $call100 = 0, $call101 = 0, $call105 = 0, $call108 = 0, $call120 = 0, $call126 = 0, $call142 = 0, $call152 = 0, $call153 = 0, $call159 = 0, $call169 = 0, $call177 = 0, $call190 = 0, $call191 = 0, $call196 = 0, $call207 = 0, $call208 = 0, $call214 = 0, $call224 = 0, $call230 = 0, $call241 = 0, $call247 = 0, $call253 = 0, $call264 = 0, $call270 = 0, $call281 = 0, $call282 = 0, $call287 = 0, $call29 = 0, $call298 = 0, $call305 = 0, $call326 = 0, $call332 = 0, $call338 = 0, $call344 = 0, $call35 = 0, $call355 = 0, $call361 = 0, $call367 = 0, $call373 = 0, $call381 = 0, $call387 = 0, $call404 = 0, $call41 = 0, $call410 = 0, $call416 = 0, $call424 = 0, $call441 = 0, $call447 = 0, $call453 = 0, $call464 = 0, $call47 = 0, $call470 = 0, $call476 = 0, $call484 = 0, $call490 = 0, $call499 = 0, $call505 = 0, $call506 = 0, $call511 = 0, $call527 = 0, $call528 = 0, $call53 = 0, $call534 = 0, $call540 = 0, $call557 = 0, $call558 = 0, $call564 = 0, $call574 = 0, $call580 = 0, $call586 = 0, $call592 = 0, $call60 = 0, $call604 = 0, $call605 = 0, $call611 = 0, $call622 = 0, $call636 = 0, $call647 = 0, $call662 = 0, $call673 = 0, $call685 = 0, $call691 = 0, $call70 = 0, $call718 = 0, $call729 = 0, $call739 = 0, $call740 = 0, $call746 = 0, $call753 = 0, $call775 = 0, $call84 = 0, $call85 = 0, $call90 = 0, $retval$0 = 0, $retval$1 = 0, $retval$10 = 0, $retval$11 = 0, $retval$12 = 0, $retval$13 = 0, $retval$14 = 0, $retval$15 = 0, $retval$16 = 0, $retval$17 = 0, $retval$2 = 0, $retval$21 = 0, $retval$22 = 0, $retval$23 = 0, $retval$24 = 0, $retval$25 = 0, $retval$26 = 0, $retval$27 = 0, $retval$28 = 0, $retval$29 = 0, $retval$3 = 0, $retval$30 = 0, $retval$31 = 0, $retval$32 = 0, $retval$33 = 0, $retval$34 = 0, $retval$35 = 0, $retval$36 = 0, $retval$37 = 0, $retval$42 = 0, $retval$43 = 0, $retval$47 = 0, $retval$48 = 0, $retval$49 = 0, $retval$7 = 0, $retval$8 = 0, $retval$9 = 0, label = 0, sp = 0;
@@ -5562,6 +5561,7 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  STACKTOP = sp;
  return $retval$49 | 0;
 }
+
 function _malloc($bytes) {
  $bytes = $bytes | 0;
  var $$pre$phi$i$iZ2D = 0, $$pre$phi$i185Z2D = 0, $$pre$phi$i48$iZ2D = 0, $$pre$phi$iZ2D = 0, $$pre$phiZ2D = 0, $0 = 0, $1 = 0, $10 = 0, $100 = 0, $101 = 0, $103 = 0, $104 = 0, $105 = 0, $106 = 0, $107 = 0, $110 = 0, $114 = 0, $115 = 0, $117 = 0, $119 = 0, $120 = 0, $121 = 0, $124 = 0, $126 = 0, $128 = 0, $13 = 0, $131 = 0, $132 = 0, $136 = 0, $137 = 0, $138 = 0, $139 = 0, $14 = 0, $143 = 0, $144 = 0, $145 = 0, $148 = 0, $149 = 0, $15 = 0, $150 = 0, $151 = 0, $152 = 0, $157 = 0, $158 = 0, $159 = 0, $16 = 0, $162 = 0, $163 = 0, $164 = 0, $166 = 0, $167 = 0, $169 = 0, $172 = 0, $173 = 0, $175 = 0, $178 = 0, $179 = 0, $18 = 0, $181 = 0, $183 = 0, $184 = 0, $185 = 0, $187 = 0, $188 = 0, $19 = 0, $190 = 0, $193 = 0, $194 = 0, $196 = 0, $197 = 0, $2 = 0, $21 = 0, $22 = 0, $24 = 0, $25 = 0, $26 = 0, $27 = 0, $3 = 0, $30 = 0, $31 = 0, $32 = 0, $33 = 0, $34 = 0, $38 = 0, $39 = 0, $40 = 0, $43 = 0, $44 = 0, $45 = 0, $47 = 0, $48 = 0, $50 = 0, $54 = 0, $57 = 0, $58 = 0, $59 = 0, $60 = 0, $63 = 0, $64 = 0, $65 = 0, $66 = 0, $67 = 0, $7 = 0, $71 = 0, $72 = 0, $73 = 0, $76 = 0, $77 = 0, $78 = 0, $8 = 0, $80 = 0, $81 = 0, $83 = 0, $86 = 0, $87 = 0, $89 = 0, $9 = 0, $90 = 0, $92 = 0, $93 = 0, $96 = 0, $97 = 0, $98 = 0, $F$0$i$i = 0, $F104$0 = 0, $F197$0$i = 0, $F224$0$i$i = 0, $F290$0$i = 0, $I252$0$i$i = 0, $I316$0$i = 0, $I57$0$i$i = 0, $K105$011$i$i = 0, $K305$010$i$i = 0, $K373$017$i = 0, $R$1$i = 0, $R$1$i$be = 0, $R$1$i$i = 0, $R$1$i$i$be = 0, $R$1$i$i$ph = 0, $R$1$i$ph = 0, $R$1$i173 = 0, $R$1$i173$be = 0, $R$1$i173$ph = 0, $R$3$i = 0, $R$3$i$i = 0, $R$3$i177 = 0, $RP$1$i = 0, $RP$1$i$be = 0, $RP$1$i$i = 0, $RP$1$i$i$be = 0, $RP$1$i$i$ph = 0, $RP$1$i$ph = 0, $RP$1$i172 = 0, $RP$1$i172$be = 0, $RP$1$i172$ph = 0, $T$0$lcssa$i = 0, $T$0$lcssa$i$i = 0, $T$0$lcssa$i50$i = 0, $T$010$i$i = 0, $T$016$i = 0, $T$09$i$i = 0, $add$i$i = 0, $add$i188 = 0, $add$ptr$i = 0, $add$ptr$i$i$i = 0, $add$ptr$i164 = 0, $add$ptr14$i$i = 0, $add$ptr16$i$i = 0, $add$ptr166 = 0, $add$ptr17$i$i = 0, $add$ptr193 = 0, $add$ptr2$i$i = 0, $add$ptr227$i = 0, $add$ptr262$i = 0, $add$ptr4$i$i = 0, $add$ptr4$i$i$i = 0, $add$ptr4$i28$i = 0, $add$ptr4$i57$i = 0, $add$ptr7$i$i = 0, $add$ptr81$i$i = 0, $add$ptr95 = 0, $add144 = 0, $add150$i = 0, $add17$i = 0, $add17$i191 = 0, $add177$i = 0, $add215$i = 0, $add26$i$i = 0, $add268$i = 0, $add278$i$i = 0, $add346$i = 0, $add54$i = 0, $add64 = 0, $add8 = 0, $add83$i$i = 0, $add9$i = 0, $and$i145 = 0, $and104$i = 0, $and11$i = 0, $and12$i = 0, $and13$i = 0, $and145 = 0, $and17$i = 0, $and194$i = 0, $and264$i$i = 0, $and268$i$i = 0, $and273$i$i = 0, $and3$i = 0, $and331$i = 0, $and336$i = 0, $and341$i = 0, $and37$i$i = 0, $and41 = 0, $and46 = 0, $and49 = 0, $and53 = 0, $and57 = 0, $and6$i = 0, $and61 = 0, $and64$i = 0, $and69$i$i = 0, $and73$i = 0, $and73$i$i = 0, $and74 = 0, $and77$i = 0, $and78$i$i = 0, $and8$i = 0, $and80$i = 0, $and81$i = 0, $and85$i = 0, $and89$i = 0, $and9$i = 0, $arrayidx = 0, $arrayidx$i$i = 0, $arrayidx$i39$i = 0, $arrayidx103 = 0, $arrayidx103$i$i = 0, $arrayidx107$i$i = 0, $arrayidx113$i = 0, $arrayidx123$i$i = 0, $arrayidx126$i$i = 0, $arrayidx143$i$i = 0, $arrayidx151$i = 0, $arrayidx155$i = 0, $arrayidx161$i = 0, $arrayidx165$i174 = 0, $arrayidx184$i = 0, $arrayidx196$i = 0, $arrayidx204$i = 0, $arrayidx223$i$i = 0, $arrayidx287$i$i = 0, $arrayidx289$i = 0, $arrayidx325$i$i = 0, $arrayidx355$i = 0, $arrayidx394$i = 0, $arrayidx61$i = 0, $arrayidx65$i = 0, $arrayidx66 = 0, $arrayidx71$i = 0, $arrayidx75$i = 0, $arrayidx91$i$i = 0, $arrayidx94$i = 0, $arrayidx96$i$i = 0, $bk = 0, $bk136$i = 0, $bk47$i = 0, $bk78 = 0, $bk82$i$i = 0, $br$2$ph$i = 0, $call131$i = 0, $call132$i = 0, $call37$i = 0, $call68$i = 0, $call83$i = 0, $child$i$i = 0, $child166$i$i = 0, $child289$i$i = 0, $child357$i = 0, $cmp102$i = 0, $cmp141$i = 0, $cmp32$i = 0, $cond = 0, $cond$i$i$i = 0, $cond$i20$i = 0, $cond$i56$i = 0, $cond115$i = 0, $cond13$i$i = 0, $cond5$i = 0, $fd139$i = 0, $fd148$i$i = 0, $fd344$i$i = 0, $fd416$i = 0, $fd50$i = 0, $fd59$i$i = 0, $fd68$pre$phi$i$iZ2D = 0, $fd69 = 0, $fd85$i$i = 0, $fd9 = 0, $head$i$i = 0, $head179 = 0, $head182$i = 0, $head208$i$i = 0, $head25 = 0, $head274$i = 0, $idx$0$i = 0, $magic$i$i = 0, $nb$0 = 0, $neg$i190 = 0, $oldfirst$0$i$i = 0, $qsize$0$i$i = 0, $retval$0 = 0, $rsize$0$i = 0, $rsize$0$i154 = 0, $rsize$1$i = 0, $rsize$3$i = 0, $rsize$4$lcssa$i = 0, $rsize$420$i = 0, $rsize$420$i$ph = 0, $rst$0$i = 0, $rst$1$i = 0, $shl$i146 = 0, $shl105 = 0, $shl198$i = 0, $shl22 = 0, $shl226$i$i = 0, $shl265$i$i = 0, $shl270$i$i = 0, $shl291$i = 0, $shl294$i$i = 0, $shl333$i = 0, $shl338$i = 0, $shl362$i = 0, $shl37 = 0, $shl39$i$i = 0, $shl60$i = 0, $shl70$i$i = 0, $shl75$i$i = 0, $shl9$i = 0, $shl90 = 0, $shl95$i$i = 0, $shr = 0, $shr$i$i = 0, $shr$i141 = 0, $shr$i36$i = 0, $shr101 = 0, $shr11$i = 0, $shr15$i = 0, $shr194$i = 0, $shr214$i$i = 0, $shr253$i$i = 0, $shr283$i = 0, $shr3 = 0, $shr318$i = 0, $shr4$i = 0, $shr47 = 0, $shr51 = 0, $shr55 = 0, $shr58$i$i = 0, $shr59 = 0, $shr7$i = 0, $shr75$i = 0, $shr79$i = 0, $shr83$i = 0, $shr87$i = 0, $size188$i$le = 0, $size245$i = 0, $sizebits$0$i = 0, $sp$0$i$i = 0, $sp$0$i$i$i = 0, $sp$0116$i = 0, $sp$1115$i = 0, $spec$select$i159 = 0, $spec$select100$i = 0, $spec$select3$i = 0, $ssize$2$ph$i = 0, $sub$i140 = 0, $sub$i189 = 0, $sub$ptr$sub$i = 0, $sub$ptr$sub$i$i = 0, $sub101$i = 0, $sub112$i = 0, $sub16$i$i = 0, $sub160 = 0, $sub172$i = 0, $sub18$i$i = 0, $sub190 = 0, $sub2$i = 0, $sub260$i = 0, $sub31$i = 0, $sub33$i = 0, $sub41$i = 0, $sub44 = 0, $sub5$i$i = 0, $sub5$i$i$i = 0, $sub5$i58$i = 0, $sub70$i = 0, $sub91 = 0, $t$0$i = 0, $t$0$i153 = 0, $t$2$i = 0, $t$4$i = 0, $t$519$i = 0, $t$519$i$ph = 0, $tbase$799$i = 0, $tsize$2687886$i = 0, $tsize$4$i = 0, $tsize$798$i = 0, $v$0$i = 0, $v$0$i155 = 0, $v$1$i = 0, $v$3$i = 0, $v$3$i222 = 0, $v$4$lcssa$i = 0, $v$421$i = 0, $v$421$i$ph = 0, label = 0, sp = 0, $181$looptemp = 0;
@@ -7448,490 +7448,6 @@ function _stbi__create_png_image_raw($a, $raw, $raw_len, $out_n, $x, $y, $depth,
  }
  return 0;
 }
-function __ZN13TPPLPartition17MonotonePartitionEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $monotonePolys) {
- $this = $this | 0;
- $inpolys = $inpolys | 0;
- $monotonePolys = $monotonePolys | 0;
- var $$pn289469 = 0, $$pn464 = 0, $$pn467 = 0, $0 = 0, $17 = 0, $18 = 0, $2 = 0, $22 = 0, $24 = 0, $26 = 0, $30 = 0, $31 = 0, $40 = 0, $42 = 0, $45 = 0, $49 = 0, $5 = 0, $50 = 0, $54 = 0, $56 = 0, $58 = 0, $61 = 0, $67 = 0, $68 = 0, $72 = 0, $75 = 0, $78 = 0, $9 = 0, $__next_$i$i = 0, $__value_$i = 0, $__value_$i$i$i$i$i318 = 0, $__value_$i$i$i$i$i356 = 0, $__value_$i298 = 0, $__value_$i300 = 0, $__value_$i328 = 0, $__value_$i409 = 0, $__x$addr$0$i$i$i$i = 0, $__x$addr$0$i$i$i$i334 = 0, $__x$addr$0$i$i$i$i394 = 0, $__xx$0$in$i$i$i = 0, $__xx$0$in$i$i$i339 = 0, $__xx$0$in$i$i$i399 = 0, $add = 0, $add29 = 0, $agg$tmp = 0, $agg$tmp2$i$byval_copy = 0, $agg$tmp2$i366 = 0, $arrayidx = 0, $arrayidx109 = 0, $arrayidx136 = 0, $arrayidx205 = 0, $arrayidx278 = 0, $arrayidx292$pre$phiZ2D = 0, $arrayidx369 = 0, $arrayidx383$pre$phiZ2D = 0, $arrayidx401 = 0, $arrayidx405 = 0, $arrayidx78 = 0, $arrayidx91 = 0, $call12 = 0, $call120 = 0, $call121 = 0, $call28 = 0, $call3$i$i = 0, $call3$i$i355 = 0, $call3$i$i372 = 0, $call392 = 0, $call417 = 0, $call428 = 0, $call61 = 0, $call70 = 0, $cmp42 = 0, $cmp63489 = 0, $edgeTree = 0, $error$2$off0 = 0, $error$2$off0$ph = 0, $i$0493 = 0, $i$1490 = 0, $i$2487 = 0, $i$3485 = 0, $i$4476 = 0, $i$5472 = 0, $inc411 = 0, $iter$sroa$0$0500 = 0, $iter$sroa$0$0503 = 0, $iter$sroa$0$1495 = 0, $iter$sroa$0$1498 = 0, $mul = 0, $newedge = 0, $newnumvertices = 0, $next406 = 0, $numvertices$0$lcssa = 0, $numvertices$0502 = 0, $p1 = 0, $p141 = 0, $p2 = 0, $p214 = 0, $p334 = 0, $p79 = 0, $p80 = 0, $polystartindex$0497 = 0, $previous149 = 0, $previous225 = 0, $previous295 = 0, $retval$0$i$i$i = 0, $retval$0$i$i$i347 = 0, $retval$0$i$i$i407 = 0, $retval$1 = 0, $size$0$lcssa = 0, $size$0466 = 0, $size$1470 = 0, $sub204 = 0, $sub320 = 0, $v2$0 = 0, $vindex2$0 = 0, $vindex2$1 = 0, $vnext$1 = 0, label = 0, sp = 0, $polystartindex$0497$looptemp = 0, $__xx$0$in$i$i$i399$looptemp = 0, $__xx$0$in$i$i$i339$looptemp = 0, $__xx$0$in$i$i$i$looptemp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 96 | 0;
- $agg$tmp2$i$byval_copy = sp + 56 | 0;
- $agg$tmp2$i366 = sp + 84 | 0;
- $newnumvertices = sp + 80 | 0;
- $newedge = sp;
- $agg$tmp = sp + 88 | 0;
- $edgeTree = sp + 68 | 0;
- $__next_$i$i = $inpolys + 4 | 0;
- $iter$sroa$0$0500 = HEAP32[$__next_$i$i >> 2] | 0;
- $0 = $iter$sroa$0$0500;
- L1 : do if (($inpolys | 0) == ($0 | 0)) {
-  $numvertices$0$lcssa = 0;
-  label = 5;
- } else {
-  $2 = $0;
-  $iter$sroa$0$0503 = $iter$sroa$0$0500;
-  $numvertices$0502 = 0;
-  while (1) {
-   $__value_$i = $iter$sroa$0$0503 + 8 | 0;
-   if (!(__ZNK8TPPLPoly5ValidEv($__value_$i) | 0)) {
-    $retval$1 = 0;
-    break L1;
-   }
-   $add = (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i) | 0) + $numvertices$0502 | 0;
-   $iter$sroa$0$0503 = HEAP32[$2 + 4 >> 2] | 0;
-   $2 = $iter$sroa$0$0503;
-   if (($inpolys | 0) == ($2 | 0)) {
-    $numvertices$0$lcssa = $add;
-    label = 5;
-    break;
-   } else $numvertices$0502 = $add;
-  }
- } while (0);
- if ((label | 0) == 5) {
-  $mul = $numvertices$0$lcssa * 3 | 0;
-  $call12 = __Znam($mul >>> 0 > 134217727 ? -1 : $mul << 5) | 0;
-  HEAP32[$newnumvertices >> 2] = $numvertices$0$lcssa;
-  $iter$sroa$0$1495 = HEAP32[$__next_$i$i >> 2] | 0;
-  $5 = $iter$sroa$0$1495;
-  if (($inpolys | 0) != ($5 | 0)) {
-   $9 = $5;
-   $iter$sroa$0$1498 = $iter$sroa$0$1495;
-   $polystartindex$0497 = 0;
-   do {
-    $__value_$i298 = $iter$sroa$0$1498 + 8 | 0;
-    $polystartindex$0497$looptemp = $polystartindex$0497;
-    $polystartindex$0497 = (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i298) | 0) + $polystartindex$0497 | 0;
-    if ((__ZNK8TPPLPoly12GetNumPointsEv($__value_$i298) | 0) > 0) {
-     $i$0493 = 0;
-     do {
-      $call28 = __ZN8TPPLPoly8GetPointEl($__value_$i298, $i$0493) | 0;
-      $add29 = $i$0493 + $polystartindex$0497$looptemp | 0;
-      $arrayidx = $call12 + ($add29 << 5) | 0;
-      HEAP32[$arrayidx >> 2] = HEAP32[$call28 >> 2];
-      HEAP32[$arrayidx + 4 >> 2] = HEAP32[$call28 + 4 >> 2];
-      HEAP32[$arrayidx + 8 >> 2] = HEAP32[$call28 + 8 >> 2];
-      HEAP32[$arrayidx + 12 >> 2] = HEAP32[$call28 + 12 >> 2];
-      HEAP32[$arrayidx + 16 >> 2] = HEAP32[$call28 + 16 >> 2];
-      HEAP32[$arrayidx + 20 >> 2] = HEAP32[$call28 + 20 >> 2];
-      HEAP32[$call12 + ($add29 << 5) + 24 >> 2] = (($i$0493 | 0) == 0 ? $polystartindex$0497 : $add29) + -1;
-      $cmp42 = ($i$0493 | 0) == ((__ZNK8TPPLPoly12GetNumPointsEv($__value_$i298) | 0) + -1 | 0);
-      HEAP32[$call12 + ($add29 << 5) + 28 >> 2] = $cmp42 ? $polystartindex$0497$looptemp : $add29 + 1 | 0;
-      $i$0493 = $i$0493 + 1 | 0;
-     } while (($i$0493 | 0) < (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i298) | 0));
-    }
-    $iter$sroa$0$1498 = HEAP32[$9 + 4 >> 2] | 0;
-    $9 = $iter$sroa$0$1498;
-   } while (($inpolys | 0) != ($9 | 0));
-  }
-  $call61 = __Znam($numvertices$0$lcssa >>> 0 > 1073741823 ? -1 : $numvertices$0$lcssa << 2) | 0;
-  $cmp63489 = ($numvertices$0$lcssa | 0) > 0;
-  if ($cmp63489) {
-   $i$1490 = 0;
-   do {
-    HEAP32[$call61 + ($i$1490 << 2) >> 2] = $i$1490;
-    $i$1490 = $i$1490 + 1 | 0;
-   } while (($i$1490 | 0) != ($numvertices$0$lcssa | 0));
-  }
-  __ZN13TPPLPartition12VertexSorterC2EPNS_14MonotoneVertexE($agg$tmp, $call12);
-  HEAP32[$agg$tmp2$i$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
-  __ZNSt3__26__sortIRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($call61, $call61 + ($numvertices$0$lcssa << 2) | 0, $agg$tmp2$i$byval_copy);
-  $call70 = __Znam(($numvertices$0$lcssa | 0) < 0 ? -1 : $mul) | 0;
-  if ($cmp63489) {
-   $i$2487 = 0;
-   do {
-    $arrayidx78 = $call12 + (HEAP32[$call12 + ($i$2487 << 5) + 28 >> 2] << 5) | 0;
-    $p79 = $call12 + (HEAP32[$call12 + ($i$2487 << 5) + 24 >> 2] << 5) | 0;
-    $p80 = $call12 + ($i$2487 << 5) | 0;
-    do if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $p79, $p80) | 0) if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $arrayidx78, $p80) | 0) {
-     $arrayidx91 = $call70 + $i$2487 | 0;
-     if (__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $arrayidx78, $p79, $p80) | 0) {
-      HEAP8[$arrayidx91 >> 0] = 1;
-      break;
-     } else {
-      HEAP8[$arrayidx91 >> 0] = 3;
-      break;
-     }
-    } else label = 21; else label = 21; while (0);
-    do if ((label | 0) == 21) {
-     label = 0;
-     if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $p80, $p79) | 0) if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $p80, $arrayidx78) | 0) {
-      $arrayidx109 = $call70 + $i$2487 | 0;
-      if (__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $arrayidx78, $p79, $p80) | 0) {
-       HEAP8[$arrayidx109 >> 0] = 2;
-       break;
-      } else {
-       HEAP8[$arrayidx109 >> 0] = 4;
-       break;
-      }
-     }
-     HEAP8[$call70 + $i$2487 >> 0] = 0;
-    } while (0);
-    $i$2487 = $i$2487 + 1 | 0;
-   } while (($i$2487 | 0) != ($numvertices$0$lcssa | 0));
-  }
-  $17 = $mul >>> 0 > 1073741823 ? -1 : $mul << 2;
-  $call120 = __Znam($17) | 0;
-  __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEEC2ERKS4_($edgeTree, $agg$tmp2$i$byval_copy);
-  $call121 = __Znam($17) | 0;
-  if ($cmp63489) {
-   $__value_$i$i$i$i$i318 = $edgeTree + 4 | 0;
-   $i$3485 = 0;
-   do {
-    HEAP32[$call121 + ($i$3485 << 2) >> 2] = $__value_$i$i$i$i$i318;
-    $i$3485 = $i$3485 + 1 | 0;
-   } while (($i$3485 | 0) != ($numvertices$0$lcssa | 0));
-   if ($cmp63489) {
-    $p1 = $newedge + 8 | 0;
-    $p2 = $newedge + 32 | 0;
-    $__value_$i$i$i$i$i356 = $edgeTree + 4 | 0;
-    $i$4476 = 0;
-    L50 : while (1) {
-     $18 = HEAP32[$call61 + ($i$4476 << 2) >> 2] | 0;
-     $arrayidx136 = $call12 + ($18 << 5) | 0;
-     L52 : do switch (HEAP8[$call70 + $18 >> 0] | 0) {
-     case 1:
-      {
-       HEAP32[$p1 >> 2] = HEAP32[$arrayidx136 >> 2];
-       HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
-       HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
-       HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
-       HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
-       HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
-       $p141 = $call12 + (HEAP32[$call12 + ($18 << 5) + 28 >> 2] << 5) | 0;
-       HEAP32[$p2 >> 2] = HEAP32[$p141 >> 2];
-       HEAP32[$p2 + 4 >> 2] = HEAP32[$p141 + 4 >> 2];
-       HEAP32[$p2 + 8 >> 2] = HEAP32[$p141 + 8 >> 2];
-       HEAP32[$p2 + 12 >> 2] = HEAP32[$p141 + 12 >> 2];
-       HEAP32[$p2 + 16 >> 2] = HEAP32[$p141 + 16 >> 2];
-       HEAP32[$p2 + 20 >> 2] = HEAP32[$p141 + 20 >> 2];
-       HEAP32[$newedge >> 2] = $18;
-       __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE25__emplace_unique_key_argsIS2_JRKS2_EEENS_4pairINS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEEbEERKT_DpOT0_($agg$tmp2$i$byval_copy, $edgeTree, $newedge, $newedge);
-       HEAP32[$call121 + ($18 << 2) >> 2] = HEAP32[$agg$tmp2$i$byval_copy >> 2];
-       HEAP32[$call120 + ($18 << 2) >> 2] = $18;
-       break;
-      }
-     case 2:
-      {
-       $previous149 = $call12 + ($18 << 5) + 24 | 0;
-       $22 = HEAP32[$previous149 >> 2] | 0;
-       if ((HEAP32[$call121 + ($22 << 2) >> 2] | 0) == ($__value_$i$i$i$i$i356 | 0)) {
-        $error$2$off0$ph = 1;
-        break L50;
-       }
-       $24 = HEAP32[$call120 + ($22 << 2) >> 2] | 0;
-       if ((HEAP8[$call70 + $24 >> 0] | 0) == 4) {
-        __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $18, $24, $call70, $call121, $edgeTree, $call120);
-        $26 = HEAP32[$previous149 >> 2] | 0;
-       } else $26 = $22;
-       HEAP32[$agg$tmp2$i366 >> 2] = HEAP32[$call121 + ($26 << 2) >> 2];
-       HEAP32[$agg$tmp2$i$byval_copy >> 2] = HEAP32[$agg$tmp2$i366 >> 2];
-       __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE5eraseENS_21__tree_const_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEE($edgeTree, $agg$tmp2$i$byval_copy) | 0;
-       break;
-      }
-     case 3:
-      {
-       HEAP32[$p1 >> 2] = HEAP32[$arrayidx136 >> 2];
-       HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
-       HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
-       HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
-       HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
-       HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
-       HEAP32[$p2 >> 2] = HEAP32[$arrayidx136 >> 2];
-       HEAP32[$p2 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
-       HEAP32[$p2 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
-       HEAP32[$p2 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
-       HEAP32[$p2 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
-       HEAP32[$p2 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
-       $call3$i$i372 = __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE13__lower_boundIS2_EENS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEERKT_SD_PNS_15__tree_end_nodeIPNS_16__tree_node_baseISB_EEEE($edgeTree, $newedge, HEAP32[$__value_$i$i$i$i$i356 >> 2] | 0, $__value_$i$i$i$i$i356) | 0;
-       if (($call3$i$i372 | 0) == (HEAP32[$edgeTree >> 2] | 0)) {
-        $error$2$off0$ph = 1;
-        break L50;
-       }
-       $30 = HEAP32[$call3$i$i372 >> 2] | 0;
-       if (!$30) {
-        $__xx$0$in$i$i$i399 = $call3$i$i372;
-        do {
-         $__xx$0$in$i$i$i399$looptemp = $__xx$0$in$i$i$i399;
-         $__xx$0$in$i$i$i399 = HEAP32[$__xx$0$in$i$i$i399 + 8 >> 2] | 0;
-        } while ((HEAP32[$__xx$0$in$i$i$i399 >> 2] | 0) == ($__xx$0$in$i$i$i399$looptemp | 0));
-        $retval$0$i$i$i407 = $__xx$0$in$i$i$i399;
-       } else {
-        $__x$addr$0$i$i$i$i394 = $30;
-        while (1) {
-         $31 = HEAP32[$__x$addr$0$i$i$i$i394 + 4 >> 2] | 0;
-         if (!$31) {
-          $retval$0$i$i$i407 = $__x$addr$0$i$i$i$i394;
-          break;
-         } else $__x$addr$0$i$i$i$i394 = $31;
-        }
-       }
-       $__value_$i409 = $retval$0$i$i$i407 + 16 | 0;
-       __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $18, HEAP32[$call120 + (HEAP32[$__value_$i409 >> 2] << 2) >> 2] | 0, $call70, $call121, $edgeTree, $call120);
-       $sub204 = (HEAP32[$newnumvertices >> 2] | 0) + -2 | 0;
-       $arrayidx205 = $call12 + ($sub204 << 5) | 0;
-       HEAP32[$call120 + (HEAP32[$__value_$i409 >> 2] << 2) >> 2] = $18;
-       HEAP32[$p1 >> 2] = HEAP32[$arrayidx205 >> 2];
-       HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx205 + 4 >> 2];
-       HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx205 + 8 >> 2];
-       HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx205 + 12 >> 2];
-       HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx205 + 16 >> 2];
-       HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx205 + 20 >> 2];
-       $p214 = $call12 + (HEAP32[$call12 + ($sub204 << 5) + 28 >> 2] << 5) | 0;
-       HEAP32[$p2 >> 2] = HEAP32[$p214 >> 2];
-       HEAP32[$p2 + 4 >> 2] = HEAP32[$p214 + 4 >> 2];
-       HEAP32[$p2 + 8 >> 2] = HEAP32[$p214 + 8 >> 2];
-       HEAP32[$p2 + 12 >> 2] = HEAP32[$p214 + 12 >> 2];
-       HEAP32[$p2 + 16 >> 2] = HEAP32[$p214 + 16 >> 2];
-       HEAP32[$p2 + 20 >> 2] = HEAP32[$p214 + 20 >> 2];
-       HEAP32[$newedge >> 2] = $sub204;
-       __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE25__emplace_unique_key_argsIS2_JRKS2_EEENS_4pairINS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEEbEERKT_DpOT0_($agg$tmp2$i$byval_copy, $edgeTree, $newedge, $newedge);
-       HEAP32[$call121 + ($sub204 << 2) >> 2] = HEAP32[$agg$tmp2$i$byval_copy >> 2];
-       HEAP32[$call120 + ($sub204 << 2) >> 2] = $sub204;
-       break;
-      }
-     case 4:
-      {
-       $previous225 = $call12 + ($18 << 5) + 24 | 0;
-       $40 = HEAP32[$previous225 >> 2] | 0;
-       if ((HEAP32[$call121 + ($40 << 2) >> 2] | 0) == ($__value_$i$i$i$i$i356 | 0)) {
-        $error$2$off0$ph = 1;
-        break L50;
-       }
-       $42 = HEAP32[$call120 + ($40 << 2) >> 2] | 0;
-       if ((HEAP8[$call70 + $42 >> 0] | 0) == 4) {
-        __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $18, $42, $call70, $call121, $edgeTree, $call120);
-        $45 = HEAP32[$previous225 >> 2] | 0;
-        $vindex2$0 = (HEAP32[$newnumvertices >> 2] | 0) + -2 | 0;
-       } else {
-        $45 = $40;
-        $vindex2$0 = $18;
-       }
-       HEAP32[$agg$tmp2$i366 >> 2] = HEAP32[$call121 + ($45 << 2) >> 2];
-       HEAP32[$agg$tmp2$i$byval_copy >> 2] = HEAP32[$agg$tmp2$i366 >> 2];
-       __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE5eraseENS_21__tree_const_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEE($edgeTree, $agg$tmp2$i$byval_copy) | 0;
-       HEAP32[$p1 >> 2] = HEAP32[$arrayidx136 >> 2];
-       HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
-       HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
-       HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
-       HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
-       HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
-       HEAP32[$p2 >> 2] = HEAP32[$arrayidx136 >> 2];
-       HEAP32[$p2 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
-       HEAP32[$p2 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
-       HEAP32[$p2 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
-       HEAP32[$p2 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
-       HEAP32[$p2 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
-       $call3$i$i355 = __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE13__lower_boundIS2_EENS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEERKT_SD_PNS_15__tree_end_nodeIPNS_16__tree_node_baseISB_EEEE($edgeTree, $newedge, HEAP32[$__value_$i$i$i$i$i356 >> 2] | 0, $__value_$i$i$i$i$i356) | 0;
-       if (($call3$i$i355 | 0) == (HEAP32[$edgeTree >> 2] | 0)) {
-        $error$2$off0$ph = 1;
-        break L50;
-       }
-       $49 = HEAP32[$call3$i$i355 >> 2] | 0;
-       if (!$49) {
-        $__xx$0$in$i$i$i339 = $call3$i$i355;
-        do {
-         $__xx$0$in$i$i$i339$looptemp = $__xx$0$in$i$i$i339;
-         $__xx$0$in$i$i$i339 = HEAP32[$__xx$0$in$i$i$i339 + 8 >> 2] | 0;
-        } while ((HEAP32[$__xx$0$in$i$i$i339 >> 2] | 0) == ($__xx$0$in$i$i$i339$looptemp | 0));
-        $retval$0$i$i$i347 = $__xx$0$in$i$i$i339;
-       } else {
-        $__x$addr$0$i$i$i$i334 = $49;
-        while (1) {
-         $50 = HEAP32[$__x$addr$0$i$i$i$i334 + 4 >> 2] | 0;
-         if (!$50) {
-          $retval$0$i$i$i347 = $__x$addr$0$i$i$i$i334;
-          break;
-         } else $__x$addr$0$i$i$i$i334 = $50;
-        }
-       }
-       $__value_$i328 = $retval$0$i$i$i347 + 16 | 0;
-       $arrayidx278 = $call120 + (HEAP32[$__value_$i328 >> 2] << 2) | 0;
-       $54 = HEAP32[$arrayidx278 >> 2] | 0;
-       if ((HEAP8[$call70 + $54 >> 0] | 0) == 4) {
-        __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $vindex2$0, $54, $call70, $call121, $edgeTree, $call120);
-        $arrayidx292$pre$phiZ2D = $call120 + (HEAP32[$__value_$i328 >> 2] << 2) | 0;
-       } else $arrayidx292$pre$phiZ2D = $arrayidx278;
-       HEAP32[$arrayidx292$pre$phiZ2D >> 2] = $vindex2$0;
-       break;
-      }
-     case 0:
-      {
-       $previous295 = $call12 + ($18 << 5) + 24 | 0;
-       $56 = HEAP32[$previous295 >> 2] | 0;
-       if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $arrayidx136, $call12 + ($56 << 5) | 0) | 0) {
-        if ((HEAP32[$call121 + ($56 << 2) >> 2] | 0) == ($__value_$i$i$i$i$i356 | 0)) {
-         $error$2$off0$ph = 1;
-         break L50;
-        }
-        $58 = HEAP32[$call120 + ($56 << 2) >> 2] | 0;
-        if ((HEAP8[$call70 + $58 >> 0] | 0) == 4) {
-         __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $18, $58, $call70, $call121, $edgeTree, $call120);
-         $sub320 = (HEAP32[$newnumvertices >> 2] | 0) + -2 | 0;
-         $61 = HEAP32[$previous295 >> 2] | 0;
-         $v2$0 = $call12 + ($sub320 << 5) | 0;
-         $vindex2$1 = $sub320;
-        } else {
-         $61 = $56;
-         $v2$0 = $arrayidx136;
-         $vindex2$1 = $18;
-        }
-        HEAP32[$agg$tmp2$i366 >> 2] = HEAP32[$call121 + ($61 << 2) >> 2];
-        HEAP32[$agg$tmp2$i$byval_copy >> 2] = HEAP32[$agg$tmp2$i366 >> 2];
-        __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE5eraseENS_21__tree_const_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEE($edgeTree, $agg$tmp2$i$byval_copy) | 0;
-        HEAP32[$p1 >> 2] = HEAP32[$v2$0 >> 2];
-        HEAP32[$p1 + 4 >> 2] = HEAP32[$v2$0 + 4 >> 2];
-        HEAP32[$p1 + 8 >> 2] = HEAP32[$v2$0 + 8 >> 2];
-        HEAP32[$p1 + 12 >> 2] = HEAP32[$v2$0 + 12 >> 2];
-        HEAP32[$p1 + 16 >> 2] = HEAP32[$v2$0 + 16 >> 2];
-        HEAP32[$p1 + 20 >> 2] = HEAP32[$v2$0 + 20 >> 2];
-        $p334 = $call12 + (HEAP32[$v2$0 + 28 >> 2] << 5) | 0;
-        HEAP32[$p2 >> 2] = HEAP32[$p334 >> 2];
-        HEAP32[$p2 + 4 >> 2] = HEAP32[$p334 + 4 >> 2];
-        HEAP32[$p2 + 8 >> 2] = HEAP32[$p334 + 8 >> 2];
-        HEAP32[$p2 + 12 >> 2] = HEAP32[$p334 + 12 >> 2];
-        HEAP32[$p2 + 16 >> 2] = HEAP32[$p334 + 16 >> 2];
-        HEAP32[$p2 + 20 >> 2] = HEAP32[$p334 + 20 >> 2];
-        HEAP32[$newedge >> 2] = $vindex2$1;
-        __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE25__emplace_unique_key_argsIS2_JRKS2_EEENS_4pairINS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEEbEERKT_DpOT0_($agg$tmp2$i$byval_copy, $edgeTree, $newedge, $newedge);
-        HEAP32[$call121 + ($vindex2$1 << 2) >> 2] = HEAP32[$agg$tmp2$i$byval_copy >> 2];
-        HEAP32[$call120 + ($vindex2$1 << 2) >> 2] = $18;
-        break L52;
-       };
-       HEAP32[$p1 >> 2] = HEAP32[$arrayidx136 >> 2];
-       HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
-       HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
-       HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
-       HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
-       HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
-       HEAP32[$p2 >> 2] = HEAP32[$arrayidx136 >> 2];
-       HEAP32[$p2 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
-       HEAP32[$p2 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
-       HEAP32[$p2 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
-       HEAP32[$p2 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
-       HEAP32[$p2 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
-       $call3$i$i = __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE13__lower_boundIS2_EENS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEERKT_SD_PNS_15__tree_end_nodeIPNS_16__tree_node_baseISB_EEEE($edgeTree, $newedge, HEAP32[$__value_$i$i$i$i$i356 >> 2] | 0, $__value_$i$i$i$i$i356) | 0;
-       if (($call3$i$i | 0) == (HEAP32[$edgeTree >> 2] | 0)) {
-        $error$2$off0$ph = 1;
-        break L50;
-       }
-       $67 = HEAP32[$call3$i$i >> 2] | 0;
-       if (!$67) {
-        $__xx$0$in$i$i$i = $call3$i$i;
-        do {
-         $__xx$0$in$i$i$i$looptemp = $__xx$0$in$i$i$i;
-         $__xx$0$in$i$i$i = HEAP32[$__xx$0$in$i$i$i + 8 >> 2] | 0;
-        } while ((HEAP32[$__xx$0$in$i$i$i >> 2] | 0) == ($__xx$0$in$i$i$i$looptemp | 0));
-        $retval$0$i$i$i = $__xx$0$in$i$i$i;
-       } else {
-        $__x$addr$0$i$i$i$i = $67;
-        while (1) {
-         $68 = HEAP32[$__x$addr$0$i$i$i$i + 4 >> 2] | 0;
-         if (!$68) {
-          $retval$0$i$i$i = $__x$addr$0$i$i$i$i;
-          break;
-         } else $__x$addr$0$i$i$i$i = $68;
-        }
-       }
-       $__value_$i300 = $retval$0$i$i$i + 16 | 0;
-       $arrayidx369 = $call120 + (HEAP32[$__value_$i300 >> 2] << 2) | 0;
-       $72 = HEAP32[$arrayidx369 >> 2] | 0;
-       if ((HEAP8[$call70 + $72 >> 0] | 0) == 4) {
-        __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $18, $72, $call70, $call121, $edgeTree, $call120);
-        $arrayidx383$pre$phiZ2D = $call120 + (HEAP32[$__value_$i300 >> 2] << 2) | 0;
-       } else $arrayidx383$pre$phiZ2D = $arrayidx369;
-       HEAP32[$arrayidx383$pre$phiZ2D >> 2] = $18;
-       break;
-      }
-     default:
-      {}
-     } while (0);
-     $i$4476 = $i$4476 + 1 | 0;
-     if (($i$4476 | 0) >= ($numvertices$0$lcssa | 0)) {
-      $error$2$off0$ph = 0;
-      break;
-     }
-    }
-    $75 = HEAP32[$newnumvertices >> 2] | 0;
-    $error$2$off0 = $error$2$off0$ph;
-   } else {
-    $75 = $numvertices$0$lcssa;
-    $error$2$off0 = 0;
-   }
-  } else {
-   $75 = $numvertices$0$lcssa;
-   $error$2$off0 = 0;
-  }
-  $call392 = __Znam(($75 | 0) > -1 ? $75 : -1) | 0;
-  _memset($call392 | 0, 0, $75 | 0) | 0;
-  if (!$error$2$off0) {
-   __ZN8TPPLPolyC2Ev($agg$tmp2$i$byval_copy);
-   if (($75 | 0) > 0) {
-    $i$5472 = 0;
-    do {
-     $arrayidx401 = $call392 + $i$5472 | 0;
-     if (!(HEAP8[$arrayidx401 >> 0] | 0)) {
-      $arrayidx405 = $call12 + ($i$5472 << 5) | 0;
-      $next406 = $call12 + ($i$5472 << 5) + 28 | 0;
-      $$pn464 = HEAP32[$next406 >> 2] | 0;
-      if (($$pn464 | 0) == ($i$5472 | 0)) $size$0$lcssa = 1; else {
-       $$pn467 = $$pn464;
-       $size$0466 = 1;
-       while (1) {
-        $inc411 = $size$0466 + 1 | 0;
-        $$pn467 = HEAP32[$call12 + ($$pn467 << 5) + 28 >> 2] | 0;
-        if (($$pn467 | 0) == ($i$5472 | 0)) {
-         $size$0$lcssa = $inc411;
-         break;
-        } else $size$0466 = $inc411;
-       }
-      }
-      __ZN8TPPLPoly4InitEl($agg$tmp2$i$byval_copy, $size$0$lcssa);
-      $call417 = __ZN8TPPLPolyixEi($agg$tmp2$i$byval_copy, 0) | 0;
-      HEAP32[$call417 >> 2] = HEAP32[$arrayidx405 >> 2];
-      HEAP32[$call417 + 4 >> 2] = HEAP32[$arrayidx405 + 4 >> 2];
-      HEAP32[$call417 + 8 >> 2] = HEAP32[$arrayidx405 + 8 >> 2];
-      HEAP32[$call417 + 12 >> 2] = HEAP32[$arrayidx405 + 12 >> 2];
-      HEAP32[$call417 + 16 >> 2] = HEAP32[$arrayidx405 + 16 >> 2];
-      HEAP32[$call417 + 20 >> 2] = HEAP32[$arrayidx405 + 20 >> 2];
-      $78 = HEAP32[$next406 >> 2] | 0;
-      HEAP8[$arrayidx401 >> 0] = 1;
-      HEAP8[$call392 + $78 >> 0] = 1;
-      if (($78 | 0) != ($i$5472 | 0)) {
-       $$pn289469 = $78;
-       $size$1470 = 1;
-       while (1) {
-        $vnext$1 = $call12 + ($$pn289469 << 5) | 0;
-        $call428 = __ZN8TPPLPolyixEi($agg$tmp2$i$byval_copy, $size$1470) | 0;
-        HEAP32[$call428 >> 2] = HEAP32[$vnext$1 >> 2];
-        HEAP32[$call428 + 4 >> 2] = HEAP32[$vnext$1 + 4 >> 2];
-        HEAP32[$call428 + 8 >> 2] = HEAP32[$vnext$1 + 8 >> 2];
-        HEAP32[$call428 + 12 >> 2] = HEAP32[$vnext$1 + 12 >> 2];
-        HEAP32[$call428 + 16 >> 2] = HEAP32[$vnext$1 + 16 >> 2];
-        HEAP32[$call428 + 20 >> 2] = HEAP32[$vnext$1 + 20 >> 2];
-        $$pn289469 = HEAP32[$call12 + ($$pn289469 << 5) + 28 >> 2] | 0;
-        HEAP8[$call392 + $$pn289469 >> 0] = 1;
-        if (($$pn289469 | 0) == ($i$5472 | 0)) break; else $size$1470 = $size$1470 + 1 | 0;
-       }
-      }
-      __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($monotonePolys, $agg$tmp2$i$byval_copy);
-     }
-     $i$5472 = $i$5472 + 1 | 0;
-    } while (($i$5472 | 0) < ($75 | 0));
-   }
-   __ZN8TPPLPolyD2Ev($agg$tmp2$i$byval_copy);
-  }
-  __ZdaPv($call12);
-  __ZdaPv($call61);
-  __ZdaPv($call70);
-  __ZdaPv($call121);
-  __ZdaPv($call120);
-  __ZdaPv($call392);
-  __ZNSt3__23setIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEED2Ev($edgeTree);
-  $retval$1 = ($error$2$off0 ^ 1) & 1;
- }
- STACKTOP = sp;
- return $retval$1 | 0;
-}
 
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E13parseFoldExprEv($this) {
  $this = $this | 0;
@@ -8439,481 +7955,457 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  return $retval$3 | 0;
 }
 
-function __ZN6DrMesh15triangulateFaceERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEERKNS1_IS5_NS3_IS5_EEEERK8DrBitmapb14Trianglulationd($this, $outline_points, $hole_list, $image, $wireframe, $type, $alpha_tolerance) {
+function __ZN13TPPLPartition17MonotonePartitionEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $monotonePolys) {
  $this = $this | 0;
- $outline_points = $outline_points | 0;
- $hole_list = $hole_list | 0;
- $image = $image | 0;
- $wireframe = $wireframe | 0;
- $type = $type | 0;
- $alpha_tolerance = +$alpha_tolerance;
- var $$cast579 = 0, $$cast582 = 0, $$in = 0, $$in631 = 0, $$in632 = 0, $$in633 = 0, $$in636 = 0, $0 = 0, $1 = 0, $101 = 0.0, $102 = 0.0, $104 = 0.0, $105 = 0.0, $11 = 0.0, $112 = 0, $117 = 0, $118 = 0, $122 = 0, $127 = 0, $128 = 0, $13 = 0.0, $132 = 0, $137 = 0, $138 = 0, $16 = 0, $17 = 0, $18 = 0, $19 = 0, $23 = 0, $25 = 0.0, $27 = 0.0, $32 = 0, $33 = 0, $47 = 0, $49 = 0, $50 = 0, $52 = 0, $54 = 0, $57 = 0, $60 = 0, $61 = 0, $62 = 0, $63 = 0, $65 = 0, $66 = 0, $7 = 0, $70 = 0, $71 = 0, $72 = 0, $73 = 0, $74 = 0, $75 = 0, $76 = 0, $77 = 0, $78 = 0, $79 = 0, $8 = 0, $81 = 0, $82 = 0, $83 = 0, $86 = 0, $87 = 0, $88 = 0, $9 = 0, $93 = 0, $94 = 0, $97 = 0, $98 = 0.0, $99 = 0.0, $__begin$sroa$0$0611 = 0, $__begin116$sroa$0$0569 = 0, $__begin116$sroa$0$0571 = 0, $__begin240$sroa$0$0601 = 0, $__begin240$sroa$0$0603 = 0, $__begin287$sroa$0$0596 = 0, $__begin302$sroa$0$0594 = 0, $__end_$i = 0, $__end_$i$i314 = 0, $__end_$i$i349 = 0, $__end_$i258 = 0, $__end_$i264 = 0, $__end_$i308 = 0, $__end_$i416 = 0, $__next_$i$i$i = 0, $__next_$i$i$i247 = 0, $__next_$i$i$i261 = 0, $__value_$i$i$i$i315 = 0, $__value_$i$i$i$i350 = 0, $add408 = 0, $add520 = 0.0, $add522 = 0.0, $add616 = 0.0, $add624 = 0.0, $agg$tmp$i = 0, $agg$tmp$i$byval_copy = 0, $agg$tmp2$i = 0, $agg$tmp611 = 0, $agg$tmp619 = 0, $agg$tmp627 = 0, $alpha_tolerance$addr = 0, $arrayidx$i317 = 0, $arrayidx$i338 = 0, $arrayidx$i338$lcssa = 0, $arrayidx$i338580 = 0, $arrayidx$i338583 = 0, $call266 = 0, $call599 = 0.0, $centroid = 0, $cmp355589 = 0, $cmp557 = 0, $cmp574 = 0, $conv = 0.0, $conv137 = 0.0, $conv145 = 0.0, $conv151 = 0.0, $conv159 = 0.0, $conv165 = 0.0, $conv173 = 0.0, $conv180 = 0.0, $conv187 = 0.0, $conv194 = 0.0, $conv201 = 0.0, $conv208 = 0.0, $conv366 = 0.0, $conv371 = 0.0, $conv4 = 0.0, $div = 0.0, $div348 = 0, $div353 = 0, $div5 = 0.0, $hole_count$0$lcssa = 0, $hole_count$0612 = 0, $hole_count$1 = 0, $i$0617 = 0, $i257$0599 = 0, $i347$0592 = 0, $i386$0587 = 0, $i452$0575 = 0, $inc71 = 0, $incdec$ptr$i321 = 0, $incdec$ptr$i362 = 0, $incdec$ptr$i403 = 0, $incdec$ptr$i49$i$i = 0, $j$0590 = 0, $j392$0581 = 0, $mid12 = 0, $mid13 = 0, $mid23 = 0, $mul = 0, $mul485 = 0, $mul506 = 0, $outpolys = 0, $point_count$0608 = 0, $poly = 0, $pp = 0, $ref$tmp547 = 0, $result = 0, $spec$select = 0, $testpolys = 0, $tmpcast243$byval_copy = 0, $transparent_count$2 = 0, $triangles = 0, $x_add$0 = 0, $y271 = 0, $y316 = 0, $y550 = 0, $y567 = 0, $y584 = 0, $y_add$0 = 0, $y_add$1 = 0, label = 0, sp = 0, $i386$0587$looptemp = 0;
+ $inpolys = $inpolys | 0;
+ $monotonePolys = $monotonePolys | 0;
+ var $$pn = 0, $$pn$in = 0, $$pn289 = 0, $0 = 0, $13 = 0, $14 = 0, $18 = 0, $20 = 0, $22 = 0, $26 = 0, $27 = 0, $3 = 0, $36 = 0, $38 = 0, $41 = 0, $45 = 0, $46 = 0, $50 = 0, $52 = 0, $54 = 0, $57 = 0, $63 = 0, $64 = 0, $68 = 0, $70 = 0, $74 = 0, $75 = 0, $__next_$i$i = 0, $__value_$i = 0, $__value_$i$i$i$i$i318 = 0, $__value_$i298 = 0, $__value_$i300 = 0, $__value_$i328 = 0, $__value_$i409 = 0, $__x$addr$0$i$i$i$i = 0, $__x$addr$0$i$i$i$i334 = 0, $__x$addr$0$i$i$i$i394 = 0, $__xx$0$in$i$i$i = 0, $__xx$0$in$i$i$i339 = 0, $__xx$0$in$i$i$i399 = 0, $add24 = 0, $add29 = 0, $agg$tmp = 0, $agg$tmp2$i$byval_copy = 0, $agg$tmp2$i366 = 0, $arrayidx = 0, $arrayidx109 = 0, $arrayidx136 = 0, $arrayidx205 = 0, $arrayidx278 = 0, $arrayidx292$pre$phiZ2D = 0, $arrayidx369 = 0, $arrayidx383$pre$phiZ2D = 0, $arrayidx401 = 0, $arrayidx405 = 0, $arrayidx78 = 0, $arrayidx91 = 0, $call12 = 0, $call120 = 0, $call121 = 0, $call28 = 0, $call3$i$i = 0, $call3$i$i355 = 0, $call3$i$i372 = 0, $call392 = 0, $call417 = 0, $call428 = 0, $call61 = 0, $call70 = 0, $cmp42 = 0, $edgeTree = 0, $error$2$off0 = 0, $i$0 = 0, $i$1 = 0, $i$2 = 0, $i$3 = 0, $i$4 = 0, $i$5 = 0, $iter$sroa$0$0 = 0, $iter$sroa$0$0$in$in = 0, $iter$sroa$0$1 = 0, $iter$sroa$0$1$in$in = 0, $mul = 0, $newedge = 0, $newnumvertices = 0, $next406 = 0, $numvertices$0 = 0, $p1 = 0, $p141 = 0, $p2 = 0, $p214 = 0, $p334 = 0, $p79 = 0, $p80 = 0, $polystartindex$0 = 0, $previous149 = 0, $previous225 = 0, $previous295 = 0, $retval$0$i$i$i = 0, $retval$0$i$i$i347 = 0, $retval$0$i$i$i407 = 0, $retval$1 = 0, $size$0 = 0, $size$1 = 0, $sub204 = 0, $sub320 = 0, $v2$0 = 0, $vindex2$0 = 0, $vindex2$1 = 0, $vnext$1 = 0, label = 0, sp = 0, $__xx$0$in$i$i$i399$looptemp = 0, $__xx$0$in$i$i$i339$looptemp = 0, $__xx$0$in$i$i$i$looptemp = 0;
  sp = STACKTOP;
- STACKTOP = STACKTOP + 304 | 0;
- $tmpcast243$byval_copy = sp + 216 | 0;
- $agg$tmp$i$byval_copy = sp + 280 | 0;
- $agg$tmp$i = sp + 192 | 0;
- $agg$tmp2$i = sp + 80 | 0;
- $alpha_tolerance$addr = sp + 208 | 0;
- $testpolys = sp + 268 | 0;
- $result = sp + 256 | 0;
- $poly = sp + 244 | 0;
- $pp = sp + 292 | 0;
- $outpolys = sp + 232 | 0;
- $mid12 = sp + 48 | 0;
- $mid23 = sp + 40 | 0;
- $mid13 = sp + 32 | 0;
- $centroid = sp + 16 | 0;
- $ref$tmp547 = sp;
- $agg$tmp611 = sp + 72 | 0;
- $agg$tmp619 = sp + 64 | 0;
- $agg$tmp627 = sp + 56 | 0;
- HEAPF64[$alpha_tolerance$addr >> 3] = $alpha_tolerance;
- $0 = HEAP32[$image + 8 >> 2] | 0;
- $1 = HEAP32[$image + 12 >> 2] | 0;
- $conv = +($0 | 0);
- $div = $conv * .5;
- $conv4 = +($1 | 0);
- $div5 = $conv4 * .5;
- $__end_$i = $outline_points + 4 | 0;
- if ((HEAP32[$__end_$i >> 2] | 0) - (HEAP32[$outline_points >> 2] | 0) >> 4 >>> 0 >= 3) {
-  HEAP32[$testpolys >> 2] = $testpolys;
-  $__next_$i$i$i = $testpolys + 4 | 0;
-  HEAP32[$__next_$i$i$i >> 2] = $testpolys;
-  HEAP32[$testpolys + 8 >> 2] = 0;
-  HEAP32[$result >> 2] = $result;
-  $__next_$i$i$i247 = $result + 4 | 0;
-  HEAP32[$__next_$i$i$i247 >> 2] = $result;
-  HEAP32[$result + 8 >> 2] = 0;
-  __ZN8TPPLPolyC2Ev($poly);
-  __ZN8TPPLPoly4InitEl($poly, (HEAP32[$__end_$i >> 2] | 0) - (HEAP32[$outline_points >> 2] | 0) >> 4);
-  $7 = HEAP32[$outline_points >> 2] | 0;
-  if (((HEAP32[$__end_$i >> 2] | 0) - $7 | 0) > 0) {
-   $$in633 = $7;
-   $i$0617 = 0;
-   do {
-    $11 = +HEAPF64[$$in633 + ($i$0617 << 4) >> 3];
-    HEAPF64[(__ZN8TPPLPolyixEi($poly, $i$0617) | 0) >> 3] = $11;
-    $13 = +HEAPF64[(HEAP32[$outline_points >> 2] | 0) + ($i$0617 << 4) + 8 >> 3];
-    HEAPF64[(__ZN8TPPLPolyixEi($poly, $i$0617) | 0) + 8 >> 3] = $13;
-    $i$0617 = $i$0617 + 1 | 0;
-    $$in633 = HEAP32[$outline_points >> 2] | 0;
-   } while (($i$0617 | 0) < ((HEAP32[$__end_$i >> 2] | 0) - $$in633 >> 4 | 0));
+ STACKTOP = STACKTOP + 96 | 0;
+ $agg$tmp2$i$byval_copy = sp + 56 | 0;
+ $agg$tmp2$i366 = sp + 84 | 0;
+ $newnumvertices = sp + 80 | 0;
+ $newedge = sp;
+ $agg$tmp = sp + 88 | 0;
+ $edgeTree = sp + 68 | 0;
+ $__next_$i$i = $inpolys + 4 | 0;
+ $iter$sroa$0$0$in$in = $__next_$i$i;
+ $numvertices$0 = 0;
+ while (1) {
+  $iter$sroa$0$0 = HEAP32[$iter$sroa$0$0$in$in >> 2] | 0;
+  $0 = $iter$sroa$0$0;
+  if (($inpolys | 0) == ($0 | 0)) {
+   label = 5;
+   break;
   }
-  __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($testpolys, $poly);
-  $8 = HEAP32[$hole_list >> 2] | 0;
-  $__end_$i258 = $hole_list + 4 | 0;
-  $9 = HEAP32[$__end_$i258 >> 2] | 0;
-  if (($8 | 0) == ($9 | 0)) $hole_count$0$lcssa = 0; else {
-   $__end_$i264 = $agg$tmp$i$byval_copy + 4 | 0;
-   $__begin$sroa$0$0611 = $8;
-   $hole_count$0612 = 0;
+  $__value_$i = $iter$sroa$0$0 + 8 | 0;
+  if (!(__ZNK8TPPLPoly5ValidEv($__value_$i) | 0)) {
+   $retval$1 = 0;
+   break;
+  }
+  $iter$sroa$0$0$in$in = $0 + 4 | 0;
+  $numvertices$0 = (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i) | 0) + $numvertices$0 | 0;
+ }
+ if ((label | 0) == 5) {
+  $mul = $numvertices$0 * 3 | 0;
+  $call12 = __Znam($mul >>> 0 > 134217727 ? -1 : $mul << 5) | 0;
+  HEAP32[$newnumvertices >> 2] = $numvertices$0;
+  $iter$sroa$0$1$in$in = $__next_$i$i;
+  $polystartindex$0 = 0;
+  while (1) {
+   $iter$sroa$0$1 = HEAP32[$iter$sroa$0$1$in$in >> 2] | 0;
+   $3 = $iter$sroa$0$1;
+   if (($inpolys | 0) == ($3 | 0)) break;
+   $__value_$i298 = $iter$sroa$0$1 + 8 | 0;
+   $add24 = (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i298) | 0) + $polystartindex$0 | 0;
+   $i$0 = 0;
    while (1) {
-    __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($agg$tmp$i$byval_copy, $__begin$sroa$0$0611);
-    if ((__ZN10DrPolygonF22findWindingOrientationERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE($agg$tmp$i$byval_copy) | 0) == 1) {
-     $16 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
-     $17 = HEAP32[$__end_$i264 >> 2] | 0;
-     if (($16 | 0) != ($17 | 0)) {
-      $incdec$ptr$i49$i$i = $17 + -16 | 0;
-      if ($16 >>> 0 < $incdec$ptr$i49$i$i >>> 0) {
-       $18 = $16;
-       $19 = $incdec$ptr$i49$i$i;
-       do {
-        HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$18 >> 2];
-        HEAP32[$tmpcast243$byval_copy + 4 >> 2] = HEAP32[$18 + 4 >> 2];
-        HEAP32[$tmpcast243$byval_copy + 8 >> 2] = HEAP32[$18 + 8 >> 2];
-        HEAP32[$tmpcast243$byval_copy + 12 >> 2] = HEAP32[$18 + 12 >> 2];
-        __ZN8DrPointFaSERKS_($18, $19) | 0;
-        __ZN8DrPointFaSERKS_($19, $tmpcast243$byval_copy) | 0;
-        $18 = $18 + 16 | 0;
-        $19 = $19 + -16 | 0;
-       } while ($18 >>> 0 < $19 >>> 0);
-      }
-     }
-    }
-    __ZN8TPPLPolyC2Ev($tmpcast243$byval_copy);
-    __ZN8TPPLPoly4InitEl($tmpcast243$byval_copy, (HEAP32[$__end_$i264 >> 2] | 0) - (HEAP32[$agg$tmp$i$byval_copy >> 2] | 0) >> 4);
-    __ZN8TPPLPoly7SetHoleEb($tmpcast243$byval_copy, 1);
-    $23 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
-    if (((HEAP32[$__end_$i264 >> 2] | 0) - $23 | 0) > 0) {
-     $$in632 = $23;
-     $point_count$0608 = 0;
-     while (1) {
-      $25 = +HEAPF64[$$in632 + ($point_count$0608 << 4) >> 3];
-      HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, $point_count$0608) | 0) >> 3] = $25;
-      $27 = +HEAPF64[(HEAP32[$agg$tmp$i$byval_copy >> 2] | 0) + ($point_count$0608 << 4) + 8 >> 3];
-      HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, $point_count$0608) | 0) + 8 >> 3] = $27;
-      $inc71 = $point_count$0608 + 1 | 0;
-      $$in632 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
-      if (($inc71 | 0) >= ((HEAP32[$__end_$i264 >> 2] | 0) - $$in632 >> 4 | 0)) break; else $point_count$0608 = $inc71;
-     }
-     if ($point_count$0608 >>> 0 > 1) {
-      __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($testpolys, $tmpcast243$byval_copy);
-      $hole_count$1 = $hole_count$0612 + 1 | 0;
-     } else $hole_count$1 = $hole_count$0612;
-    } else $hole_count$1 = $hole_count$0612;
-    __ZN8TPPLPolyD2Ev($tmpcast243$byval_copy);
-    __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($agg$tmp$i$byval_copy);
-    $__begin$sroa$0$0611 = $__begin$sroa$0$0611 + 12 | 0;
-    if (($__begin$sroa$0$0611 | 0) == ($9 | 0)) {
-     $hole_count$0$lcssa = $hole_count$1;
+    if (($i$0 | 0) >= (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i298) | 0)) break;
+    $call28 = __ZN8TPPLPoly8GetPointEl($__value_$i298, $i$0) | 0;
+    $add29 = $i$0 + $polystartindex$0 | 0;
+    $arrayidx = $call12 + ($add29 << 5) | 0;
+    HEAP32[$arrayidx >> 2] = HEAP32[$call28 >> 2];
+    HEAP32[$arrayidx + 4 >> 2] = HEAP32[$call28 + 4 >> 2];
+    HEAP32[$arrayidx + 8 >> 2] = HEAP32[$call28 + 8 >> 2];
+    HEAP32[$arrayidx + 12 >> 2] = HEAP32[$call28 + 12 >> 2];
+    HEAP32[$arrayidx + 16 >> 2] = HEAP32[$call28 + 16 >> 2];
+    HEAP32[$arrayidx + 20 >> 2] = HEAP32[$call28 + 20 >> 2];
+    HEAP32[$call12 + ($add29 << 5) + 24 >> 2] = (($i$0 | 0) == 0 ? $add24 : $add29) + -1;
+    $cmp42 = ($i$0 | 0) == ((__ZNK8TPPLPoly12GetNumPointsEv($__value_$i298) | 0) + -1 | 0);
+    HEAP32[$call12 + ($add29 << 5) + 28 >> 2] = $cmp42 ? $polystartindex$0 : $add29 + 1 | 0;
+    $i$0 = $i$0 + 1 | 0;
+   }
+   $iter$sroa$0$1$in$in = $3 + 4 | 0;
+   $polystartindex$0 = $add24;
+  }
+  $call61 = __Znam($numvertices$0 >>> 0 > 1073741823 ? -1 : $numvertices$0 << 2) | 0;
+  $i$1 = 0;
+  while (1) {
+   if (($i$1 | 0) >= ($numvertices$0 | 0)) break;
+   HEAP32[$call61 + ($i$1 << 2) >> 2] = $i$1;
+   $i$1 = $i$1 + 1 | 0;
+  }
+  __ZN13TPPLPartition12VertexSorterC2EPNS_14MonotoneVertexE($agg$tmp, $call12);
+  HEAP32[$agg$tmp2$i$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
+  __ZNSt3__26__sortIRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($call61, $call61 + ($numvertices$0 << 2) | 0, $agg$tmp2$i$byval_copy);
+  $call70 = __Znam(($numvertices$0 | 0) < 0 ? -1 : $mul) | 0;
+  $i$2 = 0;
+  while (1) {
+   if (($i$2 | 0) >= ($numvertices$0 | 0)) break;
+   $arrayidx78 = $call12 + (HEAP32[$call12 + ($i$2 << 5) + 28 >> 2] << 5) | 0;
+   $p79 = $call12 + (HEAP32[$call12 + ($i$2 << 5) + 24 >> 2] << 5) | 0;
+   $p80 = $call12 + ($i$2 << 5) | 0;
+   do if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $p79, $p80) | 0) if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $arrayidx78, $p80) | 0) {
+    $arrayidx91 = $call70 + $i$2 | 0;
+    if (__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $arrayidx78, $p79, $p80) | 0) {
+     HEAP8[$arrayidx91 >> 0] = 1;
      break;
-    } else $hole_count$0612 = $hole_count$1;
-   }
-  }
-  HEAP32[$outpolys >> 2] = $outpolys;
-  $__next_$i$i$i261 = $outpolys + 4 | 0;
-  HEAP32[$__next_$i$i$i261 >> 2] = $outpolys;
-  HEAP32[$outpolys + 8 >> 2] = 0;
-  if (($hole_count$0$lcssa | 0) > 0) __ZN13TPPLPartition11RemoveHolesEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($pp, $testpolys, $outpolys) | 0; else {
-   HEAP32[$agg$tmp$i >> 2] = HEAP32[$__next_$i$i$i >> 2];
-   HEAP32[$agg$tmp2$i >> 2] = $testpolys;
-   HEAP32[$agg$tmp$i$byval_copy >> 2] = HEAP32[$agg$tmp$i >> 2];
-   HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$agg$tmp2$i >> 2];
-   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6assignINS_21__list_const_iteratorIS1_PvEEEEvT_S9_PNS_9enable_ifIXsr19__is_input_iteratorIS9_EE5valueEvE4typeE($outpolys, $agg$tmp$i$byval_copy, $tmpcast243$byval_copy, 0);
-  }
-  L31 : do switch ($type | 0) {
-  case 0:
-   {
-    __ZN13TPPLPartition14Triangulate_ECEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($pp, $outpolys, $result) | 0;
-    label = 26;
-    break;
-   }
-  case 1:
-   {
-    __ZN13TPPLPartition15Triangulate_OPTEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE($pp, (HEAP32[$__next_$i$i$i261 >> 2] | 0) + 8 | 0, $result) | 0;
-    label = 26;
-    break;
-   }
-  case 2:
-   {
-    __ZN13TPPLPartition16Triangulate_MONOEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($pp, $outpolys, $result) | 0;
-    label = 26;
-    break;
-   }
-  case 3:
-   {
-    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($result, $poly);
-    HEAP32[$agg$tmp$i$byval_copy >> 2] = 0;
-    $__end_$i$i314 = $agg$tmp$i$byval_copy + 4 | 0;
-    HEAP32[$__end_$i$i314 >> 2] = 0;
-    $__value_$i$i$i$i315 = $agg$tmp$i$byval_copy + 8 | 0;
-    HEAP32[$__value_$i$i$i$i315 >> 2] = 0;
-    $__begin240$sroa$0$0601 = HEAP32[$__next_$i$i$i247 >> 2] | 0;
-    $32 = $__begin240$sroa$0$0601;
-    if (($result | 0) != ($32 | 0)) {
-     $52 = $32;
-     $__begin240$sroa$0$0603 = $__begin240$sroa$0$0601;
-     do {
-      __ZN8TPPLPolyC2ERKS_($tmpcast243$byval_copy, $__begin240$sroa$0$0603 + 8 | 0);
-      if ((__ZNK8TPPLPoly12GetNumPointsEv($tmpcast243$byval_copy) | 0) > 0) {
-       $i257$0599 = 0;
-       do {
-        $call266 = __ZN8TPPLPolyixEi($tmpcast243$byval_copy, $i257$0599) | 0;
-        $54 = HEAP32[$__end_$i$i314 >> 2] | 0;
-        if (($54 | 0) == (HEAP32[$__value_$i$i$i$i315 >> 2] | 0)) __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i$byval_copy, $call266); else {
-         HEAPF64[$54 >> 3] = +HEAPF64[$call266 >> 3];
-         HEAP32[$__end_$i$i314 >> 2] = $54 + 8;
-        }
-        $y271 = (__ZN8TPPLPolyixEi($tmpcast243$byval_copy, $i257$0599) | 0) + 8 | 0;
-        $57 = HEAP32[$__end_$i$i314 >> 2] | 0;
-        if (($57 | 0) == (HEAP32[$__value_$i$i$i$i315 >> 2] | 0)) __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i$byval_copy, $y271); else {
-         HEAPF64[$57 >> 3] = +HEAPF64[$y271 >> 3];
-         HEAP32[$__end_$i$i314 >> 2] = $57 + 8;
-        }
-        $i257$0599 = $i257$0599 + 1 | 0;
-       } while (($i257$0599 | 0) < (__ZNK8TPPLPoly12GetNumPointsEv($tmpcast243$byval_copy) | 0));
-      }
-      __ZN8TPPLPolyD2Ev($tmpcast243$byval_copy);
-      $__begin240$sroa$0$0603 = HEAP32[$52 + 4 >> 2] | 0;
-      $52 = $__begin240$sroa$0$0603;
-     } while (($result | 0) != ($52 | 0));
+    } else {
+     HEAP8[$arrayidx91 >> 0] = 3;
+     break;
     }
-    $49 = HEAP32[$hole_list >> 2] | 0;
-    $50 = HEAP32[$__end_$i258 >> 2] | 0;
-    if (($49 | 0) != ($50 | 0)) {
-     $__end_$i416 = $tmpcast243$byval_copy + 4 | 0;
-     $y316 = $agg$tmp$i + 8 | 0;
-     $__begin287$sroa$0$0596 = $49;
-     do {
-      __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($tmpcast243$byval_copy, $__begin287$sroa$0$0596);
-      $60 = HEAP32[$tmpcast243$byval_copy >> 2] | 0;
-      $61 = HEAP32[$__end_$i416 >> 2] | 0;
-      if (($60 | 0) != ($61 | 0)) {
-       $__begin302$sroa$0$0594 = $60;
-       do {
-        HEAP32[$agg$tmp$i >> 2] = HEAP32[$__begin302$sroa$0$0594 >> 2];
-        HEAP32[$agg$tmp$i + 4 >> 2] = HEAP32[$__begin302$sroa$0$0594 + 4 >> 2];
-        HEAP32[$agg$tmp$i + 8 >> 2] = HEAP32[$__begin302$sroa$0$0594 + 8 >> 2];
-        HEAP32[$agg$tmp$i + 12 >> 2] = HEAP32[$__begin302$sroa$0$0594 + 12 >> 2];
-        $62 = HEAP32[$__end_$i$i314 >> 2] | 0;
-        $63 = HEAP32[$__value_$i$i$i$i315 >> 2] | 0;
-        if (($62 | 0) == ($63 | 0)) {
-         __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i$byval_copy, $agg$tmp$i);
-         $65 = HEAP32[$__end_$i$i314 >> 2] | 0;
-         $66 = HEAP32[$__value_$i$i$i$i315 >> 2] | 0;
-        } else {
-         HEAPF64[$62 >> 3] = +HEAPF64[$agg$tmp$i >> 3];
-         $incdec$ptr$i403 = $62 + 8 | 0;
-         HEAP32[$__end_$i$i314 >> 2] = $incdec$ptr$i403;
-         $65 = $incdec$ptr$i403;
-         $66 = $63;
-        }
-        if (($65 | 0) == ($66 | 0)) __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i$byval_copy, $y316); else {
-         HEAPF64[$65 >> 3] = +HEAPF64[$y316 >> 3];
-         HEAP32[$__end_$i$i314 >> 2] = $65 + 8;
-        }
-        $__begin302$sroa$0$0594 = $__begin302$sroa$0$0594 + 16 | 0;
-       } while (($__begin302$sroa$0$0594 | 0) != ($61 | 0));
-      }
-      __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($tmpcast243$byval_copy);
-      $__begin287$sroa$0$0596 = $__begin287$sroa$0$0596 + 12 | 0;
-     } while (($__begin287$sroa$0$0596 | 0) != ($50 | 0));
-    }
-    if ($wireframe) {
-     $x_add$0 = 8;
-     while (1) if (!(($0 | 0) % ($x_add$0 | 0) | 0)) break; else $x_add$0 = $x_add$0 + -1 | 0;
-     $y_add$0 = 8;
-     while (1) if (!(($1 | 0) % ($y_add$0 | 0) | 0)) break; else $y_add$0 = $y_add$0 + -1 | 0;
-     $spec$select = ($x_add$0 | 0) > 1 ? $x_add$0 : 1;
-     $y_add$1 = ($y_add$0 | 0) > 1 ? $y_add$0 : 1;
-     $div348 = $spec$select >>> 1;
-     if (($div348 | 0) < ($0 | 0)) {
-      $div353 = $y_add$1 >>> 1;
-      $cmp355589 = ($div353 | 0) < ($1 | 0);
-      $i347$0592 = $div348;
-      do {
-       if ($cmp355589) {
-        $conv366 = +($i347$0592 | 0);
-        $j$0590 = $div353;
-        do {
-         __ZNK8DrBitmap8getPixelEii($tmpcast243$byval_copy, $image, $i347$0592, $j$0590);
-         if (+__ZNK7DrColor6alphaFEv($tmpcast243$byval_copy) >= $alpha_tolerance) {
-          HEAPF64[$tmpcast243$byval_copy >> 3] = $conv366;
-          $70 = HEAP32[$__end_$i$i314 >> 2] | 0;
-          $71 = HEAP32[$__value_$i$i$i$i315 >> 2] | 0;
-          if ($70 >>> 0 < $71 >>> 0) {
-           HEAPF64[$70 >> 3] = $conv366;
-           $incdec$ptr$i362 = $70 + 8 | 0;
-           HEAP32[$__end_$i$i314 >> 2] = $incdec$ptr$i362;
-           $72 = $incdec$ptr$i362;
-           $73 = $71;
-          } else {
-           __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIdEEvOT_($agg$tmp$i$byval_copy, $tmpcast243$byval_copy);
-           $72 = HEAP32[$__end_$i$i314 >> 2] | 0;
-           $73 = HEAP32[$__value_$i$i$i$i315 >> 2] | 0;
-          }
-          $conv371 = +($j$0590 | 0);
-          HEAPF64[$tmpcast243$byval_copy >> 3] = $conv371;
-          if ($72 >>> 0 < $73 >>> 0) {
-           HEAPF64[$72 >> 3] = $conv371;
-           HEAP32[$__end_$i$i314 >> 2] = $72 + 8;
-          } else __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIdEEvOT_($agg$tmp$i$byval_copy, $tmpcast243$byval_copy);
-         }
-         $j$0590 = $j$0590 + $y_add$1 | 0;
-        } while (($j$0590 | 0) < ($1 | 0));
-       }
-       $i347$0592 = $i347$0592 + $spec$select | 0;
-      } while (($i347$0592 | 0) < ($0 | 0));
+   } else label = 21; else label = 21; while (0);
+   do if ((label | 0) == 21) {
+    label = 0;
+    if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $p80, $p79) | 0) if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $p80, $arrayidx78) | 0) {
+     $arrayidx109 = $call70 + $i$2 | 0;
+     if (__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $arrayidx78, $p79, $p80) | 0) {
+      HEAP8[$arrayidx109 >> 0] = 2;
+      break;
+     } else {
+      HEAP8[$arrayidx109 >> 0] = 4;
+      break;
      }
     }
-    HEAP32[$agg$tmp$i >> 2] = 0;
-    $__end_$i$i349 = $agg$tmp$i + 4 | 0;
-    HEAP32[$__end_$i$i349 >> 2] = 0;
-    $__value_$i$i$i$i350 = $agg$tmp$i + 8 | 0;
-    HEAP32[$__value_$i$i$i$i350 >> 2] = 0;
-    $74 = HEAP32[$__end_$i$i314 >> 2] | 0;
-    $75 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
-    if (($74 | 0) == ($75 | 0)) {
-     $76 = 0;
-     $77 = 0;
-    } else {
-     $$in = $75;
-     $78 = $74;
-     $i386$0587 = 0;
-     do {
-      $i386$0587$looptemp = $i386$0587;
-      $i386$0587 = $i386$0587 + 2 | 0;
-      $$cast579 = $$in;
-      $arrayidx$i338580 = $$cast579 + ($i386$0587$looptemp << 3) | 0;
-      L104 : do if ($i386$0587 >>> 0 < $78 - $$in >> 3 >>> 0) {
-       $add408 = $i386$0587$looptemp | 1;
-       $$cast582 = $$cast579;
-       $arrayidx$i338583 = $arrayidx$i338580;
-       $j392$0581 = $i386$0587;
-       while (1) {
-        HEAPF64[$tmpcast243$byval_copy >> 3] = .05;
-        if (__ZN2Dr9IsCloseToIdEEbRKT_S3_S3_($arrayidx$i338583, $$cast582 + ($j392$0581 << 3) | 0, $tmpcast243$byval_copy) | 0) {
-         $79 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
-         HEAPF64[$agg$tmp2$i >> 3] = .05;
-         if (__ZN2Dr9IsCloseToIdEEbRKT_S3_S3_($79 + ($add408 << 3) | 0, $79 + ($j392$0581 + 1 << 3) | 0, $agg$tmp2$i) | 0) break L104;
-        } else {}
-        $j392$0581 = $j392$0581 + 2 | 0;
-        $81 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
-        $$cast582 = $81;
-        $arrayidx$i338 = $$cast582 + ($i386$0587$looptemp << 3) | 0;
-        if ($j392$0581 >>> 0 >= (HEAP32[$__end_$i$i314 >> 2] | 0) - $81 >> 3 >>> 0) {
-         $$in636 = $81;
-         $arrayidx$i338$lcssa = $arrayidx$i338;
-         label = 81;
-         break;
-        } else $arrayidx$i338583 = $arrayidx$i338;
-       }
-      } else {
-       $$in636 = $$in;
-       $arrayidx$i338$lcssa = $arrayidx$i338580;
-       label = 81;
-      } while (0);
-      do if ((label | 0) == 81) {
-       label = 0;
-       $82 = HEAP32[$__end_$i$i349 >> 2] | 0;
-       $83 = HEAP32[$__value_$i$i$i$i350 >> 2] | 0;
-       if (($82 | 0) == ($83 | 0)) {
-        __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i, $arrayidx$i338$lcssa);
-        $86 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
-        $87 = HEAP32[$__end_$i$i349 >> 2] | 0;
-        $88 = HEAP32[$__value_$i$i$i$i350 >> 2] | 0;
-       } else {
-        HEAPF64[$82 >> 3] = +HEAPF64[$arrayidx$i338$lcssa >> 3];
-        $incdec$ptr$i321 = $82 + 8 | 0;
-        HEAP32[$__end_$i$i349 >> 2] = $incdec$ptr$i321;
-        $86 = $$in636;
-        $87 = $incdec$ptr$i321;
-        $88 = $83;
-       }
-       $arrayidx$i317 = $86 + (($i386$0587$looptemp | 1) << 3) | 0;
-       if (($87 | 0) == ($88 | 0)) {
-        __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i, $arrayidx$i317);
-        break;
-       } else {
-        HEAPF64[$87 >> 3] = +HEAPF64[$arrayidx$i317 >> 3];
-        HEAP32[$__end_$i$i349 >> 2] = $87 + 8;
-        break;
-       }
-      } while (0);
-      $78 = HEAP32[$__end_$i$i314 >> 2] | 0;
-      $$in = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
-     } while ($i386$0587 >>> 0 < $78 - $$in >> 3 >>> 0);
-     $76 = HEAP32[$__end_$i$i349 >> 2] | 0;
-     $77 = HEAP32[$agg$tmp$i >> 2] | 0;
-    }
-    if ($76 - $77 >> 3 >>> 0 < 6) {
-     __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($agg$tmp$i);
-     __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($agg$tmp$i$byval_copy);
-     break L31;
-    }
-    __ZN10DelaunatorC2ERKNSt3__26vectorIdNS0_9allocatorIdEEEE($agg$tmp2$i, $agg$tmp$i);
-    $triangles = $agg$tmp2$i + 4 | 0;
-    $__end_$i308 = $agg$tmp2$i + 8 | 0;
-    $93 = HEAP32[$triangles >> 2] | 0;
-    if ((HEAP32[$__end_$i308 >> 2] | 0) != ($93 | 0)) {
-     $y550 = $mid12 + 4 | 0;
-     $y567 = $mid23 + 4 | 0;
-     $y584 = $mid13 + 4 | 0;
-     $$in631 = $93;
-     $i452$0575 = 0;
-     do {
-      $94 = $$in631;
-      $mul = HEAP32[$94 + ($i452$0575 << 2) >> 2] << 1;
-      $97 = HEAP32[HEAP32[$agg$tmp2$i >> 2] >> 2] | 0;
-      $98 = +HEAPF64[$97 + ($mul << 3) >> 3];
-      $99 = +HEAPF64[$97 + (($mul | 1) << 3) >> 3];
-      $mul485 = HEAP32[$94 + ($i452$0575 + 1 << 2) >> 2] << 1;
-      $101 = +HEAPF64[$97 + ($mul485 << 3) >> 3];
-      $102 = +HEAPF64[$97 + (($mul485 | 1) << 3) >> 3];
-      $mul506 = HEAP32[$94 + ($i452$0575 + 2 << 2) >> 2] << 1;
-      $104 = +HEAPF64[$97 + ($mul506 << 3) >> 3];
-      $105 = +HEAPF64[$97 + (($mul506 | 1) << 3) >> 3];
-      $add520 = $98 + $101;
-      $add522 = $99 + $102;
-      __ZN7DrPointC2Edd($mid12, $add520 * .5, $add522 * .5);
-      __ZN7DrPointC2Edd($mid23, ($101 + $104) * .5, ($102 + $105) * .5);
-      __ZN7DrPointC2Edd($mid13, ($98 + $104) * .5, ($99 + $105) * .5);
-      __ZN8DrPointFC2Edd($centroid, ($add520 + $104) / 3.0, ($add522 + $105) / 3.0);
-      __ZN8DrPointFC2Edd($ref$tmp547, +(HEAP32[$mid12 >> 2] | 0), +(HEAP32[$y550 >> 2] | 0));
-      __Z15getRoundedPixelRK8DrBitmapRK8DrPointF($tmpcast243$byval_copy, $image, $ref$tmp547);
-      $cmp557 = +__ZNK7DrColor6alphaFEv($tmpcast243$byval_copy) < $alpha_tolerance;
-      __ZN8DrPointFC2Edd($ref$tmp547, +(HEAP32[$mid23 >> 2] | 0), +(HEAP32[$y567 >> 2] | 0));
-      __Z15getRoundedPixelRK8DrBitmapRK8DrPointF($tmpcast243$byval_copy, $image, $ref$tmp547);
-      $cmp574 = +__ZNK7DrColor6alphaFEv($tmpcast243$byval_copy) < $alpha_tolerance;
-      __ZN8DrPointFC2Edd($ref$tmp547, +(HEAP32[$mid13 >> 2] | 0), +(HEAP32[$y584 >> 2] | 0));
-      __Z15getRoundedPixelRK8DrBitmapRK8DrPointF($tmpcast243$byval_copy, $image, $ref$tmp547);
-      $transparent_count$2 = ($cmp574 ? ($cmp557 ? 2 : 1) : $cmp557 & 1) + (+__ZNK7DrColor6alphaFEv($tmpcast243$byval_copy) < $alpha_tolerance & 1) | 0;
-      $call599 = +__Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($image, $centroid, $alpha_tolerance$addr);
-      if (!($call599 > .9999)) if (($transparent_count$2 + ($call599 > .6666 & 1) | 0) >>> 0 <= 1) {
-       $112 = $mid12;
-       $117 = HEAP32[$112 + 4 >> 2] | 0;
-       $118 = $agg$tmp611;
-       HEAP32[$118 >> 2] = HEAP32[$112 >> 2];
-       HEAP32[$118 + 4 >> 2] = $117;
-       HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$agg$tmp611 >> 2];
-       HEAP32[$tmpcast243$byval_copy + 4 >> 2] = HEAP32[$agg$tmp611 + 4 >> 2];
-       __ZN8DrPointFC2E7DrPoint($ref$tmp547, $tmpcast243$byval_copy);
-       $add616 = +__Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($image, $ref$tmp547, $alpha_tolerance$addr) + 0.0;
-       $122 = $mid23;
-       $127 = HEAP32[$122 + 4 >> 2] | 0;
-       $128 = $agg$tmp619;
-       HEAP32[$128 >> 2] = HEAP32[$122 >> 2];
-       HEAP32[$128 + 4 >> 2] = $127;
-       HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$agg$tmp619 >> 2];
-       HEAP32[$tmpcast243$byval_copy + 4 >> 2] = HEAP32[$agg$tmp619 + 4 >> 2];
-       __ZN8DrPointFC2E7DrPoint($ref$tmp547, $tmpcast243$byval_copy);
-       $add624 = $add616 + +__Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($image, $ref$tmp547, $alpha_tolerance$addr);
-       $132 = $mid13;
-       $137 = HEAP32[$132 + 4 >> 2] | 0;
-       $138 = $agg$tmp627;
-       HEAP32[$138 >> 2] = HEAP32[$132 >> 2];
-       HEAP32[$138 + 4 >> 2] = $137;
-       HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$agg$tmp627 >> 2];
-       HEAP32[$tmpcast243$byval_copy + 4 >> 2] = HEAP32[$agg$tmp627 + 4 >> 2];
-       __ZN8DrPointFC2E7DrPoint($ref$tmp547, $tmpcast243$byval_copy);
-       if (!($call599 + ($add624 + +__Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($image, $ref$tmp547, $alpha_tolerance$addr)) > 2.49)) __ZN6DrMesh8triangleEffffffffffff($this, $98 - $div, $conv4 - $99 - $div5, $98 / $conv, $99 / $conv4, $101 - $div, $conv4 - $102 - $div5, $101 / $conv, $102 / $conv4, $104 - $div, $conv4 - $105 - $div5, $104 / $conv, $105 / $conv4);
-      }
-      $i452$0575 = $i452$0575 + 3 | 0;
-      $$in631 = HEAP32[$triangles >> 2] | 0;
-     } while ($i452$0575 >>> 0 < (HEAP32[$__end_$i308 >> 2] | 0) - $$in631 >> 2 >>> 0);
-    }
-    __ZN10DelaunatorD2Ev($agg$tmp2$i);
-    __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($agg$tmp$i);
-    __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($agg$tmp$i$byval_copy);
+    HEAP8[$call70 + $i$2 >> 0] = 0;
+   } while (0);
+   $i$2 = $i$2 + 1 | 0;
+  }
+  $13 = $mul >>> 0 > 1073741823 ? -1 : $mul << 2;
+  $call120 = __Znam($13) | 0;
+  __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEEC2ERKS4_($edgeTree, $agg$tmp2$i$byval_copy);
+  $call121 = __Znam($13) | 0;
+  $__value_$i$i$i$i$i318 = $edgeTree + 4 | 0;
+  $i$3 = 0;
+  while (1) {
+   if (($i$3 | 0) >= ($numvertices$0 | 0)) break;
+   HEAP32[$call121 + ($i$3 << 2) >> 2] = $__value_$i$i$i$i$i318;
+   $i$3 = $i$3 + 1 | 0;
+  }
+  $p1 = $newedge + 8 | 0;
+  $p2 = $newedge + 32 | 0;
+  $i$4 = 0;
+  L43 : while (1) {
+   if (($i$4 | 0) >= ($numvertices$0 | 0)) {
+    $error$2$off0 = 0;
     break;
    }
-  default:
-   label = 26;
-  } while (0);
-  if ((label | 0) == 26) {
-   $__begin116$sroa$0$0569 = HEAP32[$__next_$i$i$i247 >> 2] | 0;
-   $33 = $__begin116$sroa$0$0569;
-   if (($result | 0) != ($33 | 0)) {
-    $47 = $33;
-    $__begin116$sroa$0$0571 = $__begin116$sroa$0$0569;
-    do {
-     __ZN8TPPLPolyC2ERKS_($tmpcast243$byval_copy, $__begin116$sroa$0$0571 + 8 | 0);
-     $conv137 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 0) | 0) >> 3] - $div;
-     $conv145 = $conv4 - +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 0) | 0) + 8 >> 3] - $div5;
-     $conv151 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 1) | 0) >> 3] - $div;
-     $conv159 = $conv4 - +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 1) | 0) + 8 >> 3] - $div5;
-     $conv165 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 2) | 0) >> 3] - $div;
-     $conv173 = $conv4 - +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 2) | 0) + 8 >> 3] - $div5;
-     $conv180 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 0) | 0) >> 3] / $conv;
-     $conv187 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 0) | 0) + 8 >> 3] / $conv4;
-     $conv194 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 1) | 0) >> 3] / $conv;
-     $conv201 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 1) | 0) + 8 >> 3] / $conv4;
-     $conv208 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 2) | 0) >> 3] / $conv;
-     __ZN6DrMesh8triangleEffffffffffff($this, $conv137, $conv145, $conv180, $conv187, $conv165, $conv173, $conv208, +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 2) | 0) + 8 >> 3] / $conv4, $conv151, $conv159, $conv194, $conv201);
-     __ZN8TPPLPolyD2Ev($tmpcast243$byval_copy);
-     $__begin116$sroa$0$0571 = HEAP32[$47 + 4 >> 2] | 0;
-     $47 = $__begin116$sroa$0$0571;
-    } while (($result | 0) != ($47 | 0));
-   }
+   $14 = HEAP32[$call61 + ($i$4 << 2) >> 2] | 0;
+   $arrayidx136 = $call12 + ($14 << 5) | 0;
+   L46 : do switch (HEAP8[$call70 + $14 >> 0] | 0) {
+   case 1:
+    {
+     HEAP32[$p1 >> 2] = HEAP32[$arrayidx136 >> 2];
+     HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
+     HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
+     HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
+     HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
+     HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
+     $p141 = $call12 + (HEAP32[$call12 + ($14 << 5) + 28 >> 2] << 5) | 0;
+     HEAP32[$p2 >> 2] = HEAP32[$p141 >> 2];
+     HEAP32[$p2 + 4 >> 2] = HEAP32[$p141 + 4 >> 2];
+     HEAP32[$p2 + 8 >> 2] = HEAP32[$p141 + 8 >> 2];
+     HEAP32[$p2 + 12 >> 2] = HEAP32[$p141 + 12 >> 2];
+     HEAP32[$p2 + 16 >> 2] = HEAP32[$p141 + 16 >> 2];
+     HEAP32[$p2 + 20 >> 2] = HEAP32[$p141 + 20 >> 2];
+     HEAP32[$newedge >> 2] = $14;
+     __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE25__emplace_unique_key_argsIS2_JRKS2_EEENS_4pairINS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEEbEERKT_DpOT0_($agg$tmp2$i$byval_copy, $edgeTree, $newedge, $newedge);
+     HEAP32[$call121 + ($14 << 2) >> 2] = HEAP32[$agg$tmp2$i$byval_copy >> 2];
+     HEAP32[$call120 + ($14 << 2) >> 2] = $14;
+     break;
+    }
+   case 2:
+    {
+     $previous149 = $call12 + ($14 << 5) + 24 | 0;
+     $18 = HEAP32[$previous149 >> 2] | 0;
+     if ((HEAP32[$call121 + ($18 << 2) >> 2] | 0) == ($__value_$i$i$i$i$i318 | 0)) {
+      $error$2$off0 = 1;
+      break L43;
+     }
+     $20 = HEAP32[$call120 + ($18 << 2) >> 2] | 0;
+     if ((HEAP8[$call70 + $20 >> 0] | 0) == 4) {
+      __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $14, $20, $call70, $call121, $edgeTree, $call120);
+      $22 = HEAP32[$previous149 >> 2] | 0;
+     } else $22 = $18;
+     HEAP32[$agg$tmp2$i366 >> 2] = HEAP32[$call121 + ($22 << 2) >> 2];
+     HEAP32[$agg$tmp2$i$byval_copy >> 2] = HEAP32[$agg$tmp2$i366 >> 2];
+     __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE5eraseENS_21__tree_const_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEE($edgeTree, $agg$tmp2$i$byval_copy) | 0;
+     break;
+    }
+   case 3:
+    {
+     HEAP32[$p1 >> 2] = HEAP32[$arrayidx136 >> 2];
+     HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
+     HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
+     HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
+     HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
+     HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
+     HEAP32[$p2 >> 2] = HEAP32[$arrayidx136 >> 2];
+     HEAP32[$p2 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
+     HEAP32[$p2 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
+     HEAP32[$p2 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
+     HEAP32[$p2 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
+     HEAP32[$p2 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
+     $call3$i$i372 = __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE13__lower_boundIS2_EENS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEERKT_SD_PNS_15__tree_end_nodeIPNS_16__tree_node_baseISB_EEEE($edgeTree, $newedge, HEAP32[$__value_$i$i$i$i$i318 >> 2] | 0, $__value_$i$i$i$i$i318) | 0;
+     if (($call3$i$i372 | 0) == (HEAP32[$edgeTree >> 2] | 0)) {
+      $error$2$off0 = 1;
+      break L43;
+     }
+     $26 = HEAP32[$call3$i$i372 >> 2] | 0;
+     if (!$26) {
+      $__xx$0$in$i$i$i399 = $call3$i$i372;
+      do {
+       $__xx$0$in$i$i$i399$looptemp = $__xx$0$in$i$i$i399;
+       $__xx$0$in$i$i$i399 = HEAP32[$__xx$0$in$i$i$i399 + 8 >> 2] | 0;
+      } while ((HEAP32[$__xx$0$in$i$i$i399 >> 2] | 0) == ($__xx$0$in$i$i$i399$looptemp | 0));
+      $retval$0$i$i$i407 = $__xx$0$in$i$i$i399;
+     } else {
+      $__x$addr$0$i$i$i$i394 = $26;
+      while (1) {
+       $27 = HEAP32[$__x$addr$0$i$i$i$i394 + 4 >> 2] | 0;
+       if (!$27) {
+        $retval$0$i$i$i407 = $__x$addr$0$i$i$i$i394;
+        break;
+       } else $__x$addr$0$i$i$i$i394 = $27;
+      }
+     }
+     $__value_$i409 = $retval$0$i$i$i407 + 16 | 0;
+     __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $14, HEAP32[$call120 + (HEAP32[$__value_$i409 >> 2] << 2) >> 2] | 0, $call70, $call121, $edgeTree, $call120);
+     $sub204 = (HEAP32[$newnumvertices >> 2] | 0) + -2 | 0;
+     $arrayidx205 = $call12 + ($sub204 << 5) | 0;
+     HEAP32[$call120 + (HEAP32[$__value_$i409 >> 2] << 2) >> 2] = $14;
+     HEAP32[$p1 >> 2] = HEAP32[$arrayidx205 >> 2];
+     HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx205 + 4 >> 2];
+     HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx205 + 8 >> 2];
+     HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx205 + 12 >> 2];
+     HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx205 + 16 >> 2];
+     HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx205 + 20 >> 2];
+     $p214 = $call12 + (HEAP32[$call12 + ($sub204 << 5) + 28 >> 2] << 5) | 0;
+     HEAP32[$p2 >> 2] = HEAP32[$p214 >> 2];
+     HEAP32[$p2 + 4 >> 2] = HEAP32[$p214 + 4 >> 2];
+     HEAP32[$p2 + 8 >> 2] = HEAP32[$p214 + 8 >> 2];
+     HEAP32[$p2 + 12 >> 2] = HEAP32[$p214 + 12 >> 2];
+     HEAP32[$p2 + 16 >> 2] = HEAP32[$p214 + 16 >> 2];
+     HEAP32[$p2 + 20 >> 2] = HEAP32[$p214 + 20 >> 2];
+     HEAP32[$newedge >> 2] = $sub204;
+     __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE25__emplace_unique_key_argsIS2_JRKS2_EEENS_4pairINS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEEbEERKT_DpOT0_($agg$tmp2$i$byval_copy, $edgeTree, $newedge, $newedge);
+     HEAP32[$call121 + ($sub204 << 2) >> 2] = HEAP32[$agg$tmp2$i$byval_copy >> 2];
+     HEAP32[$call120 + ($sub204 << 2) >> 2] = $sub204;
+     break;
+    }
+   case 4:
+    {
+     $previous225 = $call12 + ($14 << 5) + 24 | 0;
+     $36 = HEAP32[$previous225 >> 2] | 0;
+     if ((HEAP32[$call121 + ($36 << 2) >> 2] | 0) == ($__value_$i$i$i$i$i318 | 0)) {
+      $error$2$off0 = 1;
+      break L43;
+     }
+     $38 = HEAP32[$call120 + ($36 << 2) >> 2] | 0;
+     if ((HEAP8[$call70 + $38 >> 0] | 0) == 4) {
+      __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $14, $38, $call70, $call121, $edgeTree, $call120);
+      $41 = HEAP32[$previous225 >> 2] | 0;
+      $vindex2$0 = (HEAP32[$newnumvertices >> 2] | 0) + -2 | 0;
+     } else {
+      $41 = $36;
+      $vindex2$0 = $14;
+     }
+     HEAP32[$agg$tmp2$i366 >> 2] = HEAP32[$call121 + ($41 << 2) >> 2];
+     HEAP32[$agg$tmp2$i$byval_copy >> 2] = HEAP32[$agg$tmp2$i366 >> 2];
+     __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE5eraseENS_21__tree_const_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEE($edgeTree, $agg$tmp2$i$byval_copy) | 0;
+     HEAP32[$p1 >> 2] = HEAP32[$arrayidx136 >> 2];
+     HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
+     HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
+     HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
+     HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
+     HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
+     HEAP32[$p2 >> 2] = HEAP32[$arrayidx136 >> 2];
+     HEAP32[$p2 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
+     HEAP32[$p2 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
+     HEAP32[$p2 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
+     HEAP32[$p2 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
+     HEAP32[$p2 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
+     $call3$i$i355 = __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE13__lower_boundIS2_EENS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEERKT_SD_PNS_15__tree_end_nodeIPNS_16__tree_node_baseISB_EEEE($edgeTree, $newedge, HEAP32[$__value_$i$i$i$i$i318 >> 2] | 0, $__value_$i$i$i$i$i318) | 0;
+     if (($call3$i$i355 | 0) == (HEAP32[$edgeTree >> 2] | 0)) {
+      $error$2$off0 = 1;
+      break L43;
+     }
+     $45 = HEAP32[$call3$i$i355 >> 2] | 0;
+     if (!$45) {
+      $__xx$0$in$i$i$i339 = $call3$i$i355;
+      do {
+       $__xx$0$in$i$i$i339$looptemp = $__xx$0$in$i$i$i339;
+       $__xx$0$in$i$i$i339 = HEAP32[$__xx$0$in$i$i$i339 + 8 >> 2] | 0;
+      } while ((HEAP32[$__xx$0$in$i$i$i339 >> 2] | 0) == ($__xx$0$in$i$i$i339$looptemp | 0));
+      $retval$0$i$i$i347 = $__xx$0$in$i$i$i339;
+     } else {
+      $__x$addr$0$i$i$i$i334 = $45;
+      while (1) {
+       $46 = HEAP32[$__x$addr$0$i$i$i$i334 + 4 >> 2] | 0;
+       if (!$46) {
+        $retval$0$i$i$i347 = $__x$addr$0$i$i$i$i334;
+        break;
+       } else $__x$addr$0$i$i$i$i334 = $46;
+      }
+     }
+     $__value_$i328 = $retval$0$i$i$i347 + 16 | 0;
+     $arrayidx278 = $call120 + (HEAP32[$__value_$i328 >> 2] << 2) | 0;
+     $50 = HEAP32[$arrayidx278 >> 2] | 0;
+     if ((HEAP8[$call70 + $50 >> 0] | 0) == 4) {
+      __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $vindex2$0, $50, $call70, $call121, $edgeTree, $call120);
+      $arrayidx292$pre$phiZ2D = $call120 + (HEAP32[$__value_$i328 >> 2] << 2) | 0;
+     } else $arrayidx292$pre$phiZ2D = $arrayidx278;
+     HEAP32[$arrayidx292$pre$phiZ2D >> 2] = $vindex2$0;
+     break;
+    }
+   case 0:
+    {
+     $previous295 = $call12 + ($14 << 5) + 24 | 0;
+     $52 = HEAP32[$previous295 >> 2] | 0;
+     if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $arrayidx136, $call12 + ($52 << 5) | 0) | 0) {
+      if ((HEAP32[$call121 + ($52 << 2) >> 2] | 0) == ($__value_$i$i$i$i$i318 | 0)) {
+       $error$2$off0 = 1;
+       break L43;
+      }
+      $54 = HEAP32[$call120 + ($52 << 2) >> 2] | 0;
+      if ((HEAP8[$call70 + $54 >> 0] | 0) == 4) {
+       __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $14, $54, $call70, $call121, $edgeTree, $call120);
+       $sub320 = (HEAP32[$newnumvertices >> 2] | 0) + -2 | 0;
+       $57 = HEAP32[$previous295 >> 2] | 0;
+       $v2$0 = $call12 + ($sub320 << 5) | 0;
+       $vindex2$1 = $sub320;
+      } else {
+       $57 = $52;
+       $v2$0 = $arrayidx136;
+       $vindex2$1 = $14;
+      }
+      HEAP32[$agg$tmp2$i366 >> 2] = HEAP32[$call121 + ($57 << 2) >> 2];
+      HEAP32[$agg$tmp2$i$byval_copy >> 2] = HEAP32[$agg$tmp2$i366 >> 2];
+      __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE5eraseENS_21__tree_const_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEE($edgeTree, $agg$tmp2$i$byval_copy) | 0;
+      HEAP32[$p1 >> 2] = HEAP32[$v2$0 >> 2];
+      HEAP32[$p1 + 4 >> 2] = HEAP32[$v2$0 + 4 >> 2];
+      HEAP32[$p1 + 8 >> 2] = HEAP32[$v2$0 + 8 >> 2];
+      HEAP32[$p1 + 12 >> 2] = HEAP32[$v2$0 + 12 >> 2];
+      HEAP32[$p1 + 16 >> 2] = HEAP32[$v2$0 + 16 >> 2];
+      HEAP32[$p1 + 20 >> 2] = HEAP32[$v2$0 + 20 >> 2];
+      $p334 = $call12 + (HEAP32[$v2$0 + 28 >> 2] << 5) | 0;
+      HEAP32[$p2 >> 2] = HEAP32[$p334 >> 2];
+      HEAP32[$p2 + 4 >> 2] = HEAP32[$p334 + 4 >> 2];
+      HEAP32[$p2 + 8 >> 2] = HEAP32[$p334 + 8 >> 2];
+      HEAP32[$p2 + 12 >> 2] = HEAP32[$p334 + 12 >> 2];
+      HEAP32[$p2 + 16 >> 2] = HEAP32[$p334 + 16 >> 2];
+      HEAP32[$p2 + 20 >> 2] = HEAP32[$p334 + 20 >> 2];
+      HEAP32[$newedge >> 2] = $vindex2$1;
+      __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE25__emplace_unique_key_argsIS2_JRKS2_EEENS_4pairINS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEEbEERKT_DpOT0_($agg$tmp2$i$byval_copy, $edgeTree, $newedge, $newedge);
+      HEAP32[$call121 + ($vindex2$1 << 2) >> 2] = HEAP32[$agg$tmp2$i$byval_copy >> 2];
+      HEAP32[$call120 + ($vindex2$1 << 2) >> 2] = $14;
+      break L46;
+     };
+     HEAP32[$p1 >> 2] = HEAP32[$arrayidx136 >> 2];
+     HEAP32[$p1 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
+     HEAP32[$p1 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
+     HEAP32[$p1 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
+     HEAP32[$p1 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
+     HEAP32[$p1 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
+     HEAP32[$p2 >> 2] = HEAP32[$arrayidx136 >> 2];
+     HEAP32[$p2 + 4 >> 2] = HEAP32[$arrayidx136 + 4 >> 2];
+     HEAP32[$p2 + 8 >> 2] = HEAP32[$arrayidx136 + 8 >> 2];
+     HEAP32[$p2 + 12 >> 2] = HEAP32[$arrayidx136 + 12 >> 2];
+     HEAP32[$p2 + 16 >> 2] = HEAP32[$arrayidx136 + 16 >> 2];
+     HEAP32[$p2 + 20 >> 2] = HEAP32[$arrayidx136 + 20 >> 2];
+     $call3$i$i = __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE13__lower_boundIS2_EENS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEERKT_SD_PNS_15__tree_end_nodeIPNS_16__tree_node_baseISB_EEEE($edgeTree, $newedge, HEAP32[$__value_$i$i$i$i$i318 >> 2] | 0, $__value_$i$i$i$i$i318) | 0;
+     if (($call3$i$i | 0) == (HEAP32[$edgeTree >> 2] | 0)) {
+      $error$2$off0 = 1;
+      break L43;
+     }
+     $63 = HEAP32[$call3$i$i >> 2] | 0;
+     if (!$63) {
+      $__xx$0$in$i$i$i = $call3$i$i;
+      do {
+       $__xx$0$in$i$i$i$looptemp = $__xx$0$in$i$i$i;
+       $__xx$0$in$i$i$i = HEAP32[$__xx$0$in$i$i$i + 8 >> 2] | 0;
+      } while ((HEAP32[$__xx$0$in$i$i$i >> 2] | 0) == ($__xx$0$in$i$i$i$looptemp | 0));
+      $retval$0$i$i$i = $__xx$0$in$i$i$i;
+     } else {
+      $__x$addr$0$i$i$i$i = $63;
+      while (1) {
+       $64 = HEAP32[$__x$addr$0$i$i$i$i + 4 >> 2] | 0;
+       if (!$64) {
+        $retval$0$i$i$i = $__x$addr$0$i$i$i$i;
+        break;
+       } else $__x$addr$0$i$i$i$i = $64;
+      }
+     }
+     $__value_$i300 = $retval$0$i$i$i + 16 | 0;
+     $arrayidx369 = $call120 + (HEAP32[$__value_$i300 >> 2] << 2) | 0;
+     $68 = HEAP32[$arrayidx369 >> 2] | 0;
+     if ((HEAP8[$call70 + $68 >> 0] | 0) == 4) {
+      __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221__tree_const_iteratorINS_12ScanLineEdgeEPNS4_11__tree_nodeIS6_PvEElEEPNS4_3setIS6_NS4_4lessIS6_EENS4_9allocatorIS6_EEEES2_(0, $call12, $newnumvertices, $14, $68, $call70, $call121, $edgeTree, $call120);
+      $arrayidx383$pre$phiZ2D = $call120 + (HEAP32[$__value_$i300 >> 2] << 2) | 0;
+     } else $arrayidx383$pre$phiZ2D = $arrayidx369;
+     HEAP32[$arrayidx383$pre$phiZ2D >> 2] = $14;
+     break;
+    }
+   default:
+    {}
+   } while (0);
+   $i$4 = $i$4 + 1 | 0;
   }
-  __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($outpolys);
-  __ZN8TPPLPolyD2Ev($poly);
-  __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($result);
-  __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($testpolys);
+  $70 = HEAP32[$newnumvertices >> 2] | 0;
+  $call392 = __Znam(($70 | 0) > -1 ? $70 : -1) | 0;
+  _memset($call392 | 0, 0, $70 | 0) | 0;
+  if (!$error$2$off0) {
+   __ZN8TPPLPolyC2Ev($agg$tmp2$i$byval_copy);
+   $i$5 = 0;
+   while (1) {
+    if (($i$5 | 0) >= ($70 | 0)) break;
+    $arrayidx401 = $call392 + $i$5 | 0;
+    if (!(HEAP8[$arrayidx401 >> 0] | 0)) {
+     $next406 = $call12 + ($i$5 << 5) + 28 | 0;
+     $$pn$in = $next406;
+     $size$0 = 1;
+     while (1) {
+      $$pn = HEAP32[$$pn$in >> 2] | 0;
+      if (($$pn | 0) == ($i$5 | 0)) break;
+      $$pn$in = $call12 + ($$pn << 5) + 28 | 0;
+      $size$0 = $size$0 + 1 | 0;
+     }
+     __ZN8TPPLPoly4InitEl($agg$tmp2$i$byval_copy, $size$0);
+     $arrayidx405 = $call12 + ($i$5 << 5) | 0;
+     $call417 = __ZN8TPPLPolyixEi($agg$tmp2$i$byval_copy, 0) | 0;
+     HEAP32[$call417 >> 2] = HEAP32[$arrayidx405 >> 2];
+     HEAP32[$call417 + 4 >> 2] = HEAP32[$arrayidx405 + 4 >> 2];
+     HEAP32[$call417 + 8 >> 2] = HEAP32[$arrayidx405 + 8 >> 2];
+     HEAP32[$call417 + 12 >> 2] = HEAP32[$arrayidx405 + 12 >> 2];
+     HEAP32[$call417 + 16 >> 2] = HEAP32[$arrayidx405 + 16 >> 2];
+     HEAP32[$call417 + 20 >> 2] = HEAP32[$arrayidx405 + 20 >> 2];
+     $74 = HEAP32[$next406 >> 2] | 0;
+     HEAP8[$arrayidx401 >> 0] = 1;
+     HEAP8[$call392 + $74 >> 0] = 1;
+     $$pn289 = $74;
+     $size$1 = 1;
+     while (1) {
+      if (($$pn289 | 0) == ($i$5 | 0)) break;
+      $vnext$1 = $call12 + ($$pn289 << 5) | 0;
+      $call428 = __ZN8TPPLPolyixEi($agg$tmp2$i$byval_copy, $size$1) | 0;
+      HEAP32[$call428 >> 2] = HEAP32[$vnext$1 >> 2];
+      HEAP32[$call428 + 4 >> 2] = HEAP32[$vnext$1 + 4 >> 2];
+      HEAP32[$call428 + 8 >> 2] = HEAP32[$vnext$1 + 8 >> 2];
+      HEAP32[$call428 + 12 >> 2] = HEAP32[$vnext$1 + 12 >> 2];
+      HEAP32[$call428 + 16 >> 2] = HEAP32[$vnext$1 + 16 >> 2];
+      HEAP32[$call428 + 20 >> 2] = HEAP32[$vnext$1 + 20 >> 2];
+      $75 = HEAP32[$call12 + ($$pn289 << 5) + 28 >> 2] | 0;
+      HEAP8[$call392 + $75 >> 0] = 1;
+      $$pn289 = $75;
+      $size$1 = $size$1 + 1 | 0;
+     }
+     __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($monotonePolys, $agg$tmp2$i$byval_copy);
+    }
+    $i$5 = $i$5 + 1 | 0;
+   }
+   __ZN8TPPLPolyD2Ev($agg$tmp2$i$byval_copy);
+  }
+  __ZdaPv($call12);
+  __ZdaPv($call61);
+  __ZdaPv($call70);
+  __ZdaPv($call121);
+  __ZdaPv($call120);
+  __ZdaPv($call392);
+  __ZNSt3__23setIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEED2Ev($edgeTree);
+  $retval$1 = ($error$2$off0 ^ 1) & 1;
  }
  STACKTOP = sp;
- return;
+ return $retval$1 | 0;
 }
 
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E9parseTypeEv($this) {
@@ -9413,6 +8905,433 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  }
  STACKTOP = sp;
  return $retval$10 | 0;
+}
+
+function __ZN6DrMesh15triangulateFaceERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEERKNS1_IS5_NS3_IS5_EEEERK8DrBitmapb14Trianglulationd($this, $outline_points, $hole_list, $image, $wireframe, $type, $alpha_tolerance) {
+ $this = $this | 0;
+ $outline_points = $outline_points | 0;
+ $hole_list = $hole_list | 0;
+ $image = $image | 0;
+ $wireframe = $wireframe | 0;
+ $type = $type | 0;
+ $alpha_tolerance = +$alpha_tolerance;
+ var $$cast = 0, $$in = 0, $0 = 0, $1 = 0, $100 = 0, $105 = 0, $106 = 0, $11 = 0.0, $110 = 0, $115 = 0, $116 = 0, $120 = 0, $125 = 0, $126 = 0, $13 = 0.0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $21 = 0, $23 = 0.0, $25 = 0.0, $28 = 0, $42 = 0, $44 = 0, $46 = 0, $49 = 0, $53 = 0, $54 = 0, $55 = 0, $57 = 0, $58 = 0, $62 = 0, $63 = 0, $64 = 0, $65 = 0, $66 = 0, $67 = 0, $7 = 0, $70 = 0, $71 = 0, $72 = 0, $73 = 0, $76 = 0, $77 = 0, $78 = 0, $81 = 0, $82 = 0, $85 = 0, $86 = 0.0, $87 = 0.0, $89 = 0.0, $9 = 0, $90 = 0.0, $92 = 0.0, $93 = 0.0, $__begin$sroa$0$0 = 0, $__begin116$sroa$0$0 = 0, $__begin116$sroa$0$0$in$in = 0, $__begin240$sroa$0$0 = 0, $__begin240$sroa$0$0$in$in = 0, $__begin287$sroa$0$0 = 0, $__begin302$sroa$0$0 = 0, $__end_$i = 0, $__end_$i$i314 = 0, $__end_$i$i349 = 0, $__end_$i258 = 0, $__end_$i264 = 0, $__end_$i308 = 0, $__end_$i416 = 0, $__next_$i$i$i = 0, $__next_$i$i$i247 = 0, $__next_$i$i$i261 = 0, $__value_$i$i$i$i315 = 0, $__value_$i$i$i$i350 = 0, $add393 = 0, $add408 = 0, $add520 = 0.0, $add522 = 0.0, $add616 = 0.0, $add624 = 0.0, $agg$tmp$i = 0, $agg$tmp$i$byval_copy = 0, $agg$tmp2$i = 0, $agg$tmp611 = 0, $agg$tmp619 = 0, $agg$tmp627 = 0, $alpha_tolerance$addr = 0, $arrayidx$i317 = 0, $arrayidx$i338 = 0, $call266 = 0, $call599 = 0.0, $centroid = 0, $cmp557 = 0, $cmp574 = 0, $conv = 0.0, $conv137 = 0.0, $conv145 = 0.0, $conv151 = 0.0, $conv159 = 0.0, $conv165 = 0.0, $conv173 = 0.0, $conv180 = 0.0, $conv187 = 0.0, $conv194 = 0.0, $conv201 = 0.0, $conv208 = 0.0, $conv366 = 0.0, $conv371 = 0.0, $conv4 = 0.0, $div = 0.0, $div353 = 0, $div5 = 0.0, $hole_count$0 = 0, $hole_count$1 = 0, $i$0 = 0, $i257$0 = 0, $i347$0 = 0, $i386$0 = 0, $i452$0 = 0, $i52$0 = 0, $incdec$ptr$i321 = 0, $incdec$ptr$i362 = 0, $incdec$ptr$i4$i$i = 0, $incdec$ptr$i403 = 0, $j$0 = 0, $j392$0 = 0, $mid12 = 0, $mid13 = 0, $mid23 = 0, $mul = 0, $mul485 = 0, $mul506 = 0, $outpolys = 0, $poly = 0, $pp = 0, $ref$tmp547 = 0, $result = 0, $spec$select = 0, $testpolys = 0, $tmpcast243$byval_copy = 0, $transparent_count$2 = 0, $triangles = 0, $x_add$0 = 0, $y271 = 0, $y316 = 0, $y550 = 0, $y567 = 0, $y584 = 0, $y_add$0 = 0, $y_add$1 = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 304 | 0;
+ $tmpcast243$byval_copy = sp + 216 | 0;
+ $agg$tmp$i$byval_copy = sp + 280 | 0;
+ $agg$tmp$i = sp + 192 | 0;
+ $agg$tmp2$i = sp + 80 | 0;
+ $alpha_tolerance$addr = sp + 208 | 0;
+ $testpolys = sp + 268 | 0;
+ $result = sp + 256 | 0;
+ $poly = sp + 244 | 0;
+ $pp = sp + 292 | 0;
+ $outpolys = sp + 232 | 0;
+ $mid12 = sp + 48 | 0;
+ $mid23 = sp + 40 | 0;
+ $mid13 = sp + 32 | 0;
+ $centroid = sp + 16 | 0;
+ $ref$tmp547 = sp;
+ $agg$tmp611 = sp + 72 | 0;
+ $agg$tmp619 = sp + 64 | 0;
+ $agg$tmp627 = sp + 56 | 0;
+ HEAPF64[$alpha_tolerance$addr >> 3] = $alpha_tolerance;
+ $0 = HEAP32[$image + 8 >> 2] | 0;
+ $1 = HEAP32[$image + 12 >> 2] | 0;
+ $conv = +($0 | 0);
+ $div = $conv * .5;
+ $conv4 = +($1 | 0);
+ $div5 = $conv4 * .5;
+ $__end_$i = $outline_points + 4 | 0;
+ if ((HEAP32[$__end_$i >> 2] | 0) - (HEAP32[$outline_points >> 2] | 0) >> 4 >>> 0 >= 3) {
+  HEAP32[$testpolys >> 2] = $testpolys;
+  $__next_$i$i$i = $testpolys + 4 | 0;
+  HEAP32[$__next_$i$i$i >> 2] = $testpolys;
+  HEAP32[$testpolys + 8 >> 2] = 0;
+  HEAP32[$result >> 2] = $result;
+  $__next_$i$i$i247 = $result + 4 | 0;
+  HEAP32[$__next_$i$i$i247 >> 2] = $result;
+  HEAP32[$result + 8 >> 2] = 0;
+  __ZN8TPPLPolyC2Ev($poly);
+  __ZN8TPPLPoly4InitEl($poly, (HEAP32[$__end_$i >> 2] | 0) - (HEAP32[$outline_points >> 2] | 0) >> 4);
+  $i$0 = 0;
+  while (1) {
+   $7 = HEAP32[$outline_points >> 2] | 0;
+   if (($i$0 | 0) >= ((HEAP32[$__end_$i >> 2] | 0) - $7 >> 4 | 0)) break;
+   $11 = +HEAPF64[$7 + ($i$0 << 4) >> 3];
+   HEAPF64[(__ZN8TPPLPolyixEi($poly, $i$0) | 0) >> 3] = $11;
+   $13 = +HEAPF64[(HEAP32[$outline_points >> 2] | 0) + ($i$0 << 4) + 8 >> 3];
+   HEAPF64[(__ZN8TPPLPolyixEi($poly, $i$0) | 0) + 8 >> 3] = $13;
+   $i$0 = $i$0 + 1 | 0;
+  }
+  __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($testpolys, $poly);
+  $__end_$i258 = $hole_list + 4 | 0;
+  $9 = HEAP32[$__end_$i258 >> 2] | 0;
+  $__end_$i264 = $agg$tmp$i$byval_copy + 4 | 0;
+  $__begin$sroa$0$0 = HEAP32[$hole_list >> 2] | 0;
+  $hole_count$0 = 0;
+  while (1) {
+   if (($__begin$sroa$0$0 | 0) == ($9 | 0)) break;
+   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($agg$tmp$i$byval_copy, $__begin$sroa$0$0);
+   L10 : do if ((__ZN10DrPolygonF22findWindingOrientationERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE($agg$tmp$i$byval_copy) | 0) == 1) {
+    $14 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
+    $15 = HEAP32[$__end_$i264 >> 2] | 0;
+    if (($14 | 0) != ($15 | 0)) {
+     $16 = $15;
+     $17 = $14;
+     while (1) {
+      $incdec$ptr$i4$i$i = $16 + -16 | 0;
+      if ($17 >>> 0 >= $incdec$ptr$i4$i$i >>> 0) break L10;
+      HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$17 >> 2];
+      HEAP32[$tmpcast243$byval_copy + 4 >> 2] = HEAP32[$17 + 4 >> 2];
+      HEAP32[$tmpcast243$byval_copy + 8 >> 2] = HEAP32[$17 + 8 >> 2];
+      HEAP32[$tmpcast243$byval_copy + 12 >> 2] = HEAP32[$17 + 12 >> 2];
+      __ZN8DrPointFaSERKS_($17, $incdec$ptr$i4$i$i) | 0;
+      __ZN8DrPointFaSERKS_($incdec$ptr$i4$i$i, $tmpcast243$byval_copy) | 0;
+      $16 = $incdec$ptr$i4$i$i;
+      $17 = $17 + 16 | 0;
+     }
+    }
+   } while (0);
+   __ZN8TPPLPolyC2Ev($tmpcast243$byval_copy);
+   __ZN8TPPLPoly4InitEl($tmpcast243$byval_copy, (HEAP32[$__end_$i264 >> 2] | 0) - (HEAP32[$agg$tmp$i$byval_copy >> 2] | 0) >> 4);
+   __ZN8TPPLPoly7SetHoleEb($tmpcast243$byval_copy, 1);
+   $i52$0 = 0;
+   while (1) {
+    $21 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
+    if (($i52$0 | 0) >= ((HEAP32[$__end_$i264 >> 2] | 0) - $21 >> 4 | 0)) break;
+    $23 = +HEAPF64[$21 + ($i52$0 << 4) >> 3];
+    HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, $i52$0) | 0) >> 3] = $23;
+    $25 = +HEAPF64[(HEAP32[$agg$tmp$i$byval_copy >> 2] | 0) + ($i52$0 << 4) + 8 >> 3];
+    HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, $i52$0) | 0) + 8 >> 3] = $25;
+    $i52$0 = $i52$0 + 1 | 0;
+   }
+   if ($i52$0 >>> 0 > 2) {
+    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($testpolys, $tmpcast243$byval_copy);
+    $hole_count$1 = $hole_count$0 + 1 | 0;
+   } else $hole_count$1 = $hole_count$0;
+   __ZN8TPPLPolyD2Ev($tmpcast243$byval_copy);
+   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($agg$tmp$i$byval_copy);
+   $__begin$sroa$0$0 = $__begin$sroa$0$0 + 12 | 0;
+   $hole_count$0 = $hole_count$1;
+  }
+  HEAP32[$outpolys >> 2] = $outpolys;
+  $__next_$i$i$i261 = $outpolys + 4 | 0;
+  HEAP32[$__next_$i$i$i261 >> 2] = $outpolys;
+  HEAP32[$outpolys + 8 >> 2] = 0;
+  if (($hole_count$0 | 0) > 0) __ZN13TPPLPartition11RemoveHolesEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($pp, $testpolys, $outpolys) | 0; else {
+   HEAP32[$agg$tmp$i >> 2] = HEAP32[$__next_$i$i$i >> 2];
+   HEAP32[$agg$tmp2$i >> 2] = $testpolys;
+   HEAP32[$agg$tmp$i$byval_copy >> 2] = HEAP32[$agg$tmp$i >> 2];
+   HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$agg$tmp2$i >> 2];
+   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6assignINS_21__list_const_iteratorIS1_PvEEEEvT_S9_PNS_9enable_ifIXsr19__is_input_iteratorIS9_EE5valueEvE4typeE($outpolys, $agg$tmp$i$byval_copy, $tmpcast243$byval_copy, 0);
+  }
+  L29 : do switch ($type | 0) {
+  case 0:
+   {
+    __ZN13TPPLPartition14Triangulate_ECEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($pp, $outpolys, $result) | 0;
+    label = 26;
+    break;
+   }
+  case 1:
+   {
+    __ZN13TPPLPartition15Triangulate_OPTEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE($pp, (HEAP32[$__next_$i$i$i261 >> 2] | 0) + 8 | 0, $result) | 0;
+    label = 26;
+    break;
+   }
+  case 2:
+   {
+    __ZN13TPPLPartition16Triangulate_MONOEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($pp, $outpolys, $result) | 0;
+    label = 26;
+    break;
+   }
+  case 3:
+   {
+    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($result, $poly);
+    HEAP32[$agg$tmp$i$byval_copy >> 2] = 0;
+    $__end_$i$i314 = $agg$tmp$i$byval_copy + 4 | 0;
+    HEAP32[$__end_$i$i314 >> 2] = 0;
+    $__value_$i$i$i$i315 = $agg$tmp$i$byval_copy + 8 | 0;
+    HEAP32[$__value_$i$i$i$i315 >> 2] = 0;
+    $__begin240$sroa$0$0$in$in = $__next_$i$i$i247;
+    while (1) {
+     $__begin240$sroa$0$0 = HEAP32[$__begin240$sroa$0$0$in$in >> 2] | 0;
+     $42 = $__begin240$sroa$0$0;
+     if (($result | 0) == ($42 | 0)) break;
+     __ZN8TPPLPolyC2ERKS_($tmpcast243$byval_copy, $__begin240$sroa$0$0 + 8 | 0);
+     $i257$0 = 0;
+     while (1) {
+      if (($i257$0 | 0) >= (__ZNK8TPPLPoly12GetNumPointsEv($tmpcast243$byval_copy) | 0)) break;
+      $call266 = __ZN8TPPLPolyixEi($tmpcast243$byval_copy, $i257$0) | 0;
+      $46 = HEAP32[$__end_$i$i314 >> 2] | 0;
+      if (($46 | 0) == (HEAP32[$__value_$i$i$i$i315 >> 2] | 0)) __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i$byval_copy, $call266); else {
+       HEAPF64[$46 >> 3] = +HEAPF64[$call266 >> 3];
+       HEAP32[$__end_$i$i314 >> 2] = $46 + 8;
+      }
+      $y271 = (__ZN8TPPLPolyixEi($tmpcast243$byval_copy, $i257$0) | 0) + 8 | 0;
+      $49 = HEAP32[$__end_$i$i314 >> 2] | 0;
+      if (($49 | 0) == (HEAP32[$__value_$i$i$i$i315 >> 2] | 0)) __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i$byval_copy, $y271); else {
+       HEAPF64[$49 >> 3] = +HEAPF64[$y271 >> 3];
+       HEAP32[$__end_$i$i314 >> 2] = $49 + 8;
+      }
+      $i257$0 = $i257$0 + 1 | 0;
+     }
+     __ZN8TPPLPolyD2Ev($tmpcast243$byval_copy);
+     $__begin240$sroa$0$0$in$in = $42 + 4 | 0;
+    }
+    $44 = HEAP32[$__end_$i258 >> 2] | 0;
+    $__end_$i416 = $tmpcast243$byval_copy + 4 | 0;
+    $y316 = $agg$tmp$i + 8 | 0;
+    $__begin287$sroa$0$0 = HEAP32[$hole_list >> 2] | 0;
+    while (1) {
+     if (($__begin287$sroa$0$0 | 0) == ($44 | 0)) break;
+     __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($tmpcast243$byval_copy, $__begin287$sroa$0$0);
+     $53 = HEAP32[$__end_$i416 >> 2] | 0;
+     $__begin302$sroa$0$0 = HEAP32[$tmpcast243$byval_copy >> 2] | 0;
+     while (1) {
+      if (($__begin302$sroa$0$0 | 0) == ($53 | 0)) break;
+      HEAP32[$agg$tmp$i >> 2] = HEAP32[$__begin302$sroa$0$0 >> 2];
+      HEAP32[$agg$tmp$i + 4 >> 2] = HEAP32[$__begin302$sroa$0$0 + 4 >> 2];
+      HEAP32[$agg$tmp$i + 8 >> 2] = HEAP32[$__begin302$sroa$0$0 + 8 >> 2];
+      HEAP32[$agg$tmp$i + 12 >> 2] = HEAP32[$__begin302$sroa$0$0 + 12 >> 2];
+      $54 = HEAP32[$__end_$i$i314 >> 2] | 0;
+      $55 = HEAP32[$__value_$i$i$i$i315 >> 2] | 0;
+      if (($54 | 0) == ($55 | 0)) {
+       __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i$byval_copy, $agg$tmp$i);
+       $57 = HEAP32[$__end_$i$i314 >> 2] | 0;
+       $58 = HEAP32[$__value_$i$i$i$i315 >> 2] | 0;
+      } else {
+       HEAPF64[$54 >> 3] = +HEAPF64[$agg$tmp$i >> 3];
+       $incdec$ptr$i403 = $54 + 8 | 0;
+       HEAP32[$__end_$i$i314 >> 2] = $incdec$ptr$i403;
+       $57 = $incdec$ptr$i403;
+       $58 = $55;
+      }
+      if (($57 | 0) == ($58 | 0)) __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i$byval_copy, $y316); else {
+       HEAPF64[$57 >> 3] = +HEAPF64[$y316 >> 3];
+       HEAP32[$__end_$i$i314 >> 2] = $57 + 8;
+      }
+      $__begin302$sroa$0$0 = $__begin302$sroa$0$0 + 16 | 0;
+     }
+     __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($tmpcast243$byval_copy);
+     $__begin287$sroa$0$0 = $__begin287$sroa$0$0 + 12 | 0;
+    }
+    L66 : do if ($wireframe) {
+     $x_add$0 = 8;
+     while (1) if (!(($0 | 0) % ($x_add$0 | 0) | 0)) break; else $x_add$0 = $x_add$0 + -1 | 0;
+     $y_add$0 = 8;
+     while (1) if (!(($1 | 0) % ($y_add$0 | 0) | 0)) break; else $y_add$0 = $y_add$0 + -1 | 0;
+     $spec$select = ($x_add$0 | 0) > 1 ? $x_add$0 : 1;
+     $y_add$1 = ($y_add$0 | 0) > 1 ? $y_add$0 : 1;
+     $div353 = $y_add$1 >>> 1;
+     $i347$0 = $spec$select >>> 1;
+     while (1) {
+      if (($i347$0 | 0) >= ($0 | 0)) break L66;
+      $conv366 = +($i347$0 | 0);
+      $j$0 = $div353;
+      while (1) {
+       if (($j$0 | 0) >= ($1 | 0)) break;
+       __ZNK8DrBitmap8getPixelEii($tmpcast243$byval_copy, $image, $i347$0, $j$0);
+       if (+__ZNK7DrColor6alphaFEv($tmpcast243$byval_copy) >= $alpha_tolerance) {
+        HEAPF64[$tmpcast243$byval_copy >> 3] = $conv366;
+        $62 = HEAP32[$__end_$i$i314 >> 2] | 0;
+        $63 = HEAP32[$__value_$i$i$i$i315 >> 2] | 0;
+        if ($62 >>> 0 < $63 >>> 0) {
+         HEAPF64[$62 >> 3] = $conv366;
+         $incdec$ptr$i362 = $62 + 8 | 0;
+         HEAP32[$__end_$i$i314 >> 2] = $incdec$ptr$i362;
+         $64 = $incdec$ptr$i362;
+         $65 = $63;
+        } else {
+         __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIdEEvOT_($agg$tmp$i$byval_copy, $tmpcast243$byval_copy);
+         $64 = HEAP32[$__end_$i$i314 >> 2] | 0;
+         $65 = HEAP32[$__value_$i$i$i$i315 >> 2] | 0;
+        }
+        $conv371 = +($j$0 | 0);
+        HEAPF64[$tmpcast243$byval_copy >> 3] = $conv371;
+        if ($64 >>> 0 < $65 >>> 0) {
+         HEAPF64[$64 >> 3] = $conv371;
+         HEAP32[$__end_$i$i314 >> 2] = $64 + 8;
+        } else __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIdEEvOT_($agg$tmp$i$byval_copy, $tmpcast243$byval_copy);
+       }
+       $j$0 = $j$0 + $y_add$1 | 0;
+      }
+      $i347$0 = $i347$0 + $spec$select | 0;
+     }
+    } while (0);
+    HEAP32[$agg$tmp$i >> 2] = 0;
+    $__end_$i$i349 = $agg$tmp$i + 4 | 0;
+    HEAP32[$__end_$i$i349 >> 2] = 0;
+    $__value_$i$i$i$i350 = $agg$tmp$i + 8 | 0;
+    HEAP32[$__value_$i$i$i$i350 >> 2] = 0;
+    $i386$0 = 0;
+    while (1) {
+     $66 = HEAP32[$__end_$i$i314 >> 2] | 0;
+     $67 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
+     if ($i386$0 >>> 0 >= $66 - $67 >> 3 >>> 0) break;
+     $add393 = $i386$0 + 2 | 0;
+     $add408 = $i386$0 | 1;
+     $$in = $67;
+     $70 = $66;
+     $j392$0 = $add393;
+     while (1) {
+      $$cast = $$in;
+      $arrayidx$i338 = $$cast + ($i386$0 << 3) | 0;
+      if ($j392$0 >>> 0 >= $70 - $$in >> 3 >>> 0) {
+       label = 80;
+       break;
+      }
+      HEAPF64[$tmpcast243$byval_copy >> 3] = .05;
+      if (__ZN2Dr9IsCloseToIdEEbRKT_S3_S3_($arrayidx$i338, $$cast + ($j392$0 << 3) | 0, $tmpcast243$byval_copy) | 0) {
+       $71 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
+       HEAPF64[$agg$tmp2$i >> 3] = .05;
+       if (__ZN2Dr9IsCloseToIdEEbRKT_S3_S3_($71 + ($add408 << 3) | 0, $71 + ($j392$0 + 1 << 3) | 0, $agg$tmp2$i) | 0) break;
+      } else {}
+      $$in = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
+      $70 = HEAP32[$__end_$i$i314 >> 2] | 0;
+      $j392$0 = $j392$0 + 2 | 0;
+     }
+     do if ((label | 0) == 80) {
+      label = 0;
+      $72 = HEAP32[$__end_$i$i349 >> 2] | 0;
+      $73 = HEAP32[$__value_$i$i$i$i350 >> 2] | 0;
+      if (($72 | 0) == ($73 | 0)) {
+       __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i, $arrayidx$i338);
+       $76 = HEAP32[$agg$tmp$i$byval_copy >> 2] | 0;
+       $77 = HEAP32[$__end_$i$i349 >> 2] | 0;
+       $78 = HEAP32[$__value_$i$i$i$i350 >> 2] | 0;
+      } else {
+       HEAPF64[$72 >> 3] = +HEAPF64[$arrayidx$i338 >> 3];
+       $incdec$ptr$i321 = $72 + 8 | 0;
+       HEAP32[$__end_$i$i349 >> 2] = $incdec$ptr$i321;
+       $76 = $$in;
+       $77 = $incdec$ptr$i321;
+       $78 = $73;
+      }
+      $arrayidx$i317 = $76 + ($add408 << 3) | 0;
+      if (($77 | 0) == ($78 | 0)) {
+       __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($agg$tmp$i, $arrayidx$i317);
+       break;
+      } else {
+       HEAPF64[$77 >> 3] = +HEAPF64[$arrayidx$i317 >> 3];
+       HEAP32[$__end_$i$i349 >> 2] = $77 + 8;
+       break;
+      }
+     } while (0);
+     $i386$0 = $add393;
+    }
+    if ((HEAP32[$__end_$i$i349 >> 2] | 0) - (HEAP32[$agg$tmp$i >> 2] | 0) >> 3 >>> 0 < 6) {
+     __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($agg$tmp$i);
+     __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($agg$tmp$i$byval_copy);
+     break L29;
+    }
+    __ZN10DelaunatorC2ERKNSt3__26vectorIdNS0_9allocatorIdEEEE($agg$tmp2$i, $agg$tmp$i);
+    $triangles = $agg$tmp2$i + 4 | 0;
+    $__end_$i308 = $agg$tmp2$i + 8 | 0;
+    $y550 = $mid12 + 4 | 0;
+    $y567 = $mid23 + 4 | 0;
+    $y584 = $mid13 + 4 | 0;
+    $i452$0 = 0;
+    while (1) {
+     $81 = HEAP32[$triangles >> 2] | 0;
+     $82 = $81;
+     if ($i452$0 >>> 0 >= (HEAP32[$__end_$i308 >> 2] | 0) - $81 >> 2 >>> 0) break;
+     $mul = HEAP32[$82 + ($i452$0 << 2) >> 2] << 1;
+     $85 = HEAP32[HEAP32[$agg$tmp2$i >> 2] >> 2] | 0;
+     $86 = +HEAPF64[$85 + ($mul << 3) >> 3];
+     $87 = +HEAPF64[$85 + (($mul | 1) << 3) >> 3];
+     $mul485 = HEAP32[$82 + ($i452$0 + 1 << 2) >> 2] << 1;
+     $89 = +HEAPF64[$85 + ($mul485 << 3) >> 3];
+     $90 = +HEAPF64[$85 + (($mul485 | 1) << 3) >> 3];
+     $mul506 = HEAP32[$82 + ($i452$0 + 2 << 2) >> 2] << 1;
+     $92 = +HEAPF64[$85 + ($mul506 << 3) >> 3];
+     $93 = +HEAPF64[$85 + (($mul506 | 1) << 3) >> 3];
+     $add520 = $86 + $89;
+     $add522 = $87 + $90;
+     __ZN7DrPointC2Edd($mid12, $add520 * .5, $add522 * .5);
+     __ZN7DrPointC2Edd($mid23, ($89 + $92) * .5, ($90 + $93) * .5);
+     __ZN7DrPointC2Edd($mid13, ($86 + $92) * .5, ($87 + $93) * .5);
+     __ZN8DrPointFC2Edd($centroid, ($add520 + $92) / 3.0, ($add522 + $93) / 3.0);
+     __ZN8DrPointFC2Edd($ref$tmp547, +(HEAP32[$mid12 >> 2] | 0), +(HEAP32[$y550 >> 2] | 0));
+     __Z15getRoundedPixelRK8DrBitmapRK8DrPointF($tmpcast243$byval_copy, $image, $ref$tmp547);
+     $cmp557 = +__ZNK7DrColor6alphaFEv($tmpcast243$byval_copy) < $alpha_tolerance;
+     __ZN8DrPointFC2Edd($ref$tmp547, +(HEAP32[$mid23 >> 2] | 0), +(HEAP32[$y567 >> 2] | 0));
+     __Z15getRoundedPixelRK8DrBitmapRK8DrPointF($tmpcast243$byval_copy, $image, $ref$tmp547);
+     $cmp574 = +__ZNK7DrColor6alphaFEv($tmpcast243$byval_copy) < $alpha_tolerance;
+     __ZN8DrPointFC2Edd($ref$tmp547, +(HEAP32[$mid13 >> 2] | 0), +(HEAP32[$y584 >> 2] | 0));
+     __Z15getRoundedPixelRK8DrBitmapRK8DrPointF($tmpcast243$byval_copy, $image, $ref$tmp547);
+     $transparent_count$2 = ($cmp574 ? ($cmp557 ? 2 : 1) : $cmp557 & 1) + (+__ZNK7DrColor6alphaFEv($tmpcast243$byval_copy) < $alpha_tolerance & 1) | 0;
+     $call599 = +__Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($image, $centroid, $alpha_tolerance$addr);
+     if (!($call599 > .9999)) if (($transparent_count$2 + ($call599 > .6666 & 1) | 0) >>> 0 <= 1) {
+      $100 = $mid12;
+      $105 = HEAP32[$100 + 4 >> 2] | 0;
+      $106 = $agg$tmp611;
+      HEAP32[$106 >> 2] = HEAP32[$100 >> 2];
+      HEAP32[$106 + 4 >> 2] = $105;
+      HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$agg$tmp611 >> 2];
+      HEAP32[$tmpcast243$byval_copy + 4 >> 2] = HEAP32[$agg$tmp611 + 4 >> 2];
+      __ZN8DrPointFC2E7DrPoint($ref$tmp547, $tmpcast243$byval_copy);
+      $add616 = +__Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($image, $ref$tmp547, $alpha_tolerance$addr) + 0.0;
+      $110 = $mid23;
+      $115 = HEAP32[$110 + 4 >> 2] | 0;
+      $116 = $agg$tmp619;
+      HEAP32[$116 >> 2] = HEAP32[$110 >> 2];
+      HEAP32[$116 + 4 >> 2] = $115;
+      HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$agg$tmp619 >> 2];
+      HEAP32[$tmpcast243$byval_copy + 4 >> 2] = HEAP32[$agg$tmp619 + 4 >> 2];
+      __ZN8DrPointFC2E7DrPoint($ref$tmp547, $tmpcast243$byval_copy);
+      $add624 = $add616 + +__Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($image, $ref$tmp547, $alpha_tolerance$addr);
+      $120 = $mid13;
+      $125 = HEAP32[$120 + 4 >> 2] | 0;
+      $126 = $agg$tmp627;
+      HEAP32[$126 >> 2] = HEAP32[$120 >> 2];
+      HEAP32[$126 + 4 >> 2] = $125;
+      HEAP32[$tmpcast243$byval_copy >> 2] = HEAP32[$agg$tmp627 >> 2];
+      HEAP32[$tmpcast243$byval_copy + 4 >> 2] = HEAP32[$agg$tmp627 + 4 >> 2];
+      __ZN8DrPointFC2E7DrPoint($ref$tmp547, $tmpcast243$byval_copy);
+      if (!($call599 + ($add624 + +__Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($image, $ref$tmp547, $alpha_tolerance$addr)) > 2.49)) __ZN6DrMesh8triangleEffffffffffff($this, $86 - $div, $conv4 - $87 - $div5, $86 / $conv, $87 / $conv4, $89 - $div, $conv4 - $90 - $div5, $89 / $conv, $90 / $conv4, $92 - $div, $conv4 - $93 - $div5, $92 / $conv, $93 / $conv4);
+     }
+     $i452$0 = $i452$0 + 3 | 0;
+    }
+    __ZN10DelaunatorD2Ev($agg$tmp2$i);
+    __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($agg$tmp$i);
+    __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($agg$tmp$i$byval_copy);
+    break;
+   }
+  default:
+   label = 26;
+  } while (0);
+  L126 : do if ((label | 0) == 26) {
+   $__begin116$sroa$0$0$in$in = $__next_$i$i$i247;
+   while (1) {
+    $__begin116$sroa$0$0 = HEAP32[$__begin116$sroa$0$0$in$in >> 2] | 0;
+    $28 = $__begin116$sroa$0$0;
+    if (($result | 0) == ($28 | 0)) break L126;
+    __ZN8TPPLPolyC2ERKS_($tmpcast243$byval_copy, $__begin116$sroa$0$0 + 8 | 0);
+    $conv137 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 0) | 0) >> 3] - $div;
+    $conv145 = $conv4 - +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 0) | 0) + 8 >> 3] - $div5;
+    $conv151 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 1) | 0) >> 3] - $div;
+    $conv159 = $conv4 - +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 1) | 0) + 8 >> 3] - $div5;
+    $conv165 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 2) | 0) >> 3] - $div;
+    $conv173 = $conv4 - +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 2) | 0) + 8 >> 3] - $div5;
+    $conv180 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 0) | 0) >> 3] / $conv;
+    $conv187 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 0) | 0) + 8 >> 3] / $conv4;
+    $conv194 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 1) | 0) >> 3] / $conv;
+    $conv201 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 1) | 0) + 8 >> 3] / $conv4;
+    $conv208 = +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 2) | 0) >> 3] / $conv;
+    __ZN6DrMesh8triangleEffffffffffff($this, $conv137, $conv145, $conv180, $conv187, $conv165, $conv173, $conv208, +HEAPF64[(__ZN8TPPLPolyixEi($tmpcast243$byval_copy, 2) | 0) + 8 >> 3] / $conv4, $conv151, $conv159, $conv194, $conv201);
+    __ZN8TPPLPolyD2Ev($tmpcast243$byval_copy);
+    $__begin116$sroa$0$0$in$in = $28 + 4 | 0;
+   }
+  } while (0);
+  __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($outpolys);
+  __ZN8TPPLPolyD2Ev($poly);
+  __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($result);
+  __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($testpolys);
+ }
+ STACKTOP = sp;
+ return;
 }
 
 function _stbtt__run_charstring($info, $glyph_index, $c) {
@@ -11224,400 +11143,7 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  STACKTOP = sp;
  return $retval$3 | 0;
 }
-function __ZN2Dr17TraceImageOutlineERK8DrBitmap($agg$result, $bitmap) {
- $agg$result = $agg$result | 0;
- $bitmap = $bitmap | 0;
- var $$in = 0, $102 = 0, $103 = 0, $14 = 0, $15 = 0, $2 = 0, $20 = 0, $21 = 0, $23 = 0, $25 = 0, $28 = 0, $29 = 0, $3 = 0, $33 = 0, $35 = 0, $36 = 0, $4 = 0, $41 = 0, $43 = 0, $48 = 0, $49 = 0, $54 = 0, $55 = 0, $56 = 0, $61 = 0, $62 = 0, $68 = 0, $69 = 0, $7 = 0, $70 = 0, $71 = 0, $72 = 0, $74 = 0, $79 = 0, $80 = 0, $85 = 0, $89 = 0, $9 = 0, $91 = 0, $92 = 0, $93 = 0, $94 = 0, $95 = 0, $98 = 0, $__begin$sroa$0$0263 = 0, $__end_$i$i = 0, $__end_$i$i124 = 0, $__end_$i$i152 = 0, $__value_$i$i$i$i = 0, $__value_$i$i$i$i125 = 0, $__value_$i$i$i$i153 = 0, $add217 = 0.0, $agg$tmp = 0, $agg$tmp188 = 0, $agg$tmp191 = 0, $agg$tmp205 = 0, $agg$tmp205$byval_copy = 0, $agg$tmp208 = 0, $agg$tmp253 = 0, $agg$tmp270 = 0, $agg$tmp270$byval_copy = 0, $agg$tmp56 = 0, $agg$tmp61 = 0, $agg$tmp79 = 0, $angle_diff$0264 = 0.0, $angle_diff$1 = 0.0, $border_pixel_count$0282 = 0, $border_pixel_count$1$lcssa = 0, $border_pixel_count$1275 = 0, $border_pixel_count$3 = 0, $call194 = 0.0, $call211 = 0.0, $call248 = 0, $call291 = 0, $can_be_border$0$off0269 = 0, $can_be_border$1$off0267 = 0, $check_angle$0$lcssa = 0.0, $check_angle$0258 = 0.0, $check_angle$1$lcssa = 0.0, $check_angle$1260 = 0.0, $cmp144253 = 0, $cmp18 = 0, $cond = 0, $cond116 = 0, $cond124 = 0, $cond136 = 0, $current_point = 0, $first$0$off0265 = 0, $has_start_point$0$off0281 = 0, $has_start_point$1$off0$lcssa = 0, $has_start_point$1$off0273 = 0, $has_start_point$3$off0 = 0, $height = 0, $i$0268 = 0, $i308$0252 = 0, $inc64 = 0, $j$0266 = 0, $last_point = 0, $next_point = 0, $point = 0, $points = 0, $processed = 0, $sub107 = 0, $sub127 = 0, $sub213 = 0.0, $sub219 = 0.0, $sub29 = 0, $sub34 = 0, $surround = 0, $tmp = 0, $tmp153 = 0, $tmp161 = 0, $tmp242 = 0, $tmp259 = 0, $tmp285 = 0, $tmp40 = 0, $width = 0, $x$0280 = 0, $x137$0256 = 0, $y$0271 = 0, $y117 = 0, $y142$0254 = 0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 240 | 0;
- $agg$tmp270$byval_copy = sp + 104 | 0;
- $agg$tmp205$byval_copy = sp + 88 | 0;
- $processed = sp + 156 | 0;
- $points = sp + 144 | 0;
- $last_point = sp + 136 | 0;
- $tmp = sp + 232 | 0;
- $agg$tmp = sp + 228 | 0;
- $tmp40 = sp + 224 | 0;
- $agg$tmp56 = sp + 220 | 0;
- $agg$tmp61 = sp + 216 | 0;
- $agg$tmp79 = sp + 212 | 0;
- $surround = sp + 120 | 0;
- $current_point = sp + 48 | 0;
- $tmp153 = sp + 208 | 0;
- $tmp161 = sp + 204 | 0;
- $agg$tmp188 = sp + 72 | 0;
- $agg$tmp191 = sp + 56 | 0;
- $next_point = sp + 8 | 0;
- $point = sp;
- $agg$tmp205 = sp + 32 | 0;
- $agg$tmp208 = sp + 16 | 0;
- $tmp242 = sp + 200 | 0;
- $agg$tmp253 = sp + 196 | 0;
- $tmp259 = sp + 192 | 0;
- $agg$tmp270 = sp + 188 | 0;
- $tmp285 = sp + 184 | 0;
- __ZN8DrBitmapC2ERKS_13Bitmap_Format($processed, $bitmap, 4);
- HEAP32[$points >> 2] = 0;
- $__end_$i$i = $points + 4 | 0;
- HEAP32[$__end_$i$i >> 2] = 0;
- $__value_$i$i$i$i = $points + 8 | 0;
- HEAP32[$__value_$i$i$i$i >> 2] = 0;
- $width = $bitmap + 8 | 0;
- if ((HEAP32[$width >> 2] | 0) < 1) label = 3; else {
-  $height = $bitmap + 12 | 0;
-  if ((HEAP32[$height >> 2] | 0) < 1) label = 3; else {
-   __ZN7DrPointC2Ev($last_point);
-   $2 = HEAP32[$width >> 2] | 0;
-   if (($2 | 0) > 0) {
-    $102 = $2;
-    $3 = HEAP32[$height >> 2] | 0;
-    $border_pixel_count$0282 = 0;
-    $has_start_point$0$off0281 = 0;
-    $x$0280 = 0;
-    while (1) {
-     if (($3 | 0) > 0) {
-      $cmp18 = ($x$0280 | 0) == 0;
-      $sub29 = $x$0280 + -1 | 0;
-      $border_pixel_count$1275 = $border_pixel_count$0282;
-      $has_start_point$1$off0273 = $has_start_point$0$off0281;
-      $y$0271 = 0;
-      while (1) {
-       __ZNK8DrBitmap8getPixelEii($tmp, $bitmap, $x$0280, $y$0271);
-       __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 0);
-       do if (__ZNK7DrColoreqERKS_($tmp, $agg$tmp270$byval_copy) | 0) {
-        __ZN7DrColorC2Ej($agg$tmp, 0);
-        HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
-        HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
-        HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
-        HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
-        __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0280, $y$0271, $agg$tmp270$byval_copy);
-        $border_pixel_count$3 = $border_pixel_count$1275;
-        $has_start_point$3$off0 = $has_start_point$1$off0273;
-       } else {
-        if (!($cmp18 | ($y$0271 | 0) == 0)) if (($x$0280 | 0) != ((HEAP32[$width >> 2] | 0) + -1 | 0)) if (($y$0271 | 0) != ((HEAP32[$height >> 2] | 0) + -1 | 0)) {
-         $sub34 = $y$0271 + -1 | 0;
-         $can_be_border$0$off0269 = 0;
-         $i$0268 = $sub29;
-         while (1) {
-          $can_be_border$1$off0267 = $can_be_border$0$off0269;
-          $j$0266 = $sub34;
-          while (1) {
-           __ZNK8DrBitmap8getPixelEii($tmp40, $bitmap, $i$0268, $j$0266);
-           __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 0);
-           $can_be_border$1$off0267 = $can_be_border$1$off0267 | (__ZNK7DrColoreqERKS_($tmp40, $agg$tmp270$byval_copy) | 0);
-           if (($j$0266 | 0) > ($y$0271 | 0)) break; else $j$0266 = $j$0266 + 1 | 0;
-          }
-          if (($i$0268 | 0) > ($x$0280 | 0)) break; else {
-           $can_be_border$0$off0269 = $can_be_border$1$off0267;
-           $i$0268 = $i$0268 + 1 | 0;
-          }
-         }
-         if (!$can_be_border$1$off0267) {
-          __ZN7DrColorC2Ej($agg$tmp56, 0);
-          HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp56 >> 0] | 0;
-          HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp56 + 1 >> 0] | 0;
-          HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp56 + 2 >> 0] | 0;
-          HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp56 + 3 >> 0] | 0;
-          __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0280, $y$0271, $agg$tmp270$byval_copy);
-          $border_pixel_count$3 = $border_pixel_count$1275;
-          $has_start_point$3$off0 = $has_start_point$1$off0273;
-          break;
-         }
-        }
-        __ZN7DrColorC2Ej($agg$tmp61, 2);
-        HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp61 >> 0] | 0;
-        HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp61 + 1 >> 0] | 0;
-        HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp61 + 2 >> 0] | 0;
-        HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp61 + 3 >> 0] | 0;
-        __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0280, $y$0271, $agg$tmp270$byval_copy);
-        $inc64 = $border_pixel_count$1275 + 1 | 0;
-        if ($has_start_point$1$off0273) {
-         $border_pixel_count$3 = $inc64;
-         $has_start_point$3$off0 = 1;
-        } else {
-         __ZN7DrPointC2Eii($agg$tmp270$byval_copy, $x$0280, $y$0271);
-         $7 = HEAP32[$__end_$i$i >> 2] | 0;
-         if ($7 >>> 0 < (HEAP32[$__value_$i$i$i$i >> 2] | 0) >>> 0) {
-          $9 = $agg$tmp270$byval_copy;
-          $14 = HEAP32[$9 + 4 >> 2] | 0;
-          $15 = $7;
-          HEAP32[$15 >> 2] = HEAP32[$9 >> 2];
-          HEAP32[$15 + 4 >> 2] = $14;
-          HEAP32[$__end_$i$i >> 2] = (HEAP32[$__end_$i$i >> 2] | 0) + 8;
-         } else __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($points, $agg$tmp270$byval_copy);
-         __ZN7DrPointC2Eii($agg$tmp270$byval_copy, $sub29, $y$0271);
-         __ZN7DrPointaSERKS_($last_point, $agg$tmp270$byval_copy) | 0;
-         __ZN7DrColorC2Ej($agg$tmp79, 1);
-         HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp79 >> 0] | 0;
-         HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp79 + 1 >> 0] | 0;
-         HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp79 + 2 >> 0] | 0;
-         HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp79 + 3 >> 0] | 0;
-         __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0280, $y$0271, $agg$tmp270$byval_copy);
-         $border_pixel_count$3 = $inc64;
-         $has_start_point$3$off0 = 1;
-        }
-       } while (0);
-       $y$0271 = $y$0271 + 1 | 0;
-       $20 = HEAP32[$height >> 2] | 0;
-       if (($y$0271 | 0) >= ($20 | 0)) break; else {
-        $border_pixel_count$1275 = $border_pixel_count$3;
-        $has_start_point$1$off0273 = $has_start_point$3$off0;
-       }
-      }
-      $103 = $20;
-      $4 = HEAP32[$width >> 2] | 0;
-      $border_pixel_count$1$lcssa = $border_pixel_count$3;
-      $has_start_point$1$off0$lcssa = $has_start_point$3$off0;
-     } else {
-      $103 = $3;
-      $4 = $102;
-      $border_pixel_count$1$lcssa = $border_pixel_count$0282;
-      $has_start_point$1$off0$lcssa = $has_start_point$0$off0281;
-     }
-     $x$0280 = $x$0280 + 1 | 0;
-     if (($x$0280 | 0) >= ($4 | 0)) break; else {
-      $102 = $4;
-      $3 = $103;
-      $border_pixel_count$0282 = $border_pixel_count$1$lcssa;
-      $has_start_point$0$off0281 = $has_start_point$1$off0$lcssa;
-     }
-    }
-    if (($border_pixel_count$1$lcssa | 0) < 3) label = 28; else {
-     HEAP32[$surround >> 2] = 0;
-     $__end_$i$i124 = $surround + 4 | 0;
-     HEAP32[$__end_$i$i124 >> 2] = 0;
-     $__value_$i$i$i$i125 = $surround + 8 | 0;
-     HEAP32[$__value_$i$i$i$i125 >> 2] = 0;
-     $y117 = $current_point + 4 | 0;
-     $21 = 0;
-     $33 = $4;
-     while (1) {
-      HEAP32[$__end_$i$i124 >> 2] = $21;
-      $23 = (HEAP32[$__end_$i$i >> 2] | 0) + -8 | 0;
-      $25 = HEAP32[$23 >> 2] | 0;
-      $28 = HEAP32[$23 + 4 >> 2] | 0;
-      $29 = $current_point;
-      HEAP32[$29 >> 2] = $25;
-      HEAP32[$29 + 4 >> 2] = $28;
-      $cond = ($25 | 0) > 0 ? $25 + -1 | 0 : 0;
-      $sub107 = $33 + -1 | 0;
-      $cond116 = ($sub107 | 0) > ($25 | 0) ? $25 + 1 | 0 : $sub107;
-      $cond124 = ($28 | 0) > 0 ? $28 + -1 | 0 : 0;
-      $sub127 = (HEAP32[$height >> 2] | 0) + -1 | 0;
-      $cond136 = ($sub127 | 0) > ($28 | 0) ? $28 + 1 | 0 : $sub127;
-      if (($cond | 0) <= ($cond116 | 0)) {
-       $cmp144253 = ($cond124 | 0) > ($cond136 | 0);
-       $x137$0256 = $cond;
-       while (1) {
-        if (!$cmp144253) {
-         $y142$0254 = $cond124;
-         while (1) {
-          do if (!(($x137$0256 | 0) == (HEAP32[$current_point >> 2] | 0) ? ($y142$0254 | 0) == (HEAP32[$y117 >> 2] | 0) : 0)) {
-           __ZNK8DrBitmap8getPixelEii($tmp153, $processed, $x137$0256, $y142$0254);
-           __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 4);
-           if (!(__ZNK7DrColorneERKS_($tmp153, $agg$tmp270$byval_copy) | 0)) break;
-           __ZNK8DrBitmap8getPixelEii($tmp161, $processed, $x137$0256, $y142$0254);
-           __ZN7DrColorC2Ej($agg$tmp205$byval_copy, 0);
-           if (__ZNK7DrColorneERKS_($tmp161, $agg$tmp205$byval_copy) | 0) {
-            __ZN7DrPointC2Eii($agg$tmp270$byval_copy, $x137$0256, $y142$0254);
-            $41 = HEAP32[$__end_$i$i124 >> 2] | 0;
-            if ($41 >>> 0 < (HEAP32[$__value_$i$i$i$i125 >> 2] | 0) >>> 0) {
-             $43 = $agg$tmp270$byval_copy;
-             $48 = HEAP32[$43 + 4 >> 2] | 0;
-             $49 = $41;
-             HEAP32[$49 >> 2] = HEAP32[$43 >> 2];
-             HEAP32[$49 + 4 >> 2] = $48;
-             HEAP32[$__end_$i$i124 >> 2] = (HEAP32[$__end_$i$i124 >> 2] | 0) + 8;
-            } else __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($surround, $agg$tmp270$byval_copy);
-           }
-          } while (0);
-          if (($y142$0254 | 0) < ($cond136 | 0)) $y142$0254 = $y142$0254 + 1 | 0; else break;
-         }
-        }
-        if (($x137$0256 | 0) < ($cond116 | 0)) $x137$0256 = $x137$0256 + 1 | 0; else break;
-       }
-      }
-      __ZN7DrPoint8toPointFEv($agg$tmp188, $current_point);
-      __ZN7DrPoint8toPointFEv($agg$tmp191, $last_point);
-      HEAP32[$agg$tmp205$byval_copy >> 2] = HEAP32[$agg$tmp188 >> 2];
-      HEAP32[$agg$tmp205$byval_copy + 4 >> 2] = HEAP32[$agg$tmp188 + 4 >> 2];
-      HEAP32[$agg$tmp205$byval_copy + 8 >> 2] = HEAP32[$agg$tmp188 + 8 >> 2];
-      HEAP32[$agg$tmp205$byval_copy + 12 >> 2] = HEAP32[$agg$tmp188 + 12 >> 2];
-      HEAP32[$agg$tmp270$byval_copy >> 2] = HEAP32[$agg$tmp191 >> 2];
-      HEAP32[$agg$tmp270$byval_copy + 4 >> 2] = HEAP32[$agg$tmp191 + 4 >> 2];
-      HEAP32[$agg$tmp270$byval_copy + 8 >> 2] = HEAP32[$agg$tmp191 + 8 >> 2];
-      HEAP32[$agg$tmp270$byval_copy + 12 >> 2] = HEAP32[$agg$tmp191 + 12 >> 2];
-      $call194 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($agg$tmp205$byval_copy, $agg$tmp270$byval_copy);
-      __ZN7DrPointC2Ev($next_point);
-      $35 = HEAP32[$surround >> 2] | 0;
-      $36 = HEAP32[$__end_$i$i124 >> 2] | 0;
-      if (($35 | 0) == ($36 | 0)) {
-       $54 = $36;
-       $55 = $35;
-      } else {
-       $__begin$sroa$0$0263 = $35;
-       $angle_diff$0264 = 0.0;
-       $first$0$off0265 = 1;
-       while (1) {
-        $56 = $__begin$sroa$0$0263;
-        $61 = HEAP32[$56 + 4 >> 2] | 0;
-        $62 = $point;
-        HEAP32[$62 >> 2] = HEAP32[$56 >> 2];
-        HEAP32[$62 + 4 >> 2] = $61;
-        __ZN7DrPoint8toPointFEv($agg$tmp205, $current_point);
-        __ZN7DrPoint8toPointFEv($agg$tmp208, $point);
-        HEAP32[$agg$tmp205$byval_copy >> 2] = HEAP32[$agg$tmp205 >> 2];
-        HEAP32[$agg$tmp205$byval_copy + 4 >> 2] = HEAP32[$agg$tmp205 + 4 >> 2];
-        HEAP32[$agg$tmp205$byval_copy + 8 >> 2] = HEAP32[$agg$tmp205 + 8 >> 2];
-        HEAP32[$agg$tmp205$byval_copy + 12 >> 2] = HEAP32[$agg$tmp205 + 12 >> 2];
-        HEAP32[$agg$tmp270$byval_copy >> 2] = HEAP32[$agg$tmp208 >> 2];
-        HEAP32[$agg$tmp270$byval_copy + 4 >> 2] = HEAP32[$agg$tmp208 + 4 >> 2];
-        HEAP32[$agg$tmp270$byval_copy + 8 >> 2] = HEAP32[$agg$tmp208 + 8 >> 2];
-        HEAP32[$agg$tmp270$byval_copy + 12 >> 2] = HEAP32[$agg$tmp208 + 12 >> 2];
-        $call211 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($agg$tmp205$byval_copy, $agg$tmp270$byval_copy);
-        if ($call211 > 0.0) {
-         $check_angle$0258 = $call211;
-         while (1) {
-          $sub213 = $check_angle$0258 + -360.0;
-          if ($sub213 > 0.0) $check_angle$0258 = $sub213; else {
-           $check_angle$0$lcssa = $sub213;
-           break;
-          }
-         }
-        } else $check_angle$0$lcssa = $call211;
-        if (!($check_angle$0$lcssa <= $call194)) $check_angle$1$lcssa = $check_angle$0$lcssa; else {
-         $check_angle$1260 = $check_angle$0$lcssa;
-         while (1) {
-          $add217 = $check_angle$1260 + 360.0;
-          if (!($add217 <= $call194)) {
-           $check_angle$1$lcssa = $add217;
-           break;
-          } else $check_angle$1260 = $add217;
-         }
-        }
-        $sub219 = $check_angle$1$lcssa - $call194;
-        if ($first$0$off0265 | $sub219 < $angle_diff$0264) {
-         __ZN7DrPointaSERKS_($next_point, $point) | 0;
-         $angle_diff$1 = $sub219;
-        } else $angle_diff$1 = $angle_diff$0264;
-        $__begin$sroa$0$0263 = $__begin$sroa$0$0263 + 8 | 0;
-        if (($__begin$sroa$0$0263 | 0) == ($36 | 0)) break; else {
-         $angle_diff$0264 = $angle_diff$1;
-         $first$0$off0265 = 0;
-        }
-       }
-       $54 = HEAP32[$__end_$i$i124 >> 2] | 0;
-       $55 = HEAP32[$surround >> 2] | 0;
-      }
-      do if (($54 | 0) != ($55 | 0)) {
-       __ZNK8DrBitmap8getPixelEii($tmp242, $processed, HEAP32[$current_point >> 2] | 0, HEAP32[$y117 >> 2] | 0);
-       __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 2);
-       $call248 = __ZNK7DrColoreqERKS_($tmp242, $agg$tmp270$byval_copy) | 0;
-       $68 = HEAP32[$current_point >> 2] | 0;
-       $69 = HEAP32[$y117 >> 2] | 0;
-       if ($call248) {
-        __ZN7DrColorC2Ej($agg$tmp253, 3);
-        HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp253 >> 0] | 0;
-        HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp253 + 1 >> 0] | 0;
-        HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp253 + 2 >> 0] | 0;
-        HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp253 + 3 >> 0] | 0;
-        __ZN8DrBitmap8setPixelEii7DrColor($processed, $68, $69, $agg$tmp270$byval_copy);
-       } else {
-        __ZNK8DrBitmap8getPixelEii($tmp259, $processed, $68, $69);
-        __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 3);
-        if (__ZNK7DrColoreqERKS_($tmp259, $agg$tmp270$byval_copy) | 0) {
-         $70 = HEAP32[$current_point >> 2] | 0;
-         $71 = HEAP32[$y117 >> 2] | 0;
-         __ZN7DrColorC2Ej($agg$tmp270, 4);
-         HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp270 >> 0] | 0;
-         HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp270 + 1 >> 0] | 0;
-         HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp270 + 2 >> 0] | 0;
-         HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp270 + 3 >> 0] | 0;
-         __ZN8DrBitmap8setPixelEii7DrColor($processed, $70, $71, $agg$tmp270$byval_copy);
-        }
-       }
-       __ZN7DrPointaSERKS_($last_point, $current_point) | 0;
-       $72 = HEAP32[$__end_$i$i >> 2] | 0;
-       if (($72 | 0) == (HEAP32[$__value_$i$i$i$i >> 2] | 0)) {
-        __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($points, $next_point);
-        break;
-       } else {
-        $74 = $next_point;
-        $79 = HEAP32[$74 + 4 >> 2] | 0;
-        $80 = $72;
-        HEAP32[$80 >> 2] = HEAP32[$74 >> 2];
-        HEAP32[$80 + 4 >> 2] = $79;
-        HEAP32[$__end_$i$i >> 2] = (HEAP32[$__end_$i$i >> 2] | 0) + 8;
-        break;
-       }
-      } while (0);
-      $85 = HEAP32[$__end_$i$i >> 2] | 0;
-      __ZNK8DrBitmap8getPixelEii($tmp285, $processed, HEAP32[$85 + -8 >> 2] | 0, HEAP32[$85 + -4 >> 2] | 0);
-      __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 1);
-      $call291 = __ZNK7DrColoreqERKS_($tmp285, $agg$tmp270$byval_copy) | 0;
-      $89 = HEAP32[$surround >> 2] | 0;
-      if ($call291 | (HEAP32[$__end_$i$i124 >> 2] | 0) == ($89 | 0)) break;
-      $21 = $89;
-      $33 = HEAP32[$width >> 2] | 0;
-     }
-     HEAP32[$agg$tmp270$byval_copy >> 2] = 0;
-     $__end_$i$i152 = $agg$tmp270$byval_copy + 4 | 0;
-     HEAP32[$__end_$i$i152 >> 2] = 0;
-     $__value_$i$i$i$i153 = $agg$tmp270$byval_copy + 8 | 0;
-     HEAP32[$__value_$i$i$i$i153 >> 2] = 0;
-     $91 = HEAP32[$points >> 2] | 0;
-     if ((HEAP32[$__end_$i$i >> 2] | 0) == ($91 | 0)) {
-      $92 = 0;
-      $93 = 0;
-      $94 = 0;
-     } else {
-      $$in = $91;
-      $i308$0252 = 0;
-      do {
-       $95 = $$in;
-       __ZN8DrPointFC2Edd($agg$tmp205$byval_copy, +(HEAP32[$95 + ($i308$0252 << 3) >> 2] | 0), +(HEAP32[$95 + ($i308$0252 << 3) + 4 >> 2] | 0));
-       $98 = HEAP32[$__end_$i$i152 >> 2] | 0;
-       if ($98 >>> 0 < (HEAP32[$__value_$i$i$i$i153 >> 2] | 0) >>> 0) {
-        HEAP32[$98 >> 2] = HEAP32[$agg$tmp205$byval_copy >> 2];
-        HEAP32[$98 + 4 >> 2] = HEAP32[$agg$tmp205$byval_copy + 4 >> 2];
-        HEAP32[$98 + 8 >> 2] = HEAP32[$agg$tmp205$byval_copy + 8 >> 2];
-        HEAP32[$98 + 12 >> 2] = HEAP32[$agg$tmp205$byval_copy + 12 >> 2];
-        HEAP32[$__end_$i$i152 >> 2] = $98 + 16;
-       } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($agg$tmp270$byval_copy, $agg$tmp205$byval_copy);
-       $i308$0252 = $i308$0252 + 1 | 0;
-       $$in = HEAP32[$points >> 2] | 0;
-      } while ($i308$0252 >>> 0 < (HEAP32[$__end_$i$i >> 2] | 0) - $$in >> 3 >>> 0);
-      $92 = HEAP32[$agg$tmp270$byval_copy >> 2] | 0;
-      $93 = HEAP32[$__end_$i$i152 >> 2] | 0;
-      $94 = HEAP32[$__value_$i$i$i$i153 >> 2] | 0;
-     }
-     HEAP32[$agg$result >> 2] = $92;
-     HEAP32[$agg$result + 4 >> 2] = $93;
-     HEAP32[$agg$result + 8 >> 2] = $94;
-     HEAP32[$__value_$i$i$i$i153 >> 2] = 0;
-     HEAP32[$__end_$i$i152 >> 2] = 0;
-     HEAP32[$agg$tmp270$byval_copy >> 2] = 0;
-     __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($agg$tmp270$byval_copy);
-     __ZNSt3__213__vector_baseI7DrPointNS_9allocatorIS1_EEED2Ev($surround);
-    }
-   } else label = 28;
-   if ((label | 0) == 28) {
-    HEAP32[$agg$result >> 2] = 0;
-    HEAP32[$agg$result + 4 >> 2] = 0;
-    HEAP32[$agg$result + 8 >> 2] = 0;
-   }
-  }
- }
- if ((label | 0) == 3) {
-  HEAP32[$agg$result >> 2] = 0;
-  HEAP32[$agg$result + 4 >> 2] = 0;
-  HEAP32[$agg$result + 8 >> 2] = 0;
- }
- __ZNSt3__213__vector_baseI7DrPointNS_9allocatorIS1_EEED2Ev($points);
- __ZN8DrBitmapD2Ev($processed);
- STACKTOP = sp;
- return;
-}
+
 function _stbi__parse_png_file($z, $scan, $req_comp) {
  $z = $z | 0;
  $scan = $scan | 0;
@@ -12281,1127 +11807,6 @@ function _stbi__parse_png_file($z, $scan, $req_comp) {
  return 0;
 }
 
-function __ZN13TPPLPartition11RemoveHolesEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $outpolys) {
- $this = $this | 0;
- $inpolys = $inpolys | 0;
- $outpolys = $outpolys | 0;
- var $$pre$phiZ2D = 0, $0 = 0, $1 = 0, $10 = 0.0, $13 = 0, $16 = 0, $18 = 0.0, $20 = 0, $22 = 0, $24 = 0, $27 = 0, $29 = 0, $31 = 0, $33 = 0, $5 = 0, $8 = 0, $__next_$i$i$i = 0, $__next_$i$i93 = 0, $__value_$i124 = 0, $__value_$i126 = 0, $__value_$i139 = 0, $__value_$i149 = 0, $__value_$i155 = 0, $add144 = 0, $agg$tmp = 0, $agg$tmp$i = 0, $agg$tmp$i$byval_copy = 0, $agg$tmp2$i = 0, $agg$tmp316 = 0, $agg$tmp316$byval_copy = 0, $bestpolypoint = 0, $call137 = 0, $call141 = 0, $call159 = 0, $call205 = 0, $call215 = 0, $call251 = 0, $call265 = 0, $call267 = 0, $call288 = 0, $call290 = 0, $call305 = 0, $call307 = 0, $call92 = 0, $cmp75 = 0, $hasholes$1$off0247 = 0, $hasholes$3$off0 = 0, $holeiter$sroa$0$0310 = 0, $holeiter$sroa$0$1246 = 0, $holeiter$sroa$0$3239 = 0, $holeiter$sroa$0$4 = 0, $holeiter$sroa$0$5 = 0, $holepoint = 0, $holepointindex$0312 = 0, $holepointindex$1248 = 0, $holepointindex$3240 = 0, $holepointindex$4 = 0, $holepointindex$5 = 0, $i$0241 = 0, $i$1265 = 0, $i$2282 = 0, $i$3287 = 0, $i$4292 = 0, $i2$0255 = 0, $i2$1$lcssa = 0, $i2$2$lcssa = 0, $i2$2286 = 0, $i2$3291 = 0, $inc237$pre$phiZ2D = 0, $inc291 = 0, $iter$sroa$0$0294 = 0, $iter$sroa$0$0296 = 0, $iter$sroa$0$1230 = 0, $iter$sroa$0$1230$pre = 0, $iter$sroa$0$1232 = 0, $iter$sroa$0$2244307 = 0, $iter$sroa$0$2244313 = 0, $iter$sroa$0$2249 = 0, $iter$sroa$0$3271 = 0, $iter$sroa$0$3276 = 0, $iter$sroa$0$4234 = 0, $iter$sroa$0$4236 = 0, $iter2$sroa$0$0257 = 0, $iter2$sroa$0$0259 = 0, $linep1 = 0, $linep2 = 0, $newpoly = 0, $pointfound$0$off0274 = 0, $pointfound$1$off0263 = 0, $pointfound$2$off0 = 0, $pointfound$3$off0 = 0, $polyiter$sroa$0$0309 = 0, $polyiter$sroa$0$1273 = 0, $polyiter$sroa$0$2262 = 0, $polyiter$sroa$0$3 = 0, $polyiter$sroa$0$4 = 0, $polypoint = 0, $polypointindex$0311 = 0, $polypointindex$1275 = 0, $polypointindex$2264 = 0, $polypointindex$3 = 0, $polypointindex$4 = 0, $polys = 0, $retval$0 = 0, $spec$select = 0, $spec$select220 = 0, $sub = 0, $v1$sroa$0$0$copyload = 0.0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 208 | 0;
- $agg$tmp316$byval_copy = sp + 144 | 0;
- $agg$tmp$i$byval_copy = sp + 120 | 0;
- $agg$tmp$i = sp + 204 | 0;
- $agg$tmp2$i = sp + 200 | 0;
- $polys = sp + 188 | 0;
- $holepoint = sp + 96 | 0;
- $polypoint = sp + 72 | 0;
- $bestpolypoint = sp + 48 | 0;
- $linep1 = sp + 24 | 0;
- $linep2 = sp;
- $newpoly = sp + 168 | 0;
- $agg$tmp = sp + 184 | 0;
- $agg$tmp316 = sp + 180 | 0;
- HEAP32[$polys >> 2] = $polys;
- $__next_$i$i$i = $polys + 4 | 0;
- HEAP32[$__next_$i$i$i >> 2] = $polys;
- HEAP32[$polys + 8 >> 2] = 0;
- __ZN8TPPLPolyC2Ev($newpoly);
- $__next_$i$i93 = $inpolys + 4 | 0;
- $iter$sroa$0$0294 = HEAP32[$__next_$i$i93 >> 2] | 0;
- $0 = $iter$sroa$0$0294;
- L1 : do if (($inpolys | 0) == ($0 | 0)) {
-  $$pre$phiZ2D = $0;
-  $iter$sroa$0$1230 = $iter$sroa$0$0294;
-  label = 6;
- } else {
-  $1 = $0;
-  $iter$sroa$0$0296 = $iter$sroa$0$0294;
-  while (1) {
-   if (__ZNK8TPPLPoly6IsHoleEv($iter$sroa$0$0296 + 8 | 0) | 0) break;
-   $iter$sroa$0$0296 = HEAP32[$1 + 4 >> 2] | 0;
-   $1 = $iter$sroa$0$0296;
-   if (($inpolys | 0) == ($1 | 0)) {
-    label = 5;
-    break;
-   }
-  }
-  if ((label | 0) == 5) {
-   $iter$sroa$0$1230$pre = HEAP32[$__next_$i$i93 >> 2] | 0;
-   $$pre$phiZ2D = $iter$sroa$0$1230$pre;
-   $iter$sroa$0$1230 = $iter$sroa$0$1230$pre;
-   label = 6;
-   break;
-  }
-  if (($polys | 0) != ($inpolys | 0)) {
-   HEAP32[$agg$tmp$i >> 2] = HEAP32[$__next_$i$i93 >> 2];
-   HEAP32[$agg$tmp2$i >> 2] = $inpolys;
-   HEAP32[$agg$tmp$i$byval_copy >> 2] = HEAP32[$agg$tmp$i >> 2];
-   HEAP32[$agg$tmp316$byval_copy >> 2] = HEAP32[$agg$tmp2$i >> 2];
-   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6assignINS_21__list_const_iteratorIS1_PvEEEEvT_S9_PNS_9enable_ifIXsr19__is_input_iteratorIS9_EE5valueEvE4typeE($polys, $agg$tmp$i$byval_copy, $agg$tmp316$byval_copy, 0);
-  }
-  $iter$sroa$0$2244307 = HEAP32[$__next_$i$i$i >> 2] | 0;
-  $8 = $iter$sroa$0$2244307;
-  L12 : do if (($polys | 0) != ($8 | 0)) {
-   $33 = $8;
-   $holeiter$sroa$0$0310 = 0;
-   $holepointindex$0312 = 0;
-   $iter$sroa$0$2244313 = $iter$sroa$0$2244307;
-   $polyiter$sroa$0$0309 = 0;
-   $polypointindex$0311 = 0;
-   while (1) {
-    $13 = $33;
-    $hasholes$1$off0247 = 0;
-    $holeiter$sroa$0$1246 = $holeiter$sroa$0$0310;
-    $holepointindex$1248 = $holepointindex$0312;
-    $iter$sroa$0$2249 = $iter$sroa$0$2244313;
-    while (1) {
-     $__value_$i124 = $iter$sroa$0$2249 + 8 | 0;
-     if (__ZNK8TPPLPoly6IsHoleEv($__value_$i124) | 0) {
-      $spec$select = $hasholes$1$off0247 ? $holeiter$sroa$0$1246 : $iter$sroa$0$2249;
-      $spec$select220 = $hasholes$1$off0247 ? $holepointindex$1248 : 0;
-      if ((__ZNK8TPPLPoly12GetNumPointsEv($__value_$i124) | 0) > 0) {
-       $holeiter$sroa$0$3239 = $spec$select;
-       $holepointindex$3240 = $spec$select220;
-       $i$0241 = 0;
-       while (1) {
-        $10 = +HEAPF64[(__ZN8TPPLPoly8GetPointEl($__value_$i124, $i$0241) | 0) >> 3];
-        $cmp75 = $10 > +HEAPF64[(__ZN8TPPLPoly8GetPointEl($holeiter$sroa$0$3239 + 8 | 0, $holepointindex$3240) | 0) >> 3];
-        $holeiter$sroa$0$4 = $cmp75 ? $iter$sroa$0$2249 : $holeiter$sroa$0$3239;
-        $holepointindex$4 = $cmp75 ? $i$0241 : $holepointindex$3240;
-        $i$0241 = $i$0241 + 1 | 0;
-        if (($i$0241 | 0) >= (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i124) | 0)) {
-         $hasholes$3$off0 = 1;
-         $holeiter$sroa$0$5 = $holeiter$sroa$0$4;
-         $holepointindex$5 = $holepointindex$4;
-         break;
-        } else {
-         $holeiter$sroa$0$3239 = $holeiter$sroa$0$4;
-         $holepointindex$3240 = $holepointindex$4;
-        }
-       }
-      } else {
-       $hasholes$3$off0 = 1;
-       $holeiter$sroa$0$5 = $spec$select;
-       $holepointindex$5 = $spec$select220;
-      }
-     } else {
-      $hasholes$3$off0 = $hasholes$1$off0247;
-      $holeiter$sroa$0$5 = $holeiter$sroa$0$1246;
-      $holepointindex$5 = $holepointindex$1248;
-     }
-     $iter$sroa$0$2249 = HEAP32[$13 + 4 >> 2] | 0;
-     $13 = $iter$sroa$0$2249;
-     if (($polys | 0) == ($13 | 0)) break; else {
-      $hasholes$1$off0247 = $hasholes$3$off0;
-      $holeiter$sroa$0$1246 = $holeiter$sroa$0$5;
-      $holepointindex$1248 = $holepointindex$5;
-     }
-    }
-    if (!$hasholes$3$off0) break L12;
-    $__value_$i139 = $holeiter$sroa$0$5 + 8 | 0;
-    $call92 = __ZN8TPPLPoly8GetPointEl($__value_$i139, $holepointindex$5) | 0;
-    HEAP32[$holepoint >> 2] = HEAP32[$call92 >> 2];
-    HEAP32[$holepoint + 4 >> 2] = HEAP32[$call92 + 4 >> 2];
-    HEAP32[$holepoint + 8 >> 2] = HEAP32[$call92 + 8 >> 2];
-    HEAP32[$holepoint + 12 >> 2] = HEAP32[$call92 + 12 >> 2];
-    HEAP32[$holepoint + 16 >> 2] = HEAP32[$call92 + 16 >> 2];
-    HEAP32[$holepoint + 20 >> 2] = HEAP32[$call92 + 20 >> 2];
-    $iter$sroa$0$3271 = HEAP32[$__next_$i$i$i >> 2] | 0;
-    $16 = $iter$sroa$0$3271;
-    if (($polys | 0) == ($16 | 0)) {
-     $retval$0 = 0;
-     break L1;
-    }
-    $24 = $16;
-    $iter$sroa$0$3276 = $iter$sroa$0$3271;
-    $pointfound$0$off0274 = 0;
-    $polyiter$sroa$0$1273 = $polyiter$sroa$0$0309;
-    $polypointindex$1275 = $polypointindex$0311;
-    while (1) {
-     $__value_$i155 = $iter$sroa$0$3276 + 8 | 0;
-     if (__ZNK8TPPLPoly6IsHoleEv($__value_$i155) | 0) {
-      $pointfound$3$off0 = $pointfound$0$off0274;
-      $polyiter$sroa$0$4 = $polyiter$sroa$0$1273;
-      $polypointindex$4 = $polypointindex$1275;
-     } else if ((__ZNK8TPPLPoly12GetNumPointsEv($__value_$i155) | 0) > 0) {
-      $i$1265 = 0;
-      $pointfound$1$off0263 = $pointfound$0$off0274;
-      $polyiter$sroa$0$2262 = $polyiter$sroa$0$1273;
-      $polypointindex$2264 = $polypointindex$1275;
-      while (1) {
-       $18 = +HEAPF64[(__ZN8TPPLPoly8GetPointEl($__value_$i155, $i$1265) | 0) >> 3];
-       L34 : do if (!($18 <= +HEAPF64[$holepoint >> 3])) {
-        $sub = $i$1265 + -1 + (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i155) | 0) | 0;
-        $call137 = __ZN8TPPLPoly8GetPointEl($__value_$i155, ($sub | 0) % (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i155) | 0) | 0) | 0;
-        $call141 = __ZN8TPPLPoly8GetPointEl($__value_$i155, $i$1265) | 0;
-        $add144 = $i$1265 + 1 | 0;
-        if (__ZN13TPPLPartition6InConeER9TPPLPointS1_S1_S1_($this, $call137, $call141, __ZN8TPPLPoly8GetPointEl($__value_$i155, ($add144 | 0) % (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i155) | 0) | 0) | 0, $holepoint) | 0) {
-         $call159 = __ZN8TPPLPoly8GetPointEl($__value_$i155, $i$1265) | 0;
-         HEAP32[$polypoint >> 2] = HEAP32[$call159 >> 2];
-         HEAP32[$polypoint + 4 >> 2] = HEAP32[$call159 + 4 >> 2];
-         HEAP32[$polypoint + 8 >> 2] = HEAP32[$call159 + 8 >> 2];
-         HEAP32[$polypoint + 12 >> 2] = HEAP32[$call159 + 12 >> 2];
-         HEAP32[$polypoint + 16 >> 2] = HEAP32[$call159 + 16 >> 2];
-         HEAP32[$polypoint + 20 >> 2] = HEAP32[$call159 + 20 >> 2];
-         if ($pointfound$1$off0263) {
-          __ZNK9TPPLPointmiERKS_($agg$tmp$i$byval_copy, $polypoint, $holepoint);
-          __ZN13TPPLPartition9NormalizeERK9TPPLPoint($agg$tmp316$byval_copy, 0, $agg$tmp$i$byval_copy);
-          $v1$sroa$0$0$copyload = +HEAPF64[$agg$tmp316$byval_copy >> 3];
-          __ZNK9TPPLPointmiERKS_($agg$tmp$i$byval_copy, $bestpolypoint, $holepoint);
-          __ZN13TPPLPartition9NormalizeERK9TPPLPoint($agg$tmp316$byval_copy, 0, $agg$tmp$i$byval_copy);
-          if (+HEAPF64[$agg$tmp316$byval_copy >> 3] > $v1$sroa$0$0$copyload) {
-           $inc237$pre$phiZ2D = $add144;
-           $pointfound$2$off0 = 1;
-           $polyiter$sroa$0$3 = $polyiter$sroa$0$2262;
-           $polypointindex$3 = $polypointindex$2264;
-           break;
-          }
-         }
-         $iter2$sroa$0$0257 = HEAP32[$__next_$i$i$i >> 2] | 0;
-         $20 = $iter2$sroa$0$0257;
-         if (($polys | 0) != ($20 | 0)) {
-          $22 = $20;
-          $iter2$sroa$0$0259 = $iter2$sroa$0$0257;
-          do {
-           $__value_$i149 = $iter2$sroa$0$0259 + 8 | 0;
-           do if (!(__ZNK8TPPLPoly6IsHoleEv($__value_$i149) | 0)) {
-            if ((__ZNK8TPPLPoly12GetNumPointsEv($__value_$i149) | 0) <= 0) break;
-            $i2$0255 = 0;
-            do {
-             $call205 = __ZN8TPPLPoly8GetPointEl($__value_$i149, $i2$0255) | 0;
-             HEAP32[$linep1 >> 2] = HEAP32[$call205 >> 2];
-             HEAP32[$linep1 + 4 >> 2] = HEAP32[$call205 + 4 >> 2];
-             HEAP32[$linep1 + 8 >> 2] = HEAP32[$call205 + 8 >> 2];
-             HEAP32[$linep1 + 12 >> 2] = HEAP32[$call205 + 12 >> 2];
-             HEAP32[$linep1 + 16 >> 2] = HEAP32[$call205 + 16 >> 2];
-             HEAP32[$linep1 + 20 >> 2] = HEAP32[$call205 + 20 >> 2];
-             $i2$0255 = $i2$0255 + 1 | 0;
-             $call215 = __ZN8TPPLPoly8GetPointEl($__value_$i149, ($i2$0255 | 0) % (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i149) | 0) | 0) | 0;
-             HEAP32[$linep2 >> 2] = HEAP32[$call215 >> 2];
-             HEAP32[$linep2 + 4 >> 2] = HEAP32[$call215 + 4 >> 2];
-             HEAP32[$linep2 + 8 >> 2] = HEAP32[$call215 + 8 >> 2];
-             HEAP32[$linep2 + 12 >> 2] = HEAP32[$call215 + 12 >> 2];
-             HEAP32[$linep2 + 16 >> 2] = HEAP32[$call215 + 16 >> 2];
-             HEAP32[$linep2 + 20 >> 2] = HEAP32[$call215 + 20 >> 2];
-             if (__ZN13TPPLPartition10IntersectsER9TPPLPointS1_S1_S1_(0, $holepoint, $polypoint, $linep1, $linep2) | 0) {
-              $inc237$pre$phiZ2D = $add144;
-              $pointfound$2$off0 = $pointfound$1$off0263;
-              $polyiter$sroa$0$3 = $polyiter$sroa$0$2262;
-              $polypointindex$3 = $polypointindex$2264;
-              break L34;
-             }
-            } while (($i2$0255 | 0) < (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i149) | 0));
-           } while (0);
-           $iter2$sroa$0$0259 = HEAP32[$22 + 4 >> 2] | 0;
-           $22 = $iter2$sroa$0$0259;
-          } while (($polys | 0) != ($22 | 0));
-         };
-         HEAP32[$bestpolypoint >> 2] = HEAP32[$polypoint >> 2];
-         HEAP32[$bestpolypoint + 4 >> 2] = HEAP32[$polypoint + 4 >> 2];
-         HEAP32[$bestpolypoint + 8 >> 2] = HEAP32[$polypoint + 8 >> 2];
-         HEAP32[$bestpolypoint + 12 >> 2] = HEAP32[$polypoint + 12 >> 2];
-         HEAP32[$bestpolypoint + 16 >> 2] = HEAP32[$polypoint + 16 >> 2];
-         HEAP32[$bestpolypoint + 20 >> 2] = HEAP32[$polypoint + 20 >> 2];
-         $inc237$pre$phiZ2D = $add144;
-         $pointfound$2$off0 = 1;
-         $polyiter$sroa$0$3 = $iter$sroa$0$3276;
-         $polypointindex$3 = $i$1265;
-        } else {
-         $inc237$pre$phiZ2D = $add144;
-         $pointfound$2$off0 = $pointfound$1$off0263;
-         $polyiter$sroa$0$3 = $polyiter$sroa$0$2262;
-         $polypointindex$3 = $polypointindex$2264;
-        }
-       } else {
-        $inc237$pre$phiZ2D = $i$1265 + 1 | 0;
-        $pointfound$2$off0 = $pointfound$1$off0263;
-        $polyiter$sroa$0$3 = $polyiter$sroa$0$2262;
-        $polypointindex$3 = $polypointindex$2264;
-       } while (0);
-       if (($inc237$pre$phiZ2D | 0) < (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i155) | 0)) {
-        $i$1265 = $inc237$pre$phiZ2D;
-        $pointfound$1$off0263 = $pointfound$2$off0;
-        $polyiter$sroa$0$2262 = $polyiter$sroa$0$3;
-        $polypointindex$2264 = $polypointindex$3;
-       } else {
-        $pointfound$3$off0 = $pointfound$2$off0;
-        $polyiter$sroa$0$4 = $polyiter$sroa$0$3;
-        $polypointindex$4 = $polypointindex$3;
-        break;
-       }
-      }
-     } else {
-      $pointfound$3$off0 = $pointfound$0$off0274;
-      $polyiter$sroa$0$4 = $polyiter$sroa$0$1273;
-      $polypointindex$4 = $polypointindex$1275;
-     }
-     $iter$sroa$0$3276 = HEAP32[$24 + 4 >> 2] | 0;
-     $24 = $iter$sroa$0$3276;
-     if (($polys | 0) == ($24 | 0)) break; else {
-      $pointfound$0$off0274 = $pointfound$3$off0;
-      $polyiter$sroa$0$1273 = $polyiter$sroa$0$4;
-      $polypointindex$1275 = $polypointindex$4;
-     }
-    }
-    if (!$pointfound$3$off0) {
-     $retval$0 = 0;
-     break L1;
-    }
-    $call251 = __ZNK8TPPLPoly12GetNumPointsEv($__value_$i139) | 0;
-    $__value_$i126 = $polyiter$sroa$0$4 + 8 | 0;
-    __ZN8TPPLPoly4InitEl($newpoly, $call251 + 2 + (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i126) | 0) | 0);
-    if (($polypointindex$4 | 0) < 0) $i2$1$lcssa = 0; else {
-     $27 = $polypointindex$4 + 1 | 0;
-     $i$2282 = 0;
-     do {
-      $call265 = __ZN8TPPLPoly8GetPointEl($__value_$i126, $i$2282) | 0;
-      $call267 = __ZN8TPPLPolyixEi($newpoly, $i$2282) | 0;
-      HEAP32[$call267 >> 2] = HEAP32[$call265 >> 2];
-      HEAP32[$call267 + 4 >> 2] = HEAP32[$call265 + 4 >> 2];
-      HEAP32[$call267 + 8 >> 2] = HEAP32[$call265 + 8 >> 2];
-      HEAP32[$call267 + 12 >> 2] = HEAP32[$call265 + 12 >> 2];
-      HEAP32[$call267 + 16 >> 2] = HEAP32[$call265 + 16 >> 2];
-      HEAP32[$call267 + 20 >> 2] = HEAP32[$call265 + 20 >> 2];
-      $i$2282 = $i$2282 + 1 | 0;
-     } while (($i$2282 | 0) != ($27 | 0));
-     $i2$1$lcssa = $27;
-    }
-    if ((__ZNK8TPPLPoly12GetNumPointsEv($__value_$i139) | 0) < 0) $i2$2$lcssa = $i2$1$lcssa; else {
-     $i$3287 = 0;
-     $i2$2286 = $i2$1$lcssa;
-     while (1) {
-      $call288 = __ZN8TPPLPoly8GetPointEl($__value_$i139, ($i$3287 + $holepointindex$5 | 0) % (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i139) | 0) | 0) | 0;
-      $call290 = __ZN8TPPLPolyixEi($newpoly, $i2$2286) | 0;
-      HEAP32[$call290 >> 2] = HEAP32[$call288 >> 2];
-      HEAP32[$call290 + 4 >> 2] = HEAP32[$call288 + 4 >> 2];
-      HEAP32[$call290 + 8 >> 2] = HEAP32[$call288 + 8 >> 2];
-      HEAP32[$call290 + 12 >> 2] = HEAP32[$call288 + 12 >> 2];
-      HEAP32[$call290 + 16 >> 2] = HEAP32[$call288 + 16 >> 2];
-      HEAP32[$call290 + 20 >> 2] = HEAP32[$call288 + 20 >> 2];
-      $inc291 = $i2$2286 + 1 | 0;
-      if (($i$3287 | 0) < (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i139) | 0)) {
-       $i$3287 = $i$3287 + 1 | 0;
-       $i2$2286 = $inc291;
-      } else {
-       $i2$2$lcssa = $inc291;
-       break;
-      }
-     }
-    }
-    if (($polypointindex$4 | 0) < (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i126) | 0)) {
-     $i$4292 = $polypointindex$4;
-     $i2$3291 = $i2$2$lcssa;
-     while (1) {
-      $call305 = __ZN8TPPLPoly8GetPointEl($__value_$i126, $i$4292) | 0;
-      $call307 = __ZN8TPPLPolyixEi($newpoly, $i2$3291) | 0;
-      HEAP32[$call307 >> 2] = HEAP32[$call305 >> 2];
-      HEAP32[$call307 + 4 >> 2] = HEAP32[$call305 + 4 >> 2];
-      HEAP32[$call307 + 8 >> 2] = HEAP32[$call305 + 8 >> 2];
-      HEAP32[$call307 + 12 >> 2] = HEAP32[$call305 + 12 >> 2];
-      HEAP32[$call307 + 16 >> 2] = HEAP32[$call305 + 16 >> 2];
-      HEAP32[$call307 + 20 >> 2] = HEAP32[$call305 + 20 >> 2];
-      $i$4292 = $i$4292 + 1 | 0;
-      if (($i$4292 | 0) >= (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i126) | 0)) break; else $i2$3291 = $i2$3291 + 1 | 0;
-     }
-    }
-    HEAP32[$agg$tmp >> 2] = $holeiter$sroa$0$5;
-    HEAP32[$agg$tmp316$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
-    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE5eraseENS_21__list_const_iteratorIS1_PvEE($polys, $agg$tmp316$byval_copy) | 0;
-    HEAP32[$agg$tmp316 >> 2] = $polyiter$sroa$0$4;
-    HEAP32[$agg$tmp316$byval_copy >> 2] = HEAP32[$agg$tmp316 >> 2];
-    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE5eraseENS_21__list_const_iteratorIS1_PvEE($polys, $agg$tmp316$byval_copy) | 0;
-    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($polys, $newpoly);
-    $iter$sroa$0$2244313 = HEAP32[$__next_$i$i$i >> 2] | 0;
-    $33 = $iter$sroa$0$2244313;
-    if (($polys | 0) == ($33 | 0)) break; else {
-     $holeiter$sroa$0$0310 = $holeiter$sroa$0$5;
-     $holepointindex$0312 = $holepointindex$5;
-     $polyiter$sroa$0$0309 = $polyiter$sroa$0$4;
-     $polypointindex$0311 = $polypointindex$4;
-    }
-   }
-  } while (0);
-  $iter$sroa$0$4234 = HEAP32[$__next_$i$i$i >> 2] | 0;
-  $29 = $iter$sroa$0$4234;
-  if (($polys | 0) == ($29 | 0)) $retval$0 = 1; else {
-   $31 = $29;
-   $iter$sroa$0$4236 = $iter$sroa$0$4234;
-   do {
-    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($outpolys, $iter$sroa$0$4236 + 8 | 0);
-    $iter$sroa$0$4236 = HEAP32[$31 + 4 >> 2] | 0;
-    $31 = $iter$sroa$0$4236;
-   } while (($polys | 0) != ($31 | 0));
-   $retval$0 = 1;
-  }
- } while (0);
- if ((label | 0) == 6) if (($inpolys | 0) == ($$pre$phiZ2D | 0)) $retval$0 = 1; else {
-  $5 = $$pre$phiZ2D;
-  $iter$sroa$0$1232 = $iter$sroa$0$1230;
-  do {
-   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($outpolys, $iter$sroa$0$1232 + 8 | 0);
-   $iter$sroa$0$1232 = HEAP32[$5 + 4 >> 2] | 0;
-   $5 = $iter$sroa$0$1232;
-  } while (($inpolys | 0) != ($5 | 0));
-  $retval$0 = 1;
- }
- __ZN8TPPLPolyD2Ev($newpoly);
- __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($polys);
- STACKTOP = sp;
- return $retval$0 | 0;
-}
-
-function __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$result, $bitmap, $at_x, $at_y, $fill_color, $tolerance, $type, $flood_pixel_count, $flood_rect) {
- $agg$result = $agg$result | 0;
- $bitmap = $bitmap | 0;
- $at_x = $at_x | 0;
- $at_y = $at_y | 0;
- $fill_color = $fill_color | 0;
- $tolerance = +$tolerance;
- $type = $type | 0;
- $flood_pixel_count = $flood_pixel_count | 0;
- $flood_rect = $flood_rect | 0;
- var $$in = 0, $$pre300 = 0, $$pre301 = 0, $$pre303 = 0, $10 = 0, $11 = 0, $16 = 0, $17 = 0, $2 = 0, $24 = 0, $25 = 0, $27 = 0, $28 = 0, $29 = 0, $3 = 0, $30 = 0, $34 = 0, $36 = 0, $4 = 0, $41 = 0, $42 = 0, $48 = 0, $5 = 0, $50 = 0, $52 = 0, $54 = 0, $55 = 0, $59 = 0, $6 = 0, $60 = 0, $61 = 0, $62 = 0, $63 = 0, $8 = 0, $9 = 0, $__begin$sroa$0$0267 = 0, $__end_$i$i = 0, $__first$addr$06$i$i$i = 0, $__result$addr$0$lcssa$i$i$i = 0, $__result$addr$07$i$i$i = 0, $__value_$i$i$i$i = 0, $add = 0, $add$ptr$i = 0, $add$ptr3$i = 0, $add137 = 0, $agg$tmp = 0, $agg$tmp218 = 0, $agg$tmp218$byval_copy = 0, $agg$tmp25 = 0, $agg$tmp42 = 0, $agg$tmp46 = 0, $agg$tmp76 = 0, $agg$tmp80 = 0, $agg$tmp84 = 0, $cmp150258 = 0, $cmp154 = 0, $cmp160 = 0, $cond = 0, $cond122 = 0, $cond130 = 0, $cond142 = 0, $flood = 0, $height = 0, $incdec$ptr$i = 0, $incdec$ptr2$i$i$i = 0, $it$sroa$0$0279 = 0, $it$sroa$0$1$in = 0, $max_x$0 = 0, $max_x$1$lcssa = 0, $max_x$1270 = 0, $max_x$2 = 0, $max_x$3 = 0, $max_y$0 = 0, $max_y$1$lcssa = 0, $max_y$1269 = 0, $max_y$2 = 0, $max_y$3 = 0, $min_x$0 = 0, $min_x$1$lcssa = 0, $min_x$1271 = 0, $min_x$3 = 0, $min_y$0 = 0, $min_y$1$lcssa = 0, $min_y$1268 = 0, $min_y$3 = 0, $or$cond152194 = 0, $point$sroa$0$0$copyload = 0, $point$sroa$21$0$copyload = 0, $points = 0, $processed = 0, $processed_some$0$off0$lcssa = 0, $processed_some$0$off0272 = 0, $processed_some$1$off0263 = 0, $processed_some$2$off0$lcssa = 0, $processed_some$2$off0259 = 0, $processed_some$3$off0 = 0, $processed_some$4$off0 = 0, $spec$select = 0, $spec$select148 = 0, $start_color = 0, $sub111 = 0, $sub114 = 0, $sub127 = 0, $sub133 = 0, $tmp = 0, $tmp199 = 0, $tmp254 = 0, $width = 0, $x$0283 = 0, $x143$0264 = 0, $y$0281 = 0, $y148$0260 = 0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 144 | 0;
- $agg$tmp218$byval_copy = sp;
- $flood = sp + 64 | 0;
- $processed = sp + 36 | 0;
- $agg$tmp = sp + 96 | 0;
- $agg$tmp25 = sp + 92 | 0;
- $start_color = sp + 116 | 0;
- $agg$tmp42 = sp + 128 | 0;
- $agg$tmp46 = sp + 124 | 0;
- $points = sp + 16 | 0;
- $tmp = sp + 120 | 0;
- $agg$tmp76 = sp + 32 | 0;
- $agg$tmp80 = sp + 28 | 0;
- $agg$tmp84 = sp + 112 | 0;
- $tmp199 = sp + 108 | 0;
- $agg$tmp218 = sp + 104 | 0;
- $tmp254 = sp + 100 | 0;
- HEAP32[$flood_pixel_count >> 2] = 0;
- __ZN8DrBitmapC2ERKS_13Bitmap_Format($flood, $bitmap, 4);
- __ZN8DrBitmapC2ERKS_13Bitmap_Format($processed, $bitmap, 4);
- __ZN6DrRectC2Eiiii($agg$tmp218$byval_copy, 0, 0, 0, 0);
- HEAP32[$flood_rect >> 2] = HEAP32[$agg$tmp218$byval_copy >> 2];
- HEAP32[$flood_rect + 4 >> 2] = HEAP32[$agg$tmp218$byval_copy + 4 >> 2];
- HEAP32[$flood_rect + 8 >> 2] = HEAP32[$agg$tmp218$byval_copy + 8 >> 2];
- HEAP32[$flood_rect + 12 >> 2] = HEAP32[$agg$tmp218$byval_copy + 12 >> 2];
- do if (($at_y | $at_x | 0) < 0) label = 4; else {
-  $width = $bitmap + 8 | 0;
-  $2 = HEAP32[$width >> 2] | 0;
-  if (($2 | 0) > ($at_x | 0)) {
-   $height = $bitmap + 12 | 0;
-   $3 = HEAP32[$height >> 2] | 0;
-   if (($3 | 0) > ($at_y | 0)) {
-    if (($2 | 0) < 1 | ($3 | 0) < 1) {
-     __ZN8DrBitmapC2E13Bitmap_Format($agg$result, 4);
-     break;
-    }
-    if (($2 | 0) == 1 & ($3 | 0) == 1) {
-     $4 = HEAPU8[$fill_color >> 0] | HEAPU8[$fill_color + 1 >> 0] << 8 | HEAPU8[$fill_color + 2 >> 0] << 16 | HEAPU8[$fill_color + 3 >> 0] << 24;
-     HEAP32[$agg$tmp >> 2] = $4;
-     HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
-     HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
-     HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
-     HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
-     __ZN8DrBitmap8setPixelEii7DrColor($bitmap, 0, 0, $agg$tmp218$byval_copy);
-     HEAP32[$agg$tmp25 >> 2] = $4;
-     HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp25 >> 0] | 0;
-     HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp25 + 1 >> 0] | 0;
-     HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp25 + 2 >> 0] | 0;
-     HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp25 + 3 >> 0] | 0;
-     __ZN8DrBitmap8setPixelEii7DrColor($flood, 0, 0, $agg$tmp218$byval_copy);
-     __ZN6DrRectC2Eiiii($agg$tmp218$byval_copy, $at_x, $at_y, 1, 1);
-     HEAP32[$flood_rect >> 2] = HEAP32[$agg$tmp218$byval_copy >> 2];
-     HEAP32[$flood_rect + 4 >> 2] = HEAP32[$agg$tmp218$byval_copy + 4 >> 2];
-     HEAP32[$flood_rect + 8 >> 2] = HEAP32[$agg$tmp218$byval_copy + 8 >> 2];
-     HEAP32[$flood_rect + 12 >> 2] = HEAP32[$agg$tmp218$byval_copy + 12 >> 2];
-     __ZN8DrBitmapC2ERKS_13Bitmap_Format($agg$result, $flood, 4);
-     break;
-    }
-    __ZNK8DrBitmap8getPixelEii($start_color, $bitmap, $at_x, $at_y);
-    $5 = HEAP32[$width >> 2] | 0;
-    if (($5 | 0) > 0) {
-     $59 = $5;
-     $8 = HEAP32[$height >> 2] | 0;
-     $x$0283 = 0;
-     while (1) {
-      if (($8 | 0) > 0) {
-       $y$0281 = 0;
-       do {
-        __ZN7DrColorC2Ej($agg$tmp42, 0);
-        HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp42 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp42 + 1 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp42 + 2 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp42 + 3 >> 0] | 0;
-        __ZN8DrBitmap8setPixelEii7DrColor($flood, $x$0283, $y$0281, $agg$tmp218$byval_copy);
-        __ZN7DrColorC2Ej($agg$tmp46, 0);
-        HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp46 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp46 + 1 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp46 + 2 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp46 + 3 >> 0] | 0;
-        __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0283, $y$0281, $agg$tmp218$byval_copy);
-        $y$0281 = $y$0281 + 1 | 0;
-        $10 = HEAP32[$height >> 2] | 0;
-       } while (($y$0281 | 0) < ($10 | 0));
-       $60 = $10;
-       $9 = HEAP32[$width >> 2] | 0;
-      } else {
-       $60 = $8;
-       $9 = $59;
-      }
-      $x$0283 = $x$0283 + 1 | 0;
-      if (($x$0283 | 0) >= ($9 | 0)) break; else {
-       $59 = $9;
-       $8 = $60;
-      }
-     }
-    }
-    $__end_$i$i = $points + 4 | 0;
-    $__value_$i$i$i$i = $points + 8 | 0;
-    HEAP32[$points >> 2] = 0;
-    HEAP32[$points + 4 >> 2] = 0;
-    HEAP32[$points + 8 >> 2] = 0;
-    __ZN7DrPointC2Eii($agg$tmp218$byval_copy, $at_x, $at_y);
-    $6 = HEAP32[$__end_$i$i >> 2] | 0;
-    if ($6 >>> 0 < (HEAP32[$__value_$i$i$i$i >> 2] | 0) >>> 0) {
-     $11 = $agg$tmp218$byval_copy;
-     $16 = HEAP32[$11 + 4 >> 2] | 0;
-     $17 = $6;
-     HEAP32[$17 >> 2] = HEAP32[$11 >> 2];
-     HEAP32[$17 + 4 >> 2] = $16;
-     $incdec$ptr$i = (HEAP32[$__end_$i$i >> 2] | 0) + 8 | 0;
-     HEAP32[$__end_$i$i >> 2] = $incdec$ptr$i;
-     $$pre301 = $incdec$ptr$i;
-    } else {
-     __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($points, $agg$tmp218$byval_copy);
-     $$pre301 = HEAP32[$__end_$i$i >> 2] | 0;
-    }
-    $cmp160 = ($type | 0) == 0;
-    $$pre300 = HEAP32[$points >> 2] | 0;
-    $24 = $$pre300;
-    $25 = $$pre301;
-    $61 = $$pre300;
-    $62 = $$pre301;
-    $max_x$0 = $at_x;
-    $max_y$0 = $at_y;
-    $min_x$0 = $at_x;
-    $min_y$0 = $at_y;
-    while (1) {
-     if (($24 | 0) == ($25 | 0)) {
-      $28 = $61;
-      $29 = $25;
-      $63 = $62;
-      $max_x$1$lcssa = $max_x$0;
-      $max_y$1$lcssa = $max_y$0;
-      $min_x$1$lcssa = $min_x$0;
-      $min_y$1$lcssa = $min_y$0;
-      $processed_some$0$off0$lcssa = 0;
-     } else {
-      $__begin$sroa$0$0267 = $24;
-      $max_x$1270 = $max_x$0;
-      $max_y$1269 = $max_y$0;
-      $min_x$1271 = $min_x$0;
-      $min_y$1268 = $min_y$0;
-      $processed_some$0$off0272 = 0;
-      while (1) {
-       $point$sroa$0$0$copyload = HEAP32[$__begin$sroa$0$0267 >> 2] | 0;
-       $point$sroa$21$0$copyload = HEAP32[$__begin$sroa$0$0267 + 4 >> 2] | 0;
-       __ZNK8DrBitmap8getPixelEii($tmp, $processed, $point$sroa$0$0$copyload, $point$sroa$21$0$copyload);
-       __ZN7DrColorC2Ej($agg$tmp218$byval_copy, 1);
-       if (__ZNK7DrColoreqERKS_($tmp, $agg$tmp218$byval_copy) | 0) {
-        $max_x$3 = $max_x$1270;
-        $max_y$3 = $max_y$1269;
-        $min_x$3 = $min_x$1271;
-        $min_y$3 = $min_y$1268;
-        $processed_some$4$off0 = $processed_some$0$off0272;
-       } else {
-        $30 = HEAPU8[$fill_color >> 0] | HEAPU8[$fill_color + 1 >> 0] << 8 | HEAPU8[$fill_color + 2 >> 0] << 16 | HEAPU8[$fill_color + 3 >> 0] << 24;
-        HEAP32[$agg$tmp76 >> 2] = $30;
-        HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp76 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp76 + 1 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp76 + 2 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp76 + 3 >> 0] | 0;
-        __ZN8DrBitmap8setPixelEii7DrColor($bitmap, $point$sroa$0$0$copyload, $point$sroa$21$0$copyload, $agg$tmp218$byval_copy);
-        HEAP32[$agg$tmp80 >> 2] = $30;
-        HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp80 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp80 + 1 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp80 + 2 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp80 + 3 >> 0] | 0;
-        __ZN8DrBitmap8setPixelEii7DrColor($flood, $point$sroa$0$0$copyload, $point$sroa$21$0$copyload, $agg$tmp218$byval_copy);
-        __ZN7DrColorC2Ej($agg$tmp84, 1);
-        HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp84 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp84 + 1 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp84 + 2 >> 0] | 0;
-        HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp84 + 3 >> 0] | 0;
-        __ZN8DrBitmap8setPixelEii7DrColor($processed, $point$sroa$0$0$copyload, $point$sroa$21$0$copyload, $agg$tmp218$byval_copy);
-        $spec$select = ($point$sroa$0$0$copyload | 0) < ($min_x$1271 | 0) ? $point$sroa$0$0$copyload : $min_x$1271;
-        $max_x$2 = ($point$sroa$0$0$copyload | 0) > ($max_x$1270 | 0) ? $point$sroa$0$0$copyload : $max_x$1270;
-        $spec$select148 = ($point$sroa$21$0$copyload | 0) < ($min_y$1268 | 0) ? $point$sroa$21$0$copyload : $min_y$1268;
-        $max_y$2 = ($point$sroa$21$0$copyload | 0) > ($max_y$1269 | 0) ? $point$sroa$21$0$copyload : $max_y$1269;
-        HEAP32[$flood_pixel_count >> 2] = (HEAP32[$flood_pixel_count >> 2] | 0) + 1;
-        $sub111 = $point$sroa$0$0$copyload + -1 | 0;
-        $cond = ($point$sroa$0$0$copyload | 0) > 0 ? $sub111 : 0;
-        $sub114 = (HEAP32[$width >> 2] | 0) + -1 | 0;
-        $add = $point$sroa$0$0$copyload + 1 | 0;
-        $cond122 = ($point$sroa$0$0$copyload | 0) < ($sub114 | 0) ? $add : $sub114;
-        $sub127 = $point$sroa$21$0$copyload + -1 | 0;
-        $cond130 = ($point$sroa$21$0$copyload | 0) > 0 ? $sub127 : 0;
-        $sub133 = (HEAP32[$height >> 2] | 0) + -1 | 0;
-        $add137 = $point$sroa$21$0$copyload + 1 | 0;
-        $cond142 = ($point$sroa$21$0$copyload | 0) < ($sub133 | 0) ? $add137 : $sub133;
-        if (($cond | 0) > ($cond122 | 0)) {
-         $max_x$3 = $max_x$2;
-         $max_y$3 = $max_y$2;
-         $min_x$3 = $spec$select;
-         $min_y$3 = $spec$select148;
-         $processed_some$4$off0 = $processed_some$0$off0272;
-        } else {
-         $cmp150258 = ($cond130 | 0) > ($cond142 | 0);
-         $processed_some$1$off0263 = $processed_some$0$off0272;
-         $x143$0264 = $cond;
-         while (1) {
-          if ($cmp150258) $processed_some$2$off0$lcssa = $processed_some$1$off0263; else {
-           $cmp154 = ($x143$0264 | 0) == ($point$sroa$0$0$copyload | 0);
-           $or$cond152194 = ($x143$0264 | 0) == ($sub111 | 0) | ($x143$0264 | 0) == ($add | 0);
-           $processed_some$2$off0259 = $processed_some$1$off0263;
-           $y148$0260 = $cond130;
-           while (1) {
-            do if ($cmp154 & ($y148$0260 | 0) == ($point$sroa$21$0$copyload | 0)) $processed_some$3$off0 = $processed_some$2$off0259; else {
-             if ($cmp160) if ($or$cond152194 & (($y148$0260 | 0) == ($sub127 | 0) | ($y148$0260 | 0) == ($add137 | 0))) {
-              $processed_some$3$off0 = $processed_some$2$off0259;
-              break;
-             }
-             __ZNK8DrBitmap8getPixelEii($tmp199, $processed, $x143$0264, $y148$0260);
-             __ZN7DrColorC2Ej($agg$tmp218$byval_copy, 0);
-             if (!(__ZNK7DrColoreqERKS_($tmp199, $agg$tmp218$byval_copy) | 0)) {
-              $processed_some$3$off0 = $processed_some$2$off0259;
-              break;
-             }
-             __ZNK8DrBitmap8getPixelEii($agg$tmp218$byval_copy, $bitmap, $x143$0264, $y148$0260);
-             if (!(__ZN2Dr11IsSameColorERK7DrColorS2_d($start_color, $agg$tmp218$byval_copy, $tolerance) | 0)) {
-              $processed_some$3$off0 = $processed_some$2$off0259;
-              break;
-             }
-             __ZN7DrPointC2Eii($agg$tmp218$byval_copy, $x143$0264, $y148$0260);
-             $34 = HEAP32[$__end_$i$i >> 2] | 0;
-             if ($34 >>> 0 < (HEAP32[$__value_$i$i$i$i >> 2] | 0) >>> 0) {
-              $36 = $agg$tmp218$byval_copy;
-              $41 = HEAP32[$36 + 4 >> 2] | 0;
-              $42 = $34;
-              HEAP32[$42 >> 2] = HEAP32[$36 >> 2];
-              HEAP32[$42 + 4 >> 2] = $41;
-              HEAP32[$__end_$i$i >> 2] = (HEAP32[$__end_$i$i >> 2] | 0) + 8;
-             } else __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($points, $agg$tmp218$byval_copy);
-             __ZN7DrColorC2Ej($agg$tmp218, 2);
-             HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp218 >> 0] | 0;
-             HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp218 + 1 >> 0] | 0;
-             HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp218 + 2 >> 0] | 0;
-             HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp218 + 3 >> 0] | 0;
-             __ZN8DrBitmap8setPixelEii7DrColor($processed, $x143$0264, $y148$0260, $agg$tmp218$byval_copy);
-             $processed_some$3$off0 = 1;
-            } while (0);
-            if (($y148$0260 | 0) < ($cond142 | 0)) {
-             $processed_some$2$off0259 = $processed_some$3$off0;
-             $y148$0260 = $y148$0260 + 1 | 0;
-            } else {
-             $processed_some$2$off0$lcssa = $processed_some$3$off0;
-             break;
-            }
-           }
-          }
-          if (($x143$0264 | 0) < ($cond122 | 0)) {
-           $processed_some$1$off0263 = $processed_some$2$off0$lcssa;
-           $x143$0264 = $x143$0264 + 1 | 0;
-          } else {
-           $max_x$3 = $max_x$2;
-           $max_y$3 = $max_y$2;
-           $min_x$3 = $spec$select;
-           $min_y$3 = $spec$select148;
-           $processed_some$4$off0 = $processed_some$2$off0$lcssa;
-           break;
-          }
-         }
-        }
-       }
-       $__begin$sroa$0$0267 = $__begin$sroa$0$0267 + 8 | 0;
-       if (($__begin$sroa$0$0267 | 0) == ($25 | 0)) break; else {
-        $max_x$1270 = $max_x$3;
-        $max_y$1269 = $max_y$3;
-        $min_x$1271 = $min_x$3;
-        $min_y$1268 = $min_y$3;
-        $processed_some$0$off0272 = $processed_some$4$off0;
-       }
-      }
-      $$pre303 = HEAP32[$__end_$i$i >> 2] | 0;
-      $28 = HEAP32[$points >> 2] | 0;
-      $29 = $$pre303;
-      $63 = $$pre303;
-      $max_x$1$lcssa = $max_x$3;
-      $max_y$1$lcssa = $max_y$3;
-      $min_x$1$lcssa = $min_x$3;
-      $min_y$1$lcssa = $min_y$3;
-      $processed_some$0$off0$lcssa = $processed_some$4$off0;
-     }
-     $27 = $28;
-     if (($29 | 0) == ($27 | 0)) {
-      $54 = $63;
-      $55 = $28;
-     } else {
-      $48 = $27;
-      $it$sroa$0$0279 = $28;
-      while (1) {
-       __ZNK8DrBitmap8getPixelEii($tmp254, $processed, HEAP32[$48 >> 2] | 0, HEAP32[$48 + 4 >> 2] | 0);
-       __ZN7DrColorC2Ej($agg$tmp218$byval_copy, 1);
-       if (__ZNK7DrColoreqERKS_($tmp254, $agg$tmp218$byval_copy) | 0) {
-        $50 = HEAP32[$points >> 2] | 0;
-        $add$ptr$i = $50 + ($it$sroa$0$0279 - $50 >> 3 << 3) | 0;
-        $add$ptr3$i = $add$ptr$i + 8 | 0;
-        $52 = HEAP32[$__end_$i$i >> 2] | 0;
-        if (($add$ptr3$i | 0) == ($52 | 0)) $__result$addr$0$lcssa$i$i$i = $add$ptr$i; else {
-         $__first$addr$06$i$i$i = $add$ptr3$i;
-         $__result$addr$07$i$i$i = $add$ptr$i;
-         while (1) {
-          __ZN7DrPointaSERKS_($__result$addr$07$i$i$i, $__first$addr$06$i$i$i) | 0;
-          $__first$addr$06$i$i$i = $__first$addr$06$i$i$i + 8 | 0;
-          $incdec$ptr2$i$i$i = $__result$addr$07$i$i$i + 8 | 0;
-          if (($__first$addr$06$i$i$i | 0) == ($52 | 0)) {
-           $__result$addr$0$lcssa$i$i$i = $incdec$ptr2$i$i$i;
-           break;
-          } else $__result$addr$07$i$i$i = $incdec$ptr2$i$i$i;
-         }
-        }
-        HEAP32[$__end_$i$i >> 2] = $__result$addr$0$lcssa$i$i$i;
-        $$in = $__result$addr$0$lcssa$i$i$i;
-        $it$sroa$0$1$in = $add$ptr$i;
-       } else {
-        $$in = HEAP32[$__end_$i$i >> 2] | 0;
-        $it$sroa$0$1$in = $48 + 8 | 0;
-       }
-       if (($$in | 0) == ($it$sroa$0$1$in | 0)) break; else {
-        $48 = $it$sroa$0$1$in;
-        $it$sroa$0$0279 = $it$sroa$0$1$in;
-       }
-      }
-      $54 = $$in;
-      $55 = HEAP32[$points >> 2] | 0;
-     }
-     if ($processed_some$0$off0$lcssa & ($54 | 0) != ($55 | 0)) {
-      $24 = $55;
-      $25 = $54;
-      $61 = $55;
-      $62 = $54;
-      $max_x$0 = $max_x$1$lcssa;
-      $max_y$0 = $max_y$1$lcssa;
-      $min_x$0 = $min_x$1$lcssa;
-      $min_y$0 = $min_y$1$lcssa;
-     } else break;
-    }
-    __ZN6DrRectC2Eiiii($agg$tmp218$byval_copy, $min_x$1$lcssa, $min_y$1$lcssa, $max_x$1$lcssa + 1 - $min_x$1$lcssa | 0, 1 - $min_y$1$lcssa + $max_y$1$lcssa | 0);
-    HEAP32[$flood_rect >> 2] = HEAP32[$agg$tmp218$byval_copy >> 2];
-    HEAP32[$flood_rect + 4 >> 2] = HEAP32[$agg$tmp218$byval_copy + 4 >> 2];
-    HEAP32[$flood_rect + 8 >> 2] = HEAP32[$agg$tmp218$byval_copy + 8 >> 2];
-    HEAP32[$flood_rect + 12 >> 2] = HEAP32[$agg$tmp218$byval_copy + 12 >> 2];
-    __ZN8DrBitmapC2ERKS_13Bitmap_Format($agg$result, $flood, 4);
-    __ZNSt3__213__vector_baseI7DrPointNS_9allocatorIS1_EEED2Ev($points);
-   } else label = 4;
-  } else label = 4;
- } while (0);
- if ((label | 0) == 4) __ZN8DrBitmapC2E13Bitmap_Format($agg$result, 4);
- __ZN8DrBitmapD2Ev($processed);
- __ZN8DrBitmapD2Ev($flood);
- STACKTOP = sp;
- return;
-}
-
-function __ZN10DelaunatorC2ERKNSt3__26vectorIdNS0_9allocatorIdEEEE($this, $in_coords) {
- $this = $this | 0;
- $in_coords = $in_coords | 0;
- var $$lcssa487 = 0, $$pre541 = 0, $10 = 0, $102 = 0, $106 = 0, $108 = 0, $11 = 0.0, $110 = 0, $115 = 0, $12 = 0.0, $120 = 0, $121 = 0, $124 = 0, $13 = 0, $14 = 0, $17 = 0, $18 = 0.0, $19 = 0.0, $2 = 0, $21 = 0, $25 = 0, $29 = 0, $30 = 0.0, $31 = 0.0, $36 = 0, $37 = 0, $38 = 0, $39 = 0, $4 = 0, $40 = 0, $43 = 0, $45 = 0, $5 = 0.0, $50 = 0, $55 = 0, $57 = 0, $58 = 0, $59 = 0, $6 = 0.0, $65 = 0, $67 = 0, $68 = 0.0, $69 = 0.0, $7 = 0, $70 = 0, $71 = 0, $73 = 0, $78 = 0, $80 = 0, $82 = 0, $91 = 0, $92 = 0, $94 = 0, $95 = 0, $97 = 0, $__begin$sroa$0$0501 = 0, $__end_$i = 0, $__end_$i$i237 = 0, $__end_$i$i261 = 0, $__end_$i$i383 = 0, $__value_$i$i$i$i262 = 0, $__value_$i$i$i$i384 = 0, $agg$tmp209409 = 0, $call131 = 0.0, $call160 = 0, $call194 = 0.0, $call266 = 0, $call271 = 0, $call276 = 0, $call331 = 0, $call342 = 0, $call398 = 0, $call401 = 0, $call448 = 0, $call48 = 0.0, $call490 = 0, $call518 = 0, $call532 = 0, $call89 = 0.0, $cmp49 = 0, $cmp519 = 0, $dists = 0, $div = 0.0, $div30 = 0.0, $e$0 = 0, $e$2 = 0, $e$3 = 0, $exception = 0, $halfedges = 0, $hull_next = 0, $hull_prev = 0, $hull_start = 0, $hull_tri = 0, $i0$0$lcssa = 0, $i0$0515 = 0, $i0$1 = 0, $i1$0509 = 0, $i1$1 = 0, $i111$0505 = 0, $i2$0503 = 0, $i2$1 = 0, $i32$0514 = 0, $i69$0510 = 0, $ids = 0, $j$0493 = 0, $k$0499 = 0, $m_center_x = 0, $m_center_y = 0, $m_hash = 0, $m_hash_size = 0, $max_x$0$lcssa = 0.0, $max_x$0524 = 0.0, $max_x$1 = 0.0, $max_y$0$lcssa = 0.0, $max_y$0523 = 0.0, $max_y$1 = 0.0, $min_dist$0516 = 0.0, $min_dist$2511 = 0.0, $min_dist$4 = 0.0, $min_radius$0504 = 0.0, $min_radius$2 = 0.0, $min_x$0$lcssa = 0.0, $min_x$0522 = 0.0, $min_x$1 = 0.0, $min_y$0$lcssa = 0.0, $min_y$0521 = 0.0, $min_y$1 = 0.0, $mul = 0, $mul100 = 0, $mul121 = 0, $mul149 = 0, $mul182 = 0, $mul302 = 0, $mul365 = 0, $mul374 = 0, $mul38 = 0, $mul418 = 0, $mul427 = 0, $mul463 = 0, $mul472 = 0, $mul523 = 0, $mul58 = 0, $mul79 = 0, $next$0 = 0, $or$cond = 0, $shr = 0, $spec$select472 = 0.0, $spec$select473 = 0.0, $spec$select474 = 0.0, $spec$select475 = 0.0, $spec$select476 = 0, $spec$select477 = 0, $spec$select478 = 0, $start$1 = 0, $storemerge520 = 0, $sub$ptr$div$i = 0, $sub$ptr$sub$i$i$i = 0, $triangles = 0, $xp$0497 = 0.0, $xp$1 = 0.0, $yp$0498 = 0.0, $yp$1 = 0.0, dest = 0, label = 0, sp = 0, stop = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 48 | 0;
- $agg$tmp209409 = sp;
- $ids = sp + 28 | 0;
- $dists = sp + 16 | 0;
- HEAP32[$this >> 2] = $in_coords;
- $triangles = $this + 4 | 0;
- $halfedges = $this + 16 | 0;
- $hull_prev = $this + 28 | 0;
- $hull_next = $this + 40 | 0;
- $hull_tri = $this + 52 | 0;
- $hull_start = $this + 64 | 0;
- $m_hash = $this + 68 | 0;
- $__end_$i$i237 = $this + 72 | 0;
- $m_center_x = $this + 80 | 0;
- $m_center_y = $this + 88 | 0;
- $m_hash_size = $this + 96 | 0;
- $__end_$i = $in_coords + 4 | 0;
- dest = $triangles;
- stop = dest + 108 | 0;
- do {
-  HEAP32[dest >> 2] = 0;
-  dest = dest + 4 | 0;
- } while ((dest | 0) < (stop | 0));
- $sub$ptr$div$i = (HEAP32[$__end_$i >> 2] | 0) - (HEAP32[$in_coords >> 2] | 0) >> 3;
- $shr = $sub$ptr$div$i >>> 1;
- HEAP32[$ids >> 2] = 0;
- $__end_$i$i261 = $ids + 4 | 0;
- HEAP32[$__end_$i$i261 >> 2] = 0;
- $__value_$i$i$i$i262 = $ids + 8 | 0;
- HEAP32[$__value_$i$i$i$i262 >> 2] = 0;
- __ZNSt3__26vectorImNS_9allocatorImEEE7reserveEm($ids, $shr);
- HEAP32[$agg$tmp209409 >> 2] = 0;
- $cmp519 = ($shr | 0) == 0;
- if ($cmp519) {
-  $max_x$0$lcssa = 2.2250738585072014e-308;
-  $max_y$0$lcssa = 2.2250738585072014e-308;
-  $min_x$0$lcssa = 1797693134862315708145274.0e284;
-  $min_y$0$lcssa = 1797693134862315708145274.0e284;
- } else {
-  $max_x$0524 = 2.2250738585072014e-308;
-  $max_y$0523 = 2.2250738585072014e-308;
-  $min_x$0522 = 1797693134862315708145274.0e284;
-  $min_y$0521 = 1797693134862315708145274.0e284;
-  $storemerge520 = 0;
-  while (1) {
-   $mul = $storemerge520 << 1;
-   $4 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-   $5 = +HEAPF64[$4 + ($mul << 3) >> 3];
-   $6 = +HEAPF64[$4 + (($mul | 1) << 3) >> 3];
-   $min_x$1 = $5 < $min_x$0522 ? $5 : $min_x$0522;
-   $min_y$1 = $6 < $min_y$0521 ? $6 : $min_y$0521;
-   $max_x$1 = $5 > $max_x$0524 ? $5 : $max_x$0524;
-   $max_y$1 = $6 > $max_y$0523 ? $6 : $max_y$0523;
-   $7 = HEAP32[$__end_$i$i261 >> 2] | 0;
-   if (($7 | 0) == (HEAP32[$__value_$i$i$i$i262 >> 2] | 0)) __ZNSt3__26vectorImNS_9allocatorImEEE21__push_back_slow_pathIRKmEEvOT_($ids, $agg$tmp209409); else {
-    HEAP32[$7 >> 2] = $storemerge520;
-    HEAP32[$__end_$i$i261 >> 2] = $7 + 4;
-   }
-   $storemerge520 = (HEAP32[$agg$tmp209409 >> 2] | 0) + 1 | 0;
-   HEAP32[$agg$tmp209409 >> 2] = $storemerge520;
-   if ($storemerge520 >>> 0 >= $shr >>> 0) {
-    $max_x$0$lcssa = $max_x$1;
-    $max_y$0$lcssa = $max_y$1;
-    $min_x$0$lcssa = $min_x$1;
-    $min_y$0$lcssa = $min_y$1;
-    break;
-   } else {
-    $max_x$0524 = $max_x$1;
-    $max_y$0523 = $max_y$1;
-    $min_x$0522 = $min_x$1;
-    $min_y$0521 = $min_y$1;
-   }
-  }
- }
- $div = ($min_x$0$lcssa + $max_x$0$lcssa) * .5;
- $div30 = ($min_y$0$lcssa + $max_y$0$lcssa) * .5;
- $2 = HEAP32[$this >> 2] | 0;
- if ($cmp519) {
-  $$lcssa487 = $2;
-  $i0$0$lcssa = -1;
- } else {
-  $14 = $2;
-  $i0$0515 = -1;
-  $i32$0514 = 0;
-  $min_dist$0516 = 1797693134862315708145274.0e284;
-  while (1) {
-   $mul38 = $i32$0514 << 1;
-   $13 = HEAP32[$14 >> 2] | 0;
-   $call48 = +__Z4distdddd($div, $div30, +HEAPF64[$13 + ($mul38 << 3) >> 3], +HEAPF64[$13 + (($mul38 | 1) << 3) >> 3]);
-   $cmp49 = $call48 < $min_dist$0516;
-   $i0$1 = $cmp49 ? $i32$0514 : $i0$0515;
-   $i32$0514 = $i32$0514 + 1 | 0;
-   $17 = HEAP32[$this >> 2] | 0;
-   if (($i32$0514 | 0) == ($shr | 0)) {
-    $$lcssa487 = $17;
-    $i0$0$lcssa = $i0$1;
-    break;
-   } else {
-    $14 = $17;
-    $i0$0515 = $i0$1;
-    $min_dist$0516 = $cmp49 ? $call48 : $min_dist$0516;
-   }
-  }
- }
- $mul58 = $i0$0$lcssa << 1;
- $10 = HEAP32[$$lcssa487 >> 2] | 0;
- $11 = +HEAPF64[$10 + ($mul58 << 3) >> 3];
- $12 = +HEAPF64[$10 + (($mul58 | 1) << 3) >> 3];
- if (!$cmp519) {
-  $i1$0509 = -1;
-  $i69$0510 = 0;
-  $min_dist$2511 = 1797693134862315708145274.0e284;
-  while (1) {
-   if (($i69$0510 | 0) == ($i0$0$lcssa | 0)) {
-    $i1$1 = $i1$0509;
-    $min_dist$4 = $min_dist$2511;
-   } else {
-    $mul79 = $i69$0510 << 1;
-    $21 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-    $call89 = +__Z4distdddd($11, $12, +HEAPF64[$21 + ($mul79 << 3) >> 3], +HEAPF64[$21 + (($mul79 | 1) << 3) >> 3]);
-    $or$cond = $call89 < $min_dist$2511 & $call89 > 0.0;
-    $i1$1 = $or$cond ? $i69$0510 : $i1$0509;
-    $min_dist$4 = $or$cond ? $call89 : $min_dist$2511;
-   }
-   $i69$0510 = $i69$0510 + 1 | 0;
-   if (($i69$0510 | 0) == ($shr | 0)) break; else {
-    $i1$0509 = $i1$1;
-    $min_dist$2511 = $min_dist$4;
-   }
-  }
-  $$pre541 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-  $mul100 = $i1$1 << 1;
-  $18 = +HEAPF64[$$pre541 + ($mul100 << 3) >> 3];
-  $19 = +HEAPF64[$$pre541 + (($mul100 | 1) << 3) >> 3];
-  if (!$cmp519) {
-   $i111$0505 = 0;
-   $i2$0503 = -1;
-   $min_radius$0504 = 1797693134862315708145274.0e284;
-   while (1) {
-    if (($i111$0505 | 0) == ($i0$0$lcssa | 0) | ($i111$0505 | 0) == ($i1$1 | 0)) {
-     $i2$1 = $i2$0503;
-     $min_radius$2 = $min_radius$0504;
-    } else {
-     $mul121 = $i111$0505 << 1;
-     $25 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-     $call131 = +__Z12circumradiusdddddd($11, $12, $18, $19, +HEAPF64[$25 + ($mul121 << 3) >> 3], +HEAPF64[$25 + (($mul121 | 1) << 3) >> 3]);
-     if ($call131 < $min_radius$0504) {
-      $i2$1 = $i111$0505;
-      $min_radius$2 = $call131;
-     } else {
-      $i2$1 = $i2$0503;
-      $min_radius$2 = $min_radius$0504;
-     }
-    }
-    $i111$0505 = $i111$0505 + 1 | 0;
-    if (($i111$0505 | 0) == ($shr | 0)) break; else {
-     $i2$0503 = $i2$1;
-     $min_radius$0504 = $min_radius$2;
-    }
-   }
-   if ($min_radius$2 < 1797693134862315708145274.0e284) {
-    $mul149 = $i2$1 << 1;
-    $29 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-    $30 = +HEAPF64[$29 + ($mul149 << 3) >> 3];
-    $31 = +HEAPF64[$29 + (($mul149 | 1) << 3) >> 3];
-    $call160 = __Z6orientdddddd($11, $12, $18, $19, $30, $31) | 0;
-    $spec$select472 = $call160 ? $19 : $31;
-    $spec$select473 = $call160 ? $18 : $30;
-    $spec$select474 = $call160 ? $31 : $19;
-    $spec$select475 = $call160 ? $30 : $18;
-    $spec$select476 = $call160 ? $i1$1 : $i2$1;
-    $spec$select477 = $call160 ? $i2$1 : $i1$1;
-    __Z12circumcenterdddddd($agg$tmp209409, $11, $12, $spec$select475, $spec$select474, $spec$select473, $spec$select472);
-    HEAPF64[$m_center_x >> 3] = +HEAPF64[$agg$tmp209409 >> 3];
-    HEAPF64[$m_center_y >> 3] = +HEAPF64[$agg$tmp209409 + 8 >> 3];
-    HEAP32[$dists >> 2] = 0;
-    $__end_$i$i383 = $dists + 4 | 0;
-    HEAP32[$__end_$i$i383 >> 2] = 0;
-    $__value_$i$i$i$i384 = $dists + 8 | 0;
-    HEAP32[$__value_$i$i$i$i384 >> 2] = 0;
-    __ZNSt3__26vectorIdNS_9allocatorIdEEE7reserveEm($dists, (HEAP32[$__end_$i$i261 >> 2] | 0) - (HEAP32[$ids >> 2] | 0) >> 2);
-    $36 = HEAP32[$ids >> 2] | 0;
-    $37 = HEAP32[$__end_$i$i261 >> 2] | 0;
-    if (($36 | 0) == ($37 | 0)) {
-     $39 = $36;
-     $40 = $36;
-    } else {
-     $__begin$sroa$0$0501 = $36;
-     do {
-      $mul182 = HEAP32[$__begin$sroa$0$0501 >> 2] << 1;
-      $50 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-      $call194 = +__Z4distdddd(+HEAPF64[$50 + ($mul182 << 3) >> 3], +HEAPF64[$50 + (($mul182 | 1) << 3) >> 3], +HEAPF64[$m_center_x >> 3], +HEAPF64[$m_center_y >> 3]);
-      HEAPF64[$agg$tmp209409 >> 3] = $call194;
-      $55 = HEAP32[$__end_$i$i383 >> 2] | 0;
-      if (($55 | 0) == (HEAP32[$__value_$i$i$i$i384 >> 2] | 0)) __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($dists, $agg$tmp209409); else {
-       HEAPF64[$55 >> 3] = $call194;
-       HEAP32[$__end_$i$i383 >> 2] = $55 + 8;
-      }
-      $__begin$sroa$0$0501 = $__begin$sroa$0$0501 + 4 | 0;
-     } while (($__begin$sroa$0$0501 | 0) != ($37 | 0));
-     $39 = HEAP32[$ids >> 2] | 0;
-     $40 = HEAP32[$__end_$i$i261 >> 2] | 0;
-    }
-    $38 = HEAP32[$this >> 2] | 0;
-    HEAP32[$agg$tmp209409 >> 2] = $dists;
-    HEAP32[$agg$tmp209409 + 4 >> 2] = $38;
-    __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($39, $40, $agg$tmp209409);
-    $43 = _llround(+Math_ceil(+(+Math_sqrt(+(+($shr >>> 0)))))) | 0;
-    getTempRet0() | 0;
-    HEAP32[$m_hash_size >> 2] = $43;
-    __ZNSt3__26vectorImNS_9allocatorImEEE6resizeEm($m_hash, $43);
-    $45 = HEAP32[$m_hash >> 2] | 0;
-    $sub$ptr$sub$i$i$i = (HEAP32[$__end_$i$i237 >> 2] | 0) - $45 | 0;
-    if (($sub$ptr$sub$i$i$i | 0) > 0) _memset($45 | 0, -1, $sub$ptr$sub$i$i$i | 0) | 0;
-    __ZNSt3__26vectorImNS_9allocatorImEEE6resizeEm($hull_prev, $shr);
-    __ZNSt3__26vectorImNS_9allocatorImEEE6resizeEm($hull_next, $shr);
-    __ZNSt3__26vectorImNS_9allocatorImEEE6resizeEm($hull_tri, $shr);
-    HEAP32[$hull_start >> 2] = $i0$0$lcssa;
-    $57 = HEAP32[$hull_prev >> 2] | 0;
-    HEAP32[$57 + ($spec$select476 << 2) >> 2] = $spec$select477;
-    $58 = HEAP32[$hull_next >> 2] | 0;
-    HEAP32[$58 + ($i0$0$lcssa << 2) >> 2] = $spec$select477;
-    HEAP32[$57 + ($i0$0$lcssa << 2) >> 2] = $spec$select476;
-    HEAP32[$58 + ($spec$select477 << 2) >> 2] = $spec$select476;
-    HEAP32[$57 + ($spec$select477 << 2) >> 2] = $i0$0$lcssa;
-    HEAP32[$58 + ($spec$select476 << 2) >> 2] = $i0$0$lcssa;
-    $59 = HEAP32[$hull_tri >> 2] | 0;
-    HEAP32[$59 + ($i0$0$lcssa << 2) >> 2] = 0;
-    HEAP32[$59 + ($spec$select477 << 2) >> 2] = 1;
-    HEAP32[$59 + ($spec$select476 << 2) >> 2] = 2;
-    $call266 = __ZNK10Delaunator8hash_keyEdd($this, $11, $12) | 0;
-    HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call266 << 2) >> 2] = $i0$0$lcssa;
-    $call271 = __ZNK10Delaunator8hash_keyEdd($this, $spec$select475, $spec$select474) | 0;
-    HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call271 << 2) >> 2] = $spec$select477;
-    $call276 = __ZNK10Delaunator8hash_keyEdd($this, $spec$select473, $spec$select472) | 0;
-    HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call276 << 2) >> 2] = $spec$select476;
-    $spec$select478 = $sub$ptr$div$i >>> 0 < 6 ? 3 : (($sub$ptr$div$i & -2) * 3 | 0) + -15 | 0;
-    __ZNSt3__26vectorImNS_9allocatorImEEE7reserveEm($triangles, $spec$select478);
-    __ZNSt3__26vectorImNS_9allocatorImEEE7reserveEm($halfedges, $spec$select478);
-    __ZN10Delaunator12add_triangleEmmmmmm($this, $i0$0$lcssa, $spec$select477, $spec$select476, -1, -1, -1) | 0;
-    if (!$cmp519) {
-     $k$0499 = 0;
-     $xp$0497 = nan;
-     $yp$0498 = nan;
-     while (1) {
-      $65 = HEAP32[(HEAP32[$ids >> 2] | 0) + ($k$0499 << 2) >> 2] | 0;
-      $mul302 = $65 << 1;
-      $67 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-      $68 = +HEAPF64[$67 + ($mul302 << 3) >> 3];
-      $69 = +HEAPF64[$67 + (($mul302 | 1) << 3) >> 3];
-      if (!$k$0499) label = 37; else if (__Z15check_pts_equaldddd($68, $69, $xp$0497, $yp$0498) | 0) {
-       $xp$1 = $xp$0497;
-       $yp$1 = $yp$0498;
-      } else label = 37;
-      L51 : do if ((label | 0) == 37) {
-       label = 0;
-       if (__Z15check_pts_equaldddd($68, $69, $11, $12) | 0) {
-        $xp$1 = $68;
-        $yp$1 = $69;
-       } else if (__Z15check_pts_equaldddd($68, $69, $spec$select475, $spec$select474) | 0) {
-        $xp$1 = $68;
-        $yp$1 = $69;
-       } else if (__Z15check_pts_equaldddd($68, $69, $spec$select473, $spec$select472) | 0) {
-        $xp$1 = $68;
-        $yp$1 = $69;
-       } else {
-        $call331 = __ZNK10Delaunator8hash_keyEdd($this, $68, $69) | 0;
-        $70 = HEAP32[$m_hash_size >> 2] | 0;
-        L56 : do if (!$70) $start$1 = 0; else {
-         $71 = $70;
-         $j$0493 = 0;
-         while (1) {
-          $call342 = __Z8fast_modmm($j$0493 + $call331 | 0, $71) | 0;
-          $73 = HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call342 << 2) >> 2] | 0;
-          if (($73 | 0) != -1) if (($73 | 0) != (HEAP32[(HEAP32[$hull_next >> 2] | 0) + ($73 << 2) >> 2] | 0)) {
-           $start$1 = $73;
-           break L56;
-          }
-          $j$0493 = $j$0493 + 1 | 0;
-          $71 = HEAP32[$m_hash_size >> 2] | 0;
-          if ($j$0493 >>> 0 >= $71 >>> 0) {
-           $start$1 = $73;
-           break;
-          }
-         }
-        } while (0);
-        $78 = HEAP32[(HEAP32[$hull_prev >> 2] | 0) + ($start$1 << 2) >> 2] | 0;
-        $e$0 = $78;
-        while (1) {
-         $80 = HEAP32[(HEAP32[$hull_next >> 2] | 0) + ($e$0 << 2) >> 2] | 0;
-         $mul365 = $e$0 << 1;
-         $82 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-         $mul374 = $80 << 1;
-         if (__Z6orientdddddd($68, $69, +HEAPF64[$82 + ($mul365 << 3) >> 3], +HEAPF64[$82 + (($mul365 | 1) << 3) >> 3], +HEAPF64[$82 + ($mul374 << 3) >> 3], +HEAPF64[$82 + (($mul374 | 1) << 3) >> 3]) | 0) break;
-         if (($80 | 0) == ($78 | 0)) {
-          $xp$1 = $68;
-          $yp$1 = $69;
-          break L51;
-         } else $e$0 = $80;
-        }
-        if (($e$0 | 0) == -1) {
-         $xp$1 = $68;
-         $yp$1 = $69;
-        } else {
-         $call398 = __ZN10Delaunator12add_triangleEmmmmmm($this, $e$0, $65, HEAP32[(HEAP32[$hull_next >> 2] | 0) + ($e$0 << 2) >> 2] | 0, -1, -1, HEAP32[(HEAP32[$hull_tri >> 2] | 0) + ($e$0 << 2) >> 2] | 0) | 0;
-         $call401 = __ZN10Delaunator8legalizeEm($this, $call398 + 2 | 0) | 0;
-         $91 = HEAP32[$hull_tri >> 2] | 0;
-         HEAP32[$91 + ($65 << 2) >> 2] = $call401;
-         HEAP32[$91 + ($e$0 << 2) >> 2] = $call398;
-         $92 = HEAP32[$hull_next >> 2] | 0;
-         $94 = $92;
-         $next$0 = HEAP32[$92 + ($e$0 << 2) >> 2] | 0;
-         while (1) {
-          $95 = HEAP32[$94 + ($next$0 << 2) >> 2] | 0;
-          $mul418 = $next$0 << 1;
-          $97 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-          $mul427 = $95 << 1;
-          if (!(__Z6orientdddddd($68, $69, +HEAPF64[$97 + ($mul418 << 3) >> 3], +HEAPF64[$97 + (($mul418 | 1) << 3) >> 3], +HEAPF64[$97 + ($mul427 << 3) >> 3], +HEAPF64[$97 + (($mul427 | 1) << 3) >> 3]) | 0)) break;
-          $102 = HEAP32[$hull_tri >> 2] | 0;
-          $call448 = __ZN10Delaunator8legalizeEm($this, (__ZN10Delaunator12add_triangleEmmmmmm($this, $next$0, $65, $95, HEAP32[$102 + ($65 << 2) >> 2] | 0, -1, HEAP32[$102 + ($next$0 << 2) >> 2] | 0) | 0) + 2 | 0) | 0;
-          HEAP32[(HEAP32[$hull_tri >> 2] | 0) + ($65 << 2) >> 2] = $call448;
-          $106 = HEAP32[$hull_next >> 2] | 0;
-          HEAP32[$106 + ($next$0 << 2) >> 2] = $next$0;
-          $94 = $106;
-          $next$0 = $95;
-         }
-         L73 : do if (($e$0 | 0) == ($78 | 0)) {
-          $e$2 = $78;
-          while (1) {
-           $108 = HEAP32[(HEAP32[$hull_prev >> 2] | 0) + ($e$2 << 2) >> 2] | 0;
-           $mul463 = $108 << 1;
-           $110 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-           $mul472 = $e$2 << 1;
-           if (!(__Z6orientdddddd($68, $69, +HEAPF64[$110 + ($mul463 << 3) >> 3], +HEAPF64[$110 + (($mul463 | 1) << 3) >> 3], +HEAPF64[$110 + ($mul472 << 3) >> 3], +HEAPF64[$110 + (($mul472 | 1) << 3) >> 3]) | 0)) {
-            $e$3 = $e$2;
-            break L73;
-           }
-           $115 = HEAP32[$hull_tri >> 2] | 0;
-           $call490 = __ZN10Delaunator12add_triangleEmmmmmm($this, $108, $65, $e$2, -1, HEAP32[$115 + ($e$2 << 2) >> 2] | 0, HEAP32[$115 + ($108 << 2) >> 2] | 0) | 0;
-           __ZN10Delaunator8legalizeEm($this, $call490 + 2 | 0) | 0;
-           HEAP32[(HEAP32[$hull_tri >> 2] | 0) + ($108 << 2) >> 2] = $call490;
-           HEAP32[(HEAP32[$hull_next >> 2] | 0) + ($e$2 << 2) >> 2] = $e$2;
-           $e$2 = $108;
-          }
-         } else $e$3 = $e$0; while (0);
-         $120 = HEAP32[$hull_prev >> 2] | 0;
-         HEAP32[$120 + ($65 << 2) >> 2] = $e$3;
-         HEAP32[$hull_start >> 2] = $e$3;
-         HEAP32[$120 + ($next$0 << 2) >> 2] = $65;
-         $121 = HEAP32[$hull_next >> 2] | 0;
-         HEAP32[$121 + ($e$3 << 2) >> 2] = $65;
-         HEAP32[$121 + ($65 << 2) >> 2] = $next$0;
-         $call518 = __ZNK10Delaunator8hash_keyEdd($this, $68, $69) | 0;
-         HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call518 << 2) >> 2] = $65;
-         $mul523 = $e$3 << 1;
-         $124 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
-         $call532 = __ZNK10Delaunator8hash_keyEdd($this, +HEAPF64[$124 + ($mul523 << 3) >> 3], +HEAPF64[$124 + (($mul523 | 1) << 3) >> 3]) | 0;
-         HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call532 << 2) >> 2] = $e$3;
-         $xp$1 = $68;
-         $yp$1 = $69;
-        }
-       }
-      } while (0);
-      $k$0499 = $k$0499 + 1 | 0;
-      if ($k$0499 >>> 0 >= $shr >>> 0) break; else {
-       $xp$0497 = $xp$1;
-       $yp$0498 = $yp$1;
-      }
-     }
-    }
-    __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($dists);
-    __ZNSt3__213__vector_baseImNS_9allocatorImEEED2Ev($ids);
-    STACKTOP = sp;
-    return;
-   }
-  }
- }
- $exception = ___cxa_allocate_exception(8) | 0;
- __ZNSt13runtime_errorC2EPKc($exception, 45697);
- ___cxa_throw($exception | 0, 12496, 86);
-}
-
 function _stbi__bmp_load($s, $x, $y, $comp, $req_comp, $ri) {
  $s = $s | 0;
  $x = $x | 0;
@@ -13798,318 +12203,6 @@ function _stbi__bmp_load($s, $x, $y, $comp, $req_comp, $ri) {
  $319 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
  return $319 | 0;
-}
-
-function __ZN7DrImage13outlinePointsEf($this, $lod) {
- $this = $this | 0;
- $lod = +$lod;
- var $$pre343 = 0, $$pre347 = 0, $0 = 0, $1 = 0, $12 = 0, $13 = 0, $17 = 0, $18 = 0, $2 = 0, $24 = 0, $26 = 0, $27 = 0, $28 = 0, $3 = 0, $30 = 0, $33 = 0, $36 = 0, $39 = 0, $42 = 0, $45 = 0, $48 = 0, $5 = 0, $51 = 0, $53 = 0, $56 = 0, $57 = 0, $58 = 0, $6 = 0, $61 = 0, $62 = 0, $65 = 0, $66 = 0, $7 = 0, $70 = 0, $71 = 0, $78 = 0, $80 = 0, $81 = 0, $82 = 0, $83 = 0, $86 = 0, $87 = 0, $88 = 0, $__begin$sroa$0$0329 = 0, $__begin179$sroa$0$0331 = 0, $__end_$i$i = 0, $__end_$i$i$i = 0, $__end_$i$i$i58 = 0, $__end_$i$i172 = 0, $__end_$i$i175 = 0, $__end_$i$i178 = 0, $__end_$i144 = 0, $__end_$i70 = 0, $__soon_to_be_end$06$i$i$i = 0, $__soon_to_be_end$06$i$i$i61 = 0, $__value_$i$i$i$i101 = 0, $__value_$i$i$i$i149 = 0, $__value_$i$i$i$i173 = 0, $__value_$i$i$i$i176 = 0, $__value_$i$i$i$i179 = 0, $__value_$i$i$i$i181 = 0, $add = 0.0, $add$ptr$i = 0, $add$ptr$i126 = 0, $add20 = 0.0, $add41 = 0.0, $agg$tmp = 0, $agg$tmp$i111 = 0, $agg$tmp$i99$byval_copy = 0, $agg$tmp155 = 0, $arrayidx$i = 0, $arrayidx$i147 = 0, $bitmaps = 0, $call = 0, $call195 = 0, $call207 = 0, $conv201 = 0.0, $conv213 = 0.0, $conv34 = 0.0, $conv40 = 0.0, $conv61 = 0.0, $height17 = 0, $hole_images = 0, $hole_list = 0, $hole_number$0335 = 0, $hole_rects = 0, $image_number$0339 = 0, $inc277 = 0, $m_hole_list = 0, $m_poly_list = 0, $one_hole = 0, $one_poly = 0, $rects = 0, $ref$tmp = 0, $ref$tmp232 = 0, $sub$ptr$div$i = 0, $sub$ptr$sub$i = 0, $width15 = 0, $y = 0, $y100 = 0, $y120 = 0, $y140 = 0, $y214 = 0, $y82 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 176 | 0;
- $agg$tmp$i99$byval_copy = sp;
- $agg$tmp$i111 = sp + 160 | 0;
- $bitmaps = sp + 128 | 0;
- $rects = sp + 116 | 0;
- $one_poly = sp + 104 | 0;
- $ref$tmp = sp + 76 | 0;
- $agg$tmp = sp + 168 | 0;
- $agg$tmp155 = sp + 144 | 0;
- $hole_images = sp + 64 | 0;
- $hole_rects = sp + 52 | 0;
- $hole_list = sp + 40 | 0;
- $one_hole = sp + 28 | 0;
- $ref$tmp232 = sp + 16 | 0;
- $m_poly_list = $this + 40 | 0;
- $0 = HEAP32[$m_poly_list >> 2] | 0;
- $__end_$i$i$i = $this + 44 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) {
-  $__soon_to_be_end$06$i$i$i = $1;
-  do {
-   $__soon_to_be_end$06$i$i$i = $__soon_to_be_end$06$i$i$i + -12 | 0;
-   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($__soon_to_be_end$06$i$i$i);
-  } while (($__soon_to_be_end$06$i$i$i | 0) != ($0 | 0));
- }
- HEAP32[$__end_$i$i$i >> 2] = $0;
- $m_hole_list = $this + 52 | 0;
- $2 = HEAP32[$m_hole_list >> 2] | 0;
- $__end_$i$i$i58 = $this + 56 | 0;
- $3 = HEAP32[$__end_$i$i$i58 >> 2] | 0;
- if (($3 | 0) != ($2 | 0)) {
-  $__soon_to_be_end$06$i$i$i61 = $3;
-  do {
-   $__soon_to_be_end$06$i$i$i61 = $__soon_to_be_end$06$i$i$i61 + -12 | 0;
-   __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($__soon_to_be_end$06$i$i$i61);
-  } while (($__soon_to_be_end$06$i$i$i61 | 0) != ($2 | 0));
- }
- HEAP32[$__end_$i$i$i58 >> 2] = $2;
- HEAP32[$bitmaps >> 2] = 0;
- $__end_$i$i = $bitmaps + 4 | 0;
- HEAP32[$__end_$i$i >> 2] = 0;
- HEAP32[$bitmaps + 8 >> 2] = 0;
- HEAP32[$rects >> 2] = 0;
- HEAP32[$rects + 4 >> 2] = 0;
- HEAP32[$rects + 8 >> 2] = 0;
- $call = __ZN2Dr19FindObjectsInBitmapERK8DrBitmapRNSt3__26vectorIS0_NS3_9allocatorIS0_EEEERNS4_I6DrRectNS5_IS9_EEEEdb($this + 12 | 0, $bitmaps, $rects, .875, 1) | 0;
- $5 = HEAP32[$bitmaps >> 2] | 0;
- $sub$ptr$sub$i = (HEAP32[$__end_$i$i >> 2] | 0) - $5 | 0;
- $sub$ptr$div$i = ($sub$ptr$sub$i | 0) / 28 | 0;
- $6 = $5;
- if ($call) __ZN7DrImage12setSimpleBoxEv($this); else {
-  L14 : do if (($sub$ptr$sub$i | 0) > 0) {
-   $width15 = $this + 20 | 0;
-   $height17 = $this + 24 | 0;
-   $__end_$i70 = $one_poly + 4 | 0;
-   $conv61 = $lod;
-   $__value_$i$i$i$i181 = $this + 48 | 0;
-   $y82 = $ref$tmp + 4 | 0;
-   $__value_$i$i$i$i101 = $one_poly + 8 | 0;
-   $y100 = $ref$tmp + 4 | 0;
-   $__end_$i$i178 = $hole_images + 4 | 0;
-   $__value_$i$i$i$i179 = $hole_images + 8 | 0;
-   $__end_$i$i175 = $hole_rects + 4 | 0;
-   $__value_$i$i$i$i176 = $hole_rects + 8 | 0;
-   $__end_$i$i172 = $hole_list + 4 | 0;
-   $__value_$i$i$i$i173 = $hole_list + 8 | 0;
-   $__value_$i$i$i$i149 = $this + 60 | 0;
-   $__end_$i144 = $one_hole + 4 | 0;
-   $y120 = $ref$tmp + 4 | 0;
-   $y140 = $ref$tmp + 4 | 0;
-   $7 = $6;
-   $image_number$0339 = 0;
-   while (1) {
-    $arrayidx$i = $7 + ($image_number$0339 * 28 | 0) | 0;
-    if ((HEAP32[$7 + ($image_number$0339 * 28 | 0) + 8 >> 2] | 0) >= 1) if ((HEAP32[$7 + ($image_number$0339 * 28 | 0) + 12 >> 2] | 0) >= 1) {
-     __ZN2Dr17TraceImageOutlineERK8DrBitmap($one_poly, $arrayidx$i);
-     $add = 1.0 / +(HEAP32[$width15 >> 2] | 0) + 1.0;
-     $add20 = 1.0 / +(HEAP32[$height17 >> 2] | 0) + 1.0;
-     $12 = HEAP32[$one_poly >> 2] | 0;
-     $13 = HEAP32[$__end_$i70 >> 2] | 0;
-     if (($12 | 0) == ($13 | 0)) {
-      $17 = $13;
-      $18 = $12;
-      $24 = $12;
-     } else {
-      $__begin$sroa$0$0329 = $12;
-      do {
-       $conv34 = +(__ZN6DrRect4leftEv((HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0) | 0);
-       HEAPF64[$__begin$sroa$0$0329 >> 3] = +HEAPF64[$__begin$sroa$0$0329 >> 3] + $conv34;
-       $conv40 = +(__ZN6DrRect3topEv((HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0) | 0);
-       $y = $__begin$sroa$0$0329 + 8 | 0;
-       $add41 = +HEAPF64[$y >> 3] + $conv40;
-       HEAPF64[$__begin$sroa$0$0329 >> 3] = $add * +HEAPF64[$__begin$sroa$0$0329 >> 3];
-       HEAPF64[$y >> 3] = $add20 * $add41;
-       $__begin$sroa$0$0329 = $__begin$sroa$0$0329 + 16 | 0;
-      } while (($__begin$sroa$0$0329 | 0) != ($13 | 0));
-      $$pre343 = HEAP32[$__end_$i70 >> 2] | 0;
-      $17 = $$pre343;
-      $18 = HEAP32[$one_poly >> 2] | 0;
-      $24 = $$pre343;
-     }
-     if ($17 - $18 >> 4 >>> 0 > 3) {
-      $add$ptr$i = $24 + -16 | 0;
-      HEAP32[$__end_$i70 >> 2] = $add$ptr$i;
-      $26 = $add$ptr$i;
-     } else $26 = $17;
-     if ($26 - $18 >> 4 >>> 0 > 10) {
-      __ZN6DrMesh12smoothPointsERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEidd($ref$tmp, $one_poly, 5, 20.0, 1.0);
-      HEAP8[$agg$tmp$i99$byval_copy >> 0] = HEAP8[$agg$tmp$i111 >> 0] | 0;
-      __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__move_assignERS4_NS_17integral_constantIbLb1EEE($one_poly, $ref$tmp, $agg$tmp$i99$byval_copy);
-      __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($ref$tmp);
-      __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($ref$tmp, $one_poly, $conv61);
-      HEAP8[$agg$tmp$i99$byval_copy >> 0] = HEAP8[$agg$tmp$i111 >> 0] | 0;
-      __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__move_assignERS4_NS_17integral_constantIbLb1EEE($one_poly, $ref$tmp, $agg$tmp$i99$byval_copy);
-      __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($ref$tmp);
-      $27 = HEAP32[$__end_$i70 >> 2] | 0;
-      $28 = HEAP32[$one_poly >> 2] | 0;
-     } else {
-      $27 = $26;
-      $28 = $18;
-     }
-     if ($27 - $28 >> 4 >>> 0 < 4) {
-      HEAP32[$__end_$i70 >> 2] = $28;
-      __ZN6DrRect7topLeftEv($agg$tmp$i111, (HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0);
-      $30 = HEAP32[$agg$tmp$i111 >> 2] | 0;
-      __ZN6DrRect7topLeftEv($ref$tmp, (HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0);
-      __ZN8DrPointFC2Edd($agg$tmp$i99$byval_copy, +($30 | 0), +(HEAP32[$y82 >> 2] | 0));
-      $33 = HEAP32[$__end_$i70 >> 2] | 0;
-      if ($33 >>> 0 < (HEAP32[$__value_$i$i$i$i101 >> 2] | 0) >>> 0) {
-       HEAP32[$33 >> 2] = HEAP32[$agg$tmp$i99$byval_copy >> 2];
-       HEAP32[$33 + 4 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 4 >> 2];
-       HEAP32[$33 + 8 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 8 >> 2];
-       HEAP32[$33 + 12 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 12 >> 2];
-       HEAP32[$__end_$i70 >> 2] = $33 + 16;
-      } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($one_poly, $agg$tmp$i99$byval_copy);
-      __ZN6DrRect8topRightEv($agg$tmp$i111, (HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0);
-      $36 = HEAP32[$agg$tmp$i111 >> 2] | 0;
-      __ZN6DrRect8topRightEv($ref$tmp, (HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0);
-      __ZN8DrPointFC2Edd($agg$tmp$i99$byval_copy, +($36 | 0), +(HEAP32[$y100 >> 2] | 0));
-      $39 = HEAP32[$__end_$i70 >> 2] | 0;
-      if ($39 >>> 0 < (HEAP32[$__value_$i$i$i$i101 >> 2] | 0) >>> 0) {
-       HEAP32[$39 >> 2] = HEAP32[$agg$tmp$i99$byval_copy >> 2];
-       HEAP32[$39 + 4 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 4 >> 2];
-       HEAP32[$39 + 8 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 8 >> 2];
-       HEAP32[$39 + 12 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 12 >> 2];
-       HEAP32[$__end_$i70 >> 2] = $39 + 16;
-      } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($one_poly, $agg$tmp$i99$byval_copy);
-      __ZN6DrRect11bottomRightEv($agg$tmp$i111, (HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0);
-      $42 = HEAP32[$agg$tmp$i111 >> 2] | 0;
-      __ZN6DrRect11bottomRightEv($ref$tmp, (HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0);
-      __ZN8DrPointFC2Edd($agg$tmp$i99$byval_copy, +($42 | 0), +(HEAP32[$y120 >> 2] | 0));
-      $45 = HEAP32[$__end_$i70 >> 2] | 0;
-      if ($45 >>> 0 < (HEAP32[$__value_$i$i$i$i101 >> 2] | 0) >>> 0) {
-       HEAP32[$45 >> 2] = HEAP32[$agg$tmp$i99$byval_copy >> 2];
-       HEAP32[$45 + 4 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 4 >> 2];
-       HEAP32[$45 + 8 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 8 >> 2];
-       HEAP32[$45 + 12 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 12 >> 2];
-       HEAP32[$__end_$i70 >> 2] = $45 + 16;
-      } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($one_poly, $agg$tmp$i99$byval_copy);
-      __ZN6DrRect10bottomLeftEv($agg$tmp$i111, (HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0);
-      $48 = HEAP32[$agg$tmp$i111 >> 2] | 0;
-      __ZN6DrRect10bottomLeftEv($ref$tmp, (HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0);
-      __ZN8DrPointFC2Edd($agg$tmp$i99$byval_copy, +($48 | 0), +(HEAP32[$y140 >> 2] | 0));
-      $51 = HEAP32[$__end_$i70 >> 2] | 0;
-      if ($51 >>> 0 < (HEAP32[$__value_$i$i$i$i101 >> 2] | 0) >>> 0) {
-       HEAP32[$51 >> 2] = HEAP32[$agg$tmp$i99$byval_copy >> 2];
-       HEAP32[$51 + 4 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 4 >> 2];
-       HEAP32[$51 + 8 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 8 >> 2];
-       HEAP32[$51 + 12 >> 2] = HEAP32[$agg$tmp$i99$byval_copy + 12 >> 2];
-       HEAP32[$__end_$i70 >> 2] = $51 + 16;
-      } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($one_poly, $agg$tmp$i99$byval_copy);
-     }
-     __ZN10DrPolygonF24ensureWindingOrientationERNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE19Winding_Orientation($one_poly, 1);
-     $53 = HEAP32[$__end_$i$i$i >> 2] | 0;
-     if (($53 | 0) == (HEAP32[$__value_$i$i$i$i181 >> 2] | 0)) __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE21__push_back_slow_pathIRKS4_EEvOT_($m_poly_list, $one_poly); else {
-      __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($53, $one_poly);
-      HEAP32[$__end_$i$i$i >> 2] = (HEAP32[$__end_$i$i$i >> 2] | 0) + 12;
-     }
-     __ZN8DrBitmap4copyEv($ref$tmp, $arrayidx$i);
-     __ZN7DrColorC2Ej($agg$tmp, -1);
-     __ZNK8DrBitmap4rectEv($agg$tmp155, $ref$tmp);
-     HEAP8[$agg$tmp$i99$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
-     HEAP8[$agg$tmp$i99$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
-     HEAP8[$agg$tmp$i99$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
-     HEAP8[$agg$tmp$i99$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
-     __ZN2Dr10FillBorderER8DrBitmap7DrColor6DrRect($ref$tmp, $agg$tmp$i99$byval_copy, $agg$tmp155);
-     HEAP32[$hole_images >> 2] = 0;
-     HEAP32[$__end_$i$i178 >> 2] = 0;
-     HEAP32[$__value_$i$i$i$i179 >> 2] = 0;
-     HEAP32[$hole_rects >> 2] = 0;
-     HEAP32[$__end_$i$i175 >> 2] = 0;
-     HEAP32[$__value_$i$i$i$i176 >> 2] = 0;
-     __ZN2Dr19FindObjectsInBitmapERK8DrBitmapRNSt3__26vectorIS0_NS3_9allocatorIS0_EEEERNS4_I6DrRectNS5_IS9_EEEEdb($ref$tmp, $hole_images, $hole_rects, .875, 0) | 0;
-     HEAP32[$hole_list >> 2] = 0;
-     HEAP32[$__end_$i$i172 >> 2] = 0;
-     HEAP32[$__value_$i$i$i$i173 >> 2] = 0;
-     $56 = HEAP32[$__end_$i$i178 >> 2] | 0;
-     $57 = HEAP32[$hole_images >> 2] | 0;
-     if (($56 - $57 | 0) > 0) {
-      $62 = $57;
-      $88 = $56;
-      $hole_number$0335 = 0;
-      while (1) {
-       $61 = $62;
-       $arrayidx$i147 = $61 + ($hole_number$0335 * 28 | 0) | 0;
-       do if ((HEAP32[$61 + ($hole_number$0335 * 28 | 0) + 8 >> 2] | 0) < 1) {
-        $86 = $88;
-        $87 = $62;
-       } else {
-        if ((HEAP32[$61 + ($hole_number$0335 * 28 | 0) + 12 >> 2] | 0) < 1) {
-         $86 = $88;
-         $87 = $62;
-         break;
-        }
-        __ZN2Dr17TraceImageOutlineERK8DrBitmap($one_hole, $arrayidx$i147);
-        $65 = HEAP32[$one_hole >> 2] | 0;
-        $66 = HEAP32[$__end_$i144 >> 2] | 0;
-        if (($65 | 0) == ($66 | 0)) {
-         $70 = $66;
-         $71 = $65;
-         $78 = $65;
-        } else {
-         $__begin179$sroa$0$0331 = $65;
-         do {
-          $call195 = __ZN6DrRect4leftEv((HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0) | 0;
-          $conv201 = +((__ZN6DrRect4leftEv((HEAP32[$hole_rects >> 2] | 0) + ($hole_number$0335 << 4) | 0) | 0) + $call195 | 0);
-          HEAPF64[$__begin179$sroa$0$0331 >> 3] = +HEAPF64[$__begin179$sroa$0$0331 >> 3] + $conv201;
-          $call207 = __ZN6DrRect3topEv((HEAP32[$rects >> 2] | 0) + ($image_number$0339 << 4) | 0) | 0;
-          $conv213 = +((__ZN6DrRect3topEv((HEAP32[$hole_rects >> 2] | 0) + ($hole_number$0335 << 4) | 0) | 0) + $call207 | 0);
-          $y214 = $__begin179$sroa$0$0331 + 8 | 0;
-          HEAPF64[$y214 >> 3] = +HEAPF64[$y214 >> 3] + $conv213;
-          $__begin179$sroa$0$0331 = $__begin179$sroa$0$0331 + 16 | 0;
-         } while (($__begin179$sroa$0$0331 | 0) != ($66 | 0));
-         $$pre347 = HEAP32[$__end_$i144 >> 2] | 0;
-         $70 = $$pre347;
-         $71 = HEAP32[$one_hole >> 2] | 0;
-         $78 = $$pre347;
-        }
-        if ($70 - $71 >> 4 >>> 0 > 3) {
-         $add$ptr$i126 = $78 + -16 | 0;
-         HEAP32[$__end_$i144 >> 2] = $add$ptr$i126;
-         $80 = $add$ptr$i126;
-        } else $80 = $70;
-        if ($80 - $71 >> 4 >>> 0 > 10) {
-         __ZN6DrMesh12smoothPointsERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEidd($ref$tmp232, $one_hole, 5, 30.0, 1.0);
-         HEAP8[$agg$tmp$i99$byval_copy >> 0] = HEAP8[$agg$tmp$i111 >> 0] | 0;
-         __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__move_assignERS4_NS_17integral_constantIbLb1EEE($one_hole, $ref$tmp232, $agg$tmp$i99$byval_copy);
-         __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($ref$tmp232);
-         __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($ref$tmp232, $one_hole, $conv61);
-         HEAP8[$agg$tmp$i99$byval_copy >> 0] = HEAP8[$agg$tmp$i111 >> 0] | 0;
-         __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__move_assignERS4_NS_17integral_constantIbLb1EEE($one_hole, $ref$tmp232, $agg$tmp$i99$byval_copy);
-         __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($ref$tmp232);
-         $81 = HEAP32[$__end_$i144 >> 2] | 0;
-         $82 = HEAP32[$one_hole >> 2] | 0;
-        } else {
-         $81 = $80;
-         $82 = $71;
-        }
-        do if ($81 - $82 >> 4 >>> 0 > 3) {
-         __ZN10DrPolygonF24ensureWindingOrientationERNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE19Winding_Orientation($one_hole, 0);
-         $83 = HEAP32[$__end_$i$i172 >> 2] | 0;
-         if (($83 | 0) == (HEAP32[$__value_$i$i$i$i173 >> 2] | 0)) {
-          __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE21__push_back_slow_pathIRKS4_EEvOT_($hole_list, $one_hole);
-          break;
-         } else {
-          __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($83, $one_hole);
-          HEAP32[$__end_$i$i172 >> 2] = (HEAP32[$__end_$i$i172 >> 2] | 0) + 12;
-          break;
-         }
-        } while (0);
-        __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($one_hole);
-        $86 = HEAP32[$__end_$i$i178 >> 2] | 0;
-        $87 = HEAP32[$hole_images >> 2] | 0;
-       } while (0);
-       $hole_number$0335 = $hole_number$0335 + 1 | 0;
-       if (($hole_number$0335 | 0) >= (($86 - $87 | 0) / 28 | 0 | 0)) break; else {
-        $62 = $87;
-        $88 = $86;
-       }
-      }
-     }
-     $58 = HEAP32[$__end_$i$i$i58 >> 2] | 0;
-     if (($58 | 0) == (HEAP32[$__value_$i$i$i$i149 >> 2] | 0)) __ZNSt3__26vectorINS0_INS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEEENS2_IS6_EEE21__push_back_slow_pathIRKS6_EEvOT_($m_hole_list, $hole_list); else {
-      __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEEC2ERKS6_($58, $hole_list);
-      HEAP32[$__end_$i$i$i58 >> 2] = (HEAP32[$__end_$i$i$i58 >> 2] | 0) + 12;
-     }
-     __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($hole_list);
-     __ZNSt3__213__vector_baseI6DrRectNS_9allocatorIS1_EEED2Ev($hole_rects);
-     __ZNSt3__213__vector_baseI8DrBitmapNS_9allocatorIS1_EEED2Ev($hole_images);
-     __ZN8DrBitmapD2Ev($ref$tmp);
-     __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($one_poly);
-    }
-    $inc277 = $image_number$0339 + 1 | 0;
-    if (($inc277 | 0) >= ($sub$ptr$div$i | 0)) break L14;
-    $7 = HEAP32[$bitmaps >> 2] | 0;
-    $image_number$0339 = $inc277;
-   }
-  } while (0);
-  HEAP8[$this + 64 >> 0] = 0;
-  HEAP8[$this + 65 >> 0] = 1;
- }
- __ZNSt3__213__vector_baseI6DrRectNS_9allocatorIS1_EEED2Ev($rects);
- __ZNSt3__213__vector_baseI8DrBitmapNS_9allocatorIS1_EEED2Ev($bitmaps);
- STACKTOP = sp;
- return;
 }
 
 function _printf_core($f, $fmt, $ap, $nl_arg, $nl_type, $fmt_fp, $pop_arg_long_double) {
@@ -15050,6 +13143,348 @@ function _stbtt__GetGlyphShapeTT($info, $glyph_index, $pvertices) {
  return $306 | 0;
 }
 
+function __ZN2Dr17TraceImageOutlineERK8DrBitmap($agg$result, $bitmap) {
+ $agg$result = $agg$result | 0;
+ $bitmap = $bitmap | 0;
+ var $13 = 0, $14 = 0, $19 = 0, $2 = 0, $21 = 0, $23 = 0, $26 = 0, $27 = 0, $31 = 0, $34 = 0, $37 = 0, $39 = 0, $44 = 0, $45 = 0, $52 = 0, $57 = 0, $58 = 0, $6 = 0, $64 = 0, $65 = 0, $66 = 0, $67 = 0, $68 = 0, $70 = 0, $75 = 0, $76 = 0, $8 = 0, $81 = 0, $85 = 0, $87 = 0, $88 = 0, $94 = 0, $__begin$sroa$0$0 = 0, $__end_$i$i = 0, $__end_$i$i124 = 0, $__end_$i$i152 = 0, $__value_$i$i$i$i = 0, $__value_$i$i$i$i125 = 0, $__value_$i$i$i$i153 = 0, $add = 0, $add36 = 0, $agg$tmp = 0, $agg$tmp188 = 0, $agg$tmp191 = 0, $agg$tmp205 = 0, $agg$tmp205$byval_copy = 0, $agg$tmp208 = 0, $agg$tmp253 = 0, $agg$tmp270 = 0, $agg$tmp270$byval_copy = 0, $agg$tmp56 = 0, $agg$tmp61 = 0, $agg$tmp79 = 0, $angle_diff$0 = 0.0, $angle_diff$1 = 0.0, $border_pixel_count$0 = 0, $border_pixel_count$1 = 0, $border_pixel_count$3 = 0, $call194 = 0.0, $call248 = 0, $call291 = 0, $can_be_border$0$off0 = 0, $can_be_border$1$off0 = 0, $check_angle$0 = 0.0, $check_angle$1 = 0.0, $cmp18 = 0, $cond116 = 0, $cond124 = 0, $cond136 = 0, $current_point = 0, $first$0$off0 = 0, $has_start_point$0$off0 = 0, $has_start_point$1$off0 = 0, $has_start_point$3$off0 = 0, $height = 0, $i$0 = 0, $i308$0 = 0, $inc64 = 0, $j$0 = 0, $last_point = 0, $next_point = 0, $point = 0, $points = 0, $processed = 0, $sub107 = 0, $sub127 = 0, $sub219 = 0.0, $sub29 = 0, $sub34 = 0, $surround = 0, $tmp = 0, $tmp153 = 0, $tmp161 = 0, $tmp242 = 0, $tmp259 = 0, $tmp285 = 0, $tmp40 = 0, $width = 0, $x$0 = 0, $x137$0 = 0, $y$0 = 0, $y117 = 0, $y142$0 = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 240 | 0;
+ $agg$tmp270$byval_copy = sp + 104 | 0;
+ $agg$tmp205$byval_copy = sp + 88 | 0;
+ $processed = sp + 156 | 0;
+ $points = sp + 144 | 0;
+ $last_point = sp + 136 | 0;
+ $tmp = sp + 232 | 0;
+ $agg$tmp = sp + 228 | 0;
+ $tmp40 = sp + 224 | 0;
+ $agg$tmp56 = sp + 220 | 0;
+ $agg$tmp61 = sp + 216 | 0;
+ $agg$tmp79 = sp + 212 | 0;
+ $surround = sp + 120 | 0;
+ $current_point = sp + 48 | 0;
+ $tmp153 = sp + 208 | 0;
+ $tmp161 = sp + 204 | 0;
+ $agg$tmp188 = sp + 72 | 0;
+ $agg$tmp191 = sp + 56 | 0;
+ $next_point = sp + 8 | 0;
+ $point = sp;
+ $agg$tmp205 = sp + 32 | 0;
+ $agg$tmp208 = sp + 16 | 0;
+ $tmp242 = sp + 200 | 0;
+ $agg$tmp253 = sp + 196 | 0;
+ $tmp259 = sp + 192 | 0;
+ $agg$tmp270 = sp + 188 | 0;
+ $tmp285 = sp + 184 | 0;
+ __ZN8DrBitmapC2ERKS_13Bitmap_Format($processed, $bitmap, 4);
+ HEAP32[$points >> 2] = 0;
+ $__end_$i$i = $points + 4 | 0;
+ HEAP32[$__end_$i$i >> 2] = 0;
+ $__value_$i$i$i$i = $points + 8 | 0;
+ HEAP32[$__value_$i$i$i$i >> 2] = 0;
+ $width = $bitmap + 8 | 0;
+ if ((HEAP32[$width >> 2] | 0) < 1) label = 3; else {
+  $height = $bitmap + 12 | 0;
+  if ((HEAP32[$height >> 2] | 0) < 1) label = 3; else {
+   __ZN7DrPointC2Ev($last_point);
+   $border_pixel_count$0 = 0;
+   $has_start_point$0$off0 = 0;
+   $x$0 = 0;
+   while (1) {
+    $2 = HEAP32[$width >> 2] | 0;
+    if (($x$0 | 0) >= ($2 | 0)) break;
+    $cmp18 = ($x$0 | 0) == 0;
+    $sub29 = $x$0 + -1 | 0;
+    $add = $x$0 + 1 | 0;
+    $border_pixel_count$1 = $border_pixel_count$0;
+    $has_start_point$1$off0 = $has_start_point$0$off0;
+    $y$0 = 0;
+    while (1) {
+     if (($y$0 | 0) >= (HEAP32[$height >> 2] | 0)) break;
+     __ZNK8DrBitmap8getPixelEii($tmp, $bitmap, $x$0, $y$0);
+     __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 0);
+     do if (__ZNK7DrColoreqERKS_($tmp, $agg$tmp270$byval_copy) | 0) {
+      __ZN7DrColorC2Ej($agg$tmp, 0);
+      HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
+      HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
+      HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
+      HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
+      __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0, $y$0, $agg$tmp270$byval_copy);
+      $border_pixel_count$3 = $border_pixel_count$1;
+      $has_start_point$3$off0 = $has_start_point$1$off0;
+     } else {
+      if (!($cmp18 | ($y$0 | 0) == 0)) if (($x$0 | 0) != ((HEAP32[$width >> 2] | 0) + -1 | 0)) if (($y$0 | 0) != ((HEAP32[$height >> 2] | 0) + -1 | 0)) {
+       $sub34 = $y$0 + -1 | 0;
+       $add36 = $y$0 + 1 | 0;
+       $can_be_border$0$off0 = 0;
+       $i$0 = $sub29;
+       while (1) {
+        if (($i$0 | 0) > ($add | 0)) break;
+        $can_be_border$1$off0 = $can_be_border$0$off0;
+        $j$0 = $sub34;
+        while (1) {
+         if (($j$0 | 0) > ($add36 | 0)) break;
+         __ZNK8DrBitmap8getPixelEii($tmp40, $bitmap, $i$0, $j$0);
+         __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 0);
+         $can_be_border$1$off0 = $can_be_border$1$off0 | (__ZNK7DrColoreqERKS_($tmp40, $agg$tmp270$byval_copy) | 0);
+         $j$0 = $j$0 + 1 | 0;
+        }
+        $can_be_border$0$off0 = $can_be_border$1$off0;
+        $i$0 = $i$0 + 1 | 0;
+       }
+       if (!$can_be_border$0$off0) {
+        __ZN7DrColorC2Ej($agg$tmp56, 0);
+        HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp56 >> 0] | 0;
+        HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp56 + 1 >> 0] | 0;
+        HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp56 + 2 >> 0] | 0;
+        HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp56 + 3 >> 0] | 0;
+        __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0, $y$0, $agg$tmp270$byval_copy);
+        $border_pixel_count$3 = $border_pixel_count$1;
+        $has_start_point$3$off0 = $has_start_point$1$off0;
+        break;
+       }
+      }
+      __ZN7DrColorC2Ej($agg$tmp61, 2);
+      HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp61 >> 0] | 0;
+      HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp61 + 1 >> 0] | 0;
+      HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp61 + 2 >> 0] | 0;
+      HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp61 + 3 >> 0] | 0;
+      __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0, $y$0, $agg$tmp270$byval_copy);
+      $inc64 = $border_pixel_count$1 + 1 | 0;
+      if ($has_start_point$1$off0) {
+       $border_pixel_count$3 = $inc64;
+       $has_start_point$3$off0 = 1;
+      } else {
+       __ZN7DrPointC2Eii($agg$tmp270$byval_copy, $x$0, $y$0);
+       $6 = HEAP32[$__end_$i$i >> 2] | 0;
+       if ($6 >>> 0 < (HEAP32[$__value_$i$i$i$i >> 2] | 0) >>> 0) {
+        $8 = $agg$tmp270$byval_copy;
+        $13 = HEAP32[$8 + 4 >> 2] | 0;
+        $14 = $6;
+        HEAP32[$14 >> 2] = HEAP32[$8 >> 2];
+        HEAP32[$14 + 4 >> 2] = $13;
+        HEAP32[$__end_$i$i >> 2] = (HEAP32[$__end_$i$i >> 2] | 0) + 8;
+       } else __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($points, $agg$tmp270$byval_copy);
+       __ZN7DrPointC2Eii($agg$tmp270$byval_copy, $sub29, $y$0);
+       __ZN7DrPointaSERKS_($last_point, $agg$tmp270$byval_copy) | 0;
+       __ZN7DrColorC2Ej($agg$tmp79, 1);
+       HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp79 >> 0] | 0;
+       HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp79 + 1 >> 0] | 0;
+       HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp79 + 2 >> 0] | 0;
+       HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp79 + 3 >> 0] | 0;
+       __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0, $y$0, $agg$tmp270$byval_copy);
+       $border_pixel_count$3 = $inc64;
+       $has_start_point$3$off0 = 1;
+      }
+     } while (0);
+     $border_pixel_count$1 = $border_pixel_count$3;
+     $has_start_point$1$off0 = $has_start_point$3$off0;
+     $y$0 = $y$0 + 1 | 0;
+    }
+    $border_pixel_count$0 = $border_pixel_count$1;
+    $has_start_point$0$off0 = $has_start_point$1$off0;
+    $x$0 = $add;
+   }
+   if (($border_pixel_count$0 | 0) < 3) {
+    HEAP32[$agg$result >> 2] = 0;
+    HEAP32[$agg$result + 4 >> 2] = 0;
+    HEAP32[$agg$result + 8 >> 2] = 0;
+   } else {
+    HEAP32[$surround >> 2] = 0;
+    $__end_$i$i124 = $surround + 4 | 0;
+    HEAP32[$__end_$i$i124 >> 2] = 0;
+    $__value_$i$i$i$i125 = $surround + 8 | 0;
+    HEAP32[$__value_$i$i$i$i125 >> 2] = 0;
+    $y117 = $current_point + 4 | 0;
+    $19 = 0;
+    $31 = $2;
+    while (1) {
+     HEAP32[$__end_$i$i124 >> 2] = $19;
+     $21 = (HEAP32[$__end_$i$i >> 2] | 0) + -8 | 0;
+     $23 = HEAP32[$21 >> 2] | 0;
+     $26 = HEAP32[$21 + 4 >> 2] | 0;
+     $27 = $current_point;
+     HEAP32[$27 >> 2] = $23;
+     HEAP32[$27 + 4 >> 2] = $26;
+     $sub107 = $31 + -1 | 0;
+     $cond116 = ($sub107 | 0) > ($23 | 0) ? $23 + 1 | 0 : $sub107;
+     $cond124 = ($26 | 0) > 0 ? $26 + -1 | 0 : 0;
+     $sub127 = (HEAP32[$height >> 2] | 0) + -1 | 0;
+     $cond136 = ($sub127 | 0) > ($26 | 0) ? $26 + 1 | 0 : $sub127;
+     $x137$0 = ($23 | 0) > 0 ? $23 + -1 | 0 : 0;
+     while (1) {
+      if (($x137$0 | 0) > ($cond116 | 0)) break;
+      $y142$0 = $cond124;
+      while (1) {
+       if (($y142$0 | 0) > ($cond136 | 0)) break;
+       do if (!(($x137$0 | 0) == (HEAP32[$current_point >> 2] | 0) ? ($y142$0 | 0) == (HEAP32[$y117 >> 2] | 0) : 0)) {
+        __ZNK8DrBitmap8getPixelEii($tmp153, $processed, $x137$0, $y142$0);
+        __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 4);
+        if (!(__ZNK7DrColorneERKS_($tmp153, $agg$tmp270$byval_copy) | 0)) break;
+        __ZNK8DrBitmap8getPixelEii($tmp161, $processed, $x137$0, $y142$0);
+        __ZN7DrColorC2Ej($agg$tmp205$byval_copy, 0);
+        if (__ZNK7DrColorneERKS_($tmp161, $agg$tmp205$byval_copy) | 0) {
+         __ZN7DrPointC2Eii($agg$tmp270$byval_copy, $x137$0, $y142$0);
+         $37 = HEAP32[$__end_$i$i124 >> 2] | 0;
+         if ($37 >>> 0 < (HEAP32[$__value_$i$i$i$i125 >> 2] | 0) >>> 0) {
+          $39 = $agg$tmp270$byval_copy;
+          $44 = HEAP32[$39 + 4 >> 2] | 0;
+          $45 = $37;
+          HEAP32[$45 >> 2] = HEAP32[$39 >> 2];
+          HEAP32[$45 + 4 >> 2] = $44;
+          HEAP32[$__end_$i$i124 >> 2] = (HEAP32[$__end_$i$i124 >> 2] | 0) + 8;
+         } else __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($surround, $agg$tmp270$byval_copy);
+        }
+       } while (0);
+       $y142$0 = $y142$0 + 1 | 0;
+      }
+      $x137$0 = $x137$0 + 1 | 0;
+     }
+     __ZN7DrPoint8toPointFEv($agg$tmp188, $current_point);
+     __ZN7DrPoint8toPointFEv($agg$tmp191, $last_point);
+     HEAP32[$agg$tmp205$byval_copy >> 2] = HEAP32[$agg$tmp188 >> 2];
+     HEAP32[$agg$tmp205$byval_copy + 4 >> 2] = HEAP32[$agg$tmp188 + 4 >> 2];
+     HEAP32[$agg$tmp205$byval_copy + 8 >> 2] = HEAP32[$agg$tmp188 + 8 >> 2];
+     HEAP32[$agg$tmp205$byval_copy + 12 >> 2] = HEAP32[$agg$tmp188 + 12 >> 2];
+     HEAP32[$agg$tmp270$byval_copy >> 2] = HEAP32[$agg$tmp191 >> 2];
+     HEAP32[$agg$tmp270$byval_copy + 4 >> 2] = HEAP32[$agg$tmp191 + 4 >> 2];
+     HEAP32[$agg$tmp270$byval_copy + 8 >> 2] = HEAP32[$agg$tmp191 + 8 >> 2];
+     HEAP32[$agg$tmp270$byval_copy + 12 >> 2] = HEAP32[$agg$tmp191 + 12 >> 2];
+     $call194 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($agg$tmp205$byval_copy, $agg$tmp270$byval_copy);
+     __ZN7DrPointC2Ev($next_point);
+     $34 = HEAP32[$__end_$i$i124 >> 2] | 0;
+     $__begin$sroa$0$0 = HEAP32[$surround >> 2] | 0;
+     $angle_diff$0 = 0.0;
+     $first$0$off0 = 1;
+     while (1) {
+      if (($__begin$sroa$0$0 | 0) == ($34 | 0)) break;
+      $52 = $__begin$sroa$0$0;
+      $57 = HEAP32[$52 + 4 >> 2] | 0;
+      $58 = $point;
+      HEAP32[$58 >> 2] = HEAP32[$52 >> 2];
+      HEAP32[$58 + 4 >> 2] = $57;
+      __ZN7DrPoint8toPointFEv($agg$tmp205, $current_point);
+      __ZN7DrPoint8toPointFEv($agg$tmp208, $point);
+      HEAP32[$agg$tmp205$byval_copy >> 2] = HEAP32[$agg$tmp205 >> 2];
+      HEAP32[$agg$tmp205$byval_copy + 4 >> 2] = HEAP32[$agg$tmp205 + 4 >> 2];
+      HEAP32[$agg$tmp205$byval_copy + 8 >> 2] = HEAP32[$agg$tmp205 + 8 >> 2];
+      HEAP32[$agg$tmp205$byval_copy + 12 >> 2] = HEAP32[$agg$tmp205 + 12 >> 2];
+      HEAP32[$agg$tmp270$byval_copy >> 2] = HEAP32[$agg$tmp208 >> 2];
+      HEAP32[$agg$tmp270$byval_copy + 4 >> 2] = HEAP32[$agg$tmp208 + 4 >> 2];
+      HEAP32[$agg$tmp270$byval_copy + 8 >> 2] = HEAP32[$agg$tmp208 + 8 >> 2];
+      HEAP32[$agg$tmp270$byval_copy + 12 >> 2] = HEAP32[$agg$tmp208 + 12 >> 2];
+      $check_angle$0 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($agg$tmp205$byval_copy, $agg$tmp270$byval_copy);
+      while (1) {
+       if (!($check_angle$0 > 0.0)) break;
+       $check_angle$0 = $check_angle$0 + -360.0;
+      }
+      $check_angle$1 = $check_angle$0;
+      while (1) {
+       if (!($check_angle$1 <= $call194)) break;
+       $check_angle$1 = $check_angle$1 + 360.0;
+      }
+      $sub219 = $check_angle$1 - $call194;
+      if ($first$0$off0 | $sub219 < $angle_diff$0) {
+       __ZN7DrPointaSERKS_($next_point, $point) | 0;
+       $angle_diff$1 = $sub219;
+      } else $angle_diff$1 = $angle_diff$0;
+      $__begin$sroa$0$0 = $__begin$sroa$0$0 + 8 | 0;
+      $angle_diff$0 = $angle_diff$1;
+      $first$0$off0 = 0;
+     }
+     do if ((HEAP32[$__end_$i$i124 >> 2] | 0) != (HEAP32[$surround >> 2] | 0)) {
+      __ZNK8DrBitmap8getPixelEii($tmp242, $processed, HEAP32[$current_point >> 2] | 0, HEAP32[$y117 >> 2] | 0);
+      __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 2);
+      $call248 = __ZNK7DrColoreqERKS_($tmp242, $agg$tmp270$byval_copy) | 0;
+      $64 = HEAP32[$current_point >> 2] | 0;
+      $65 = HEAP32[$y117 >> 2] | 0;
+      if ($call248) {
+       __ZN7DrColorC2Ej($agg$tmp253, 3);
+       HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp253 >> 0] | 0;
+       HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp253 + 1 >> 0] | 0;
+       HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp253 + 2 >> 0] | 0;
+       HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp253 + 3 >> 0] | 0;
+       __ZN8DrBitmap8setPixelEii7DrColor($processed, $64, $65, $agg$tmp270$byval_copy);
+      } else {
+       __ZNK8DrBitmap8getPixelEii($tmp259, $processed, $64, $65);
+       __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 3);
+       if (__ZNK7DrColoreqERKS_($tmp259, $agg$tmp270$byval_copy) | 0) {
+        $66 = HEAP32[$current_point >> 2] | 0;
+        $67 = HEAP32[$y117 >> 2] | 0;
+        __ZN7DrColorC2Ej($agg$tmp270, 4);
+        HEAP8[$agg$tmp270$byval_copy >> 0] = HEAP8[$agg$tmp270 >> 0] | 0;
+        HEAP8[$agg$tmp270$byval_copy + 1 >> 0] = HEAP8[$agg$tmp270 + 1 >> 0] | 0;
+        HEAP8[$agg$tmp270$byval_copy + 2 >> 0] = HEAP8[$agg$tmp270 + 2 >> 0] | 0;
+        HEAP8[$agg$tmp270$byval_copy + 3 >> 0] = HEAP8[$agg$tmp270 + 3 >> 0] | 0;
+        __ZN8DrBitmap8setPixelEii7DrColor($processed, $66, $67, $agg$tmp270$byval_copy);
+       }
+      }
+      __ZN7DrPointaSERKS_($last_point, $current_point) | 0;
+      $68 = HEAP32[$__end_$i$i >> 2] | 0;
+      if (($68 | 0) == (HEAP32[$__value_$i$i$i$i >> 2] | 0)) {
+       __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($points, $next_point);
+       break;
+      } else {
+       $70 = $next_point;
+       $75 = HEAP32[$70 + 4 >> 2] | 0;
+       $76 = $68;
+       HEAP32[$76 >> 2] = HEAP32[$70 >> 2];
+       HEAP32[$76 + 4 >> 2] = $75;
+       HEAP32[$__end_$i$i >> 2] = (HEAP32[$__end_$i$i >> 2] | 0) + 8;
+       break;
+      }
+     } while (0);
+     $81 = HEAP32[$__end_$i$i >> 2] | 0;
+     __ZNK8DrBitmap8getPixelEii($tmp285, $processed, HEAP32[$81 + -8 >> 2] | 0, HEAP32[$81 + -4 >> 2] | 0);
+     __ZN7DrColorC2Ej($agg$tmp270$byval_copy, 1);
+     $call291 = __ZNK7DrColoreqERKS_($tmp285, $agg$tmp270$byval_copy) | 0;
+     $85 = HEAP32[$surround >> 2] | 0;
+     if ($call291 | (HEAP32[$__end_$i$i124 >> 2] | 0) == ($85 | 0)) break;
+     $19 = $85;
+     $31 = HEAP32[$width >> 2] | 0;
+    }
+    HEAP32[$agg$tmp270$byval_copy >> 2] = 0;
+    $__end_$i$i152 = $agg$tmp270$byval_copy + 4 | 0;
+    HEAP32[$__end_$i$i152 >> 2] = 0;
+    $__value_$i$i$i$i153 = $agg$tmp270$byval_copy + 8 | 0;
+    HEAP32[$__value_$i$i$i$i153 >> 2] = 0;
+    $i308$0 = 0;
+    while (1) {
+     $87 = HEAP32[$points >> 2] | 0;
+     $88 = $87;
+     if ($i308$0 >>> 0 >= (HEAP32[$__end_$i$i >> 2] | 0) - $87 >> 3 >>> 0) break;
+     __ZN8DrPointFC2Edd($agg$tmp205$byval_copy, +(HEAP32[$88 + ($i308$0 << 3) >> 2] | 0), +(HEAP32[$88 + ($i308$0 << 3) + 4 >> 2] | 0));
+     $94 = HEAP32[$__end_$i$i152 >> 2] | 0;
+     if ($94 >>> 0 < (HEAP32[$__value_$i$i$i$i153 >> 2] | 0) >>> 0) {
+      HEAP32[$94 >> 2] = HEAP32[$agg$tmp205$byval_copy >> 2];
+      HEAP32[$94 + 4 >> 2] = HEAP32[$agg$tmp205$byval_copy + 4 >> 2];
+      HEAP32[$94 + 8 >> 2] = HEAP32[$agg$tmp205$byval_copy + 8 >> 2];
+      HEAP32[$94 + 12 >> 2] = HEAP32[$agg$tmp205$byval_copy + 12 >> 2];
+      HEAP32[$__end_$i$i152 >> 2] = $94 + 16;
+     } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($agg$tmp270$byval_copy, $agg$tmp205$byval_copy);
+     $i308$0 = $i308$0 + 1 | 0;
+    }
+    HEAP32[$agg$result >> 2] = HEAP32[$agg$tmp270$byval_copy >> 2];
+    HEAP32[$agg$result + 4 >> 2] = HEAP32[$__end_$i$i152 >> 2];
+    HEAP32[$agg$result + 8 >> 2] = HEAP32[$__value_$i$i$i$i153 >> 2];
+    HEAP32[$__value_$i$i$i$i153 >> 2] = 0;
+    HEAP32[$__end_$i$i152 >> 2] = 0;
+    HEAP32[$agg$tmp270$byval_copy >> 2] = 0;
+    __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($agg$tmp270$byval_copy);
+    __ZNSt3__213__vector_baseI7DrPointNS_9allocatorIS1_EEED2Ev($surround);
+   }
+  }
+ }
+ if ((label | 0) == 3) {
+  HEAP32[$agg$result >> 2] = 0;
+  HEAP32[$agg$result + 4 >> 2] = 0;
+  HEAP32[$agg$result + 8 >> 2] = 0;
+ }
+ __ZNSt3__213__vector_baseI7DrPointNS_9allocatorIS1_EEED2Ev($points);
+ __ZN8DrBitmapD2Ev($processed);
+ STACKTOP = sp;
+ return;
+}
+
 function _load_jpeg_image($z, $out_x, $out_y, $comp, $req_comp) {
  $z = $z | 0;
  $out_x = $out_x | 0;
@@ -15343,300 +13778,621 @@ function _load_jpeg_image($z, $out_x, $out_y, $comp, $req_comp) {
  return $401 | 0;
 }
 
-function __ZN6DrMesh12smoothPointsERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEidd($agg$result, $outline_points, $neighbors, $neighbor_distance, $weight) {
- $agg$result = $agg$result | 0;
- $outline_points = $outline_points | 0;
- $neighbors = $neighbors | 0;
- $neighbor_distance = +$neighbor_distance;
- $weight = +$weight;
- var $$pre = 0.0, $$pre272 = 0.0, $1 = 0, $10 = 0.0, $11 = 0, $13 = 0, $2 = 0, $3 = 0.0, $4 = 0.0, $5 = 0, $6 = 0, $7 = 0, $8 = 0, $9 = 0.0, $__end_$i = 0, $__end_$i$i = 0, $__value_$i$i$i$i = 0, $add108 = 0, $agg$tmp = 0, $agg$tmp118 = 0, $agg$tmp162 = 0, $arrayidx$i176 = 0, $average_from$2 = 0, $average_from$2283 = 0, $average_to$2 = 0, $call117 = 0, $call123 = 0, $call125 = 0.0, $call131 = 0, $call160 = 0, $call167 = 0, $call169 = 0.0, $call176 = 0, $call176$byval_copy = 0, $call212 = 0, $call85 = 0, $call90 = 0, $call92 = 0.0, $call97 = 0, $check_point = 0, $check_point157$byval_copy = 0, $cmp112227 = 0, $cmp16262 = 0, $div219 = 0.0, $i70$0251 = 0, $inc289 = 0, $j$0229 = 0, $j150$0235 = 0, $j202$0244 = 0, $neighbor_distance$addr$0 = 0.0, $smooth_points = 0, $start_check_point = 0, $sub = 0.0, $sub$ptr$div$i = 0, $sub$ptr$sub$i = 0, $sub107 = 0, $sub217 = 0, $sub54 = 0.0, $sub87 = 0, $this_point = 0, $total_used$0$lcssa = 0.0, $total_used$0241 = 0.0, $total_used$1 = 0.0, $total_used$2 = 0.0, $x79$0$lcssa = 0.0, $x79$0242 = 0.0, $x79$1 = 0.0, $x79$2 = 0.0, $x_max$0$lcssa = 0.0, $x_max$1 = 0.0, $x_max$1286 = 0.0, $x_min$0$lcssa = 0.0, $x_min$1 = 0.0, $x_min$1285 = 0.0, $y224 = 0, $y81$0$lcssa = 0.0, $y81$0243 = 0.0, $y81$1 = 0.0, $y81$2 = 0.0, $y82 = 0, $y_max$0$lcssa = 0.0, $y_max$1 = 0.0, $y_max$1288 = 0.0, $y_min$0$lcssa = 0.0, $y_min$1 = 0.0, $y_min$1287 = 0.0, sp = 0, $j$0229$looptemp = 0, $j150$0235$looptemp = 0, $i70$0251$looptemp = 0;
+function __ZN7DrImage13outlinePointsEf($this, $lod) {
+ $this = $this | 0;
+ $lod = +$lod;
+ var $0 = 0, $12 = 0, $13 = 0, $14 = 0, $2 = 0, $21 = 0, $22 = 0, $23 = 0, $25 = 0, $28 = 0, $31 = 0, $34 = 0, $37 = 0, $40 = 0, $43 = 0, $46 = 0, $48 = 0, $52 = 0, $53 = 0, $54 = 0, $6 = 0, $60 = 0, $61 = 0, $62 = 0, $70 = 0, $71 = 0, $72 = 0, $73 = 0, $__begin$sroa$0$0 = 0, $__begin179$sroa$0$0 = 0, $__end_$i$i = 0, $__end_$i$i$i = 0, $__end_$i$i$i58 = 0, $__end_$i$i171 = 0, $__end_$i$i174 = 0, $__end_$i$i177 = 0, $__end_$i143 = 0, $__end_$i69 = 0, $__soon_to_be_end$0$i$i$i = 0, $__soon_to_be_end$0$i$i$i59 = 0, $__value_$i$i$i$i100 = 0, $__value_$i$i$i$i148 = 0, $__value_$i$i$i$i172 = 0, $__value_$i$i$i$i175 = 0, $__value_$i$i$i$i178 = 0, $__value_$i$i$i$i180 = 0, $add = 0.0, $add$ptr$i = 0, $add$ptr$i125 = 0, $add20 = 0.0, $add41 = 0.0, $agg$tmp = 0, $agg$tmp$i110 = 0, $agg$tmp$i98$byval_copy = 0, $agg$tmp155 = 0, $arrayidx$i = 0, $arrayidx$i146 = 0, $bitmaps = 0, $call = 0, $call195 = 0, $call207 = 0, $conv201 = 0.0, $conv213 = 0.0, $conv34 = 0.0, $conv40 = 0.0, $conv61 = 0.0, $height17 = 0, $hole_images = 0, $hole_list = 0, $hole_number$0 = 0, $hole_rects = 0, $image_number$0 = 0, $incdec$ptr$i$i$i = 0, $incdec$ptr$i$i$i62 = 0, $m_hole_list = 0, $m_poly_list = 0, $one_hole = 0, $one_poly = 0, $rects = 0, $ref$tmp = 0, $ref$tmp232 = 0, $sub$ptr$div$i = 0, $width15 = 0, $y = 0, $y100 = 0, $y120 = 0, $y140 = 0, $y214 = 0, $y82 = 0, sp = 0;
  sp = STACKTOP;
- STACKTOP = STACKTOP + 144 | 0;
- $call176$byval_copy = sp + 112 | 0;
- $check_point157$byval_copy = sp + 96 | 0;
- $smooth_points = sp + 128 | 0;
- $this_point = sp + 32 | 0;
- $start_check_point = sp + 16 | 0;
- $agg$tmp = sp + 80 | 0;
- $check_point = sp;
- $agg$tmp118 = sp + 64 | 0;
- $agg$tmp162 = sp + 48 | 0;
- HEAP32[$smooth_points >> 2] = 0;
- $__end_$i$i = $smooth_points + 4 | 0;
+ STACKTOP = STACKTOP + 176 | 0;
+ $agg$tmp$i98$byval_copy = sp;
+ $agg$tmp$i110 = sp + 160 | 0;
+ $bitmaps = sp + 128 | 0;
+ $rects = sp + 116 | 0;
+ $one_poly = sp + 104 | 0;
+ $ref$tmp = sp + 76 | 0;
+ $agg$tmp = sp + 168 | 0;
+ $agg$tmp155 = sp + 144 | 0;
+ $hole_images = sp + 64 | 0;
+ $hole_rects = sp + 52 | 0;
+ $hole_list = sp + 40 | 0;
+ $one_hole = sp + 28 | 0;
+ $ref$tmp232 = sp + 16 | 0;
+ $m_poly_list = $this + 40 | 0;
+ $0 = HEAP32[$m_poly_list >> 2] | 0;
+ $__end_$i$i$i = $this + 44 | 0;
+ $__soon_to_be_end$0$i$i$i = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($__soon_to_be_end$0$i$i$i | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $__soon_to_be_end$0$i$i$i + -12 | 0;
+  __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($incdec$ptr$i$i$i);
+  $__soon_to_be_end$0$i$i$i = $incdec$ptr$i$i$i;
+ }
+ HEAP32[$__end_$i$i$i >> 2] = $0;
+ $m_hole_list = $this + 52 | 0;
+ $2 = HEAP32[$m_hole_list >> 2] | 0;
+ $__end_$i$i$i58 = $this + 56 | 0;
+ $__soon_to_be_end$0$i$i$i59 = HEAP32[$__end_$i$i$i58 >> 2] | 0;
+ while (1) {
+  if (($__soon_to_be_end$0$i$i$i59 | 0) == ($2 | 0)) break;
+  $incdec$ptr$i$i$i62 = $__soon_to_be_end$0$i$i$i59 + -12 | 0;
+  __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($incdec$ptr$i$i$i62);
+  $__soon_to_be_end$0$i$i$i59 = $incdec$ptr$i$i$i62;
+ }
+ HEAP32[$__end_$i$i$i58 >> 2] = $2;
+ HEAP32[$bitmaps >> 2] = 0;
+ $__end_$i$i = $bitmaps + 4 | 0;
  HEAP32[$__end_$i$i >> 2] = 0;
- $__value_$i$i$i$i = $smooth_points + 8 | 0;
- HEAP32[$__value_$i$i$i$i >> 2] = 0;
- $__end_$i = $outline_points + 4 | 0;
- $1 = HEAP32[$outline_points >> 2] | 0;
- $sub$ptr$sub$i = (HEAP32[$__end_$i >> 2] | 0) - $1 | 0;
- $sub$ptr$div$i = $sub$ptr$sub$i >> 4;
- $2 = $1;
- do if (!$sub$ptr$sub$i) __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($agg$result, $outline_points); else {
-  $3 = +HEAPF64[$2 >> 3];
-  $4 = +HEAPF64[$2 + 8 >> 3];
-  $cmp16262 = ($sub$ptr$sub$i | 0) > 0;
-  if (($sub$ptr$sub$i | 0) > 16) {
-   $inc289 = 1;
-   $x_max$1286 = $3;
-   $x_min$1285 = $3;
-   $y_max$1288 = $4;
-   $y_min$1287 = $4;
-   while (1) {
-    $$pre = +HEAPF64[$2 + ($inc289 << 4) >> 3];
-    $$pre272 = +HEAPF64[$2 + ($inc289 << 4) + 8 >> 3];
-    $x_min$1 = $$pre < $x_min$1285 ? $$pre : $x_min$1285;
-    $x_max$1 = $$pre > $x_max$1286 ? $$pre : $x_max$1286;
-    $y_min$1 = $$pre272 < $y_min$1287 ? $$pre272 : $y_min$1287;
-    $y_max$1 = $$pre272 > $y_max$1288 ? $$pre272 : $y_max$1288;
-    $inc289 = $inc289 + 1 | 0;
-    if (($inc289 | 0) >= ($sub$ptr$div$i | 0)) {
-     $x_max$0$lcssa = $x_max$1;
-     $x_min$0$lcssa = $x_min$1;
-     $y_max$0$lcssa = $y_max$1;
-     $y_min$0$lcssa = $y_min$1;
-     break;
+ HEAP32[$bitmaps + 8 >> 2] = 0;
+ HEAP32[$rects >> 2] = 0;
+ HEAP32[$rects + 4 >> 2] = 0;
+ HEAP32[$rects + 8 >> 2] = 0;
+ $call = __ZN2Dr19FindObjectsInBitmapERK8DrBitmapRNSt3__26vectorIS0_NS3_9allocatorIS0_EEEERNS4_I6DrRectNS5_IS9_EEEEdb($this + 12 | 0, $bitmaps, $rects, .875, 1) | 0;
+ $sub$ptr$div$i = ((HEAP32[$__end_$i$i >> 2] | 0) - (HEAP32[$bitmaps >> 2] | 0) | 0) / 28 | 0;
+ if ($call) __ZN7DrImage12setSimpleBoxEv($this); else {
+  $width15 = $this + 20 | 0;
+  $height17 = $this + 24 | 0;
+  $__end_$i69 = $one_poly + 4 | 0;
+  $conv61 = $lod;
+  $__value_$i$i$i$i180 = $this + 48 | 0;
+  $y82 = $ref$tmp + 4 | 0;
+  $__value_$i$i$i$i100 = $one_poly + 8 | 0;
+  $y100 = $ref$tmp + 4 | 0;
+  $__end_$i$i177 = $hole_images + 4 | 0;
+  $__value_$i$i$i$i178 = $hole_images + 8 | 0;
+  $__end_$i$i174 = $hole_rects + 4 | 0;
+  $__value_$i$i$i$i175 = $hole_rects + 8 | 0;
+  $__end_$i$i171 = $hole_list + 4 | 0;
+  $__value_$i$i$i$i172 = $hole_list + 8 | 0;
+  $__end_$i143 = $one_hole + 4 | 0;
+  $__value_$i$i$i$i148 = $this + 60 | 0;
+  $y120 = $ref$tmp + 4 | 0;
+  $y140 = $ref$tmp + 4 | 0;
+  $image_number$0 = 0;
+  while (1) {
+   if (($image_number$0 | 0) >= ($sub$ptr$div$i | 0)) break;
+   $6 = HEAP32[$bitmaps >> 2] | 0;
+   $arrayidx$i = $6 + ($image_number$0 * 28 | 0) | 0;
+   if ((HEAP32[$6 + ($image_number$0 * 28 | 0) + 8 >> 2] | 0) >= 1) if ((HEAP32[$6 + ($image_number$0 * 28 | 0) + 12 >> 2] | 0) >= 1) {
+    __ZN2Dr17TraceImageOutlineERK8DrBitmap($one_poly, $arrayidx$i);
+    $add = 1.0 / +(HEAP32[$width15 >> 2] | 0) + 1.0;
+    $add20 = 1.0 / +(HEAP32[$height17 >> 2] | 0) + 1.0;
+    $12 = HEAP32[$__end_$i69 >> 2] | 0;
+    $__begin$sroa$0$0 = HEAP32[$one_poly >> 2] | 0;
+    while (1) {
+     if (($__begin$sroa$0$0 | 0) == ($12 | 0)) break;
+     $conv34 = +(__ZN6DrRect4leftEv((HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0) | 0);
+     HEAPF64[$__begin$sroa$0$0 >> 3] = +HEAPF64[$__begin$sroa$0$0 >> 3] + $conv34;
+     $conv40 = +(__ZN6DrRect3topEv((HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0) | 0);
+     $y = $__begin$sroa$0$0 + 8 | 0;
+     $add41 = +HEAPF64[$y >> 3] + $conv40;
+     HEAPF64[$__begin$sroa$0$0 >> 3] = $add * +HEAPF64[$__begin$sroa$0$0 >> 3];
+     HEAPF64[$y >> 3] = $add20 * $add41;
+     $__begin$sroa$0$0 = $__begin$sroa$0$0 + 16 | 0;
+    }
+    $13 = HEAP32[$__end_$i69 >> 2] | 0;
+    $14 = HEAP32[$one_poly >> 2] | 0;
+    if ($13 - $14 >> 4 >>> 0 > 3) {
+     $add$ptr$i = $13 + -16 | 0;
+     HEAP32[$__end_$i69 >> 2] = $add$ptr$i;
+     $21 = $add$ptr$i;
+     if ($21 - $14 >> 4 >>> 0 > 10) {
+      __ZN6DrMesh12smoothPointsERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEidd($ref$tmp, $one_poly, 5, 20.0, 1.0);
+      HEAP8[$agg$tmp$i98$byval_copy >> 0] = HEAP8[$agg$tmp$i110 >> 0] | 0;
+      __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__move_assignERS4_NS_17integral_constantIbLb1EEE($one_poly, $ref$tmp, $agg$tmp$i98$byval_copy);
+      __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($ref$tmp);
+      __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($ref$tmp, $one_poly, $conv61);
+      HEAP8[$agg$tmp$i98$byval_copy >> 0] = HEAP8[$agg$tmp$i110 >> 0] | 0;
+      __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__move_assignERS4_NS_17integral_constantIbLb1EEE($one_poly, $ref$tmp, $agg$tmp$i98$byval_copy);
+      __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($ref$tmp);
+      $22 = HEAP32[$__end_$i69 >> 2] | 0;
+      $23 = HEAP32[$one_poly >> 2] | 0;
+     } else {
+      $22 = $21;
+      $23 = $14;
+     }
     } else {
-     $x_max$1286 = $x_max$1;
-     $x_min$1285 = $x_min$1;
-     $y_max$1288 = $y_max$1;
-     $y_min$1287 = $y_min$1;
+     $22 = $13;
+     $23 = $14;
+    }
+    if ($22 - $23 >> 4 >>> 0 < 4) {
+     HEAP32[$__end_$i69 >> 2] = $23;
+     __ZN6DrRect7topLeftEv($agg$tmp$i110, (HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0);
+     $25 = HEAP32[$agg$tmp$i110 >> 2] | 0;
+     __ZN6DrRect7topLeftEv($ref$tmp, (HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0);
+     __ZN8DrPointFC2Edd($agg$tmp$i98$byval_copy, +($25 | 0), +(HEAP32[$y82 >> 2] | 0));
+     $28 = HEAP32[$__end_$i69 >> 2] | 0;
+     if ($28 >>> 0 < (HEAP32[$__value_$i$i$i$i100 >> 2] | 0) >>> 0) {
+      HEAP32[$28 >> 2] = HEAP32[$agg$tmp$i98$byval_copy >> 2];
+      HEAP32[$28 + 4 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 4 >> 2];
+      HEAP32[$28 + 8 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 8 >> 2];
+      HEAP32[$28 + 12 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 12 >> 2];
+      HEAP32[$__end_$i69 >> 2] = $28 + 16;
+     } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($one_poly, $agg$tmp$i98$byval_copy);
+     __ZN6DrRect8topRightEv($agg$tmp$i110, (HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0);
+     $31 = HEAP32[$agg$tmp$i110 >> 2] | 0;
+     __ZN6DrRect8topRightEv($ref$tmp, (HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0);
+     __ZN8DrPointFC2Edd($agg$tmp$i98$byval_copy, +($31 | 0), +(HEAP32[$y100 >> 2] | 0));
+     $34 = HEAP32[$__end_$i69 >> 2] | 0;
+     if ($34 >>> 0 < (HEAP32[$__value_$i$i$i$i100 >> 2] | 0) >>> 0) {
+      HEAP32[$34 >> 2] = HEAP32[$agg$tmp$i98$byval_copy >> 2];
+      HEAP32[$34 + 4 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 4 >> 2];
+      HEAP32[$34 + 8 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 8 >> 2];
+      HEAP32[$34 + 12 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 12 >> 2];
+      HEAP32[$__end_$i69 >> 2] = $34 + 16;
+     } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($one_poly, $agg$tmp$i98$byval_copy);
+     __ZN6DrRect11bottomRightEv($agg$tmp$i110, (HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0);
+     $37 = HEAP32[$agg$tmp$i110 >> 2] | 0;
+     __ZN6DrRect11bottomRightEv($ref$tmp, (HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0);
+     __ZN8DrPointFC2Edd($agg$tmp$i98$byval_copy, +($37 | 0), +(HEAP32[$y120 >> 2] | 0));
+     $40 = HEAP32[$__end_$i69 >> 2] | 0;
+     if ($40 >>> 0 < (HEAP32[$__value_$i$i$i$i100 >> 2] | 0) >>> 0) {
+      HEAP32[$40 >> 2] = HEAP32[$agg$tmp$i98$byval_copy >> 2];
+      HEAP32[$40 + 4 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 4 >> 2];
+      HEAP32[$40 + 8 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 8 >> 2];
+      HEAP32[$40 + 12 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 12 >> 2];
+      HEAP32[$__end_$i69 >> 2] = $40 + 16;
+     } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($one_poly, $agg$tmp$i98$byval_copy);
+     __ZN6DrRect10bottomLeftEv($agg$tmp$i110, (HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0);
+     $43 = HEAP32[$agg$tmp$i110 >> 2] | 0;
+     __ZN6DrRect10bottomLeftEv($ref$tmp, (HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0);
+     __ZN8DrPointFC2Edd($agg$tmp$i98$byval_copy, +($43 | 0), +(HEAP32[$y140 >> 2] | 0));
+     $46 = HEAP32[$__end_$i69 >> 2] | 0;
+     if ($46 >>> 0 < (HEAP32[$__value_$i$i$i$i100 >> 2] | 0) >>> 0) {
+      HEAP32[$46 >> 2] = HEAP32[$agg$tmp$i98$byval_copy >> 2];
+      HEAP32[$46 + 4 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 4 >> 2];
+      HEAP32[$46 + 8 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 8 >> 2];
+      HEAP32[$46 + 12 >> 2] = HEAP32[$agg$tmp$i98$byval_copy + 12 >> 2];
+      HEAP32[$__end_$i69 >> 2] = $46 + 16;
+     } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($one_poly, $agg$tmp$i98$byval_copy);
+    }
+    __ZN10DrPolygonF24ensureWindingOrientationERNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE19Winding_Orientation($one_poly, 1);
+    $48 = HEAP32[$__end_$i$i$i >> 2] | 0;
+    if (($48 | 0) == (HEAP32[$__value_$i$i$i$i180 >> 2] | 0)) __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE21__push_back_slow_pathIRKS4_EEvOT_($m_poly_list, $one_poly); else {
+     __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($48, $one_poly);
+     HEAP32[$__end_$i$i$i >> 2] = (HEAP32[$__end_$i$i$i >> 2] | 0) + 12;
+    }
+    __ZN8DrBitmap4copyEv($ref$tmp, $arrayidx$i);
+    __ZN7DrColorC2Ej($agg$tmp, -1);
+    __ZNK8DrBitmap4rectEv($agg$tmp155, $ref$tmp);
+    HEAP8[$agg$tmp$i98$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
+    HEAP8[$agg$tmp$i98$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
+    HEAP8[$agg$tmp$i98$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
+    HEAP8[$agg$tmp$i98$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
+    __ZN2Dr10FillBorderER8DrBitmap7DrColor6DrRect($ref$tmp, $agg$tmp$i98$byval_copy, $agg$tmp155);
+    HEAP32[$hole_images >> 2] = 0;
+    HEAP32[$__end_$i$i177 >> 2] = 0;
+    HEAP32[$__value_$i$i$i$i178 >> 2] = 0;
+    HEAP32[$hole_rects >> 2] = 0;
+    HEAP32[$__end_$i$i174 >> 2] = 0;
+    HEAP32[$__value_$i$i$i$i175 >> 2] = 0;
+    __ZN2Dr19FindObjectsInBitmapERK8DrBitmapRNSt3__26vectorIS0_NS3_9allocatorIS0_EEEERNS4_I6DrRectNS5_IS9_EEEEdb($ref$tmp, $hole_images, $hole_rects, .875, 0) | 0;
+    HEAP32[$hole_list >> 2] = 0;
+    HEAP32[$__end_$i$i171 >> 2] = 0;
+    HEAP32[$__value_$i$i$i$i172 >> 2] = 0;
+    $hole_number$0 = 0;
+    while (1) {
+     $52 = HEAP32[$hole_images >> 2] | 0;
+     $53 = $52;
+     if (($hole_number$0 | 0) >= (((HEAP32[$__end_$i$i177 >> 2] | 0) - $52 | 0) / 28 | 0 | 0)) break;
+     $arrayidx$i146 = $53 + ($hole_number$0 * 28 | 0) | 0;
+     if ((HEAP32[$53 + ($hole_number$0 * 28 | 0) + 8 >> 2] | 0) >= 1) if ((HEAP32[$53 + ($hole_number$0 * 28 | 0) + 12 >> 2] | 0) >= 1) {
+      __ZN2Dr17TraceImageOutlineERK8DrBitmap($one_hole, $arrayidx$i146);
+      $60 = HEAP32[$__end_$i143 >> 2] | 0;
+      $__begin179$sroa$0$0 = HEAP32[$one_hole >> 2] | 0;
+      while (1) {
+       if (($__begin179$sroa$0$0 | 0) == ($60 | 0)) break;
+       $call195 = __ZN6DrRect4leftEv((HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0) | 0;
+       $conv201 = +((__ZN6DrRect4leftEv((HEAP32[$hole_rects >> 2] | 0) + ($hole_number$0 << 4) | 0) | 0) + $call195 | 0);
+       HEAPF64[$__begin179$sroa$0$0 >> 3] = +HEAPF64[$__begin179$sroa$0$0 >> 3] + $conv201;
+       $call207 = __ZN6DrRect3topEv((HEAP32[$rects >> 2] | 0) + ($image_number$0 << 4) | 0) | 0;
+       $conv213 = +((__ZN6DrRect3topEv((HEAP32[$hole_rects >> 2] | 0) + ($hole_number$0 << 4) | 0) | 0) + $call207 | 0);
+       $y214 = $__begin179$sroa$0$0 + 8 | 0;
+       HEAPF64[$y214 >> 3] = +HEAPF64[$y214 >> 3] + $conv213;
+       $__begin179$sroa$0$0 = $__begin179$sroa$0$0 + 16 | 0;
+      }
+      $61 = HEAP32[$__end_$i143 >> 2] | 0;
+      $62 = HEAP32[$one_hole >> 2] | 0;
+      if ($61 - $62 >> 4 >>> 0 > 3) {
+       $add$ptr$i125 = $61 + -16 | 0;
+       HEAP32[$__end_$i143 >> 2] = $add$ptr$i125;
+       $70 = $add$ptr$i125;
+       if ($70 - $62 >> 4 >>> 0 > 10) {
+        __ZN6DrMesh12smoothPointsERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEidd($ref$tmp232, $one_hole, 5, 30.0, 1.0);
+        HEAP8[$agg$tmp$i98$byval_copy >> 0] = HEAP8[$agg$tmp$i110 >> 0] | 0;
+        __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__move_assignERS4_NS_17integral_constantIbLb1EEE($one_hole, $ref$tmp232, $agg$tmp$i98$byval_copy);
+        __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($ref$tmp232);
+        __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($ref$tmp232, $one_hole, $conv61);
+        HEAP8[$agg$tmp$i98$byval_copy >> 0] = HEAP8[$agg$tmp$i110 >> 0] | 0;
+        __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__move_assignERS4_NS_17integral_constantIbLb1EEE($one_hole, $ref$tmp232, $agg$tmp$i98$byval_copy);
+        __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($ref$tmp232);
+        $71 = HEAP32[$__end_$i143 >> 2] | 0;
+        $72 = HEAP32[$one_hole >> 2] | 0;
+       } else {
+        $71 = $70;
+        $72 = $62;
+       }
+      } else {
+       $71 = $61;
+       $72 = $62;
+      }
+      do if ($71 - $72 >> 4 >>> 0 > 3) {
+       __ZN10DrPolygonF24ensureWindingOrientationERNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE19Winding_Orientation($one_hole, 0);
+       $73 = HEAP32[$__end_$i$i171 >> 2] | 0;
+       if (($73 | 0) == (HEAP32[$__value_$i$i$i$i172 >> 2] | 0)) {
+        __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE21__push_back_slow_pathIRKS4_EEvOT_($hole_list, $one_hole);
+        break;
+       } else {
+        __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($73, $one_hole);
+        HEAP32[$__end_$i$i171 >> 2] = (HEAP32[$__end_$i$i171 >> 2] | 0) + 12;
+        break;
+       }
+      } while (0);
+      __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($one_hole);
+     }
+     $hole_number$0 = $hole_number$0 + 1 | 0;
+    }
+    $54 = HEAP32[$__end_$i$i$i58 >> 2] | 0;
+    if (($54 | 0) == (HEAP32[$__value_$i$i$i$i148 >> 2] | 0)) __ZNSt3__26vectorINS0_INS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEEENS2_IS6_EEE21__push_back_slow_pathIRKS6_EEvOT_($m_hole_list, $hole_list); else {
+     __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEEC2ERKS6_($54, $hole_list);
+     HEAP32[$__end_$i$i$i58 >> 2] = (HEAP32[$__end_$i$i$i58 >> 2] | 0) + 12;
+    }
+    __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($hole_list);
+    __ZNSt3__213__vector_baseI6DrRectNS_9allocatorIS1_EEED2Ev($hole_rects);
+    __ZNSt3__213__vector_baseI8DrBitmapNS_9allocatorIS1_EEED2Ev($hole_images);
+    __ZN8DrBitmapD2Ev($ref$tmp);
+    __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($one_poly);
+   }
+   $image_number$0 = $image_number$0 + 1 | 0;
+  }
+  HEAP8[$this + 64 >> 0] = 0;
+  HEAP8[$this + 65 >> 0] = 1;
+ }
+ __ZNSt3__213__vector_baseI6DrRectNS_9allocatorIS1_EEED2Ev($rects);
+ __ZNSt3__213__vector_baseI8DrBitmapNS_9allocatorIS1_EEED2Ev($bitmaps);
+ STACKTOP = sp;
+ return;
+}
+
+function __ZN10DelaunatorC2ERKNSt3__26vectorIdNS0_9allocatorIdEEEE($this, $in_coords) {
+ $this = $this | 0;
+ $in_coords = $in_coords | 0;
+ var $10 = 0, $101 = 0, $105 = 0, $107 = 0, $109 = 0, $11 = 0.0, $114 = 0, $119 = 0, $12 = 0.0, $120 = 0, $123 = 0, $13 = 0, $17 = 0, $18 = 0.0, $19 = 0.0, $21 = 0, $25 = 0, $29 = 0, $3 = 0, $30 = 0.0, $31 = 0.0, $37 = 0, $38 = 0, $39 = 0, $4 = 0.0, $40 = 0, $43 = 0, $45 = 0, $49 = 0, $5 = 0.0, $54 = 0, $56 = 0, $58 = 0, $59 = 0, $6 = 0, $60 = 0, $66 = 0, $68 = 0, $69 = 0.0, $70 = 0.0, $71 = 0, $73 = 0, $77 = 0, $79 = 0, $81 = 0, $9 = 0, $90 = 0, $91 = 0, $93 = 0, $94 = 0, $96 = 0, $__begin$sroa$0$0 = 0, $__end_$i = 0, $__end_$i$i237 = 0, $__end_$i$i261 = 0, $__end_$i$i383 = 0, $__n$addr$0$i$i$i$i = 0, $__value_$i$i$i$i262 = 0, $__value_$i$i$i$i384 = 0, $agg$tmp1$sroa$0$0$i$i$i = 0, $agg$tmp209409 = 0, $call131 = 0.0, $call160 = 0, $call194 = 0.0, $call266 = 0, $call271 = 0, $call276 = 0, $call331 = 0, $call342 = 0, $call398 = 0, $call401 = 0, $call448 = 0, $call48 = 0.0, $call490 = 0, $call518 = 0, $call532 = 0, $call89 = 0.0, $cmp49 = 0, $dists = 0, $div = 0.0, $div30 = 0.0, $e$0 = 0, $e$2 = 0, $e$3 = 0, $exception = 0, $halfedges = 0, $hull_next = 0, $hull_prev = 0, $hull_start = 0, $hull_tri = 0, $i0$0 = 0, $i1$0 = 0, $i1$1 = 0, $i111$0 = 0, $i2$0 = 0, $i2$1 = 0, $i32$0 = 0, $i69$0 = 0, $ids = 0, $j$0 = 0, $k$0 = 0, $m_center_x = 0, $m_center_y = 0, $m_hash = 0, $m_hash_size = 0, $max_x$0 = 0.0, $max_y$0 = 0.0, $min_dist$0 = 0.0, $min_dist$2 = 0.0, $min_dist$4 = 0.0, $min_radius$0 = 0.0, $min_radius$2 = 0.0, $min_x$0 = 0.0, $min_y$0 = 0.0, $mul = 0, $mul100 = 0, $mul121 = 0, $mul149 = 0, $mul182 = 0, $mul302 = 0, $mul365 = 0, $mul374 = 0, $mul38 = 0, $mul418 = 0, $mul427 = 0, $mul463 = 0, $mul472 = 0, $mul523 = 0, $mul58 = 0, $mul79 = 0, $next$0 = 0, $or$cond = 0, $shr = 0, $spec$select472 = 0.0, $spec$select473 = 0.0, $spec$select474 = 0.0, $spec$select475 = 0.0, $spec$select476 = 0, $spec$select477 = 0, $spec$select478 = 0, $start$0 = 0, $start$1 = 0, $storemerge = 0, $sub$ptr$div$i = 0, $triangles = 0, $xp$0 = 0.0, $xp$1 = 0.0, $yp$0 = 0.0, $yp$1 = 0.0, dest = 0, label = 0, sp = 0, stop = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 48 | 0;
+ $agg$tmp209409 = sp;
+ $ids = sp + 28 | 0;
+ $dists = sp + 16 | 0;
+ HEAP32[$this >> 2] = $in_coords;
+ $triangles = $this + 4 | 0;
+ $halfedges = $this + 16 | 0;
+ $hull_prev = $this + 28 | 0;
+ $hull_next = $this + 40 | 0;
+ $hull_tri = $this + 52 | 0;
+ $hull_start = $this + 64 | 0;
+ $m_hash = $this + 68 | 0;
+ $__end_$i$i237 = $this + 72 | 0;
+ $m_center_x = $this + 80 | 0;
+ $m_center_y = $this + 88 | 0;
+ $m_hash_size = $this + 96 | 0;
+ $__end_$i = $in_coords + 4 | 0;
+ dest = $triangles;
+ stop = dest + 108 | 0;
+ do {
+  HEAP32[dest >> 2] = 0;
+  dest = dest + 4 | 0;
+ } while ((dest | 0) < (stop | 0));
+ $sub$ptr$div$i = (HEAP32[$__end_$i >> 2] | 0) - (HEAP32[$in_coords >> 2] | 0) >> 3;
+ $shr = $sub$ptr$div$i >>> 1;
+ HEAP32[$ids >> 2] = 0;
+ $__end_$i$i261 = $ids + 4 | 0;
+ HEAP32[$__end_$i$i261 >> 2] = 0;
+ $__value_$i$i$i$i262 = $ids + 8 | 0;
+ HEAP32[$__value_$i$i$i$i262 >> 2] = 0;
+ __ZNSt3__26vectorImNS_9allocatorImEEE7reserveEm($ids, $shr);
+ $max_x$0 = 2.2250738585072014e-308;
+ $max_y$0 = 2.2250738585072014e-308;
+ $min_x$0 = 1797693134862315708145274.0e284;
+ $min_y$0 = 1797693134862315708145274.0e284;
+ $storemerge = 0;
+ while (1) {
+  HEAP32[$agg$tmp209409 >> 2] = $storemerge;
+  if ($storemerge >>> 0 >= $shr >>> 0) break;
+  $mul = $storemerge << 1;
+  $3 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+  $4 = +HEAPF64[$3 + ($mul << 3) >> 3];
+  $5 = +HEAPF64[$3 + (($mul | 1) << 3) >> 3];
+  $6 = HEAP32[$__end_$i$i261 >> 2] | 0;
+  if (($6 | 0) == (HEAP32[$__value_$i$i$i$i262 >> 2] | 0)) __ZNSt3__26vectorImNS_9allocatorImEEE21__push_back_slow_pathIRKmEEvOT_($ids, $agg$tmp209409); else {
+   HEAP32[$6 >> 2] = $storemerge;
+   HEAP32[$__end_$i$i261 >> 2] = $6 + 4;
+  }
+  $max_x$0 = $4 > $max_x$0 ? $4 : $max_x$0;
+  $max_y$0 = $5 > $max_y$0 ? $5 : $max_y$0;
+  $min_x$0 = $4 < $min_x$0 ? $4 : $min_x$0;
+  $min_y$0 = $5 < $min_y$0 ? $5 : $min_y$0;
+  $storemerge = (HEAP32[$agg$tmp209409 >> 2] | 0) + 1 | 0;
+ }
+ $div = ($min_x$0 + $max_x$0) * .5;
+ $div30 = ($min_y$0 + $max_y$0) * .5;
+ $i0$0 = -1;
+ $i32$0 = 0;
+ $min_dist$0 = 1797693134862315708145274.0e284;
+ while (1) {
+  $9 = HEAP32[$this >> 2] | 0;
+  if (($i32$0 | 0) == ($shr | 0)) break;
+  $mul38 = $i32$0 << 1;
+  $13 = HEAP32[$9 >> 2] | 0;
+  $call48 = +__Z4distdddd($div, $div30, +HEAPF64[$13 + ($mul38 << 3) >> 3], +HEAPF64[$13 + (($mul38 | 1) << 3) >> 3]);
+  $cmp49 = $call48 < $min_dist$0;
+  $i0$0 = $cmp49 ? $i32$0 : $i0$0;
+  $i32$0 = $i32$0 + 1 | 0;
+  $min_dist$0 = $cmp49 ? $call48 : $min_dist$0;
+ }
+ $mul58 = $i0$0 << 1;
+ $10 = HEAP32[$9 >> 2] | 0;
+ $11 = +HEAPF64[$10 + ($mul58 << 3) >> 3];
+ $12 = +HEAPF64[$10 + (($mul58 | 1) << 3) >> 3];
+ $i1$0 = -1;
+ $i69$0 = 0;
+ $min_dist$2 = 1797693134862315708145274.0e284;
+ while (1) {
+  if (($i69$0 | 0) == ($shr | 0)) break;
+  if (($i69$0 | 0) == ($i0$0 | 0)) {
+   $i1$1 = $i1$0;
+   $min_dist$4 = $min_dist$2;
+  } else {
+   $mul79 = $i69$0 << 1;
+   $21 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+   $call89 = +__Z4distdddd($11, $12, +HEAPF64[$21 + ($mul79 << 3) >> 3], +HEAPF64[$21 + (($mul79 | 1) << 3) >> 3]);
+   $or$cond = $call89 < $min_dist$2 & $call89 > 0.0;
+   $i1$1 = $or$cond ? $i69$0 : $i1$0;
+   $min_dist$4 = $or$cond ? $call89 : $min_dist$2;
+  }
+  $i1$0 = $i1$1;
+  $i69$0 = $i69$0 + 1 | 0;
+  $min_dist$2 = $min_dist$4;
+ }
+ $mul100 = $i1$0 << 1;
+ $17 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+ $18 = +HEAPF64[$17 + ($mul100 << 3) >> 3];
+ $19 = +HEAPF64[$17 + (($mul100 | 1) << 3) >> 3];
+ $i111$0 = 0;
+ $i2$0 = -1;
+ $min_radius$0 = 1797693134862315708145274.0e284;
+ while (1) {
+  if (($i111$0 | 0) == ($shr | 0)) break;
+  if (($i111$0 | 0) == ($i0$0 | 0) | ($i111$0 | 0) == ($i1$0 | 0)) {
+   $i2$1 = $i2$0;
+   $min_radius$2 = $min_radius$0;
+  } else {
+   $mul121 = $i111$0 << 1;
+   $25 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+   $call131 = +__Z12circumradiusdddddd($11, $12, $18, $19, +HEAPF64[$25 + ($mul121 << 3) >> 3], +HEAPF64[$25 + (($mul121 | 1) << 3) >> 3]);
+   if ($call131 < $min_radius$0) {
+    $i2$1 = $i111$0;
+    $min_radius$2 = $call131;
+   } else {
+    $i2$1 = $i2$0;
+    $min_radius$2 = $min_radius$0;
+   }
+  }
+  $i111$0 = $i111$0 + 1 | 0;
+  $i2$0 = $i2$1;
+  $min_radius$0 = $min_radius$2;
+ }
+ if (!($min_radius$0 < 1797693134862315708145274.0e284)) {
+  $exception = ___cxa_allocate_exception(8) | 0;
+  __ZNSt13runtime_errorC2EPKc($exception, 45697);
+  ___cxa_throw($exception | 0, 12496, 86);
+ }
+ $mul149 = $i2$0 << 1;
+ $29 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+ $30 = +HEAPF64[$29 + ($mul149 << 3) >> 3];
+ $31 = +HEAPF64[$29 + (($mul149 | 1) << 3) >> 3];
+ $call160 = __Z6orientdddddd($11, $12, $18, $19, $30, $31) | 0;
+ $spec$select472 = $call160 ? $19 : $31;
+ $spec$select473 = $call160 ? $18 : $30;
+ $spec$select474 = $call160 ? $31 : $19;
+ $spec$select475 = $call160 ? $30 : $18;
+ $spec$select476 = $call160 ? $i1$0 : $i2$0;
+ $spec$select477 = $call160 ? $i2$0 : $i1$0;
+ __Z12circumcenterdddddd($agg$tmp209409, $11, $12, $spec$select475, $spec$select474, $spec$select473, $spec$select472);
+ HEAPF64[$m_center_x >> 3] = +HEAPF64[$agg$tmp209409 >> 3];
+ HEAPF64[$m_center_y >> 3] = +HEAPF64[$agg$tmp209409 + 8 >> 3];
+ HEAP32[$dists >> 2] = 0;
+ $__end_$i$i383 = $dists + 4 | 0;
+ HEAP32[$__end_$i$i383 >> 2] = 0;
+ $__value_$i$i$i$i384 = $dists + 8 | 0;
+ HEAP32[$__value_$i$i$i$i384 >> 2] = 0;
+ __ZNSt3__26vectorIdNS_9allocatorIdEEE7reserveEm($dists, (HEAP32[$__end_$i$i261 >> 2] | 0) - (HEAP32[$ids >> 2] | 0) >> 2);
+ $37 = HEAP32[$__end_$i$i261 >> 2] | 0;
+ $__begin$sroa$0$0 = HEAP32[$ids >> 2] | 0;
+ while (1) {
+  if (($__begin$sroa$0$0 | 0) == ($37 | 0)) break;
+  $mul182 = HEAP32[$__begin$sroa$0$0 >> 2] << 1;
+  $49 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+  $call194 = +__Z4distdddd(+HEAPF64[$49 + ($mul182 << 3) >> 3], +HEAPF64[$49 + (($mul182 | 1) << 3) >> 3], +HEAPF64[$m_center_x >> 3], +HEAPF64[$m_center_y >> 3]);
+  HEAPF64[$agg$tmp209409 >> 3] = $call194;
+  $54 = HEAP32[$__end_$i$i383 >> 2] | 0;
+  if (($54 | 0) == (HEAP32[$__value_$i$i$i$i384 >> 2] | 0)) __ZNSt3__26vectorIdNS_9allocatorIdEEE21__push_back_slow_pathIRKdEEvOT_($dists, $agg$tmp209409); else {
+   HEAPF64[$54 >> 3] = $call194;
+   HEAP32[$__end_$i$i383 >> 2] = $54 + 8;
+  }
+  $__begin$sroa$0$0 = $__begin$sroa$0$0 + 4 | 0;
+ }
+ $38 = HEAP32[$ids >> 2] | 0;
+ $39 = HEAP32[$__end_$i$i261 >> 2] | 0;
+ $40 = HEAP32[$this >> 2] | 0;
+ HEAP32[$agg$tmp209409 >> 2] = $dists;
+ HEAP32[$agg$tmp209409 + 4 >> 2] = $40;
+ __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($38, $39, $agg$tmp209409);
+ $43 = _llround(+Math_ceil(+(+Math_sqrt(+(+($shr >>> 0)))))) | 0;
+ getTempRet0() | 0;
+ HEAP32[$m_hash_size >> 2] = $43;
+ __ZNSt3__26vectorImNS_9allocatorImEEE6resizeEm($m_hash, $43);
+ $45 = HEAP32[$m_hash >> 2] | 0;
+ $__n$addr$0$i$i$i$i = (HEAP32[$__end_$i$i237 >> 2] | 0) - $45 >> 2;
+ $agg$tmp1$sroa$0$0$i$i$i = $45;
+ while (1) {
+  if (($__n$addr$0$i$i$i$i | 0) <= 0) break;
+  $56 = $agg$tmp1$sroa$0$0$i$i$i;
+  HEAP32[$56 >> 2] = -1;
+  $__n$addr$0$i$i$i$i = $__n$addr$0$i$i$i$i + -1 | 0;
+  $agg$tmp1$sroa$0$0$i$i$i = $56 + 4 | 0;
+ }
+ __ZNSt3__26vectorImNS_9allocatorImEEE6resizeEm($hull_prev, $shr);
+ __ZNSt3__26vectorImNS_9allocatorImEEE6resizeEm($hull_next, $shr);
+ __ZNSt3__26vectorImNS_9allocatorImEEE6resizeEm($hull_tri, $shr);
+ HEAP32[$hull_start >> 2] = $i0$0;
+ $58 = HEAP32[$hull_prev >> 2] | 0;
+ HEAP32[$58 + ($spec$select476 << 2) >> 2] = $spec$select477;
+ $59 = HEAP32[$hull_next >> 2] | 0;
+ HEAP32[$59 + ($i0$0 << 2) >> 2] = $spec$select477;
+ HEAP32[$58 + ($i0$0 << 2) >> 2] = $spec$select476;
+ HEAP32[$59 + ($spec$select477 << 2) >> 2] = $spec$select476;
+ HEAP32[$58 + ($spec$select477 << 2) >> 2] = $i0$0;
+ HEAP32[$59 + ($spec$select476 << 2) >> 2] = $i0$0;
+ $60 = HEAP32[$hull_tri >> 2] | 0;
+ HEAP32[$60 + ($i0$0 << 2) >> 2] = 0;
+ HEAP32[$60 + ($spec$select477 << 2) >> 2] = 1;
+ HEAP32[$60 + ($spec$select476 << 2) >> 2] = 2;
+ $call266 = __ZNK10Delaunator8hash_keyEdd($this, $11, $12) | 0;
+ HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call266 << 2) >> 2] = $i0$0;
+ $call271 = __ZNK10Delaunator8hash_keyEdd($this, $spec$select475, $spec$select474) | 0;
+ HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call271 << 2) >> 2] = $spec$select477;
+ $call276 = __ZNK10Delaunator8hash_keyEdd($this, $spec$select473, $spec$select472) | 0;
+ HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call276 << 2) >> 2] = $spec$select476;
+ $spec$select478 = $sub$ptr$div$i >>> 0 < 6 ? 3 : (($sub$ptr$div$i & -2) * 3 | 0) + -15 | 0;
+ __ZNSt3__26vectorImNS_9allocatorImEEE7reserveEm($triangles, $spec$select478);
+ __ZNSt3__26vectorImNS_9allocatorImEEE7reserveEm($halfedges, $spec$select478);
+ __ZN10Delaunator12add_triangleEmmmmmm($this, $i0$0, $spec$select477, $spec$select476, -1, -1, -1) | 0;
+ $k$0 = 0;
+ $xp$0 = nan;
+ $yp$0 = nan;
+ while (1) {
+  if ($k$0 >>> 0 >= $shr >>> 0) break;
+  $66 = HEAP32[(HEAP32[$ids >> 2] | 0) + ($k$0 << 2) >> 2] | 0;
+  $mul302 = $66 << 1;
+  $68 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+  $69 = +HEAPF64[$68 + ($mul302 << 3) >> 3];
+  $70 = +HEAPF64[$68 + (($mul302 | 1) << 3) >> 3];
+  if (!$k$0) label = 37; else if (__Z15check_pts_equaldddd($69, $70, $xp$0, $yp$0) | 0) {
+   $xp$1 = $xp$0;
+   $yp$1 = $yp$0;
+  } else label = 37;
+  L48 : do if ((label | 0) == 37) {
+   label = 0;
+   if (__Z15check_pts_equaldddd($69, $70, $11, $12) | 0) {
+    $xp$1 = $69;
+    $yp$1 = $70;
+   } else if (__Z15check_pts_equaldddd($69, $70, $spec$select475, $spec$select474) | 0) {
+    $xp$1 = $69;
+    $yp$1 = $70;
+   } else if (__Z15check_pts_equaldddd($69, $70, $spec$select473, $spec$select472) | 0) {
+    $xp$1 = $69;
+    $yp$1 = $70;
+   } else {
+    $call331 = __ZNK10Delaunator8hash_keyEdd($this, $69, $70) | 0;
+    $j$0 = 0;
+    $start$0 = 0;
+    while (1) {
+     $71 = HEAP32[$m_hash_size >> 2] | 0;
+     if ($j$0 >>> 0 >= $71 >>> 0) {
+      $start$1 = $start$0;
+      break;
+     }
+     $call342 = __Z8fast_modmm($j$0 + $call331 | 0, $71) | 0;
+     $73 = HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call342 << 2) >> 2] | 0;
+     if (($73 | 0) != -1) if (($73 | 0) != (HEAP32[(HEAP32[$hull_next >> 2] | 0) + ($73 << 2) >> 2] | 0)) {
+      $start$1 = $73;
+      break;
+     }
+     $j$0 = $j$0 + 1 | 0;
+     $start$0 = $73;
+    }
+    $77 = HEAP32[(HEAP32[$hull_prev >> 2] | 0) + ($start$1 << 2) >> 2] | 0;
+    $e$0 = $77;
+    while (1) {
+     $79 = HEAP32[(HEAP32[$hull_next >> 2] | 0) + ($e$0 << 2) >> 2] | 0;
+     $mul365 = $e$0 << 1;
+     $81 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+     $mul374 = $79 << 1;
+     if (__Z6orientdddddd($69, $70, +HEAPF64[$81 + ($mul365 << 3) >> 3], +HEAPF64[$81 + (($mul365 | 1) << 3) >> 3], +HEAPF64[$81 + ($mul374 << 3) >> 3], +HEAPF64[$81 + (($mul374 | 1) << 3) >> 3]) | 0) break;
+     if (($79 | 0) == ($77 | 0)) {
+      $xp$1 = $69;
+      $yp$1 = $70;
+      break L48;
+     } else $e$0 = $79;
+    }
+    if (($e$0 | 0) == -1) {
+     $xp$1 = $69;
+     $yp$1 = $70;
+    } else {
+     $call398 = __ZN10Delaunator12add_triangleEmmmmmm($this, $e$0, $66, HEAP32[(HEAP32[$hull_next >> 2] | 0) + ($e$0 << 2) >> 2] | 0, -1, -1, HEAP32[(HEAP32[$hull_tri >> 2] | 0) + ($e$0 << 2) >> 2] | 0) | 0;
+     $call401 = __ZN10Delaunator8legalizeEm($this, $call398 + 2 | 0) | 0;
+     $90 = HEAP32[$hull_tri >> 2] | 0;
+     HEAP32[$90 + ($66 << 2) >> 2] = $call401;
+     HEAP32[$90 + ($e$0 << 2) >> 2] = $call398;
+     $91 = HEAP32[$hull_next >> 2] | 0;
+     $93 = $91;
+     $next$0 = HEAP32[$91 + ($e$0 << 2) >> 2] | 0;
+     while (1) {
+      $94 = HEAP32[$93 + ($next$0 << 2) >> 2] | 0;
+      $mul418 = $next$0 << 1;
+      $96 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+      $mul427 = $94 << 1;
+      if (!(__Z6orientdddddd($69, $70, +HEAPF64[$96 + ($mul418 << 3) >> 3], +HEAPF64[$96 + (($mul418 | 1) << 3) >> 3], +HEAPF64[$96 + ($mul427 << 3) >> 3], +HEAPF64[$96 + (($mul427 | 1) << 3) >> 3]) | 0)) break;
+      $101 = HEAP32[$hull_tri >> 2] | 0;
+      $call448 = __ZN10Delaunator8legalizeEm($this, (__ZN10Delaunator12add_triangleEmmmmmm($this, $next$0, $66, $94, HEAP32[$101 + ($66 << 2) >> 2] | 0, -1, HEAP32[$101 + ($next$0 << 2) >> 2] | 0) | 0) + 2 | 0) | 0;
+      HEAP32[(HEAP32[$hull_tri >> 2] | 0) + ($66 << 2) >> 2] = $call448;
+      $105 = HEAP32[$hull_next >> 2] | 0;
+      HEAP32[$105 + ($next$0 << 2) >> 2] = $next$0;
+      $93 = $105;
+      $next$0 = $94;
+     }
+     L69 : do if (($e$0 | 0) == ($77 | 0)) {
+      $e$2 = $77;
+      while (1) {
+       $107 = HEAP32[(HEAP32[$hull_prev >> 2] | 0) + ($e$2 << 2) >> 2] | 0;
+       $mul463 = $107 << 1;
+       $109 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+       $mul472 = $e$2 << 1;
+       if (!(__Z6orientdddddd($69, $70, +HEAPF64[$109 + ($mul463 << 3) >> 3], +HEAPF64[$109 + (($mul463 | 1) << 3) >> 3], +HEAPF64[$109 + ($mul472 << 3) >> 3], +HEAPF64[$109 + (($mul472 | 1) << 3) >> 3]) | 0)) {
+        $e$3 = $e$2;
+        break L69;
+       }
+       $114 = HEAP32[$hull_tri >> 2] | 0;
+       $call490 = __ZN10Delaunator12add_triangleEmmmmmm($this, $107, $66, $e$2, -1, HEAP32[$114 + ($e$2 << 2) >> 2] | 0, HEAP32[$114 + ($107 << 2) >> 2] | 0) | 0;
+       __ZN10Delaunator8legalizeEm($this, $call490 + 2 | 0) | 0;
+       HEAP32[(HEAP32[$hull_tri >> 2] | 0) + ($107 << 2) >> 2] = $call490;
+       HEAP32[(HEAP32[$hull_next >> 2] | 0) + ($e$2 << 2) >> 2] = $e$2;
+       $e$2 = $107;
+      }
+     } else $e$3 = $e$0; while (0);
+     $119 = HEAP32[$hull_prev >> 2] | 0;
+     HEAP32[$119 + ($66 << 2) >> 2] = $e$3;
+     HEAP32[$hull_start >> 2] = $e$3;
+     HEAP32[$119 + ($next$0 << 2) >> 2] = $66;
+     $120 = HEAP32[$hull_next >> 2] | 0;
+     HEAP32[$120 + ($e$3 << 2) >> 2] = $66;
+     HEAP32[$120 + ($66 << 2) >> 2] = $next$0;
+     $call518 = __ZNK10Delaunator8hash_keyEdd($this, $69, $70) | 0;
+     HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call518 << 2) >> 2] = $66;
+     $mul523 = $e$3 << 1;
+     $123 = HEAP32[HEAP32[$this >> 2] >> 2] | 0;
+     $call532 = __ZNK10Delaunator8hash_keyEdd($this, +HEAPF64[$123 + ($mul523 << 3) >> 3], +HEAPF64[$123 + (($mul523 | 1) << 3) >> 3]) | 0;
+     HEAP32[(HEAP32[$m_hash >> 2] | 0) + ($call532 << 2) >> 2] = $e$3;
+     $xp$1 = $69;
+     $yp$1 = $70;
     }
    }
-  } else {
-   $x_max$0$lcssa = $3;
-   $x_min$0$lcssa = $3;
-   $y_max$0$lcssa = $4;
-   $y_min$0$lcssa = $4;
-  }
-  $sub = $x_max$0$lcssa - $x_min$0$lcssa;
-  $sub54 = $y_max$0$lcssa - $y_min$0$lcssa;
-  if ($sub < 50.0) $neighbor_distance$addr$0 = $neighbor_distance / (50.0 / $sub); else if ($sub54 < 50.0) $neighbor_distance$addr$0 = $neighbor_distance / (50.0 / $sub54); else $neighbor_distance$addr$0 = $neighbor_distance;
-  if (($sub$ptr$div$i | 0) <= ($neighbors << 1 | 0)) {
-   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($agg$result, $outline_points);
-   break;
-  }
-  if ($cmp16262) {
-   $y82 = $this_point + 8 | 0;
-   $y224 = $call176$byval_copy + 8 | 0;
-   $cmp112227 = ($neighbors | 0) < 1;
-   $8 = $2;
-   $i70$0251 = 0;
-   do {
-    $arrayidx$i176 = $8 + ($i70$0251 << 4) | 0;
-    HEAP32[$this_point >> 2] = HEAP32[$arrayidx$i176 >> 2];
-    HEAP32[$this_point + 4 >> 2] = HEAP32[$arrayidx$i176 + 4 >> 2];
-    HEAP32[$this_point + 8 >> 2] = HEAP32[$arrayidx$i176 + 8 >> 2];
-    HEAP32[$this_point + 12 >> 2] = HEAP32[$arrayidx$i176 + 12 >> 2];
-    $9 = +HEAPF64[$this_point >> 3];
-    $10 = +HEAPF64[$y82 >> 3];
-    $call85 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $i70$0251) | 0;
-    HEAP32[$start_check_point >> 2] = HEAP32[$call85 >> 2];
-    HEAP32[$start_check_point + 4 >> 2] = HEAP32[$call85 + 4 >> 2];
-    HEAP32[$start_check_point + 8 >> 2] = HEAP32[$call85 + 8 >> 2];
-    HEAP32[$start_check_point + 12 >> 2] = HEAP32[$call85 + 12 >> 2];
-    _memmove($agg$tmp | 0, $call85 | 0, 16) | 0;
-    $sub87 = $i70$0251 + -1 | 0;
-    $call90 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $sub87) | 0;
-    HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
-    HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$agg$tmp + 4 >> 2];
-    HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$agg$tmp + 8 >> 2];
-    HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$agg$tmp + 12 >> 2];
-    HEAP32[$call176$byval_copy >> 2] = HEAP32[$call90 >> 2];
-    HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call90 + 4 >> 2];
-    HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call90 + 8 >> 2];
-    HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call90 + 12 >> 2];
-    $call92 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy);
-    $i70$0251$looptemp = $i70$0251;
-    $i70$0251 = $i70$0251 + 1 | 0;
-    $call97 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $i70$0251) | 0;
-    HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$start_check_point >> 2];
-    HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$start_check_point + 4 >> 2];
-    HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$start_check_point + 8 >> 2];
-    HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$start_check_point + 12 >> 2];
-    HEAP32[$call176$byval_copy >> 2] = HEAP32[$call97 >> 2];
-    HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call97 + 4 >> 2];
-    HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call97 + 8 >> 2];
-    HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call97 + 12 >> 2];
-    do if (!(+__ZN2Dr24DifferenceBetween2AnglesEdd($call92, +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy)) <= 110.0)) {
-     $sub107 = $i70$0251$looptemp - $neighbors | 0;
-     $add108 = $i70$0251$looptemp + $neighbors | 0;
-     L23 : do if ($cmp112227) {
-      $average_from$2283 = $sub107;
-      $average_to$2 = $add108;
-     } else {
-      $j$0229 = $sub87;
-      while (1) {
-       $call117 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j$0229) | 0;
-       HEAP32[$check_point >> 2] = HEAP32[$call117 >> 2];
-       HEAP32[$check_point + 4 >> 2] = HEAP32[$call117 + 4 >> 2];
-       HEAP32[$check_point + 8 >> 2] = HEAP32[$call117 + 8 >> 2];
-       HEAP32[$check_point + 12 >> 2] = HEAP32[$call117 + 12 >> 2];
-       _memmove($agg$tmp118 | 0, $call117 | 0, 16) | 0;
-       $j$0229$looptemp = $j$0229;
-       $j$0229 = $j$0229 + -1 | 0;
-       $call123 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j$0229) | 0;
-       HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$agg$tmp118 >> 2];
-       HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$agg$tmp118 + 4 >> 2];
-       HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$agg$tmp118 + 8 >> 2];
-       HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$agg$tmp118 + 12 >> 2];
-       HEAP32[$call176$byval_copy >> 2] = HEAP32[$call123 >> 2];
-       HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call123 + 4 >> 2];
-       HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call123 + 8 >> 2];
-       HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call123 + 12 >> 2];
-       $call125 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy);
-       $call131 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j$0229$looptemp + 1 | 0) | 0;
-       HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$check_point >> 2];
-       HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$check_point + 4 >> 2];
-       HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$check_point + 8 >> 2];
-       HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$check_point + 12 >> 2];
-       HEAP32[$call176$byval_copy >> 2] = HEAP32[$call131 >> 2];
-       HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call131 + 4 >> 2];
-       HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call131 + 8 >> 2];
-       HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call131 + 12 >> 2];
-       if (+__ZN2Dr24DifferenceBetween2AnglesEdd($call125, +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy)) <= 110.0) {
-        $average_from$2 = $j$0229$looptemp;
-        break;
-       }
-       if (($j$0229$looptemp | 0) <= ($sub107 | 0)) {
-        $average_from$2 = $sub107;
-        break;
-       }
-      }
-      if ($cmp112227) {
-       $average_from$2283 = $average_from$2;
-       $average_to$2 = $add108;
-      } else {
-       $j150$0235 = $i70$0251;
-       while (1) {
-        $call160 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j150$0235) | 0;
-        HEAP32[$check_point >> 2] = HEAP32[$call160 >> 2];
-        HEAP32[$check_point + 4 >> 2] = HEAP32[$call160 + 4 >> 2];
-        HEAP32[$check_point + 8 >> 2] = HEAP32[$call160 + 8 >> 2];
-        HEAP32[$check_point + 12 >> 2] = HEAP32[$call160 + 12 >> 2];
-        _memmove($agg$tmp162 | 0, $call160 | 0, 16) | 0;
-        $call167 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j150$0235 + -1 | 0) | 0;
-        HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$agg$tmp162 >> 2];
-        HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$agg$tmp162 + 4 >> 2];
-        HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$agg$tmp162 + 8 >> 2];
-        HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$agg$tmp162 + 12 >> 2];
-        HEAP32[$call176$byval_copy >> 2] = HEAP32[$call167 >> 2];
-        HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call167 + 4 >> 2];
-        HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call167 + 8 >> 2];
-        HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call167 + 12 >> 2];
-        $call169 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy);
-        $j150$0235$looptemp = $j150$0235;
-        $j150$0235 = $j150$0235 + 1 | 0;
-        $call176 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j150$0235) | 0;
-        HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$check_point >> 2];
-        HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$check_point + 4 >> 2];
-        HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$check_point + 8 >> 2];
-        HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$check_point + 12 >> 2];
-        HEAP32[$call176$byval_copy >> 2] = HEAP32[$call176 >> 2];
-        HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call176 + 4 >> 2];
-        HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call176 + 8 >> 2];
-        HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call176 + 12 >> 2];
-        if (+__ZN2Dr24DifferenceBetween2AnglesEdd($call169, +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy)) <= 110.0) {
-         $average_from$2283 = $average_from$2;
-         $average_to$2 = $j150$0235$looptemp;
-         break L23;
-        }
-        if (($j150$0235$looptemp | 0) >= ($add108 | 0)) {
-         $average_from$2283 = $average_from$2;
-         $average_to$2 = $add108;
-         break;
-        }
-       }
-      }
-     } while (0);
-     if (($average_from$2283 | 0) > ($average_to$2 | 0)) {
-      $total_used$0$lcssa = 1.0;
-      $x79$0$lcssa = $9;
-      $y81$0$lcssa = $10;
-     } else {
-      $j202$0244 = $average_from$2283;
-      $total_used$0241 = 1.0;
-      $x79$0242 = $9;
-      $y81$0243 = $10;
-      while (1) {
-       if (($j202$0244 | 0) == ($i70$0251$looptemp | 0)) {
-        $total_used$2 = $total_used$0241;
-        $x79$2 = $x79$0242;
-        $y81$2 = $y81$0243;
-       } else {
-        $call212 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j202$0244) | 0;
-        HEAP32[$call176$byval_copy >> 2] = HEAP32[$call212 >> 2];
-        HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call212 + 4 >> 2];
-        HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call212 + 8 >> 2];
-        HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call212 + 12 >> 2];
-        if (+__ZNK8DrPointF8distanceERKS_($this_point, $call176$byval_copy) < $neighbor_distance$addr$0) {
-         $sub217 = $j202$0244 - $i70$0251$looptemp | 0;
-         $div219 = 1.0 / +((($sub217 | 0) > -1 ? $sub217 : 0 - $sub217 | 0) | 0);
-         $total_used$1 = $total_used$0241 + $div219 * $weight;
-         $x79$1 = $x79$0242 + $div219 * (+HEAPF64[$call176$byval_copy >> 3] * $weight);
-         $y81$1 = $y81$0243 + $div219 * (+HEAPF64[$y224 >> 3] * $weight);
-        } else {
-         $total_used$1 = $total_used$0241;
-         $x79$1 = $x79$0242;
-         $y81$1 = $y81$0243;
-        }
-        $total_used$2 = $total_used$1;
-        $x79$2 = $x79$1;
-        $y81$2 = $y81$1;
-       }
-       if (($j202$0244 | 0) < ($average_to$2 | 0)) {
-        $j202$0244 = $j202$0244 + 1 | 0;
-        $total_used$0241 = $total_used$2;
-        $x79$0242 = $x79$2;
-        $y81$0243 = $y81$2;
-       } else {
-        $total_used$0$lcssa = $total_used$2;
-        $x79$0$lcssa = $x79$2;
-        $y81$0$lcssa = $y81$2;
-        break;
-       }
-      }
-     }
-     __ZN8DrPointFC2Edd($call176$byval_copy, $x79$0$lcssa / $total_used$0$lcssa, $y81$0$lcssa / $total_used$0$lcssa);
-     $13 = HEAP32[$__end_$i$i >> 2] | 0;
-     if ($13 >>> 0 < (HEAP32[$__value_$i$i$i$i >> 2] | 0) >>> 0) {
-      HEAP32[$13 >> 2] = HEAP32[$call176$byval_copy >> 2];
-      HEAP32[$13 + 4 >> 2] = HEAP32[$call176$byval_copy + 4 >> 2];
-      HEAP32[$13 + 8 >> 2] = HEAP32[$call176$byval_copy + 8 >> 2];
-      HEAP32[$13 + 12 >> 2] = HEAP32[$call176$byval_copy + 12 >> 2];
-      HEAP32[$__end_$i$i >> 2] = $13 + 16;
-     } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($smooth_points, $call176$byval_copy);
-    } else {
-     $11 = HEAP32[$__end_$i$i >> 2] | 0;
-     if (($11 | 0) == (HEAP32[$__value_$i$i$i$i >> 2] | 0)) {
-      __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($smooth_points, $this_point);
-      break;
-     } else {
-      HEAP32[$11 >> 2] = HEAP32[$this_point >> 2];
-      HEAP32[$11 + 4 >> 2] = HEAP32[$this_point + 4 >> 2];
-      HEAP32[$11 + 8 >> 2] = HEAP32[$this_point + 8 >> 2];
-      HEAP32[$11 + 12 >> 2] = HEAP32[$this_point + 12 >> 2];
-      HEAP32[$__end_$i$i >> 2] = $11 + 16;
-      break;
-     }
-    } while (0);
-    $8 = HEAP32[$outline_points >> 2] | 0;
-   } while (($i70$0251 | 0) < ((HEAP32[$__end_$i >> 2] | 0) - $8 >> 4 | 0));
-   $5 = HEAP32[$smooth_points >> 2] | 0;
-   $6 = HEAP32[$__end_$i$i >> 2] | 0;
-   $7 = HEAP32[$__value_$i$i$i$i >> 2] | 0;
-  } else {
-   $5 = 0;
-   $6 = 0;
-   $7 = 0;
-  }
-  HEAP32[$agg$result >> 2] = $5;
-  HEAP32[$agg$result + 4 >> 2] = $6;
-  HEAP32[$agg$result + 8 >> 2] = $7;
-  HEAP32[$__value_$i$i$i$i >> 2] = 0;
-  HEAP32[$__end_$i$i >> 2] = 0;
-  HEAP32[$smooth_points >> 2] = 0;
- } while (0);
- __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($smooth_points);
+  } while (0);
+  $k$0 = $k$0 + 1 | 0;
+  $xp$0 = $xp$1;
+  $yp$0 = $yp$1;
+ }
+ __ZNSt3__213__vector_baseIdNS_9allocatorIdEEED2Ev($dists);
+ __ZNSt3__213__vector_baseImNS_9allocatorImEEED2Ev($ids);
  STACKTOP = sp;
  return;
 }
@@ -15904,6 +14660,590 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  } while (0); else $retval$3 = 0; while (0);
  STACKTOP = sp;
  return $retval$3 | 0;
+}
+
+function __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$result, $bitmap, $at_x, $at_y, $fill_color, $tolerance, $type, $flood_pixel_count, $flood_rect) {
+ $agg$result = $agg$result | 0;
+ $bitmap = $bitmap | 0;
+ $at_x = $at_x | 0;
+ $at_y = $at_y | 0;
+ $fill_color = $fill_color | 0;
+ $tolerance = +$tolerance;
+ $type = $type | 0;
+ $flood_pixel_count = $flood_pixel_count | 0;
+ $flood_rect = $flood_rect | 0;
+ var $$pre313 = 0, $14 = 0, $15 = 0, $2 = 0, $20 = 0, $22 = 0, $26 = 0, $28 = 0, $3 = 0, $33 = 0, $34 = 0, $39 = 0, $4 = 0, $40 = 0, $43 = 0, $45 = 0, $47 = 0, $50 = 0, $6 = 0, $9 = 0, $__begin$sroa$0$0 = 0, $__end_$i$i = 0, $__first$addr$0$i$i$i = 0, $__value_$i$i$i$i = 0, $add = 0, $add$ptr$i = 0, $add$ptr$pn$i = 0, $add137 = 0, $agg$tmp = 0, $agg$tmp218 = 0, $agg$tmp218$byval_copy = 0, $agg$tmp25 = 0, $agg$tmp42 = 0, $agg$tmp46 = 0, $agg$tmp76 = 0, $agg$tmp80 = 0, $agg$tmp84 = 0, $cmp154 = 0, $cmp160 = 0, $cond122 = 0, $cond130 = 0, $cond142 = 0, $flood = 0, $height = 0, $incdec$ptr$i = 0, $it$sroa$0$0 = 0, $it$sroa$0$1$in = 0, $max_x$0 = 0, $max_x$1 = 0, $max_x$2 = 0, $max_x$3 = 0, $max_y$0 = 0, $max_y$1 = 0, $max_y$2 = 0, $max_y$3 = 0, $min_x$0 = 0, $min_x$1 = 0, $min_x$3 = 0, $min_y$0 = 0, $min_y$1 = 0, $min_y$3 = 0, $or$cond152194 = 0, $point$sroa$0$0$copyload = 0, $point$sroa$21$0$copyload = 0, $points = 0, $processed = 0, $processed_some$0$off0 = 0, $processed_some$1$off0 = 0, $processed_some$2$off0 = 0, $processed_some$3$off0 = 0, $processed_some$4$off0 = 0, $spec$select = 0, $spec$select148 = 0, $start_color = 0, $sub111 = 0, $sub114 = 0, $sub127 = 0, $sub133 = 0, $tmp = 0, $tmp199 = 0, $tmp254 = 0, $width = 0, $x$0 = 0, $x143$0 = 0, $y$0 = 0, $y148$0 = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 144 | 0;
+ $agg$tmp218$byval_copy = sp;
+ $flood = sp + 64 | 0;
+ $processed = sp + 36 | 0;
+ $agg$tmp = sp + 96 | 0;
+ $agg$tmp25 = sp + 92 | 0;
+ $start_color = sp + 116 | 0;
+ $agg$tmp42 = sp + 128 | 0;
+ $agg$tmp46 = sp + 124 | 0;
+ $points = sp + 16 | 0;
+ $tmp = sp + 120 | 0;
+ $agg$tmp76 = sp + 32 | 0;
+ $agg$tmp80 = sp + 28 | 0;
+ $agg$tmp84 = sp + 112 | 0;
+ $tmp199 = sp + 108 | 0;
+ $agg$tmp218 = sp + 104 | 0;
+ $tmp254 = sp + 100 | 0;
+ HEAP32[$flood_pixel_count >> 2] = 0;
+ __ZN8DrBitmapC2ERKS_13Bitmap_Format($flood, $bitmap, 4);
+ __ZN8DrBitmapC2ERKS_13Bitmap_Format($processed, $bitmap, 4);
+ __ZN6DrRectC2Eiiii($agg$tmp218$byval_copy, 0, 0, 0, 0);
+ HEAP32[$flood_rect >> 2] = HEAP32[$agg$tmp218$byval_copy >> 2];
+ HEAP32[$flood_rect + 4 >> 2] = HEAP32[$agg$tmp218$byval_copy + 4 >> 2];
+ HEAP32[$flood_rect + 8 >> 2] = HEAP32[$agg$tmp218$byval_copy + 8 >> 2];
+ HEAP32[$flood_rect + 12 >> 2] = HEAP32[$agg$tmp218$byval_copy + 12 >> 2];
+ do if (($at_y | $at_x | 0) < 0) label = 4; else {
+  $width = $bitmap + 8 | 0;
+  $2 = HEAP32[$width >> 2] | 0;
+  if (($2 | 0) > ($at_x | 0)) {
+   $height = $bitmap + 12 | 0;
+   $3 = HEAP32[$height >> 2] | 0;
+   if (($3 | 0) > ($at_y | 0)) {
+    if (($2 | 0) < 1 | ($3 | 0) < 1) {
+     __ZN8DrBitmapC2E13Bitmap_Format($agg$result, 4);
+     break;
+    }
+    if (($2 | 0) == 1 & ($3 | 0) == 1) {
+     $4 = HEAPU8[$fill_color >> 0] | HEAPU8[$fill_color + 1 >> 0] << 8 | HEAPU8[$fill_color + 2 >> 0] << 16 | HEAPU8[$fill_color + 3 >> 0] << 24;
+     HEAP32[$agg$tmp >> 2] = $4;
+     HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
+     HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
+     HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
+     HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
+     __ZN8DrBitmap8setPixelEii7DrColor($bitmap, 0, 0, $agg$tmp218$byval_copy);
+     HEAP32[$agg$tmp25 >> 2] = $4;
+     HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp25 >> 0] | 0;
+     HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp25 + 1 >> 0] | 0;
+     HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp25 + 2 >> 0] | 0;
+     HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp25 + 3 >> 0] | 0;
+     __ZN8DrBitmap8setPixelEii7DrColor($flood, 0, 0, $agg$tmp218$byval_copy);
+     __ZN6DrRectC2Eiiii($agg$tmp218$byval_copy, $at_x, $at_y, 1, 1);
+     HEAP32[$flood_rect >> 2] = HEAP32[$agg$tmp218$byval_copy >> 2];
+     HEAP32[$flood_rect + 4 >> 2] = HEAP32[$agg$tmp218$byval_copy + 4 >> 2];
+     HEAP32[$flood_rect + 8 >> 2] = HEAP32[$agg$tmp218$byval_copy + 8 >> 2];
+     HEAP32[$flood_rect + 12 >> 2] = HEAP32[$agg$tmp218$byval_copy + 12 >> 2];
+     __ZN8DrBitmapC2ERKS_13Bitmap_Format($agg$result, $flood, 4);
+     break;
+    }
+    __ZNK8DrBitmap8getPixelEii($start_color, $bitmap, $at_x, $at_y);
+    $x$0 = 0;
+    while (1) {
+     if (($x$0 | 0) >= (HEAP32[$width >> 2] | 0)) break;
+     $y$0 = 0;
+     while (1) {
+      if (($y$0 | 0) >= (HEAP32[$height >> 2] | 0)) break;
+      __ZN7DrColorC2Ej($agg$tmp42, 0);
+      HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp42 >> 0] | 0;
+      HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp42 + 1 >> 0] | 0;
+      HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp42 + 2 >> 0] | 0;
+      HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp42 + 3 >> 0] | 0;
+      __ZN8DrBitmap8setPixelEii7DrColor($flood, $x$0, $y$0, $agg$tmp218$byval_copy);
+      __ZN7DrColorC2Ej($agg$tmp46, 0);
+      HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp46 >> 0] | 0;
+      HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp46 + 1 >> 0] | 0;
+      HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp46 + 2 >> 0] | 0;
+      HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp46 + 3 >> 0] | 0;
+      __ZN8DrBitmap8setPixelEii7DrColor($processed, $x$0, $y$0, $agg$tmp218$byval_copy);
+      $y$0 = $y$0 + 1 | 0;
+     }
+     $x$0 = $x$0 + 1 | 0;
+    }
+    $__end_$i$i = $points + 4 | 0;
+    $__value_$i$i$i$i = $points + 8 | 0;
+    HEAP32[$points >> 2] = 0;
+    HEAP32[$points + 4 >> 2] = 0;
+    HEAP32[$points + 8 >> 2] = 0;
+    __ZN7DrPointC2Eii($agg$tmp218$byval_copy, $at_x, $at_y);
+    $6 = HEAP32[$__end_$i$i >> 2] | 0;
+    if ($6 >>> 0 < (HEAP32[$__value_$i$i$i$i >> 2] | 0) >>> 0) {
+     $9 = $agg$tmp218$byval_copy;
+     $14 = HEAP32[$9 + 4 >> 2] | 0;
+     $15 = $6;
+     HEAP32[$15 >> 2] = HEAP32[$9 >> 2];
+     HEAP32[$15 + 4 >> 2] = $14;
+     $incdec$ptr$i = (HEAP32[$__end_$i$i >> 2] | 0) + 8 | 0;
+     HEAP32[$__end_$i$i >> 2] = $incdec$ptr$i;
+     $$pre313 = $incdec$ptr$i;
+    } else {
+     __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($points, $agg$tmp218$byval_copy);
+     $$pre313 = HEAP32[$__end_$i$i >> 2] | 0;
+    }
+    $cmp160 = ($type | 0) == 0;
+    $20 = $$pre313;
+    $50 = HEAP32[$points >> 2] | 0;
+    $max_x$0 = $at_x;
+    $max_y$0 = $at_y;
+    $min_x$0 = $at_x;
+    $min_y$0 = $at_y;
+    while (1) {
+     $__begin$sroa$0$0 = $50;
+     $max_x$1 = $max_x$0;
+     $max_y$1 = $max_y$0;
+     $min_x$1 = $min_x$0;
+     $min_y$1 = $min_y$0;
+     $processed_some$0$off0 = 0;
+     while (1) {
+      if (($__begin$sroa$0$0 | 0) == ($20 | 0)) break;
+      $point$sroa$0$0$copyload = HEAP32[$__begin$sroa$0$0 >> 2] | 0;
+      $point$sroa$21$0$copyload = HEAP32[$__begin$sroa$0$0 + 4 >> 2] | 0;
+      __ZNK8DrBitmap8getPixelEii($tmp, $processed, $point$sroa$0$0$copyload, $point$sroa$21$0$copyload);
+      __ZN7DrColorC2Ej($agg$tmp218$byval_copy, 1);
+      L28 : do if (__ZNK7DrColoreqERKS_($tmp, $agg$tmp218$byval_copy) | 0) {
+       $max_x$3 = $max_x$1;
+       $max_y$3 = $max_y$1;
+       $min_x$3 = $min_x$1;
+       $min_y$3 = $min_y$1;
+       $processed_some$4$off0 = $processed_some$0$off0;
+      } else {
+       $22 = HEAPU8[$fill_color >> 0] | HEAPU8[$fill_color + 1 >> 0] << 8 | HEAPU8[$fill_color + 2 >> 0] << 16 | HEAPU8[$fill_color + 3 >> 0] << 24;
+       HEAP32[$agg$tmp76 >> 2] = $22;
+       HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp76 >> 0] | 0;
+       HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp76 + 1 >> 0] | 0;
+       HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp76 + 2 >> 0] | 0;
+       HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp76 + 3 >> 0] | 0;
+       __ZN8DrBitmap8setPixelEii7DrColor($bitmap, $point$sroa$0$0$copyload, $point$sroa$21$0$copyload, $agg$tmp218$byval_copy);
+       HEAP32[$agg$tmp80 >> 2] = $22;
+       HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp80 >> 0] | 0;
+       HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp80 + 1 >> 0] | 0;
+       HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp80 + 2 >> 0] | 0;
+       HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp80 + 3 >> 0] | 0;
+       __ZN8DrBitmap8setPixelEii7DrColor($flood, $point$sroa$0$0$copyload, $point$sroa$21$0$copyload, $agg$tmp218$byval_copy);
+       __ZN7DrColorC2Ej($agg$tmp84, 1);
+       HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp84 >> 0] | 0;
+       HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp84 + 1 >> 0] | 0;
+       HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp84 + 2 >> 0] | 0;
+       HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp84 + 3 >> 0] | 0;
+       __ZN8DrBitmap8setPixelEii7DrColor($processed, $point$sroa$0$0$copyload, $point$sroa$21$0$copyload, $agg$tmp218$byval_copy);
+       $spec$select = ($point$sroa$0$0$copyload | 0) < ($min_x$1 | 0) ? $point$sroa$0$0$copyload : $min_x$1;
+       $max_x$2 = ($point$sroa$0$0$copyload | 0) > ($max_x$1 | 0) ? $point$sroa$0$0$copyload : $max_x$1;
+       $spec$select148 = ($point$sroa$21$0$copyload | 0) < ($min_y$1 | 0) ? $point$sroa$21$0$copyload : $min_y$1;
+       $max_y$2 = ($point$sroa$21$0$copyload | 0) > ($max_y$1 | 0) ? $point$sroa$21$0$copyload : $max_y$1;
+       HEAP32[$flood_pixel_count >> 2] = (HEAP32[$flood_pixel_count >> 2] | 0) + 1;
+       $sub111 = $point$sroa$0$0$copyload + -1 | 0;
+       $sub114 = (HEAP32[$width >> 2] | 0) + -1 | 0;
+       $add = $point$sroa$0$0$copyload + 1 | 0;
+       $cond122 = ($point$sroa$0$0$copyload | 0) < ($sub114 | 0) ? $add : $sub114;
+       $sub127 = $point$sroa$21$0$copyload + -1 | 0;
+       $cond130 = ($point$sroa$21$0$copyload | 0) > 0 ? $sub127 : 0;
+       $sub133 = (HEAP32[$height >> 2] | 0) + -1 | 0;
+       $add137 = $point$sroa$21$0$copyload + 1 | 0;
+       $cond142 = ($point$sroa$21$0$copyload | 0) < ($sub133 | 0) ? $add137 : $sub133;
+       $processed_some$1$off0 = $processed_some$0$off0;
+       $x143$0 = ($point$sroa$0$0$copyload | 0) > 0 ? $sub111 : 0;
+       while (1) {
+        if (($x143$0 | 0) > ($cond122 | 0)) {
+         $max_x$3 = $max_x$2;
+         $max_y$3 = $max_y$2;
+         $min_x$3 = $spec$select;
+         $min_y$3 = $spec$select148;
+         $processed_some$4$off0 = $processed_some$1$off0;
+         break L28;
+        }
+        $cmp154 = ($x143$0 | 0) == ($point$sroa$0$0$copyload | 0);
+        $or$cond152194 = ($x143$0 | 0) == ($sub111 | 0) | ($x143$0 | 0) == ($add | 0);
+        $processed_some$2$off0 = $processed_some$1$off0;
+        $y148$0 = $cond130;
+        while (1) {
+         if (($y148$0 | 0) > ($cond142 | 0)) break;
+         do if ($cmp154 & ($y148$0 | 0) == ($point$sroa$21$0$copyload | 0)) $processed_some$3$off0 = $processed_some$2$off0; else {
+          if ($cmp160) if ($or$cond152194 & (($y148$0 | 0) == ($sub127 | 0) | ($y148$0 | 0) == ($add137 | 0))) {
+           $processed_some$3$off0 = $processed_some$2$off0;
+           break;
+          }
+          __ZNK8DrBitmap8getPixelEii($tmp199, $processed, $x143$0, $y148$0);
+          __ZN7DrColorC2Ej($agg$tmp218$byval_copy, 0);
+          if (__ZNK7DrColoreqERKS_($tmp199, $agg$tmp218$byval_copy) | 0) {
+           __ZNK8DrBitmap8getPixelEii($agg$tmp218$byval_copy, $bitmap, $x143$0, $y148$0);
+           if (!(__ZN2Dr11IsSameColorERK7DrColorS2_d($start_color, $agg$tmp218$byval_copy, $tolerance) | 0)) {
+            $processed_some$3$off0 = $processed_some$2$off0;
+            break;
+           }
+           __ZN7DrPointC2Eii($agg$tmp218$byval_copy, $x143$0, $y148$0);
+           $26 = HEAP32[$__end_$i$i >> 2] | 0;
+           if ($26 >>> 0 < (HEAP32[$__value_$i$i$i$i >> 2] | 0) >>> 0) {
+            $28 = $agg$tmp218$byval_copy;
+            $33 = HEAP32[$28 + 4 >> 2] | 0;
+            $34 = $26;
+            HEAP32[$34 >> 2] = HEAP32[$28 >> 2];
+            HEAP32[$34 + 4 >> 2] = $33;
+            HEAP32[$__end_$i$i >> 2] = (HEAP32[$__end_$i$i >> 2] | 0) + 8;
+           } else __ZNSt3__26vectorI7DrPointNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($points, $agg$tmp218$byval_copy);
+           __ZN7DrColorC2Ej($agg$tmp218, 2);
+           HEAP8[$agg$tmp218$byval_copy >> 0] = HEAP8[$agg$tmp218 >> 0] | 0;
+           HEAP8[$agg$tmp218$byval_copy + 1 >> 0] = HEAP8[$agg$tmp218 + 1 >> 0] | 0;
+           HEAP8[$agg$tmp218$byval_copy + 2 >> 0] = HEAP8[$agg$tmp218 + 2 >> 0] | 0;
+           HEAP8[$agg$tmp218$byval_copy + 3 >> 0] = HEAP8[$agg$tmp218 + 3 >> 0] | 0;
+           __ZN8DrBitmap8setPixelEii7DrColor($processed, $x143$0, $y148$0, $agg$tmp218$byval_copy);
+           $processed_some$3$off0 = 1;
+          } else $processed_some$3$off0 = $processed_some$2$off0;
+         } while (0);
+         $processed_some$2$off0 = $processed_some$3$off0;
+         $y148$0 = $y148$0 + 1 | 0;
+        }
+        $processed_some$1$off0 = $processed_some$2$off0;
+        $x143$0 = $x143$0 + 1 | 0;
+       }
+      } while (0);
+      $__begin$sroa$0$0 = $__begin$sroa$0$0 + 8 | 0;
+      $max_x$1 = $max_x$3;
+      $max_y$1 = $max_y$3;
+      $min_x$1 = $min_x$3;
+      $min_y$1 = $min_y$3;
+      $processed_some$0$off0 = $processed_some$4$off0;
+     }
+     $it$sroa$0$0 = HEAP32[$points >> 2] | 0;
+     while (1) {
+      $39 = HEAP32[$__end_$i$i >> 2] | 0;
+      $40 = $it$sroa$0$0;
+      if (($39 | 0) == ($40 | 0)) break;
+      __ZNK8DrBitmap8getPixelEii($tmp254, $processed, HEAP32[$40 >> 2] | 0, HEAP32[$40 + 4 >> 2] | 0);
+      __ZN7DrColorC2Ej($agg$tmp218$byval_copy, 1);
+      if (__ZNK7DrColoreqERKS_($tmp254, $agg$tmp218$byval_copy) | 0) {
+       $43 = HEAP32[$points >> 2] | 0;
+       $add$ptr$i = $43 + ($it$sroa$0$0 - $43 >> 3 << 3) | 0;
+       $45 = HEAP32[$__end_$i$i >> 2] | 0;
+       $add$ptr$pn$i = $add$ptr$i;
+       while (1) {
+        $__first$addr$0$i$i$i = $add$ptr$pn$i + 8 | 0;
+        if (($__first$addr$0$i$i$i | 0) == ($45 | 0)) break;
+        __ZN7DrPointaSERKS_($add$ptr$pn$i, $__first$addr$0$i$i$i) | 0;
+        $add$ptr$pn$i = $__first$addr$0$i$i$i;
+       }
+       HEAP32[$__end_$i$i >> 2] = $add$ptr$pn$i;
+       $it$sroa$0$1$in = $add$ptr$i;
+      } else $it$sroa$0$1$in = $40 + 8 | 0;
+      $it$sroa$0$0 = $it$sroa$0$1$in;
+     }
+     $47 = HEAP32[$points >> 2] | 0;
+     if ($processed_some$0$off0 & ($47 | 0) != ($39 | 0)) {
+      $20 = $39;
+      $50 = $47;
+      $max_x$0 = $max_x$1;
+      $max_y$0 = $max_y$1;
+      $min_x$0 = $min_x$1;
+      $min_y$0 = $min_y$1;
+     } else break;
+    }
+    __ZN6DrRectC2Eiiii($agg$tmp218$byval_copy, $min_x$1, $min_y$1, $max_x$1 + 1 - $min_x$1 | 0, 1 - $min_y$1 + $max_y$1 | 0);
+    HEAP32[$flood_rect >> 2] = HEAP32[$agg$tmp218$byval_copy >> 2];
+    HEAP32[$flood_rect + 4 >> 2] = HEAP32[$agg$tmp218$byval_copy + 4 >> 2];
+    HEAP32[$flood_rect + 8 >> 2] = HEAP32[$agg$tmp218$byval_copy + 8 >> 2];
+    HEAP32[$flood_rect + 12 >> 2] = HEAP32[$agg$tmp218$byval_copy + 12 >> 2];
+    __ZN8DrBitmapC2ERKS_13Bitmap_Format($agg$result, $flood, 4);
+    __ZNSt3__213__vector_baseI7DrPointNS_9allocatorIS1_EEED2Ev($points);
+   } else label = 4;
+  } else label = 4;
+ } while (0);
+ if ((label | 0) == 4) __ZN8DrBitmapC2E13Bitmap_Format($agg$result, 4);
+ __ZN8DrBitmapD2Ev($processed);
+ __ZN8DrBitmapD2Ev($flood);
+ STACKTOP = sp;
+ return;
+}
+
+function __ZN13TPPLPartition11RemoveHolesEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $outpolys) {
+ $this = $this | 0;
+ $inpolys = $inpolys | 0;
+ $outpolys = $outpolys | 0;
+ var $0 = 0, $11 = 0, $13 = 0.0, $15 = 0, $18 = 0, $2 = 0, $5 = 0, $7 = 0.0, $__next_$i$i$i = 0, $__next_$i$i93 = 0, $__value_$i124 = 0, $__value_$i126 = 0, $__value_$i139 = 0, $__value_$i149 = 0, $__value_$i155 = 0, $add144 = 0, $agg$tmp = 0, $agg$tmp$i = 0, $agg$tmp$i$byval_copy = 0, $agg$tmp2$i = 0, $agg$tmp316 = 0, $agg$tmp316$byval_copy = 0, $bestpolypoint = 0, $call137 = 0, $call141 = 0, $call159 = 0, $call205 = 0, $call215 = 0, $call251 = 0, $call265 = 0, $call267 = 0, $call288 = 0, $call290 = 0, $call305 = 0, $call307 = 0, $call92 = 0, $cmp75 = 0, $hasholes$1$off0 = 0, $hasholes$3$off0 = 0, $holeiter$sroa$0$0 = 0, $holeiter$sroa$0$1 = 0, $holeiter$sroa$0$3 = 0, $holeiter$sroa$0$5 = 0, $holepoint = 0, $holepointindex$0 = 0, $holepointindex$1 = 0, $holepointindex$3 = 0, $holepointindex$5 = 0, $i$0 = 0, $i$1 = 0, $i$1$be = 0, $i$1$ph = 0, $i$1$ph239 = 0, $i$3 = 0, $i$4 = 0, $i2$0 = 0, $i2$1 = 0, $i2$2 = 0, $i2$3 = 0, $iter$sroa$0$0 = 0, $iter$sroa$0$0$in$in = 0, $iter$sroa$0$1 = 0, $iter$sroa$0$1$in$in = 0, $iter$sroa$0$2 = 0, $iter$sroa$0$2$in$in = 0, $iter$sroa$0$3 = 0, $iter$sroa$0$3$in$in = 0, $iter$sroa$0$4 = 0, $iter$sroa$0$4$in$in = 0, $iter2$sroa$0$0 = 0, $iter2$sroa$0$0$in$in = 0, $linep1 = 0, $linep2 = 0, $newpoly = 0, $pointfound$0$off0 = 0, $pointfound$1$off0$ph = 0, $pointfound$1$off0$ph237 = 0, $pointfound$3$off0 = 0, $polyiter$sroa$0$0 = 0, $polyiter$sroa$0$1 = 0, $polyiter$sroa$0$2$ph = 0, $polyiter$sroa$0$4 = 0, $polypoint = 0, $polypointindex$0 = 0, $polypointindex$1 = 0, $polypointindex$2$ph = 0, $polypointindex$4 = 0, $polys = 0, $retval$0 = 0, $sub = 0, $v1$sroa$0$0$copyload = 0.0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 208 | 0;
+ $agg$tmp316$byval_copy = sp + 144 | 0;
+ $agg$tmp$i$byval_copy = sp + 120 | 0;
+ $agg$tmp$i = sp + 204 | 0;
+ $agg$tmp2$i = sp + 200 | 0;
+ $polys = sp + 188 | 0;
+ $holepoint = sp + 96 | 0;
+ $polypoint = sp + 72 | 0;
+ $bestpolypoint = sp + 48 | 0;
+ $linep1 = sp + 24 | 0;
+ $linep2 = sp;
+ $newpoly = sp + 168 | 0;
+ $agg$tmp = sp + 184 | 0;
+ $agg$tmp316 = sp + 180 | 0;
+ HEAP32[$polys >> 2] = $polys;
+ $__next_$i$i$i = $polys + 4 | 0;
+ HEAP32[$__next_$i$i$i >> 2] = $polys;
+ HEAP32[$polys + 8 >> 2] = 0;
+ __ZN8TPPLPolyC2Ev($newpoly);
+ $__next_$i$i93 = $inpolys + 4 | 0;
+ $iter$sroa$0$0$in$in = $__next_$i$i93;
+ while (1) {
+  $iter$sroa$0$0 = HEAP32[$iter$sroa$0$0$in$in >> 2] | 0;
+  $0 = $iter$sroa$0$0;
+  if (($inpolys | 0) == ($0 | 0)) {
+   label = 3;
+   break;
+  }
+  if (__ZNK8TPPLPoly6IsHoleEv($iter$sroa$0$0 + 8 | 0) | 0) {
+   label = 7;
+   break;
+  } else $iter$sroa$0$0$in$in = $0 + 4 | 0;
+ }
+ L4 : do if ((label | 0) == 3) {
+  $iter$sroa$0$1$in$in = $__next_$i$i93;
+  while (1) {
+   $iter$sroa$0$1 = HEAP32[$iter$sroa$0$1$in$in >> 2] | 0;
+   $2 = $iter$sroa$0$1;
+   if (($inpolys | 0) == ($2 | 0)) {
+    $retval$0 = 1;
+    break L4;
+   }
+   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($outpolys, $iter$sroa$0$1 + 8 | 0);
+   $iter$sroa$0$1$in$in = $2 + 4 | 0;
+  }
+ } else if ((label | 0) == 7) {
+  if (($polys | 0) != ($inpolys | 0)) {
+   HEAP32[$agg$tmp$i >> 2] = HEAP32[$__next_$i$i93 >> 2];
+   HEAP32[$agg$tmp2$i >> 2] = $inpolys;
+   HEAP32[$agg$tmp$i$byval_copy >> 2] = HEAP32[$agg$tmp$i >> 2];
+   HEAP32[$agg$tmp316$byval_copy >> 2] = HEAP32[$agg$tmp2$i >> 2];
+   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6assignINS_21__list_const_iteratorIS1_PvEEEEvT_S9_PNS_9enable_ifIXsr19__is_input_iteratorIS9_EE5valueEvE4typeE($polys, $agg$tmp$i$byval_copy, $agg$tmp316$byval_copy, 0);
+  }
+  $holeiter$sroa$0$0 = 0;
+  $holepointindex$0 = 0;
+  $polyiter$sroa$0$0 = 0;
+  $polypointindex$0 = 0;
+  while (1) {
+   $hasholes$1$off0 = 0;
+   $holeiter$sroa$0$1 = $holeiter$sroa$0$0;
+   $holepointindex$1 = $holepointindex$0;
+   $iter$sroa$0$2$in$in = $__next_$i$i$i;
+   while (1) {
+    $iter$sroa$0$2 = HEAP32[$iter$sroa$0$2$in$in >> 2] | 0;
+    $5 = $iter$sroa$0$2;
+    if (($polys | 0) == ($5 | 0)) break;
+    $__value_$i124 = $iter$sroa$0$2 + 8 | 0;
+    L18 : do if (__ZNK8TPPLPoly6IsHoleEv($__value_$i124) | 0) {
+     $holeiter$sroa$0$3 = $hasholes$1$off0 ? $holeiter$sroa$0$1 : $iter$sroa$0$2;
+     $holepointindex$3 = $hasholes$1$off0 ? $holepointindex$1 : 0;
+     $i$0 = 0;
+     while (1) {
+      if (($i$0 | 0) >= (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i124) | 0)) {
+       $hasholes$3$off0 = 1;
+       $holeiter$sroa$0$5 = $holeiter$sroa$0$3;
+       $holepointindex$5 = $holepointindex$3;
+       break L18;
+      }
+      $7 = +HEAPF64[(__ZN8TPPLPoly8GetPointEl($__value_$i124, $i$0) | 0) >> 3];
+      $cmp75 = $7 > +HEAPF64[(__ZN8TPPLPoly8GetPointEl($holeiter$sroa$0$3 + 8 | 0, $holepointindex$3) | 0) >> 3];
+      $holeiter$sroa$0$3 = $cmp75 ? $iter$sroa$0$2 : $holeiter$sroa$0$3;
+      $holepointindex$3 = $cmp75 ? $i$0 : $holepointindex$3;
+      $i$0 = $i$0 + 1 | 0;
+     }
+    } else {
+     $hasholes$3$off0 = $hasholes$1$off0;
+     $holeiter$sroa$0$5 = $holeiter$sroa$0$1;
+     $holepointindex$5 = $holepointindex$1;
+    } while (0);
+    $hasholes$1$off0 = $hasholes$3$off0;
+    $holeiter$sroa$0$1 = $holeiter$sroa$0$5;
+    $holepointindex$1 = $holepointindex$5;
+    $iter$sroa$0$2$in$in = $5 + 4 | 0;
+   }
+   if (!$hasholes$1$off0) break;
+   $__value_$i139 = $holeiter$sroa$0$1 + 8 | 0;
+   $call92 = __ZN8TPPLPoly8GetPointEl($__value_$i139, $holepointindex$1) | 0;
+   HEAP32[$holepoint >> 2] = HEAP32[$call92 >> 2];
+   HEAP32[$holepoint + 4 >> 2] = HEAP32[$call92 + 4 >> 2];
+   HEAP32[$holepoint + 8 >> 2] = HEAP32[$call92 + 8 >> 2];
+   HEAP32[$holepoint + 12 >> 2] = HEAP32[$call92 + 12 >> 2];
+   HEAP32[$holepoint + 16 >> 2] = HEAP32[$call92 + 16 >> 2];
+   HEAP32[$holepoint + 20 >> 2] = HEAP32[$call92 + 20 >> 2];
+   $iter$sroa$0$3$in$in = $__next_$i$i$i;
+   $pointfound$0$off0 = 0;
+   $polyiter$sroa$0$1 = $polyiter$sroa$0$0;
+   $polypointindex$1 = $polypointindex$0;
+   while (1) {
+    $iter$sroa$0$3 = HEAP32[$iter$sroa$0$3$in$in >> 2] | 0;
+    $11 = $iter$sroa$0$3;
+    if (($polys | 0) == ($11 | 0)) break;
+    $__value_$i155 = $iter$sroa$0$3 + 8 | 0;
+    L29 : do if (__ZNK8TPPLPoly6IsHoleEv($__value_$i155) | 0) {
+     $pointfound$3$off0 = $pointfound$0$off0;
+     $polyiter$sroa$0$4 = $polyiter$sroa$0$1;
+     $polypointindex$4 = $polypointindex$1;
+    } else {
+     $i$1$ph = 0;
+     $pointfound$1$off0$ph = $pointfound$0$off0;
+     $polyiter$sroa$0$2$ph = $polyiter$sroa$0$1;
+     $polypointindex$2$ph = $polypointindex$1;
+     while (1) {
+      $i$1$ph239 = $i$1$ph;
+      $pointfound$1$off0$ph237 = $pointfound$1$off0$ph;
+      L33 : while (1) {
+       $i$1 = $i$1$ph239;
+       L35 : while (1) {
+        if (($i$1 | 0) >= (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i155) | 0)) {
+         $pointfound$3$off0 = $pointfound$1$off0$ph237;
+         $polyiter$sroa$0$4 = $polyiter$sroa$0$2$ph;
+         $polypointindex$4 = $polypointindex$2$ph;
+         break L29;
+        }
+        $13 = +HEAPF64[(__ZN8TPPLPoly8GetPointEl($__value_$i155, $i$1) | 0) >> 3];
+        L38 : do if (!($13 <= +HEAPF64[$holepoint >> 3])) {
+         $sub = $i$1 + -1 + (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i155) | 0) | 0;
+         $call137 = __ZN8TPPLPoly8GetPointEl($__value_$i155, ($sub | 0) % (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i155) | 0) | 0) | 0;
+         $call141 = __ZN8TPPLPoly8GetPointEl($__value_$i155, $i$1) | 0;
+         $add144 = $i$1 + 1 | 0;
+         if (__ZN13TPPLPartition6InConeER9TPPLPointS1_S1_S1_($this, $call137, $call141, __ZN8TPPLPoly8GetPointEl($__value_$i155, ($add144 | 0) % (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i155) | 0) | 0) | 0, $holepoint) | 0) {
+          $call159 = __ZN8TPPLPoly8GetPointEl($__value_$i155, $i$1) | 0;
+          HEAP32[$polypoint >> 2] = HEAP32[$call159 >> 2];
+          HEAP32[$polypoint + 4 >> 2] = HEAP32[$call159 + 4 >> 2];
+          HEAP32[$polypoint + 8 >> 2] = HEAP32[$call159 + 8 >> 2];
+          HEAP32[$polypoint + 12 >> 2] = HEAP32[$call159 + 12 >> 2];
+          HEAP32[$polypoint + 16 >> 2] = HEAP32[$call159 + 16 >> 2];
+          HEAP32[$polypoint + 20 >> 2] = HEAP32[$call159 + 20 >> 2];
+          if ($pointfound$1$off0$ph237) {
+           __ZNK9TPPLPointmiERKS_($agg$tmp$i$byval_copy, $polypoint, $holepoint);
+           __ZN13TPPLPartition9NormalizeERK9TPPLPoint($agg$tmp316$byval_copy, 0, $agg$tmp$i$byval_copy);
+           $v1$sroa$0$0$copyload = +HEAPF64[$agg$tmp316$byval_copy >> 3];
+           __ZNK9TPPLPointmiERKS_($agg$tmp$i$byval_copy, $bestpolypoint, $holepoint);
+           __ZN13TPPLPartition9NormalizeERK9TPPLPoint($agg$tmp316$byval_copy, 0, $agg$tmp$i$byval_copy);
+           if (+HEAPF64[$agg$tmp316$byval_copy >> 3] > $v1$sroa$0$0$copyload) break L35;
+          }
+          $iter2$sroa$0$0$in$in = $__next_$i$i$i;
+          while (1) {
+           $iter2$sroa$0$0 = HEAP32[$iter2$sroa$0$0$in$in >> 2] | 0;
+           $15 = $iter2$sroa$0$0;
+           if (($polys | 0) == ($15 | 0)) break L33;
+           $__value_$i149 = $iter2$sroa$0$0 + 8 | 0;
+           L47 : do if (!(__ZNK8TPPLPoly6IsHoleEv($__value_$i149) | 0)) {
+            $i2$0 = 0;
+            while (1) {
+             if (($i2$0 | 0) >= (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i149) | 0)) break L47;
+             $call205 = __ZN8TPPLPoly8GetPointEl($__value_$i149, $i2$0) | 0;
+             HEAP32[$linep1 >> 2] = HEAP32[$call205 >> 2];
+             HEAP32[$linep1 + 4 >> 2] = HEAP32[$call205 + 4 >> 2];
+             HEAP32[$linep1 + 8 >> 2] = HEAP32[$call205 + 8 >> 2];
+             HEAP32[$linep1 + 12 >> 2] = HEAP32[$call205 + 12 >> 2];
+             HEAP32[$linep1 + 16 >> 2] = HEAP32[$call205 + 16 >> 2];
+             HEAP32[$linep1 + 20 >> 2] = HEAP32[$call205 + 20 >> 2];
+             $i2$0 = $i2$0 + 1 | 0;
+             $call215 = __ZN8TPPLPoly8GetPointEl($__value_$i149, ($i2$0 | 0) % (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i149) | 0) | 0) | 0;
+             HEAP32[$linep2 >> 2] = HEAP32[$call215 >> 2];
+             HEAP32[$linep2 + 4 >> 2] = HEAP32[$call215 + 4 >> 2];
+             HEAP32[$linep2 + 8 >> 2] = HEAP32[$call215 + 8 >> 2];
+             HEAP32[$linep2 + 12 >> 2] = HEAP32[$call215 + 12 >> 2];
+             HEAP32[$linep2 + 16 >> 2] = HEAP32[$call215 + 16 >> 2];
+             HEAP32[$linep2 + 20 >> 2] = HEAP32[$call215 + 20 >> 2];
+             if (__ZN13TPPLPartition10IntersectsER9TPPLPointS1_S1_S1_(0, $holepoint, $polypoint, $linep1, $linep2) | 0) {
+              $i$1$be = $add144;
+              break L38;
+             }
+            }
+           } while (0);
+           $iter2$sroa$0$0$in$in = $15 + 4 | 0;
+          }
+         } else $i$1$be = $add144;
+        } else $i$1$be = $i$1 + 1 | 0; while (0);
+        $i$1 = $i$1$be;
+       }
+       $i$1$ph239 = $add144;
+       $pointfound$1$off0$ph237 = 1;
+      }
+      HEAP32[$bestpolypoint >> 2] = HEAP32[$polypoint >> 2];
+      HEAP32[$bestpolypoint + 4 >> 2] = HEAP32[$polypoint + 4 >> 2];
+      HEAP32[$bestpolypoint + 8 >> 2] = HEAP32[$polypoint + 8 >> 2];
+      HEAP32[$bestpolypoint + 12 >> 2] = HEAP32[$polypoint + 12 >> 2];
+      HEAP32[$bestpolypoint + 16 >> 2] = HEAP32[$polypoint + 16 >> 2];
+      HEAP32[$bestpolypoint + 20 >> 2] = HEAP32[$polypoint + 20 >> 2];
+      $i$1$ph = $add144;
+      $pointfound$1$off0$ph = 1;
+      $polyiter$sroa$0$2$ph = $iter$sroa$0$3;
+      $polypointindex$2$ph = $i$1;
+     }
+    } while (0);
+    $iter$sroa$0$3$in$in = $11 + 4 | 0;
+    $pointfound$0$off0 = $pointfound$3$off0;
+    $polyiter$sroa$0$1 = $polyiter$sroa$0$4;
+    $polypointindex$1 = $polypointindex$4;
+   }
+   if (!$pointfound$0$off0) {
+    $retval$0 = 0;
+    break L4;
+   }
+   $call251 = __ZNK8TPPLPoly12GetNumPointsEv($__value_$i139) | 0;
+   $__value_$i126 = $polyiter$sroa$0$1 + 8 | 0;
+   __ZN8TPPLPoly4InitEl($newpoly, $call251 + 2 + (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i126) | 0) | 0);
+   $i2$1 = 0;
+   while (1) {
+    if (($i2$1 | 0) > ($polypointindex$1 | 0)) break;
+    $call265 = __ZN8TPPLPoly8GetPointEl($__value_$i126, $i2$1) | 0;
+    $call267 = __ZN8TPPLPolyixEi($newpoly, $i2$1) | 0;
+    HEAP32[$call267 >> 2] = HEAP32[$call265 >> 2];
+    HEAP32[$call267 + 4 >> 2] = HEAP32[$call265 + 4 >> 2];
+    HEAP32[$call267 + 8 >> 2] = HEAP32[$call265 + 8 >> 2];
+    HEAP32[$call267 + 12 >> 2] = HEAP32[$call265 + 12 >> 2];
+    HEAP32[$call267 + 16 >> 2] = HEAP32[$call265 + 16 >> 2];
+    HEAP32[$call267 + 20 >> 2] = HEAP32[$call265 + 20 >> 2];
+    $i2$1 = $i2$1 + 1 | 0;
+   }
+   $i$3 = 0;
+   $i2$2 = $i2$1;
+   while (1) {
+    if (($i$3 | 0) > (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i139) | 0)) break;
+    $call288 = __ZN8TPPLPoly8GetPointEl($__value_$i139, ($i$3 + $holepointindex$1 | 0) % (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i139) | 0) | 0) | 0;
+    $call290 = __ZN8TPPLPolyixEi($newpoly, $i2$2) | 0;
+    HEAP32[$call290 >> 2] = HEAP32[$call288 >> 2];
+    HEAP32[$call290 + 4 >> 2] = HEAP32[$call288 + 4 >> 2];
+    HEAP32[$call290 + 8 >> 2] = HEAP32[$call288 + 8 >> 2];
+    HEAP32[$call290 + 12 >> 2] = HEAP32[$call288 + 12 >> 2];
+    HEAP32[$call290 + 16 >> 2] = HEAP32[$call288 + 16 >> 2];
+    HEAP32[$call290 + 20 >> 2] = HEAP32[$call288 + 20 >> 2];
+    $i$3 = $i$3 + 1 | 0;
+    $i2$2 = $i2$2 + 1 | 0;
+   }
+   $i$4 = $polypointindex$1;
+   $i2$3 = $i2$2;
+   while (1) {
+    if (($i$4 | 0) >= (__ZNK8TPPLPoly12GetNumPointsEv($__value_$i126) | 0)) break;
+    $call305 = __ZN8TPPLPoly8GetPointEl($__value_$i126, $i$4) | 0;
+    $call307 = __ZN8TPPLPolyixEi($newpoly, $i2$3) | 0;
+    HEAP32[$call307 >> 2] = HEAP32[$call305 >> 2];
+    HEAP32[$call307 + 4 >> 2] = HEAP32[$call305 + 4 >> 2];
+    HEAP32[$call307 + 8 >> 2] = HEAP32[$call305 + 8 >> 2];
+    HEAP32[$call307 + 12 >> 2] = HEAP32[$call305 + 12 >> 2];
+    HEAP32[$call307 + 16 >> 2] = HEAP32[$call305 + 16 >> 2];
+    HEAP32[$call307 + 20 >> 2] = HEAP32[$call305 + 20 >> 2];
+    $i$4 = $i$4 + 1 | 0;
+    $i2$3 = $i2$3 + 1 | 0;
+   }
+   HEAP32[$agg$tmp >> 2] = $holeiter$sroa$0$1;
+   HEAP32[$agg$tmp316$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
+   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE5eraseENS_21__list_const_iteratorIS1_PvEE($polys, $agg$tmp316$byval_copy) | 0;
+   HEAP32[$agg$tmp316 >> 2] = $polyiter$sroa$0$1;
+   HEAP32[$agg$tmp316$byval_copy >> 2] = HEAP32[$agg$tmp316 >> 2];
+   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE5eraseENS_21__list_const_iteratorIS1_PvEE($polys, $agg$tmp316$byval_copy) | 0;
+   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($polys, $newpoly);
+   $holeiter$sroa$0$0 = $holeiter$sroa$0$1;
+   $holepointindex$0 = $holepointindex$1;
+   $polyiter$sroa$0$0 = $polyiter$sroa$0$1;
+   $polypointindex$0 = $polypointindex$1;
+  }
+  $iter$sroa$0$4$in$in = $__next_$i$i$i;
+  while (1) {
+   $iter$sroa$0$4 = HEAP32[$iter$sroa$0$4$in$in >> 2] | 0;
+   $18 = $iter$sroa$0$4;
+   if (($polys | 0) == ($18 | 0)) {
+    $retval$0 = 1;
+    break L4;
+   }
+   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($outpolys, $iter$sroa$0$4 + 8 | 0);
+   $iter$sroa$0$4$in$in = $18 + 4 | 0;
+  }
+ } while (0);
+ __ZN8TPPLPolyD2Ev($newpoly);
+ __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($polys);
+ STACKTOP = sp;
+ return $retval$0 | 0;
 }
 
 function _stbi__parse_entropy_coded_data($z) {
@@ -16220,304 +15560,6 @@ function _stbi__parse_entropy_coded_data($z) {
  return 0;
 }
 
-function __ZN13TPPLPartition15Triangulate_OPTEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE($this, $poly, $triangles) {
- $this = $this | 0;
- $poly = $poly | 0;
- $triangles = $triangles | 0;
- var $11 = 0, $15 = 0, $17 = 0, $18 = 0, $2 = 0, $20 = 0, $22 = 0, $24 = 0, $6 = 0, $7 = 0, $__next_$i$i$i = 0, $__value_$i$i$i$i = 0, $add134 = 0, $add187 = 0.0, $add94 = 0, $arrayidx135 = 0, $arrayidx145 = 0, $arrayidx17 = 0, $bestvertex$0185 = 0, $bestvertex$1 = 0, $call13 = 0, $call162 = 0, $call173 = 0, $call237 = 0, $call239 = 0, $call29 = 0, $call34 = 0, $call37 = 0, $call4 = 0, $call47 = 0, $call6 = 0, $call64 = 0, $call70 = 0, $call74 = 0, $call87 = 0, $call92 = 0, $call96 = 0, $cmp204 = 0, $cmp30 = 0, $d1$0 = 0.0, $d2$0 = 0.0, $diagonal$sroa$0$0$copyload = 0, $diagonal$sroa$8$0$copyload = 0, $diagonals = 0, $gap$0193 = 0, $i$0205 = 0, $i$1202 = 0, $i$2189 = 0, $i$3178 = 0, $i$4180 = 0, $inc106$pre$phiZ2D = 0, $index2 = 0, $j$0199 = 0, $k$0197 = 0, $k$1183 = 0, $minweight$0195 = 0.0, $minweight$1$lcssa = 0.0, $minweight$1188 = 0.0, $minweight$2186 = 0.0, $minweight$3 = 0.0, $minweight$4 = 0.0, $newdiagonal = 0, $or$cond = 0, $p1 = 0, $p2 = 0, $p3 = 0, $p4 = 0, $ret$0 = 0, $retval$0 = 0, $retval$1 = 0, $sub = 0, $sub131 = 0, $sub211 = 0, $sub35 = 0, $triangle = 0, label = 0, sp = 0, $i$1202$looptemp = 0, $i$2189$looptemp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 128 | 0;
- $p1 = sp + 72 | 0;
- $p2 = sp + 48 | 0;
- $p3 = sp + 24 | 0;
- $p4 = sp;
- $newdiagonal = sp + 120 | 0;
- $diagonals = sp + 108 | 0;
- $triangle = sp + 96 | 0;
- if (__ZNK8TPPLPoly5ValidEv($poly) | 0) {
-  HEAP32[$diagonals >> 2] = $diagonals;
-  $__next_$i$i$i = $diagonals + 4 | 0;
-  HEAP32[$__next_$i$i$i >> 2] = $diagonals;
-  $__value_$i$i$i$i = $diagonals + 8 | 0;
-  HEAP32[$__value_$i$i$i$i >> 2] = 0;
-  __ZN8TPPLPolyC2Ev($triangle);
-  $call4 = __ZNK8TPPLPoly12GetNumPointsEv($poly) | 0;
-  $call6 = __Znam($call4 >>> 0 > 1073741823 ? -1 : $call4 << 2) | 0;
-  $cmp204 = ($call4 | 0) > 1;
-  if ($cmp204) {
-   $i$0205 = 1;
-   do {
-    HEAP32[$call6 + ($i$0205 << 2) >> 2] = __Znam($i$0205 >>> 0 > 178956970 ? -1 : $i$0205 * 24 | 0) | 0;
-    $i$0205 = $i$0205 + 1 | 0;
-   } while (($i$0205 | 0) < ($call4 | 0));
-   $sub = $call4 + -1 | 0;
-   if ($cmp204) {
-    $i$1202 = 0;
-    while (1) {
-     $call13 = __ZN8TPPLPoly8GetPointEl($poly, $i$1202) | 0;
-     HEAP32[$p1 >> 2] = HEAP32[$call13 >> 2];
-     HEAP32[$p1 + 4 >> 2] = HEAP32[$call13 + 4 >> 2];
-     HEAP32[$p1 + 8 >> 2] = HEAP32[$call13 + 8 >> 2];
-     HEAP32[$p1 + 12 >> 2] = HEAP32[$call13 + 12 >> 2];
-     HEAP32[$p1 + 16 >> 2] = HEAP32[$call13 + 16 >> 2];
-     HEAP32[$p1 + 20 >> 2] = HEAP32[$call13 + 20 >> 2];
-     $i$1202$looptemp = $i$1202;
-     $i$1202 = $i$1202 + 1 | 0;
-     if (($i$1202 | 0) < ($call4 | 0)) {
-      $cmp30 = ($i$1202$looptemp | 0) == 0;
-      $sub35 = $i$1202$looptemp + -1 | 0;
-      $j$0199 = $i$1202;
-      do {
-       $arrayidx17 = $call6 + ($j$0199 << 2) | 0;
-       $2 = HEAP32[$arrayidx17 >> 2] | 0;
-       HEAP8[$2 + ($i$1202$looptemp * 24 | 0) >> 0] = 1;
-       HEAPF64[$2 + ($i$1202$looptemp * 24 | 0) + 8 >> 3] = 0.0;
-       HEAP32[$2 + ($i$1202$looptemp * 24 | 0) + 16 >> 2] = -1;
-       L15 : do if (($j$0199 | 0) != ($i$1202 | 0)) {
-        $call29 = __ZN8TPPLPoly8GetPointEl($poly, $j$0199) | 0;
-        HEAP32[$p2 >> 2] = HEAP32[$call29 >> 2];
-        HEAP32[$p2 + 4 >> 2] = HEAP32[$call29 + 4 >> 2];
-        HEAP32[$p2 + 8 >> 2] = HEAP32[$call29 + 8 >> 2];
-        HEAP32[$p2 + 12 >> 2] = HEAP32[$call29 + 12 >> 2];
-        HEAP32[$p2 + 16 >> 2] = HEAP32[$call29 + 16 >> 2];
-        HEAP32[$p2 + 20 >> 2] = HEAP32[$call29 + 20 >> 2];
-        if ($cmp30) {
-         $call34 = __ZN8TPPLPoly8GetPointEl($poly, $sub) | 0;
-         HEAP32[$p3 >> 2] = HEAP32[$call34 >> 2];
-         HEAP32[$p3 + 4 >> 2] = HEAP32[$call34 + 4 >> 2];
-         HEAP32[$p3 + 8 >> 2] = HEAP32[$call34 + 8 >> 2];
-         HEAP32[$p3 + 12 >> 2] = HEAP32[$call34 + 12 >> 2];
-         HEAP32[$p3 + 16 >> 2] = HEAP32[$call34 + 16 >> 2];
-         HEAP32[$p3 + 20 >> 2] = HEAP32[$call34 + 20 >> 2];
-        } else {
-         $call37 = __ZN8TPPLPoly8GetPointEl($poly, $sub35) | 0;
-         HEAP32[$p3 >> 2] = HEAP32[$call37 >> 2];
-         HEAP32[$p3 + 4 >> 2] = HEAP32[$call37 + 4 >> 2];
-         HEAP32[$p3 + 8 >> 2] = HEAP32[$call37 + 8 >> 2];
-         HEAP32[$p3 + 12 >> 2] = HEAP32[$call37 + 12 >> 2];
-         HEAP32[$p3 + 16 >> 2] = HEAP32[$call37 + 16 >> 2];
-         HEAP32[$p3 + 20 >> 2] = HEAP32[$call37 + 20 >> 2];
-        }
-        $call47 = __ZN8TPPLPoly8GetPointEl($poly, $i$1202) | 0;
-        HEAP32[$p4 >> 2] = HEAP32[$call47 >> 2];
-        HEAP32[$p4 + 4 >> 2] = HEAP32[$call47 + 4 >> 2];
-        HEAP32[$p4 + 8 >> 2] = HEAP32[$call47 + 8 >> 2];
-        HEAP32[$p4 + 12 >> 2] = HEAP32[$call47 + 12 >> 2];
-        HEAP32[$p4 + 16 >> 2] = HEAP32[$call47 + 16 >> 2];
-        HEAP32[$p4 + 20 >> 2] = HEAP32[$call47 + 20 >> 2];
-        if (!(__ZN13TPPLPartition6InConeER9TPPLPointS1_S1_S1_($this, $p3, $p1, $p4, $p2) | 0)) {
-         HEAP8[(HEAP32[$arrayidx17 >> 2] | 0) + ($i$1202$looptemp * 24 | 0) >> 0] = 0;
-         break;
-        }
-        $call64 = __ZN8TPPLPoly8GetPointEl($poly, $j$0199 + -1 | 0) | 0;
-        HEAP32[$p3 >> 2] = HEAP32[$call64 >> 2];
-        HEAP32[$p3 + 4 >> 2] = HEAP32[$call64 + 4 >> 2];
-        HEAP32[$p3 + 8 >> 2] = HEAP32[$call64 + 8 >> 2];
-        HEAP32[$p3 + 12 >> 2] = HEAP32[$call64 + 12 >> 2];
-        HEAP32[$p3 + 16 >> 2] = HEAP32[$call64 + 16 >> 2];
-        HEAP32[$p3 + 20 >> 2] = HEAP32[$call64 + 20 >> 2];
-        if (($j$0199 | 0) == ($sub | 0)) {
-         $call70 = __ZN8TPPLPoly8GetPointEl($poly, 0) | 0;
-         HEAP32[$p4 >> 2] = HEAP32[$call70 >> 2];
-         HEAP32[$p4 + 4 >> 2] = HEAP32[$call70 + 4 >> 2];
-         HEAP32[$p4 + 8 >> 2] = HEAP32[$call70 + 8 >> 2];
-         HEAP32[$p4 + 12 >> 2] = HEAP32[$call70 + 12 >> 2];
-         HEAP32[$p4 + 16 >> 2] = HEAP32[$call70 + 16 >> 2];
-         HEAP32[$p4 + 20 >> 2] = HEAP32[$call70 + 20 >> 2];
-        } else {
-         $call74 = __ZN8TPPLPoly8GetPointEl($poly, $j$0199 + 1 | 0) | 0;
-         HEAP32[$p4 >> 2] = HEAP32[$call74 >> 2];
-         HEAP32[$p4 + 4 >> 2] = HEAP32[$call74 + 4 >> 2];
-         HEAP32[$p4 + 8 >> 2] = HEAP32[$call74 + 8 >> 2];
-         HEAP32[$p4 + 12 >> 2] = HEAP32[$call74 + 12 >> 2];
-         HEAP32[$p4 + 16 >> 2] = HEAP32[$call74 + 16 >> 2];
-         HEAP32[$p4 + 20 >> 2] = HEAP32[$call74 + 20 >> 2];
-        }
-        if (!(__ZN13TPPLPartition6InConeER9TPPLPointS1_S1_S1_($this, $p3, $p2, $p4, $p1) | 0)) {
-         HEAP8[(HEAP32[$arrayidx17 >> 2] | 0) + ($i$1202$looptemp * 24 | 0) >> 0] = 0;
-         break;
-        }
-        $k$0197 = 0;
-        while (1) {
-         $call87 = __ZN8TPPLPoly8GetPointEl($poly, $k$0197) | 0;
-         HEAP32[$p3 >> 2] = HEAP32[$call87 >> 2];
-         HEAP32[$p3 + 4 >> 2] = HEAP32[$call87 + 4 >> 2];
-         HEAP32[$p3 + 8 >> 2] = HEAP32[$call87 + 8 >> 2];
-         HEAP32[$p3 + 12 >> 2] = HEAP32[$call87 + 12 >> 2];
-         HEAP32[$p3 + 16 >> 2] = HEAP32[$call87 + 16 >> 2];
-         HEAP32[$p3 + 20 >> 2] = HEAP32[$call87 + 20 >> 2];
-         if (($k$0197 | 0) == ($sub | 0)) {
-          $call92 = __ZN8TPPLPoly8GetPointEl($poly, 0) | 0;
-          HEAP32[$p4 >> 2] = HEAP32[$call92 >> 2];
-          HEAP32[$p4 + 4 >> 2] = HEAP32[$call92 + 4 >> 2];
-          HEAP32[$p4 + 8 >> 2] = HEAP32[$call92 + 8 >> 2];
-          HEAP32[$p4 + 12 >> 2] = HEAP32[$call92 + 12 >> 2];
-          HEAP32[$p4 + 16 >> 2] = HEAP32[$call92 + 16 >> 2];
-          HEAP32[$p4 + 20 >> 2] = HEAP32[$call92 + 20 >> 2];
-          $inc106$pre$phiZ2D = $k$0197 + 1 | 0;
-         } else {
-          $add94 = $k$0197 + 1 | 0;
-          $call96 = __ZN8TPPLPoly8GetPointEl($poly, $add94) | 0;
-          HEAP32[$p4 >> 2] = HEAP32[$call96 >> 2];
-          HEAP32[$p4 + 4 >> 2] = HEAP32[$call96 + 4 >> 2];
-          HEAP32[$p4 + 8 >> 2] = HEAP32[$call96 + 8 >> 2];
-          HEAP32[$p4 + 12 >> 2] = HEAP32[$call96 + 12 >> 2];
-          HEAP32[$p4 + 16 >> 2] = HEAP32[$call96 + 16 >> 2];
-          HEAP32[$p4 + 20 >> 2] = HEAP32[$call96 + 20 >> 2];
-          $inc106$pre$phiZ2D = $add94;
-         }
-         if (__ZN13TPPLPartition10IntersectsER9TPPLPointS1_S1_S1_(0, $p1, $p2, $p3, $p4) | 0) break;
-         if (($inc106$pre$phiZ2D | 0) < ($call4 | 0)) $k$0197 = $inc106$pre$phiZ2D; else break L15;
-        }
-        HEAP8[(HEAP32[$arrayidx17 >> 2] | 0) + ($i$1202$looptemp * 24 | 0) >> 0] = 0;
-       } while (0);
-       $j$0199 = $j$0199 + 1 | 0;
-      } while (($j$0199 | 0) != ($call4 | 0));
-     }
-     if (($i$1202 | 0) == ($sub | 0)) {
-      $sub211 = $sub;
-      break;
-     }
-    }
-   } else $sub211 = $sub;
-  } else $sub211 = $call4 + -1 | 0;
-  $6 = HEAP32[$call6 + ($sub211 << 2) >> 2] | 0;
-  HEAP8[$6 >> 0] = 1;
-  HEAPF64[$6 + 8 >> 3] = 0.0;
-  HEAP32[$6 + 16 >> 2] = -1;
-  L43 : do if (($call4 | 0) > 2) {
-   $gap$0193 = 2;
-   $minweight$0195 = 0.0;
-   L45 : while (1) {
-    $sub131 = $call4 - $gap$0193 | 0;
-    if (($sub131 | 0) > 0) {
-     $i$2189 = 0;
-     $minweight$1188 = $minweight$0195;
-     while (1) {
-      $add134 = $i$2189 + $gap$0193 | 0;
-      $arrayidx135 = $call6 + ($add134 << 2) | 0;
-      $7 = HEAP32[$arrayidx135 >> 2] | 0;
-      $i$2189$looptemp = $i$2189;
-      $i$2189 = $i$2189 + 1 | 0;
-      if (!(HEAP8[$7 + ($i$2189$looptemp * 24 | 0) >> 0] | 0)) $minweight$4 = $minweight$1188; else {
-       $11 = $7;
-       $bestvertex$0185 = -1;
-       $k$1183 = $i$2189;
-       $minweight$2186 = $minweight$1188;
-       while (1) {
-        $arrayidx145 = $call6 + ($k$1183 << 2) | 0;
-        if (!(HEAP8[(HEAP32[$arrayidx145 >> 2] | 0) + ($i$2189$looptemp * 24 | 0) >> 0] | 0)) {
-         $18 = $11;
-         $bestvertex$1 = $bestvertex$0185;
-         $minweight$3 = $minweight$2186;
-        } else if (!(HEAP8[$11 + ($k$1183 * 24 | 0) >> 0] | 0)) {
-         $18 = $11;
-         $bestvertex$1 = $bestvertex$0185;
-         $minweight$3 = $minweight$2186;
-        } else {
-         if ($k$1183 >>> 0 > $i$2189 >>> 0) {
-          $call162 = __ZN8TPPLPoly8GetPointEl($poly, $i$2189$looptemp) | 0;
-          $d1$0 = +__ZN13TPPLPartition8DistanceERK9TPPLPointS2_(0, $call162, __ZN8TPPLPoly8GetPointEl($poly, $k$1183) | 0);
-         } else $d1$0 = 0.0;
-         if ($add134 >>> 0 > ($k$1183 + 1 | 0) >>> 0) {
-          $call173 = __ZN8TPPLPoly8GetPointEl($poly, $k$1183) | 0;
-          $d2$0 = +__ZN13TPPLPartition8DistanceERK9TPPLPointS2_(0, $call173, __ZN8TPPLPoly8GetPointEl($poly, $add134) | 0);
-         } else $d2$0 = 0.0;
-         $15 = HEAP32[$arrayidx135 >> 2] | 0;
-         $add187 = $d2$0 + ($d1$0 + (+HEAPF64[(HEAP32[$arrayidx145 >> 2] | 0) + ($i$2189$looptemp * 24 | 0) + 8 >> 3] + +HEAPF64[$15 + ($k$1183 * 24 | 0) + 8 >> 3]));
-         $or$cond = ($bestvertex$0185 | 0) == -1 | $add187 < $minweight$2186;
-         $18 = $15;
-         $bestvertex$1 = $or$cond ? $k$1183 : $bestvertex$0185;
-         $minweight$3 = $or$cond ? $add187 : $minweight$2186;
-        }
-        $k$1183 = $k$1183 + 1 | 0;
-        if ($k$1183 >>> 0 >= $add134 >>> 0) break; else {
-         $11 = $18;
-         $bestvertex$0185 = $bestvertex$1;
-         $minweight$2186 = $minweight$3;
-        }
-       }
-       if (($bestvertex$1 | 0) == -1) break L45;
-       HEAP32[$18 + ($i$2189$looptemp * 24 | 0) + 16 >> 2] = $bestvertex$1;
-       HEAPF64[$18 + ($i$2189$looptemp * 24 | 0) + 8 >> 3] = $minweight$3;
-       $minweight$4 = $minweight$3;
-      }
-      if (($i$2189 | 0) >= ($sub131 | 0)) {
-       $minweight$1$lcssa = $minweight$4;
-       break;
-      } else $minweight$1188 = $minweight$4;
-     }
-    } else $minweight$1$lcssa = $minweight$0195;
-    $gap$0193 = $gap$0193 + 1 | 0;
-    if (($call4 | 0) <= ($gap$0193 | 0)) {
-     label = 54;
-     break L43;
-    } else $minweight$0195 = $minweight$1$lcssa;
-   }
-   if ($cmp204) {
-    $i$3178 = 1;
-    do {
-     $17 = HEAP32[$call6 + ($i$3178 << 2) >> 2] | 0;
-     if ($17 | 0) __ZdaPv($17);
-     $i$3178 = $i$3178 + 1 | 0;
-    } while (($i$3178 | 0) != ($call4 | 0));
-   }
-   __ZdaPv($call6);
-   $retval$0 = 0;
-  } else label = 54; while (0);
-  if ((label | 0) == 54) {
-   HEAP32[$newdiagonal >> 2] = 0;
-   $index2 = $newdiagonal + 4 | 0;
-   HEAP32[$index2 >> 2] = $sub211;
-   __ZNSt3__24listIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE9push_backERKS2_($diagonals, $newdiagonal);
-   L80 : do if (!(HEAP32[$__value_$i$i$i$i >> 2] | 0)) $ret$0 = 1; else while (1) {
-    $20 = HEAP32[$__next_$i$i$i >> 2] | 0;
-    $diagonal$sroa$0$0$copyload = HEAP32[$20 + 8 >> 2] | 0;
-    $diagonal$sroa$8$0$copyload = HEAP32[$20 + 12 >> 2] | 0;
-    __ZNSt3__24listIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE9pop_frontEv($diagonals);
-    $22 = HEAP32[(HEAP32[$call6 + ($diagonal$sroa$8$0$copyload << 2) >> 2] | 0) + ($diagonal$sroa$0$0$copyload * 24 | 0) + 16 >> 2] | 0;
-    if (($22 | 0) == -1) {
-     $ret$0 = 0;
-     break L80;
-    }
-    $call237 = __ZN8TPPLPoly8GetPointEl($poly, $diagonal$sroa$0$0$copyload) | 0;
-    $call239 = __ZN8TPPLPoly8GetPointEl($poly, $22) | 0;
-    __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call237, $call239, __ZN8TPPLPoly8GetPointEl($poly, $diagonal$sroa$8$0$copyload) | 0);
-    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
-    if (($22 | 0) > ($diagonal$sroa$0$0$copyload + 1 | 0)) {
-     HEAP32[$newdiagonal >> 2] = $diagonal$sroa$0$0$copyload;
-     HEAP32[$index2 >> 2] = $22;
-     __ZNSt3__24listIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE9push_backERKS2_($diagonals, $newdiagonal);
-    }
-    if (($diagonal$sroa$8$0$copyload | 0) > ($22 + 1 | 0)) {
-     HEAP32[$newdiagonal >> 2] = $22;
-     HEAP32[$index2 >> 2] = $diagonal$sroa$8$0$copyload;
-     __ZNSt3__24listIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE9push_backERKS2_($diagonals, $newdiagonal);
-    }
-    if (!(HEAP32[$__value_$i$i$i$i >> 2] | 0)) {
-     $ret$0 = 1;
-     break;
-    }
-   } while (0);
-   if ($cmp204) {
-    $i$4180 = 1;
-    do {
-     $24 = HEAP32[$call6 + ($i$4180 << 2) >> 2] | 0;
-     if ($24 | 0) __ZdaPv($24);
-     $i$4180 = $i$4180 + 1 | 0;
-    } while (($i$4180 | 0) != ($call4 | 0));
-   }
-   __ZdaPv($call6);
-   $retval$0 = $ret$0;
-  }
-  __ZN8TPPLPolyD2Ev($triangle);
-  __ZNSt3__210__list_impIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEED2Ev($diagonals);
-  $retval$1 = $retval$0;
- } else $retval$1 = 0;
- STACKTOP = sp;
- return $retval$1 | 0;
-}
-
 function __sg_gl_apply_pipeline($pip) {
  $pip = $pip | 0;
  var $100 = 0, $117 = 0, $145 = 0, $226 = 0, $98 = 0, $blend_color364 = 0, $c = 0, $cache_bs = 0, $cache_ds = 0, $cache_sfs = 0, $cache_ss = 0, $call169 = 0, $call194 = 0, $call196 = 0, $call249 = 0, $call251 = 0, $call253 = 0, $call270 = 0, $cm = 0, $gl_face = 0, $gl_mode = 0, $gl_winding = 0, $i = 0, $i274 = 0, $pip$addr = 0, $po_enabled = 0, $state_bs = 0, $state_ds = 0, $state_sfs = 0, $state_ss = 0, label = 0, sp = 0;
@@ -16730,6 +15772,255 @@ function __sg_gl_apply_pipeline($pip) {
  } else ___assert_fail(29811, 21600, 6772, 39993);
 }
 
+function __ZN6DrMesh12smoothPointsERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEidd($agg$result, $outline_points, $neighbors, $neighbor_distance, $weight) {
+ $agg$result = $agg$result | 0;
+ $outline_points = $outline_points | 0;
+ $neighbors = $neighbors | 0;
+ $neighbor_distance = +$neighbor_distance;
+ $weight = +$weight;
+ var $$pre244 = 0, $0 = 0, $1 = 0, $12 = 0, $13 = 0.0, $14 = 0.0, $15 = 0, $17 = 0, $2 = 0, $3 = 0.0, $4 = 0.0, $5 = 0.0, $6 = 0.0, $7 = 0, $8 = 0, $__end_$i = 0, $__end_$i$i = 0, $__value_$i$i$i$i = 0, $add = 0, $add108 = 0, $add173 = 0, $agg$tmp = 0, $agg$tmp118 = 0, $agg$tmp162 = 0, $arrayidx$i176 = 0, $average_from$2 = 0, $average_to$2 = 0, $call117 = 0, $call123 = 0, $call125 = 0.0, $call131 = 0, $call160 = 0, $call167 = 0, $call169 = 0.0, $call176 = 0, $call176$byval_copy = 0, $call212 = 0, $call85 = 0, $call90 = 0, $call92 = 0.0, $call97 = 0, $check_point = 0, $check_point157$byval_copy = 0, $div219 = 0.0, $i$0 = 0, $i70$0 = 0, $j$0 = 0, $j150$0 = 0, $j202$0 = 0, $neighbor_distance$addr$0 = 0.0, $smooth_points = 0, $start_check_point = 0, $sub = 0.0, $sub$ptr$div$i = 0, $sub$ptr$sub$i = 0, $sub107 = 0, $sub120 = 0, $sub217 = 0, $sub54 = 0.0, $sub87 = 0, $this_point = 0, $total_used$0 = 0.0, $total_used$1 = 0.0, $total_used$2 = 0.0, $x79$0 = 0.0, $x79$1 = 0.0, $x79$2 = 0.0, $x_max$0 = 0.0, $x_min$0 = 0.0, $y224 = 0, $y81$0 = 0.0, $y81$1 = 0.0, $y81$2 = 0.0, $y82 = 0, $y_max$0 = 0.0, $y_min$0 = 0.0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 144 | 0;
+ $call176$byval_copy = sp + 112 | 0;
+ $check_point157$byval_copy = sp + 96 | 0;
+ $smooth_points = sp + 128 | 0;
+ $this_point = sp + 32 | 0;
+ $start_check_point = sp + 16 | 0;
+ $agg$tmp = sp + 80 | 0;
+ $check_point = sp;
+ $agg$tmp118 = sp + 64 | 0;
+ $agg$tmp162 = sp + 48 | 0;
+ HEAP32[$smooth_points >> 2] = 0;
+ $__end_$i$i = $smooth_points + 4 | 0;
+ HEAP32[$__end_$i$i >> 2] = 0;
+ $__value_$i$i$i$i = $smooth_points + 8 | 0;
+ HEAP32[$__value_$i$i$i$i >> 2] = 0;
+ $__end_$i = $outline_points + 4 | 0;
+ $0 = HEAP32[$__end_$i >> 2] | 0;
+ $1 = HEAP32[$outline_points >> 2] | 0;
+ $sub$ptr$sub$i = $0 - $1 | 0;
+ $sub$ptr$div$i = $sub$ptr$sub$i >> 4;
+ $2 = $1;
+ do if (!$sub$ptr$sub$i) __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($agg$result, $outline_points); else {
+  $3 = +HEAPF64[$2 >> 3];
+  $4 = +HEAPF64[$2 + 8 >> 3];
+  $i$0 = 0;
+  $x_max$0 = $3;
+  $x_min$0 = $3;
+  $y_max$0 = $4;
+  $y_min$0 = $4;
+  while (1) {
+   if (($i$0 | 0) >= ($sub$ptr$div$i | 0)) break;
+   $5 = +HEAPF64[$2 + ($i$0 << 4) >> 3];
+   $6 = +HEAPF64[$2 + ($i$0 << 4) + 8 >> 3];
+   $i$0 = $i$0 + 1 | 0;
+   $x_max$0 = $5 > $x_max$0 ? $5 : $x_max$0;
+   $x_min$0 = $5 < $x_min$0 ? $5 : $x_min$0;
+   $y_max$0 = $6 > $y_max$0 ? $6 : $y_max$0;
+   $y_min$0 = $6 < $y_min$0 ? $6 : $y_min$0;
+  }
+  $sub = $x_max$0 - $x_min$0;
+  $sub54 = $y_max$0 - $y_min$0;
+  if ($sub < 50.0) $neighbor_distance$addr$0 = $neighbor_distance / (50.0 / $sub); else if ($sub54 < 50.0) $neighbor_distance$addr$0 = $neighbor_distance / (50.0 / $sub54); else $neighbor_distance$addr$0 = $neighbor_distance;
+  if (($sub$ptr$div$i | 0) <= ($neighbors << 1 | 0)) {
+   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($agg$result, $outline_points);
+   break;
+  }
+  $y82 = $this_point + 8 | 0;
+  $y224 = $call176$byval_copy + 8 | 0;
+  $12 = $2;
+  $7 = $0;
+  $8 = $1;
+  $i70$0 = 0;
+  while (1) {
+   if (($i70$0 | 0) >= ($7 - $8 >> 4 | 0)) break;
+   $arrayidx$i176 = $12 + ($i70$0 << 4) | 0;
+   HEAP32[$this_point >> 2] = HEAP32[$arrayidx$i176 >> 2];
+   HEAP32[$this_point + 4 >> 2] = HEAP32[$arrayidx$i176 + 4 >> 2];
+   HEAP32[$this_point + 8 >> 2] = HEAP32[$arrayidx$i176 + 8 >> 2];
+   HEAP32[$this_point + 12 >> 2] = HEAP32[$arrayidx$i176 + 12 >> 2];
+   $13 = +HEAPF64[$this_point >> 3];
+   $14 = +HEAPF64[$y82 >> 3];
+   $call85 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $i70$0) | 0;
+   HEAP32[$start_check_point >> 2] = HEAP32[$call85 >> 2];
+   HEAP32[$start_check_point + 4 >> 2] = HEAP32[$call85 + 4 >> 2];
+   HEAP32[$start_check_point + 8 >> 2] = HEAP32[$call85 + 8 >> 2];
+   HEAP32[$start_check_point + 12 >> 2] = HEAP32[$call85 + 12 >> 2];
+   _memmove($agg$tmp | 0, $call85 | 0, 16) | 0;
+   $sub87 = $i70$0 + -1 | 0;
+   $call90 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $sub87) | 0;
+   HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
+   HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$agg$tmp + 4 >> 2];
+   HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$agg$tmp + 8 >> 2];
+   HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$agg$tmp + 12 >> 2];
+   HEAP32[$call176$byval_copy >> 2] = HEAP32[$call90 >> 2];
+   HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call90 + 4 >> 2];
+   HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call90 + 8 >> 2];
+   HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call90 + 12 >> 2];
+   $call92 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy);
+   $add = $i70$0 + 1 | 0;
+   $call97 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $add) | 0;
+   HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$start_check_point >> 2];
+   HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$start_check_point + 4 >> 2];
+   HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$start_check_point + 8 >> 2];
+   HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$start_check_point + 12 >> 2];
+   HEAP32[$call176$byval_copy >> 2] = HEAP32[$call97 >> 2];
+   HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call97 + 4 >> 2];
+   HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call97 + 8 >> 2];
+   HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call97 + 12 >> 2];
+   do if (!(+__ZN2Dr24DifferenceBetween2AnglesEdd($call92, +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy)) <= 110.0)) {
+    $sub107 = $i70$0 - $neighbors | 0;
+    $add108 = $i70$0 + $neighbors | 0;
+    $j$0 = $sub87;
+    while (1) {
+     if (($j$0 | 0) < ($sub107 | 0)) {
+      $average_from$2 = $sub107;
+      break;
+     }
+     $call117 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j$0) | 0;
+     HEAP32[$check_point >> 2] = HEAP32[$call117 >> 2];
+     HEAP32[$check_point + 4 >> 2] = HEAP32[$call117 + 4 >> 2];
+     HEAP32[$check_point + 8 >> 2] = HEAP32[$call117 + 8 >> 2];
+     HEAP32[$check_point + 12 >> 2] = HEAP32[$call117 + 12 >> 2];
+     _memmove($agg$tmp118 | 0, $call117 | 0, 16) | 0;
+     $sub120 = $j$0 + -1 | 0;
+     $call123 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $sub120) | 0;
+     HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$agg$tmp118 >> 2];
+     HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$agg$tmp118 + 4 >> 2];
+     HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$agg$tmp118 + 8 >> 2];
+     HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$agg$tmp118 + 12 >> 2];
+     HEAP32[$call176$byval_copy >> 2] = HEAP32[$call123 >> 2];
+     HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call123 + 4 >> 2];
+     HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call123 + 8 >> 2];
+     HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call123 + 12 >> 2];
+     $call125 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy);
+     $call131 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j$0 + 1 | 0) | 0;
+     HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$check_point >> 2];
+     HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$check_point + 4 >> 2];
+     HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$check_point + 8 >> 2];
+     HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$check_point + 12 >> 2];
+     HEAP32[$call176$byval_copy >> 2] = HEAP32[$call131 >> 2];
+     HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call131 + 4 >> 2];
+     HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call131 + 8 >> 2];
+     HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call131 + 12 >> 2];
+     if (!(+__ZN2Dr24DifferenceBetween2AnglesEdd($call125, +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy)) <= 110.0)) $j$0 = $sub120; else {
+      $average_from$2 = $j$0;
+      break;
+     }
+    }
+    $j150$0 = $add;
+    while (1) {
+     if (($j150$0 | 0) > ($add108 | 0)) {
+      $average_to$2 = $add108;
+      break;
+     }
+     $call160 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j150$0) | 0;
+     HEAP32[$check_point >> 2] = HEAP32[$call160 >> 2];
+     HEAP32[$check_point + 4 >> 2] = HEAP32[$call160 + 4 >> 2];
+     HEAP32[$check_point + 8 >> 2] = HEAP32[$call160 + 8 >> 2];
+     HEAP32[$check_point + 12 >> 2] = HEAP32[$call160 + 12 >> 2];
+     _memmove($agg$tmp162 | 0, $call160 | 0, 16) | 0;
+     $call167 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j150$0 + -1 | 0) | 0;
+     HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$agg$tmp162 >> 2];
+     HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$agg$tmp162 + 4 >> 2];
+     HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$agg$tmp162 + 8 >> 2];
+     HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$agg$tmp162 + 12 >> 2];
+     HEAP32[$call176$byval_copy >> 2] = HEAP32[$call167 >> 2];
+     HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call167 + 4 >> 2];
+     HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call167 + 8 >> 2];
+     HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call167 + 12 >> 2];
+     $call169 = +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy);
+     $add173 = $j150$0 + 1 | 0;
+     $call176 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $add173) | 0;
+     HEAP32[$check_point157$byval_copy >> 2] = HEAP32[$check_point >> 2];
+     HEAP32[$check_point157$byval_copy + 4 >> 2] = HEAP32[$check_point + 4 >> 2];
+     HEAP32[$check_point157$byval_copy + 8 >> 2] = HEAP32[$check_point + 8 >> 2];
+     HEAP32[$check_point157$byval_copy + 12 >> 2] = HEAP32[$check_point + 12 >> 2];
+     HEAP32[$call176$byval_copy >> 2] = HEAP32[$call176 >> 2];
+     HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call176 + 4 >> 2];
+     HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call176 + 8 >> 2];
+     HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call176 + 12 >> 2];
+     if (!(+__ZN2Dr24DifferenceBetween2AnglesEdd($call169, +__ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($check_point157$byval_copy, $call176$byval_copy)) <= 110.0)) $j150$0 = $add173; else {
+      $average_to$2 = $j150$0;
+      break;
+     }
+    }
+    $j202$0 = $average_from$2;
+    $total_used$0 = 1.0;
+    $x79$0 = $13;
+    $y81$0 = $14;
+    while (1) {
+     if (($j202$0 | 0) > ($average_to$2 | 0)) break;
+     if (($j202$0 | 0) == ($i70$0 | 0)) {
+      $total_used$2 = $total_used$0;
+      $x79$2 = $x79$0;
+      $y81$2 = $y81$0;
+     } else {
+      $call212 = __Z7pointAtRKNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEEi($outline_points, $j202$0) | 0;
+      HEAP32[$call176$byval_copy >> 2] = HEAP32[$call212 >> 2];
+      HEAP32[$call176$byval_copy + 4 >> 2] = HEAP32[$call212 + 4 >> 2];
+      HEAP32[$call176$byval_copy + 8 >> 2] = HEAP32[$call212 + 8 >> 2];
+      HEAP32[$call176$byval_copy + 12 >> 2] = HEAP32[$call212 + 12 >> 2];
+      if (+__ZNK8DrPointF8distanceERKS_($this_point, $call176$byval_copy) < $neighbor_distance$addr$0) {
+       $sub217 = $j202$0 - $i70$0 | 0;
+       $div219 = 1.0 / +((($sub217 | 0) > -1 ? $sub217 : 0 - $sub217 | 0) | 0);
+       $total_used$1 = $total_used$0 + $div219 * $weight;
+       $x79$1 = $x79$0 + $div219 * (+HEAPF64[$call176$byval_copy >> 3] * $weight);
+       $y81$1 = $y81$0 + $div219 * (+HEAPF64[$y224 >> 3] * $weight);
+      } else {
+       $total_used$1 = $total_used$0;
+       $x79$1 = $x79$0;
+       $y81$1 = $y81$0;
+      }
+      $total_used$2 = $total_used$1;
+      $x79$2 = $x79$1;
+      $y81$2 = $y81$1;
+     }
+     $j202$0 = $j202$0 + 1 | 0;
+     $total_used$0 = $total_used$2;
+     $x79$0 = $x79$2;
+     $y81$0 = $y81$2;
+    }
+    __ZN8DrPointFC2Edd($call176$byval_copy, $x79$0 / $total_used$0, $y81$0 / $total_used$0);
+    $17 = HEAP32[$__end_$i$i >> 2] | 0;
+    if ($17 >>> 0 < (HEAP32[$__value_$i$i$i$i >> 2] | 0) >>> 0) {
+     HEAP32[$17 >> 2] = HEAP32[$call176$byval_copy >> 2];
+     HEAP32[$17 + 4 >> 2] = HEAP32[$call176$byval_copy + 4 >> 2];
+     HEAP32[$17 + 8 >> 2] = HEAP32[$call176$byval_copy + 8 >> 2];
+     HEAP32[$17 + 12 >> 2] = HEAP32[$call176$byval_copy + 12 >> 2];
+     HEAP32[$__end_$i$i >> 2] = $17 + 16;
+    } else __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($smooth_points, $call176$byval_copy);
+   } else {
+    $15 = HEAP32[$__end_$i$i >> 2] | 0;
+    if (($15 | 0) == (HEAP32[$__value_$i$i$i$i >> 2] | 0)) {
+     __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($smooth_points, $this_point);
+     break;
+    } else {
+     HEAP32[$15 >> 2] = HEAP32[$this_point >> 2];
+     HEAP32[$15 + 4 >> 2] = HEAP32[$this_point + 4 >> 2];
+     HEAP32[$15 + 8 >> 2] = HEAP32[$this_point + 8 >> 2];
+     HEAP32[$15 + 12 >> 2] = HEAP32[$this_point + 12 >> 2];
+     HEAP32[$__end_$i$i >> 2] = $15 + 16;
+     break;
+    }
+   } while (0);
+   $$pre244 = HEAP32[$outline_points >> 2] | 0;
+   $12 = $$pre244;
+   $7 = HEAP32[$__end_$i >> 2] | 0;
+   $8 = $$pre244;
+   $i70$0 = $add;
+  }
+  HEAP32[$agg$result >> 2] = HEAP32[$smooth_points >> 2];
+  HEAP32[$agg$result + 4 >> 2] = HEAP32[$__end_$i$i >> 2];
+  HEAP32[$agg$result + 8 >> 2] = HEAP32[$__value_$i$i$i$i >> 2];
+  HEAP32[$__value_$i$i$i$i >> 2] = 0;
+  HEAP32[$__end_$i$i >> 2] = 0;
+  HEAP32[$smooth_points >> 2] = 0;
+ } while (0);
+ __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($smooth_points);
+ STACKTOP = sp;
+ return;
+}
 function _free($mem) {
  $mem = $mem | 0;
  var $$pre$phiZ2D = 0, $0 = 0, $1 = 0, $10 = 0, $11 = 0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $18 = 0, $2 = 0, $23 = 0, $24 = 0, $25 = 0, $27 = 0, $28 = 0, $29 = 0, $35 = 0, $36 = 0, $4 = 0, $42 = 0, $43 = 0, $44 = 0, $48 = 0, $49 = 0, $5 = 0, $50 = 0, $51 = 0, $53 = 0, $58 = 0, $59 = 0, $60 = 0, $63 = 0, $64 = 0, $65 = 0, $67 = 0, $68 = 0, $70 = 0, $73 = 0, $74 = 0, $9 = 0, $F510$0 = 0, $I534$0 = 0, $K583$0312 = 0, $R$1 = 0, $R$1$be = 0, $R$1$ph = 0, $R$3 = 0, $R332$1 = 0, $R332$1$be = 0, $R332$1$ph = 0, $R332$3 = 0, $RP$1 = 0, $RP$1$be = 0, $RP$1$ph = 0, $RP360$1 = 0, $RP360$1$be = 0, $RP360$1$ph = 0, $T$0$lcssa = 0, $T$0311 = 0, $add$ptr = 0, $add$ptr16 = 0, $add$ptr6 = 0, $add17 = 0, $add246 = 0, $add258 = 0, $add267 = 0, $add559 = 0, $and = 0, $and5 = 0, $and545 = 0, $and549 = 0, $and554 = 0, $arrayidx = 0, $arrayidx108 = 0, $arrayidx113 = 0, $arrayidx130 = 0, $arrayidx149 = 0, $arrayidx279 = 0, $arrayidx362 = 0, $arrayidx374 = 0, $arrayidx379 = 0, $arrayidx400 = 0, $arrayidx419 = 0, $arrayidx509 = 0, $arrayidx567 = 0, $arrayidx599 = 0, $arrayidx99 = 0, $bk343 = 0, $bk82 = 0, $child = 0, $child171 = 0, $child361 = 0, $child443 = 0, $dec = 0, $fd311 = 0, $fd322$pre$phiZ2D = 0, $fd347 = 0, $fd56 = 0, $fd620 = 0, $fd67$pre$phiZ2D = 0, $fd86 = 0, $head209 = 0, $head231 = 0, $p$1 = 0, $psize$1 = 0, $psize$2 = 0, $shl511 = 0, $shl546 = 0, $shl551 = 0, $shl573 = 0, $shr = 0, $shr268 = 0, $shr501 = 0, $shr535 = 0, $sp$0$i = 0, $sp$0$in$i = 0;
@@ -17139,6 +16430,314 @@ function _free($mem) {
  }
  HEAP32[548315] = -1;
  return;
+}
+
+function __ZN13TPPLPartition15Triangulate_OPTEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE($this, $poly, $triangles) {
+ $this = $this | 0;
+ $poly = $poly | 0;
+ $triangles = $triangles | 0;
+ var $$pre178 = 0, $11 = 0, $15 = 0, $17 = 0, $19 = 0, $2 = 0, $21 = 0, $22 = 0, $23 = 0, $6 = 0, $7 = 0, $__next_$i$i$i = 0, $__value_$i$i$i$i = 0, $add = 0, $add134 = 0, $add187 = 0.0, $add94 = 0, $arrayidx135 = 0, $arrayidx145 = 0, $arrayidx17 = 0, $bestvertex$0 = 0, $bestvertex$1 = 0, $call13 = 0, $call162 = 0, $call173 = 0, $call237 = 0, $call239 = 0, $call29 = 0, $call34 = 0, $call37 = 0, $call4 = 0, $call43 = 0, $call47 = 0, $call6 = 0, $call60 = 0, $call64 = 0, $call70 = 0, $call74 = 0, $call87 = 0, $call92 = 0, $call96 = 0, $cmp30 = 0, $cmp40 = 0, $d1$0 = 0.0, $d2$0 = 0.0, $diagonal$sroa$0$0$copyload = 0, $diagonal$sroa$8$0$copyload = 0, $diagonals = 0, $gap$0 = 0, $i$0 = 0, $i$1 = 0, $i$2 = 0, $i$2$ph = 0, $i$3 = 0, $i$4 = 0, $inc106$pre$phiZ2D = 0, $index2 = 0, $j$0 = 0, $k$0 = 0, $k$1 = 0, $minweight$0 = 0.0, $minweight$1$ph = 0.0, $minweight$2 = 0.0, $minweight$3 = 0.0, $newdiagonal = 0, $or$cond = 0, $p1 = 0, $p2 = 0, $p3 = 0, $p4 = 0, $ret$0 = 0, $retval$0 = 0, $retval$1 = 0, $sub = 0, $sub131 = 0, $sub35 = 0, $triangle = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 128 | 0;
+ $p1 = sp + 72 | 0;
+ $p2 = sp + 48 | 0;
+ $p3 = sp + 24 | 0;
+ $p4 = sp;
+ $newdiagonal = sp + 120 | 0;
+ $diagonals = sp + 108 | 0;
+ $triangle = sp + 96 | 0;
+ if (__ZNK8TPPLPoly5ValidEv($poly) | 0) {
+  HEAP32[$diagonals >> 2] = $diagonals;
+  $__next_$i$i$i = $diagonals + 4 | 0;
+  HEAP32[$__next_$i$i$i >> 2] = $diagonals;
+  $__value_$i$i$i$i = $diagonals + 8 | 0;
+  HEAP32[$__value_$i$i$i$i >> 2] = 0;
+  __ZN8TPPLPolyC2Ev($triangle);
+  $call4 = __ZNK8TPPLPoly12GetNumPointsEv($poly) | 0;
+  $call6 = __Znam($call4 >>> 0 > 1073741823 ? -1 : $call4 << 2) | 0;
+  $i$0 = 1;
+  while (1) {
+   if (($i$0 | 0) >= ($call4 | 0)) break;
+   HEAP32[$call6 + ($i$0 << 2) >> 2] = __Znam($i$0 >>> 0 > 178956970 ? -1 : $i$0 * 24 | 0) | 0;
+   $i$0 = $i$0 + 1 | 0;
+  }
+  $sub = $call4 + -1 | 0;
+  $i$1 = 0;
+  while (1) {
+   if (($i$1 | 0) >= ($sub | 0)) break;
+   $call13 = __ZN8TPPLPoly8GetPointEl($poly, $i$1) | 0;
+   HEAP32[$p1 >> 2] = HEAP32[$call13 >> 2];
+   HEAP32[$p1 + 4 >> 2] = HEAP32[$call13 + 4 >> 2];
+   HEAP32[$p1 + 8 >> 2] = HEAP32[$call13 + 8 >> 2];
+   HEAP32[$p1 + 12 >> 2] = HEAP32[$call13 + 12 >> 2];
+   HEAP32[$p1 + 16 >> 2] = HEAP32[$call13 + 16 >> 2];
+   HEAP32[$p1 + 20 >> 2] = HEAP32[$call13 + 20 >> 2];
+   $add = $i$1 + 1 | 0;
+   $cmp30 = ($i$1 | 0) == 0;
+   $cmp40 = ($i$1 | 0) == ($sub | 0);
+   $sub35 = $i$1 + -1 | 0;
+   $j$0 = $add;
+   while (1) {
+    if (($j$0 | 0) >= ($call4 | 0)) break;
+    $arrayidx17 = $call6 + ($j$0 << 2) | 0;
+    $2 = HEAP32[$arrayidx17 >> 2] | 0;
+    HEAP8[$2 + ($i$1 * 24 | 0) >> 0] = 1;
+    HEAPF64[$2 + ($i$1 * 24 | 0) + 8 >> 3] = 0.0;
+    HEAP32[$2 + ($i$1 * 24 | 0) + 16 >> 2] = -1;
+    L13 : do if (($j$0 | 0) != ($add | 0)) {
+     $call29 = __ZN8TPPLPoly8GetPointEl($poly, $j$0) | 0;
+     HEAP32[$p2 >> 2] = HEAP32[$call29 >> 2];
+     HEAP32[$p2 + 4 >> 2] = HEAP32[$call29 + 4 >> 2];
+     HEAP32[$p2 + 8 >> 2] = HEAP32[$call29 + 8 >> 2];
+     HEAP32[$p2 + 12 >> 2] = HEAP32[$call29 + 12 >> 2];
+     HEAP32[$p2 + 16 >> 2] = HEAP32[$call29 + 16 >> 2];
+     HEAP32[$p2 + 20 >> 2] = HEAP32[$call29 + 20 >> 2];
+     if ($cmp30) {
+      $call34 = __ZN8TPPLPoly8GetPointEl($poly, $sub) | 0;
+      HEAP32[$p3 >> 2] = HEAP32[$call34 >> 2];
+      HEAP32[$p3 + 4 >> 2] = HEAP32[$call34 + 4 >> 2];
+      HEAP32[$p3 + 8 >> 2] = HEAP32[$call34 + 8 >> 2];
+      HEAP32[$p3 + 12 >> 2] = HEAP32[$call34 + 12 >> 2];
+      HEAP32[$p3 + 16 >> 2] = HEAP32[$call34 + 16 >> 2];
+      HEAP32[$p3 + 20 >> 2] = HEAP32[$call34 + 20 >> 2];
+     } else {
+      $call37 = __ZN8TPPLPoly8GetPointEl($poly, $sub35) | 0;
+      HEAP32[$p3 >> 2] = HEAP32[$call37 >> 2];
+      HEAP32[$p3 + 4 >> 2] = HEAP32[$call37 + 4 >> 2];
+      HEAP32[$p3 + 8 >> 2] = HEAP32[$call37 + 8 >> 2];
+      HEAP32[$p3 + 12 >> 2] = HEAP32[$call37 + 12 >> 2];
+      HEAP32[$p3 + 16 >> 2] = HEAP32[$call37 + 16 >> 2];
+      HEAP32[$p3 + 20 >> 2] = HEAP32[$call37 + 20 >> 2];
+     }
+     if ($cmp40) {
+      $call43 = __ZN8TPPLPoly8GetPointEl($poly, 0) | 0;
+      HEAP32[$p4 >> 2] = HEAP32[$call43 >> 2];
+      HEAP32[$p4 + 4 >> 2] = HEAP32[$call43 + 4 >> 2];
+      HEAP32[$p4 + 8 >> 2] = HEAP32[$call43 + 8 >> 2];
+      HEAP32[$p4 + 12 >> 2] = HEAP32[$call43 + 12 >> 2];
+      HEAP32[$p4 + 16 >> 2] = HEAP32[$call43 + 16 >> 2];
+      HEAP32[$p4 + 20 >> 2] = HEAP32[$call43 + 20 >> 2];
+     } else {
+      $call47 = __ZN8TPPLPoly8GetPointEl($poly, $add) | 0;
+      HEAP32[$p4 >> 2] = HEAP32[$call47 >> 2];
+      HEAP32[$p4 + 4 >> 2] = HEAP32[$call47 + 4 >> 2];
+      HEAP32[$p4 + 8 >> 2] = HEAP32[$call47 + 8 >> 2];
+      HEAP32[$p4 + 12 >> 2] = HEAP32[$call47 + 12 >> 2];
+      HEAP32[$p4 + 16 >> 2] = HEAP32[$call47 + 16 >> 2];
+      HEAP32[$p4 + 20 >> 2] = HEAP32[$call47 + 20 >> 2];
+     }
+     if (!(__ZN13TPPLPartition6InConeER9TPPLPointS1_S1_S1_($this, $p3, $p1, $p4, $p2) | 0)) {
+      HEAP8[(HEAP32[$arrayidx17 >> 2] | 0) + ($i$1 * 24 | 0) >> 0] = 0;
+      break;
+     }
+     if (!$j$0) {
+      $call60 = __ZN8TPPLPoly8GetPointEl($poly, $sub) | 0;
+      HEAP32[$p3 >> 2] = HEAP32[$call60 >> 2];
+      HEAP32[$p3 + 4 >> 2] = HEAP32[$call60 + 4 >> 2];
+      HEAP32[$p3 + 8 >> 2] = HEAP32[$call60 + 8 >> 2];
+      HEAP32[$p3 + 12 >> 2] = HEAP32[$call60 + 12 >> 2];
+      HEAP32[$p3 + 16 >> 2] = HEAP32[$call60 + 16 >> 2];
+      HEAP32[$p3 + 20 >> 2] = HEAP32[$call60 + 20 >> 2];
+     } else {
+      $call64 = __ZN8TPPLPoly8GetPointEl($poly, $j$0 + -1 | 0) | 0;
+      HEAP32[$p3 >> 2] = HEAP32[$call64 >> 2];
+      HEAP32[$p3 + 4 >> 2] = HEAP32[$call64 + 4 >> 2];
+      HEAP32[$p3 + 8 >> 2] = HEAP32[$call64 + 8 >> 2];
+      HEAP32[$p3 + 12 >> 2] = HEAP32[$call64 + 12 >> 2];
+      HEAP32[$p3 + 16 >> 2] = HEAP32[$call64 + 16 >> 2];
+      HEAP32[$p3 + 20 >> 2] = HEAP32[$call64 + 20 >> 2];
+     }
+     if (($j$0 | 0) == ($sub | 0)) {
+      $call70 = __ZN8TPPLPoly8GetPointEl($poly, 0) | 0;
+      HEAP32[$p4 >> 2] = HEAP32[$call70 >> 2];
+      HEAP32[$p4 + 4 >> 2] = HEAP32[$call70 + 4 >> 2];
+      HEAP32[$p4 + 8 >> 2] = HEAP32[$call70 + 8 >> 2];
+      HEAP32[$p4 + 12 >> 2] = HEAP32[$call70 + 12 >> 2];
+      HEAP32[$p4 + 16 >> 2] = HEAP32[$call70 + 16 >> 2];
+      HEAP32[$p4 + 20 >> 2] = HEAP32[$call70 + 20 >> 2];
+     } else {
+      $call74 = __ZN8TPPLPoly8GetPointEl($poly, $j$0 + 1 | 0) | 0;
+      HEAP32[$p4 >> 2] = HEAP32[$call74 >> 2];
+      HEAP32[$p4 + 4 >> 2] = HEAP32[$call74 + 4 >> 2];
+      HEAP32[$p4 + 8 >> 2] = HEAP32[$call74 + 8 >> 2];
+      HEAP32[$p4 + 12 >> 2] = HEAP32[$call74 + 12 >> 2];
+      HEAP32[$p4 + 16 >> 2] = HEAP32[$call74 + 16 >> 2];
+      HEAP32[$p4 + 20 >> 2] = HEAP32[$call74 + 20 >> 2];
+     }
+     if (!(__ZN13TPPLPartition6InConeER9TPPLPointS1_S1_S1_($this, $p3, $p2, $p4, $p1) | 0)) {
+      HEAP8[(HEAP32[$arrayidx17 >> 2] | 0) + ($i$1 * 24 | 0) >> 0] = 0;
+      break;
+     }
+     $k$0 = 0;
+     while (1) {
+      if (($k$0 | 0) >= ($call4 | 0)) break L13;
+      $call87 = __ZN8TPPLPoly8GetPointEl($poly, $k$0) | 0;
+      HEAP32[$p3 >> 2] = HEAP32[$call87 >> 2];
+      HEAP32[$p3 + 4 >> 2] = HEAP32[$call87 + 4 >> 2];
+      HEAP32[$p3 + 8 >> 2] = HEAP32[$call87 + 8 >> 2];
+      HEAP32[$p3 + 12 >> 2] = HEAP32[$call87 + 12 >> 2];
+      HEAP32[$p3 + 16 >> 2] = HEAP32[$call87 + 16 >> 2];
+      HEAP32[$p3 + 20 >> 2] = HEAP32[$call87 + 20 >> 2];
+      if (($k$0 | 0) == ($sub | 0)) {
+       $call92 = __ZN8TPPLPoly8GetPointEl($poly, 0) | 0;
+       HEAP32[$p4 >> 2] = HEAP32[$call92 >> 2];
+       HEAP32[$p4 + 4 >> 2] = HEAP32[$call92 + 4 >> 2];
+       HEAP32[$p4 + 8 >> 2] = HEAP32[$call92 + 8 >> 2];
+       HEAP32[$p4 + 12 >> 2] = HEAP32[$call92 + 12 >> 2];
+       HEAP32[$p4 + 16 >> 2] = HEAP32[$call92 + 16 >> 2];
+       HEAP32[$p4 + 20 >> 2] = HEAP32[$call92 + 20 >> 2];
+       $inc106$pre$phiZ2D = $k$0 + 1 | 0;
+      } else {
+       $add94 = $k$0 + 1 | 0;
+       $call96 = __ZN8TPPLPoly8GetPointEl($poly, $add94) | 0;
+       HEAP32[$p4 >> 2] = HEAP32[$call96 >> 2];
+       HEAP32[$p4 + 4 >> 2] = HEAP32[$call96 + 4 >> 2];
+       HEAP32[$p4 + 8 >> 2] = HEAP32[$call96 + 8 >> 2];
+       HEAP32[$p4 + 12 >> 2] = HEAP32[$call96 + 12 >> 2];
+       HEAP32[$p4 + 16 >> 2] = HEAP32[$call96 + 16 >> 2];
+       HEAP32[$p4 + 20 >> 2] = HEAP32[$call96 + 20 >> 2];
+       $inc106$pre$phiZ2D = $add94;
+      }
+      if (!(__ZN13TPPLPartition10IntersectsER9TPPLPointS1_S1_S1_(0, $p1, $p2, $p3, $p4) | 0)) $k$0 = $inc106$pre$phiZ2D; else break;
+     }
+     HEAP8[(HEAP32[$arrayidx17 >> 2] | 0) + ($i$1 * 24 | 0) >> 0] = 0;
+    } while (0);
+    $j$0 = $j$0 + 1 | 0;
+   }
+   $i$1 = $add;
+  }
+  $6 = HEAP32[$call6 + ($sub << 2) >> 2] | 0;
+  HEAP8[$6 >> 0] = 1;
+  HEAPF64[$6 + 8 >> 3] = 0.0;
+  HEAP32[$6 + 16 >> 2] = -1;
+  $gap$0 = 2;
+  $minweight$0 = 0.0;
+  L48 : while (1) {
+   if (($call4 | 0) <= ($gap$0 | 0)) {
+    label = 60;
+    break;
+   }
+   $sub131 = $call4 - $gap$0 | 0;
+   $i$2$ph = 0;
+   $minweight$1$ph = $minweight$0;
+   L51 : while (1) {
+    $i$2 = $i$2$ph;
+    while (1) {
+     if (($i$2 | 0) >= ($sub131 | 0)) break L51;
+     $add134 = $i$2 + $gap$0 | 0;
+     $arrayidx135 = $call6 + ($add134 << 2) | 0;
+     $7 = HEAP32[$arrayidx135 >> 2] | 0;
+     $$pre178 = $i$2 + 1 | 0;
+     if (!(HEAP8[$7 + ($i$2 * 24 | 0) >> 0] | 0)) $i$2 = $$pre178; else break;
+    }
+    $11 = $7;
+    $bestvertex$0 = -1;
+    $k$1 = $$pre178;
+    $minweight$2 = $minweight$1$ph;
+    while (1) {
+     if (($k$1 | 0) >= ($add134 | 0)) break;
+     $arrayidx145 = $call6 + ($k$1 << 2) | 0;
+     if (!(HEAP8[(HEAP32[$arrayidx145 >> 2] | 0) + ($i$2 * 24 | 0) >> 0] | 0)) {
+      $23 = $11;
+      $bestvertex$1 = $bestvertex$0;
+      $minweight$3 = $minweight$2;
+     } else if (!(HEAP8[$11 + ($k$1 * 24 | 0) >> 0] | 0)) {
+      $23 = $11;
+      $bestvertex$1 = $bestvertex$0;
+      $minweight$3 = $minweight$2;
+     } else {
+      if (($k$1 | 0) > ($$pre178 | 0)) {
+       $call162 = __ZN8TPPLPoly8GetPointEl($poly, $i$2) | 0;
+       $d1$0 = +__ZN13TPPLPartition8DistanceERK9TPPLPointS2_(0, $call162, __ZN8TPPLPoly8GetPointEl($poly, $k$1) | 0);
+      } else $d1$0 = 0.0;
+      if (($add134 | 0) > ($k$1 + 1 | 0)) {
+       $call173 = __ZN8TPPLPoly8GetPointEl($poly, $k$1) | 0;
+       $d2$0 = +__ZN13TPPLPartition8DistanceERK9TPPLPointS2_(0, $call173, __ZN8TPPLPoly8GetPointEl($poly, $add134) | 0);
+      } else $d2$0 = 0.0;
+      $15 = HEAP32[$arrayidx135 >> 2] | 0;
+      $add187 = $d2$0 + ($d1$0 + (+HEAPF64[(HEAP32[$arrayidx145 >> 2] | 0) + ($i$2 * 24 | 0) + 8 >> 3] + +HEAPF64[$15 + ($k$1 * 24 | 0) + 8 >> 3]));
+      $or$cond = ($bestvertex$0 | 0) == -1 | $add187 < $minweight$2;
+      $23 = $15;
+      $bestvertex$1 = $or$cond ? $k$1 : $bestvertex$0;
+      $minweight$3 = $or$cond ? $add187 : $minweight$2;
+     }
+     $11 = $23;
+     $bestvertex$0 = $bestvertex$1;
+     $k$1 = $k$1 + 1 | 0;
+     $minweight$2 = $minweight$3;
+    }
+    if (($bestvertex$0 | 0) == -1) {
+     label = 52;
+     break L48;
+    }
+    HEAP32[$11 + ($i$2 * 24 | 0) + 16 >> 2] = $bestvertex$0;
+    HEAPF64[$11 + ($i$2 * 24 | 0) + 8 >> 3] = $minweight$2;
+    $i$2$ph = $$pre178;
+    $minweight$1$ph = $minweight$2;
+   }
+   $gap$0 = $gap$0 + 1 | 0;
+   $minweight$0 = $minweight$1$ph;
+  }
+  if ((label | 0) == 52) {
+   $i$3 = 1;
+   while (1) {
+    if (($i$3 | 0) == ($call4 | 0)) break;
+    $17 = HEAP32[$call6 + ($i$3 << 2) >> 2] | 0;
+    if ($17 | 0) __ZdaPv($17);
+    $i$3 = $i$3 + 1 | 0;
+   }
+   __ZdaPv($call6);
+   $retval$0 = 0;
+  } else if ((label | 0) == 60) {
+   HEAP32[$newdiagonal >> 2] = 0;
+   $index2 = $newdiagonal + 4 | 0;
+   HEAP32[$index2 >> 2] = $sub;
+   __ZNSt3__24listIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE9push_backERKS2_($diagonals, $newdiagonal);
+   while (1) {
+    if (!(HEAP32[$__value_$i$i$i$i >> 2] | 0)) {
+     $ret$0 = 1;
+     break;
+    }
+    $19 = HEAP32[$__next_$i$i$i >> 2] | 0;
+    $diagonal$sroa$0$0$copyload = HEAP32[$19 + 8 >> 2] | 0;
+    $diagonal$sroa$8$0$copyload = HEAP32[$19 + 12 >> 2] | 0;
+    __ZNSt3__24listIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE9pop_frontEv($diagonals);
+    $21 = HEAP32[(HEAP32[$call6 + ($diagonal$sroa$8$0$copyload << 2) >> 2] | 0) + ($diagonal$sroa$0$0$copyload * 24 | 0) + 16 >> 2] | 0;
+    if (($21 | 0) == -1) {
+     $ret$0 = 0;
+     break;
+    }
+    $call237 = __ZN8TPPLPoly8GetPointEl($poly, $diagonal$sroa$0$0$copyload) | 0;
+    $call239 = __ZN8TPPLPoly8GetPointEl($poly, $21) | 0;
+    __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call237, $call239, __ZN8TPPLPoly8GetPointEl($poly, $diagonal$sroa$8$0$copyload) | 0);
+    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
+    if (($21 | 0) > ($diagonal$sroa$0$0$copyload + 1 | 0)) {
+     HEAP32[$newdiagonal >> 2] = $diagonal$sroa$0$0$copyload;
+     HEAP32[$index2 >> 2] = $21;
+     __ZNSt3__24listIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE9push_backERKS2_($diagonals, $newdiagonal);
+    }
+    if (($diagonal$sroa$8$0$copyload | 0) > ($21 + 1 | 0)) {
+     HEAP32[$newdiagonal >> 2] = $21;
+     HEAP32[$index2 >> 2] = $diagonal$sroa$8$0$copyload;
+     __ZNSt3__24listIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE9push_backERKS2_($diagonals, $newdiagonal);
+    }
+   }
+   $i$4 = 1;
+   while (1) {
+    if (($i$4 | 0) >= ($call4 | 0)) break;
+    $22 = HEAP32[$call6 + ($i$4 << 2) >> 2] | 0;
+    if ($22 | 0) __ZdaPv($22);
+    $i$4 = $i$4 + 1 | 0;
+   }
+   __ZdaPv($call6);
+   $retval$0 = $ret$0;
+  }
+  __ZN8TPPLPolyD2Ev($triangle);
+  __ZNSt3__210__list_impIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEED2Ev($diagonals);
+  $retval$1 = $retval$0;
+ } else $retval$1 = 0;
+ STACKTOP = sp;
+ return $retval$1 | 0;
 }
 
 function _stbtt__fill_active_edges_new($scanline, $scanline_fill, $len, $e, $y_top) {
@@ -18866,242 +18465,6 @@ function _stbi__psd_load($s, $x, $y, $comp, $req_comp, $ri, $bpc) {
  return $198 | 0;
 }
 
-function __ZN13TPPLPartition19TriangulateMonotoneEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE($this, $inPoly, $triangles) {
- $this = $this | 0;
- $inPoly = $inPoly | 0;
- $triangles = $triangles | 0;
- var $$lcssa283 = 0, $$sink = 0, $10 = 0, $16 = 0, $17 = 0, $2 = 0, $23 = 0, $5 = 0, $6 = 0, $7 = 0, $add = 0, $add33 = 0, $add52 = 0, $arrayidx = 0, $arrayidx118 = 0, $arrayidx123247 = 0, $arrayidx123251 = 0, $arrayidx124 = 0, $arrayidx144 = 0, $arrayidx174 = 0, $arrayidx177 = 0, $arrayidx179 = 0, $arrayidx197 = 0, $arrayidx200 = 0, $arrayidx240 = 0, $arrayidx88 = 0, $bottomindex$0$lcssa276280 = 0, $bottomindex$0265 = 0, $call11 = 0, $call114 = 0, $call17 = 0, $call2 = 0, $call4 = 0, $call46 = 0, $call49 = 0, $cmp168241 = 0, $cmp20262 = 0, $i$0267 = 0, $i$1263 = 0, $i$2261 = 0, $i$3$lcssa = 0, $i$3257 = 0, $i$4248 = 0, $inc158 = 0, $inc76 = 0, $inc98 = 0, $j$0239 = 0, $j$1237 = 0, $leftindex$0255 = 0, $leftindex$1 = 0, $retval$0 = 0, $retval$1 = 0, $rightindex$1256 = 0, $rightindex$1256$sink = 0, $rightindex$4 = 0, $stackptr$0250 = 0, $stackptr$1$in$lcssa = 0, $stackptr$1243 = 0, $stackptr$1243$in = 0, $stackptr$3 = 0, $sub125 = 0, $sub226284 = 0, $sub61 = 0, $topindex$0$lcssa277279 = 0, $topindex$0266 = 0, $triangle = 0, label = 0, sp = 0, $i$1263$looptemp = 0, $i$2261$looptemp = 0, $j$1237$looptemp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 16 | 0;
- $triangle = sp;
- if (__ZNK8TPPLPoly5ValidEv($inPoly) | 0) {
-  __ZN8TPPLPolyC2Ev($triangle);
-  $call2 = __ZNK8TPPLPoly12GetNumPointsEv($inPoly) | 0;
-  $call4 = __ZN8TPPLPoly9GetPointsEv($inPoly) | 0;
-  L3 : do if (($call2 | 0) == 3) {
-   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $inPoly);
-   $retval$0 = 1;
-  } else {
-   if (($call2 | 0) > 1) {
-    $bottomindex$0265 = 0;
-    $i$0267 = 1;
-    $topindex$0266 = 0;
-    do {
-     $arrayidx = $call4 + ($i$0267 * 24 | 0) | 0;
-     $call11 = __ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $arrayidx, $call4 + ($bottomindex$0265 * 24 | 0) | 0) | 0;
-     $bottomindex$0265 = $call11 ? $i$0267 : $bottomindex$0265;
-     $call17 = __ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $call4 + ($topindex$0266 * 24 | 0) | 0, $arrayidx) | 0;
-     $topindex$0266 = $call17 ? $i$0267 : $topindex$0266;
-     $i$0267 = $i$0267 + 1 | 0;
-    } while (($i$0267 | 0) != ($call2 | 0));
-    $cmp20262 = ($topindex$0266 | 0) == ($bottomindex$0265 | 0);
-    if ($cmp20262) {
-     $bottomindex$0$lcssa276280 = $bottomindex$0265;
-     $topindex$0$lcssa277279 = $topindex$0266;
-    } else {
-     $i$1263 = $topindex$0266;
-     do {
-      $add = $i$1263 + 1 | 0;
-      $i$1263$looptemp = $i$1263;
-      $i$1263 = ($add | 0) < ($call2 | 0) ? $add : 0;
-      if (!(__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $call4 + ($i$1263 * 24 | 0) | 0, $call4 + ($i$1263$looptemp * 24 | 0) | 0) | 0)) {
-       $retval$0 = 0;
-       break L3;
-      }
-     } while (($i$1263 | 0) != ($bottomindex$0265 | 0));
-     if ($cmp20262) {
-      $bottomindex$0$lcssa276280 = $bottomindex$0265;
-      $topindex$0$lcssa277279 = $topindex$0266;
-     } else {
-      $i$2261 = $bottomindex$0265;
-      while (1) {
-       $add33 = $i$2261 + 1 | 0;
-       $i$2261$looptemp = $i$2261;
-       $i$2261 = ($add33 | 0) < ($call2 | 0) ? $add33 : 0;
-       if (!(__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $call4 + ($i$2261$looptemp * 24 | 0) | 0, $call4 + ($i$2261 * 24 | 0) | 0) | 0)) {
-        $retval$0 = 0;
-        break L3;
-       }
-       if (($i$2261 | 0) == ($topindex$0266 | 0)) {
-        $bottomindex$0$lcssa276280 = $bottomindex$0265;
-        $topindex$0$lcssa277279 = $topindex$0266;
-        break;
-       }
-      }
-     }
-    }
-   } else {
-    $bottomindex$0$lcssa276280 = 0;
-    $topindex$0$lcssa277279 = 0;
-   }
-   $call46 = __Znam(($call2 | 0) > -1 ? $call2 : -1) | 0;
-   $2 = $call2 >>> 0 > 1073741823 ? -1 : $call2 << 2;
-   $call49 = __Znam($2) | 0;
-   HEAP32[$call49 >> 2] = $topindex$0$lcssa277279;
-   HEAP8[$call46 + $topindex$0$lcssa277279 >> 0] = 0;
-   $add52 = $topindex$0$lcssa277279 + 1 | 0;
-   $sub61 = $call2 + -1 | 0;
-   if (($call2 | 0) > 2) {
-    $i$3257 = 1;
-    $leftindex$0255 = ($add52 | 0) < ($call2 | 0) ? $add52 : 0;
-    $rightindex$1256 = (($topindex$0$lcssa277279 | 0) < 1 ? $call2 : $topindex$0$lcssa277279) + -1 | 0;
-    while (1) {
-     do if (($leftindex$0255 | 0) == ($bottomindex$0$lcssa276280 | 0)) {
-      HEAP32[$call49 + ($i$3257 << 2) >> 2] = $rightindex$1256;
-      $$sink = -1;
-      $leftindex$1 = $bottomindex$0$lcssa276280;
-      $rightindex$1256$sink = $rightindex$1256;
-      $rightindex$4 = ($rightindex$1256 | 0) < 1 ? $sub61 : $rightindex$1256 + -1 | 0;
-     } else {
-      if (($rightindex$1256 | 0) == ($bottomindex$0$lcssa276280 | 0)) {
-       HEAP32[$call49 + ($i$3257 << 2) >> 2] = $leftindex$0255;
-       $inc76 = $leftindex$0255 + 1 | 0;
-       $$sink = 1;
-       $leftindex$1 = ($inc76 | 0) < ($call2 | 0) ? $inc76 : 0;
-       $rightindex$1256$sink = $leftindex$0255;
-       $rightindex$4 = $bottomindex$0$lcssa276280;
-       break;
-      }
-      $arrayidx88 = $call49 + ($i$3257 << 2) | 0;
-      if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $call4 + ($leftindex$0255 * 24 | 0) | 0, $call4 + ($rightindex$1256 * 24 | 0) | 0) | 0) {
-       HEAP32[$arrayidx88 >> 2] = $rightindex$1256;
-       $$sink = -1;
-       $leftindex$1 = $leftindex$0255;
-       $rightindex$1256$sink = $rightindex$1256;
-       $rightindex$4 = ($rightindex$1256 | 0) < 1 ? $sub61 : $rightindex$1256 + -1 | 0;
-       break;
-      } else {
-       HEAP32[$arrayidx88 >> 2] = $leftindex$0255;
-       $inc98 = $leftindex$0255 + 1 | 0;
-       $$sink = 1;
-       $leftindex$1 = ($inc98 | 0) < ($call2 | 0) ? $inc98 : 0;
-       $rightindex$1256$sink = $leftindex$0255;
-       $rightindex$4 = $rightindex$1256;
-       break;
-      }
-     } while (0);
-     HEAP8[$call46 + $rightindex$1256$sink >> 0] = $$sink;
-     $i$3257 = $i$3257 + 1 | 0;
-     if (($i$3257 | 0) == ($sub61 | 0)) {
-      $i$3$lcssa = $sub61;
-      break;
-     } else {
-      $leftindex$0255 = $leftindex$1;
-      $rightindex$1256 = $rightindex$4;
-     }
-    }
-   } else $i$3$lcssa = 1;
-   HEAP32[$call49 + ($i$3$lcssa << 2) >> 2] = $bottomindex$0$lcssa276280;
-   HEAP8[$call46 + $bottomindex$0$lcssa276280 >> 0] = 0;
-   $call114 = __Znam($2) | 0;
-   HEAP32[$call114 >> 2] = HEAP32[$call49 >> 2];
-   $arrayidx118 = $call114 + 4 | 0;
-   HEAP32[$arrayidx118 >> 2] = HEAP32[$call49 + 4 >> 2];
-   $arrayidx123247 = $call49 + 8 | 0;
-   $5 = HEAP32[$arrayidx123247 >> 2] | 0;
-   if (($call2 | 0) > 3) {
-    $6 = $5;
-    $arrayidx123251 = $arrayidx123247;
-    $i$4248 = 2;
-    $stackptr$0250 = 2;
-    while (1) {
-     $arrayidx124 = $call46 + $6 | 0;
-     $7 = HEAP8[$arrayidx124 >> 0] | 0;
-     $sub125 = $stackptr$0250 + -1 | 0;
-     $cmp168241 = ($stackptr$0250 | 0) > 1;
-     if ($7 << 24 >> 24 == (HEAP8[$call46 + (HEAP32[$call114 + ($sub125 << 2) >> 2] | 0) >> 0] | 0)) {
-      L42 : do if ($cmp168241) {
-       $arrayidx174 = $call4 + ($6 * 24 | 0) | 0;
-       $17 = $7;
-       $stackptr$1243$in = $stackptr$0250;
-       while (1) {
-        $stackptr$1243 = $stackptr$1243$in + -1 | 0;
-        if ($17 << 24 >> 24 == 1) {
-         $arrayidx177 = $call4 + ((HEAP32[$call114 + ($stackptr$1243$in + -2 << 2) >> 2] | 0) * 24 | 0) | 0;
-         $arrayidx179 = $call4 + ((HEAP32[$call114 + ($stackptr$1243 << 2) >> 2] | 0) * 24 | 0) | 0;
-         if (!(__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $arrayidx174, $arrayidx177, $arrayidx179) | 0)) {
-          $stackptr$1$in$lcssa = $stackptr$1243$in;
-          break L42;
-         }
-         __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $arrayidx174, $arrayidx177, $arrayidx179);
-         __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
-        } else {
-         $arrayidx197 = $call4 + ((HEAP32[$call114 + ($stackptr$1243 << 2) >> 2] | 0) * 24 | 0) | 0;
-         $arrayidx200 = $call4 + ((HEAP32[$call114 + ($stackptr$1243$in + -2 << 2) >> 2] | 0) * 24 | 0) | 0;
-         if (!(__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $arrayidx174, $arrayidx197, $arrayidx200) | 0)) {
-          $stackptr$1$in$lcssa = $stackptr$1243$in;
-          break L42;
-         }
-         __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $arrayidx174, $arrayidx197, $arrayidx200);
-         __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
-        }
-        if (($stackptr$1243$in | 0) <= 2) {
-         $stackptr$1$in$lcssa = $stackptr$1243;
-         break L42;
-        }
-        $17 = HEAP8[$arrayidx124 >> 0] | 0;
-        $stackptr$1243$in = $stackptr$1243;
-       }
-      } else $stackptr$1$in$lcssa = $stackptr$0250; while (0);
-      HEAP32[$call114 + ($stackptr$1$in$lcssa << 2) >> 2] = $6;
-      $stackptr$3 = $stackptr$1$in$lcssa + 1 | 0;
-     } else {
-      if ($cmp168241) {
-       $arrayidx144 = $call4 + ($6 * 24 | 0) | 0;
-       $10 = $7;
-       $j$0239 = 0;
-       while (1) {
-        if ($10 << 24 >> 24 == 1) __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call4 + ((HEAP32[$call114 + ($j$0239 + 1 << 2) >> 2] | 0) * 24 | 0) | 0, $call4 + ((HEAP32[$call114 + ($j$0239 << 2) >> 2] | 0) * 24 | 0) | 0, $arrayidx144); else __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call4 + ((HEAP32[$call114 + ($j$0239 << 2) >> 2] | 0) * 24 | 0) | 0, $call4 + ((HEAP32[$call114 + ($j$0239 + 1 << 2) >> 2] | 0) * 24 | 0) | 0, $arrayidx144);
-        __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
-        $inc158 = $j$0239 + 1 | 0;
-        if (($inc158 | 0) >= ($sub125 | 0)) break;
-        $10 = HEAP8[$arrayidx124 >> 0] | 0;
-        $j$0239 = $inc158;
-       }
-       $16 = HEAP32[$arrayidx123251 >> 2] | 0;
-      } else $16 = $6;
-      HEAP32[$call114 >> 2] = HEAP32[$call49 + ($i$4248 + -1 << 2) >> 2];
-      HEAP32[$arrayidx118 >> 2] = $16;
-      $stackptr$3 = 2;
-     }
-     $i$4248 = $i$4248 + 1 | 0;
-     $arrayidx123251 = $call49 + ($i$4248 << 2) | 0;
-     $6 = HEAP32[$arrayidx123251 >> 2] | 0;
-     if (($i$4248 | 0) >= ($sub61 | 0)) break; else $stackptr$0250 = $stackptr$3;
-    }
-    if (($stackptr$3 | 0) > 1) {
-     $$lcssa283 = $6;
-     $sub226284 = $stackptr$3 + -1 | 0;
-     label = 49;
-    }
-   } else {
-    $$lcssa283 = $5;
-    $sub226284 = 1;
-    label = 49;
-   }
-   if ((label | 0) == 49) {
-    $arrayidx240 = $call4 + ($$lcssa283 * 24 | 0) | 0;
-    $j$1237 = 0;
-    do {
-     $j$1237$looptemp = $j$1237;
-     $j$1237 = $j$1237 + 1 | 0;
-     $23 = HEAP32[$call114 + ($j$1237 << 2) >> 2] | 0;
-     if ((HEAP8[$call46 + $23 >> 0] | 0) == 1) __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call4 + ((HEAP32[$call114 + ($j$1237$looptemp << 2) >> 2] | 0) * 24 | 0) | 0, $call4 + ($23 * 24 | 0) | 0, $arrayidx240); else __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call4 + ($23 * 24 | 0) | 0, $call4 + ((HEAP32[$call114 + ($j$1237$looptemp << 2) >> 2] | 0) * 24 | 0) | 0, $arrayidx240);
-     __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
-    } while (($j$1237 | 0) < ($sub226284 | 0));
-   }
-   __ZdaPv($call49);
-   __ZdaPv($call46);
-   __ZdaPv($call114);
-   $retval$0 = 1;
-  } while (0);
-  __ZN8TPPLPolyD2Ev($triangle);
-  $retval$1 = $retval$0;
- } else $retval$1 = 0;
- STACKTOP = sp;
- return $retval$1 | 0;
-}
-
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E16parseSpecialNameEv($this) {
  $this = $this | 0;
  var $Ty = 0, $call104 = 0, $call121 = 0, $call13 = 0, $call132 = 0, $call136 = 0, $call24 = 0, $call35 = 0, $call49 = 0, $call58 = 0, $call59 = 0, $call6 = 0, $call68 = 0, $call79 = 0, $call90 = 0, $cmp99 = 0, $ref$tmp = 0, $retval$0 = 0, $retval$1 = 0, $retval$11 = 0, $retval$12 = 0, $retval$13 = 0, $retval$14 = 0, $retval$2 = 0, $retval$3 = 0, $retval$4 = 0, $retval$5 = 0, $retval$6 = 0, $retval$7 = 0, $retval$8 = 0, $retval$9 = 0, sp = 0;
@@ -20187,7 +19550,7 @@ function _stbi__hdr_load($s, $x, $y, $comp, $req_comp, $ri) {
 }
 
 function __ZL5framev() {
- var $15 = 0, $19 = 0.0, $20 = 0, $3 = 0.0, $33 = 0, $39 = 0, $4 = 0.0, $43 = 0, $44 = 0, $45 = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $agg$tmp25 = 0, $agg$tmp25$byval_copy = 0, $agg$tmp4 = 0, $agg$tmp5 = 0, $agg$tmp8 = 0, $agg$tmp9 = 0, $call$i22 = 0, $call$i23 = 0, $call$i34 = 0, $call23 = 0, $call32 = 0.0, $conv = 0.0, $mul38 = 0.0, $proj = 0, $ref$tmp = 0, $ref$tmp19 = 0, $rotate = 0, $rxm = 0, $rym = 0, $view = 0, $view_proj$byval_copy = 0, dest = 0, sp = 0, src = 0, stop = 0;
+ var $15 = 0, $19 = 0.0, $20 = 0, $3 = 0.0, $33 = 0, $39 = 0, $4 = 0.0, $43 = 0, $44 = 0, $45 = 0, $__i$0$i$i$i = 0, $__i$0$i$i$i24 = 0, $__i$0$i$i$i43 = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $agg$tmp25 = 0, $agg$tmp25$byval_copy = 0, $agg$tmp4 = 0, $agg$tmp5 = 0, $agg$tmp8 = 0, $agg$tmp9 = 0, $call$i22 = 0, $call$i31 = 0, $call$i50 = 0, $call23 = 0, $call32 = 0.0, $conv = 0.0, $mul38 = 0.0, $proj = 0, $ref$tmp = 0, $ref$tmp19 = 0, $rotate = 0, $rxm = 0, $rym = 0, $view = 0, $view_proj$byval_copy = 0, dest = 0, sp = 0, src = 0, stop = 0;
  sp = STACKTOP;
  STACKTOP = STACKTOP + 784 | 0;
  $agg$tmp25$byval_copy = sp + 712 | 0;
@@ -20370,31 +19733,40 @@ function __ZL5framev() {
   HEAP32[$agg$tmp25$byval_copy >> 2] = HEAP32[$call$i22 >> 2];
   HEAP32[$agg$tmp25$byval_copy + 4 >> 2] = HEAP32[$call$i22 + 4 >> 2];
   HEAP32[$agg$tmp25$byval_copy + 8 >> 2] = HEAP32[$call$i22 + 8 >> 2];
-  HEAP32[$call$i22 >> 2] = 0;
-  HEAP32[$call$i22 + 4 >> 2] = 0;
-  HEAP32[$call$i22 + 8 >> 2] = 0;
+  $__i$0$i$i$i = 0;
+  while (1) {
+   if (($__i$0$i$i$i | 0) == 3) break;
+   HEAP32[$call$i22 + ($__i$0$i$i$i << 2) >> 2] = 0;
+   $__i$0$i$i$i = $__i$0$i$i$i + 1 | 0;
+  }
   +_fonsDrawText($20, $mul38, $19 * 20.0, (HEAP8[$agg$tmp25$byval_copy + 11 >> 0] | 0) < 0 ? HEAP32[$agg$tmp25$byval_copy >> 2] | 0 : $agg$tmp25$byval_copy, 0);
   __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp25$byval_copy);
   __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($ref$tmp19);
   __ZNSt3__29to_stringEi($ref$tmp19, (HEAP32[3178] | 0) + 1 | 0);
-  $call$i23 = __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6insertEmPKc($ref$tmp19, 0, 45675) | 0;
-  HEAP32[$agg$tmp25$byval_copy >> 2] = HEAP32[$call$i23 >> 2];
-  HEAP32[$agg$tmp25$byval_copy + 4 >> 2] = HEAP32[$call$i23 + 4 >> 2];
-  HEAP32[$agg$tmp25$byval_copy + 8 >> 2] = HEAP32[$call$i23 + 8 >> 2];
-  HEAP32[$call$i23 >> 2] = 0;
-  HEAP32[$call$i23 + 4 >> 2] = 0;
-  HEAP32[$call$i23 + 8 >> 2] = 0;
+  $call$i31 = __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6insertEmPKc($ref$tmp19, 0, 45675) | 0;
+  HEAP32[$agg$tmp25$byval_copy >> 2] = HEAP32[$call$i31 >> 2];
+  HEAP32[$agg$tmp25$byval_copy + 4 >> 2] = HEAP32[$call$i31 + 4 >> 2];
+  HEAP32[$agg$tmp25$byval_copy + 8 >> 2] = HEAP32[$call$i31 + 8 >> 2];
+  $__i$0$i$i$i24 = 0;
+  while (1) {
+   if (($__i$0$i$i$i24 | 0) == 3) break;
+   HEAP32[$call$i31 + ($__i$0$i$i$i24 << 2) >> 2] = 0;
+   $__i$0$i$i$i24 = $__i$0$i$i$i24 + 1 | 0;
+  }
   +_fonsDrawText($20, $mul38, $19 * 40.0, (HEAP8[$agg$tmp25$byval_copy + 11 >> 0] | 0) < 0 ? HEAP32[$agg$tmp25$byval_copy >> 2] | 0 : $agg$tmp25$byval_copy, 0);
   __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp25$byval_copy);
   __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($ref$tmp19);
   __ZNSt3__29to_stringEi($ref$tmp19, (__ZNK6DrMesh10indexCountEv(HEAP32[546685] | 0) | 0) / 3 | 0);
-  $call$i34 = __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6insertEmPKc($ref$tmp19, 0, 45685) | 0;
-  HEAP32[$agg$tmp25$byval_copy >> 2] = HEAP32[$call$i34 >> 2];
-  HEAP32[$agg$tmp25$byval_copy + 4 >> 2] = HEAP32[$call$i34 + 4 >> 2];
-  HEAP32[$agg$tmp25$byval_copy + 8 >> 2] = HEAP32[$call$i34 + 8 >> 2];
-  HEAP32[$call$i34 >> 2] = 0;
-  HEAP32[$call$i34 + 4 >> 2] = 0;
-  HEAP32[$call$i34 + 8 >> 2] = 0;
+  $call$i50 = __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6insertEmPKc($ref$tmp19, 0, 45685) | 0;
+  HEAP32[$agg$tmp25$byval_copy >> 2] = HEAP32[$call$i50 >> 2];
+  HEAP32[$agg$tmp25$byval_copy + 4 >> 2] = HEAP32[$call$i50 + 4 >> 2];
+  HEAP32[$agg$tmp25$byval_copy + 8 >> 2] = HEAP32[$call$i50 + 8 >> 2];
+  $__i$0$i$i$i43 = 0;
+  while (1) {
+   if (($__i$0$i$i$i43 | 0) == 3) break;
+   HEAP32[$call$i50 + ($__i$0$i$i$i43 << 2) >> 2] = 0;
+   $__i$0$i$i$i43 = $__i$0$i$i$i43 + 1 | 0;
+  }
   +_fonsDrawText($20, $mul38, $19 * 60.0, (HEAP8[$agg$tmp25$byval_copy + 11 >> 0] | 0) < 0 ? HEAP32[$agg$tmp25$byval_copy >> 2] | 0 : $agg$tmp25$byval_copy, 0);
   __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp25$byval_copy);
   __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($ref$tmp19);
@@ -20415,201 +19787,6 @@ function __ZL5framev() {
   HEAP32[$45 + 4 >> 2] = $44;
   HEAP32[546690] = 0;
  }
- STACKTOP = sp;
- return;
-}
-
-function __Z32meshopt_optimizeVertexCacheTablePjPKjmmPKN7meshopt16VertexScoreTableE($destination, $indices, $index_count, $vertex_count, $table) {
- $destination = $destination | 0;
- $indices = $indices | 0;
- $index_count = $index_count | 0;
- $vertex_count = $vertex_count | 0;
- $table = $table | 0;
- var $13 = 0, $14 = 0, $15 = 0, $16 = 0, $2 = 0, $20 = 0, $21 = 0, $23 = 0, $27 = 0, $31 = 0, $32 = 0, $5 = 0, $6 = 0, $add$ptr124 = 0, $add$ptr172 = 0, $add$ptr175 = 0, $add187 = 0.0, $adjacency = 0, $allocator = 0, $arrayidx109 = 0, $arrayidx110 = 0, $arrayidx112 = 0, $arrayidx126 = 0, $arrayidx132 = 0, $arrayidx165 = 0, $arrayidx186 = 0, $best_score$0226 = 0.0, $best_score$1$lcssa = 0.0, $best_score$1220 = 0.0, $best_score$2 = 0.0, $best_triangle$0225 = 0, $best_triangle$1$lcssa = 0, $best_triangle$1219 = 0, $best_triangle$2 = 0, $cache$0233 = 0, $cache$0233$phi = 0, $cache_count$0231 = 0, $cache_holder = 0, $cache_new$0232 = 0, $cache_write$0$lcssa = 0, $cache_write$0214 = 0, $cache_write$1 = 0, $call = 0, $call15 = 0, $call164 = 0.0, $call19 = 0, $call22 = 0, $call30 = 0, $cmp193 = 0, $current_triangle$0230 = 0, $current_triangle$1 = 0, $div = 0, $i$0237 = 0, $i127$0216 = 0, $i149$0227 = 0, $i31$0235 = 0, $i91$0213 = 0, $indices$addr$0 = 0, $input_cursor = 0, $it$0221 = 0, $k$0217 = 0, $mul36 = 0, $mul62 = 0, $mul73 = 0, $output_triangle$0229 = 0, $sub166 = 0.0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 272 | 0;
- $allocator = sp + 168 | 0;
- $adjacency = sp + 156 | 0;
- $cache_holder = sp;
- $input_cursor = sp + 152 | 0;
- $div = ($index_count >>> 0) / 3 | 0;
- if ($index_count - ($div * 3 | 0) | 0) ___assert_fail(47099, 46674, 173, 46759);
- __ZN17meshopt_AllocatorC2Ev($allocator);
- do if (!(($index_count | 0) == 0 | ($vertex_count | 0) == 0)) {
-  if (($destination | 0) == ($indices | 0)) {
-   $call = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $index_count) | 0;
-   _memcpy($call | 0, $destination | 0, $index_count << 2 | 0) | 0;
-   $indices$addr$0 = $call;
-  } else $indices$addr$0 = $indices;
-  HEAP32[$adjacency >> 2] = 0;
-  HEAP32[$adjacency + 4 >> 2] = 0;
-  HEAP32[$adjacency + 8 >> 2] = 0;
-  __ZN7meshoptL22buildTriangleAdjacencyERNS_17TriangleAdjacencyEPKjmmR17meshopt_Allocator($adjacency, $indices$addr$0, $index_count, $vertex_count, $allocator);
-  $call15 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
-  $2 = HEAP32[$adjacency >> 2] | 0;
-  _memcpy($call15 | 0, $2 | 0, $vertex_count << 2 | 0) | 0;
-  $call19 = __ZN17meshopt_Allocator8allocateIhEEPT_m($allocator, $div) | 0;
-  _memset($call19 | 0, 0, $div | 0) | 0;
-  $call22 = __ZN17meshopt_Allocator8allocateIfEEPT_m($allocator, $vertex_count) | 0;
-  $i$0237 = 0;
-  do {
-   HEAPF32[$call22 + ($i$0237 << 2) >> 2] = +__ZN7meshoptL11vertexScoreEPKNS_16VertexScoreTableEij($table, -1, HEAP32[$call15 + ($i$0237 << 2) >> 2] | 0);
-   $i$0237 = $i$0237 + 1 | 0;
-  } while ($i$0237 >>> 0 < $vertex_count >>> 0);
-  $call30 = __ZN17meshopt_Allocator8allocateIfEEPT_m($allocator, $div) | 0;
-  if ($index_count >>> 0 > 2) {
-   $i31$0235 = 0;
-   do {
-    $mul36 = $i31$0235 * 3 | 0;
-    HEAPF32[$call30 + ($i31$0235 << 2) >> 2] = +HEAPF32[$call22 + (HEAP32[$indices$addr$0 + ($mul36 << 2) >> 2] << 2) >> 2] + +HEAPF32[$call22 + (HEAP32[$indices$addr$0 + ($mul36 + 1 << 2) >> 2] << 2) >> 2] + +HEAPF32[$call22 + (HEAP32[$indices$addr$0 + ($mul36 + 2 << 2) >> 2] << 2) >> 2];
-    $i31$0235 = $i31$0235 + 1 | 0;
-   } while ($i31$0235 >>> 0 < $div >>> 0);
-  }
-  HEAP32[$input_cursor >> 2] = 1;
-  $5 = HEAP32[$adjacency + 8 >> 2] | 0;
-  $6 = HEAP32[$adjacency + 4 >> 2] | 0;
-  $cache$0233 = $cache_holder;
-  $cache_count$0231 = 0;
-  $cache_new$0232 = $cache_holder + 76 | 0;
-  $current_triangle$0230 = 0;
-  $output_triangle$0229 = 0;
-  L17 : while (1) {
-   if ($output_triangle$0229 >>> 0 >= $div >>> 0) {
-    label = 13;
-    break;
-   }
-   $mul62 = $current_triangle$0230 * 3 | 0;
-   $13 = HEAP32[$indices$addr$0 + ($mul62 << 2) >> 2] | 0;
-   $14 = HEAP32[$indices$addr$0 + ($mul62 + 1 << 2) >> 2] | 0;
-   $15 = HEAP32[$indices$addr$0 + ($mul62 + 2 << 2) >> 2] | 0;
-   $mul73 = $output_triangle$0229 * 3 | 0;
-   HEAP32[$destination + ($mul73 << 2) >> 2] = $13;
-   HEAP32[$destination + ($mul73 + 1 << 2) >> 2] = $14;
-   HEAP32[$destination + ($mul73 + 2 << 2) >> 2] = $15;
-   $output_triangle$0229 = $output_triangle$0229 + 1 | 0;
-   HEAP8[$call19 + $current_triangle$0230 >> 0] = 1;
-   HEAPF32[$call30 + ($current_triangle$0230 << 2) >> 2] = 0.0;
-   HEAP32[$cache_new$0232 >> 2] = $13;
-   HEAP32[$cache_new$0232 + 4 >> 2] = $14;
-   HEAP32[$cache_new$0232 + 8 >> 2] = $15;
-   if (!$cache_count$0231) $cache_write$0$lcssa = 3; else {
-    $cache_write$0214 = 3;
-    $i91$0213 = 0;
-    while (1) {
-     $20 = HEAP32[$cache$0233 + ($i91$0213 << 2) >> 2] | 0;
-     if (($20 | 0) == ($15 | 0) | (($20 | 0) == ($13 | 0) | ($20 | 0) == ($14 | 0))) $cache_write$1 = $cache_write$0214; else {
-      HEAP32[$cache_new$0232 + ($cache_write$0214 << 2) >> 2] = $20;
-      $cache_write$1 = $cache_write$0214 + 1 | 0;
-     }
-     $i91$0213 = $i91$0213 + 1 | 0;
-     if (($i91$0213 | 0) == ($cache_count$0231 | 0)) {
-      $cache_write$0$lcssa = $cache_write$1;
-      break;
-     } else $cache_write$0214 = $cache_write$1;
-    }
-   }
-   $16 = $cache_write$0$lcssa >>> 0 < 16;
-   $arrayidx109 = $call15 + ($13 << 2) | 0;
-   HEAP32[$arrayidx109 >> 2] = (HEAP32[$arrayidx109 >> 2] | 0) + -1;
-   $arrayidx110 = $call15 + ($14 << 2) | 0;
-   HEAP32[$arrayidx110 >> 2] = (HEAP32[$arrayidx110 >> 2] | 0) + -1;
-   $arrayidx112 = $call15 + ($15 << 2) | 0;
-   HEAP32[$arrayidx112 >> 2] = (HEAP32[$arrayidx112 >> 2] | 0) + -1;
-   $k$0217 = 0;
-   do {
-    $21 = HEAP32[$indices$addr$0 + ($k$0217 + $mul62 << 2) >> 2] | 0;
-    $add$ptr124 = $5 + (HEAP32[$6 + ($21 << 2) >> 2] << 2) | 0;
-    $arrayidx126 = $2 + ($21 << 2) | 0;
-    $23 = HEAP32[$arrayidx126 >> 2] | 0;
-    L30 : do if ($23 | 0) {
-     $i127$0216 = 0;
-     while (1) {
-      $arrayidx132 = $add$ptr124 + ($i127$0216 << 2) | 0;
-      $i127$0216 = $i127$0216 + 1 | 0;
-      if ((HEAP32[$arrayidx132 >> 2] | 0) == ($current_triangle$0230 | 0)) break;
-      if ($i127$0216 >>> 0 >= $23 >>> 0) break L30;
-     }
-     HEAP32[$arrayidx132 >> 2] = HEAP32[$add$ptr124 + ($23 + -1 << 2) >> 2];
-     HEAP32[$arrayidx126 >> 2] = (HEAP32[$arrayidx126 >> 2] | 0) + -1;
-    } while (0);
-    $k$0217 = $k$0217 + 1 | 0;
-   } while (($k$0217 | 0) != 3);
-   $cache_count$0231 = $16 ? $cache_write$0$lcssa : 16;
-   if (!$cache_write$0$lcssa) label = 37; else {
-    $best_score$0226 = 0.0;
-    $best_triangle$0225 = -1;
-    $i149$0227 = 0;
-    while (1) {
-     $27 = HEAP32[$cache_new$0232 + ($i149$0227 << 2) >> 2] | 0;
-     $call164 = +__ZN7meshoptL11vertexScoreEPKNS_16VertexScoreTableEij($table, $i149$0227 >>> 0 > 15 ? -1 : $i149$0227, HEAP32[$call15 + ($27 << 2) >> 2] | 0);
-     $arrayidx165 = $call22 + ($27 << 2) | 0;
-     $sub166 = $call164 - +HEAPF32[$arrayidx165 >> 2];
-     HEAPF32[$arrayidx165 >> 2] = $call164;
-     $add$ptr172 = $5 + (HEAP32[$6 + ($27 << 2) >> 2] << 2) | 0;
-     $31 = HEAP32[$2 + ($27 << 2) >> 2] | 0;
-     $add$ptr175 = $add$ptr172 + ($31 << 2) | 0;
-     if (!$31) {
-      $best_score$1$lcssa = $best_score$0226;
-      $best_triangle$1$lcssa = $best_triangle$0225;
-     } else {
-      $best_score$1220 = $best_score$0226;
-      $best_triangle$1219 = $best_triangle$0225;
-      $it$0221 = $add$ptr172;
-      while (1) {
-       $32 = HEAP32[$it$0221 >> 2] | 0;
-       if (HEAP8[$call19 + $32 >> 0] | 0) {
-        label = 33;
-        break L17;
-       }
-       $arrayidx186 = $call30 + ($32 << 2) | 0;
-       $add187 = $sub166 + +HEAPF32[$arrayidx186 >> 2];
-       if (!($add187 > 0.0)) {
-        label = 35;
-        break L17;
-       }
-       $cmp193 = $best_score$1220 < $add187;
-       $best_triangle$2 = $cmp193 ? $32 : $best_triangle$1219;
-       $best_score$2 = $cmp193 ? $add187 : $best_score$1220;
-       HEAPF32[$arrayidx186 >> 2] = $add187;
-       $it$0221 = $it$0221 + 4 | 0;
-       if (($it$0221 | 0) == ($add$ptr175 | 0)) {
-        $best_score$1$lcssa = $best_score$2;
-        $best_triangle$1$lcssa = $best_triangle$2;
-        break;
-       } else {
-        $best_score$1220 = $best_score$2;
-        $best_triangle$1219 = $best_triangle$2;
-       }
-      }
-     }
-     $i149$0227 = $i149$0227 + 1 | 0;
-     if ($i149$0227 >>> 0 >= $cache_write$0$lcssa >>> 0) break; else {
-      $best_score$0226 = $best_score$1$lcssa;
-      $best_triangle$0225 = $best_triangle$1$lcssa;
-     }
-    }
-    if (($best_triangle$1$lcssa | 0) == -1) label = 37; else $current_triangle$1 = $best_triangle$1$lcssa;
-   }
-   if ((label | 0) == 37) {
-    label = 0;
-    $current_triangle$1 = __ZN7meshoptL22getNextTriangleDeadEndERjPKhm($input_cursor, $call19, $div) | 0;
-   }
-   if (($current_triangle$1 | 0) == -1) {
-    label = 39;
-    break;
-   } else {
-    $cache$0233$phi = $cache_new$0232;
-    $current_triangle$0230 = $current_triangle$1;
-    $cache_new$0232 = $cache$0233;
-    $cache$0233 = $cache$0233$phi;
-   }
-  }
-  if ((label | 0) == 13) ___assert_fail(46792, 46674, 236, 46759); else if ((label | 0) == 33) ___assert_fail(46821, 46674, 323, 46759); else if ((label | 0) == 35) ___assert_fail(46841, 46674, 326, 46759); else if ((label | 0) == 39) {
-   if ((HEAP32[$input_cursor >> 2] | 0) != ($div | 0)) ___assert_fail(46855, 46674, 347, 46759);
-   if (($output_triangle$0229 | 0) == ($div | 0)) break; else ___assert_fail(46882, 46674, 348, 46759);
-  }
- } while (0);
- __ZN17meshopt_AllocatorD2Ev($allocator);
  STACKTOP = sp;
  return;
 }
@@ -21367,246 +20544,6 @@ function _stbi__pic_load_core($s, $width, $height, $comp, $result) {
  return 0;
 }
 
-function __ZNSt3__26__sortIRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__first, $__last, $__comp) {
- $__first = $__first | 0;
- $__last = $__last | 0;
- $__comp = $__comp | 0;
- var $0 = 0, $1 = 0, $10 = 0, $11 = 0, $12 = 0, $13 = 0, $14 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $6 = 0, $7 = 0, $8 = 0, $9 = 0, $__first$addr$1 = 0, $__first$addr$1$ph = 0, $__first$addr$1$ph$be = 0, $__first$addr$6 = 0, $__i$0178 = 0, $__i$1 = 0, $__i$2 = 0, $__i$3 = 0, $__i$4 = 0, $__i$5 = 0, $__i$6 = 0, $__j$1 = 0, $__j$2 = 0, $__j$3 = 0, $__j$4 = 0, $__j$5 = 0, $__last$addr$1$ph = 0, $__last$addr$1$ph$be = 0, $__last$addr$6 = 0, $__m$0 = 0, $__m$2 = 0, $__n_swaps$0 = 0, $__n_swaps$3 = 0, $__n_swaps$4 = 0, $__n_swaps$5 = 0, $__n_swaps$6 = 0, $add$ptr114 = 0, $add$ptr21 = 0, $call113 = 0, $cleanup$dest$slot$2 = 0, $div22 = 0, $incdec$ptr = 0, $incdec$ptr18 = 0, $incdec$ptr34 = 0, $incdec$ptr34174 = 0, $incdec$ptr34176 = 0, $incdec$ptr37 = 0, $incdec$ptr50 = 0, $incdec$ptr60 = 0, $incdec$ptr80 = 0, $incdec$ptr88 = 0, $sub$ptr$div = 0, $sub$ptr$lhs$cast = 0, $sub$ptr$lhs$cast$le = 0, $sub$ptr$lhs$cast126 = 0, $sub$ptr$sub = 0, label = 0;
- $__first$addr$1$ph = $__first;
- $__last$addr$1$ph = $__last;
- L1 : while (1) {
-  $sub$ptr$lhs$cast = $__last$addr$1$ph;
-  $incdec$ptr18 = $__last$addr$1$ph + -4 | 0;
-  $incdec$ptr34174 = $__last$addr$1$ph + -8 | 0;
-  $sub$ptr$lhs$cast$le = $__last$addr$1$ph;
-  $__first$addr$1 = $__first$addr$1$ph;
-  L3 : while (1) {
-   $sub$ptr$sub = $sub$ptr$lhs$cast - $__first$addr$1 | 0;
-   $sub$ptr$div = $sub$ptr$sub >> 2;
-   switch ($sub$ptr$div | 0) {
-   case 1:
-   case 0:
-    {
-     break L1;
-     break;
-    }
-   case 2:
-    {
-     label = 4;
-     break L1;
-     break;
-    }
-   case 3:
-    {
-     label = 6;
-     break L1;
-     break;
-    }
-   case 4:
-    {
-     label = 7;
-     break L1;
-     break;
-    }
-   case 5:
-    {
-     label = 8;
-     break L1;
-     break;
-    }
-   default:
-    {}
-   }
-   if (($sub$ptr$sub | 0) < 124) {
-    label = 10;
-    break L1;
-   }
-   $add$ptr21 = $__first$addr$1 + ((($sub$ptr$div | 0) / 2 | 0) << 2) | 0;
-   if (($sub$ptr$sub | 0) > 3996) {
-    $div22 = ($sub$ptr$div | 0) / 4 | 0;
-    $__n_swaps$0 = __ZNSt3__27__sort5IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_S5_T_($__first$addr$1, $__first$addr$1 + ($div22 << 2) | 0, $add$ptr21, $add$ptr21 + ($div22 << 2) | 0, $incdec$ptr18, $__comp) | 0;
-   } else $__n_swaps$0 = __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first$addr$1, $add$ptr21, $incdec$ptr18, $__comp) | 0;
-   $2 = HEAP32[$__first$addr$1 >> 2] | 0;
-   $3 = HEAP32[$add$ptr21 >> 2] | 0;
-   if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $3) | 0) {
-    $__j$3 = $incdec$ptr18;
-    $__n_swaps$3 = $__n_swaps$0;
-   } else {
-    if (($__first$addr$1 | 0) == ($incdec$ptr34174 | 0)) {
-     label = 18;
-     break;
-    }
-    $incdec$ptr34176 = $incdec$ptr34174;
-    while (1) {
-     $9 = HEAP32[$incdec$ptr34176 >> 2] | 0;
-     if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $9, $3) | 0) break;
-     $incdec$ptr34 = $incdec$ptr34176 + -4 | 0;
-     if (($__first$addr$1 | 0) == ($incdec$ptr34 | 0)) {
-      label = 18;
-      break L3;
-     } else $incdec$ptr34176 = $incdec$ptr34;
-    }
-    HEAP32[$__first$addr$1 >> 2] = $9;
-    HEAP32[$incdec$ptr34176 >> 2] = $2;
-    $__j$3 = $incdec$ptr34176;
-    $__n_swaps$3 = $__n_swaps$0 + 1 | 0;
-   }
-   $incdec$ptr80 = $__first$addr$1 + 4 | 0;
-   L19 : do if ($incdec$ptr80 >>> 0 < $__j$3 >>> 0) {
-    $__i$4 = $incdec$ptr80;
-    $__j$4 = $__j$3;
-    $__m$0 = $add$ptr21;
-    $__n_swaps$4 = $__n_swaps$3;
-    while (1) {
-     $10 = HEAP32[$__m$0 >> 2] | 0;
-     $__i$5 = $__i$4;
-     while (1) {
-      $11 = HEAP32[$__i$5 >> 2] | 0;
-      $incdec$ptr88 = $__i$5 + 4 | 0;
-      if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $11, $10) | 0) $__i$5 = $incdec$ptr88; else break;
-     }
-     $__j$5 = $__j$4;
-     do {
-      $__j$5 = $__j$5 + -4 | 0;
-      $12 = HEAP32[$__j$5 >> 2] | 0;
-     } while (!(__ZN13TPPLPartition12VertexSorterclEll($__comp, $12, $10) | 0));
-     if ($__i$5 >>> 0 > $__j$5 >>> 0) {
-      $__i$6 = $__i$5;
-      $__m$2 = $__m$0;
-      $__n_swaps$5 = $__n_swaps$4;
-      break L19;
-     }
-     HEAP32[$__i$5 >> 2] = $12;
-     HEAP32[$__j$5 >> 2] = $11;
-     $__i$4 = $incdec$ptr88;
-     $__j$4 = $__j$5;
-     $__m$0 = ($__m$0 | 0) == ($__i$5 | 0) ? $__j$5 : $__m$0;
-     $__n_swaps$4 = $__n_swaps$4 + 1 | 0;
-    }
-   } else {
-    $__i$6 = $incdec$ptr80;
-    $__m$2 = $add$ptr21;
-    $__n_swaps$5 = $__n_swaps$3;
-   } while (0);
-   if (($__i$6 | 0) == ($__m$2 | 0)) $__n_swaps$6 = $__n_swaps$5; else {
-    $13 = HEAP32[$__m$2 >> 2] | 0;
-    $14 = HEAP32[$__i$6 >> 2] | 0;
-    if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $13, $14) | 0) {
-     HEAP32[$__i$6 >> 2] = $13;
-     HEAP32[$__m$2 >> 2] = $14;
-     $__n_swaps$6 = $__n_swaps$5 + 1 | 0;
-    } else $__n_swaps$6 = $__n_swaps$5;
-   }
-   if (!$__n_swaps$6) {
-    $call113 = __ZNSt3__227__insertion_sort_incompleteIRN13TPPLPartition12VertexSorterEPlEEbT0_S5_T_($__first$addr$1, $__i$6, $__comp) | 0;
-    $add$ptr114 = $__i$6 + 4 | 0;
-    if (__ZNSt3__227__insertion_sort_incompleteIRN13TPPLPartition12VertexSorterEPlEEbT0_S5_T_($add$ptr114, $__last$addr$1$ph, $__comp) | 0) {
-     label = 47;
-     break;
-    }
-    if ($call113) {
-     $__first$addr$6 = $add$ptr114;
-     $__last$addr$6 = $__last$addr$1$ph;
-     $cleanup$dest$slot$2 = 2;
-     label = 52;
-     break;
-    }
-   }
-   $sub$ptr$lhs$cast126 = $__i$6;
-   if (($sub$ptr$lhs$cast126 - $__first$addr$1 | 0) >= ($sub$ptr$lhs$cast$le - $sub$ptr$lhs$cast126 | 0)) {
-    label = 51;
-    break;
-   }
-   __ZNSt3__26__sortIRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__first$addr$1, $__i$6, $__comp);
-   $__first$addr$1 = $__i$6 + 4 | 0;
-  }
-  L40 : do if ((label | 0) == 18) {
-   label = 0;
-   $incdec$ptr37 = $__first$addr$1 + 4 | 0;
-   $4 = HEAP32[$incdec$ptr18 >> 2] | 0;
-   if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $4) | 0) $__i$1 = $incdec$ptr37; else {
-    if (($incdec$ptr37 | 0) == ($incdec$ptr18 | 0)) break L1;
-    $__i$0178 = $incdec$ptr37;
-    while (1) {
-     $5 = HEAP32[$__i$0178 >> 2] | 0;
-     if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $5) | 0) break;
-     $incdec$ptr50 = $__i$0178 + 4 | 0;
-     if (($incdec$ptr50 | 0) == ($incdec$ptr18 | 0)) break L1; else $__i$0178 = $incdec$ptr50;
-    }
-    HEAP32[$__i$0178 >> 2] = $4;
-    HEAP32[$incdec$ptr18 >> 2] = $5;
-    $__i$1 = $__i$0178 + 4 | 0;
-   }
-   if (($__i$1 | 0) == ($incdec$ptr18 | 0)) break L1;
-   $__i$2 = $__i$1;
-   $__j$1 = $incdec$ptr18;
-   while (1) {
-    $6 = HEAP32[$__first$addr$1 >> 2] | 0;
-    $__i$3 = $__i$2;
-    while (1) {
-     $7 = HEAP32[$__i$3 >> 2] | 0;
-     $incdec$ptr60 = $__i$3 + 4 | 0;
-     if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $6, $7) | 0) break; else $__i$3 = $incdec$ptr60;
-    }
-    $__j$2 = $__j$1;
-    do {
-     $__j$2 = $__j$2 + -4 | 0;
-     $8 = HEAP32[$__j$2 >> 2] | 0;
-    } while (__ZN13TPPLPartition12VertexSorterclEll($__comp, $6, $8) | 0);
-    if ($__i$3 >>> 0 >= $__j$2 >>> 0) {
-     $__first$addr$6 = $__i$3;
-     $__last$addr$6 = $__last$addr$1$ph;
-     $cleanup$dest$slot$2 = 4;
-     label = 52;
-     break L40;
-    }
-    HEAP32[$__i$3 >> 2] = $8;
-    HEAP32[$__j$2 >> 2] = $7;
-    $__i$2 = $incdec$ptr60;
-    $__j$1 = $__j$2;
-   }
-  } else if ((label | 0) == 47) {
-   label = 0;
-   $__first$addr$6 = $__first$addr$1;
-   $__last$addr$6 = $call113 ? $__last$addr$1$ph : $__i$6;
-   $cleanup$dest$slot$2 = $call113 ? 1 : 2;
-   label = 52;
-  } else if ((label | 0) == 51) {
-   label = 0;
-   __ZNSt3__26__sortIRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__i$6 + 4 | 0, $__last$addr$1$ph, $__comp);
-   $__first$addr$1$ph$be = $__first$addr$1;
-   $__last$addr$1$ph$be = $__i$6;
-  } while (0);
-  if ((label | 0) == 52) {
-   label = 0;
-   switch ($cleanup$dest$slot$2 & 7) {
-   case 2:
-   case 4:
-   case 0:
-    {
-     $__first$addr$1$ph$be = $__first$addr$6;
-     $__last$addr$1$ph$be = $__last$addr$6;
-     break;
-    }
-   default:
-    break L1;
-   }
-  }
-  $__first$addr$1$ph = $__first$addr$1$ph$be;
-  $__last$addr$1$ph = $__last$addr$1$ph$be;
- }
- if ((label | 0) == 4) {
-  $incdec$ptr = $__last$addr$1$ph + -4 | 0;
-  $0 = HEAP32[$incdec$ptr >> 2] | 0;
-  $1 = HEAP32[$__first$addr$1 >> 2] | 0;
-  if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $0, $1) | 0) {
-   HEAP32[$__first$addr$1 >> 2] = $0;
-   HEAP32[$incdec$ptr >> 2] = $1;
-  }
- } else if ((label | 0) == 6) __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 7) __ZNSt3__27__sort4IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__first$addr$1 + 8 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 8) __ZNSt3__27__sort5IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_S5_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__first$addr$1 + 8 | 0, $__first$addr$1 + 12 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 10) __ZNSt3__218__insertion_sort_3IRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__first$addr$1, $__last$addr$1$ph, $__comp);
- return;
-}
-
 function _stbi__convert_format16($data, $img_n, $req_comp, $x, $y) {
  $data = $data | 0;
  $img_n = $img_n | 0;
@@ -22080,17 +21017,16 @@ function _stbi__convert_format($data, $img_n, $req_comp, $x, $y) {
  return $168 | 0;
 }
 
-function __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($__first, $__last, $__comp) {
+function __ZNSt3__26__sortIRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__first, $__last, $__comp) {
  $__first = $__first | 0;
  $__last = $__last | 0;
  $__comp = $__comp | 0;
- var $10 = 0, $16 = 0, $2 = 0, $20 = 0, $26 = 0, $30 = 0, $__first$addr$1 = 0, $__first$addr$1$ph = 0, $__first$addr$1$ph$be = 0, $__first$addr$6 = 0, $__i$0171 = 0, $__i$1 = 0, $__i$2 = 0, $__i$3 = 0, $__i$4 = 0, $__i$5 = 0, $__i$6 = 0, $__j$1 = 0, $__j$2 = 0, $__j$3 = 0, $__j$4 = 0, $__j$5 = 0, $__last$addr$1$ph = 0, $__last$addr$1$ph$be = 0, $__last$addr$6 = 0, $__m$0 = 0, $__m$2 = 0, $__n_swaps$0 = 0, $__n_swaps$3 = 0, $__n_swaps$4 = 0, $__n_swaps$5 = 0, $__n_swaps$6 = 0, $add$ptr114 = 0, $add$ptr21 = 0, $call113 = 0, $cleanup$dest$slot$2 = 0, $div22 = 0, $incdec$ptr = 0, $incdec$ptr18 = 0, $incdec$ptr34 = 0, $incdec$ptr34167 = 0, $incdec$ptr34169 = 0, $incdec$ptr37 = 0, $incdec$ptr50 = 0, $incdec$ptr60 = 0, $incdec$ptr80 = 0, $incdec$ptr88 = 0, $sub$ptr$div = 0, $sub$ptr$lhs$cast = 0, $sub$ptr$lhs$cast$le = 0, $sub$ptr$lhs$cast126 = 0, $sub$ptr$sub = 0, label = 0;
+ var $0 = 0, $1 = 0, $10 = 0, $11 = 0, $12 = 0, $13 = 0, $14 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $6 = 0, $7 = 0, $8 = 0, $9 = 0, $__first$addr$1 = 0, $__first$addr$1$ph = 0, $__first$addr$1$ph$be = 0, $__first$addr$6 = 0, $__i$0 = 0, $__i$1 = 0, $__i$2 = 0, $__i$3 = 0, $__i$4 = 0, $__i$5 = 0, $__i$6 = 0, $__j$0 = 0, $__j$1 = 0, $__j$2 = 0, $__j$3 = 0, $__j$4 = 0, $__j$5 = 0, $__last$addr$1$ph = 0, $__last$addr$1$ph$be = 0, $__last$addr$6 = 0, $__m$0 = 0, $__m$2 = 0, $__n_swaps$0 = 0, $__n_swaps$3 = 0, $__n_swaps$4 = 0, $__n_swaps$5 = 0, $__n_swaps$6 = 0, $add$ptr114 = 0, $add$ptr21 = 0, $call113 = 0, $cleanup$dest$slot$2 = 0, $div22 = 0, $incdec$ptr = 0, $incdec$ptr18 = 0, $incdec$ptr37 = 0, $incdec$ptr60 = 0, $incdec$ptr80 = 0, $incdec$ptr88 = 0, $sub$ptr$div = 0, $sub$ptr$lhs$cast = 0, $sub$ptr$lhs$cast$le = 0, $sub$ptr$lhs$cast126 = 0, $sub$ptr$sub = 0, label = 0;
  $__first$addr$1$ph = $__first;
  $__last$addr$1$ph = $__last;
  L1 : while (1) {
   $sub$ptr$lhs$cast = $__last$addr$1$ph;
   $incdec$ptr18 = $__last$addr$1$ph + -4 | 0;
-  $incdec$ptr34167 = $__last$addr$1$ph + -8 | 0;
   $sub$ptr$lhs$cast$le = $__last$addr$1$ph;
   $__first$addr$1 = $__first$addr$1$ph;
   L3 : while (1) {
@@ -22137,54 +21073,55 @@ function __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($__first, $__last, $__comp) {
    $add$ptr21 = $__first$addr$1 + ((($sub$ptr$div | 0) / 2 | 0) << 2) | 0;
    if (($sub$ptr$sub | 0) > 3996) {
     $div22 = ($sub$ptr$div | 0) / 4 | 0;
-    $__n_swaps$0 = __ZNSt3__27__sort5IR7comparePmEEjT0_S4_S4_S4_S4_T_($__first$addr$1, $__first$addr$1 + ($div22 << 2) | 0, $add$ptr21, $add$ptr21 + ($div22 << 2) | 0, $incdec$ptr18, $__comp) | 0;
-   } else $__n_swaps$0 = __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first$addr$1, $add$ptr21, $incdec$ptr18, $__comp) | 0;
-   if (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$add$ptr21 >> 2] | 0) | 0) {
+    $__n_swaps$0 = __ZNSt3__27__sort5IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_S5_T_($__first$addr$1, $__first$addr$1 + ($div22 << 2) | 0, $add$ptr21, $add$ptr21 + ($div22 << 2) | 0, $incdec$ptr18, $__comp) | 0;
+   } else $__n_swaps$0 = __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first$addr$1, $add$ptr21, $incdec$ptr18, $__comp) | 0;
+   $2 = HEAP32[$__first$addr$1 >> 2] | 0;
+   $3 = HEAP32[$add$ptr21 >> 2] | 0;
+   if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $3) | 0) {
     $__j$3 = $incdec$ptr18;
     $__n_swaps$3 = $__n_swaps$0;
    } else {
-    if (($__first$addr$1 | 0) == ($incdec$ptr34167 | 0)) {
-     label = 18;
-     break;
-    }
-    $incdec$ptr34169 = $incdec$ptr34167;
-    while (1) {
-     if (__ZN7compareclEmm($__comp, HEAP32[$incdec$ptr34169 >> 2] | 0, HEAP32[$add$ptr21 >> 2] | 0) | 0) break;
-     $incdec$ptr34 = $incdec$ptr34169 + -4 | 0;
-     if (($__first$addr$1 | 0) == ($incdec$ptr34 | 0)) {
-      label = 18;
+    $__j$0 = $incdec$ptr18;
+    do {
+     $__j$0 = $__j$0 + -4 | 0;
+     if (($__first$addr$1 | 0) == ($__j$0 | 0)) {
+      label = 17;
       break L3;
-     } else $incdec$ptr34169 = $incdec$ptr34;
-    }
-    $20 = HEAP32[$__first$addr$1 >> 2] | 0;
-    HEAP32[$__first$addr$1 >> 2] = HEAP32[$incdec$ptr34169 >> 2];
-    HEAP32[$incdec$ptr34169 >> 2] = $20;
-    $__j$3 = $incdec$ptr34169;
+     }
+     $9 = HEAP32[$__j$0 >> 2] | 0;
+    } while (!(__ZN13TPPLPartition12VertexSorterclEll($__comp, $9, $3) | 0));
+    HEAP32[$__first$addr$1 >> 2] = $9;
+    HEAP32[$__j$0 >> 2] = $2;
+    $__j$3 = $__j$0;
     $__n_swaps$3 = $__n_swaps$0 + 1 | 0;
    }
    $incdec$ptr80 = $__first$addr$1 + 4 | 0;
-   L19 : do if ($incdec$ptr80 >>> 0 < $__j$3 >>> 0) {
+   L18 : do if ($incdec$ptr80 >>> 0 < $__j$3 >>> 0) {
     $__i$4 = $incdec$ptr80;
     $__j$4 = $__j$3;
     $__m$0 = $add$ptr21;
     $__n_swaps$4 = $__n_swaps$3;
     while (1) {
+     $10 = HEAP32[$__m$0 >> 2] | 0;
      $__i$5 = $__i$4;
      while (1) {
+      $11 = HEAP32[$__i$5 >> 2] | 0;
       $incdec$ptr88 = $__i$5 + 4 | 0;
-      if (__ZN7compareclEmm($__comp, HEAP32[$__i$5 >> 2] | 0, HEAP32[$__m$0 >> 2] | 0) | 0) $__i$5 = $incdec$ptr88; else break;
+      if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $11, $10) | 0) $__i$5 = $incdec$ptr88; else break;
      }
      $__j$5 = $__j$4;
-     do $__j$5 = $__j$5 + -4 | 0; while (!(__ZN7compareclEmm($__comp, HEAP32[$__j$5 >> 2] | 0, HEAP32[$__m$0 >> 2] | 0) | 0));
+     do {
+      $__j$5 = $__j$5 + -4 | 0;
+      $12 = HEAP32[$__j$5 >> 2] | 0;
+     } while (!(__ZN13TPPLPartition12VertexSorterclEll($__comp, $12, $10) | 0));
      if ($__i$5 >>> 0 > $__j$5 >>> 0) {
       $__i$6 = $__i$5;
       $__m$2 = $__m$0;
       $__n_swaps$5 = $__n_swaps$4;
-      break L19;
+      break L18;
      }
-     $26 = HEAP32[$__i$5 >> 2] | 0;
-     HEAP32[$__i$5 >> 2] = HEAP32[$__j$5 >> 2];
-     HEAP32[$__j$5 >> 2] = $26;
+     HEAP32[$__i$5 >> 2] = $12;
+     HEAP32[$__j$5 >> 2] = $11;
      $__i$4 = $incdec$ptr88;
      $__j$4 = $__j$5;
      $__m$0 = ($__m$0 | 0) == ($__i$5 | 0) ? $__j$5 : $__m$0;
@@ -22195,88 +21132,95 @@ function __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($__first, $__last, $__comp) {
     $__m$2 = $add$ptr21;
     $__n_swaps$5 = $__n_swaps$3;
    } while (0);
-   if (($__i$6 | 0) == ($__m$2 | 0)) $__n_swaps$6 = $__n_swaps$5; else if (__ZN7compareclEmm($__comp, HEAP32[$__m$2 >> 2] | 0, HEAP32[$__i$6 >> 2] | 0) | 0) {
-    $30 = HEAP32[$__i$6 >> 2] | 0;
-    HEAP32[$__i$6 >> 2] = HEAP32[$__m$2 >> 2];
-    HEAP32[$__m$2 >> 2] = $30;
-    $__n_swaps$6 = $__n_swaps$5 + 1 | 0;
-   } else $__n_swaps$6 = $__n_swaps$5;
+   if (($__i$6 | 0) == ($__m$2 | 0)) $__n_swaps$6 = $__n_swaps$5; else {
+    $13 = HEAP32[$__m$2 >> 2] | 0;
+    $14 = HEAP32[$__i$6 >> 2] | 0;
+    if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $13, $14) | 0) {
+     HEAP32[$__i$6 >> 2] = $13;
+     HEAP32[$__m$2 >> 2] = $14;
+     $__n_swaps$6 = $__n_swaps$5 + 1 | 0;
+    } else $__n_swaps$6 = $__n_swaps$5;
+   }
    if (!$__n_swaps$6) {
-    $call113 = __ZNSt3__227__insertion_sort_incompleteIR7comparePmEEbT0_S4_T_($__first$addr$1, $__i$6, $__comp) | 0;
+    $call113 = __ZNSt3__227__insertion_sort_incompleteIRN13TPPLPartition12VertexSorterEPlEEbT0_S5_T_($__first$addr$1, $__i$6, $__comp) | 0;
     $add$ptr114 = $__i$6 + 4 | 0;
-    if (__ZNSt3__227__insertion_sort_incompleteIR7comparePmEEbT0_S4_T_($add$ptr114, $__last$addr$1$ph, $__comp) | 0) {
-     label = 47;
+    if (__ZNSt3__227__insertion_sort_incompleteIRN13TPPLPartition12VertexSorterEPlEEbT0_S5_T_($add$ptr114, $__last$addr$1$ph, $__comp) | 0) {
+     label = 46;
      break;
     }
     if ($call113) {
      $__first$addr$6 = $add$ptr114;
      $__last$addr$6 = $__last$addr$1$ph;
      $cleanup$dest$slot$2 = 2;
-     label = 52;
+     label = 51;
      break;
     }
    }
    $sub$ptr$lhs$cast126 = $__i$6;
    if (($sub$ptr$lhs$cast126 - $__first$addr$1 | 0) >= ($sub$ptr$lhs$cast$le - $sub$ptr$lhs$cast126 | 0)) {
-    label = 51;
+    label = 50;
     break;
    }
-   __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($__first$addr$1, $__i$6, $__comp);
+   __ZNSt3__26__sortIRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__first$addr$1, $__i$6, $__comp);
    $__first$addr$1 = $__i$6 + 4 | 0;
   }
-  L40 : do if ((label | 0) == 18) {
+  L39 : do if ((label | 0) == 17) {
    label = 0;
    $incdec$ptr37 = $__first$addr$1 + 4 | 0;
-   if (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$incdec$ptr18 >> 2] | 0) | 0) $__i$1 = $incdec$ptr37; else {
-    if (($incdec$ptr37 | 0) == ($incdec$ptr18 | 0)) break L1;
-    $__i$0171 = $incdec$ptr37;
+   $4 = HEAP32[$incdec$ptr18 >> 2] | 0;
+   if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $4) | 0) $__i$1 = $incdec$ptr37; else {
+    $__i$0 = $incdec$ptr37;
     while (1) {
-     if (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$__i$0171 >> 2] | 0) | 0) break;
-     $incdec$ptr50 = $__i$0171 + 4 | 0;
-     if (($incdec$ptr50 | 0) == ($incdec$ptr18 | 0)) break L1; else $__i$0171 = $incdec$ptr50;
+     if (($__i$0 | 0) == ($incdec$ptr18 | 0)) break L1;
+     $5 = HEAP32[$__i$0 >> 2] | 0;
+     if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $5) | 0) break;
+     $__i$0 = $__i$0 + 4 | 0;
     }
-    $10 = HEAP32[$__i$0171 >> 2] | 0;
-    HEAP32[$__i$0171 >> 2] = HEAP32[$incdec$ptr18 >> 2];
-    HEAP32[$incdec$ptr18 >> 2] = $10;
-    $__i$1 = $__i$0171 + 4 | 0;
+    HEAP32[$__i$0 >> 2] = $4;
+    HEAP32[$incdec$ptr18 >> 2] = $5;
+    $__i$1 = $__i$0 + 4 | 0;
    }
    if (($__i$1 | 0) == ($incdec$ptr18 | 0)) break L1;
    $__i$2 = $__i$1;
    $__j$1 = $incdec$ptr18;
    while (1) {
+    $6 = HEAP32[$__first$addr$1 >> 2] | 0;
     $__i$3 = $__i$2;
     while (1) {
+     $7 = HEAP32[$__i$3 >> 2] | 0;
      $incdec$ptr60 = $__i$3 + 4 | 0;
-     if (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$__i$3 >> 2] | 0) | 0) break; else $__i$3 = $incdec$ptr60;
+     if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $6, $7) | 0) break; else $__i$3 = $incdec$ptr60;
     }
     $__j$2 = $__j$1;
-    do $__j$2 = $__j$2 + -4 | 0; while (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$__j$2 >> 2] | 0) | 0);
+    do {
+     $__j$2 = $__j$2 + -4 | 0;
+     $8 = HEAP32[$__j$2 >> 2] | 0;
+    } while (__ZN13TPPLPartition12VertexSorterclEll($__comp, $6, $8) | 0);
     if ($__i$3 >>> 0 >= $__j$2 >>> 0) {
      $__first$addr$6 = $__i$3;
      $__last$addr$6 = $__last$addr$1$ph;
      $cleanup$dest$slot$2 = 4;
-     label = 52;
-     break L40;
+     label = 51;
+     break L39;
     }
-    $16 = HEAP32[$__i$3 >> 2] | 0;
-    HEAP32[$__i$3 >> 2] = HEAP32[$__j$2 >> 2];
-    HEAP32[$__j$2 >> 2] = $16;
+    HEAP32[$__i$3 >> 2] = $8;
+    HEAP32[$__j$2 >> 2] = $7;
     $__i$2 = $incdec$ptr60;
     $__j$1 = $__j$2;
    }
-  } else if ((label | 0) == 47) {
+  } else if ((label | 0) == 46) {
    label = 0;
    $__first$addr$6 = $__first$addr$1;
    $__last$addr$6 = $call113 ? $__last$addr$1$ph : $__i$6;
    $cleanup$dest$slot$2 = $call113 ? 1 : 2;
-   label = 52;
-  } else if ((label | 0) == 51) {
+   label = 51;
+  } else if ((label | 0) == 50) {
    label = 0;
-   __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($__i$6 + 4 | 0, $__last$addr$1$ph, $__comp);
+   __ZNSt3__26__sortIRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__i$6 + 4 | 0, $__last$addr$1$ph, $__comp);
    $__first$addr$1$ph$be = $__first$addr$1;
    $__last$addr$1$ph$be = $__i$6;
   } while (0);
-  if ((label | 0) == 52) {
+  if ((label | 0) == 51) {
    label = 0;
    switch ($cleanup$dest$slot$2 & 7) {
    case 2:
@@ -22296,12 +21240,13 @@ function __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($__first, $__last, $__comp) {
  }
  if ((label | 0) == 4) {
   $incdec$ptr = $__last$addr$1$ph + -4 | 0;
-  if (__ZN7compareclEmm($__comp, HEAP32[$incdec$ptr >> 2] | 0, HEAP32[$__first$addr$1 >> 2] | 0) | 0) {
-   $2 = HEAP32[$__first$addr$1 >> 2] | 0;
-   HEAP32[$__first$addr$1 >> 2] = HEAP32[$incdec$ptr >> 2];
-   HEAP32[$incdec$ptr >> 2] = $2;
+  $0 = HEAP32[$incdec$ptr >> 2] | 0;
+  $1 = HEAP32[$__first$addr$1 >> 2] | 0;
+  if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $0, $1) | 0) {
+   HEAP32[$__first$addr$1 >> 2] = $0;
+   HEAP32[$incdec$ptr >> 2] = $1;
   }
- } else if ((label | 0) == 6) __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 7) __ZNSt3__27__sort4IR7comparePmEEjT0_S4_S4_S4_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__first$addr$1 + 8 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 8) __ZNSt3__27__sort5IR7comparePmEEjT0_S4_S4_S4_S4_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__first$addr$1 + 8 | 0, $__first$addr$1 + 12 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 10) __ZNSt3__218__insertion_sort_3IR7comparePmEEvT0_S4_T_($__first$addr$1, $__last$addr$1$ph, $__comp);
+ } else if ((label | 0) == 6) __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 7) __ZNSt3__27__sort4IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__first$addr$1 + 8 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 8) __ZNSt3__27__sort5IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_S5_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__first$addr$1 + 8 | 0, $__first$addr$1 + 12 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 10) __ZNSt3__218__insertion_sort_3IRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__first$addr$1, $__last$addr$1$ph, $__comp);
  return;
 }
 
@@ -22480,6 +21425,183 @@ function __sg_gl_create_shader($shd, $desc) {
   return $125 | 0;
  }
  return 0;
+}
+
+function __ZN13TPPLPartition19TriangulateMonotoneEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE($this, $inPoly, $triangles) {
+ $this = $this | 0;
+ $inPoly = $inPoly | 0;
+ $triangles = $triangles | 0;
+ var $$sink = 0, $2 = 0, $21 = 0, $5 = 0, $add = 0, $add229 = 0, $add33 = 0, $add52 = 0, $arrayidx = 0, $arrayidx118 = 0, $arrayidx123 = 0, $arrayidx124 = 0, $arrayidx174 = 0, $arrayidx177 = 0, $arrayidx179 = 0, $arrayidx197 = 0, $arrayidx200 = 0, $arrayidx240 = 0, $arrayidx88 = 0, $bottomindex$0 = 0, $call11 = 0, $call114 = 0, $call17 = 0, $call2 = 0, $call4 = 0, $call46 = 0, $call49 = 0, $i$0 = 0, $i$1 = 0, $i$2 = 0, $i$3 = 0, $i$4 = 0, $inc76 = 0, $inc98 = 0, $j$0 = 0, $j$1 = 0, $leftindex$0 = 0, $leftindex$1 = 0, $retval$0 = 0, $retval$1 = 0, $rightindex$1 = 0, $rightindex$1$sink = 0, $rightindex$4 = 0, $stackptr$0 = 0, $stackptr$1 = 0, $stackptr$1$in = 0, $stackptr$3 = 0, $sub125 = 0, $sub226 = 0, $sub61 = 0, $topindex$0 = 0, $topindex$1 = 0, $triangle = 0, sp = 0, $i$1$looptemp = 0, $i$2$looptemp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 16 | 0;
+ $triangle = sp;
+ if (__ZNK8TPPLPoly5ValidEv($inPoly) | 0) {
+  __ZN8TPPLPolyC2Ev($triangle);
+  $call2 = __ZNK8TPPLPoly12GetNumPointsEv($inPoly) | 0;
+  $call4 = __ZN8TPPLPoly9GetPointsEv($inPoly) | 0;
+  L3 : do if (($call2 | 0) == 3) {
+   __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $inPoly);
+   $retval$0 = 1;
+  } else {
+   $bottomindex$0 = 0;
+   $i$0 = 1;
+   $topindex$0 = 0;
+   while (1) {
+    if (($i$0 | 0) >= ($call2 | 0)) break;
+    $arrayidx = $call4 + ($i$0 * 24 | 0) | 0;
+    $call11 = __ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $arrayidx, $call4 + ($bottomindex$0 * 24 | 0) | 0) | 0;
+    $call17 = __ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $call4 + ($topindex$0 * 24 | 0) | 0, $arrayidx) | 0;
+    $topindex$1 = $call17 ? $i$0 : $topindex$0;
+    $bottomindex$0 = $call11 ? $i$0 : $bottomindex$0;
+    $i$0 = $i$0 + 1 | 0;
+    $topindex$0 = $topindex$1;
+   }
+   $i$1 = $topindex$0;
+   while (1) {
+    if (($i$1 | 0) == ($bottomindex$0 | 0)) break;
+    $add = $i$1 + 1 | 0;
+    $i$1$looptemp = $i$1;
+    $i$1 = ($add | 0) < ($call2 | 0) ? $add : 0;
+    if (!(__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $call4 + ($i$1 * 24 | 0) | 0, $call4 + ($i$1$looptemp * 24 | 0) | 0) | 0)) {
+     $retval$0 = 0;
+     break L3;
+    }
+   }
+   $i$2 = $bottomindex$0;
+   while (1) {
+    if (($i$2 | 0) == ($topindex$0 | 0)) break;
+    $add33 = $i$2 + 1 | 0;
+    $i$2$looptemp = $i$2;
+    $i$2 = ($add33 | 0) < ($call2 | 0) ? $add33 : 0;
+    if (!(__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $call4 + ($i$2$looptemp * 24 | 0) | 0, $call4 + ($i$2 * 24 | 0) | 0) | 0)) {
+     $retval$0 = 0;
+     break L3;
+    }
+   }
+   $call46 = __Znam(($call2 | 0) > -1 ? $call2 : -1) | 0;
+   $2 = $call2 >>> 0 > 1073741823 ? -1 : $call2 << 2;
+   $call49 = __Znam($2) | 0;
+   HEAP32[$call49 >> 2] = $topindex$0;
+   HEAP8[$call46 + $topindex$0 >> 0] = 0;
+   $add52 = $topindex$0 + 1 | 0;
+   $sub61 = $call2 + -1 | 0;
+   $i$3 = 1;
+   $leftindex$0 = ($add52 | 0) < ($call2 | 0) ? $add52 : 0;
+   $rightindex$1 = (($topindex$0 | 0) < 1 ? $call2 : $topindex$0) + -1 | 0;
+   while (1) {
+    if (($i$3 | 0) >= ($sub61 | 0)) break;
+    do if (($leftindex$0 | 0) == ($bottomindex$0 | 0)) {
+     HEAP32[$call49 + ($i$3 << 2) >> 2] = $rightindex$1;
+     $$sink = -1;
+     $leftindex$1 = $bottomindex$0;
+     $rightindex$1$sink = $rightindex$1;
+     $rightindex$4 = ($rightindex$1 | 0) < 1 ? $sub61 : $rightindex$1 + -1 | 0;
+    } else {
+     if (($rightindex$1 | 0) == ($bottomindex$0 | 0)) {
+      HEAP32[$call49 + ($i$3 << 2) >> 2] = $leftindex$0;
+      $inc76 = $leftindex$0 + 1 | 0;
+      $$sink = 1;
+      $leftindex$1 = ($inc76 | 0) < ($call2 | 0) ? $inc76 : 0;
+      $rightindex$1$sink = $leftindex$0;
+      $rightindex$4 = $bottomindex$0;
+      break;
+     }
+     $arrayidx88 = $call49 + ($i$3 << 2) | 0;
+     if (__ZN13TPPLPartition5BelowER9TPPLPointS1_(0, $call4 + ($leftindex$0 * 24 | 0) | 0, $call4 + ($rightindex$1 * 24 | 0) | 0) | 0) {
+      HEAP32[$arrayidx88 >> 2] = $rightindex$1;
+      $$sink = -1;
+      $leftindex$1 = $leftindex$0;
+      $rightindex$1$sink = $rightindex$1;
+      $rightindex$4 = ($rightindex$1 | 0) < 1 ? $sub61 : $rightindex$1 + -1 | 0;
+      break;
+     } else {
+      HEAP32[$arrayidx88 >> 2] = $leftindex$0;
+      $inc98 = $leftindex$0 + 1 | 0;
+      $$sink = 1;
+      $leftindex$1 = ($inc98 | 0) < ($call2 | 0) ? $inc98 : 0;
+      $rightindex$1$sink = $leftindex$0;
+      $rightindex$4 = $rightindex$1;
+      break;
+     }
+    } while (0);
+    HEAP8[$call46 + $rightindex$1$sink >> 0] = $$sink;
+    $i$3 = $i$3 + 1 | 0;
+    $leftindex$0 = $leftindex$1;
+    $rightindex$1 = $rightindex$4;
+   }
+   HEAP32[$call49 + ($i$3 << 2) >> 2] = $bottomindex$0;
+   HEAP8[$call46 + $bottomindex$0 >> 0] = 0;
+   $call114 = __Znam($2) | 0;
+   HEAP32[$call114 >> 2] = HEAP32[$call49 >> 2];
+   $arrayidx118 = $call114 + 4 | 0;
+   HEAP32[$arrayidx118 >> 2] = HEAP32[$call49 + 4 >> 2];
+   $i$4 = 2;
+   $stackptr$0 = 2;
+   while (1) {
+    $arrayidx123 = $call49 + ($i$4 << 2) | 0;
+    $5 = HEAP32[$arrayidx123 >> 2] | 0;
+    if (($i$4 | 0) >= ($sub61 | 0)) break;
+    $arrayidx124 = $call46 + $5 | 0;
+    $sub125 = $stackptr$0 + -1 | 0;
+    $arrayidx174 = $call4 + ($5 * 24 | 0) | 0;
+    if ((HEAP8[$arrayidx124 >> 0] | 0) == (HEAP8[$call46 + (HEAP32[$call114 + ($sub125 << 2) >> 2] | 0) >> 0] | 0)) {
+     $stackptr$1$in = $stackptr$0;
+     while (1) {
+      $stackptr$1 = $stackptr$1$in + -1 | 0;
+      if (($stackptr$1$in | 0) <= 1) break;
+      if ((HEAP8[$arrayidx124 >> 0] | 0) == 1) {
+       $arrayidx177 = $call4 + ((HEAP32[$call114 + ($stackptr$1$in + -2 << 2) >> 2] | 0) * 24 | 0) | 0;
+       $arrayidx179 = $call4 + ((HEAP32[$call114 + ($stackptr$1 << 2) >> 2] | 0) * 24 | 0) | 0;
+       if (!(__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $arrayidx174, $arrayidx177, $arrayidx179) | 0)) break;
+       __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $arrayidx174, $arrayidx177, $arrayidx179);
+       __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
+      } else {
+       $arrayidx197 = $call4 + ((HEAP32[$call114 + ($stackptr$1 << 2) >> 2] | 0) * 24 | 0) | 0;
+       $arrayidx200 = $call4 + ((HEAP32[$call114 + ($stackptr$1$in + -2 << 2) >> 2] | 0) * 24 | 0) | 0;
+       if (!(__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $arrayidx174, $arrayidx197, $arrayidx200) | 0)) break;
+       __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $arrayidx174, $arrayidx197, $arrayidx200);
+       __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
+      }
+      $stackptr$1$in = $stackptr$1;
+     }
+     HEAP32[$call114 + ($stackptr$1$in << 2) >> 2] = $5;
+     $stackptr$3 = $stackptr$1$in + 1 | 0;
+    } else {
+     $j$0 = 0;
+     while (1) {
+      if (($j$0 | 0) >= ($sub125 | 0)) break;
+      if ((HEAP8[$arrayidx124 >> 0] | 0) == 1) __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call4 + ((HEAP32[$call114 + ($j$0 + 1 << 2) >> 2] | 0) * 24 | 0) | 0, $call4 + ((HEAP32[$call114 + ($j$0 << 2) >> 2] | 0) * 24 | 0) | 0, $arrayidx174); else __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call4 + ((HEAP32[$call114 + ($j$0 << 2) >> 2] | 0) * 24 | 0) | 0, $call4 + ((HEAP32[$call114 + ($j$0 + 1 << 2) >> 2] | 0) * 24 | 0) | 0, $arrayidx174);
+      __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
+      $j$0 = $j$0 + 1 | 0;
+     }
+     HEAP32[$call114 >> 2] = HEAP32[$call49 + ($i$4 + -1 << 2) >> 2];
+     HEAP32[$arrayidx118 >> 2] = HEAP32[$arrayidx123 >> 2];
+     $stackptr$3 = 2;
+    }
+    $i$4 = $i$4 + 1 | 0;
+    $stackptr$0 = $stackptr$3;
+   }
+   $sub226 = $stackptr$0 + -1 | 0;
+   $arrayidx240 = $call4 + ($5 * 24 | 0) | 0;
+   $j$1 = 0;
+   while (1) {
+    if (($j$1 | 0) >= ($sub226 | 0)) break;
+    $add229 = $j$1 + 1 | 0;
+    $21 = HEAP32[$call114 + ($add229 << 2) >> 2] | 0;
+    if ((HEAP8[$call46 + $21 >> 0] | 0) == 1) __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call4 + ((HEAP32[$call114 + ($j$1 << 2) >> 2] | 0) * 24 | 0) | 0, $call4 + ($21 * 24 | 0) | 0, $arrayidx240); else __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, $call4 + ($21 * 24 | 0) | 0, $call4 + ((HEAP32[$call114 + ($j$1 << 2) >> 2] | 0) * 24 | 0) | 0, $arrayidx240);
+    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
+    $j$1 = $add229;
+   }
+   __ZdaPv($call49);
+   __ZdaPv($call46);
+   __ZdaPv($call114);
+   $retval$0 = 1;
+  } while (0);
+  __ZN8TPPLPolyD2Ev($triangle);
+  $retval$1 = $retval$0;
+ } else $retval$1 = 0;
+ STACKTOP = sp;
+ return $retval$1 | 0;
 }
 
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E17parseFunctionTypeEv($this) {
@@ -23044,6 +22166,400 @@ function ___udivmoddi4($a$0, $a$1, $b$0, $b$1, $rem) {
  $_0$1 = ($q_sroa_0_0_insert_ext75$0 | 0) >>> 31 | ($q_sroa_1_1_lcssa | $q_sroa_0_0_insert_ext75$1) << 1 | ($q_sroa_0_0_insert_ext75$1 << 1 | $q_sroa_0_0_insert_ext75$0 >>> 31) & 0 | $carry_0_lcssa$1;
  $_0$0 = ($q_sroa_0_0_insert_ext75$0 << 1 | 0 >>> 31) & -2 | $carry_0_lcssa$0;
  return (setTempRet0($_0$1 | 0), $_0$0) | 0;
+}
+
+function __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($__first, $__last, $__comp) {
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ $__comp = $__comp | 0;
+ var $10 = 0, $16 = 0, $2 = 0, $20 = 0, $26 = 0, $30 = 0, $__first$addr$1 = 0, $__first$addr$1$ph = 0, $__first$addr$1$ph$be = 0, $__first$addr$6 = 0, $__i$0 = 0, $__i$1 = 0, $__i$2 = 0, $__i$3 = 0, $__i$4 = 0, $__i$5 = 0, $__i$6 = 0, $__j$0 = 0, $__j$1 = 0, $__j$2 = 0, $__j$3 = 0, $__j$4 = 0, $__j$5 = 0, $__last$addr$1$ph = 0, $__last$addr$1$ph$be = 0, $__last$addr$6 = 0, $__m$0 = 0, $__m$2 = 0, $__n_swaps$0 = 0, $__n_swaps$3 = 0, $__n_swaps$4 = 0, $__n_swaps$5 = 0, $__n_swaps$6 = 0, $add$ptr114 = 0, $add$ptr21 = 0, $call113 = 0, $cleanup$dest$slot$2 = 0, $div22 = 0, $incdec$ptr = 0, $incdec$ptr18 = 0, $incdec$ptr37 = 0, $incdec$ptr60 = 0, $incdec$ptr80 = 0, $incdec$ptr88 = 0, $sub$ptr$div = 0, $sub$ptr$lhs$cast = 0, $sub$ptr$lhs$cast$le = 0, $sub$ptr$lhs$cast126 = 0, $sub$ptr$sub = 0, label = 0;
+ $__first$addr$1$ph = $__first;
+ $__last$addr$1$ph = $__last;
+ L1 : while (1) {
+  $sub$ptr$lhs$cast = $__last$addr$1$ph;
+  $incdec$ptr18 = $__last$addr$1$ph + -4 | 0;
+  $sub$ptr$lhs$cast$le = $__last$addr$1$ph;
+  $__first$addr$1 = $__first$addr$1$ph;
+  L3 : while (1) {
+   $sub$ptr$sub = $sub$ptr$lhs$cast - $__first$addr$1 | 0;
+   $sub$ptr$div = $sub$ptr$sub >> 2;
+   switch ($sub$ptr$div | 0) {
+   case 1:
+   case 0:
+    {
+     break L1;
+     break;
+    }
+   case 2:
+    {
+     label = 4;
+     break L1;
+     break;
+    }
+   case 3:
+    {
+     label = 6;
+     break L1;
+     break;
+    }
+   case 4:
+    {
+     label = 7;
+     break L1;
+     break;
+    }
+   case 5:
+    {
+     label = 8;
+     break L1;
+     break;
+    }
+   default:
+    {}
+   }
+   if (($sub$ptr$sub | 0) < 124) {
+    label = 10;
+    break L1;
+   }
+   $add$ptr21 = $__first$addr$1 + ((($sub$ptr$div | 0) / 2 | 0) << 2) | 0;
+   if (($sub$ptr$sub | 0) > 3996) {
+    $div22 = ($sub$ptr$div | 0) / 4 | 0;
+    $__n_swaps$0 = __ZNSt3__27__sort5IR7comparePmEEjT0_S4_S4_S4_S4_T_($__first$addr$1, $__first$addr$1 + ($div22 << 2) | 0, $add$ptr21, $add$ptr21 + ($div22 << 2) | 0, $incdec$ptr18, $__comp) | 0;
+   } else $__n_swaps$0 = __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first$addr$1, $add$ptr21, $incdec$ptr18, $__comp) | 0;
+   if (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$add$ptr21 >> 2] | 0) | 0) {
+    $__j$3 = $incdec$ptr18;
+    $__n_swaps$3 = $__n_swaps$0;
+   } else {
+    $__j$0 = $incdec$ptr18;
+    do {
+     $__j$0 = $__j$0 + -4 | 0;
+     if (($__first$addr$1 | 0) == ($__j$0 | 0)) {
+      label = 17;
+      break L3;
+     }
+    } while (!(__ZN7compareclEmm($__comp, HEAP32[$__j$0 >> 2] | 0, HEAP32[$add$ptr21 >> 2] | 0) | 0));
+    $20 = HEAP32[$__first$addr$1 >> 2] | 0;
+    HEAP32[$__first$addr$1 >> 2] = HEAP32[$__j$0 >> 2];
+    HEAP32[$__j$0 >> 2] = $20;
+    $__j$3 = $__j$0;
+    $__n_swaps$3 = $__n_swaps$0 + 1 | 0;
+   }
+   $incdec$ptr80 = $__first$addr$1 + 4 | 0;
+   L18 : do if ($incdec$ptr80 >>> 0 < $__j$3 >>> 0) {
+    $__i$4 = $incdec$ptr80;
+    $__j$4 = $__j$3;
+    $__m$0 = $add$ptr21;
+    $__n_swaps$4 = $__n_swaps$3;
+    while (1) {
+     $__i$5 = $__i$4;
+     while (1) {
+      $incdec$ptr88 = $__i$5 + 4 | 0;
+      if (__ZN7compareclEmm($__comp, HEAP32[$__i$5 >> 2] | 0, HEAP32[$__m$0 >> 2] | 0) | 0) $__i$5 = $incdec$ptr88; else break;
+     }
+     $__j$5 = $__j$4;
+     do $__j$5 = $__j$5 + -4 | 0; while (!(__ZN7compareclEmm($__comp, HEAP32[$__j$5 >> 2] | 0, HEAP32[$__m$0 >> 2] | 0) | 0));
+     if ($__i$5 >>> 0 > $__j$5 >>> 0) {
+      $__i$6 = $__i$5;
+      $__m$2 = $__m$0;
+      $__n_swaps$5 = $__n_swaps$4;
+      break L18;
+     }
+     $26 = HEAP32[$__i$5 >> 2] | 0;
+     HEAP32[$__i$5 >> 2] = HEAP32[$__j$5 >> 2];
+     HEAP32[$__j$5 >> 2] = $26;
+     $__i$4 = $incdec$ptr88;
+     $__j$4 = $__j$5;
+     $__m$0 = ($__m$0 | 0) == ($__i$5 | 0) ? $__j$5 : $__m$0;
+     $__n_swaps$4 = $__n_swaps$4 + 1 | 0;
+    }
+   } else {
+    $__i$6 = $incdec$ptr80;
+    $__m$2 = $add$ptr21;
+    $__n_swaps$5 = $__n_swaps$3;
+   } while (0);
+   if (($__i$6 | 0) == ($__m$2 | 0)) $__n_swaps$6 = $__n_swaps$5; else if (__ZN7compareclEmm($__comp, HEAP32[$__m$2 >> 2] | 0, HEAP32[$__i$6 >> 2] | 0) | 0) {
+    $30 = HEAP32[$__i$6 >> 2] | 0;
+    HEAP32[$__i$6 >> 2] = HEAP32[$__m$2 >> 2];
+    HEAP32[$__m$2 >> 2] = $30;
+    $__n_swaps$6 = $__n_swaps$5 + 1 | 0;
+   } else $__n_swaps$6 = $__n_swaps$5;
+   if (!$__n_swaps$6) {
+    $call113 = __ZNSt3__227__insertion_sort_incompleteIR7comparePmEEbT0_S4_T_($__first$addr$1, $__i$6, $__comp) | 0;
+    $add$ptr114 = $__i$6 + 4 | 0;
+    if (__ZNSt3__227__insertion_sort_incompleteIR7comparePmEEbT0_S4_T_($add$ptr114, $__last$addr$1$ph, $__comp) | 0) {
+     label = 46;
+     break;
+    }
+    if ($call113) {
+     $__first$addr$6 = $add$ptr114;
+     $__last$addr$6 = $__last$addr$1$ph;
+     $cleanup$dest$slot$2 = 2;
+     label = 51;
+     break;
+    }
+   }
+   $sub$ptr$lhs$cast126 = $__i$6;
+   if (($sub$ptr$lhs$cast126 - $__first$addr$1 | 0) >= ($sub$ptr$lhs$cast$le - $sub$ptr$lhs$cast126 | 0)) {
+    label = 50;
+    break;
+   }
+   __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($__first$addr$1, $__i$6, $__comp);
+   $__first$addr$1 = $__i$6 + 4 | 0;
+  }
+  L39 : do if ((label | 0) == 17) {
+   label = 0;
+   $incdec$ptr37 = $__first$addr$1 + 4 | 0;
+   if (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$incdec$ptr18 >> 2] | 0) | 0) $__i$1 = $incdec$ptr37; else {
+    $__i$0 = $incdec$ptr37;
+    while (1) {
+     if (($__i$0 | 0) == ($incdec$ptr18 | 0)) break L1;
+     if (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$__i$0 >> 2] | 0) | 0) break;
+     $__i$0 = $__i$0 + 4 | 0;
+    }
+    $10 = HEAP32[$__i$0 >> 2] | 0;
+    HEAP32[$__i$0 >> 2] = HEAP32[$incdec$ptr18 >> 2];
+    HEAP32[$incdec$ptr18 >> 2] = $10;
+    $__i$1 = $__i$0 + 4 | 0;
+   }
+   if (($__i$1 | 0) == ($incdec$ptr18 | 0)) break L1;
+   $__i$2 = $__i$1;
+   $__j$1 = $incdec$ptr18;
+   while (1) {
+    $__i$3 = $__i$2;
+    while (1) {
+     $incdec$ptr60 = $__i$3 + 4 | 0;
+     if (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$__i$3 >> 2] | 0) | 0) break; else $__i$3 = $incdec$ptr60;
+    }
+    $__j$2 = $__j$1;
+    do $__j$2 = $__j$2 + -4 | 0; while (__ZN7compareclEmm($__comp, HEAP32[$__first$addr$1 >> 2] | 0, HEAP32[$__j$2 >> 2] | 0) | 0);
+    if ($__i$3 >>> 0 >= $__j$2 >>> 0) {
+     $__first$addr$6 = $__i$3;
+     $__last$addr$6 = $__last$addr$1$ph;
+     $cleanup$dest$slot$2 = 4;
+     label = 51;
+     break L39;
+    }
+    $16 = HEAP32[$__i$3 >> 2] | 0;
+    HEAP32[$__i$3 >> 2] = HEAP32[$__j$2 >> 2];
+    HEAP32[$__j$2 >> 2] = $16;
+    $__i$2 = $incdec$ptr60;
+    $__j$1 = $__j$2;
+   }
+  } else if ((label | 0) == 46) {
+   label = 0;
+   $__first$addr$6 = $__first$addr$1;
+   $__last$addr$6 = $call113 ? $__last$addr$1$ph : $__i$6;
+   $cleanup$dest$slot$2 = $call113 ? 1 : 2;
+   label = 51;
+  } else if ((label | 0) == 50) {
+   label = 0;
+   __ZNSt3__26__sortIR7comparePmEEvT0_S4_T_($__i$6 + 4 | 0, $__last$addr$1$ph, $__comp);
+   $__first$addr$1$ph$be = $__first$addr$1;
+   $__last$addr$1$ph$be = $__i$6;
+  } while (0);
+  if ((label | 0) == 51) {
+   label = 0;
+   switch ($cleanup$dest$slot$2 & 7) {
+   case 2:
+   case 4:
+   case 0:
+    {
+     $__first$addr$1$ph$be = $__first$addr$6;
+     $__last$addr$1$ph$be = $__last$addr$6;
+     break;
+    }
+   default:
+    break L1;
+   }
+  }
+  $__first$addr$1$ph = $__first$addr$1$ph$be;
+  $__last$addr$1$ph = $__last$addr$1$ph$be;
+ }
+ if ((label | 0) == 4) {
+  $incdec$ptr = $__last$addr$1$ph + -4 | 0;
+  if (__ZN7compareclEmm($__comp, HEAP32[$incdec$ptr >> 2] | 0, HEAP32[$__first$addr$1 >> 2] | 0) | 0) {
+   $2 = HEAP32[$__first$addr$1 >> 2] | 0;
+   HEAP32[$__first$addr$1 >> 2] = HEAP32[$incdec$ptr >> 2];
+   HEAP32[$incdec$ptr >> 2] = $2;
+  }
+ } else if ((label | 0) == 6) __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 7) __ZNSt3__27__sort4IR7comparePmEEjT0_S4_S4_S4_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__first$addr$1 + 8 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 8) __ZNSt3__27__sort5IR7comparePmEEjT0_S4_S4_S4_S4_T_($__first$addr$1, $__first$addr$1 + 4 | 0, $__first$addr$1 + 8 | 0, $__first$addr$1 + 12 | 0, $__last$addr$1$ph + -4 | 0, $__comp) | 0; else if ((label | 0) == 10) __ZNSt3__218__insertion_sort_3IR7comparePmEEvT0_S4_T_($__first$addr$1, $__last$addr$1$ph, $__comp);
+ return;
+}
+
+function __Z32meshopt_optimizeVertexCacheTablePjPKjmmPKN7meshopt16VertexScoreTableE($destination, $indices, $index_count, $vertex_count, $table) {
+ $destination = $destination | 0;
+ $indices = $indices | 0;
+ $index_count = $index_count | 0;
+ $vertex_count = $vertex_count | 0;
+ $table = $table | 0;
+ var $12 = 0, $13 = 0, $14 = 0, $15 = 0, $19 = 0, $2 = 0, $20 = 0, $22 = 0, $26 = 0, $31 = 0, $4 = 0, $5 = 0, $add$ptr124 = 0, $add$ptr172 = 0, $add$ptr175 = 0, $add187 = 0.0, $adjacency = 0, $allocator = 0, $arrayidx109 = 0, $arrayidx110 = 0, $arrayidx112 = 0, $arrayidx126 = 0, $arrayidx132 = 0, $arrayidx165 = 0, $arrayidx186 = 0, $best_score$0 = 0.0, $best_score$1 = 0.0, $best_triangle$0 = 0, $best_triangle$1 = 0, $cache$0 = 0, $cache$0$phi = 0, $cache_count$0 = 0, $cache_holder = 0, $cache_new$0 = 0, $cache_write$0 = 0, $cache_write$1 = 0, $call = 0, $call15 = 0, $call164 = 0.0, $call19 = 0, $call22 = 0, $call30 = 0, $cmp193 = 0, $cond = 0, $current_triangle$0 = 0, $current_triangle$0$be = 0, $div = 0, $i$0 = 0, $i127$0 = 0, $i149$0 = 0, $i31$0 = 0, $i91$0 = 0, $inc82 = 0, $indices$addr$0 = 0, $input_cursor = 0, $it$0 = 0, $k$0 = 0, $mul36 = 0, $mul62 = 0, $mul73 = 0, $output_triangle$0 = 0, $sub166 = 0.0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 272 | 0;
+ $allocator = sp + 168 | 0;
+ $adjacency = sp + 156 | 0;
+ $cache_holder = sp;
+ $input_cursor = sp + 152 | 0;
+ $div = ($index_count >>> 0) / 3 | 0;
+ if ($index_count - ($div * 3 | 0) | 0) ___assert_fail(47099, 46674, 173, 46759);
+ __ZN17meshopt_AllocatorC2Ev($allocator);
+ do if (!(($index_count | 0) == 0 | ($vertex_count | 0) == 0)) {
+  if (($destination | 0) == ($indices | 0)) {
+   $call = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $index_count) | 0;
+   _memcpy($call | 0, $destination | 0, $index_count << 2 | 0) | 0;
+   $indices$addr$0 = $call;
+  } else $indices$addr$0 = $indices;
+  HEAP32[$adjacency >> 2] = 0;
+  HEAP32[$adjacency + 4 >> 2] = 0;
+  HEAP32[$adjacency + 8 >> 2] = 0;
+  __ZN7meshoptL22buildTriangleAdjacencyERNS_17TriangleAdjacencyEPKjmmR17meshopt_Allocator($adjacency, $indices$addr$0, $index_count, $vertex_count, $allocator);
+  $call15 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
+  $2 = HEAP32[$adjacency >> 2] | 0;
+  _memcpy($call15 | 0, $2 | 0, $vertex_count << 2 | 0) | 0;
+  $call19 = __ZN17meshopt_Allocator8allocateIhEEPT_m($allocator, $div) | 0;
+  _memset($call19 | 0, 0, $div | 0) | 0;
+  $call22 = __ZN17meshopt_Allocator8allocateIfEEPT_m($allocator, $vertex_count) | 0;
+  $i$0 = 0;
+  while (1) {
+   if ($i$0 >>> 0 >= $vertex_count >>> 0) break;
+   HEAPF32[$call22 + ($i$0 << 2) >> 2] = +__ZN7meshoptL11vertexScoreEPKNS_16VertexScoreTableEij($table, -1, HEAP32[$call15 + ($i$0 << 2) >> 2] | 0);
+   $i$0 = $i$0 + 1 | 0;
+  }
+  $call30 = __ZN17meshopt_Allocator8allocateIfEEPT_m($allocator, $div) | 0;
+  $i31$0 = 0;
+  while (1) {
+   if ($i31$0 >>> 0 >= $div >>> 0) break;
+   $mul36 = $i31$0 * 3 | 0;
+   HEAPF32[$call30 + ($i31$0 << 2) >> 2] = +HEAPF32[$call22 + (HEAP32[$indices$addr$0 + ($mul36 << 2) >> 2] << 2) >> 2] + +HEAPF32[$call22 + (HEAP32[$indices$addr$0 + ($mul36 + 1 << 2) >> 2] << 2) >> 2] + +HEAPF32[$call22 + (HEAP32[$indices$addr$0 + ($mul36 + 2 << 2) >> 2] << 2) >> 2];
+   $i31$0 = $i31$0 + 1 | 0;
+  }
+  HEAP32[$input_cursor >> 2] = 1;
+  $4 = HEAP32[$adjacency + 8 >> 2] | 0;
+  $5 = HEAP32[$adjacency + 4 >> 2] | 0;
+  $cache$0 = $cache_holder;
+  $cache_count$0 = 0;
+  $cache_new$0 = $cache_holder + 76 | 0;
+  $current_triangle$0 = 0;
+  $output_triangle$0 = 0;
+  L17 : while (1) {
+   if (($current_triangle$0 | 0) == -1) {
+    label = 41;
+    break;
+   }
+   if ($output_triangle$0 >>> 0 >= $div >>> 0) {
+    label = 15;
+    break;
+   }
+   $mul62 = $current_triangle$0 * 3 | 0;
+   $12 = HEAP32[$indices$addr$0 + ($mul62 << 2) >> 2] | 0;
+   $13 = HEAP32[$indices$addr$0 + ($mul62 + 1 << 2) >> 2] | 0;
+   $14 = HEAP32[$indices$addr$0 + ($mul62 + 2 << 2) >> 2] | 0;
+   $mul73 = $output_triangle$0 * 3 | 0;
+   HEAP32[$destination + ($mul73 << 2) >> 2] = $12;
+   HEAP32[$destination + ($mul73 + 1 << 2) >> 2] = $13;
+   HEAP32[$destination + ($mul73 + 2 << 2) >> 2] = $14;
+   HEAP8[$call19 + $current_triangle$0 >> 0] = 1;
+   HEAPF32[$call30 + ($current_triangle$0 << 2) >> 2] = 0.0;
+   HEAP32[$cache_new$0 >> 2] = $12;
+   HEAP32[$cache_new$0 + 4 >> 2] = $13;
+   HEAP32[$cache_new$0 + 8 >> 2] = $14;
+   $cache_write$0 = 3;
+   $i91$0 = 0;
+   while (1) {
+    if (($i91$0 | 0) == ($cache_count$0 | 0)) break;
+    $19 = HEAP32[$cache$0 + ($i91$0 << 2) >> 2] | 0;
+    if (($19 | 0) == ($14 | 0) | (($19 | 0) == ($12 | 0) | ($19 | 0) == ($13 | 0))) $cache_write$1 = $cache_write$0; else {
+     HEAP32[$cache_new$0 + ($cache_write$0 << 2) >> 2] = $19;
+     $cache_write$1 = $cache_write$0 + 1 | 0;
+    }
+    $cache_write$0 = $cache_write$1;
+    $i91$0 = $i91$0 + 1 | 0;
+   }
+   $15 = $cache_write$0 >>> 0 < 16;
+   $arrayidx109 = $call15 + ($12 << 2) | 0;
+   HEAP32[$arrayidx109 >> 2] = (HEAP32[$arrayidx109 >> 2] | 0) + -1;
+   $arrayidx110 = $call15 + ($13 << 2) | 0;
+   HEAP32[$arrayidx110 >> 2] = (HEAP32[$arrayidx110 >> 2] | 0) + -1;
+   $arrayidx112 = $call15 + ($14 << 2) | 0;
+   HEAP32[$arrayidx112 >> 2] = (HEAP32[$arrayidx112 >> 2] | 0) + -1;
+   $k$0 = 0;
+   while (1) {
+    if (($k$0 | 0) == 3) break;
+    $20 = HEAP32[$indices$addr$0 + ($k$0 + $mul62 << 2) >> 2] | 0;
+    $add$ptr124 = $4 + (HEAP32[$5 + ($20 << 2) >> 2] << 2) | 0;
+    $arrayidx126 = $2 + ($20 << 2) | 0;
+    $22 = HEAP32[$arrayidx126 >> 2] | 0;
+    $i127$0 = 0;
+    while (1) {
+     if ($i127$0 >>> 0 >= $22 >>> 0) break;
+     $arrayidx132 = $add$ptr124 + ($i127$0 << 2) | 0;
+     if ((HEAP32[$arrayidx132 >> 2] | 0) == ($current_triangle$0 | 0)) {
+      label = 27;
+      break;
+     } else $i127$0 = $i127$0 + 1 | 0;
+    }
+    if ((label | 0) == 27) {
+     label = 0;
+     HEAP32[$arrayidx132 >> 2] = HEAP32[$add$ptr124 + ($22 + -1 << 2) >> 2];
+     HEAP32[$arrayidx126 >> 2] = (HEAP32[$arrayidx126 >> 2] | 0) + -1;
+    }
+    $k$0 = $k$0 + 1 | 0;
+   }
+   $inc82 = $output_triangle$0 + 1 | 0;
+   $cond = $15 ? $cache_write$0 : 16;
+   $best_score$0 = 0.0;
+   $best_triangle$0 = -1;
+   $i149$0 = 0;
+   while (1) {
+    if ($i149$0 >>> 0 >= $cache_write$0 >>> 0) break;
+    $26 = HEAP32[$cache_new$0 + ($i149$0 << 2) >> 2] | 0;
+    $call164 = +__ZN7meshoptL11vertexScoreEPKNS_16VertexScoreTableEij($table, $i149$0 >>> 0 > 15 ? -1 : $i149$0, HEAP32[$call15 + ($26 << 2) >> 2] | 0);
+    $arrayidx165 = $call22 + ($26 << 2) | 0;
+    $sub166 = $call164 - +HEAPF32[$arrayidx165 >> 2];
+    HEAPF32[$arrayidx165 >> 2] = $call164;
+    $add$ptr172 = $4 + (HEAP32[$5 + ($26 << 2) >> 2] << 2) | 0;
+    $add$ptr175 = $add$ptr172 + (HEAP32[$2 + ($26 << 2) >> 2] << 2) | 0;
+    $best_score$1 = $best_score$0;
+    $best_triangle$1 = $best_triangle$0;
+    $it$0 = $add$ptr172;
+    while (1) {
+     if (($it$0 | 0) == ($add$ptr175 | 0)) break;
+     $31 = HEAP32[$it$0 >> 2] | 0;
+     if (HEAP8[$call19 + $31 >> 0] | 0) {
+      label = 35;
+      break L17;
+     }
+     $arrayidx186 = $call30 + ($31 << 2) | 0;
+     $add187 = $sub166 + +HEAPF32[$arrayidx186 >> 2];
+     if (!($add187 > 0.0)) {
+      label = 37;
+      break L17;
+     }
+     $cmp193 = $best_score$1 < $add187;
+     HEAPF32[$arrayidx186 >> 2] = $add187;
+     $best_score$1 = $cmp193 ? $add187 : $best_score$1;
+     $best_triangle$1 = $cmp193 ? $31 : $best_triangle$1;
+     $it$0 = $it$0 + 4 | 0;
+    }
+    $best_score$0 = $best_score$1;
+    $best_triangle$0 = $best_triangle$1;
+    $i149$0 = $i149$0 + 1 | 0;
+   }
+   if (($best_triangle$0 | 0) == -1) $current_triangle$0$be = __ZN7meshoptL22getNextTriangleDeadEndERjPKhm($input_cursor, $call19, $div) | 0; else $current_triangle$0$be = $best_triangle$0;
+   $cache$0$phi = $cache_new$0;
+   $cache_count$0 = $cond;
+   $current_triangle$0 = $current_triangle$0$be;
+   $output_triangle$0 = $inc82;
+   $cache_new$0 = $cache$0;
+   $cache$0 = $cache$0$phi;
+  }
+  if ((label | 0) == 15) ___assert_fail(46792, 46674, 236, 46759); else if ((label | 0) == 35) ___assert_fail(46821, 46674, 323, 46759); else if ((label | 0) == 37) ___assert_fail(46841, 46674, 326, 46759); else if ((label | 0) == 41) {
+   if ((HEAP32[$input_cursor >> 2] | 0) != ($div | 0)) ___assert_fail(46855, 46674, 347, 46759);
+   if (($output_triangle$0 | 0) == ($div | 0)) break; else ___assert_fail(46882, 46674, 348, 46759);
+  }
+ } while (0);
+ __ZN17meshopt_AllocatorD2Ev($allocator);
+ STACKTOP = sp;
+ return;
 }
 
 function __sg_gl_apply_bindings($pip, $vbs, $vb_offsets, $num_vbs, $ib, $ib_offset, $vs_imgs, $num_vs_imgs, $fs_imgs, $num_fs_imgs) {
@@ -24295,186 +23811,6 @@ function _twoway_strstr($h, $n) {
  return $retval$3 | 0;
 }
 
-function __ZN2Dr19FindObjectsInBitmapERK8DrBitmapRNSt3__26vectorIS0_NS3_9allocatorIS0_EEEERNS4_I6DrRectNS5_IS9_EEEEdb($bitmap, $bitmaps, $rects, $alpha_tolerance, $convert) {
- $bitmap = $bitmap | 0;
- $bitmaps = $bitmaps | 0;
- $rects = $rects | 0;
- $alpha_tolerance = +$alpha_tolerance;
- $convert = $convert | 0;
- var $0 = 0, $1 = 0, $10 = 0, $13 = 0, $16 = 0, $17 = 0, $18 = 0, $2 = 0, $20 = 0, $21 = 0, $22 = 0, $24 = 0, $27 = 0, $28 = 0, $29 = 0, $3 = 0, $30 = 0, $31 = 0, $32 = 0, $4 = 0, $5 = 0, $6 = 0, $__end_$i = 0, $__end_$i34 = 0, $__end_$i42 = 0, $__end_$i50 = 0, $__value_$i$i$i$i = 0, $__value_$i$i$i$i35 = 0, $agg$tmp = 0, $agg$tmp110 = 0, $agg$tmp110$byval_copy = 0, $black_white = 0, $compare = 0, $flood_fill = 0, $flood_pixel_count = 0, $height = 0, $height44 = 0, $height65 = 0, $height95 = 0, $rect = 0, $tmp = 0, $tmp48 = 0, $width = 0, $width63 = 0, $x$090 = 0, $x36$082 = 0, $x98$086 = 0, $y$088 = 0, $y104$084 = 0, $y42$080 = 0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 128 | 0;
- $agg$tmp110$byval_copy = sp + 76 | 0;
- $black_white = sp + 48 | 0;
- $compare = sp + 116 | 0;
- $tmp = sp + 120 | 0;
- $tmp48 = sp + 112 | 0;
- $rect = sp + 32 | 0;
- $flood_pixel_count = sp + 28 | 0;
- $flood_fill = sp;
- $agg$tmp = sp + 108 | 0;
- $agg$tmp110 = sp + 104 | 0;
- __ZN8DrBitmapC2E13Bitmap_Format($black_white, 4);
- if ($convert) {
-  __ZN2Dr22BlackAndWhiteFromAlphaERK8DrBitmapdb13Bitmap_Format($agg$tmp110$byval_copy, $bitmap, $alpha_tolerance, 1, 4);
-  __ZN8DrBitmapaSERKS_($black_white, $agg$tmp110$byval_copy) | 0;
-  __ZN8DrBitmapD2Ev($agg$tmp110$byval_copy);
- } else __ZN8DrBitmapaSERKS_($black_white, $bitmap) | 0;
- __ZN7DrColorC2Ej($compare, 0);
- $width = $black_white + 8 | 0;
- L5 : do if ($convert) {
-  $0 = HEAP32[$width >> 2] | 0;
-  if (($0 | 0) > 0) {
-   $height = $black_white + 12 | 0;
-   $1 = HEAP32[$height >> 2] | 0;
-   $27 = $0;
-   $x$090 = 0;
-   while (1) {
-    if (($1 | 0) > 0) {
-     $y$088 = 0;
-     do {
-      __ZNK8DrBitmap8getPixelEii($tmp, $black_white, $x$090, $y$088);
-      $y$088 = $y$088 + 1 | 0;
-      if (__ZNK7DrColorneERKS_($tmp, $compare) | 0) {
-       label = 13;
-       break L5;
-      }
-      $2 = HEAP32[$height >> 2] | 0;
-     } while (($y$088 | 0) < ($2 | 0));
-     $28 = $2;
-     $3 = HEAP32[$width >> 2] | 0;
-    } else {
-     $28 = $1;
-     $3 = $27;
-    }
-    $x$090 = $x$090 + 1 | 0;
-    if (($x$090 | 0) >= ($3 | 0)) break; else {
-     $1 = $28;
-     $27 = $3;
-    }
-   }
-   if (($3 | 0) > 0) {
-    $height95 = $black_white + 12 | 0;
-    $17 = HEAP32[$height95 >> 2] | 0;
-    if (($17 | 0) > 0) {
-     $20 = $17;
-     $31 = $3;
-     $x98$086 = 0;
-     while (1) {
-      if (($20 | 0) > 0) {
-       $y104$084 = 0;
-       do {
-        __ZN7DrColorC2Ej($agg$tmp110, -65536);
-        HEAP8[$agg$tmp110$byval_copy >> 0] = HEAP8[$agg$tmp110 >> 0] | 0;
-        HEAP8[$agg$tmp110$byval_copy + 1 >> 0] = HEAP8[$agg$tmp110 + 1 >> 0] | 0;
-        HEAP8[$agg$tmp110$byval_copy + 2 >> 0] = HEAP8[$agg$tmp110 + 2 >> 0] | 0;
-        HEAP8[$agg$tmp110$byval_copy + 3 >> 0] = HEAP8[$agg$tmp110 + 3 >> 0] | 0;
-        __ZN8DrBitmap8setPixelEii7DrColor($black_white, $x98$086, $y104$084, $agg$tmp110$byval_copy);
-        $y104$084 = $y104$084 + 1 | 0;
-        $22 = HEAP32[$height95 >> 2] | 0;
-       } while (($y104$084 | 0) < ($22 | 0));
-       $21 = HEAP32[$width >> 2] | 0;
-       $32 = $22;
-      } else {
-       $21 = $31;
-       $32 = $20;
-      }
-      $x98$086 = $x98$086 + 1 | 0;
-      if (($x98$086 | 0) >= ($21 | 0)) break; else {
-       $20 = $32;
-       $31 = $21;
-      }
-     }
-     __ZNK8DrBitmap4rectEv($agg$tmp110$byval_copy, $black_white);
-     $__end_$i42 = $rects + 4 | 0;
-     $18 = HEAP32[$__end_$i42 >> 2] | 0;
-     if ($18 >>> 0 < (HEAP32[$rects + 8 >> 2] | 0) >>> 0) {
-      __ZN6DrRectC2ERKS_($18, $agg$tmp110$byval_copy);
-      HEAP32[$__end_$i42 >> 2] = (HEAP32[$__end_$i42 >> 2] | 0) + 16;
-     } else __ZNSt3__26vectorI6DrRectNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($rects, $agg$tmp110$byval_copy);
-     $__end_$i50 = $bitmaps + 4 | 0;
-     $24 = HEAP32[$__end_$i50 >> 2] | 0;
-     if (($24 | 0) == (HEAP32[$bitmaps + 8 >> 2] | 0)) {
-      __ZNSt3__26vectorI8DrBitmapNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($bitmaps, $black_white);
-      break;
-     } else {
-      __ZN8DrBitmapC2ERKS_13Bitmap_Format($24, $black_white, 4);
-      HEAP32[$__end_$i50 >> 2] = (HEAP32[$__end_$i50 >> 2] | 0) + 28;
-      break;
-     }
-    }
-   }
-  }
- } else label = 13; while (0);
- if ((label | 0) == 13) {
-  $4 = HEAP32[$width >> 2] | 0;
-  if (($4 | 0) > 0) {
-   $height44 = $black_white + 12 | 0;
-   $width63 = $agg$tmp110$byval_copy + 8 | 0;
-   $height65 = $agg$tmp110$byval_copy + 12 | 0;
-   $__end_$i = $rects + 4 | 0;
-   $__value_$i$i$i$i = $rects + 8 | 0;
-   $__end_$i34 = $bitmaps + 4 | 0;
-   $__value_$i$i$i$i35 = $bitmaps + 8 | 0;
-   $29 = $4;
-   $5 = HEAP32[$height44 >> 2] | 0;
-   $x36$082 = 0;
-   while (1) {
-    if (($5 | 0) > 0) {
-     $y42$080 = 0;
-     do {
-      __ZNK8DrBitmap8getPixelEii($tmp48, $black_white, $x36$082, $y42$080);
-      if (__ZNK7DrColoreqERKS_($tmp48, $compare) | 0) {
-       __ZN6DrRectC2Ev($rect);
-       __ZN7DrColorC2Ej($agg$tmp, -65536);
-       HEAP8[$agg$tmp110$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
-       HEAP8[$agg$tmp110$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
-       HEAP8[$agg$tmp110$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
-       HEAP8[$agg$tmp110$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
-       __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($flood_fill, $black_white, $x36$082, $y42$080, $agg$tmp110$byval_copy, .001, 0, $flood_pixel_count, $rect);
-       __ZN6DrRect6adjustEiiii($rect, -1, -1, 1, 1);
-       __ZN8DrBitmap4copyER6DrRect($agg$tmp110$byval_copy, $flood_fill, $rect);
-       do if ((HEAP32[$width63 >> 2] | 0) > 0) if ((HEAP32[$height65 >> 2] | 0) > 0 & (HEAP32[$flood_pixel_count >> 2] | 0) > 1) {
-        $10 = HEAP32[$__end_$i >> 2] | 0;
-        if (($10 | 0) == (HEAP32[$__value_$i$i$i$i >> 2] | 0)) __ZNSt3__26vectorI6DrRectNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($rects, $rect); else {
-         __ZN6DrRectC2ERKS_($10, $rect);
-         HEAP32[$__end_$i >> 2] = (HEAP32[$__end_$i >> 2] | 0) + 16;
-        }
-        $13 = HEAP32[$__end_$i34 >> 2] | 0;
-        if (($13 | 0) == (HEAP32[$__value_$i$i$i$i35 >> 2] | 0)) {
-         __ZNSt3__26vectorI8DrBitmapNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($bitmaps, $agg$tmp110$byval_copy);
-         break;
-        } else {
-         __ZN8DrBitmapC2ERKS_13Bitmap_Format($13, $agg$tmp110$byval_copy, 4);
-         HEAP32[$__end_$i34 >> 2] = (HEAP32[$__end_$i34 >> 2] | 0) + 28;
-         break;
-        }
-       } while (0);
-       __ZN8DrBitmapD2Ev($agg$tmp110$byval_copy);
-       __ZN8DrBitmapD2Ev($flood_fill);
-      }
-      $y42$080 = $y42$080 + 1 | 0;
-      $16 = HEAP32[$height44 >> 2] | 0;
-     } while (($y42$080 | 0) < ($16 | 0));
-     $30 = $16;
-     $6 = HEAP32[$width >> 2] | 0;
-    } else {
-     $30 = $5;
-     $6 = $29;
-    }
-    $x36$082 = $x36$082 + 1 | 0;
-    if (($x36$082 | 0) >= ($6 | 0)) break; else {
-     $29 = $6;
-     $5 = $30;
-    }
-   }
-  }
- }
- __ZN8DrBitmapD2Ev($black_white);
- STACKTOP = sp;
- return 0;
-}
-
 function __sg_gl_create_pipeline($pip, $shd, $desc) {
  $pip = $pip | 0;
  $shd = $shd | 0;
@@ -24610,140 +23946,6 @@ function __sg_gl_create_pipeline($pip, $shd, $desc) {
   return 2;
  }
  return 0;
-}
-
-function __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($agg$result, $point_list, $epsilon) {
- $agg$result = $agg$result | 0;
- $point_list = $point_list | 0;
- $epsilon = +$epsilon;
- var $$pre$phi75Z2D = 0, $$pre$phiZ2D = 0, $$pre73 = 0, $1 = 0, $2 = 0, $__end_$i = 0, $__end_$i$i = 0, $__value_$i$i$i$i = 0, $agg$tmp = 0, $agg$tmp19 = 0, $agg$tmp29 = 0, $agg$tmp35 = 0, $agg$tmp44 = 0, $agg$tmp47 = 0, $agg$tmp55 = 0, $agg$tmp55$byval_copy = 0, $agg$tmp58 = 0, $agg$tmp58$byval_copy = 0, $agg$tmp61 = 0, $agg$tmp61$byval_copy = 0, $arrayidx$i39 = 0, $arrayidx$i51 = 0, $call12 = 0.0, $cmp13 = 0, $dmax$0$lcssa = 0.0, $dmax$070 = 0.0, $dmax$1 = 0.0, $exception = 0, $exception72 = 0, $first_line = 0, $i$071 = 0, $index$0$lcssa = 0, $index$069 = 0, $index$1 = 0, $last_line = 0, $recursive_results1 = 0, $recursive_results2 = 0, $simplified = 0, $sub = 0, $sub$ptr$div$i = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 112 | 0;
- $agg$tmp61$byval_copy = sp + 104 | 0;
- $agg$tmp58$byval_copy = sp + 100 | 0;
- $agg$tmp55$byval_copy = sp + 96 | 0;
- $simplified = sp + 68 | 0;
- $first_line = sp + 56 | 0;
- $agg$tmp = sp + 92 | 0;
- $agg$tmp19 = sp + 88 | 0;
- $last_line = sp + 44 | 0;
- $agg$tmp29 = sp + 84 | 0;
- $agg$tmp35 = sp + 80 | 0;
- $recursive_results1 = sp + 28 | 0;
- $recursive_results2 = sp + 12 | 0;
- $agg$tmp44 = sp + 40 | 0;
- $agg$tmp47 = sp + 24 | 0;
- $agg$tmp55 = sp + 8 | 0;
- $agg$tmp58 = sp + 4 | 0;
- $agg$tmp61 = sp;
- HEAP32[$simplified >> 2] = 0;
- $__end_$i$i = $simplified + 4 | 0;
- HEAP32[$__end_$i$i >> 2] = 0;
- $__value_$i$i$i$i = $simplified + 8 | 0;
- HEAP32[$__value_$i$i$i$i >> 2] = 0;
- $__end_$i = $point_list + 4 | 0;
- $1 = HEAP32[$point_list >> 2] | 0;
- $sub$ptr$div$i = (HEAP32[$__end_$i >> 2] | 0) - $1 >> 4;
- $2 = $1;
- if ($sub$ptr$div$i >>> 0 < 2) {
-  $exception = ___cxa_allocate_exception(8) | 0;
-  __ZNSt11logic_errorC2EPKc($exception, 47320);
-  HEAP32[$exception >> 2] = 16320;
-  ___cxa_throw($exception | 0, 12512, 84);
- }
- $sub = $sub$ptr$div$i + -1 | 0;
- if ($sub >>> 0 > 1) {
-  $arrayidx$i51 = $2 + ($sub << 4) | 0;
-  $dmax$070 = 0.0;
-  $i$071 = 1;
-  $index$069 = 0;
-  while (1) {
-   $call12 = +__Z21PerpendicularDistanceRK8DrPointFS1_S1_($2 + ($i$071 << 4) | 0, $2, $arrayidx$i51);
-   $cmp13 = $call12 > $dmax$070;
-   $index$1 = $cmp13 ? $i$071 : $index$069;
-   $dmax$1 = $cmp13 ? $call12 : $dmax$070;
-   $i$071 = $i$071 + 1 | 0;
-   if (($i$071 | 0) == ($sub | 0)) {
-    $dmax$0$lcssa = $dmax$1;
-    $index$0$lcssa = $index$1;
-    break;
-   } else {
-    $dmax$070 = $dmax$1;
-    $index$069 = $index$1;
-   }
-  }
- } else {
-  $dmax$0$lcssa = 0.0;
-  $index$0$lcssa = 0;
- }
- do if ($dmax$0$lcssa > $epsilon) {
-  HEAP32[$agg$tmp >> 2] = $2;
-  HEAP32[$agg$tmp19 >> 2] = $2 + ($index$0$lcssa << 4) + 16;
-  HEAP32[$agg$tmp58$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
-  HEAP32[$agg$tmp61$byval_copy >> 2] = HEAP32[$agg$tmp19 >> 2];
-  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2INS_11__wrap_iterIPKS1_EEEET_NS_9enable_ifIXaasr21__is_forward_iteratorISA_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueESA_E4typeE($first_line, $agg$tmp58$byval_copy, $agg$tmp61$byval_copy);
-  HEAP32[$agg$tmp29 >> 2] = (HEAP32[$point_list >> 2] | 0) + ($index$0$lcssa << 4);
-  HEAP32[$agg$tmp35 >> 2] = HEAP32[$__end_$i >> 2];
-  HEAP32[$agg$tmp58$byval_copy >> 2] = HEAP32[$agg$tmp29 >> 2];
-  HEAP32[$agg$tmp61$byval_copy >> 2] = HEAP32[$agg$tmp35 >> 2];
-  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2INS_11__wrap_iterIPKS1_EEEET_NS_9enable_ifIXaasr21__is_forward_iteratorISA_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueESA_E4typeE($last_line, $agg$tmp58$byval_copy, $agg$tmp61$byval_copy);
-  __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($recursive_results1, $first_line, $epsilon);
-  __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($recursive_results2, $last_line, $epsilon);
-  HEAP32[$agg$tmp44 >> 2] = HEAP32[$recursive_results1 >> 2];
-  HEAP32[$agg$tmp47 >> 2] = (HEAP32[$recursive_results1 + 4 >> 2] | 0) + -16;
-  HEAP32[$agg$tmp58$byval_copy >> 2] = HEAP32[$agg$tmp44 >> 2];
-  HEAP32[$agg$tmp61$byval_copy >> 2] = HEAP32[$agg$tmp47 >> 2];
-  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE6assignINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueEvE4typeESA_SA_($simplified, $agg$tmp58$byval_copy, $agg$tmp61$byval_copy);
-  HEAP32[$agg$tmp55 >> 2] = HEAP32[$__end_$i$i >> 2];
-  HEAP32[$agg$tmp58 >> 2] = HEAP32[$recursive_results2 >> 2];
-  HEAP32[$agg$tmp61 >> 2] = HEAP32[$recursive_results2 + 4 >> 2];
-  HEAP32[$agg$tmp55$byval_copy >> 2] = HEAP32[$agg$tmp55 >> 2];
-  HEAP32[$agg$tmp58$byval_copy >> 2] = HEAP32[$agg$tmp58 >> 2];
-  HEAP32[$agg$tmp61$byval_copy >> 2] = HEAP32[$agg$tmp61 >> 2];
-  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE6insertINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueES8_E4typeENS6_IPKS1_EESA_SA_($simplified, $agg$tmp55$byval_copy, $agg$tmp58$byval_copy, $agg$tmp61$byval_copy) | 0;
-  if ((HEAP32[$__end_$i$i >> 2] | 0) - (HEAP32[$simplified >> 2] | 0) >> 4 >>> 0 < 2) {
-   $exception72 = ___cxa_allocate_exception(8) | 0;
-   __ZNSt13runtime_errorC2EPKc($exception72, 47350);
-   ___cxa_throw($exception72 | 0, 12496, 86);
-  } else {
-   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($recursive_results2);
-   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($recursive_results1);
-   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($last_line);
-   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($first_line);
-   $$pre$phi75Z2D = $__end_$i$i;
-   $$pre$phiZ2D = $simplified;
-   break;
-  }
- } else {
-  HEAP32[$__end_$i$i >> 2] = 0;
-  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($simplified, $2);
-  $$pre73 = HEAP32[$__end_$i$i >> 2] | 0;
-  $arrayidx$i39 = (HEAP32[$point_list >> 2] | 0) + ($sub << 4) | 0;
-  if (($$pre73 | 0) == (HEAP32[$__value_$i$i$i$i >> 2] | 0)) {
-   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($simplified, $arrayidx$i39);
-   $$pre$phi75Z2D = $__end_$i$i;
-   $$pre$phiZ2D = $simplified;
-   break;
-  } else {
-   HEAP32[$$pre73 >> 2] = HEAP32[$arrayidx$i39 >> 2];
-   HEAP32[$$pre73 + 4 >> 2] = HEAP32[$arrayidx$i39 + 4 >> 2];
-   HEAP32[$$pre73 + 8 >> 2] = HEAP32[$arrayidx$i39 + 8 >> 2];
-   HEAP32[$$pre73 + 12 >> 2] = HEAP32[$arrayidx$i39 + 12 >> 2];
-   HEAP32[$__end_$i$i >> 2] = $$pre73 + 16;
-   $$pre$phi75Z2D = $__end_$i$i;
-   $$pre$phiZ2D = $simplified;
-   break;
-  }
- } while (0);
- HEAP32[$agg$result >> 2] = HEAP32[$$pre$phiZ2D >> 2];
- HEAP32[$agg$result + 4 >> 2] = HEAP32[$$pre$phi75Z2D >> 2];
- HEAP32[$agg$result + 8 >> 2] = HEAP32[$__value_$i$i$i$i >> 2];
- HEAP32[$__value_$i$i$i$i >> 2] = 0;
- HEAP32[$__end_$i$i >> 2] = 0;
- HEAP32[$simplified >> 2] = 0;
- __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($simplified);
- STACKTOP = sp;
- return;
 }
 
 function __sfetch_channel_dowork($chn, $pool) {
@@ -25866,6 +25068,129 @@ function _stbi__bmp_parse_header($s, $info) {
  return $106 | 0;
 }
 
+function __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($agg$result, $point_list, $epsilon) {
+ $agg$result = $agg$result | 0;
+ $point_list = $point_list | 0;
+ $epsilon = +$epsilon;
+ var $$pre$phi70Z2D = 0, $$pre$phiZ2D = 0, $$pre68 = 0, $$pre71 = 0, $1 = 0, $2 = 0, $__end_$i = 0, $__end_$i$i = 0, $__value_$i$i$i$i = 0, $agg$tmp = 0, $agg$tmp19 = 0, $agg$tmp29 = 0, $agg$tmp35 = 0, $agg$tmp44 = 0, $agg$tmp47 = 0, $agg$tmp55 = 0, $agg$tmp55$byval_copy = 0, $agg$tmp58 = 0, $agg$tmp58$byval_copy = 0, $agg$tmp61 = 0, $agg$tmp61$byval_copy = 0, $arrayidx$i51 = 0, $call12 = 0.0, $cmp13 = 0, $dmax$0 = 0.0, $exception = 0, $exception72 = 0, $first_line = 0, $i$0 = 0, $index$0 = 0, $index$1 = 0, $last_line = 0, $recursive_results1 = 0, $recursive_results2 = 0, $simplified = 0, $sub = 0, $sub$ptr$div$i = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 112 | 0;
+ $agg$tmp61$byval_copy = sp + 104 | 0;
+ $agg$tmp58$byval_copy = sp + 100 | 0;
+ $agg$tmp55$byval_copy = sp + 96 | 0;
+ $simplified = sp + 68 | 0;
+ $first_line = sp + 56 | 0;
+ $agg$tmp = sp + 92 | 0;
+ $agg$tmp19 = sp + 88 | 0;
+ $last_line = sp + 44 | 0;
+ $agg$tmp29 = sp + 84 | 0;
+ $agg$tmp35 = sp + 80 | 0;
+ $recursive_results1 = sp + 28 | 0;
+ $recursive_results2 = sp + 12 | 0;
+ $agg$tmp44 = sp + 40 | 0;
+ $agg$tmp47 = sp + 24 | 0;
+ $agg$tmp55 = sp + 8 | 0;
+ $agg$tmp58 = sp + 4 | 0;
+ $agg$tmp61 = sp;
+ HEAP32[$simplified >> 2] = 0;
+ $__end_$i$i = $simplified + 4 | 0;
+ HEAP32[$__end_$i$i >> 2] = 0;
+ $__value_$i$i$i$i = $simplified + 8 | 0;
+ HEAP32[$__value_$i$i$i$i >> 2] = 0;
+ $__end_$i = $point_list + 4 | 0;
+ $1 = HEAP32[$point_list >> 2] | 0;
+ $sub$ptr$div$i = (HEAP32[$__end_$i >> 2] | 0) - $1 >> 4;
+ $2 = $1;
+ if ($sub$ptr$div$i >>> 0 < 2) {
+  $exception = ___cxa_allocate_exception(8) | 0;
+  __ZNSt11logic_errorC2EPKc($exception, 47320);
+  HEAP32[$exception >> 2] = 16320;
+  ___cxa_throw($exception | 0, 12512, 84);
+ }
+ $sub = $sub$ptr$div$i + -1 | 0;
+ $arrayidx$i51 = $2 + ($sub << 4) | 0;
+ $dmax$0 = 0.0;
+ $i$0 = 1;
+ $index$0 = 0;
+ while (1) {
+  if (($i$0 | 0) == ($sub | 0)) break;
+  $call12 = +__Z21PerpendicularDistanceRK8DrPointFS1_S1_($2 + ($i$0 << 4) | 0, $2, $arrayidx$i51);
+  $cmp13 = $call12 > $dmax$0;
+  $index$1 = $cmp13 ? $i$0 : $index$0;
+  $dmax$0 = $cmp13 ? $call12 : $dmax$0;
+  $i$0 = $i$0 + 1 | 0;
+  $index$0 = $index$1;
+ }
+ do if ($dmax$0 > $epsilon) {
+  HEAP32[$agg$tmp >> 2] = $2;
+  HEAP32[$agg$tmp19 >> 2] = $2 + ($index$0 << 4) + 16;
+  HEAP32[$agg$tmp58$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
+  HEAP32[$agg$tmp61$byval_copy >> 2] = HEAP32[$agg$tmp19 >> 2];
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2INS_11__wrap_iterIPKS1_EEEET_NS_9enable_ifIXaasr21__is_forward_iteratorISA_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueESA_E4typeE($first_line, $agg$tmp58$byval_copy, $agg$tmp61$byval_copy);
+  HEAP32[$agg$tmp29 >> 2] = (HEAP32[$point_list >> 2] | 0) + ($index$0 << 4);
+  HEAP32[$agg$tmp35 >> 2] = HEAP32[$__end_$i >> 2];
+  HEAP32[$agg$tmp58$byval_copy >> 2] = HEAP32[$agg$tmp29 >> 2];
+  HEAP32[$agg$tmp61$byval_copy >> 2] = HEAP32[$agg$tmp35 >> 2];
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2INS_11__wrap_iterIPKS1_EEEET_NS_9enable_ifIXaasr21__is_forward_iteratorISA_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueESA_E4typeE($last_line, $agg$tmp58$byval_copy, $agg$tmp61$byval_copy);
+  __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($recursive_results1, $first_line, $epsilon);
+  __ZN22PolylineSimplification19RamerDouglasPeuckerERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEd($recursive_results2, $last_line, $epsilon);
+  HEAP32[$agg$tmp44 >> 2] = HEAP32[$recursive_results1 >> 2];
+  HEAP32[$agg$tmp47 >> 2] = (HEAP32[$recursive_results1 + 4 >> 2] | 0) + -16;
+  HEAP32[$agg$tmp58$byval_copy >> 2] = HEAP32[$agg$tmp44 >> 2];
+  HEAP32[$agg$tmp61$byval_copy >> 2] = HEAP32[$agg$tmp47 >> 2];
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE6assignINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueEvE4typeESA_SA_($simplified, $agg$tmp58$byval_copy, $agg$tmp61$byval_copy);
+  HEAP32[$agg$tmp55 >> 2] = HEAP32[$__end_$i$i >> 2];
+  HEAP32[$agg$tmp58 >> 2] = HEAP32[$recursive_results2 >> 2];
+  HEAP32[$agg$tmp61 >> 2] = HEAP32[$recursive_results2 + 4 >> 2];
+  HEAP32[$agg$tmp55$byval_copy >> 2] = HEAP32[$agg$tmp55 >> 2];
+  HEAP32[$agg$tmp58$byval_copy >> 2] = HEAP32[$agg$tmp58 >> 2];
+  HEAP32[$agg$tmp61$byval_copy >> 2] = HEAP32[$agg$tmp61 >> 2];
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE6insertINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueES8_E4typeENS6_IPKS1_EESA_SA_($simplified, $agg$tmp55$byval_copy, $agg$tmp58$byval_copy, $agg$tmp61$byval_copy) | 0;
+  if ((HEAP32[$__end_$i$i >> 2] | 0) - (HEAP32[$simplified >> 2] | 0) >> 4 >>> 0 < 2) {
+   $exception72 = ___cxa_allocate_exception(8) | 0;
+   __ZNSt13runtime_errorC2EPKc($exception72, 47350);
+   ___cxa_throw($exception72 | 0, 12496, 86);
+  } else {
+   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($recursive_results2);
+   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($recursive_results1);
+   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($last_line);
+   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($first_line);
+   $$pre$phi70Z2D = $__end_$i$i;
+   $$pre$phiZ2D = $simplified;
+   break;
+  }
+ } else {
+  HEAP32[$__end_$i$i >> 2] = 0;
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($simplified, $2);
+  $$pre68 = HEAP32[$__end_$i$i >> 2] | 0;
+  $$pre71 = (HEAP32[$point_list >> 2] | 0) + ($sub << 4) | 0;
+  if (($$pre68 | 0) == (HEAP32[$__value_$i$i$i$i >> 2] | 0)) {
+   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($simplified, $$pre71);
+   $$pre$phi70Z2D = $__end_$i$i;
+   $$pre$phiZ2D = $simplified;
+   break;
+  } else {
+   HEAP32[$$pre68 >> 2] = HEAP32[$$pre71 >> 2];
+   HEAP32[$$pre68 + 4 >> 2] = HEAP32[$$pre71 + 4 >> 2];
+   HEAP32[$$pre68 + 8 >> 2] = HEAP32[$$pre71 + 8 >> 2];
+   HEAP32[$$pre68 + 12 >> 2] = HEAP32[$$pre71 + 12 >> 2];
+   HEAP32[$__end_$i$i >> 2] = $$pre68 + 16;
+   $$pre$phi70Z2D = $__end_$i$i;
+   $$pre$phiZ2D = $simplified;
+   break;
+  }
+ } while (0);
+ HEAP32[$agg$result >> 2] = HEAP32[$$pre$phiZ2D >> 2];
+ HEAP32[$agg$result + 4 >> 2] = HEAP32[$$pre$phi70Z2D >> 2];
+ HEAP32[$agg$result + 8 >> 2] = HEAP32[$__value_$i$i$i$i >> 2];
+ HEAP32[$__value_$i$i$i$i >> 2] = 0;
+ HEAP32[$__end_$i$i >> 2] = 0;
+ HEAP32[$simplified >> 2] = 0;
+ __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($simplified);
+ STACKTOP = sp;
+ return;
+}
+
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E13parseEncodingEv($this) {
  $this = $this | 0;
  var $Attrs = 0, $IsEndOfEncoding = 0, $Name = 0, $NameInfo = 0, $Names = 0, $Names49 = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $call20 = 0, $call23 = 0, $call39 = 0, $call50 = 0, $call52 = 0, $call7 = 0, $call8 = 0, $ref$tmp46 = 0, $retval$10 = 0, $retval$7 = 0, $retval$8 = 0, $retval$9 = 0, label = 0, sp = 0;
@@ -25969,6 +25294,148 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  }
  STACKTOP = sp;
  return $retval$10 | 0;
+}
+
+function __ZN2Dr19FindObjectsInBitmapERK8DrBitmapRNSt3__26vectorIS0_NS3_9allocatorIS0_EEEERNS4_I6DrRectNS5_IS9_EEEEdb($bitmap, $bitmaps, $rects, $alpha_tolerance, $convert) {
+ $bitmap = $bitmap | 0;
+ $bitmaps = $bitmaps | 0;
+ $rects = $rects | 0;
+ $alpha_tolerance = +$alpha_tolerance;
+ $convert = $convert | 0;
+ var $0 = 0, $10 = 0, $13 = 0, $14 = 0, $15 = 0, $17 = 0, $19 = 0, $22 = 0, $7 = 0, $__end_$i = 0, $__end_$i34 = 0, $__end_$i42 = 0, $__end_$i50 = 0, $__value_$i$i$i$i = 0, $__value_$i$i$i$i35 = 0, $agg$tmp = 0, $agg$tmp110 = 0, $agg$tmp110$byval_copy = 0, $black_white = 0, $compare = 0, $flood_fill = 0, $flood_pixel_count = 0, $height = 0, $height65 = 0, $rect = 0, $tmp = 0, $tmp48 = 0, $width = 0, $width63 = 0, $x$0 = 0, $x36$0 = 0, $x98$0 = 0, $y$0 = 0, $y104$0 = 0, $y42$0 = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 128 | 0;
+ $agg$tmp110$byval_copy = sp + 76 | 0;
+ $black_white = sp + 48 | 0;
+ $compare = sp + 116 | 0;
+ $tmp = sp + 120 | 0;
+ $tmp48 = sp + 112 | 0;
+ $rect = sp + 32 | 0;
+ $flood_pixel_count = sp + 28 | 0;
+ $flood_fill = sp;
+ $agg$tmp = sp + 108 | 0;
+ $agg$tmp110 = sp + 104 | 0;
+ __ZN8DrBitmapC2E13Bitmap_Format($black_white, 4);
+ if ($convert) {
+  __ZN2Dr22BlackAndWhiteFromAlphaERK8DrBitmapdb13Bitmap_Format($agg$tmp110$byval_copy, $bitmap, $alpha_tolerance, 1, 4);
+  __ZN8DrBitmapaSERKS_($black_white, $agg$tmp110$byval_copy) | 0;
+  __ZN8DrBitmapD2Ev($agg$tmp110$byval_copy);
+ } else __ZN8DrBitmapaSERKS_($black_white, $bitmap) | 0;
+ __ZN7DrColorC2Ej($compare, 0);
+ $width = $black_white + 8 | 0;
+ $height = $black_white + 12 | 0;
+ L5 : do if ($convert) {
+  $x$0 = 0;
+  while (1) {
+   $0 = HEAP32[$width >> 2] | 0;
+   if (($x$0 | 0) >= ($0 | 0)) break;
+   $y$0 = 0;
+   while (1) {
+    if (($y$0 | 0) >= (HEAP32[$height >> 2] | 0)) break;
+    __ZNK8DrBitmap8getPixelEii($tmp, $black_white, $x$0, $y$0);
+    if (__ZNK7DrColorneERKS_($tmp, $compare) | 0) {
+     label = 11;
+     break L5;
+    } else $y$0 = $y$0 + 1 | 0;
+   }
+   $x$0 = $x$0 + 1 | 0;
+  }
+  if (($0 | 0) > 0) {
+   $13 = HEAP32[$height >> 2] | 0;
+   if (($13 | 0) > 0) {
+    $14 = $0;
+    $22 = $13;
+    $x98$0 = 0;
+    while (1) {
+     if (($x98$0 | 0) >= ($14 | 0)) break;
+     $17 = $22;
+     $y104$0 = 0;
+     while (1) {
+      if (($y104$0 | 0) >= ($17 | 0)) break;
+      __ZN7DrColorC2Ej($agg$tmp110, -65536);
+      HEAP8[$agg$tmp110$byval_copy >> 0] = HEAP8[$agg$tmp110 >> 0] | 0;
+      HEAP8[$agg$tmp110$byval_copy + 1 >> 0] = HEAP8[$agg$tmp110 + 1 >> 0] | 0;
+      HEAP8[$agg$tmp110$byval_copy + 2 >> 0] = HEAP8[$agg$tmp110 + 2 >> 0] | 0;
+      HEAP8[$agg$tmp110$byval_copy + 3 >> 0] = HEAP8[$agg$tmp110 + 3 >> 0] | 0;
+      __ZN8DrBitmap8setPixelEii7DrColor($black_white, $x98$0, $y104$0, $agg$tmp110$byval_copy);
+      $17 = HEAP32[$height >> 2] | 0;
+      $y104$0 = $y104$0 + 1 | 0;
+     }
+     $14 = HEAP32[$width >> 2] | 0;
+     $22 = $17;
+     $x98$0 = $x98$0 + 1 | 0;
+    }
+    __ZNK8DrBitmap4rectEv($agg$tmp110$byval_copy, $black_white);
+    $__end_$i42 = $rects + 4 | 0;
+    $15 = HEAP32[$__end_$i42 >> 2] | 0;
+    if ($15 >>> 0 < (HEAP32[$rects + 8 >> 2] | 0) >>> 0) {
+     __ZN6DrRectC2ERKS_($15, $agg$tmp110$byval_copy);
+     HEAP32[$__end_$i42 >> 2] = (HEAP32[$__end_$i42 >> 2] | 0) + 16;
+    } else __ZNSt3__26vectorI6DrRectNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_($rects, $agg$tmp110$byval_copy);
+    $__end_$i50 = $bitmaps + 4 | 0;
+    $19 = HEAP32[$__end_$i50 >> 2] | 0;
+    if (($19 | 0) == (HEAP32[$bitmaps + 8 >> 2] | 0)) {
+     __ZNSt3__26vectorI8DrBitmapNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($bitmaps, $black_white);
+     break;
+    } else {
+     __ZN8DrBitmapC2ERKS_13Bitmap_Format($19, $black_white, 4);
+     HEAP32[$__end_$i50 >> 2] = (HEAP32[$__end_$i50 >> 2] | 0) + 28;
+     break;
+    }
+   }
+  }
+ } else label = 11; while (0);
+ L32 : do if ((label | 0) == 11) {
+  $width63 = $agg$tmp110$byval_copy + 8 | 0;
+  $height65 = $agg$tmp110$byval_copy + 12 | 0;
+  $__end_$i = $rects + 4 | 0;
+  $__value_$i$i$i$i = $rects + 8 | 0;
+  $__end_$i34 = $bitmaps + 4 | 0;
+  $__value_$i$i$i$i35 = $bitmaps + 8 | 0;
+  $x36$0 = 0;
+  while (1) {
+   if (($x36$0 | 0) >= (HEAP32[$width >> 2] | 0)) break L32;
+   $y42$0 = 0;
+   while (1) {
+    if (($y42$0 | 0) >= (HEAP32[$height >> 2] | 0)) break;
+    __ZNK8DrBitmap8getPixelEii($tmp48, $black_white, $x36$0, $y42$0);
+    if (__ZNK7DrColoreqERKS_($tmp48, $compare) | 0) {
+     __ZN6DrRectC2Ev($rect);
+     __ZN7DrColorC2Ej($agg$tmp, -65536);
+     HEAP8[$agg$tmp110$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
+     HEAP8[$agg$tmp110$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
+     HEAP8[$agg$tmp110$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
+     HEAP8[$agg$tmp110$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
+     __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($flood_fill, $black_white, $x36$0, $y42$0, $agg$tmp110$byval_copy, .001, 0, $flood_pixel_count, $rect);
+     __ZN6DrRect6adjustEiiii($rect, -1, -1, 1, 1);
+     __ZN8DrBitmap4copyER6DrRect($agg$tmp110$byval_copy, $flood_fill, $rect);
+     do if ((HEAP32[$width63 >> 2] | 0) > 0) if ((HEAP32[$height65 >> 2] | 0) > 0 & (HEAP32[$flood_pixel_count >> 2] | 0) > 1) {
+      $7 = HEAP32[$__end_$i >> 2] | 0;
+      if (($7 | 0) == (HEAP32[$__value_$i$i$i$i >> 2] | 0)) __ZNSt3__26vectorI6DrRectNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($rects, $rect); else {
+       __ZN6DrRectC2ERKS_($7, $rect);
+       HEAP32[$__end_$i >> 2] = (HEAP32[$__end_$i >> 2] | 0) + 16;
+      }
+      $10 = HEAP32[$__end_$i34 >> 2] | 0;
+      if (($10 | 0) == (HEAP32[$__value_$i$i$i$i35 >> 2] | 0)) {
+       __ZNSt3__26vectorI8DrBitmapNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_($bitmaps, $agg$tmp110$byval_copy);
+       break;
+      } else {
+       __ZN8DrBitmapC2ERKS_13Bitmap_Format($10, $agg$tmp110$byval_copy, 4);
+       HEAP32[$__end_$i34 >> 2] = (HEAP32[$__end_$i34 >> 2] | 0) + 28;
+       break;
+      }
+     } while (0);
+     __ZN8DrBitmapD2Ev($agg$tmp110$byval_copy);
+     __ZN8DrBitmapD2Ev($flood_fill);
+    }
+    $y42$0 = $y42$0 + 1 | 0;
+   }
+   $x36$0 = $x36$0 + 1 | 0;
+  }
+ } while (0);
+ __ZN8DrBitmapD2Ev($black_white);
+ STACKTOP = sp;
+ return 0;
 }
 
 function _stbtt__sort_edges_quicksort($p, $n) {
@@ -26848,235 +26315,6 @@ function _stbtt__rasterize_sorted_edges($result, $e, $n, $vsubsample, $off_x, $o
   return;
  }
 }
-
-function __ZN7meshoptL17calculateSortDataEPfPKjmPKfmS2_m($sort_data, $indices, $index_count, $vertex_positions, $vertex_positions_stride, $clusters, $cluster_count) {
- $sort_data = $sort_data | 0;
- $indices = $indices | 0;
- $index_count = $index_count | 0;
- $vertex_positions = $vertex_positions | 0;
- $vertex_positions_stride = $vertex_positions_stride | 0;
- $clusters = $clusters | 0;
- $cluster_count = $cluster_count | 0;
- var $10 = 0.0, $11 = 0.0, $12 = 0.0, $13 = 0.0, $14 = 0.0, $15 = 0.0, $16 = 0.0, $17 = 0.0, $18 = 0.0, $19 = 0.0, $6 = 0.0, $add = 0.0, $add$ptr = 0, $add$ptr37 = 0, $add$ptr41 = 0, $add$ptr45 = 0, $add5 = 0.0, $add8 = 0.0, $cluster$0147 = 0, $cluster_area$0139 = 0.0, $cluster_centroid$sroa$0$0136 = 0.0, $cluster_centroid$sroa$13$1138 = 0.0, $cluster_centroid$sroa$8$0137 = 0.0, $cluster_normal$sroa$0$0133 = 0.0, $cluster_normal$sroa$10$0134 = 0.0, $cluster_normal$sroa$17$1135 = 0.0, $cmp24 = 0, $cond = 0, $cond135 = 0.0, $cond158 = 0.0, $conv = 0.0, $div = 0, $div10 = 0.0, $div13 = 0.0, $div16 = 0.0, $div98 = 0.0, $i$0149 = 0, $i29$0132 = 0, $mesh_centroid$sroa$0$0$lcssa = 0.0, $mesh_centroid$sroa$0$0150 = 0.0, $mesh_centroid$sroa$13$0$lcssa = 0.0, $mesh_centroid$sroa$13$0152 = 0.0, $mesh_centroid$sroa$8$0$lcssa = 0.0, $mesh_centroid$sroa$8$0151 = 0.0, $mul22 = 0, $sub = 0.0, $sub50 = 0.0, $sub54 = 0.0, $sub58 = 0.0, $sub62 = 0.0, $sub66 = 0.0, $sub73 = 0.0, $sub80 = 0.0, $sub87 = 0.0, $cluster$0147$looptemp = 0;
- $div = $vertex_positions_stride >>> 2;
- if (!$index_count) {
-  $mesh_centroid$sroa$0$0$lcssa = 0.0;
-  $mesh_centroid$sroa$13$0$lcssa = 0.0;
-  $mesh_centroid$sroa$8$0$lcssa = 0.0;
- } else {
-  $i$0149 = 0;
-  $mesh_centroid$sroa$0$0150 = 0.0;
-  $mesh_centroid$sroa$13$0152 = 0.0;
-  $mesh_centroid$sroa$8$0151 = 0.0;
-  while (1) {
-   $add$ptr = $vertex_positions + ((Math_imul(HEAP32[$indices + ($i$0149 << 2) >> 2] | 0, $div) | 0) << 2) | 0;
-   $add = $mesh_centroid$sroa$0$0150 + +HEAPF32[$add$ptr >> 2];
-   $add5 = $mesh_centroid$sroa$8$0151 + +HEAPF32[$add$ptr + 4 >> 2];
-   $add8 = $mesh_centroid$sroa$13$0152 + +HEAPF32[$add$ptr + 8 >> 2];
-   $i$0149 = $i$0149 + 1 | 0;
-   if (($i$0149 | 0) == ($index_count | 0)) {
-    $mesh_centroid$sroa$0$0$lcssa = $add;
-    $mesh_centroid$sroa$13$0$lcssa = $add8;
-    $mesh_centroid$sroa$8$0$lcssa = $add5;
-    break;
-   } else {
-    $mesh_centroid$sroa$0$0150 = $add;
-    $mesh_centroid$sroa$13$0152 = $add8;
-    $mesh_centroid$sroa$8$0151 = $add5;
-   }
-  }
- }
- $conv = +($index_count >>> 0);
- $div10 = $mesh_centroid$sroa$0$0$lcssa / $conv;
- $div13 = $mesh_centroid$sroa$8$0$lcssa / $conv;
- $div16 = $mesh_centroid$sroa$13$0$lcssa / $conv;
- L6 : do if ($cluster_count | 0) {
-  $cluster$0147 = 0;
-  while (1) {
-   $mul22 = (HEAP32[$clusters + ($cluster$0147 << 2) >> 2] | 0) * 3 | 0;
-   $cluster$0147$looptemp = $cluster$0147;
-   $cluster$0147 = $cluster$0147 + 1 | 0;
-   $cmp24 = $cluster$0147 >>> 0 < $cluster_count >>> 0;
-   if ($cmp24) $cond = (HEAP32[$clusters + ($cluster$0147 << 2) >> 2] | 0) * 3 | 0; else $cond = $index_count;
-   if ($mul22 >>> 0 >= $cond >>> 0) break;
-   $cluster_area$0139 = 0.0;
-   $cluster_centroid$sroa$0$0136 = 0.0;
-   $cluster_centroid$sroa$13$1138 = 0.0;
-   $cluster_centroid$sroa$8$0137 = 0.0;
-   $cluster_normal$sroa$0$0133 = 0.0;
-   $cluster_normal$sroa$10$0134 = 0.0;
-   $cluster_normal$sroa$17$1135 = 0.0;
-   $i29$0132 = $mul22;
-   do {
-    $add$ptr37 = $vertex_positions + ((Math_imul(HEAP32[$indices + ($i29$0132 << 2) >> 2] | 0, $div) | 0) << 2) | 0;
-    $add$ptr41 = $vertex_positions + ((Math_imul(HEAP32[$indices + ($i29$0132 + 1 << 2) >> 2] | 0, $div) | 0) << 2) | 0;
-    $add$ptr45 = $vertex_positions + ((Math_imul(HEAP32[$indices + ($i29$0132 + 2 << 2) >> 2] | 0, $div) | 0) << 2) | 0;
-    $10 = +HEAPF32[$add$ptr41 >> 2];
-    $11 = +HEAPF32[$add$ptr37 >> 2];
-    $sub = $10 - $11;
-    $12 = +HEAPF32[$add$ptr41 + 4 >> 2];
-    $13 = +HEAPF32[$add$ptr37 + 4 >> 2];
-    $sub50 = $12 - $13;
-    $14 = +HEAPF32[$add$ptr41 + 8 >> 2];
-    $15 = +HEAPF32[$add$ptr37 + 8 >> 2];
-    $sub54 = $14 - $15;
-    $16 = +HEAPF32[$add$ptr45 >> 2];
-    $sub58 = $16 - $11;
-    $17 = +HEAPF32[$add$ptr45 + 4 >> 2];
-    $sub62 = $17 - $13;
-    $18 = +HEAPF32[$add$ptr45 + 8 >> 2];
-    $sub66 = $18 - $15;
-    $sub73 = $sub50 * $sub66 - $sub54 * $sub62;
-    $sub80 = $sub54 * $sub58 - $sub * $sub66;
-    $sub87 = $sub * $sub62 - $sub50 * $sub58;
-    $19 = +Math_sqrt(+($sub87 * $sub87 + ($sub73 * $sub73 + $sub80 * $sub80)));
-    $div98 = $19 / 3.0;
-    $cluster_centroid$sroa$0$0136 = $cluster_centroid$sroa$0$0136 + ($10 + $11 + $16) * $div98;
-    $cluster_centroid$sroa$8$0137 = $cluster_centroid$sroa$8$0137 + ($12 + $13 + $17) * $div98;
-    $cluster_centroid$sroa$13$1138 = $cluster_centroid$sroa$13$1138 + ($14 + $15 + $18) * $div98;
-    $cluster_normal$sroa$0$0133 = $cluster_normal$sroa$0$0133 + $sub73;
-    $cluster_normal$sroa$10$0134 = $cluster_normal$sroa$10$0134 + $sub80;
-    $cluster_normal$sroa$17$1135 = $cluster_normal$sroa$17$1135 + $sub87;
-    $cluster_area$0139 = $cluster_area$0139 + $19;
-    $i29$0132 = $i29$0132 + 3 | 0;
-   } while ($i29$0132 >>> 0 < $cond >>> 0);
-   $cond135 = $cluster_area$0139 == 0.0 ? 0.0 : 1.0 / $cluster_area$0139;
-   $6 = +Math_sqrt(+($cluster_normal$sroa$0$0133 * $cluster_normal$sroa$0$0133 + $cluster_normal$sroa$10$0134 * $cluster_normal$sroa$10$0134 + $cluster_normal$sroa$17$1135 * $cluster_normal$sroa$17$1135));
-   $cond158 = $6 == 0.0 ? 0.0 : 1.0 / $6;
-   HEAPF32[$sort_data + ($cluster$0147$looptemp << 2) >> 2] = $cluster_normal$sroa$17$1135 * $cond158 * ($cluster_centroid$sroa$13$1138 * $cond135 - $div16) + ($cluster_normal$sroa$0$0133 * $cond158 * ($cluster_centroid$sroa$0$0136 * $cond135 - $div10) + $cluster_normal$sroa$10$0134 * $cond158 * ($cluster_centroid$sroa$8$0137 * $cond135 - $div13));
-   if (!$cmp24) break L6;
-  }
-  ___assert_fail(46332, 46089, 36, 46548);
- } while (0);
- return;
-}
-
-function __ZN13TPPLPartition14Triangulate_ECEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE($this, $poly, $triangles) {
- $this = $this | 0;
- $poly = $poly | 0;
- $triangles = $triangles | 0;
- var $9 = 0, $arrayctor$cur = 0, $arrayctor$end = 0, $arrayidx55 = 0, $call12 = 0, $call14 = 0, $call19 = 0, $cmp17111 = 0, $cmp17111117118 = 0, $ear$0107 = 0, $ear$1102 = 0, $ear$2 = 0, $earfound$0$off0104 = 0, $earfound$1$off0 = 0, $i$0112 = 0, $i$1110 = 0, $i$2108 = 0, $i$3100 = 0, $inc124 = 0, $j$0103 = 0, $next = 0, $next83 = 0, $p = 0, $previous80 = 0, $retval$0 = 0, $retval$1 = 0, $sub = 0, $sub49 = 0, $sub94 = 0, $tobool60 = 0, $triangle = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 16 | 0;
- $triangle = sp;
- if (__ZNK8TPPLPoly5ValidEv($poly) | 0) {
-  __ZN8TPPLPolyC2Ev($triangle);
-  L3 : do if ((__ZNK8TPPLPoly12GetNumPointsEv($poly) | 0) < 3) $retval$0 = 0; else {
-   if ((__ZNK8TPPLPoly12GetNumPointsEv($poly) | 0) == 3) {
-    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $poly);
-    $retval$0 = 1;
-    break;
-   }
-   $call12 = __ZNK8TPPLPoly12GetNumPointsEv($poly) | 0;
-   $call14 = __Znam($call12 >>> 0 > 89478485 ? -1 : $call12 * 48 | 0) | 0;
-   L8 : do if ($call12 | 0) {
-    $arrayctor$end = $call14 + ($call12 * 48 | 0) | 0;
-    $arrayctor$cur = $call14;
-    do {
-     __ZN13TPPLPartition15PartitionVertexC2Ev($arrayctor$cur);
-     $arrayctor$cur = $arrayctor$cur + 48 | 0;
-    } while (($arrayctor$cur | 0) != ($arrayctor$end | 0));
-    $cmp17111 = ($call12 | 0) > 0;
-    if ($cmp17111) {
-     $sub = $call12 + -1 | 0;
-     $next = $call14 + ($sub * 48 | 0) + 44 | 0;
-     $i$0112 = 0;
-     do {
-      HEAP8[$call14 + ($i$0112 * 48 | 0) >> 0] = 1;
-      $call19 = __ZN8TPPLPoly8GetPointEl($poly, $i$0112) | 0;
-      $p = $call14 + ($i$0112 * 48 | 0) + 8 | 0;
-      HEAP32[$p >> 2] = HEAP32[$call19 >> 2];
-      HEAP32[$p + 4 >> 2] = HEAP32[$call19 + 4 >> 2];
-      HEAP32[$p + 8 >> 2] = HEAP32[$call19 + 8 >> 2];
-      HEAP32[$p + 12 >> 2] = HEAP32[$call19 + 12 >> 2];
-      HEAP32[$p + 16 >> 2] = HEAP32[$call19 + 16 >> 2];
-      HEAP32[$p + 20 >> 2] = HEAP32[$call19 + 20 >> 2];
-      if (($i$0112 | 0) == ($sub | 0)) HEAP32[$next >> 2] = $call14; else HEAP32[$call14 + ($i$0112 * 48 | 0) + 44 >> 2] = $call14 + (($i$0112 + 1 | 0) * 48 | 0);
-      HEAP32[$call14 + ($i$0112 * 48 | 0) + 40 >> 2] = $call14 + ((($i$0112 | 0) == 0 ? $sub : $i$0112 + -1 | 0) * 48 | 0);
-      $i$0112 = $i$0112 + 1 | 0;
-     } while (($i$0112 | 0) != ($call12 | 0));
-     if ($cmp17111) {
-      $i$1110 = 0;
-      do {
-       __ZN13TPPLPartition12UpdateVertexEPNS_15PartitionVertexES1_l(0, $call14 + ($i$1110 * 48 | 0) | 0, $call14, $call12);
-       $i$1110 = $i$1110 + 1 | 0;
-      } while (($i$1110 | 0) != ($call12 | 0));
-      $cmp17111117118 = 1;
-     } else $cmp17111117118 = 0;
-     $sub49 = $call12 + -3 | 0;
-     L26 : do if (($call12 | 0) > 3) {
-      $sub94 = $call12 + -4 | 0;
-      $ear$0107 = 0;
-      $i$2108 = 0;
-      while (1) {
-       $ear$1102 = $ear$0107;
-       $earfound$0$off0104 = 0;
-       $j$0103 = 0;
-       while (1) {
-        $arrayidx55 = $call14 + ($j$0103 * 48 | 0) | 0;
-        if (!(HEAP8[$arrayidx55 >> 0] | 0)) {
-         $ear$2 = $ear$1102;
-         $earfound$1$off0 = $earfound$0$off0104;
-        } else {
-         $tobool60 = (HEAP8[$call14 + ($j$0103 * 48 | 0) + 2 >> 0] | 0) == 0;
-         if ($tobool60 | $earfound$0$off0104 ^ 1) {
-          $ear$2 = $tobool60 ? $ear$1102 : $arrayidx55;
-          $earfound$1$off0 = $earfound$0$off0104 | $tobool60 ^ 1;
-         } else if (+HEAPF64[$call14 + ($j$0103 * 48 | 0) + 32 >> 3] > +HEAPF64[$ear$1102 + 32 >> 3]) {
-          $ear$2 = $arrayidx55;
-          $earfound$1$off0 = $earfound$0$off0104;
-         } else {
-          $ear$2 = $ear$1102;
-          $earfound$1$off0 = $earfound$0$off0104;
-         }
-        }
-        $j$0103 = $j$0103 + 1 | 0;
-        if (($j$0103 | 0) == ($call12 | 0)) break; else {
-         $ear$1102 = $ear$2;
-         $earfound$0$off0104 = $earfound$1$off0;
-        }
-       }
-       if (!$earfound$1$off0) break;
-       $previous80 = $ear$2 + 40 | 0;
-       $next83 = $ear$2 + 44 | 0;
-       __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, (HEAP32[$previous80 >> 2] | 0) + 8 | 0, $ear$2 + 8 | 0, (HEAP32[$next83 >> 2] | 0) + 8 | 0);
-       __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
-       HEAP8[$ear$2 >> 0] = 0;
-       $9 = HEAP32[$previous80 >> 2] | 0;
-       HEAP32[$9 + 44 >> 2] = HEAP32[$next83 >> 2];
-       HEAP32[(HEAP32[$next83 >> 2] | 0) + 40 >> 2] = $9;
-       if (($i$2108 | 0) == ($sub94 | 0)) break L26;
-       __ZN13TPPLPartition12UpdateVertexEPNS_15PartitionVertexES1_l(0, HEAP32[$previous80 >> 2] | 0, $call14, $call12);
-       __ZN13TPPLPartition12UpdateVertexEPNS_15PartitionVertexES1_l(0, HEAP32[$next83 >> 2] | 0, $call14, $call12);
-       $i$2108 = $i$2108 + 1 | 0;
-       if (($i$2108 | 0) >= ($sub49 | 0)) break L26; else $ear$0107 = $ear$2;
-      }
-      __ZdaPv($call14);
-      $retval$0 = 0;
-      break L3;
-     } while (0);
-     if ($cmp17111117118) {
-      $i$3100 = 0;
-      while (1) {
-       if (HEAP8[$call14 + ($i$3100 * 48 | 0) >> 0] | 0) break;
-       $inc124 = $i$3100 + 1 | 0;
-       if (($inc124 | 0) < ($call12 | 0)) $i$3100 = $inc124; else break L8;
-      }
-      __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, (HEAP32[$call14 + ($i$3100 * 48 | 0) + 40 >> 2] | 0) + 8 | 0, $call14 + ($i$3100 * 48 | 0) + 8 | 0, (HEAP32[$call14 + ($i$3100 * 48 | 0) + 44 >> 2] | 0) + 8 | 0);
-      __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
-     }
-    }
-   } while (0);
-   __ZdaPv($call14);
-   $retval$0 = 1;
-  } while (0);
-  __ZN8TPPLPolyD2Ev($triangle);
-  $retval$1 = $retval$0;
- } else $retval$1 = 0;
- STACKTOP = sp;
- return $retval$1 | 0;
-}
-
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E12parseNewExprEv($this) {
  $this = $this | 0;
  var $ExprList = 0, $Global = 0, $IsArray = 0, $Names = 0, $Ty = 0, $agg$tmp = 0, $agg$tmp22 = 0, $agg$tmp22$byval_copy = 0, $agg$tmp4 = 0, $agg$tmp6 = 0, $call12 = 0, $call17 = 0, $call18 = 0, $call26 = 0, $call32 = 0, $call8 = 0, $retval$5 = 0, $retval$7 = 0, label = 0, sp = 0;
@@ -27295,172 +26533,6 @@ function _fonsTextBounds($stash, $x, $y, $str, $end, $bounds) {
  return +$100;
 }
 
-function __Z13calculateMeshb($reset_position) {
- $reset_position = $reset_position | 0;
- var $13 = 0, $16 = 0, $2 = 0, $20 = 0, $22 = 0, $23 = 0, $3 = 0, $8 = 0, $__begin_$i16 = 0, $__cntrl_3$i$i = 0, $agg$tmp = 0, $agg$tmp60 = 0, $agg$tmp60$byval_copy = 0, $conv = 0.0, $gl_buffers = 0, $gl_buffers55 = 0, $i$024 = 0, $i34$022 = 0, $level_of_detail$0 = 0.0, $ref$tmp = 0, $sokol_buffer_index = 0, $sub$ptr$div$i = 0, $sub$ptr$div$i20 = 0, $sub$ptr$sub$i = 0, $sub$ptr$sub$i19 = 0, $vla = 0, $vla33 = 0, $width = 0, dest = 0, sp = 0, src = 0, stop = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 192 | 0;
- $agg$tmp60$byval_copy = sp + 128 | 0;
- $ref$tmp = sp + 64 | 0;
- $agg$tmp = sp + 120 | 0;
- $sokol_buffer_index = sp;
- $agg$tmp60 = sp + 56 | 0;
- switch (HEAP32[3178] | 0) {
- case 0:
-  {
-   $level_of_detail$0 = 19.200000762939453;
-   break;
-  }
- case 1:
-  {
-   $level_of_detail$0 = 9.600000381469727;
-   break;
-  }
- case 2:
-  {
-   $level_of_detail$0 = 4.800000190734863;
-   break;
-  }
- case 3:
-  {
-   $level_of_detail$0 = 2.4000000953674316;
-   break;
-  }
- case 4:
-  {
-   $level_of_detail$0 = 1.2000000476837158;
-   break;
-  }
- case 8:
-  {
-   $level_of_detail$0 = .07500000298023224;
-   break;
-  }
- case 6:
-  {
-   $level_of_detail$0 = .30000001192092896;
-   break;
-  }
- case 7:
-  {
-   $level_of_detail$0 = .15000000596046448;
-   break;
-  }
- default:
-  $level_of_detail$0 = .6000000238418579;
- }
- __ZN7DrImage13outlinePointsEf(HEAP32[546687] | 0, $level_of_detail$0);
- __ZNSt3__210shared_ptrI6DrMeshE11make_sharedIJEEES2_DpOT_($ref$tmp);
- $2 = HEAP32[$ref$tmp >> 2] | 0;
- $__cntrl_3$i$i = $ref$tmp + 4 | 0;
- $3 = HEAP32[$__cntrl_3$i$i >> 2] | 0;
- HEAP32[$ref$tmp >> 2] = 0;
- HEAP32[$__cntrl_3$i$i >> 2] = 0;
- HEAP32[$agg$tmp60$byval_copy >> 2] = HEAP32[546685];
- HEAP32[546685] = $2;
- HEAP32[$agg$tmp60$byval_copy + 4 >> 2] = HEAP32[546686];
- HEAP32[546686] = $3;
- __ZNSt3__210shared_ptrI6DrMeshED2Ev($agg$tmp60$byval_copy);
- __ZNSt3__210shared_ptrI6DrMeshED2Ev($ref$tmp);
- $width = (__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 8 | 0;
- $conv = +(__ZN2Dr3MaxIiEET_RKS1_S3_($width, (__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 12 | 0) | 0);
- $8 = HEAP32[546685] | 0;
- HEAPF32[$8 + 28 >> 2] = $conv;
- HEAP8[$8 + 24 >> 0] = HEAP8[45278] | 0;
- __ZN6DrMesh23initializeExtrudedImageEP7DrImagei($8, HEAP32[546687] | 0, HEAP32[3178] | 0);
- if ((__ZNK6DrMesh11vertexCountEv(HEAP32[546685] | 0) | 0) > 0) {
-  $13 = HEAP32[546685] | 0;
-  $sub$ptr$sub$i19 = (HEAP32[$13 + 16 >> 2] | 0) - (HEAP32[$13 + 12 >> 2] | 0) | 0;
-  $sub$ptr$div$i20 = ($sub$ptr$sub$i19 | 0) / 44 | 0;
-  $16 = _llvm_stacksave() | 0;
-  $vla = STACKTOP;
-  STACKTOP = STACKTOP + ((1 * ($sub$ptr$div$i20 * 44 | 0) | 0) + 15 & -16) | 0;
-  if ($sub$ptr$sub$i19 | 0) {
-   $__begin_$i16 = (HEAP32[546685] | 0) + 12 | 0;
-   $i$024 = 0;
-   do {
-    dest = $vla + ($i$024 * 44 | 0) | 0;
-    src = (HEAP32[$__begin_$i16 >> 2] | 0) + ($i$024 * 44 | 0) | 0;
-    stop = dest + 44 | 0;
-    do {
-     HEAP32[dest >> 2] = HEAP32[src >> 2];
-     dest = dest + 4 | 0;
-     src = src + 4 | 0;
-    } while ((dest | 0) < (stop | 0));
-    $i$024 = $i$024 + 1 | 0;
-   } while ($i$024 >>> 0 < $sub$ptr$div$i20 >>> 0);
-  }
-  HEAP32[$ref$tmp >> 2] = 0;
-  HEAP32[$ref$tmp + 4 >> 2] = 0;
-  HEAP32[$ref$tmp + 8 >> 2] = 0;
-  HEAP32[$ref$tmp + 12 >> 2] = 0;
-  HEAP32[$ref$tmp + 16 >> 2] = $vla;
-  HEAP32[$ref$tmp + 20 >> 2] = $sub$ptr$sub$i19;
-  HEAP32[$ref$tmp + 24 >> 2] = 45502;
-  $gl_buffers = $ref$tmp + 28 | 0;
-  HEAP32[$gl_buffers >> 2] = 0;
-  HEAP32[$gl_buffers + 4 >> 2] = 0;
-  HEAP32[$gl_buffers + 8 >> 2] = 0;
-  HEAP32[$gl_buffers + 12 >> 2] = 0;
-  HEAP32[$gl_buffers + 16 >> 2] = 0;
-  HEAP32[$gl_buffers + 20 >> 2] = 0;
-  HEAP32[$gl_buffers + 24 >> 2] = 0;
-  HEAP32[$agg$tmp >> 2] = HEAP32[15488];
-  HEAP32[$agg$tmp60$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
-  _sg_destroy_buffer($agg$tmp60$byval_copy);
-  HEAP32[15488] = _sg_make_buffer($ref$tmp) | 0;
-  $20 = HEAP32[546685] | 0;
-  $22 = HEAP32[$20 >> 2] | 0;
-  $sub$ptr$sub$i = (HEAP32[$20 + 4 >> 2] | 0) - $22 | 0;
-  $sub$ptr$div$i = $sub$ptr$sub$i >> 2;
-  $vla33 = STACKTOP;
-  STACKTOP = STACKTOP + ((1 * ($sub$ptr$div$i << 1) | 0) + 15 & -16) | 0;
-  $23 = $22;
-  if ($sub$ptr$sub$i | 0) {
-   $i34$022 = 0;
-   do {
-    HEAP16[$vla33 + ($i34$022 << 1) >> 1] = HEAP32[$23 + ($i34$022 << 2) >> 2];
-    $i34$022 = $i34$022 + 1 | 0;
-   } while ($i34$022 >>> 0 < $sub$ptr$div$i >>> 0);
-  }
-  HEAP32[$sokol_buffer_index >> 2] = 0;
-  HEAP32[$sokol_buffer_index + 4 >> 2] = 0;
-  HEAP32[$sokol_buffer_index + 8 >> 2] = 2;
-  HEAP32[$sokol_buffer_index + 12 >> 2] = 0;
-  HEAP32[$sokol_buffer_index + 16 >> 2] = $vla33;
-  HEAP32[$sokol_buffer_index + 20 >> 2] = $sub$ptr$sub$i >> 1;
-  HEAP32[$sokol_buffer_index + 24 >> 2] = 45415;
-  $gl_buffers55 = $sokol_buffer_index + 28 | 0;
-  HEAP32[$gl_buffers55 >> 2] = 0;
-  HEAP32[$gl_buffers55 + 4 >> 2] = 0;
-  HEAP32[$gl_buffers55 + 8 >> 2] = 0;
-  HEAP32[$gl_buffers55 + 12 >> 2] = 0;
-  HEAP32[$gl_buffers55 + 16 >> 2] = 0;
-  HEAP32[$gl_buffers55 + 20 >> 2] = 0;
-  HEAP32[$gl_buffers55 + 24 >> 2] = 0;
-  HEAP32[$agg$tmp60 >> 2] = HEAP32[15504];
-  HEAP32[$agg$tmp60$byval_copy >> 2] = HEAP32[$agg$tmp60 >> 2];
-  _sg_destroy_buffer($agg$tmp60$byval_copy);
-  HEAP32[15504] = _sg_make_buffer($sokol_buffer_index) | 0;
-  if ($reset_position) {
-   __ZN6DrVec23setEff(2186768, 0.0, 0.0);
-   __ZN6DrVec23setEff(2186776, 25.0, 25.0);
-   __ZN2Dr14IdentityMatrixEv($agg$tmp60$byval_copy);
-   dest = 2186784;
-   src = $agg$tmp60$byval_copy;
-   stop = dest + 64 | 0;
-   do {
-    HEAP32[dest >> 2] = HEAP32[src >> 2];
-    dest = dest + 4 | 0;
-    src = src + 4 | 0;
-   } while ((dest | 0) < (stop | 0));
-  }
-  _llvm_stackrestore($16 | 0);
- }
- STACKTOP = sp;
- return;
-}
-
 function _fonsDrawText($stash, $x, $y, $str, $end) {
  $stash = $stash | 0;
  $x = +$x;
@@ -27559,6 +26631,170 @@ function _fonsDrawText($stash, $x, $y, $str, $end) {
  $121 = +HEAPF32[$retval >> 2];
  STACKTOP = sp;
  return +$121;
+}
+
+function __Z13calculateMeshb($reset_position) {
+ $reset_position = $reset_position | 0;
+ var $13 = 0, $16 = 0, $19 = 0, $2 = 0, $21 = 0, $22 = 0, $3 = 0, $8 = 0, $__begin_$i16 = 0, $__cntrl_3$i$i = 0, $agg$tmp = 0, $agg$tmp60 = 0, $agg$tmp60$byval_copy = 0, $conv = 0.0, $gl_buffers = 0, $gl_buffers55 = 0, $i$0 = 0, $i34$0 = 0, $level_of_detail$0 = 0.0, $ref$tmp = 0, $sokol_buffer_index = 0, $sub$ptr$div$i = 0, $sub$ptr$div$i20 = 0, $sub$ptr$sub$i = 0, $sub$ptr$sub$i19 = 0, $vla = 0, $vla33 = 0, $width = 0, dest = 0, sp = 0, src = 0, stop = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 192 | 0;
+ $agg$tmp60$byval_copy = sp + 128 | 0;
+ $ref$tmp = sp + 64 | 0;
+ $agg$tmp = sp + 120 | 0;
+ $sokol_buffer_index = sp;
+ $agg$tmp60 = sp + 56 | 0;
+ switch (HEAP32[3178] | 0) {
+ case 0:
+  {
+   $level_of_detail$0 = 19.200000762939453;
+   break;
+  }
+ case 1:
+  {
+   $level_of_detail$0 = 9.600000381469727;
+   break;
+  }
+ case 2:
+  {
+   $level_of_detail$0 = 4.800000190734863;
+   break;
+  }
+ case 3:
+  {
+   $level_of_detail$0 = 2.4000000953674316;
+   break;
+  }
+ case 4:
+  {
+   $level_of_detail$0 = 1.2000000476837158;
+   break;
+  }
+ case 8:
+  {
+   $level_of_detail$0 = .07500000298023224;
+   break;
+  }
+ case 6:
+  {
+   $level_of_detail$0 = .30000001192092896;
+   break;
+  }
+ case 7:
+  {
+   $level_of_detail$0 = .15000000596046448;
+   break;
+  }
+ default:
+  $level_of_detail$0 = .6000000238418579;
+ }
+ __ZN7DrImage13outlinePointsEf(HEAP32[546687] | 0, $level_of_detail$0);
+ __ZNSt3__210shared_ptrI6DrMeshE11make_sharedIJEEES2_DpOT_($ref$tmp);
+ $2 = HEAP32[$ref$tmp >> 2] | 0;
+ $__cntrl_3$i$i = $ref$tmp + 4 | 0;
+ $3 = HEAP32[$__cntrl_3$i$i >> 2] | 0;
+ HEAP32[$ref$tmp >> 2] = 0;
+ HEAP32[$__cntrl_3$i$i >> 2] = 0;
+ HEAP32[$agg$tmp60$byval_copy >> 2] = HEAP32[546685];
+ HEAP32[546685] = $2;
+ HEAP32[$agg$tmp60$byval_copy + 4 >> 2] = HEAP32[546686];
+ HEAP32[546686] = $3;
+ __ZNSt3__210shared_ptrI6DrMeshED2Ev($agg$tmp60$byval_copy);
+ __ZNSt3__210shared_ptrI6DrMeshED2Ev($ref$tmp);
+ $width = (__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 8 | 0;
+ $conv = +(__ZN2Dr3MaxIiEET_RKS1_S3_($width, (__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 12 | 0) | 0);
+ $8 = HEAP32[546685] | 0;
+ HEAPF32[$8 + 28 >> 2] = $conv;
+ HEAP8[$8 + 24 >> 0] = HEAP8[45278] | 0;
+ __ZN6DrMesh23initializeExtrudedImageEP7DrImagei($8, HEAP32[546687] | 0, HEAP32[3178] | 0);
+ if ((__ZNK6DrMesh11vertexCountEv(HEAP32[546685] | 0) | 0) > 0) {
+  $13 = HEAP32[546685] | 0;
+  $sub$ptr$sub$i19 = (HEAP32[$13 + 16 >> 2] | 0) - (HEAP32[$13 + 12 >> 2] | 0) | 0;
+  $sub$ptr$div$i20 = ($sub$ptr$sub$i19 | 0) / 44 | 0;
+  $16 = _llvm_stacksave() | 0;
+  $vla = STACKTOP;
+  STACKTOP = STACKTOP + ((1 * ($sub$ptr$div$i20 * 44 | 0) | 0) + 15 & -16) | 0;
+  $__begin_$i16 = (HEAP32[546685] | 0) + 12 | 0;
+  $i$0 = 0;
+  while (1) {
+   if (($i$0 | 0) == ($sub$ptr$div$i20 | 0)) break;
+   dest = $vla + ($i$0 * 44 | 0) | 0;
+   src = (HEAP32[$__begin_$i16 >> 2] | 0) + ($i$0 * 44 | 0) | 0;
+   stop = dest + 44 | 0;
+   do {
+    HEAP32[dest >> 2] = HEAP32[src >> 2];
+    dest = dest + 4 | 0;
+    src = src + 4 | 0;
+   } while ((dest | 0) < (stop | 0));
+   $i$0 = $i$0 + 1 | 0;
+  }
+  HEAP32[$ref$tmp >> 2] = 0;
+  HEAP32[$ref$tmp + 4 >> 2] = 0;
+  HEAP32[$ref$tmp + 8 >> 2] = 0;
+  HEAP32[$ref$tmp + 12 >> 2] = 0;
+  HEAP32[$ref$tmp + 16 >> 2] = $vla;
+  HEAP32[$ref$tmp + 20 >> 2] = $sub$ptr$sub$i19;
+  HEAP32[$ref$tmp + 24 >> 2] = 45502;
+  $gl_buffers = $ref$tmp + 28 | 0;
+  HEAP32[$gl_buffers >> 2] = 0;
+  HEAP32[$gl_buffers + 4 >> 2] = 0;
+  HEAP32[$gl_buffers + 8 >> 2] = 0;
+  HEAP32[$gl_buffers + 12 >> 2] = 0;
+  HEAP32[$gl_buffers + 16 >> 2] = 0;
+  HEAP32[$gl_buffers + 20 >> 2] = 0;
+  HEAP32[$gl_buffers + 24 >> 2] = 0;
+  HEAP32[$agg$tmp >> 2] = HEAP32[15488];
+  HEAP32[$agg$tmp60$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
+  _sg_destroy_buffer($agg$tmp60$byval_copy);
+  HEAP32[15488] = _sg_make_buffer($ref$tmp) | 0;
+  $19 = HEAP32[546685] | 0;
+  $21 = HEAP32[$19 >> 2] | 0;
+  $sub$ptr$sub$i = (HEAP32[$19 + 4 >> 2] | 0) - $21 | 0;
+  $sub$ptr$div$i = $sub$ptr$sub$i >> 2;
+  $vla33 = STACKTOP;
+  STACKTOP = STACKTOP + ((1 * ($sub$ptr$div$i << 1) | 0) + 15 & -16) | 0;
+  $22 = $21;
+  $i34$0 = 0;
+  while (1) {
+   if (($i34$0 | 0) == ($sub$ptr$div$i | 0)) break;
+   HEAP16[$vla33 + ($i34$0 << 1) >> 1] = HEAP32[$22 + ($i34$0 << 2) >> 2];
+   $i34$0 = $i34$0 + 1 | 0;
+  }
+  HEAP32[$sokol_buffer_index >> 2] = 0;
+  HEAP32[$sokol_buffer_index + 4 >> 2] = 0;
+  HEAP32[$sokol_buffer_index + 8 >> 2] = 2;
+  HEAP32[$sokol_buffer_index + 12 >> 2] = 0;
+  HEAP32[$sokol_buffer_index + 16 >> 2] = $vla33;
+  HEAP32[$sokol_buffer_index + 20 >> 2] = $sub$ptr$sub$i >> 1;
+  HEAP32[$sokol_buffer_index + 24 >> 2] = 45415;
+  $gl_buffers55 = $sokol_buffer_index + 28 | 0;
+  HEAP32[$gl_buffers55 >> 2] = 0;
+  HEAP32[$gl_buffers55 + 4 >> 2] = 0;
+  HEAP32[$gl_buffers55 + 8 >> 2] = 0;
+  HEAP32[$gl_buffers55 + 12 >> 2] = 0;
+  HEAP32[$gl_buffers55 + 16 >> 2] = 0;
+  HEAP32[$gl_buffers55 + 20 >> 2] = 0;
+  HEAP32[$gl_buffers55 + 24 >> 2] = 0;
+  HEAP32[$agg$tmp60 >> 2] = HEAP32[15504];
+  HEAP32[$agg$tmp60$byval_copy >> 2] = HEAP32[$agg$tmp60 >> 2];
+  _sg_destroy_buffer($agg$tmp60$byval_copy);
+  HEAP32[15504] = _sg_make_buffer($sokol_buffer_index) | 0;
+  if ($reset_position) {
+   __ZN6DrVec23setEff(2186768, 0.0, 0.0);
+   __ZN6DrVec23setEff(2186776, 25.0, 25.0);
+   __ZN2Dr14IdentityMatrixEv($agg$tmp60$byval_copy);
+   dest = 2186784;
+   src = $agg$tmp60$byval_copy;
+   stop = dest + 64 | 0;
+   do {
+    HEAP32[dest >> 2] = HEAP32[src >> 2];
+    dest = dest + 4 | 0;
+    src = src + 4 | 0;
+   } while ((dest | 0) < (stop | 0));
+  }
+  _llvm_stackrestore($16 | 0);
+ }
+ STACKTOP = sp;
+ return;
 }
 
 function __ZL12image_loadedPK17sfetch_response_t($response) {
@@ -28294,101 +27530,222 @@ function _fons__getQuad($stash, $font, $prevGlyphIndex, $glyph, $scale, $spacing
  }
 }
 
-function __ZN2Dr10FillBorderER8DrBitmap7DrColor6DrRect($bitmap, $fill_color, $rect) {
- $bitmap = $bitmap | 0;
- $fill_color = $fill_color | 0;
- $rect = $rect | 0;
- var $1 = 0, $3 = 0, $agg$tmp = 0, $agg$tmp$ensured = 0, $agg$tmp$ensured25 = 0, $agg$tmp$ensured32 = 0, $agg$tmp$ensured9 = 0, $agg$tmp10 = 0, $agg$tmp26 = 0, $agg$tmp33 = 0, $call = 0, $call1 = 0, $call12 = 0, $call13 = 0, $call14 = 0, $call16 = 0, $call1631 = 0, $call2 = 0, $call3 = 0, $call335 = 0, $fill_qty = 0, $fill_rect = 0, $height = 0, $tmp = 0, $tmp21 = 0, $tmp28 = 0, $tmp5 = 0, $tmpcast$byval_copy = 0, $width = 0, $x$038 = 0, $y$034 = 0, sp = 0;
+function __ZN13TPPLPartition14Triangulate_ECEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE($this, $poly, $triangles) {
+ $this = $this | 0;
+ $poly = $poly | 0;
+ $triangles = $triangles | 0;
+ var $9 = 0, $arrayctor$cur = 0, $arrayctor$end = 0, $arrayidx55 = 0, $call12 = 0, $call14 = 0, $call19 = 0, $ear$0 = 0, $ear$1 = 0, $ear$2 = 0, $earfound$0$off0 = 0, $earfound$1$off0 = 0, $i$0 = 0, $i$1 = 0, $i$2 = 0, $i$3 = 0, $j$0 = 0, $next = 0, $next83 = 0, $p = 0, $previous80 = 0, $retval$0 = 0, $retval$1 = 0, $sub = 0, $sub49 = 0, $sub94 = 0, $tobool60 = 0, $triangle = 0, label = 0, sp = 0;
  sp = STACKTOP;
- STACKTOP = STACKTOP + 176 | 0;
- $tmpcast$byval_copy = sp + 164 | 0;
- $fill_rect = sp + 104 | 0;
- $fill_qty = sp + 100 | 0;
- $tmp = sp + 160 | 0;
- $agg$tmp$ensured = sp + 120 | 0;
- $agg$tmp = sp + 96 | 0;
- $tmp5 = sp + 156 | 0;
- $agg$tmp$ensured9 = sp + 68 | 0;
- $agg$tmp10 = sp + 64 | 0;
- $tmp21 = sp + 152 | 0;
- $agg$tmp$ensured25 = sp + 36 | 0;
- $agg$tmp26 = sp + 32 | 0;
- $tmp28 = sp + 148 | 0;
- $agg$tmp$ensured32 = sp + 4 | 0;
- $agg$tmp33 = sp;
- __ZN6DrRectC2Ev($fill_rect);
- $call = __ZN6DrRect3topEv($rect) | 0;
- $call1 = __ZN6DrRect6bottomEv($rect) | 0;
- $call2 = __ZN6DrRect4leftEv($rect) | 0;
- $call335 = __ZN6DrRect4leftEv($rect) | 0;
- $width = $rect + 8 | 0;
- if (($call2 | 0) < ((HEAP32[$width >> 2] | 0) + $call335 | 0)) {
-  $1 = HEAPU8[$fill_color >> 0] | HEAPU8[$fill_color + 1 >> 0] << 8 | HEAPU8[$fill_color + 2 >> 0] << 16 | HEAPU8[$fill_color + 3 >> 0] << 24;
-  $x$038 = $call2;
-  do {
-   __ZNK8DrBitmap8getPixelEii($tmp, $bitmap, $x$038, $call);
-   __ZN7DrColorC2Ej($tmpcast$byval_copy, 0);
-   if (__ZNK7DrColoreqERKS_($tmp, $tmpcast$byval_copy) | 0) {
-    HEAP32[$agg$tmp >> 2] = $1;
-    HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
-    __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$tmp$ensured, $bitmap, $x$038, $call, $tmpcast$byval_copy, .001, 0, $fill_qty, $fill_rect);
-    __ZN8DrBitmapD2Ev($agg$tmp$ensured);
+ STACKTOP = STACKTOP + 16 | 0;
+ $triangle = sp;
+ if (__ZNK8TPPLPoly5ValidEv($poly) | 0) {
+  __ZN8TPPLPolyC2Ev($triangle);
+  do if ((__ZNK8TPPLPoly12GetNumPointsEv($poly) | 0) < 3) $retval$0 = 0; else {
+   if ((__ZNK8TPPLPoly12GetNumPointsEv($poly) | 0) == 3) {
+    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $poly);
+    $retval$0 = 1;
+    break;
    }
-   __ZNK8DrBitmap8getPixelEii($tmp5, $bitmap, $x$038, $call1);
-   __ZN7DrColorC2Ej($tmpcast$byval_copy, 0);
-   if (__ZNK7DrColoreqERKS_($tmp5, $tmpcast$byval_copy) | 0) {
-    HEAP32[$agg$tmp10 >> 2] = $1;
-    HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp10 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp10 + 1 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp10 + 2 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp10 + 3 >> 0] | 0;
-    __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$tmp$ensured9, $bitmap, $x$038, $call1, $tmpcast$byval_copy, .001, 0, $fill_qty, $fill_rect);
-    __ZN8DrBitmapD2Ev($agg$tmp$ensured9);
+   $call12 = __ZNK8TPPLPoly12GetNumPointsEv($poly) | 0;
+   $call14 = __Znam($call12 >>> 0 > 89478485 ? -1 : $call12 * 48 | 0) | 0;
+   if ($call12 | 0) {
+    $arrayctor$end = $call14 + ($call12 * 48 | 0) | 0;
+    $arrayctor$cur = $call14;
+    do {
+     __ZN13TPPLPartition15PartitionVertexC2Ev($arrayctor$cur);
+     $arrayctor$cur = $arrayctor$cur + 48 | 0;
+    } while (($arrayctor$cur | 0) != ($arrayctor$end | 0));
    }
-   $x$038 = $x$038 + 1 | 0;
-   $call3 = __ZN6DrRect4leftEv($rect) | 0;
-  } while (($x$038 | 0) < ((HEAP32[$width >> 2] | 0) + $call3 | 0));
- }
- $call12 = __ZN6DrRect4leftEv($rect) | 0;
- $call13 = __ZN6DrRect5rightEv($rect) | 0;
- $call14 = __ZN6DrRect3topEv($rect) | 0;
- $call1631 = __ZN6DrRect3topEv($rect) | 0;
- $height = $rect + 12 | 0;
- if (($call14 | 0) < ((HEAP32[$height >> 2] | 0) + $call1631 | 0)) {
-  $3 = HEAPU8[$fill_color >> 0] | HEAPU8[$fill_color + 1 >> 0] << 8 | HEAPU8[$fill_color + 2 >> 0] << 16 | HEAPU8[$fill_color + 3 >> 0] << 24;
-  $y$034 = $call14;
-  do {
-   __ZNK8DrBitmap8getPixelEii($tmp21, $bitmap, $call12, $y$034);
-   __ZN7DrColorC2Ej($tmpcast$byval_copy, 0);
-   if (__ZNK7DrColoreqERKS_($tmp21, $tmpcast$byval_copy) | 0) {
-    HEAP32[$agg$tmp26 >> 2] = $3;
-    HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp26 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp26 + 1 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp26 + 2 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp26 + 3 >> 0] | 0;
-    __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$tmp$ensured25, $bitmap, $call12, $y$034, $tmpcast$byval_copy, .001, 0, $fill_qty, $fill_rect);
-    __ZN8DrBitmapD2Ev($agg$tmp$ensured25);
+   $sub = $call12 + -1 | 0;
+   $next = $call14 + ($sub * 48 | 0) + 44 | 0;
+   $i$0 = 0;
+   while (1) {
+    if (($i$0 | 0) >= ($call12 | 0)) break;
+    HEAP8[$call14 + ($i$0 * 48 | 0) >> 0] = 1;
+    $call19 = __ZN8TPPLPoly8GetPointEl($poly, $i$0) | 0;
+    $p = $call14 + ($i$0 * 48 | 0) + 8 | 0;
+    HEAP32[$p >> 2] = HEAP32[$call19 >> 2];
+    HEAP32[$p + 4 >> 2] = HEAP32[$call19 + 4 >> 2];
+    HEAP32[$p + 8 >> 2] = HEAP32[$call19 + 8 >> 2];
+    HEAP32[$p + 12 >> 2] = HEAP32[$call19 + 12 >> 2];
+    HEAP32[$p + 16 >> 2] = HEAP32[$call19 + 16 >> 2];
+    HEAP32[$p + 20 >> 2] = HEAP32[$call19 + 20 >> 2];
+    if (($i$0 | 0) == ($sub | 0)) HEAP32[$next >> 2] = $call14; else HEAP32[$call14 + ($i$0 * 48 | 0) + 44 >> 2] = $call14 + (($i$0 + 1 | 0) * 48 | 0);
+    HEAP32[$call14 + ($i$0 * 48 | 0) + 40 >> 2] = $call14 + ((($i$0 | 0) == 0 ? $sub : $i$0 + -1 | 0) * 48 | 0);
+    $i$0 = $i$0 + 1 | 0;
    }
-   __ZNK8DrBitmap8getPixelEii($tmp28, $bitmap, $call13, $y$034);
-   __ZN7DrColorC2Ej($tmpcast$byval_copy, 0);
-   if (__ZNK7DrColoreqERKS_($tmp28, $tmpcast$byval_copy) | 0) {
-    HEAP32[$agg$tmp33 >> 2] = $3;
-    HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp33 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp33 + 1 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp33 + 2 >> 0] | 0;
-    HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp33 + 3 >> 0] | 0;
-    __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$tmp$ensured32, $bitmap, $call13, $y$034, $tmpcast$byval_copy, .001, 0, $fill_qty, $fill_rect);
-    __ZN8DrBitmapD2Ev($agg$tmp$ensured32);
+   $i$1 = 0;
+   while (1) {
+    if (($i$1 | 0) >= ($call12 | 0)) break;
+    __ZN13TPPLPartition12UpdateVertexEPNS_15PartitionVertexES1_l(0, $call14 + ($i$1 * 48 | 0) | 0, $call14, $call12);
+    $i$1 = $i$1 + 1 | 0;
    }
-   $y$034 = $y$034 + 1 | 0;
-   $call16 = __ZN6DrRect3topEv($rect) | 0;
-  } while (($y$034 | 0) < ((HEAP32[$height >> 2] | 0) + $call16 | 0));
- }
+   $sub49 = $call12 + -3 | 0;
+   $sub94 = $call12 + -4 | 0;
+   $ear$0 = 0;
+   $i$2 = 0;
+   while (1) {
+    if (($i$2 | 0) >= ($sub49 | 0)) break;
+    $ear$1 = $ear$0;
+    $earfound$0$off0 = 0;
+    $j$0 = 0;
+    while (1) {
+     if (($j$0 | 0) >= ($call12 | 0)) break;
+     $arrayidx55 = $call14 + ($j$0 * 48 | 0) | 0;
+     if (!(HEAP8[$arrayidx55 >> 0] | 0)) {
+      $ear$2 = $ear$1;
+      $earfound$1$off0 = $earfound$0$off0;
+     } else {
+      $tobool60 = (HEAP8[$call14 + ($j$0 * 48 | 0) + 2 >> 0] | 0) == 0;
+      if ($tobool60 | $earfound$0$off0 ^ 1) {
+       $ear$2 = $tobool60 ? $ear$1 : $arrayidx55;
+       $earfound$1$off0 = $earfound$0$off0 | $tobool60 ^ 1;
+      } else if (+HEAPF64[$call14 + ($j$0 * 48 | 0) + 32 >> 3] > +HEAPF64[$ear$1 + 32 >> 3]) {
+       $ear$2 = $arrayidx55;
+       $earfound$1$off0 = $earfound$0$off0;
+      } else {
+       $ear$2 = $ear$1;
+       $earfound$1$off0 = $earfound$0$off0;
+      }
+     }
+     $ear$1 = $ear$2;
+     $earfound$0$off0 = $earfound$1$off0;
+     $j$0 = $j$0 + 1 | 0;
+    }
+    if (!$earfound$0$off0) {
+     label = 28;
+     break;
+    }
+    $previous80 = $ear$1 + 40 | 0;
+    $next83 = $ear$1 + 44 | 0;
+    __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, (HEAP32[$previous80 >> 2] | 0) + 8 | 0, $ear$1 + 8 | 0, (HEAP32[$next83 >> 2] | 0) + 8 | 0);
+    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
+    HEAP8[$ear$1 >> 0] = 0;
+    $9 = HEAP32[$previous80 >> 2] | 0;
+    HEAP32[$9 + 44 >> 2] = HEAP32[$next83 >> 2];
+    HEAP32[(HEAP32[$next83 >> 2] | 0) + 40 >> 2] = $9;
+    if (($i$2 | 0) == ($sub94 | 0)) break;
+    __ZN13TPPLPartition12UpdateVertexEPNS_15PartitionVertexES1_l(0, HEAP32[$previous80 >> 2] | 0, $call14, $call12);
+    __ZN13TPPLPartition12UpdateVertexEPNS_15PartitionVertexES1_l(0, HEAP32[$next83 >> 2] | 0, $call14, $call12);
+    $ear$0 = $ear$1;
+    $i$2 = $i$2 + 1 | 0;
+   }
+   if ((label | 0) == 28) {
+    __ZdaPv($call14);
+    $retval$0 = 0;
+    break;
+   }
+   $i$3 = 0;
+   while (1) {
+    if (($i$3 | 0) >= ($call12 | 0)) break;
+    if (HEAP8[$call14 + ($i$3 * 48 | 0) >> 0] | 0) {
+     label = 33;
+     break;
+    }
+    $i$3 = $i$3 + 1 | 0;
+   }
+   if ((label | 0) == 33) {
+    __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($triangle, (HEAP32[$call14 + ($i$3 * 48 | 0) + 40 >> 2] | 0) + 8 | 0, $call14 + ($i$3 * 48 | 0) + 8 | 0, (HEAP32[$call14 + ($i$3 * 48 | 0) + 44 >> 2] | 0) + 8 | 0);
+    __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($triangles, $triangle);
+   }
+   __ZdaPv($call14);
+   $retval$0 = 1;
+  } while (0);
+  __ZN8TPPLPolyD2Ev($triangle);
+  $retval$1 = $retval$0;
+ } else $retval$1 = 0;
  STACKTOP = sp;
- return;
+ return $retval$1 | 0;
+}
+
+function __ZN7meshoptL17calculateSortDataEPfPKjmPKfmS2_m($sort_data, $indices, $index_count, $vertex_positions, $vertex_positions_stride, $clusters, $cluster_count) {
+ $sort_data = $sort_data | 0;
+ $indices = $indices | 0;
+ $index_count = $index_count | 0;
+ $vertex_positions = $vertex_positions | 0;
+ $vertex_positions_stride = $vertex_positions_stride | 0;
+ $clusters = $clusters | 0;
+ $cluster_count = $cluster_count | 0;
+ var $10 = 0.0, $11 = 0.0, $12 = 0.0, $13 = 0.0, $14 = 0.0, $15 = 0.0, $16 = 0.0, $17 = 0.0, $18 = 0.0, $19 = 0.0, $6 = 0.0, $add$ptr = 0, $add$ptr37 = 0, $add$ptr41 = 0, $add$ptr45 = 0, $add23 = 0, $cluster$0 = 0, $cluster_area$0 = 0.0, $cluster_centroid$sroa$0$0 = 0.0, $cluster_centroid$sroa$13$1 = 0.0, $cluster_centroid$sroa$8$0 = 0.0, $cluster_normal$sroa$0$0 = 0.0, $cluster_normal$sroa$10$0 = 0.0, $cluster_normal$sroa$17$1 = 0.0, $cond = 0, $cond135 = 0.0, $cond158 = 0.0, $conv = 0.0, $div = 0, $div10 = 0.0, $div13 = 0.0, $div16 = 0.0, $div98 = 0.0, $i$0 = 0, $i29$0 = 0, $mesh_centroid$sroa$0$0 = 0.0, $mesh_centroid$sroa$13$0 = 0.0, $mesh_centroid$sroa$8$0 = 0.0, $mul22 = 0, $sub = 0.0, $sub50 = 0.0, $sub54 = 0.0, $sub58 = 0.0, $sub62 = 0.0, $sub66 = 0.0, $sub73 = 0.0, $sub80 = 0.0, $sub87 = 0.0, label = 0;
+ $div = $vertex_positions_stride >>> 2;
+ $i$0 = 0;
+ $mesh_centroid$sroa$0$0 = 0.0;
+ $mesh_centroid$sroa$13$0 = 0.0;
+ $mesh_centroid$sroa$8$0 = 0.0;
+ while (1) {
+  if (($i$0 | 0) == ($index_count | 0)) break;
+  $add$ptr = $vertex_positions + ((Math_imul(HEAP32[$indices + ($i$0 << 2) >> 2] | 0, $div) | 0) << 2) | 0;
+  $i$0 = $i$0 + 1 | 0;
+  $mesh_centroid$sroa$0$0 = $mesh_centroid$sroa$0$0 + +HEAPF32[$add$ptr >> 2];
+  $mesh_centroid$sroa$13$0 = $mesh_centroid$sroa$13$0 + +HEAPF32[$add$ptr + 8 >> 2];
+  $mesh_centroid$sroa$8$0 = $mesh_centroid$sroa$8$0 + +HEAPF32[$add$ptr + 4 >> 2];
+ }
+ $conv = +($index_count >>> 0);
+ $div10 = $mesh_centroid$sroa$0$0 / $conv;
+ $div13 = $mesh_centroid$sroa$8$0 / $conv;
+ $div16 = $mesh_centroid$sroa$13$0 / $conv;
+ $cluster$0 = 0;
+ while (1) {
+  if ($cluster$0 >>> 0 >= $cluster_count >>> 0) {
+   label = 6;
+   break;
+  }
+  $mul22 = (HEAP32[$clusters + ($cluster$0 << 2) >> 2] | 0) * 3 | 0;
+  $add23 = $cluster$0 + 1 | 0;
+  if ($add23 >>> 0 < $cluster_count >>> 0) $cond = (HEAP32[$clusters + ($add23 << 2) >> 2] | 0) * 3 | 0; else $cond = $index_count;
+  if ($mul22 >>> 0 >= $cond >>> 0) {
+   label = 11;
+   break;
+  }
+  $cluster_area$0 = 0.0;
+  $cluster_centroid$sroa$0$0 = 0.0;
+  $cluster_centroid$sroa$13$1 = 0.0;
+  $cluster_centroid$sroa$8$0 = 0.0;
+  $cluster_normal$sroa$0$0 = 0.0;
+  $cluster_normal$sroa$10$0 = 0.0;
+  $cluster_normal$sroa$17$1 = 0.0;
+  $i29$0 = $mul22;
+  while (1) {
+   if ($i29$0 >>> 0 >= $cond >>> 0) break;
+   $add$ptr37 = $vertex_positions + ((Math_imul(HEAP32[$indices + ($i29$0 << 2) >> 2] | 0, $div) | 0) << 2) | 0;
+   $add$ptr41 = $vertex_positions + ((Math_imul(HEAP32[$indices + ($i29$0 + 1 << 2) >> 2] | 0, $div) | 0) << 2) | 0;
+   $add$ptr45 = $vertex_positions + ((Math_imul(HEAP32[$indices + ($i29$0 + 2 << 2) >> 2] | 0, $div) | 0) << 2) | 0;
+   $10 = +HEAPF32[$add$ptr41 >> 2];
+   $11 = +HEAPF32[$add$ptr37 >> 2];
+   $sub = $10 - $11;
+   $12 = +HEAPF32[$add$ptr41 + 4 >> 2];
+   $13 = +HEAPF32[$add$ptr37 + 4 >> 2];
+   $sub50 = $12 - $13;
+   $14 = +HEAPF32[$add$ptr41 + 8 >> 2];
+   $15 = +HEAPF32[$add$ptr37 + 8 >> 2];
+   $sub54 = $14 - $15;
+   $16 = +HEAPF32[$add$ptr45 >> 2];
+   $sub58 = $16 - $11;
+   $17 = +HEAPF32[$add$ptr45 + 4 >> 2];
+   $sub62 = $17 - $13;
+   $18 = +HEAPF32[$add$ptr45 + 8 >> 2];
+   $sub66 = $18 - $15;
+   $sub73 = $sub50 * $sub66 - $sub54 * $sub62;
+   $sub80 = $sub54 * $sub58 - $sub * $sub66;
+   $sub87 = $sub * $sub62 - $sub50 * $sub58;
+   $19 = +Math_sqrt(+($sub87 * $sub87 + ($sub73 * $sub73 + $sub80 * $sub80)));
+   $div98 = $19 / 3.0;
+   $cluster_area$0 = $cluster_area$0 + $19;
+   $cluster_centroid$sroa$0$0 = $cluster_centroid$sroa$0$0 + ($10 + $11 + $16) * $div98;
+   $cluster_centroid$sroa$13$1 = $cluster_centroid$sroa$13$1 + ($14 + $15 + $18) * $div98;
+   $cluster_centroid$sroa$8$0 = $cluster_centroid$sroa$8$0 + ($12 + $13 + $17) * $div98;
+   $cluster_normal$sroa$0$0 = $cluster_normal$sroa$0$0 + $sub73;
+   $cluster_normal$sroa$10$0 = $cluster_normal$sroa$10$0 + $sub80;
+   $cluster_normal$sroa$17$1 = $cluster_normal$sroa$17$1 + $sub87;
+   $i29$0 = $i29$0 + 3 | 0;
+  }
+  $cond135 = $cluster_area$0 == 0.0 ? 0.0 : 1.0 / $cluster_area$0;
+  $6 = +Math_sqrt(+($cluster_normal$sroa$0$0 * $cluster_normal$sroa$0$0 + $cluster_normal$sroa$10$0 * $cluster_normal$sroa$10$0 + $cluster_normal$sroa$17$1 * $cluster_normal$sroa$17$1));
+  $cond158 = $6 == 0.0 ? 0.0 : 1.0 / $6;
+  HEAPF32[$sort_data + ($cluster$0 << 2) >> 2] = $cluster_normal$sroa$17$1 * $cond158 * ($cluster_centroid$sroa$13$1 * $cond135 - $div16) + ($cluster_normal$sroa$0$0 * $cond158 * ($cluster_centroid$sroa$0$0 * $cond135 - $div10) + $cluster_normal$sroa$10$0 * $cond158 * ($cluster_centroid$sroa$8$0 * $cond135 - $div13));
+  $cluster$0 = $add23;
+ }
+ if ((label | 0) == 6) return; else if ((label | 0) == 11) ___assert_fail(46332, 46089, 36, 46548);
 }
 
 function __sg_gl_begin_pass($pass, $action, $w, $h) {
@@ -29317,6 +28674,97 @@ function _stbi__jpeg_decode_block($j, $data, $hdc, $hac, $fac, $b, $dequant) {
  return 0;
 }
 
+function __ZN2Dr10FillBorderER8DrBitmap7DrColor6DrRect($bitmap, $fill_color, $rect) {
+ $bitmap = $bitmap | 0;
+ $fill_color = $fill_color | 0;
+ $rect = $rect | 0;
+ var $0 = 0, $agg$tmp = 0, $agg$tmp$ensured = 0, $agg$tmp$ensured25 = 0, $agg$tmp$ensured32 = 0, $agg$tmp$ensured9 = 0, $agg$tmp10 = 0, $agg$tmp26 = 0, $agg$tmp33 = 0, $call = 0, $call1 = 0, $call12 = 0, $call13 = 0, $call16 = 0, $call2 = 0, $call3 = 0, $fill_qty = 0, $fill_rect = 0, $height = 0, $tmp = 0, $tmp21 = 0, $tmp28 = 0, $tmp5 = 0, $tmpcast$byval_copy = 0, $width = 0, $x$0 = 0, $y$0 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 176 | 0;
+ $tmpcast$byval_copy = sp + 164 | 0;
+ $fill_rect = sp + 104 | 0;
+ $fill_qty = sp + 100 | 0;
+ $tmp = sp + 160 | 0;
+ $agg$tmp$ensured = sp + 120 | 0;
+ $agg$tmp = sp + 96 | 0;
+ $tmp5 = sp + 156 | 0;
+ $agg$tmp$ensured9 = sp + 68 | 0;
+ $agg$tmp10 = sp + 64 | 0;
+ $tmp21 = sp + 152 | 0;
+ $agg$tmp$ensured25 = sp + 36 | 0;
+ $agg$tmp26 = sp + 32 | 0;
+ $tmp28 = sp + 148 | 0;
+ $agg$tmp$ensured32 = sp + 4 | 0;
+ $agg$tmp33 = sp;
+ __ZN6DrRectC2Ev($fill_rect);
+ $call = __ZN6DrRect3topEv($rect) | 0;
+ $call1 = __ZN6DrRect6bottomEv($rect) | 0;
+ $call2 = __ZN6DrRect4leftEv($rect) | 0;
+ $width = $rect + 8 | 0;
+ $0 = HEAPU8[$fill_color >> 0] | HEAPU8[$fill_color + 1 >> 0] << 8 | HEAPU8[$fill_color + 2 >> 0] << 16 | HEAPU8[$fill_color + 3 >> 0] << 24;
+ $x$0 = $call2;
+ while (1) {
+  $call3 = __ZN6DrRect4leftEv($rect) | 0;
+  if (($x$0 | 0) >= ((HEAP32[$width >> 2] | 0) + $call3 | 0)) break;
+  __ZNK8DrBitmap8getPixelEii($tmp, $bitmap, $x$0, $call);
+  __ZN7DrColorC2Ej($tmpcast$byval_copy, 0);
+  if (__ZNK7DrColoreqERKS_($tmp, $tmpcast$byval_copy) | 0) {
+   HEAP32[$agg$tmp >> 2] = $0;
+   HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
+   __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$tmp$ensured, $bitmap, $x$0, $call, $tmpcast$byval_copy, .001, 0, $fill_qty, $fill_rect);
+   __ZN8DrBitmapD2Ev($agg$tmp$ensured);
+  }
+  __ZNK8DrBitmap8getPixelEii($tmp5, $bitmap, $x$0, $call1);
+  __ZN7DrColorC2Ej($tmpcast$byval_copy, 0);
+  if (__ZNK7DrColoreqERKS_($tmp5, $tmpcast$byval_copy) | 0) {
+   HEAP32[$agg$tmp10 >> 2] = $0;
+   HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp10 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp10 + 1 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp10 + 2 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp10 + 3 >> 0] | 0;
+   __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$tmp$ensured9, $bitmap, $x$0, $call1, $tmpcast$byval_copy, .001, 0, $fill_qty, $fill_rect);
+   __ZN8DrBitmapD2Ev($agg$tmp$ensured9);
+  }
+  $x$0 = $x$0 + 1 | 0;
+ }
+ $call12 = __ZN6DrRect4leftEv($rect) | 0;
+ $call13 = __ZN6DrRect5rightEv($rect) | 0;
+ $height = $rect + 12 | 0;
+ $y$0 = __ZN6DrRect3topEv($rect) | 0;
+ while (1) {
+  $call16 = __ZN6DrRect3topEv($rect) | 0;
+  if (($y$0 | 0) >= ((HEAP32[$height >> 2] | 0) + $call16 | 0)) break;
+  __ZNK8DrBitmap8getPixelEii($tmp21, $bitmap, $call12, $y$0);
+  __ZN7DrColorC2Ej($tmpcast$byval_copy, 0);
+  if (__ZNK7DrColoreqERKS_($tmp21, $tmpcast$byval_copy) | 0) {
+   HEAP32[$agg$tmp26 >> 2] = $0;
+   HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp26 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp26 + 1 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp26 + 2 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp26 + 3 >> 0] | 0;
+   __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$tmp$ensured25, $bitmap, $call12, $y$0, $tmpcast$byval_copy, .001, 0, $fill_qty, $fill_rect);
+   __ZN8DrBitmapD2Ev($agg$tmp$ensured25);
+  }
+  __ZNK8DrBitmap8getPixelEii($tmp28, $bitmap, $call13, $y$0);
+  __ZN7DrColorC2Ej($tmpcast$byval_copy, 0);
+  if (__ZNK7DrColoreqERKS_($tmp28, $tmpcast$byval_copy) | 0) {
+   HEAP32[$agg$tmp33 >> 2] = $0;
+   HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp33 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp33 + 1 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp33 + 2 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp33 + 3 >> 0] | 0;
+   __ZN2Dr9FloodFillER8DrBitmapii7DrColord15Flood_Fill_TypeRiR6DrRect($agg$tmp$ensured32, $bitmap, $call13, $y$0, $tmpcast$byval_copy, .001, 0, $fill_qty, $fill_rect);
+   __ZN8DrBitmapD2Ev($agg$tmp$ensured32);
+  }
+  $y$0 = $y$0 + 1 | 0;
+ }
+ STACKTOP = sp;
+ return;
+}
+
 function __sg_validate_image_desc($desc) {
  $desc = $desc | 0;
  var $21 = 0, $34 = 0, $call102 = 0, $desc$addr = 0, $face_index = 0, $face_index68 = 0, $fmt = 0, $has_data = 0, $has_size = 0, $injected = 0, $mip_index = 0, $mip_index72 = 0, $no_data = 0, $no_size = 0, $num_faces = 0, $num_mips = 0, $usage = 0, $valid_nonrt_fmt = 0, sp = 0;
@@ -29991,85 +29439,6 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  return $retval$5 | 0;
 }
 
-function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE6insertINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueES8_E4typeENS6_IPKS1_EESA_SA_($this, $__position, $__first, $__last) {
- $this = $this | 0;
- $__position = $__position | 0;
- $__first = $__first | 0;
- $__last = $__last | 0;
- var $0 = 0, $1 = 0, $10 = 0, $12 = 0, $3 = 0, $4 = 0, $6 = 0, $7 = 0, $8 = 0, $9 = 0, $__m$sroa$0$045 = 0, $__p$0 = 0, $__result$addr$05$i$i = 0, $__v = 0, $__value_$i$i$i = 0, $add = 0, $add$ptr = 0, $agg$tmp21 = 0, $agg$tmp22 = 0, $agg$tmp38 = 0, $agg$tmp38$byval_copy = 0, $agg$tmp39 = 0, $agg$tmp39$byval_copy = 0, $call$i = 0, $call41 = 0, $mul$i = 0, $sub$ptr$div$i$i$i = 0, $sub$ptr$div13 = 0, $sub$ptr$rhs$cast = 0, $sub$ptr$sub$i$i$i = 0, $sub$ptr$sub$i$i$i30 = 0, $sub$ptr$sub12 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 48 | 0;
- $agg$tmp39$byval_copy = sp + 40 | 0;
- $agg$tmp38$byval_copy = sp + 36 | 0;
- $agg$tmp21 = sp + 32 | 0;
- $agg$tmp22 = sp + 28 | 0;
- $__v = sp + 8 | 0;
- $agg$tmp38 = sp + 4 | 0;
- $agg$tmp39 = sp;
- $0 = HEAP32[$this >> 2] | 0;
- $1 = $0;
- $add$ptr = $0 + ((HEAP32[$__position >> 2] | 0) - $1 >> 4 << 4) | 0;
- $3 = HEAP32[$__first >> 2] | 0;
- $4 = HEAP32[$__last >> 2] | 0;
- $sub$ptr$sub$i$i$i = $4 - $3 | 0;
- $sub$ptr$div$i$i$i = $sub$ptr$sub$i$i$i >> 4;
- do if (($sub$ptr$sub$i$i$i | 0) > 0) {
-  $__value_$i$i$i = $this + 8 | 0;
-  $6 = HEAP32[$this + 4 >> 2] | 0;
-  $sub$ptr$rhs$cast = $6;
-  if (($sub$ptr$div$i$i$i | 0) > ((HEAP32[$__value_$i$i$i >> 2] | 0) - $sub$ptr$rhs$cast >> 4 | 0)) {
-   $add = ($sub$ptr$rhs$cast - $1 >> 4) + $sub$ptr$div$i$i$i | 0;
-   $call$i = __ZNKSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE8max_sizeEv($this) | 0;
-   if ($call$i >>> 0 < $add >>> 0) __ZNKSt3__220__vector_base_commonILb1EE20__throw_length_errorEv($this); else {
-    $12 = HEAP32[$this >> 2] | 0;
-    $sub$ptr$sub$i$i$i30 = (HEAP32[$__value_$i$i$i >> 2] | 0) - $12 | 0;
-    $mul$i = $sub$ptr$sub$i$i$i30 >> 3;
-    __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEEC2EmmS4_($__v, $sub$ptr$sub$i$i$i30 >> 4 >>> 0 < $call$i >>> 1 >>> 0 ? ($mul$i >>> 0 < $add >>> 0 ? $add : $mul$i) : $call$i, $add$ptr - $12 >> 4, $this + 8 | 0);
-    HEAP32[$agg$tmp38 >> 2] = $3;
-    HEAP32[$agg$tmp39 >> 2] = $4;
-    HEAP32[$agg$tmp38$byval_copy >> 2] = HEAP32[$agg$tmp38 >> 2];
-    HEAP32[$agg$tmp39$byval_copy >> 2] = HEAP32[$agg$tmp39 >> 2];
-    __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESB_SB_($__v, $agg$tmp38$byval_copy, $agg$tmp39$byval_copy);
-    $call41 = __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS1_RS3_EEPS1_($this, $__v, $add$ptr) | 0;
-    __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEED2Ev($__v);
-    $__p$0 = $call41;
-    break;
-   }
-  }
-  $sub$ptr$sub12 = $sub$ptr$rhs$cast - $add$ptr | 0;
-  $sub$ptr$div13 = $sub$ptr$sub12 >> 4;
-  $7 = $3;
-  $8 = $7 + ($sub$ptr$div13 << 4) | 0;
-  if (($sub$ptr$div$i$i$i | 0) > ($sub$ptr$div13 | 0)) {
-   HEAP32[$agg$tmp21 >> 2] = $8;
-   HEAP32[$agg$tmp22 >> 2] = $4;
-   HEAP32[$agg$tmp38$byval_copy >> 2] = HEAP32[$agg$tmp21 >> 2];
-   HEAP32[$agg$tmp39$byval_copy >> 2] = HEAP32[$agg$tmp22 >> 2];
-   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $agg$tmp38$byval_copy, $agg$tmp39$byval_copy, $sub$ptr$div$i$i$i - $sub$ptr$div13 | 0);
-   if (($sub$ptr$sub12 | 0) > 0) $__m$sroa$0$045 = $8; else {
-    $__p$0 = $add$ptr;
-    break;
-   }
-  } else $__m$sroa$0$045 = $4;
-  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE12__move_rangeEPS1_S5_S5_($this, $add$ptr, $6, $add$ptr + ($sub$ptr$div$i$i$i << 4) | 0);
-  $9 = $__m$sroa$0$045;
-  if (($7 | 0) == ($9 | 0)) $__p$0 = $add$ptr; else {
-   $10 = $7;
-   $__result$addr$05$i$i = $add$ptr;
-   while (1) {
-    __ZN8DrPointFaSERKS_($__result$addr$05$i$i, $10) | 0;
-    $10 = $10 + 16 | 0;
-    if (($10 | 0) == ($9 | 0)) {
-     $__p$0 = $add$ptr;
-     break;
-    } else $__result$addr$05$i$i = $__result$addr$05$i$i + 16 | 0;
-   }
-  }
- } else $__p$0 = $add$ptr; while (0);
- STACKTOP = sp;
- return $__p$0 | 0;
-}
-
 function _stbi__zbuild_huffman($z, $sizelist, $num) {
  $z = $z | 0;
  $sizelist = $sizelist | 0;
@@ -30174,6 +29543,84 @@ function _stbi__zbuild_huffman($z, $sizelist, $num) {
  $74 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
  return $74 | 0;
+}
+
+function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE6insertINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueES8_E4typeENS6_IPKS1_EESA_SA_($this, $__position, $__first, $__last) {
+ $this = $this | 0;
+ $__position = $__position | 0;
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ var $0 = 0, $1 = 0, $10 = 0, $12 = 0, $3 = 0, $4 = 0, $6 = 0, $7 = 0, $8 = 0, $9 = 0, $__m$sroa$0$045 = 0, $__p$0 = 0, $__result$addr$0$i$i = 0, $__v = 0, $__value_$i$i$i = 0, $add = 0, $add$ptr = 0, $agg$tmp21 = 0, $agg$tmp22 = 0, $agg$tmp38 = 0, $agg$tmp38$byval_copy = 0, $agg$tmp39 = 0, $agg$tmp39$byval_copy = 0, $call$i = 0, $call41 = 0, $mul$i = 0, $sub$ptr$div$i$i$i = 0, $sub$ptr$div13 = 0, $sub$ptr$rhs$cast = 0, $sub$ptr$sub$i$i$i = 0, $sub$ptr$sub$i$i$i30 = 0, $sub$ptr$sub12 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 48 | 0;
+ $agg$tmp39$byval_copy = sp + 40 | 0;
+ $agg$tmp38$byval_copy = sp + 36 | 0;
+ $agg$tmp21 = sp + 32 | 0;
+ $agg$tmp22 = sp + 28 | 0;
+ $__v = sp + 8 | 0;
+ $agg$tmp38 = sp + 4 | 0;
+ $agg$tmp39 = sp;
+ $0 = HEAP32[$this >> 2] | 0;
+ $1 = $0;
+ $add$ptr = $0 + ((HEAP32[$__position >> 2] | 0) - $1 >> 4 << 4) | 0;
+ $3 = HEAP32[$__first >> 2] | 0;
+ $4 = HEAP32[$__last >> 2] | 0;
+ $sub$ptr$sub$i$i$i = $4 - $3 | 0;
+ $sub$ptr$div$i$i$i = $sub$ptr$sub$i$i$i >> 4;
+ L1 : do if (($sub$ptr$sub$i$i$i | 0) > 0) {
+  $__value_$i$i$i = $this + 8 | 0;
+  $6 = HEAP32[$this + 4 >> 2] | 0;
+  $sub$ptr$rhs$cast = $6;
+  if (($sub$ptr$div$i$i$i | 0) > ((HEAP32[$__value_$i$i$i >> 2] | 0) - $sub$ptr$rhs$cast >> 4 | 0)) {
+   $add = ($sub$ptr$rhs$cast - $1 >> 4) + $sub$ptr$div$i$i$i | 0;
+   $call$i = __ZNKSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE8max_sizeEv($this) | 0;
+   if ($call$i >>> 0 < $add >>> 0) __ZNKSt3__220__vector_base_commonILb1EE20__throw_length_errorEv($this); else {
+    $12 = HEAP32[$this >> 2] | 0;
+    $sub$ptr$sub$i$i$i30 = (HEAP32[$__value_$i$i$i >> 2] | 0) - $12 | 0;
+    $mul$i = $sub$ptr$sub$i$i$i30 >> 3;
+    __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEEC2EmmS4_($__v, $sub$ptr$sub$i$i$i30 >> 4 >>> 0 < $call$i >>> 1 >>> 0 ? ($mul$i >>> 0 < $add >>> 0 ? $add : $mul$i) : $call$i, $add$ptr - $12 >> 4, $this + 8 | 0);
+    HEAP32[$agg$tmp38 >> 2] = $3;
+    HEAP32[$agg$tmp39 >> 2] = $4;
+    HEAP32[$agg$tmp38$byval_copy >> 2] = HEAP32[$agg$tmp38 >> 2];
+    HEAP32[$agg$tmp39$byval_copy >> 2] = HEAP32[$agg$tmp39 >> 2];
+    __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESB_SB_($__v, $agg$tmp38$byval_copy, $agg$tmp39$byval_copy);
+    $call41 = __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS1_RS3_EEPS1_($this, $__v, $add$ptr) | 0;
+    __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEED2Ev($__v);
+    $__p$0 = $call41;
+    break;
+   }
+  }
+  $sub$ptr$sub12 = $sub$ptr$rhs$cast - $add$ptr | 0;
+  $sub$ptr$div13 = $sub$ptr$sub12 >> 4;
+  $7 = $3;
+  $8 = $7 + ($sub$ptr$div13 << 4) | 0;
+  if (($sub$ptr$div$i$i$i | 0) > ($sub$ptr$div13 | 0)) {
+   HEAP32[$agg$tmp21 >> 2] = $8;
+   HEAP32[$agg$tmp22 >> 2] = $4;
+   HEAP32[$agg$tmp38$byval_copy >> 2] = HEAP32[$agg$tmp21 >> 2];
+   HEAP32[$agg$tmp39$byval_copy >> 2] = HEAP32[$agg$tmp22 >> 2];
+   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $agg$tmp38$byval_copy, $agg$tmp39$byval_copy, $sub$ptr$div$i$i$i - $sub$ptr$div13 | 0);
+   if (($sub$ptr$sub12 | 0) > 0) $__m$sroa$0$045 = $8; else {
+    $__p$0 = $add$ptr;
+    break;
+   }
+  } else $__m$sroa$0$045 = $4;
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE12__move_rangeEPS1_S5_S5_($this, $add$ptr, $6, $add$ptr + ($sub$ptr$div$i$i$i << 4) | 0);
+  $9 = $__m$sroa$0$045;
+  $10 = $7;
+  $__result$addr$0$i$i = $add$ptr;
+  while (1) {
+   if (($10 | 0) == ($9 | 0)) {
+    $__p$0 = $add$ptr;
+    break L1;
+   }
+   __ZN8DrPointFaSERKS_($__result$addr$0$i$i, $10) | 0;
+   $10 = $10 + 16 | 0;
+   $__result$addr$0$i$i = $__result$addr$0$i$i + 16 | 0;
+  }
+ } else $__p$0 = $add$ptr; while (0);
+ STACKTOP = sp;
+ return $__p$0 | 0;
 }
 
 function _HMM_LookAt($agg$result, $Eye, $Center, $Up) {
@@ -30711,88 +30158,6 @@ function __ZNK12_GLOBAL__N_116itanium_demangle8FoldExpr9printLeftERNS_12OutputSt
  return;
 }
 
-function __ZN7meshoptL22generateSoftBoundariesEPjPKjmmS2_mjfS0_($destination, $indices, $index_count, $vertex_count, $clusters, $cluster_count, $threshold, $cache_timestamps) {
- $destination = $destination | 0;
- $indices = $indices | 0;
- $index_count = $index_count | 0;
- $vertex_count = $vertex_count | 0;
- $clusters = $clusters | 0;
- $cluster_count = $cluster_count | 0;
- $threshold = +$threshold;
- $cache_timestamps = $cache_timestamps | 0;
- var $0 = 0, $add46 = 0, $add47 = 0, $add52 = 0, $cluster_misses$03 = 0, $cmp1 = 0, $cond = 0, $div = 0, $i$04 = 0, $i29$08 = 0, $inc58$pre$phiZ2D = 0, $it$012 = 0, $mul11 = 0, $mul24 = 0.0, $mul35 = 0, $result$0$lcssa = 0, $result$013 = 0, $result$19 = 0, $result$2 = 0, $running_faces$07 = 0, $running_faces$1 = 0, $running_misses$06 = 0, $running_misses$1 = 0, $spec$select = 0, $sub60 = 0, $timestamp = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 16 | 0;
- $timestamp = sp;
- _memset($cache_timestamps | 0, 0, $vertex_count << 2 | 0) | 0;
- HEAP32[$timestamp >> 2] = 0;
- L1 : do if (!$cluster_count) $result$0$lcssa = 0; else {
-  $div = ($index_count >>> 0) / 3 | 0;
-  $it$012 = 0;
-  $result$013 = 0;
-  while (1) {
-   $0 = HEAP32[$clusters + ($it$012 << 2) >> 2] | 0;
-   $it$012 = $it$012 + 1 | 0;
-   $cmp1 = $it$012 >>> 0 < $cluster_count >>> 0;
-   if ($cmp1) $cond = HEAP32[$clusters + ($it$012 << 2) >> 2] | 0; else $cond = $div;
-   if ($cond >>> 0 <= $0 >>> 0) break;
-   HEAP32[$timestamp >> 2] = (HEAP32[$timestamp >> 2] | 0) + 17;
-   $cluster_misses$03 = 0;
-   $i$04 = $0;
-   do {
-    $mul11 = $i$04 * 3 | 0;
-    $cluster_misses$03 = (__ZN7meshoptL11updateCacheEjjjjPjRj(HEAP32[$indices + ($mul11 << 2) >> 2] | 0, HEAP32[$indices + ($mul11 + 1 << 2) >> 2] | 0, HEAP32[$indices + ($mul11 + 2 << 2) >> 2] | 0, $cache_timestamps, $timestamp) | 0) + $cluster_misses$03 | 0;
-    $i$04 = $i$04 + 1 | 0;
-   } while (($i$04 | 0) != ($cond | 0));
-   $mul24 = +($cluster_misses$03 >>> 0) / +(($cond - $0 | 0) >>> 0) * $threshold;
-   HEAP32[$destination + ($result$013 << 2) >> 2] = $0;
-   HEAP32[$timestamp >> 2] = (HEAP32[$timestamp >> 2] | 0) + 17;
-   $i29$08 = $0;
-   $result$19 = $result$013 + 1 | 0;
-   $running_faces$07 = 0;
-   $running_misses$06 = 0;
-   while (1) {
-    $mul35 = $i29$08 * 3 | 0;
-    $add46 = (__ZN7meshoptL11updateCacheEjjjjPjRj(HEAP32[$indices + ($mul35 << 2) >> 2] | 0, HEAP32[$indices + ($mul35 + 1 << 2) >> 2] | 0, HEAP32[$indices + ($mul35 + 2 << 2) >> 2] | 0, $cache_timestamps, $timestamp) | 0) + $running_misses$06 | 0;
-    $add47 = $running_faces$07 + 1 | 0;
-    if (!(+($add46 >>> 0) / +($add47 >>> 0) <= $mul24)) {
-     $inc58$pre$phiZ2D = $i29$08 + 1 | 0;
-     $result$2 = $result$19;
-     $running_faces$1 = $add47;
-     $running_misses$1 = $add46;
-    } else {
-     $add52 = $i29$08 + 1 | 0;
-     HEAP32[$destination + ($result$19 << 2) >> 2] = $add52;
-     HEAP32[$timestamp >> 2] = (HEAP32[$timestamp >> 2] | 0) + 17;
-     $inc58$pre$phiZ2D = $add52;
-     $result$2 = $result$19 + 1 | 0;
-     $running_faces$1 = 0;
-     $running_misses$1 = 0;
-    }
-    if (($inc58$pre$phiZ2D | 0) == ($cond | 0)) break; else {
-     $i29$08 = $inc58$pre$phiZ2D;
-     $result$19 = $result$2;
-     $running_faces$07 = $running_faces$1;
-     $running_misses$06 = $running_misses$1;
-    }
-   }
-   $sub60 = $result$2 + -1 | 0;
-   $spec$select = (HEAP32[$destination + ($sub60 << 2) >> 2] | 0) == ($0 | 0) ? $result$2 : $sub60;
-   if (!$cmp1) {
-    $result$0$lcssa = $spec$select;
-    break L1;
-   } else $result$013 = $spec$select;
-  }
-  ___assert_fail(46566, 46089, 202, 46578);
- } while (0);
- if ($result$0$lcssa >>> 0 < $cluster_count >>> 0) ___assert_fail(46601, 46089, 262, 46578);
- if ($result$0$lcssa >>> 0 > (($index_count >>> 0) / 3 | 0) >>> 0) ___assert_fail(46625, 46089, 263, 46578); else {
-  STACKTOP = sp;
-  return $result$0$lcssa | 0;
- }
- return 0;
-}
-
 function __sg_gl_update_image($img, $data) {
  $img = $img | 0;
  $data = $data | 0;
@@ -30917,6 +30282,91 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  } else $retval$6 = 0; while (0);
  STACKTOP = sp;
  return $retval$6 | 0;
+}
+
+function __ZL10load_imagePhi($buffer_ptr, $fetched_size) {
+ $buffer_ptr = $buffer_ptr | 0;
+ $fetched_size = $fetched_size | 0;
+ var $0 = 0, $1 = 0, $3 = 0, $4 = 0, $__cntrl_3$i$i = 0, $agg$tmp = 0, $agg$tmp68 = 0, $agg$tmp71 = 0, $agg$tmp71$byval_copy = 0, $bitmap = 0, $call = 0, $call2 = 0, $conv$i = 0.0, $png_height = 0, $png_width = 0, $pow2$0 = 0, $ref$tmp17 = 0, $ref$tmp18 = 0, $square = 0, $x$0 = 0, $y$0 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 992 | 0;
+ $agg$tmp71$byval_copy = sp + 968 | 0;
+ $png_width = sp + 960 | 0;
+ $png_height = sp + 956 | 0;
+ $bitmap = sp + 924 | 0;
+ $square = sp + 892 | 0;
+ $agg$tmp = sp + 976 | 0;
+ $ref$tmp17 = sp + 4 | 0;
+ $ref$tmp18 = sp;
+ $agg$tmp68 = sp + 920 | 0;
+ $agg$tmp71 = sp + 888 | 0;
+ $call = _stbi_load_from_memory($buffer_ptr, $fetched_size, $png_width, $png_height, sp + 952 | 0, 4) | 0;
+ if ($call | 0) {
+  $0 = HEAP32[$png_width >> 2] | 0;
+  $1 = HEAP32[$png_height >> 2] | 0;
+  HEAP32[$agg$tmp71$byval_copy >> 2] = Math_imul($0 << 2, $1) | 0;
+  __ZN8DrBitmapC2EPKhRKibii($bitmap, $call, $agg$tmp71$byval_copy, 0, $0, $1);
+  $call2 = __ZN2Dr3MaxIiEET_RKS1_S3_($png_width, $png_height) | 0;
+  $pow2$0 = 2;
+  while (1) {
+   if (($pow2$0 | 0) >= ($call2 | 0)) break;
+   $conv$i = +($pow2$0 | 0);
+   $pow2$0 = ~~($conv$i * $conv$i);
+  }
+  __ZN8DrBitmapC2Eii13Bitmap_Format($square, $pow2$0, $pow2$0, 4);
+  $x$0 = 0;
+  while (1) {
+   if (($x$0 | 0) >= (HEAP32[$png_width >> 2] | 0)) break;
+   $y$0 = 0;
+   while (1) {
+    if (($y$0 | 0) >= (HEAP32[$png_height >> 2] | 0)) break;
+    __ZNK8DrBitmap8getPixelEii($agg$tmp, $bitmap, $x$0, $y$0);
+    HEAP8[$agg$tmp71$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
+    HEAP8[$agg$tmp71$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
+    HEAP8[$agg$tmp71$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
+    HEAP8[$agg$tmp71$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
+    __ZN8DrBitmap8setPixelEii7DrColor($square, $x$0, $y$0, $agg$tmp71$byval_copy);
+    $y$0 = $y$0 + 1 | 0;
+   }
+   $x$0 = $x$0 + 1 | 0;
+  }
+  HEAPF32[$ref$tmp18 >> 2] = .25;
+  __ZNSt3__210shared_ptrI7DrImageE11make_sharedIJRA7_KcR8DrBitmapfEEES2_DpOT_($ref$tmp17, 45495, $square, $ref$tmp18);
+  $3 = HEAP32[$ref$tmp17 >> 2] | 0;
+  $__cntrl_3$i$i = $ref$tmp17 + 4 | 0;
+  $4 = HEAP32[$__cntrl_3$i$i >> 2] | 0;
+  HEAP32[$ref$tmp17 >> 2] = 0;
+  HEAP32[$__cntrl_3$i$i >> 2] = 0;
+  HEAP32[$agg$tmp71$byval_copy >> 2] = HEAP32[546687];
+  HEAP32[546687] = $3;
+  HEAP32[$agg$tmp71$byval_copy + 4 >> 2] = HEAP32[546688];
+  HEAP32[546688] = $4;
+  __ZNSt3__210shared_ptrI7DrImageED2Ev($agg$tmp71$byval_copy);
+  __ZNSt3__210shared_ptrI7DrImageED2Ev($ref$tmp17);
+  __Z13calculateMeshb(1);
+  _memset($ref$tmp17 | 0, 0, 884) | 0;
+  HEAP32[$ref$tmp17 + 12 >> 2] = HEAP32[(__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 8 >> 2];
+  HEAP32[$ref$tmp17 + 16 >> 2] = HEAP32[(__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 12 >> 2];
+  HEAP32[$ref$tmp17 + 32 >> 2] = 23;
+  HEAP32[$ref$tmp17 + 40 >> 2] = 2;
+  HEAP32[$ref$tmp17 + 44 >> 2] = 2;
+  HEAP32[$ref$tmp17 + 76 >> 2] = HEAP32[(__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 16 >> 2];
+  HEAP32[$ref$tmp17 + 80 >> 2] = __ZNK8DrBitmap4sizeEv(__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) | 0;
+  if (HEAP8[2193732] | 0) {
+   HEAP32[$agg$tmp68 >> 2] = HEAP32[15518];
+   HEAP32[$agg$tmp71$byval_copy >> 2] = HEAP32[$agg$tmp68 >> 2];
+   _sg_uninit_image($agg$tmp71$byval_copy) | 0;
+  }
+  HEAP32[$agg$tmp71 >> 2] = HEAP32[15518];
+  HEAP32[$agg$tmp71$byval_copy >> 2] = HEAP32[$agg$tmp71 >> 2];
+  _sg_init_image($agg$tmp71$byval_copy, $ref$tmp17);
+  HEAP8[2193732] = 1;
+  _stbi_image_free($call);
+  __ZN8DrBitmapD2Ev($square);
+  __ZN8DrBitmapD2Ev($bitmap);
+ }
+ STACKTOP = sp;
+ return;
 }
 
 function __ZNK10__cxxabiv121__vmi_class_type_info16search_above_dstEPNS_19__dynamic_cast_infoEPKvS4_ib($this, $info, $dst_ptr, $current_ptr, $path_below, $use_strcmp) {
@@ -31065,76 +30515,6 @@ function _fons__atlasAddSkylineLevel($atlas, $idx, $x, $y, $w, $h) {
  return $75 | 0;
 }
 
-function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE6assignINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueEvE4typeESA_SA_($this, $__first, $__last) {
- $this = $this | 0;
- $__first = $__first | 0;
- $__last = $__last | 0;
- var $0 = 0, $1 = 0, $3 = 0, $4 = 0, $6 = 0, $8 = 0, $9 = 0, $__end_$i = 0, $__result$addr$0$lcssa$i$i = 0, $__result$addr$05$i$i = 0, $__value_$i$i$i$i$i = 0, $agg$tmp12 = 0, $agg$tmp13 = 0, $agg$tmp18 = 0, $agg$tmp18$byval_copy = 0, $agg$tmp19 = 0, $agg$tmp19$byval_copy = 0, $call$i = 0, $cmp5 = 0, $incdec$ptr$i$i = 0, $mul$i = 0, $spec$select = 0, $sub = 0, $sub$ptr$div$i = 0, $sub$ptr$div$i$i$i = 0, $sub$ptr$sub$i$i$i9 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 32 | 0;
- $agg$tmp19$byval_copy = sp + 20 | 0;
- $agg$tmp18$byval_copy = sp + 16 | 0;
- $agg$tmp12 = sp + 12 | 0;
- $agg$tmp13 = sp + 8 | 0;
- $agg$tmp18 = sp + 4 | 0;
- $agg$tmp19 = sp;
- $0 = HEAP32[$__first >> 2] | 0;
- $1 = HEAP32[$__last >> 2] | 0;
- $sub$ptr$div$i$i$i = $1 - $0 >> 4;
- $__value_$i$i$i$i$i = $this + 8 | 0;
- $3 = HEAP32[$this >> 2] | 0;
- $4 = $3;
- do if ($sub$ptr$div$i$i$i >>> 0 > (HEAP32[$__value_$i$i$i$i$i >> 2] | 0) - $3 >> 4 >>> 0) {
-  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__vdeallocateEv($this);
-  $call$i = __ZNKSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE8max_sizeEv($this) | 0;
-  if ($call$i >>> 0 < $sub$ptr$div$i$i$i >>> 0) __ZNKSt3__220__vector_base_commonILb1EE20__throw_length_errorEv($this); else {
-   $sub$ptr$sub$i$i$i9 = (HEAP32[$__value_$i$i$i$i$i >> 2] | 0) - (HEAP32[$this >> 2] | 0) | 0;
-   $mul$i = $sub$ptr$sub$i$i$i9 >> 3;
-   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE11__vallocateEm($this, $sub$ptr$sub$i$i$i9 >> 4 >>> 0 < $call$i >>> 1 >>> 0 ? ($mul$i >>> 0 < $sub$ptr$div$i$i$i >>> 0 ? $sub$ptr$div$i$i$i : $mul$i) : $call$i);
-   HEAP32[$agg$tmp18 >> 2] = $0;
-   HEAP32[$agg$tmp19 >> 2] = $1;
-   HEAP32[$agg$tmp18$byval_copy >> 2] = HEAP32[$agg$tmp18 >> 2];
-   HEAP32[$agg$tmp19$byval_copy >> 2] = HEAP32[$agg$tmp19 >> 2];
-   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $agg$tmp18$byval_copy, $agg$tmp19$byval_copy, $sub$ptr$div$i$i$i);
-   break;
-  }
- } else {
-  $__end_$i = $this + 4 | 0;
-  $sub$ptr$div$i = (HEAP32[$__end_$i >> 2] | 0) - $3 >> 4;
-  $cmp5 = $sub$ptr$div$i$i$i >>> 0 > $sub$ptr$div$i >>> 0;
-  $6 = $0;
-  $spec$select = $cmp5 ? $6 + ($sub$ptr$div$i << 4) | 0 : $1;
-  $8 = $spec$select;
-  if (($6 | 0) == ($8 | 0)) $__result$addr$0$lcssa$i$i = $4; else {
-   $9 = $6;
-   $__result$addr$05$i$i = $4;
-   while (1) {
-    __ZN8DrPointFaSERKS_($__result$addr$05$i$i, $9) | 0;
-    $9 = $9 + 16 | 0;
-    $incdec$ptr$i$i = $__result$addr$05$i$i + 16 | 0;
-    if (($9 | 0) == ($8 | 0)) {
-     $__result$addr$0$lcssa$i$i = $incdec$ptr$i$i;
-     break;
-    } else $__result$addr$05$i$i = $incdec$ptr$i$i;
-   }
-  }
-  if ($cmp5) {
-   HEAP32[$agg$tmp12 >> 2] = $spec$select;
-   HEAP32[$agg$tmp13 >> 2] = $1;
-   $sub = $sub$ptr$div$i$i$i - ((HEAP32[$__end_$i >> 2] | 0) - (HEAP32[$this >> 2] | 0) >> 4) | 0;
-   HEAP32[$agg$tmp18$byval_copy >> 2] = HEAP32[$agg$tmp12 >> 2];
-   HEAP32[$agg$tmp19$byval_copy >> 2] = HEAP32[$agg$tmp13 >> 2];
-   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $agg$tmp18$byval_copy, $agg$tmp19$byval_copy, $sub);
-   break;
-  } else {
-   HEAP32[$__end_$i >> 2] = $__result$addr$0$lcssa$i$i;
-   break;
-  }
- } while (0);
- STACKTOP = sp;
- return;
-}
-
 function __sfons_render_create($user_ptr, $width, $height) {
  $user_ptr = $user_ptr | 0;
  $width = $width | 0;
@@ -31261,73 +30641,6 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  } else $retval$4 = 0;
  STACKTOP = sp;
  return $retval$4 | 0;
-}
-
-function _meshopt_optimizeOverdraw($destination, $indices, $index_count, $vertex_positions, $vertex_count, $vertex_positions_stride, $threshold) {
- $destination = $destination | 0;
- $indices = $indices | 0;
- $index_count = $index_count | 0;
- $vertex_positions = $vertex_positions | 0;
- $vertex_count = $vertex_count | 0;
- $vertex_positions_stride = $vertex_positions_stride | 0;
- $threshold = +$threshold;
- var $3 = 0, $add49 = 0, $add62 = 0, $allocator = 0, $call = 0, $call16 = 0, $call19 = 0, $call22 = 0, $call26 = 0, $call29 = 0, $call32 = 0, $call36 = 0, $call39 = 0, $cond = 0, $div = 0, $indices$addr$0 = 0, $it$090 = 0, $mul48 = 0, $offset$0$lcssa = 0, $offset$089 = 0, $sub = 0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 112 | 0;
- $allocator = sp;
- $div = ($index_count >>> 0) / 3 | 0;
- if ($index_count - ($div * 3 | 0) | 0) ___assert_fail(47099, 46089, 274, 46176);
- if (($vertex_positions_stride + -1 | 0) >>> 0 >= 256) ___assert_fail(46201, 46089, 275, 46176);
- if ($vertex_positions_stride & 3 | 0) ___assert_fail(46263, 46089, 276, 46176);
- __ZN17meshopt_AllocatorC2Ev($allocator);
- if (!(($index_count | 0) == 0 | ($vertex_count | 0) == 0)) {
-  if (($destination | 0) == ($indices | 0)) {
-   $call = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $index_count) | 0;
-   _memcpy($call | 0, $destination | 0, $index_count << 2 | 0) | 0;
-   $indices$addr$0 = $call;
-  } else $indices$addr$0 = $indices;
-  $call16 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
-  $call19 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $div) | 0;
-  $call22 = __ZN7meshoptL22generateHardBoundariesEPjPKjmmjS0_($call19, $indices$addr$0, $index_count, $vertex_count, $call16) | 0;
-  $call26 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $div + 1 | 0) | 0;
-  $call29 = __ZN7meshoptL22generateSoftBoundariesEPjPKjmmS2_mjfS0_($call26, $indices$addr$0, $index_count, $vertex_count, $call19, $call22, $threshold, $call16) | 0;
-  $call32 = __ZN17meshopt_Allocator8allocateIfEEPT_m($allocator, $call29) | 0;
-  __ZN7meshoptL17calculateSortDataEPfPKjmPKfmS2_m($call32, $indices$addr$0, $index_count, $vertex_positions, $vertex_positions_stride, $call26, $call29);
-  $call36 = __ZN17meshopt_Allocator8allocateItEEPT_m($allocator, $call29) | 0;
-  $call39 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $call29) | 0;
-  __ZN7meshoptL23calculateSortOrderRadixEPjPKfPtm($call39, $call32, $call36, $call29);
-  L15 : do if (!$call29) $offset$0$lcssa = 0; else {
-   $it$090 = 0;
-   $offset$089 = 0;
-   while (1) {
-    $3 = HEAP32[$call39 + ($it$090 << 2) >> 2] | 0;
-    if ($3 >>> 0 >= $call29 >>> 0) {
-     label = 14;
-     break;
-    }
-    $mul48 = (HEAP32[$call26 + ($3 << 2) >> 2] | 0) * 3 | 0;
-    $add49 = $3 + 1 | 0;
-    if ($add49 >>> 0 < $call29 >>> 0) $cond = (HEAP32[$call26 + ($add49 << 2) >> 2] | 0) * 3 | 0; else $cond = $index_count;
-    if ($cond >>> 0 <= $mul48 >>> 0) {
-     label = 18;
-     break;
-    }
-    $sub = $cond - $mul48 | 0;
-    _memcpy($destination + ($offset$089 << 2) | 0, $indices$addr$0 + ($mul48 << 2) | 0, $sub << 2 | 0) | 0;
-    $add62 = $sub + $offset$089 | 0;
-    $it$090 = $it$090 + 1 | 0;
-    if ($it$090 >>> 0 >= $call29 >>> 0) {
-     $offset$0$lcssa = $add62;
-     break L15;
-    } else $offset$089 = $add62;
-   }
-   if ((label | 0) == 14) ___assert_fail(46308, 46089, 322, 46176); else if ((label | 0) == 18) ___assert_fail(46332, 46089, 326, 46176);
-  } while (0);
-  if (($offset$0$lcssa | 0) != ($index_count | 0)) ___assert_fail(47033, 46089, 332, 46176);
- }
- __ZN17meshopt_AllocatorD2Ev($allocator);
- STACKTOP = sp;
- return;
 }
 
 function __sg_gl_init_caps_gles2() {
@@ -31531,97 +30844,6 @@ function ___stpncpy($d, $s, $n) {
  return $d$addr$3 | 0;
 }
 
-function __ZN7meshoptL22buildTriangleAdjacencyERNS_17TriangleAdjacencyEPKjmmR17meshopt_Allocator($adjacency, $indices, $index_count, $vertex_count, $allocator) {
- $adjacency = $adjacency | 0;
- $indices = $indices | 0;
- $index_count = $index_count | 0;
- $vertex_count = $vertex_count | 0;
- $allocator = $allocator | 0;
- var $1 = 0, $10 = 0, $11 = 0, $13 = 0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $18 = 0, $19 = 0, $2 = 0, $3 = 0, $4 = 0, $8 = 0, $9 = 0, $add = 0, $arrayidx40 = 0, $arrayidx45 = 0, $arrayidx50 = 0, $arrayidx62 = 0, $arrayidx7 = 0, $cmp116471 = 0, $data = 0, $div = 0, $i$068 = 0, $i24$063 = 0, $i56$061 = 0, $i9$065 = 0, $mul29 = 0, $offset$0$lcssa = 0, $offset$066 = 0, $offsets = 0, label = 0;
- $div = ($index_count >>> 0) / 3 | 0;
- HEAP32[$adjacency >> 2] = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
- $offsets = $adjacency + 4 | 0;
- HEAP32[$offsets >> 2] = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
- $data = $adjacency + 8 | 0;
- HEAP32[$data >> 2] = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $index_count) | 0;
- _memset(HEAP32[$adjacency >> 2] | 0, 0, $vertex_count << 2 | 0) | 0;
- L1 : do if (!$index_count) if (!$vertex_count) {
-  $cmp116471 = 1;
-  $offset$0$lcssa = 0;
- } else label = 4; else {
-  $1 = HEAP32[$adjacency >> 2] | 0;
-  $i$068 = 0;
-  while (1) {
-   $4 = HEAP32[$indices + ($i$068 << 2) >> 2] | 0;
-   if ($4 >>> 0 >= $vertex_count >>> 0) break;
-   $arrayidx7 = $1 + ($4 << 2) | 0;
-   HEAP32[$arrayidx7 >> 2] = (HEAP32[$arrayidx7 >> 2] | 0) + 1;
-   $i$068 = $i$068 + 1 | 0;
-   if ($i$068 >>> 0 >= $index_count >>> 0) {
-    label = 4;
-    break L1;
-   }
-  }
-  ___assert_fail(46984, 46674, 55, 47010);
- } while (0);
- if ((label | 0) == 4) {
-  $2 = HEAP32[$offsets >> 2] | 0;
-  $3 = HEAP32[$adjacency >> 2] | 0;
-  $i9$065 = 0;
-  $offset$066 = 0;
-  while (1) {
-   HEAP32[$2 + ($i9$065 << 2) >> 2] = $offset$066;
-   $add = (HEAP32[$3 + ($i9$065 << 2) >> 2] | 0) + $offset$066 | 0;
-   $i9$065 = $i9$065 + 1 | 0;
-   if (($i9$065 | 0) == ($vertex_count | 0)) {
-    $cmp116471 = 0;
-    $offset$0$lcssa = $add;
-    break;
-   } else $offset$066 = $add;
-  }
- }
- if (($offset$0$lcssa | 0) != ($index_count | 0)) ___assert_fail(47033, 46674, 69, 47010);
- if ($index_count >>> 0 > 2) {
-  $8 = HEAP32[$data >> 2] | 0;
-  $9 = HEAP32[$offsets >> 2] | 0;
-  $i24$063 = 0;
-  do {
-   $mul29 = $i24$063 * 3 | 0;
-   $13 = HEAP32[$indices + ($mul29 + 1 << 2) >> 2] | 0;
-   $14 = HEAP32[$indices + ($mul29 + 2 << 2) >> 2] | 0;
-   $arrayidx40 = $9 + (HEAP32[$indices + ($mul29 << 2) >> 2] << 2) | 0;
-   $15 = HEAP32[$arrayidx40 >> 2] | 0;
-   HEAP32[$arrayidx40 >> 2] = $15 + 1;
-   HEAP32[$8 + ($15 << 2) >> 2] = $i24$063;
-   $arrayidx45 = $9 + ($13 << 2) | 0;
-   $16 = HEAP32[$arrayidx45 >> 2] | 0;
-   HEAP32[$arrayidx45 >> 2] = $16 + 1;
-   HEAP32[$8 + ($16 << 2) >> 2] = $i24$063;
-   $arrayidx50 = $9 + ($14 << 2) | 0;
-   $17 = HEAP32[$arrayidx50 >> 2] | 0;
-   HEAP32[$arrayidx50 >> 2] = $17 + 1;
-   HEAP32[$8 + ($17 << 2) >> 2] = $i24$063;
-   $i24$063 = $i24$063 + 1 | 0;
-  } while ($i24$063 >>> 0 < $div >>> 0);
- }
- L21 : do if (!$cmp116471) {
-  $10 = HEAP32[$offsets >> 2] | 0;
-  $11 = HEAP32[$adjacency >> 2] | 0;
-  $i56$061 = 0;
-  while (1) {
-   $arrayidx62 = $10 + ($i56$061 << 2) | 0;
-   $18 = HEAP32[$arrayidx62 >> 2] | 0;
-   $19 = HEAP32[$11 + ($i56$061 << 2) >> 2] | 0;
-   if ($18 >>> 0 < $19 >>> 0) break;
-   HEAP32[$arrayidx62 >> 2] = $18 - $19;
-   $i56$061 = $i56$061 + 1 | 0;
-   if ($i56$061 >>> 0 >= $vertex_count >>> 0) break L21;
-  }
-  ___assert_fail(47055, 46674, 84, 47010);
- } while (0);
- return;
-}
-
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E19parseConversionExprEv($this) {
  $this = $this | 0;
  var $Names = 0, $SaveTemp = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $call13 = 0, $call2 = 0, $call24 = 0, $call4 = 0, $call9 = 0, $ref$tmp = 0, $retval$3 = 0, $retval$4 = 0, $retval$5 = 0, label = 0, sp = 0;
@@ -31768,6 +30990,148 @@ function __sg_gl_apply_uniforms($stage_index, $ub_index, $data) {
   STACKTOP = sp;
   return;
  }
+}
+
+function _meshopt_optimizeOverdraw($destination, $indices, $index_count, $vertex_positions, $vertex_count, $vertex_positions_stride, $threshold) {
+ $destination = $destination | 0;
+ $indices = $indices | 0;
+ $index_count = $index_count | 0;
+ $vertex_positions = $vertex_positions | 0;
+ $vertex_count = $vertex_count | 0;
+ $vertex_positions_stride = $vertex_positions_stride | 0;
+ $threshold = +$threshold;
+ var $3 = 0, $add49 = 0, $allocator = 0, $call = 0, $call16 = 0, $call19 = 0, $call22 = 0, $call26 = 0, $call29 = 0, $call32 = 0, $call36 = 0, $call39 = 0, $cond = 0, $div = 0, $indices$addr$0 = 0, $it$0 = 0, $mul48 = 0, $offset$0 = 0, $sub = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 112 | 0;
+ $allocator = sp;
+ $div = ($index_count >>> 0) / 3 | 0;
+ if ($index_count - ($div * 3 | 0) | 0) ___assert_fail(47099, 46089, 274, 46176);
+ if (($vertex_positions_stride + -1 | 0) >>> 0 >= 256) ___assert_fail(46201, 46089, 275, 46176);
+ if ($vertex_positions_stride & 3 | 0) ___assert_fail(46263, 46089, 276, 46176);
+ __ZN17meshopt_AllocatorC2Ev($allocator);
+ do if (!(($index_count | 0) == 0 | ($vertex_count | 0) == 0)) {
+  if (($destination | 0) == ($indices | 0)) {
+   $call = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $index_count) | 0;
+   _memcpy($call | 0, $destination | 0, $index_count << 2 | 0) | 0;
+   $indices$addr$0 = $call;
+  } else $indices$addr$0 = $indices;
+  $call16 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
+  $call19 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $div) | 0;
+  $call22 = __ZN7meshoptL22generateHardBoundariesEPjPKjmmjS0_($call19, $indices$addr$0, $index_count, $vertex_count, $call16) | 0;
+  $call26 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $div + 1 | 0) | 0;
+  $call29 = __ZN7meshoptL22generateSoftBoundariesEPjPKjmmS2_mjfS0_($call26, $indices$addr$0, $index_count, $vertex_count, $call19, $call22, $threshold, $call16) | 0;
+  $call32 = __ZN17meshopt_Allocator8allocateIfEEPT_m($allocator, $call29) | 0;
+  __ZN7meshoptL17calculateSortDataEPfPKjmPKfmS2_m($call32, $indices$addr$0, $index_count, $vertex_positions, $vertex_positions_stride, $call26, $call29);
+  $call36 = __ZN17meshopt_Allocator8allocateItEEPT_m($allocator, $call29) | 0;
+  $call39 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $call29) | 0;
+  __ZN7meshoptL23calculateSortOrderRadixEPjPKfPtm($call39, $call32, $call36, $call29);
+  $it$0 = 0;
+  $offset$0 = 0;
+  while (1) {
+   if ($it$0 >>> 0 >= $call29 >>> 0) {
+    label = 12;
+    break;
+   }
+   $3 = HEAP32[$call39 + ($it$0 << 2) >> 2] | 0;
+   if ($3 >>> 0 >= $call29 >>> 0) {
+    label = 14;
+    break;
+   }
+   $mul48 = (HEAP32[$call26 + ($3 << 2) >> 2] | 0) * 3 | 0;
+   $add49 = $3 + 1 | 0;
+   if ($add49 >>> 0 < $call29 >>> 0) $cond = (HEAP32[$call26 + ($add49 << 2) >> 2] | 0) * 3 | 0; else $cond = $index_count;
+   if ($cond >>> 0 <= $mul48 >>> 0) {
+    label = 18;
+    break;
+   }
+   $sub = $cond - $mul48 | 0;
+   _memcpy($destination + ($offset$0 << 2) | 0, $indices$addr$0 + ($mul48 << 2) | 0, $sub << 2 | 0) | 0;
+   $it$0 = $it$0 + 1 | 0;
+   $offset$0 = $sub + $offset$0 | 0;
+  }
+  if ((label | 0) == 12) {
+   if (($offset$0 | 0) == ($index_count | 0)) break;
+   ___assert_fail(47033, 46089, 332, 46176);
+  } else if ((label | 0) == 14) ___assert_fail(46308, 46089, 322, 46176); else if ((label | 0) == 18) ___assert_fail(46332, 46089, 326, 46176);
+ } while (0);
+ __ZN17meshopt_AllocatorD2Ev($allocator);
+ STACKTOP = sp;
+ return;
+}
+
+function __ZN7DrImageC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEER8DrBitmapfb($this, $image_name, $bitmap, $lod, $outline) {
+ $this = $this | 0;
+ $image_name = $image_name | 0;
+ $bitmap = $bitmap | 0;
+ $lod = +$lod;
+ $outline = $outline | 0;
+ var $0 = 0, $3 = 0, $__end_$i$i = 0, $__end_$i$i$i$i$i$i = 0, $__end_$i$i3 = 0, $__end_$i$i8 = 0, $__i$0$i$i = 0, $__value_$i$i$i$i4 = 0, $__value_$i$i$i$i9 = 0, $__value_$i$i$i9$i$i$i$i$i = 0, $call16 = 0, $m_bitmap = 0, $m_folder_name = 0, $m_hole_list = 0, $m_poly_list = 0, $ref$tmp = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 16 | 0;
+ $ref$tmp = sp;
+ HEAP32[$this >> 2] = 0;
+ HEAP32[$this + 4 >> 2] = 0;
+ HEAP32[$this + 8 >> 2] = 0;
+ $__i$0$i$i = 0;
+ while (1) {
+  if (($__i$0$i$i | 0) == 3) break;
+  HEAP32[$this + ($__i$0$i$i << 2) >> 2] = 0;
+  $__i$0$i$i = $__i$0$i$i + 1 | 0;
+ }
+ $m_bitmap = $this + 12 | 0;
+ __ZN8DrBitmapC2E13Bitmap_Format($m_bitmap, 4);
+ $m_poly_list = $this + 40 | 0;
+ $__end_$i$i = $this + 44 | 0;
+ $m_hole_list = $this + 52 | 0;
+ $__end_$i$i3 = $this + 56 | 0;
+ $__value_$i$i$i$i4 = $this + 60 | 0;
+ $m_folder_name = $this + 68 | 0;
+ HEAP32[$m_folder_name >> 2] = 0;
+ HEAP32[$m_folder_name + 4 >> 2] = 0;
+ HEAP32[$m_folder_name + 8 >> 2] = 0;
+ HEAP32[$m_poly_list >> 2] = 0;
+ HEAP32[$m_poly_list + 4 >> 2] = 0;
+ HEAP32[$m_poly_list + 8 >> 2] = 0;
+ HEAP32[$m_poly_list + 12 >> 2] = 0;
+ HEAP32[$m_poly_list + 16 >> 2] = 0;
+ HEAP32[$m_poly_list + 20 >> 2] = 0;
+ HEAP16[$m_poly_list + 24 >> 1] = 0;
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm($m_folder_name, 2193746, __ZNSt3__211char_traitsIcE6lengthEPKc(2193746) | 0);
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_($this, $image_name) | 0;
+ __ZN8DrBitmapaSERKS_($m_bitmap, $bitmap) | 0;
+ if ($outline) __ZN7DrImage13outlinePointsEf($this, $lod); else {
+  __ZNK8DrBitmap7polygonEv($ref$tmp, $bitmap);
+  $call16 = __ZN10DrPolygonF6pointsEv($ref$tmp) | 0;
+  $0 = HEAP32[$__end_$i$i >> 2] | 0;
+  if (($0 | 0) == (HEAP32[$this + 48 >> 2] | 0)) __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE21__push_back_slow_pathIRKS4_EEvOT_($m_poly_list, $call16); else {
+   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($0, $call16);
+   HEAP32[$__end_$i$i >> 2] = (HEAP32[$__end_$i$i >> 2] | 0) + 12;
+  }
+  __ZN10DrPolygonFD2Ev($ref$tmp);
+  HEAP32[$ref$tmp >> 2] = 0;
+  $__end_$i$i8 = $ref$tmp + 4 | 0;
+  HEAP32[$__end_$i$i8 >> 2] = 0;
+  $__value_$i$i$i$i9 = $ref$tmp + 8 | 0;
+  HEAP32[$__value_$i$i$i$i9 >> 2] = 0;
+  $3 = HEAP32[$__end_$i$i3 >> 2] | 0;
+  if ($3 >>> 0 < (HEAP32[$__value_$i$i$i$i4 >> 2] | 0) >>> 0) {
+   HEAP32[$3 >> 2] = 0;
+   $__end_$i$i$i$i$i$i = $3 + 4 | 0;
+   HEAP32[$__end_$i$i$i$i$i$i >> 2] = 0;
+   $__value_$i$i$i9$i$i$i$i$i = $3 + 8 | 0;
+   HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = 0;
+   HEAP32[$3 >> 2] = HEAP32[$ref$tmp >> 2];
+   HEAP32[$__end_$i$i$i$i$i$i >> 2] = HEAP32[$__end_$i$i8 >> 2];
+   HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = HEAP32[$__value_$i$i$i$i9 >> 2];
+   HEAP32[$__value_$i$i$i$i9 >> 2] = 0;
+   HEAP32[$__end_$i$i8 >> 2] = 0;
+   HEAP32[$ref$tmp >> 2] = 0;
+   HEAP32[$__end_$i$i3 >> 2] = (HEAP32[$__end_$i$i3 >> 2] | 0) + 12;
+  } else __ZNSt3__26vectorINS0_INS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEEENS2_IS6_EEE21__push_back_slow_pathIS6_EEvOT_($m_hole_list, $ref$tmp);
+  __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($ref$tmp);
+ }
+ STACKTOP = sp;
+ return;
 }
 
 function _stbi__jpeg_huff_decode($j, $h) {
@@ -31917,6 +31281,70 @@ function _sgl_draw() {
  }
  _sg_pop_debug_group();
  __sgl_rewind();
+ STACKTOP = sp;
+ return;
+}
+
+function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE6assignINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS1_NS_15iterator_traitsISA_E9referenceEEE5valueEvE4typeESA_SA_($this, $__first, $__last) {
+ $this = $this | 0;
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ var $0 = 0, $1 = 0, $3 = 0, $6 = 0, $8 = 0, $9 = 0, $__end_$i = 0, $__result$addr$0$i$i = 0, $__value_$i$i$i$i$i = 0, $agg$tmp12 = 0, $agg$tmp13 = 0, $agg$tmp18 = 0, $agg$tmp18$byval_copy = 0, $agg$tmp19 = 0, $agg$tmp19$byval_copy = 0, $call$i = 0, $cmp5 = 0, $mul$i = 0, $spec$select = 0, $sub = 0, $sub$ptr$div$i = 0, $sub$ptr$div$i$i$i = 0, $sub$ptr$sub$i$i$i9 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 32 | 0;
+ $agg$tmp19$byval_copy = sp + 20 | 0;
+ $agg$tmp18$byval_copy = sp + 16 | 0;
+ $agg$tmp12 = sp + 12 | 0;
+ $agg$tmp13 = sp + 8 | 0;
+ $agg$tmp18 = sp + 4 | 0;
+ $agg$tmp19 = sp;
+ $0 = HEAP32[$__first >> 2] | 0;
+ $1 = HEAP32[$__last >> 2] | 0;
+ $sub$ptr$div$i$i$i = $1 - $0 >> 4;
+ $__value_$i$i$i$i$i = $this + 8 | 0;
+ $3 = HEAP32[$this >> 2] | 0;
+ do if ($sub$ptr$div$i$i$i >>> 0 > (HEAP32[$__value_$i$i$i$i$i >> 2] | 0) - $3 >> 4 >>> 0) {
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE13__vdeallocateEv($this);
+  $call$i = __ZNKSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE8max_sizeEv($this) | 0;
+  if ($call$i >>> 0 < $sub$ptr$div$i$i$i >>> 0) __ZNKSt3__220__vector_base_commonILb1EE20__throw_length_errorEv($this); else {
+   $sub$ptr$sub$i$i$i9 = (HEAP32[$__value_$i$i$i$i$i >> 2] | 0) - (HEAP32[$this >> 2] | 0) | 0;
+   $mul$i = $sub$ptr$sub$i$i$i9 >> 3;
+   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE11__vallocateEm($this, $sub$ptr$sub$i$i$i9 >> 4 >>> 0 < $call$i >>> 1 >>> 0 ? ($mul$i >>> 0 < $sub$ptr$div$i$i$i >>> 0 ? $sub$ptr$div$i$i$i : $mul$i) : $call$i);
+   HEAP32[$agg$tmp18 >> 2] = $0;
+   HEAP32[$agg$tmp19 >> 2] = $1;
+   HEAP32[$agg$tmp18$byval_copy >> 2] = HEAP32[$agg$tmp18 >> 2];
+   HEAP32[$agg$tmp19$byval_copy >> 2] = HEAP32[$agg$tmp19 >> 2];
+   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $agg$tmp18$byval_copy, $agg$tmp19$byval_copy, $sub$ptr$div$i$i$i);
+   break;
+  }
+ } else {
+  $__end_$i = $this + 4 | 0;
+  $sub$ptr$div$i = (HEAP32[$__end_$i >> 2] | 0) - $3 >> 4;
+  $cmp5 = $sub$ptr$div$i$i$i >>> 0 > $sub$ptr$div$i >>> 0;
+  $6 = $0;
+  $spec$select = $cmp5 ? $6 + ($sub$ptr$div$i << 4) | 0 : $1;
+  $8 = $spec$select;
+  $9 = $6;
+  $__result$addr$0$i$i = $3;
+  while (1) {
+   if (($9 | 0) == ($8 | 0)) break;
+   __ZN8DrPointFaSERKS_($__result$addr$0$i$i, $9) | 0;
+   $9 = $9 + 16 | 0;
+   $__result$addr$0$i$i = $__result$addr$0$i$i + 16 | 0;
+  }
+  if ($cmp5) {
+   HEAP32[$agg$tmp12 >> 2] = $spec$select;
+   HEAP32[$agg$tmp13 >> 2] = $1;
+   $sub = $sub$ptr$div$i$i$i - ((HEAP32[$__end_$i >> 2] | 0) - (HEAP32[$this >> 2] | 0) >> 4) | 0;
+   HEAP32[$agg$tmp18$byval_copy >> 2] = HEAP32[$agg$tmp12 >> 2];
+   HEAP32[$agg$tmp19$byval_copy >> 2] = HEAP32[$agg$tmp13 >> 2];
+   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $agg$tmp18$byval_copy, $agg$tmp19$byval_copy, $sub);
+   break;
+  } else {
+   HEAP32[$__end_$i >> 2] = $__result$addr$0$i$i;
+   break;
+  }
+ } while (0);
  STACKTOP = sp;
  return;
 }
@@ -32083,84 +31511,6 @@ function __ZNK12_GLOBAL__N_116itanium_demangle12FunctionType10printRightERNS_12O
   __ZN12_GLOBAL__N_112OutputStreampLEc($S, 32);
   __ZNK12_GLOBAL__N_116itanium_demangle4Node5printERNS_12OutputStreamE(HEAP32[$ExceptionSpec >> 2] | 0, $S);
  }
- STACKTOP = sp;
- return;
-}
-
-function __ZN8DrBitmap4copyER6DrRect($agg$result, $this, $copy_rect) {
- $agg$result = $agg$result | 0;
- $this = $this | 0;
- $copy_rect = $copy_rect | 0;
- var $6 = 0, $7 = 0, $8 = 0, $9 = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $call = 0, $call18 = 0, $call2 = 0, $call28 = 0, $call47 = 0, $call53 = 0, $copy = 0, $height = 0, $height14 = 0, $height56 = 0, $source_x$048 = 0, $source_y$045 = 0, $sub35 = 0, $width = 0, $width12 = 0, $width49 = 0, $x48$049 = 0, $y = 0, $y54$046 = 0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 48 | 0;
- $agg$tmp$byval_copy = sp + 32 | 0;
- $copy = sp;
- $agg$tmp = sp + 28 | 0;
- $call = __ZN6DrRect4leftEv($copy_rect) | 0;
- $call2 = __ZN6DrRect3topEv($copy_rect) | 0;
- if (($call | 0) < 0) {
-  $width = $copy_rect + 8 | 0;
-  HEAP32[$width >> 2] = (HEAP32[$width >> 2] | 0) + $call;
-  HEAP32[$copy_rect >> 2] = (HEAP32[$copy_rect >> 2] | 0) - $call;
- }
- if (($call2 | 0) < 0) {
-  $height = $copy_rect + 12 | 0;
-  HEAP32[$height >> 2] = (HEAP32[$height >> 2] | 0) + $call2;
-  $y = $copy_rect + 4 | 0;
-  HEAP32[$y >> 2] = (HEAP32[$y >> 2] | 0) - $call2;
- }
- $width12 = $copy_rect + 8 | 0;
- do if ((HEAP32[$width12 >> 2] | 0) < 1) label = 7; else {
-  $height14 = $copy_rect + 12 | 0;
-  if ((HEAP32[$height14 >> 2] | 0) < 1) label = 7; else {
-   $call18 = __ZN6DrRect5rightEv($copy_rect) | 0;
-   $6 = HEAP32[$this + 8 >> 2] | 0;
-   if (($call18 | 0) >= ($6 | 0)) HEAP32[$width12 >> 2] = $6 - (__ZN6DrRect4leftEv($copy_rect) | 0);
-   $call28 = __ZN6DrRect6bottomEv($copy_rect) | 0;
-   $7 = HEAP32[$this + 12 >> 2] | 0;
-   if (($call28 | 0) < ($7 | 0)) $9 = HEAP32[$height14 >> 2] | 0; else {
-    $sub35 = $7 - (__ZN6DrRect3topEv($copy_rect) | 0) | 0;
-    HEAP32[$height14 >> 2] = $sub35;
-    $9 = $sub35;
-   }
-   $8 = HEAP32[$width12 >> 2] | 0;
-   if (($8 | 0) < 1 | ($9 | 0) < 1) {
-    __ZN8DrBitmapC2Eii13Bitmap_Format($agg$result, 0, 0, 4);
-    break;
-   }
-   __ZN8DrBitmapC2Eii13Bitmap_Format($copy, $8, $9, HEAP32[$this >> 2] | 0);
-   $call47 = __ZN6DrRect4leftEv($copy_rect) | 0;
-   $width49 = $copy + 8 | 0;
-   if ((HEAP32[$width49 >> 2] | 0) > 0) {
-    $height56 = $copy + 12 | 0;
-    $source_x$048 = $call47;
-    $x48$049 = 0;
-    while (1) {
-     $call53 = __ZN6DrRect3topEv($copy_rect) | 0;
-     if ((HEAP32[$height56 >> 2] | 0) > 0) {
-      $source_y$045 = $call53;
-      $y54$046 = 0;
-      while (1) {
-       __ZNK8DrBitmap8getPixelEii($agg$tmp, $this, $source_x$048, $source_y$045);
-       HEAP8[$agg$tmp$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
-       HEAP8[$agg$tmp$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
-       HEAP8[$agg$tmp$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
-       HEAP8[$agg$tmp$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
-       __ZN8DrBitmap8setPixelEii7DrColor($copy, $x48$049, $y54$046, $agg$tmp$byval_copy);
-       $y54$046 = $y54$046 + 1 | 0;
-       if (($y54$046 | 0) >= (HEAP32[$height56 >> 2] | 0)) break; else $source_y$045 = $source_y$045 + 1 | 0;
-      }
-     }
-     $x48$049 = $x48$049 + 1 | 0;
-     if (($x48$049 | 0) >= (HEAP32[$width49 >> 2] | 0)) break; else $source_x$048 = $source_x$048 + 1 | 0;
-    }
-   }
-   __ZN8DrBitmapC2ERKS_13Bitmap_Format($agg$result, $copy, 4);
-   __ZN8DrBitmapD2Ev($copy);
-  }
- } while (0);
- if ((label | 0) == 7) __ZN8DrBitmapC2Eii13Bitmap_Format($agg$result, 0, 0, 4);
  STACKTOP = sp;
  return;
 }
@@ -32522,7 +31872,7 @@ function _stbi__decode_jpeg_image($j) {
 
 function __ZN7DrImage12setSimpleBoxEv($this) {
  $this = $this | 0;
- var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $5 = 0, $7 = 0, $__end_$i$i$i = 0, $__end_$i$i$i7 = 0, $__soon_to_be_end$06$i$i$i = 0, $__soon_to_be_end$06$i$i$i10 = 0, $m_hole_list = 0, $m_poly_list = 0, $one_poly = 0, $ref$tmp = 0, $ref$tmp3 = 0, sp = 0;
+ var $0 = 0, $2 = 0, $4 = 0, $7 = 0, $__end_$i$i$i = 0, $__end_$i$i$i7 = 0, $__soon_to_be_end$0$i$i$i = 0, $__soon_to_be_end$0$i$i$i8 = 0, $incdec$ptr$i$i$i = 0, $incdec$ptr$i$i$i11 = 0, $m_hole_list = 0, $m_poly_list = 0, $one_poly = 0, $ref$tmp = 0, $ref$tmp3 = 0, sp = 0;
  sp = STACKTOP;
  STACKTOP = STACKTOP + 48 | 0;
  $one_poly = sp + 24 | 0;
@@ -32544,30 +31894,28 @@ function __ZN7DrImage12setSimpleBoxEv($this) {
  $m_poly_list = $this + 40 | 0;
  $0 = HEAP32[$m_poly_list >> 2] | 0;
  $__end_$i$i$i = $this + 44 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) {
-  $__soon_to_be_end$06$i$i$i = $1;
-  do {
-   $__soon_to_be_end$06$i$i$i = $__soon_to_be_end$06$i$i$i + -12 | 0;
-   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($__soon_to_be_end$06$i$i$i);
-  } while (($__soon_to_be_end$06$i$i$i | 0) != ($0 | 0));
+ $__soon_to_be_end$0$i$i$i = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($__soon_to_be_end$0$i$i$i | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $__soon_to_be_end$0$i$i$i + -12 | 0;
+  __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($incdec$ptr$i$i$i);
+  $__soon_to_be_end$0$i$i$i = $incdec$ptr$i$i$i;
  }
  HEAP32[$__end_$i$i$i >> 2] = $0;
  $m_hole_list = $this + 52 | 0;
  $2 = HEAP32[$m_hole_list >> 2] | 0;
  $__end_$i$i$i7 = $this + 56 | 0;
- $3 = HEAP32[$__end_$i$i$i7 >> 2] | 0;
- if (($3 | 0) == ($2 | 0)) $5 = $0; else {
-  $__soon_to_be_end$06$i$i$i10 = $3;
-  do {
-   $__soon_to_be_end$06$i$i$i10 = $__soon_to_be_end$06$i$i$i10 + -12 | 0;
-   __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($__soon_to_be_end$06$i$i$i10);
-  } while (($__soon_to_be_end$06$i$i$i10 | 0) != ($2 | 0));
-  $5 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ $__soon_to_be_end$0$i$i$i8 = HEAP32[$__end_$i$i$i7 >> 2] | 0;
+ while (1) {
+  if (($__soon_to_be_end$0$i$i$i8 | 0) == ($2 | 0)) break;
+  $incdec$ptr$i$i$i11 = $__soon_to_be_end$0$i$i$i8 + -12 | 0;
+  __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($incdec$ptr$i$i$i11);
+  $__soon_to_be_end$0$i$i$i8 = $incdec$ptr$i$i$i11;
  }
  HEAP32[$__end_$i$i$i7 >> 2] = $2;
- if (($5 | 0) == (HEAP32[$this + 48 >> 2] | 0)) __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE21__push_back_slow_pathIRKS4_EEvOT_($m_poly_list, $one_poly); else {
-  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($5, $one_poly);
+ $4 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ if (($4 | 0) == (HEAP32[$this + 48 >> 2] | 0)) __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE21__push_back_slow_pathIRKS4_EEvOT_($m_poly_list, $one_poly); else {
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($4, $one_poly);
   HEAP32[$__end_$i$i$i >> 2] = (HEAP32[$__end_$i$i$i >> 2] | 0) + 12;
  }
  $7 = HEAP32[$__end_$i$i$i7 >> 2] | 0;
@@ -32650,73 +31998,77 @@ function _fonsCreateInternal($params) {
  return $64 | 0;
 }
 
-function __ZN7DrImageC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEER8DrBitmapfb($this, $image_name, $bitmap, $lod, $outline) {
- $this = $this | 0;
- $image_name = $image_name | 0;
- $bitmap = $bitmap | 0;
- $lod = +$lod;
- $outline = $outline | 0;
- var $0 = 0, $3 = 0, $__end_$i$i = 0, $__end_$i$i$i$i$i$i = 0, $__end_$i$i3 = 0, $__end_$i$i8 = 0, $__value_$i$i$i$i4 = 0, $__value_$i$i$i$i9 = 0, $__value_$i$i$i9$i$i$i$i$i = 0, $call16 = 0, $m_bitmap = 0, $m_folder_name = 0, $m_hole_list = 0, $m_poly_list = 0, $ref$tmp = 0, sp = 0;
+function __ZN7meshoptL22generateSoftBoundariesEPjPKjmmS2_mjfS0_($destination, $indices, $index_count, $vertex_count, $clusters, $cluster_count, $threshold, $cache_timestamps) {
+ $destination = $destination | 0;
+ $indices = $indices | 0;
+ $index_count = $index_count | 0;
+ $vertex_count = $vertex_count | 0;
+ $clusters = $clusters | 0;
+ $cluster_count = $cluster_count | 0;
+ $threshold = +$threshold;
+ $cache_timestamps = $cache_timestamps | 0;
+ var $0 = 0, $add = 0, $add46 = 0, $add47 = 0, $add52 = 0, $cluster_misses$0 = 0, $cond = 0, $div = 0, $i$0 = 0, $i29$0 = 0, $i29$0$ph = 0, $it$0 = 0, $mul11 = 0, $mul24 = 0.0, $mul35 = 0, $result$0 = 0, $result$1$ph = 0, $result$1$ph$in = 0, $running_faces$0 = 0, $running_misses$0 = 0, $timestamp = 0, label = 0, sp = 0;
  sp = STACKTOP;
  STACKTOP = STACKTOP + 16 | 0;
- $ref$tmp = sp;
- HEAP32[$this >> 2] = 0;
- HEAP32[$this + 4 >> 2] = 0;
- HEAP32[$this + 8 >> 2] = 0;
- $m_bitmap = $this + 12 | 0;
- __ZN8DrBitmapC2E13Bitmap_Format($m_bitmap, 4);
- $m_poly_list = $this + 40 | 0;
- $__end_$i$i = $this + 44 | 0;
- $m_hole_list = $this + 52 | 0;
- $__end_$i$i3 = $this + 56 | 0;
- $__value_$i$i$i$i4 = $this + 60 | 0;
- $m_folder_name = $this + 68 | 0;
- HEAP32[$m_folder_name >> 2] = 0;
- HEAP32[$m_folder_name + 4 >> 2] = 0;
- HEAP32[$m_folder_name + 8 >> 2] = 0;
- HEAP32[$m_poly_list >> 2] = 0;
- HEAP32[$m_poly_list + 4 >> 2] = 0;
- HEAP32[$m_poly_list + 8 >> 2] = 0;
- HEAP32[$m_poly_list + 12 >> 2] = 0;
- HEAP32[$m_poly_list + 16 >> 2] = 0;
- HEAP32[$m_poly_list + 20 >> 2] = 0;
- HEAP16[$m_poly_list + 24 >> 1] = 0;
- __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm($m_folder_name, 2193746, __ZNSt3__211char_traitsIcE6lengthEPKc(2193746) | 0);
- __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_($this, $image_name) | 0;
- __ZN8DrBitmapaSERKS_($m_bitmap, $bitmap) | 0;
- if ($outline) __ZN7DrImage13outlinePointsEf($this, $lod); else {
-  __ZNK8DrBitmap7polygonEv($ref$tmp, $bitmap);
-  $call16 = __ZN10DrPolygonF6pointsEv($ref$tmp) | 0;
-  $0 = HEAP32[$__end_$i$i >> 2] | 0;
-  if (($0 | 0) == (HEAP32[$this + 48 >> 2] | 0)) __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE21__push_back_slow_pathIRKS4_EEvOT_($m_poly_list, $call16); else {
-   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($0, $call16);
-   HEAP32[$__end_$i$i >> 2] = (HEAP32[$__end_$i$i >> 2] | 0) + 12;
+ $timestamp = sp;
+ _memset($cache_timestamps | 0, 0, $vertex_count << 2 | 0) | 0;
+ HEAP32[$timestamp >> 2] = 0;
+ $div = ($index_count >>> 0) / 3 | 0;
+ $it$0 = 0;
+ $result$0 = 0;
+ while (1) {
+  if ($it$0 >>> 0 >= $cluster_count >>> 0) break;
+  $0 = HEAP32[$clusters + ($it$0 << 2) >> 2] | 0;
+  $add = $it$0 + 1 | 0;
+  if ($add >>> 0 < $cluster_count >>> 0) $cond = HEAP32[$clusters + ($add << 2) >> 2] | 0; else $cond = $div;
+  if ($cond >>> 0 <= $0 >>> 0) {
+   label = 7;
+   break;
   }
-  __ZN10DrPolygonFD2Ev($ref$tmp);
-  HEAP32[$ref$tmp >> 2] = 0;
-  $__end_$i$i8 = $ref$tmp + 4 | 0;
-  HEAP32[$__end_$i$i8 >> 2] = 0;
-  $__value_$i$i$i$i9 = $ref$tmp + 8 | 0;
-  HEAP32[$__value_$i$i$i$i9 >> 2] = 0;
-  $3 = HEAP32[$__end_$i$i3 >> 2] | 0;
-  if ($3 >>> 0 < (HEAP32[$__value_$i$i$i$i4 >> 2] | 0) >>> 0) {
-   HEAP32[$3 >> 2] = 0;
-   $__end_$i$i$i$i$i$i = $3 + 4 | 0;
-   HEAP32[$__end_$i$i$i$i$i$i >> 2] = 0;
-   $__value_$i$i$i9$i$i$i$i$i = $3 + 8 | 0;
-   HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = 0;
-   HEAP32[$3 >> 2] = HEAP32[$ref$tmp >> 2];
-   HEAP32[$__end_$i$i$i$i$i$i >> 2] = HEAP32[$__end_$i$i8 >> 2];
-   HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = HEAP32[$__value_$i$i$i$i9 >> 2];
-   HEAP32[$__value_$i$i$i$i9 >> 2] = 0;
-   HEAP32[$__end_$i$i8 >> 2] = 0;
-   HEAP32[$ref$tmp >> 2] = 0;
-   HEAP32[$__end_$i$i3 >> 2] = (HEAP32[$__end_$i$i3 >> 2] | 0) + 12;
-  } else __ZNSt3__26vectorINS0_INS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEEENS2_IS6_EEE21__push_back_slow_pathIS6_EEvOT_($m_hole_list, $ref$tmp);
-  __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($ref$tmp);
+  HEAP32[$timestamp >> 2] = (HEAP32[$timestamp >> 2] | 0) + 17;
+  $cluster_misses$0 = 0;
+  $i$0 = $0;
+  while (1) {
+   if ($i$0 >>> 0 >= $cond >>> 0) break;
+   $mul11 = $i$0 * 3 | 0;
+   $cluster_misses$0 = (__ZN7meshoptL11updateCacheEjjjjPjRj(HEAP32[$indices + ($mul11 << 2) >> 2] | 0, HEAP32[$indices + ($mul11 + 1 << 2) >> 2] | 0, HEAP32[$indices + ($mul11 + 2 << 2) >> 2] | 0, $cache_timestamps, $timestamp) | 0) + $cluster_misses$0 | 0;
+   $i$0 = $i$0 + 1 | 0;
+  }
+  $mul24 = +($cluster_misses$0 >>> 0) / +(($cond - $0 | 0) >>> 0) * $threshold;
+  HEAP32[$destination + ($result$0 << 2) >> 2] = $0;
+  $i29$0$ph = $0;
+  $result$1$ph$in = $result$0;
+  L12 : while (1) {
+   $result$1$ph = $result$1$ph$in + 1 | 0;
+   HEAP32[$timestamp >> 2] = (HEAP32[$timestamp >> 2] | 0) + 17;
+   $i29$0 = $i29$0$ph;
+   $running_faces$0 = 0;
+   $running_misses$0 = 0;
+   while (1) {
+    if ($i29$0 >>> 0 >= $cond >>> 0) break L12;
+    $mul35 = $i29$0 * 3 | 0;
+    $add46 = (__ZN7meshoptL11updateCacheEjjjjPjRj(HEAP32[$indices + ($mul35 << 2) >> 2] | 0, HEAP32[$indices + ($mul35 + 1 << 2) >> 2] | 0, HEAP32[$indices + ($mul35 + 2 << 2) >> 2] | 0, $cache_timestamps, $timestamp) | 0) + $running_misses$0 | 0;
+    $add47 = $running_faces$0 + 1 | 0;
+    if (+($add46 >>> 0) / +($add47 >>> 0) <= $mul24) break;
+    $i29$0 = $i29$0 + 1 | 0;
+    $running_faces$0 = $add47;
+    $running_misses$0 = $add46;
+   }
+   $add52 = $i29$0 + 1 | 0;
+   HEAP32[$destination + ($result$1$ph << 2) >> 2] = $add52;
+   $i29$0$ph = $add52;
+   $result$1$ph$in = $result$1$ph;
+  }
+  $it$0 = $add;
+  $result$0 = (HEAP32[$destination + ($result$1$ph$in << 2) >> 2] | 0) == ($0 | 0) ? $result$1$ph : $result$1$ph$in;
  }
- STACKTOP = sp;
- return;
+ if ((label | 0) == 7) ___assert_fail(46566, 46089, 202, 46578);
+ if ($result$0 >>> 0 < $cluster_count >>> 0) ___assert_fail(46601, 46089, 262, 46578);
+ if ($result$0 >>> 0 > $div >>> 0) ___assert_fail(46625, 46089, 263, 46578); else {
+  STACKTOP = sp;
+  return $result$0 | 0;
+ }
+ return 0;
 }
 
 function __ZNK12_GLOBAL__N_116itanium_demangle11PointerType9printLeftERNS_12OutputStreamE($this, $s) {
@@ -32783,6 +32135,89 @@ function __ZNK12_GLOBAL__N_116itanium_demangle11PointerType9printLeftERNS_12Outp
  }
  STACKTOP = sp;
  return;
+}
+
+function __ZN7meshoptL22buildTriangleAdjacencyERNS_17TriangleAdjacencyEPKjmmR17meshopt_Allocator($adjacency, $indices, $index_count, $vertex_count, $allocator) {
+ $adjacency = $adjacency | 0;
+ $indices = $indices | 0;
+ $index_count = $index_count | 0;
+ $vertex_count = $vertex_count | 0;
+ $allocator = $allocator | 0;
+ var $1 = 0, $10 = 0, $12 = 0, $13 = 0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $18 = 0, $2 = 0, $3 = 0, $4 = 0, $7 = 0, $8 = 0, $9 = 0, $add = 0, $arrayidx40 = 0, $arrayidx45 = 0, $arrayidx50 = 0, $arrayidx62 = 0, $arrayidx7 = 0, $data = 0, $div = 0, $i$0 = 0, $i24$0 = 0, $i56$0 = 0, $i9$0 = 0, $mul29 = 0, $offset$0 = 0, $offsets = 0, label = 0;
+ $div = ($index_count >>> 0) / 3 | 0;
+ HEAP32[$adjacency >> 2] = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
+ $offsets = $adjacency + 4 | 0;
+ HEAP32[$offsets >> 2] = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
+ $data = $adjacency + 8 | 0;
+ HEAP32[$data >> 2] = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $index_count) | 0;
+ _memset(HEAP32[$adjacency >> 2] | 0, 0, $vertex_count << 2 | 0) | 0;
+ $1 = HEAP32[$adjacency >> 2] | 0;
+ $i$0 = 0;
+ while (1) {
+  if ($i$0 >>> 0 >= $index_count >>> 0) break;
+  $4 = HEAP32[$indices + ($i$0 << 2) >> 2] | 0;
+  if ($4 >>> 0 >= $vertex_count >>> 0) {
+   label = 5;
+   break;
+  }
+  $arrayidx7 = $1 + ($4 << 2) | 0;
+  HEAP32[$arrayidx7 >> 2] = (HEAP32[$arrayidx7 >> 2] | 0) + 1;
+  $i$0 = $i$0 + 1 | 0;
+ }
+ if ((label | 0) == 5) ___assert_fail(46984, 46674, 55, 47010);
+ $2 = HEAP32[$offsets >> 2] | 0;
+ $3 = HEAP32[$adjacency >> 2] | 0;
+ $i9$0 = 0;
+ $offset$0 = 0;
+ while (1) {
+  if (($i9$0 | 0) == ($vertex_count | 0)) break;
+  HEAP32[$2 + ($i9$0 << 2) >> 2] = $offset$0;
+  $add = (HEAP32[$3 + ($i9$0 << 2) >> 2] | 0) + $offset$0 | 0;
+  $i9$0 = $i9$0 + 1 | 0;
+  $offset$0 = $add;
+ }
+ if (($offset$0 | 0) != ($index_count | 0)) ___assert_fail(47033, 46674, 69, 47010);
+ $7 = HEAP32[$data >> 2] | 0;
+ $8 = HEAP32[$offsets >> 2] | 0;
+ $i24$0 = 0;
+ while (1) {
+  if ($i24$0 >>> 0 >= $div >>> 0) break;
+  $mul29 = $i24$0 * 3 | 0;
+  $12 = HEAP32[$indices + ($mul29 + 1 << 2) >> 2] | 0;
+  $13 = HEAP32[$indices + ($mul29 + 2 << 2) >> 2] | 0;
+  $arrayidx40 = $8 + (HEAP32[$indices + ($mul29 << 2) >> 2] << 2) | 0;
+  $14 = HEAP32[$arrayidx40 >> 2] | 0;
+  HEAP32[$arrayidx40 >> 2] = $14 + 1;
+  HEAP32[$7 + ($14 << 2) >> 2] = $i24$0;
+  $arrayidx45 = $8 + ($12 << 2) | 0;
+  $15 = HEAP32[$arrayidx45 >> 2] | 0;
+  HEAP32[$arrayidx45 >> 2] = $15 + 1;
+  HEAP32[$7 + ($15 << 2) >> 2] = $i24$0;
+  $arrayidx50 = $8 + ($13 << 2) | 0;
+  $16 = HEAP32[$arrayidx50 >> 2] | 0;
+  HEAP32[$arrayidx50 >> 2] = $16 + 1;
+  HEAP32[$7 + ($16 << 2) >> 2] = $i24$0;
+  $i24$0 = $i24$0 + 1 | 0;
+ }
+ $9 = HEAP32[$offsets >> 2] | 0;
+ $10 = HEAP32[$adjacency >> 2] | 0;
+ $i56$0 = 0;
+ while (1) {
+  if ($i56$0 >>> 0 >= $vertex_count >>> 0) {
+   label = 16;
+   break;
+  }
+  $arrayidx62 = $9 + ($i56$0 << 2) | 0;
+  $17 = HEAP32[$arrayidx62 >> 2] | 0;
+  $18 = HEAP32[$10 + ($i56$0 << 2) >> 2] | 0;
+  if ($17 >>> 0 < $18 >>> 0) {
+   label = 18;
+   break;
+  }
+  HEAP32[$arrayidx62 >> 2] = $17 - $18;
+  $i56$0 = $i56$0 + 1 | 0;
+ }
+ if ((label | 0) == 16) return; else if ((label | 0) == 18) ___assert_fail(47055, 46674, 84, 47010);
 }
 
 function __ZNK12_GLOBAL__N_116itanium_demangle16FunctionEncoding10printRightERNS_12OutputStreamE($this, $S) {
@@ -33245,79 +32680,6 @@ function _stbi__do_png($p, $x, $y, $n, $req_comp, $ri) {
  return $71 | 0;
 }
 
-function __Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($bitmap, $at_point, $alpha_tolerance) {
- $bitmap = $bitmap | 0;
- $at_point = $at_point | 0;
- $alpha_tolerance = $alpha_tolerance | 0;
- var $call = 0, $call43 = 0.0, $call8 = 0, $cmp3930 = 0, $cond = 0, $cond18 = 0, $cond24 = 0, $cond34 = 0, $height = 0, $inc45 = 0.0, $ref$tmp = 0, $ref$tmp1 = 0, $ref$tmp2 = 0, $sub11 = 0, $sub26 = 0, $total_count$0$lcssa = 0.0, $total_count$036 = 0.0, $total_count$1$lcssa = 0.0, $total_count$131 = 0.0, $transparent_count$0$lcssa = 0.0, $transparent_count$037 = 0.0, $transparent_count$1$lcssa = 0.0, $transparent_count$132 = 0.0, $transparent_count$2 = 0.0, $width = 0, $x35$038 = 0, $y37$033 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 16 | 0;
- $ref$tmp = sp + 8 | 0;
- $ref$tmp1 = sp + 4 | 0;
- $ref$tmp2 = sp;
- HEAP32[$ref$tmp >> 2] = ~~+_llvm_round_f64(+(+HEAPF64[$at_point >> 3]));
- HEAP32[$ref$tmp1 >> 2] = 0;
- $width = $bitmap + 8 | 0;
- HEAP32[$ref$tmp2 >> 2] = (HEAP32[$width >> 2] | 0) + -1;
- $call = __ZN2Dr5ClampIiEET_RKS1_S3_S3_($ref$tmp, $ref$tmp1, $ref$tmp2) | 0;
- HEAP32[$ref$tmp >> 2] = ~~+_llvm_round_f64(+(+HEAPF64[$at_point + 8 >> 3]));
- HEAP32[$ref$tmp1 >> 2] = 0;
- $height = $bitmap + 12 | 0;
- HEAP32[$ref$tmp2 >> 2] = (HEAP32[$height >> 2] | 0) + -1;
- $call8 = __ZN2Dr5ClampIiEET_RKS1_S3_S3_($ref$tmp, $ref$tmp1, $ref$tmp2) | 0;
- $cond = ($call | 0) > 0 ? $call + -1 | 0 : 0;
- $sub11 = (HEAP32[$width >> 2] | 0) + -1 | 0;
- $cond18 = ($call | 0) < ($sub11 | 0) ? $call + 1 | 0 : $sub11;
- $cond24 = ($call8 | 0) > 0 ? $call8 + -1 | 0 : 0;
- $sub26 = (HEAP32[$height >> 2] | 0) + -1 | 0;
- $cond34 = ($call8 | 0) < ($sub26 | 0) ? $call8 + 1 | 0 : $sub26;
- if (($cond | 0) > ($cond18 | 0)) {
-  $total_count$0$lcssa = 0.0;
-  $transparent_count$0$lcssa = 0.0;
- } else {
-  $cmp3930 = ($cond24 | 0) > ($cond34 | 0);
-  $total_count$036 = 0.0;
-  $transparent_count$037 = 0.0;
-  $x35$038 = $cond;
-  while (1) {
-   if ($cmp3930) {
-    $total_count$1$lcssa = $total_count$036;
-    $transparent_count$1$lcssa = $transparent_count$037;
-   } else {
-    $total_count$131 = $total_count$036;
-    $transparent_count$132 = $transparent_count$037;
-    $y37$033 = $cond24;
-    while (1) {
-     __ZNK8DrBitmap8getPixelEii($ref$tmp, $bitmap, $x35$038, $y37$033);
-     $call43 = +__ZNK7DrColor6alphaFEv($ref$tmp);
-     $transparent_count$2 = $call43 < +HEAPF64[$alpha_tolerance >> 3] ? $transparent_count$132 + 1.0 : $transparent_count$132;
-     $inc45 = $total_count$131 + 1.0;
-     if (($y37$033 | 0) < ($cond34 | 0)) {
-      $total_count$131 = $inc45;
-      $transparent_count$132 = $transparent_count$2;
-      $y37$033 = $y37$033 + 1 | 0;
-     } else {
-      $total_count$1$lcssa = $inc45;
-      $transparent_count$1$lcssa = $transparent_count$2;
-      break;
-     }
-    }
-   }
-   if (($x35$038 | 0) < ($cond18 | 0)) {
-    $total_count$036 = $total_count$1$lcssa;
-    $transparent_count$037 = $transparent_count$1$lcssa;
-    $x35$038 = $x35$038 + 1 | 0;
-   } else {
-    $total_count$0$lcssa = $total_count$1$lcssa;
-    $transparent_count$0$lcssa = $transparent_count$1$lcssa;
-    break;
-   }
-  }
- }
- STACKTOP = sp;
- return +($transparent_count$0$lcssa / $total_count$0$lcssa);
-}
-
 function __ZNK12_GLOBAL__N_116itanium_demangle7NewExpr9printLeftERNS_12OutputStreamE($this, $S) {
  $this = $this | 0;
  $S = $S | 0;
@@ -33376,83 +32738,6 @@ function __ZNK12_GLOBAL__N_116itanium_demangle7NewExpr9printLeftERNS_12OutputStr
  }
  STACKTOP = sp;
  return;
-}
-
-function _meshopt_generateVertexRemap($destination, $indices, $index_count, $vertices, $vertex_count, $vertex_size) {
- $destination = $destination | 0;
- $indices = $indices | 0;
- $index_count = $index_count | 0;
- $vertices = $vertices | 0;
- $vertex_count = $vertex_count | 0;
- $vertex_size = $vertex_size | 0;
- var $3 = 0, $4 = 0, $allocator = 0, $arrayidx21 = 0, $call = 0, $call12 = 0, $call26 = 0, $cond = 0, $hasher = 0, $i$047 = 0, $index = 0, $next_vertex$0$lcssa49 = 0, $next_vertex$046 = 0, $next_vertex$046$sink = 0, $next_vertex$2 = 0, $next_vertex$2$ph = 0, $ref$tmp = 0, $tobool = 0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 128 | 0;
- $allocator = sp + 20 | 0;
- $hasher = sp + 8 | 0;
- $index = sp + 4 | 0;
- $ref$tmp = sp;
- $tobool = ($indices | 0) != 0;
- if (!($tobool | ($index_count | 0) == ($vertex_count | 0))) ___assert_fail(45732, 45771, 189, 45855);
- if (($index_count >>> 0) % 3 | 0 | 0) ___assert_fail(47099, 45771, 190, 45855);
- if (($vertex_size + -1 | 0) >>> 0 >= 256) ___assert_fail(47282, 45771, 191, 45855);
- __ZN17meshopt_AllocatorC2Ev($allocator);
- _memset($destination | 0, -1, $vertex_count << 2 | 0) | 0;
- HEAP32[$hasher >> 2] = $vertices;
- HEAP32[$hasher + 4 >> 2] = $vertex_size;
- HEAP32[$hasher + 8 >> 2] = $vertex_size;
- $call = __ZN7meshoptL11hashBucketsEm($vertex_count) | 0;
- $call12 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $call) | 0;
- _memset($call12 | 0, -1, $call << 2 | 0) | 0;
- do if (!$index_count) $next_vertex$0$lcssa49 = 0; else {
-  $i$047 = 0;
-  $next_vertex$046 = 0;
-  while (1) {
-   if ($tobool) $cond = HEAP32[$indices + ($i$047 << 2) >> 2] | 0; else $cond = $i$047;
-   HEAP32[$index >> 2] = $cond;
-   if ($cond >>> 0 >= $vertex_count >>> 0) {
-    label = 13;
-    break;
-   }
-   $arrayidx21 = $destination + ($cond << 2) | 0;
-   if ((HEAP32[$arrayidx21 >> 2] | 0) == -1) {
-    HEAP32[$ref$tmp >> 2] = -1;
-    $call26 = __ZN7meshoptL10hashLookupIjNS_12VertexHasherEEEPT_S3_mRKT0_RKS2_S8_($call12, $call, $hasher, $index, $ref$tmp) | 0;
-    $3 = HEAP32[$call26 >> 2] | 0;
-    if (($3 | 0) == -1) {
-     HEAP32[$call26 >> 2] = $cond;
-     $next_vertex$046$sink = $next_vertex$046;
-     $next_vertex$2$ph = $next_vertex$046 + 1 | 0;
-    } else {
-     $4 = HEAP32[$destination + ($3 << 2) >> 2] | 0;
-     if (($4 | 0) == -1) {
-      label = 18;
-      break;
-     } else {
-      $next_vertex$046$sink = $4;
-      $next_vertex$2$ph = $next_vertex$046;
-     }
-    }
-    HEAP32[$arrayidx21 >> 2] = $next_vertex$046$sink;
-    $next_vertex$2 = $next_vertex$2$ph;
-   } else $next_vertex$2 = $next_vertex$046;
-   $i$047 = $i$047 + 1 | 0;
-   if ($i$047 >>> 0 >= $index_count >>> 0) {
-    label = 9;
-    break;
-   } else $next_vertex$046 = $next_vertex$2;
-  }
-  if ((label | 0) == 9) {
-   if ($next_vertex$2 >>> 0 <= $vertex_count >>> 0) {
-    $next_vertex$0$lcssa49 = $next_vertex$2;
-    break;
-   }
-   ___assert_fail(47226, 45771, 229, 45855);
-  } else if ((label | 0) == 13) ___assert_fail(47205, 45771, 208, 45855); else if ((label | 0) == 18) ___assert_fail(45883, 45771, 222, 45855);
- } while (0);
- __ZN17meshopt_AllocatorD2Ev($allocator);
- STACKTOP = sp;
- return $next_vertex$0$lcssa49 | 0;
 }
 
 function __ZNK12_GLOBAL__N_116itanium_demangle10BinaryExpr9printLeftERNS_12OutputStreamE($this, $S) {
@@ -33550,71 +32835,6 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  return $retval$2 | 0;
 }
 
-function __ZN6DrMesh12optimizeMeshEv($this) {
- $this = $this | 0;
- var $11 = 0, $13 = 0, $15 = 0, $16 = 0, $24 = 0, $25 = 0, $26 = 0, $27 = 0, $28 = 0, $29 = 0, $31 = 0, $7 = 0, $__end_$i58 = 0, $__end_$i61 = 0, $call = 0, $call10 = 0, $i$076 = 0, $i86$072 = 0, $remap = 0, $result = 0, $sub$ptr$div$i = 0, $sub$ptr$div$i31 = 0, $vertices = 0, $vertices18 = 0, dest = 0, sp = 0, src = 0, stop = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 48 | 0;
- $result = sp + 16 | 0;
- $remap = sp;
- __ZN6DrMeshC2Ev($result);
- $call = __ZNK6DrMesh11vertexCountEv($this) | 0;
- __ZNSt3__26vectorIjNS_9allocatorIjEEEC2Em($remap, $call);
- $vertices = $this + 12 | 0;
- $call10 = _meshopt_generateVertexRemap(HEAP32[$remap >> 2] | 0, 0, $call, HEAP32[$vertices >> 2] | 0, $call, 44) | 0;
- __ZNSt3__26vectorIjNS_9allocatorIjEEE6resizeEm($result, $call);
- _meshopt_remapIndexBuffer(HEAP32[$result >> 2] | 0, 0, $call, HEAP32[$remap >> 2] | 0);
- $vertices18 = $result + 12 | 0;
- __ZNSt3__26vectorI6VertexNS_9allocatorIS1_EEE6resizeEm($vertices18, $call10);
- _meshopt_remapVertexBuffer(HEAP32[$vertices18 >> 2] | 0, HEAP32[$vertices >> 2] | 0, $call, 44, HEAP32[$remap >> 2] | 0);
- $7 = HEAP32[$result >> 2] | 0;
- $__end_$i61 = $result + 4 | 0;
- $__end_$i58 = $result + 16 | 0;
- _meshopt_optimizeVertexCache($7, $7, (HEAP32[$__end_$i61 >> 2] | 0) - $7 >> 2, ((HEAP32[$__end_$i58 >> 2] | 0) - (HEAP32[$vertices18 >> 2] | 0) | 0) / 44 | 0);
- $11 = HEAP32[$result >> 2] | 0;
- $13 = HEAP32[$vertices18 >> 2] | 0;
- _meshopt_optimizeOverdraw($11, $11, (HEAP32[$__end_$i61 >> 2] | 0) - $11 >> 2, $13, ((HEAP32[$__end_$i58 >> 2] | 0) - $13 | 0) / 44 | 0, 44, 1.0499999523162842);
- $15 = HEAP32[$vertices18 >> 2] | 0;
- $16 = HEAP32[$result >> 2] | 0;
- _meshopt_optimizeVertexFetch($15, $16, (HEAP32[$__end_$i61 >> 2] | 0) - $16 >> 2, $15, ((HEAP32[$__end_$i58 >> 2] | 0) - $15 | 0) / 44 | 0, 44) | 0;
- __ZNSt3__26vectorIjNS_9allocatorIjEEE6resizeEm($this, (HEAP32[$__end_$i61 >> 2] | 0) - (HEAP32[$result >> 2] | 0) >> 2);
- __ZNSt3__26vectorI6VertexNS_9allocatorIS1_EEE6resizeEm($vertices, ((HEAP32[$__end_$i58 >> 2] | 0) - (HEAP32[$vertices18 >> 2] | 0) | 0) / 44 | 0);
- $24 = HEAP32[$__end_$i61 >> 2] | 0;
- $25 = HEAP32[$result >> 2] | 0;
- $26 = $25;
- if (($24 | 0) != ($25 | 0)) {
-  $27 = HEAP32[$this >> 2] | 0;
-  $sub$ptr$div$i31 = $24 - $25 >> 2;
-  $i$076 = 0;
-  do {
-   HEAP32[$27 + ($i$076 << 2) >> 2] = HEAP32[$26 + ($i$076 << 2) >> 2];
-   $i$076 = $i$076 + 1 | 0;
-  } while ($i$076 >>> 0 < $sub$ptr$div$i31 >>> 0);
- }
- $28 = HEAP32[$__end_$i58 >> 2] | 0;
- $29 = HEAP32[$vertices18 >> 2] | 0;
- $31 = $29;
- if (($28 | 0) != ($29 | 0)) {
-  $sub$ptr$div$i = ($28 - $29 | 0) / 44 | 0;
-  $i86$072 = 0;
-  do {
-   dest = (HEAP32[$vertices >> 2] | 0) + ($i86$072 * 44 | 0) | 0;
-   src = $31 + ($i86$072 * 44 | 0) | 0;
-   stop = dest + 44 | 0;
-   do {
-    HEAP32[dest >> 2] = HEAP32[src >> 2];
-    dest = dest + 4 | 0;
-    src = src + 4 | 0;
-   } while ((dest | 0) < (stop | 0));
-   $i86$072 = $i86$072 + 1 | 0;
-  } while ($i86$072 >>> 0 < $sub$ptr$div$i >>> 0);
- }
- __ZNSt3__213__vector_baseIjNS_9allocatorIjEEED2Ev($remap);
- __ZN6DrMeshD2Ev($result);
- STACKTOP = sp;
- return;
-}
-
 function __ZNK12_GLOBAL__N_116itanium_demangle14IntegerLiteral9printLeftERNS_12OutputStreamE($this, $S) {
  $this = $this | 0;
  $S = $S | 0;
@@ -33682,102 +32902,80 @@ function __ZNK12_GLOBAL__N_116itanium_demangle14IntegerLiteral9printLeftERNS_12O
  return;
 }
 
-function __ZNSt3__227__insertion_sort_incompleteIRN13TPPLPartition12VertexSorterEPlEEbT0_S5_T_($__first, $__last, $__comp) {
- $__first = $__first | 0;
- $__last = $__last | 0;
- $__comp = $__comp | 0;
- var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $4 = 0, $__count$056 = 0, $__count$1 = 0, $__i$057 = 0, $__j$054 = 0, $__j$054$phi = 0, $__j$1 = 0, $__j$1$phi = 0, $__k$0 = 0, $__k$0$lcssa = 0, $add$ptr16 = 0, $add$ptr19 = 0, $inc = 0, $incdec$ptr = 0, $incdec$ptr25 = 0, $incdec$ptr35 = 0, $retval$5 = 0;
- L1 : do switch ($__last - $__first >> 2 | 0) {
- case 1:
- case 0:
-  {
-   $retval$5 = 1;
-   break;
-  }
- case 2:
-  {
-   $incdec$ptr = $__last + -4 | 0;
-   $0 = HEAP32[$incdec$ptr >> 2] | 0;
-   $1 = HEAP32[$__first >> 2] | 0;
-   if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $0, $1) | 0) {
-    HEAP32[$__first >> 2] = $0;
-    HEAP32[$incdec$ptr >> 2] = $1;
-    $retval$5 = 1;
-   } else $retval$5 = 1;
-   break;
-  }
- case 3:
-  {
-   __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first, $__first + 4 | 0, $__last + -4 | 0, $__comp) | 0;
-   $retval$5 = 1;
-   break;
-  }
- case 4:
-  {
-   __ZNSt3__27__sort4IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_T_($__first, $__first + 4 | 0, $__first + 8 | 0, $__last + -4 | 0, $__comp) | 0;
-   $retval$5 = 1;
-   break;
-  }
- case 5:
-  {
-   __ZNSt3__27__sort5IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_S5_T_($__first, $__first + 4 | 0, $__first + 8 | 0, $__first + 12 | 0, $__last + -4 | 0, $__comp) | 0;
-   $retval$5 = 1;
-   break;
-  }
- default:
-  {
-   $add$ptr16 = $__first + 8 | 0;
-   __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first, $__first + 4 | 0, $add$ptr16, $__comp) | 0;
-   $add$ptr19 = $__first + 12 | 0;
-   if (($add$ptr19 | 0) == ($__last | 0)) $retval$5 = 1; else {
-    $__count$056 = 0;
-    $__i$057 = $add$ptr19;
-    $__j$054 = $add$ptr16;
-    while (1) {
-     $2 = HEAP32[$__i$057 >> 2] | 0;
-     $3 = HEAP32[$__j$054 >> 2] | 0;
-     if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $3) | 0) {
-      $4 = $3;
-      $__j$1 = $__i$057;
-      $__k$0 = $__j$054;
-      while (1) {
-       HEAP32[$__j$1 >> 2] = $4;
-       if (($__k$0 | 0) == ($__first | 0)) {
-        $__k$0$lcssa = $__first;
-        break;
-       }
-       $incdec$ptr25 = $__k$0 + -4 | 0;
-       $4 = HEAP32[$incdec$ptr25 >> 2] | 0;
-       if (!(__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $4) | 0)) {
-        $__k$0$lcssa = $__k$0;
-        break;
-       } else {
-        $__j$1$phi = $__k$0;
-        $__k$0 = $incdec$ptr25;
-        $__j$1 = $__j$1$phi;
-       }
-      }
-      HEAP32[$__k$0$lcssa >> 2] = $2;
-      $inc = $__count$056 + 1 | 0;
-      if (($inc | 0) == 8) break; else $__count$1 = $inc;
-     } else $__count$1 = $__count$056;
-     $incdec$ptr35 = $__i$057 + 4 | 0;
-     if (($incdec$ptr35 | 0) == ($__last | 0)) {
-      $retval$5 = 1;
-      break L1;
-     } else {
-      $__j$054$phi = $__i$057;
-      $__count$056 = $__count$1;
-      $__i$057 = $incdec$ptr35;
-      $__j$054 = $__j$054$phi;
-     }
-    }
-    $retval$5 = ($__i$057 + 4 | 0) == ($__last | 0);
+function __ZN8DrBitmap4copyER6DrRect($agg$result, $this, $copy_rect) {
+ $agg$result = $agg$result | 0;
+ $this = $this | 0;
+ $copy_rect = $copy_rect | 0;
+ var $6 = 0, $7 = 0, $8 = 0, $9 = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $call = 0, $call18 = 0, $call2 = 0, $call28 = 0, $copy = 0, $height = 0, $height14 = 0, $height56 = 0, $source_x$0 = 0, $source_y$0 = 0, $sub35 = 0, $width = 0, $width12 = 0, $width49 = 0, $x48$0 = 0, $y = 0, $y54$0 = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 48 | 0;
+ $agg$tmp$byval_copy = sp + 32 | 0;
+ $copy = sp;
+ $agg$tmp = sp + 28 | 0;
+ $call = __ZN6DrRect4leftEv($copy_rect) | 0;
+ $call2 = __ZN6DrRect3topEv($copy_rect) | 0;
+ if (($call | 0) < 0) {
+  $width = $copy_rect + 8 | 0;
+  HEAP32[$width >> 2] = (HEAP32[$width >> 2] | 0) + $call;
+  HEAP32[$copy_rect >> 2] = (HEAP32[$copy_rect >> 2] | 0) - $call;
+ }
+ if (($call2 | 0) < 0) {
+  $height = $copy_rect + 12 | 0;
+  HEAP32[$height >> 2] = (HEAP32[$height >> 2] | 0) + $call2;
+  $y = $copy_rect + 4 | 0;
+  HEAP32[$y >> 2] = (HEAP32[$y >> 2] | 0) - $call2;
+ }
+ $width12 = $copy_rect + 8 | 0;
+ do if ((HEAP32[$width12 >> 2] | 0) < 1) label = 7; else {
+  $height14 = $copy_rect + 12 | 0;
+  if ((HEAP32[$height14 >> 2] | 0) < 1) label = 7; else {
+   $call18 = __ZN6DrRect5rightEv($copy_rect) | 0;
+   $6 = HEAP32[$this + 8 >> 2] | 0;
+   if (($call18 | 0) >= ($6 | 0)) HEAP32[$width12 >> 2] = $6 - (__ZN6DrRect4leftEv($copy_rect) | 0);
+   $call28 = __ZN6DrRect6bottomEv($copy_rect) | 0;
+   $7 = HEAP32[$this + 12 >> 2] | 0;
+   if (($call28 | 0) < ($7 | 0)) $9 = HEAP32[$height14 >> 2] | 0; else {
+    $sub35 = $7 - (__ZN6DrRect3topEv($copy_rect) | 0) | 0;
+    HEAP32[$height14 >> 2] = $sub35;
+    $9 = $sub35;
    }
+   $8 = HEAP32[$width12 >> 2] | 0;
+   if (($8 | 0) < 1 | ($9 | 0) < 1) {
+    __ZN8DrBitmapC2Eii13Bitmap_Format($agg$result, 0, 0, 4);
+    break;
+   }
+   __ZN8DrBitmapC2Eii13Bitmap_Format($copy, $8, $9, HEAP32[$this >> 2] | 0);
+   $width49 = $copy + 8 | 0;
+   $height56 = $copy + 12 | 0;
+   $source_x$0 = __ZN6DrRect4leftEv($copy_rect) | 0;
+   $x48$0 = 0;
+   while (1) {
+    if (($x48$0 | 0) >= (HEAP32[$width49 >> 2] | 0)) break;
+    $source_y$0 = __ZN6DrRect3topEv($copy_rect) | 0;
+    $y54$0 = 0;
+    while (1) {
+     if (($y54$0 | 0) >= (HEAP32[$height56 >> 2] | 0)) break;
+     __ZNK8DrBitmap8getPixelEii($agg$tmp, $this, $source_x$0, $source_y$0);
+     HEAP8[$agg$tmp$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
+     HEAP8[$agg$tmp$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
+     HEAP8[$agg$tmp$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
+     HEAP8[$agg$tmp$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
+     __ZN8DrBitmap8setPixelEii7DrColor($copy, $x48$0, $y54$0, $agg$tmp$byval_copy);
+     $source_y$0 = $source_y$0 + 1 | 0;
+     $y54$0 = $y54$0 + 1 | 0;
+    }
+    $source_x$0 = $source_x$0 + 1 | 0;
+    $x48$0 = $x48$0 + 1 | 0;
+   }
+   __ZN8DrBitmapC2ERKS_13Bitmap_Format($agg$result, $copy, 4);
+   __ZN8DrBitmapD2Ev($copy);
   }
  } while (0);
- return $retval$5 | 0;
+ if ((label | 0) == 7) __ZN8DrBitmapC2Eii13Bitmap_Format($agg$result, 0, 0, 4);
+ STACKTOP = sp;
+ return;
 }
+
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E18parseFunctionParamEv($this) {
  $this = $this | 0;
  var $agg$tmp = 0, $agg$tmp7 = 0, $agg$tmp7$byval_copy = 0, $retval$0 = 0, $retval$1 = 0, $retval$2 = 0, sp = 0;
@@ -33999,6 +33197,66 @@ function _stbi__expand_png_palette($a, $palette, $len, $pal_img_n) {
  $59 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
  return $59 | 0;
+}
+
+function __ZN6DrMesh12optimizeMeshEv($this) {
+ $this = $this | 0;
+ var $$cast69 = 0, $$cast70 = 0, $11 = 0, $13 = 0, $15 = 0, $16 = 0, $25 = 0, $27 = 0, $7 = 0, $__end_$i58 = 0, $__end_$i61 = 0, $call = 0, $call10 = 0, $i$0 = 0, $i86$0 = 0, $remap = 0, $result = 0, $sub$ptr$div$i = 0, $sub$ptr$div$i31 = 0, $vertices = 0, $vertices18 = 0, dest = 0, sp = 0, src = 0, stop = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 48 | 0;
+ $result = sp + 16 | 0;
+ $remap = sp;
+ __ZN6DrMeshC2Ev($result);
+ $call = __ZNK6DrMesh11vertexCountEv($this) | 0;
+ __ZNSt3__26vectorIjNS_9allocatorIjEEEC2Em($remap, $call);
+ $vertices = $this + 12 | 0;
+ $call10 = _meshopt_generateVertexRemap(HEAP32[$remap >> 2] | 0, 0, $call, HEAP32[$vertices >> 2] | 0, $call, 44) | 0;
+ __ZNSt3__26vectorIjNS_9allocatorIjEEE6resizeEm($result, $call);
+ _meshopt_remapIndexBuffer(HEAP32[$result >> 2] | 0, 0, $call, HEAP32[$remap >> 2] | 0);
+ $vertices18 = $result + 12 | 0;
+ __ZNSt3__26vectorI6VertexNS_9allocatorIS1_EEE6resizeEm($vertices18, $call10);
+ _meshopt_remapVertexBuffer(HEAP32[$vertices18 >> 2] | 0, HEAP32[$vertices >> 2] | 0, $call, 44, HEAP32[$remap >> 2] | 0);
+ $7 = HEAP32[$result >> 2] | 0;
+ $__end_$i61 = $result + 4 | 0;
+ $__end_$i58 = $result + 16 | 0;
+ _meshopt_optimizeVertexCache($7, $7, (HEAP32[$__end_$i61 >> 2] | 0) - $7 >> 2, ((HEAP32[$__end_$i58 >> 2] | 0) - (HEAP32[$vertices18 >> 2] | 0) | 0) / 44 | 0);
+ $11 = HEAP32[$result >> 2] | 0;
+ $13 = HEAP32[$vertices18 >> 2] | 0;
+ _meshopt_optimizeOverdraw($11, $11, (HEAP32[$__end_$i61 >> 2] | 0) - $11 >> 2, $13, ((HEAP32[$__end_$i58 >> 2] | 0) - $13 | 0) / 44 | 0, 44, 1.0499999523162842);
+ $15 = HEAP32[$vertices18 >> 2] | 0;
+ $16 = HEAP32[$result >> 2] | 0;
+ _meshopt_optimizeVertexFetch($15, $16, (HEAP32[$__end_$i61 >> 2] | 0) - $16 >> 2, $15, ((HEAP32[$__end_$i58 >> 2] | 0) - $15 | 0) / 44 | 0, 44) | 0;
+ __ZNSt3__26vectorIjNS_9allocatorIjEEE6resizeEm($this, (HEAP32[$__end_$i61 >> 2] | 0) - (HEAP32[$result >> 2] | 0) >> 2);
+ __ZNSt3__26vectorI6VertexNS_9allocatorIS1_EEE6resizeEm($vertices, ((HEAP32[$__end_$i58 >> 2] | 0) - (HEAP32[$vertices18 >> 2] | 0) | 0) / 44 | 0);
+ $25 = HEAP32[$result >> 2] | 0;
+ $sub$ptr$div$i31 = (HEAP32[$__end_$i61 >> 2] | 0) - $25 >> 2;
+ $$cast69 = $25;
+ $i$0 = 0;
+ while (1) {
+  if (($i$0 | 0) == ($sub$ptr$div$i31 | 0)) break;
+  HEAP32[(HEAP32[$this >> 2] | 0) + ($i$0 << 2) >> 2] = HEAP32[$$cast69 + ($i$0 << 2) >> 2];
+  $i$0 = $i$0 + 1 | 0;
+ }
+ $27 = HEAP32[$vertices18 >> 2] | 0;
+ $sub$ptr$div$i = ((HEAP32[$__end_$i58 >> 2] | 0) - $27 | 0) / 44 | 0;
+ $$cast70 = $27;
+ $i86$0 = 0;
+ while (1) {
+  if (($i86$0 | 0) == ($sub$ptr$div$i | 0)) break;
+  dest = (HEAP32[$vertices >> 2] | 0) + ($i86$0 * 44 | 0) | 0;
+  src = $$cast70 + ($i86$0 * 44 | 0) | 0;
+  stop = dest + 44 | 0;
+  do {
+   HEAP32[dest >> 2] = HEAP32[src >> 2];
+   dest = dest + 4 | 0;
+   src = src + 4 | 0;
+  } while ((dest | 0) < (stop | 0));
+  $i86$0 = $i86$0 + 1 | 0;
+ }
+ __ZNSt3__213__vector_baseIjNS_9allocatorIjEEED2Ev($remap);
+ __ZN6DrMeshD2Ev($result);
+ STACKTOP = sp;
+ return;
 }
 
 function _fonsAddFontMem($stash, $name, $data, $dataSize, $freeData) {
@@ -34255,97 +33513,76 @@ function __ZN13TPPLPartition11AddDiagonalEPNS_14MonotoneVertexEPlllPcPNSt3__221_
  return;
 }
 
-function __ZNSt3__227__insertion_sort_incompleteIR7comparePmEEbT0_S4_T_($__first, $__last, $__comp) {
- $__first = $__first | 0;
- $__last = $__last | 0;
- $__comp = $__comp | 0;
- var $2 = 0, $6 = 0, $__count$056 = 0, $__count$1 = 0, $__i$057 = 0, $__j$054 = 0, $__j$054$phi = 0, $__j$1 = 0, $__j$1$phi = 0, $__k$0 = 0, $__k$0$lcssa = 0, $add$ptr16 = 0, $add$ptr19 = 0, $inc = 0, $incdec$ptr = 0, $incdec$ptr25 = 0, $incdec$ptr35 = 0, $retval$5 = 0;
- L1 : do switch ($__last - $__first >> 2 | 0) {
- case 1:
- case 0:
-  {
-   $retval$5 = 1;
+function _meshopt_generateVertexRemap($destination, $indices, $index_count, $vertices, $vertex_count, $vertex_size) {
+ $destination = $destination | 0;
+ $indices = $indices | 0;
+ $index_count = $index_count | 0;
+ $vertices = $vertices | 0;
+ $vertex_count = $vertex_count | 0;
+ $vertex_size = $vertex_size | 0;
+ var $3 = 0, $4 = 0, $allocator = 0, $arrayidx21 = 0, $call = 0, $call12 = 0, $call26 = 0, $cond = 0, $hasher = 0, $i$0 = 0, $index = 0, $next_vertex$0 = 0, $next_vertex$0$sink = 0, $next_vertex$2 = 0, $next_vertex$2$ph = 0, $ref$tmp = 0, $tobool = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 128 | 0;
+ $allocator = sp + 20 | 0;
+ $hasher = sp + 8 | 0;
+ $index = sp + 4 | 0;
+ $ref$tmp = sp;
+ $tobool = ($indices | 0) != 0;
+ if (!($tobool | ($index_count | 0) == ($vertex_count | 0))) ___assert_fail(45732, 45771, 189, 45855);
+ if (($index_count >>> 0) % 3 | 0 | 0) ___assert_fail(47099, 45771, 190, 45855);
+ if (($vertex_size + -1 | 0) >>> 0 >= 256) ___assert_fail(47282, 45771, 191, 45855);
+ __ZN17meshopt_AllocatorC2Ev($allocator);
+ _memset($destination | 0, -1, $vertex_count << 2 | 0) | 0;
+ HEAP32[$hasher >> 2] = $vertices;
+ HEAP32[$hasher + 4 >> 2] = $vertex_size;
+ HEAP32[$hasher + 8 >> 2] = $vertex_size;
+ $call = __ZN7meshoptL11hashBucketsEm($vertex_count) | 0;
+ $call12 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $call) | 0;
+ _memset($call12 | 0, -1, $call << 2 | 0) | 0;
+ $i$0 = 0;
+ $next_vertex$0 = 0;
+ while (1) {
+  if ($i$0 >>> 0 >= $index_count >>> 0) {
+   label = 9;
    break;
   }
- case 2:
-  {
-   $incdec$ptr = $__last + -4 | 0;
-   if (__ZN7compareclEmm($__comp, HEAP32[$incdec$ptr >> 2] | 0, HEAP32[$__first >> 2] | 0) | 0) {
-    $2 = HEAP32[$__first >> 2] | 0;
-    HEAP32[$__first >> 2] = HEAP32[$incdec$ptr >> 2];
-    HEAP32[$incdec$ptr >> 2] = $2;
-    $retval$5 = 1;
-   } else $retval$5 = 1;
+  if ($tobool) $cond = HEAP32[$indices + ($i$0 << 2) >> 2] | 0; else $cond = $i$0;
+  HEAP32[$index >> 2] = $cond;
+  if ($cond >>> 0 >= $vertex_count >>> 0) {
+   label = 13;
    break;
   }
- case 3:
-  {
-   __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first, $__first + 4 | 0, $__last + -4 | 0, $__comp) | 0;
-   $retval$5 = 1;
-   break;
-  }
- case 4:
-  {
-   __ZNSt3__27__sort4IR7comparePmEEjT0_S4_S4_S4_T_($__first, $__first + 4 | 0, $__first + 8 | 0, $__last + -4 | 0, $__comp) | 0;
-   $retval$5 = 1;
-   break;
-  }
- case 5:
-  {
-   __ZNSt3__27__sort5IR7comparePmEEjT0_S4_S4_S4_S4_T_($__first, $__first + 4 | 0, $__first + 8 | 0, $__first + 12 | 0, $__last + -4 | 0, $__comp) | 0;
-   $retval$5 = 1;
-   break;
-  }
- default:
-  {
-   $add$ptr16 = $__first + 8 | 0;
-   __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first, $__first + 4 | 0, $add$ptr16, $__comp) | 0;
-   $add$ptr19 = $__first + 12 | 0;
-   if (($add$ptr19 | 0) == ($__last | 0)) $retval$5 = 1; else {
-    $__count$056 = 0;
-    $__i$057 = $add$ptr19;
-    $__j$054 = $add$ptr16;
-    while (1) {
-     if (__ZN7compareclEmm($__comp, HEAP32[$__i$057 >> 2] | 0, HEAP32[$__j$054 >> 2] | 0) | 0) {
-      $6 = HEAP32[$__i$057 >> 2] | 0;
-      $__j$1 = $__i$057;
-      $__k$0 = $__j$054;
-      while (1) {
-       HEAP32[$__j$1 >> 2] = HEAP32[$__k$0 >> 2];
-       if (($__k$0 | 0) == ($__first | 0)) {
-        $__k$0$lcssa = $__first;
-        break;
-       }
-       $incdec$ptr25 = $__k$0 + -4 | 0;
-       if (__ZN7compareclEmm($__comp, $6, HEAP32[$incdec$ptr25 >> 2] | 0) | 0) {
-        $__j$1$phi = $__k$0;
-        $__k$0 = $incdec$ptr25;
-        $__j$1 = $__j$1$phi;
-       } else {
-        $__k$0$lcssa = $__k$0;
-        break;
-       }
-      }
-      HEAP32[$__k$0$lcssa >> 2] = $6;
-      $inc = $__count$056 + 1 | 0;
-      if (($inc | 0) == 8) break; else $__count$1 = $inc;
-     } else $__count$1 = $__count$056;
-     $incdec$ptr35 = $__i$057 + 4 | 0;
-     if (($incdec$ptr35 | 0) == ($__last | 0)) {
-      $retval$5 = 1;
-      break L1;
-     } else {
-      $__j$054$phi = $__i$057;
-      $__count$056 = $__count$1;
-      $__i$057 = $incdec$ptr35;
-      $__j$054 = $__j$054$phi;
-     }
+  $arrayidx21 = $destination + ($cond << 2) | 0;
+  if ((HEAP32[$arrayidx21 >> 2] | 0) == -1) {
+   HEAP32[$ref$tmp >> 2] = -1;
+   $call26 = __ZN7meshoptL10hashLookupIjNS_12VertexHasherEEEPT_S3_mRKT0_RKS2_S8_($call12, $call, $hasher, $index, $ref$tmp) | 0;
+   $3 = HEAP32[$call26 >> 2] | 0;
+   if (($3 | 0) == -1) {
+    HEAP32[$call26 >> 2] = $cond;
+    $next_vertex$0$sink = $next_vertex$0;
+    $next_vertex$2$ph = $next_vertex$0 + 1 | 0;
+   } else {
+    $4 = HEAP32[$destination + ($3 << 2) >> 2] | 0;
+    if (($4 | 0) == -1) {
+     label = 18;
+     break;
+    } else {
+     $next_vertex$0$sink = $4;
+     $next_vertex$2$ph = $next_vertex$0;
     }
-    $retval$5 = ($__i$057 + 4 | 0) == ($__last | 0);
    }
-  }
- } while (0);
- return $retval$5 | 0;
+   HEAP32[$arrayidx21 >> 2] = $next_vertex$0$sink;
+   $next_vertex$2 = $next_vertex$2$ph;
+  } else $next_vertex$2 = $next_vertex$0;
+  $i$0 = $i$0 + 1 | 0;
+  $next_vertex$0 = $next_vertex$2;
+ }
+ if ((label | 0) == 9) if ($next_vertex$0 >>> 0 > $vertex_count >>> 0) ___assert_fail(47226, 45771, 229, 45855); else {
+  __ZN17meshopt_AllocatorD2Ev($allocator);
+  STACKTOP = sp;
+  return $next_vertex$0 | 0;
+ } else if ((label | 0) == 13) ___assert_fail(47205, 45771, 208, 45855); else if ((label | 0) == 18) ___assert_fail(45883, 45771, 222, 45855);
+ return 0;
 }
 
 function __sg_validate_update_image($img, $data) {
@@ -34862,74 +34099,6 @@ function _stbi__parse_uncompressed_block($a) {
  return $49 | 0;
 }
 
-function __ZN6DrMesh7extrudeEffffffffi($this, $x1, $y1, $tx1, $ty1, $x2, $y2, $tx2, $ty2, $steps) {
- $this = $this | 0;
- $x1 = +$x1;
- $y1 = +$y1;
- $tx1 = +$tx1;
- $ty1 = +$ty1;
- $x2 = +$x2;
- $y2 = +$y2;
- $tx2 = +$tx2;
- $ty2 = +$ty2;
- $steps = $steps | 0;
- var $div = 0.0, $front$054 = 0.0, $i$055 = 0, $mul = 0.0, $mul$pn = 0.0, $n = 0, $ref$tmp = 0, $ref$tmp3 = 0, $ref$tmp4 = 0, $ref$tmp5 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 64 | 0;
- $n = sp + 48 | 0;
- $ref$tmp = sp + 36 | 0;
- $ref$tmp3 = sp + 24 | 0;
- $ref$tmp4 = sp + 12 | 0;
- $ref$tmp5 = sp;
- $mul = +HEAPF32[$this + 28 >> 2] * .10000000149011612;
- $div = $mul * 2.0 / +($steps | 0);
- if (($steps | 0) > 0) {
-  $front$054 = $mul;
-  $i$055 = 0;
-  $mul$pn = $mul;
-  while (1) {
-   $mul$pn = $mul$pn - $div;
-   __ZN6DrVec3C2Ev($n);
-   __ZN6DrVec3C2Efff($ref$tmp3, $x1, $y1, $front$054);
-   __ZN6DrVec3C2Efff($ref$tmp4, $x2, $y2, $front$054);
-   __ZN6DrVec3C2Efff($ref$tmp5, $x1, $y1, $mul$pn);
-   __ZN6DrVec314triangleNormalERKS_S1_S1_($ref$tmp, $ref$tmp3, $ref$tmp4, $ref$tmp5);
-   HEAP32[$n >> 2] = HEAP32[$ref$tmp >> 2];
-   HEAP32[$n + 4 >> 2] = HEAP32[$ref$tmp + 4 >> 2];
-   HEAP32[$n + 8 >> 2] = HEAP32[$ref$tmp + 8 >> 2];
-   __ZN6DrVec3C2Efff($ref$tmp, $x1, $y1, $front$054);
-   __ZN6DrVec2C2Eff($ref$tmp3, $tx1, $ty1);
-   __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 0);
-   __ZN6DrVec3C2Efff($ref$tmp, $x1, $y1, $mul$pn);
-   __ZN6DrVec2C2Eff($ref$tmp3, $tx1, $ty1);
-   __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 1);
-   __ZN6DrVec3C2Efff($ref$tmp, $x2, $y2, $front$054);
-   __ZN6DrVec2C2Eff($ref$tmp3, $tx2, $ty2);
-   __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 2);
-   __ZN6DrVec3C2Efff($ref$tmp3, $x2, $y2, $front$054);
-   __ZN6DrVec3C2Efff($ref$tmp4, $x2, $y2, $mul$pn);
-   __ZN6DrVec3C2Efff($ref$tmp5, $x1, $y1, $mul$pn);
-   __ZN6DrVec314triangleNormalERKS_S1_S1_($ref$tmp, $ref$tmp3, $ref$tmp4, $ref$tmp5);
-   HEAP32[$n >> 2] = HEAP32[$ref$tmp >> 2];
-   HEAP32[$n + 4 >> 2] = HEAP32[$ref$tmp + 4 >> 2];
-   HEAP32[$n + 8 >> 2] = HEAP32[$ref$tmp + 8 >> 2];
-   __ZN6DrVec3C2Efff($ref$tmp, $x2, $y2, $front$054);
-   __ZN6DrVec2C2Eff($ref$tmp3, $tx2, $ty2);
-   __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 0);
-   __ZN6DrVec3C2Efff($ref$tmp, $x1, $y1, $mul$pn);
-   __ZN6DrVec2C2Eff($ref$tmp3, $tx1, $ty1);
-   __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 1);
-   __ZN6DrVec3C2Efff($ref$tmp, $x2, $y2, $mul$pn);
-   __ZN6DrVec2C2Eff($ref$tmp3, $tx2, $ty2);
-   __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 2);
-   $i$055 = $i$055 + 1 | 0;
-   if (($i$055 | 0) == ($steps | 0)) break; else $front$054 = $front$054 - $div;
-  }
- }
- STACKTOP = sp;
- return;
-}
-
 function __sg_validate_apply_pipeline($pip_id) {
  $pip_id = $pip_id | 0;
  var $$pre_trunc = 0, $19 = 0, $25 = 0, $39 = 0, $51 = 0, $att_dsimg = 0, $att_img = 0, $i = 0, $pass = 0, $pip = 0, $retval = 0, sp = 0;
@@ -35217,6 +34386,98 @@ function _memchr($src, $c, $n) {
  return $8 | 0;
 }
 
+function __ZNSt3__227__insertion_sort_incompleteIRN13TPPLPartition12VertexSorterEPlEEbT0_S5_T_($__first, $__last, $__comp) {
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ $__comp = $__comp | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $4 = 0, $__count$0 = 0, $__count$1 = 0, $__i$0 = 0, $__j$0 = 0, $__j$0$phi = 0, $__j$1 = 0, $__j$1$phi = 0, $__k$0 = 0, $__k$0$lcssa = 0, $add$ptr16 = 0, $inc = 0, $incdec$ptr = 0, $incdec$ptr25 = 0, $retval$5 = 0;
+ L1 : do switch ($__last - $__first >> 2 | 0) {
+ case 1:
+ case 0:
+  {
+   $retval$5 = 1;
+   break;
+  }
+ case 2:
+  {
+   $incdec$ptr = $__last + -4 | 0;
+   $0 = HEAP32[$incdec$ptr >> 2] | 0;
+   $1 = HEAP32[$__first >> 2] | 0;
+   if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $0, $1) | 0) {
+    HEAP32[$__first >> 2] = $0;
+    HEAP32[$incdec$ptr >> 2] = $1;
+    $retval$5 = 1;
+   } else $retval$5 = 1;
+   break;
+  }
+ case 3:
+  {
+   __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first, $__first + 4 | 0, $__last + -4 | 0, $__comp) | 0;
+   $retval$5 = 1;
+   break;
+  }
+ case 4:
+  {
+   __ZNSt3__27__sort4IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_T_($__first, $__first + 4 | 0, $__first + 8 | 0, $__last + -4 | 0, $__comp) | 0;
+   $retval$5 = 1;
+   break;
+  }
+ case 5:
+  {
+   __ZNSt3__27__sort5IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_S5_T_($__first, $__first + 4 | 0, $__first + 8 | 0, $__first + 12 | 0, $__last + -4 | 0, $__comp) | 0;
+   $retval$5 = 1;
+   break;
+  }
+ default:
+  {
+   $add$ptr16 = $__first + 8 | 0;
+   __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first, $__first + 4 | 0, $add$ptr16, $__comp) | 0;
+   $__count$0 = 0;
+   $__i$0 = $__first + 12 | 0;
+   $__j$0 = $add$ptr16;
+   while (1) {
+    if (($__i$0 | 0) == ($__last | 0)) {
+     $retval$5 = 1;
+     break L1;
+    }
+    $2 = HEAP32[$__i$0 >> 2] | 0;
+    $3 = HEAP32[$__j$0 >> 2] | 0;
+    if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $3) | 0) {
+     $4 = $3;
+     $__j$1 = $__i$0;
+     $__k$0 = $__j$0;
+     while (1) {
+      HEAP32[$__j$1 >> 2] = $4;
+      if (($__k$0 | 0) == ($__first | 0)) {
+       $__k$0$lcssa = $__first;
+       break;
+      }
+      $incdec$ptr25 = $__k$0 + -4 | 0;
+      $4 = HEAP32[$incdec$ptr25 >> 2] | 0;
+      if (!(__ZN13TPPLPartition12VertexSorterclEll($__comp, $2, $4) | 0)) {
+       $__k$0$lcssa = $__k$0;
+       break;
+      } else {
+       $__j$1$phi = $__k$0;
+       $__k$0 = $incdec$ptr25;
+       $__j$1 = $__j$1$phi;
+      }
+     }
+     HEAP32[$__k$0$lcssa >> 2] = $2;
+     $inc = $__count$0 + 1 | 0;
+     if (($inc | 0) == 8) break; else $__count$1 = $inc;
+    } else $__count$1 = $__count$0;
+    $__j$0$phi = $__i$0;
+    $__count$0 = $__count$1;
+    $__i$0 = $__i$0 + 4 | 0;
+    $__j$0 = $__j$0$phi;
+   }
+   $retval$5 = ($__i$0 + 4 | 0) == ($__last | 0);
+  }
+ } while (0);
+ return $retval$5 | 0;
+}
+
 function _pop_arg($arg, $type, $ap, $pop_arg_long_double) {
  $arg = $arg | 0;
  $type = $type | 0;
@@ -35467,6 +34728,74 @@ function __sgl_init_pipeline($pip_id, $in_desc) {
    }
   }
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
+ }
+ STACKTOP = sp;
+ return;
+}
+
+function __ZN6DrMesh7extrudeEffffffffi($this, $x1, $y1, $tx1, $ty1, $x2, $y2, $tx2, $ty2, $steps) {
+ $this = $this | 0;
+ $x1 = +$x1;
+ $y1 = +$y1;
+ $tx1 = +$tx1;
+ $ty1 = +$ty1;
+ $x2 = +$x2;
+ $y2 = +$y2;
+ $tx2 = +$tx2;
+ $ty2 = +$ty2;
+ $steps = $steps | 0;
+ var $back$0 = 0.0, $div = 0.0, $front$0 = 0.0, $i$0 = 0, $mul = 0.0, $mul$pn = 0.0, $n = 0, $ref$tmp = 0, $ref$tmp3 = 0, $ref$tmp4 = 0, $ref$tmp5 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 64 | 0;
+ $n = sp + 48 | 0;
+ $ref$tmp = sp + 36 | 0;
+ $ref$tmp3 = sp + 24 | 0;
+ $ref$tmp4 = sp + 12 | 0;
+ $ref$tmp5 = sp;
+ $mul = +HEAPF32[$this + 28 >> 2] * .10000000149011612;
+ $div = $mul * 2.0 / +($steps | 0);
+ $front$0 = $mul;
+ $i$0 = 0;
+ $mul$pn = $mul;
+ while (1) {
+  $back$0 = $mul$pn - $div;
+  if (($i$0 | 0) >= ($steps | 0)) break;
+  __ZN6DrVec3C2Ev($n);
+  __ZN6DrVec3C2Efff($ref$tmp3, $x1, $y1, $front$0);
+  __ZN6DrVec3C2Efff($ref$tmp4, $x2, $y2, $front$0);
+  __ZN6DrVec3C2Efff($ref$tmp5, $x1, $y1, $back$0);
+  __ZN6DrVec314triangleNormalERKS_S1_S1_($ref$tmp, $ref$tmp3, $ref$tmp4, $ref$tmp5);
+  HEAP32[$n >> 2] = HEAP32[$ref$tmp >> 2];
+  HEAP32[$n + 4 >> 2] = HEAP32[$ref$tmp + 4 >> 2];
+  HEAP32[$n + 8 >> 2] = HEAP32[$ref$tmp + 8 >> 2];
+  __ZN6DrVec3C2Efff($ref$tmp, $x1, $y1, $front$0);
+  __ZN6DrVec2C2Eff($ref$tmp3, $tx1, $ty1);
+  __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 0);
+  __ZN6DrVec3C2Efff($ref$tmp, $x1, $y1, $back$0);
+  __ZN6DrVec2C2Eff($ref$tmp3, $tx1, $ty1);
+  __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 1);
+  __ZN6DrVec3C2Efff($ref$tmp, $x2, $y2, $front$0);
+  __ZN6DrVec2C2Eff($ref$tmp3, $tx2, $ty2);
+  __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 2);
+  __ZN6DrVec3C2Efff($ref$tmp3, $x2, $y2, $front$0);
+  __ZN6DrVec3C2Efff($ref$tmp4, $x2, $y2, $back$0);
+  __ZN6DrVec3C2Efff($ref$tmp5, $x1, $y1, $back$0);
+  __ZN6DrVec314triangleNormalERKS_S1_S1_($ref$tmp, $ref$tmp3, $ref$tmp4, $ref$tmp5);
+  HEAP32[$n >> 2] = HEAP32[$ref$tmp >> 2];
+  HEAP32[$n + 4 >> 2] = HEAP32[$ref$tmp + 4 >> 2];
+  HEAP32[$n + 8 >> 2] = HEAP32[$ref$tmp + 8 >> 2];
+  __ZN6DrVec3C2Efff($ref$tmp, $x2, $y2, $front$0);
+  __ZN6DrVec2C2Eff($ref$tmp3, $tx2, $ty2);
+  __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 0);
+  __ZN6DrVec3C2Efff($ref$tmp, $x1, $y1, $back$0);
+  __ZN6DrVec2C2Eff($ref$tmp3, $tx1, $ty1);
+  __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 1);
+  __ZN6DrVec3C2Efff($ref$tmp, $x2, $y2, $back$0);
+  __ZN6DrVec2C2Eff($ref$tmp3, $tx2, $ty2);
+  __ZN6DrMesh3addERK6DrVec3S2_RK6DrVec214Triangle_Point($this, $ref$tmp, $n, $ref$tmp3, 2);
+  $front$0 = $front$0 - $div;
+  $i$0 = $i$0 + 1 | 0;
+  $mul$pn = $back$0;
  }
  STACKTOP = sp;
  return;
@@ -35974,75 +35303,92 @@ function _stbi__pic_load($s, $px, $py, $comp, $req_comp, $ri) {
  return $38 | 0;
 }
 
-function __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6assignINS_21__list_const_iteratorIS1_PvEEEEvT_S9_PNS_9enable_ifIXsr19__is_input_iteratorIS9_EE5valueEvE4typeE($this, $__f, $__l, $0) {
- $this = $this | 0;
- $__f = $__f | 0;
- $__l = $__l | 0;
- $0 = $0 | 0;
- var $1 = 0, $13 = 0, $14 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $6 = 0, $7 = 0, $9 = 0, $__i$sroa$0$0 = 0, $__i$sroa$0$0$lcssa = 0, $__i$sroa$0$016 = 0, $__i$sroa$0$018 = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $agg$tmp12 = 0, $agg$tmp13 = 0, $agg$tmp16 = 0, $agg$tmp16$byval_copy = 0, $agg$tmp17 = 0, $agg$tmp17$byval_copy = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 32 | 0;
- $agg$tmp17$byval_copy = sp + 28 | 0;
- $agg$tmp16$byval_copy = sp + 24 | 0;
- $agg$tmp$byval_copy = sp + 16 | 0;
- $agg$tmp = sp + 20 | 0;
- $agg$tmp12 = sp + 12 | 0;
- $agg$tmp13 = sp + 8 | 0;
- $agg$tmp16 = sp + 4 | 0;
- $agg$tmp17 = sp;
- $1 = $this;
- $__i$sroa$0$016 = HEAP32[$this + 4 >> 2] | 0;
- $2 = HEAP32[$__f >> 2] | 0;
- $3 = HEAP32[$__l >> 2] | 0;
- $4 = $2;
- $5 = $3;
- L1 : do if (($2 | 0) == ($3 | 0)) {
-  $13 = $4;
-  $__i$sroa$0$0$lcssa = $__i$sroa$0$016;
- } else {
-  $14 = $4;
-  $7 = $2;
-  $9 = $2;
-  $__i$sroa$0$018 = $__i$sroa$0$016;
-  while (1) {
-   $6 = $__i$sroa$0$018;
-   if (($this | 0) == ($6 | 0)) {
-    $13 = $14;
-    $__i$sroa$0$0$lcssa = $__i$sroa$0$018;
-    break L1;
+function __ZNSt3__227__insertion_sort_incompleteIR7comparePmEEbT0_S4_T_($__first, $__last, $__comp) {
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ $__comp = $__comp | 0;
+ var $2 = 0, $6 = 0, $__count$0 = 0, $__count$1 = 0, $__i$0 = 0, $__j$0 = 0, $__j$0$phi = 0, $__j$1 = 0, $__j$1$phi = 0, $__k$0 = 0, $__k$0$lcssa = 0, $add$ptr16 = 0, $inc = 0, $incdec$ptr = 0, $incdec$ptr25 = 0, $retval$5 = 0;
+ L1 : do switch ($__last - $__first >> 2 | 0) {
+ case 1:
+ case 0:
+  {
+   $retval$5 = 1;
+   break;
+  }
+ case 2:
+  {
+   $incdec$ptr = $__last + -4 | 0;
+   if (__ZN7compareclEmm($__comp, HEAP32[$incdec$ptr >> 2] | 0, HEAP32[$__first >> 2] | 0) | 0) {
+    $2 = HEAP32[$__first >> 2] | 0;
+    HEAP32[$__first >> 2] = HEAP32[$incdec$ptr >> 2];
+    HEAP32[$incdec$ptr >> 2] = $2;
+    $retval$5 = 1;
+   } else $retval$5 = 1;
+   break;
+  }
+ case 3:
+  {
+   __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first, $__first + 4 | 0, $__last + -4 | 0, $__comp) | 0;
+   $retval$5 = 1;
+   break;
+  }
+ case 4:
+  {
+   __ZNSt3__27__sort4IR7comparePmEEjT0_S4_S4_S4_T_($__first, $__first + 4 | 0, $__first + 8 | 0, $__last + -4 | 0, $__comp) | 0;
+   $retval$5 = 1;
+   break;
+  }
+ case 5:
+  {
+   __ZNSt3__27__sort5IR7comparePmEEjT0_S4_S4_S4_S4_T_($__first, $__first + 4 | 0, $__first + 8 | 0, $__first + 12 | 0, $__last + -4 | 0, $__comp) | 0;
+   $retval$5 = 1;
+   break;
+  }
+ default:
+  {
+   $add$ptr16 = $__first + 8 | 0;
+   __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first, $__first + 4 | 0, $add$ptr16, $__comp) | 0;
+   $__count$0 = 0;
+   $__i$0 = $__first + 12 | 0;
+   $__j$0 = $add$ptr16;
+   while (1) {
+    if (($__i$0 | 0) == ($__last | 0)) {
+     $retval$5 = 1;
+     break L1;
+    }
+    if (__ZN7compareclEmm($__comp, HEAP32[$__i$0 >> 2] | 0, HEAP32[$__j$0 >> 2] | 0) | 0) {
+     $6 = HEAP32[$__i$0 >> 2] | 0;
+     $__j$1 = $__i$0;
+     $__k$0 = $__j$0;
+     while (1) {
+      HEAP32[$__j$1 >> 2] = HEAP32[$__k$0 >> 2];
+      if (($__k$0 | 0) == ($__first | 0)) {
+       $__k$0$lcssa = $__first;
+       break;
+      }
+      $incdec$ptr25 = $__k$0 + -4 | 0;
+      if (__ZN7compareclEmm($__comp, $6, HEAP32[$incdec$ptr25 >> 2] | 0) | 0) {
+       $__j$1$phi = $__k$0;
+       $__k$0 = $incdec$ptr25;
+       $__j$1 = $__j$1$phi;
+      } else {
+       $__k$0$lcssa = $__k$0;
+       break;
+      }
+     }
+     HEAP32[$__k$0$lcssa >> 2] = $6;
+     $inc = $__count$0 + 1 | 0;
+     if (($inc | 0) == 8) break; else $__count$1 = $inc;
+    } else $__count$1 = $__count$0;
+    $__j$0$phi = $__i$0;
+    $__count$0 = $__count$1;
+    $__i$0 = $__i$0 + 4 | 0;
+    $__j$0 = $__j$0$phi;
    }
-   __ZN8TPPLPolyaSERKS_($__i$sroa$0$018 + 8 | 0, $7 + 8 | 0) | 0;
-   $7 = HEAP32[$9 + 4 >> 2] | 0;
-   HEAP32[$__f >> 2] = $7;
-   $__i$sroa$0$0 = HEAP32[$6 + 4 >> 2] | 0;
-   $9 = $7;
-   if (($3 | 0) == ($9 | 0)) {
-    $13 = $7;
-    $__i$sroa$0$0$lcssa = $__i$sroa$0$0;
-    break;
-   } else {
-    $14 = $7;
-    $__i$sroa$0$018 = $__i$sroa$0$0;
-   }
+   $retval$5 = ($__i$0 + 4 | 0) == ($__last | 0);
   }
  } while (0);
- if (($this | 0) == ($__i$sroa$0$0$lcssa | 0)) {
-  HEAP32[$agg$tmp >> 2] = $1;
-  HEAP32[$agg$tmp12 >> 2] = $13;
-  HEAP32[$agg$tmp13 >> 2] = $5;
-  HEAP32[$agg$tmp$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
-  HEAP32[$agg$tmp16$byval_copy >> 2] = HEAP32[$agg$tmp12 >> 2];
-  HEAP32[$agg$tmp17$byval_copy >> 2] = HEAP32[$agg$tmp13 >> 2];
-  __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6insertINS_21__list_const_iteratorIS1_PvEEEENS_15__list_iteratorIS1_S7_EES8_T_SB_PNS_9enable_ifIXsr19__is_input_iteratorISB_EE5valueEvE4typeE($this, $agg$tmp$byval_copy, $agg$tmp16$byval_copy, $agg$tmp17$byval_copy, 0) | 0;
- } else {
-  HEAP32[$agg$tmp16 >> 2] = $__i$sroa$0$0$lcssa;
-  HEAP32[$agg$tmp17 >> 2] = $1;
-  HEAP32[$agg$tmp16$byval_copy >> 2] = HEAP32[$agg$tmp16 >> 2];
-  HEAP32[$agg$tmp17$byval_copy >> 2] = HEAP32[$agg$tmp17 >> 2];
-  __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE5eraseENS_21__list_const_iteratorIS1_PvEES7_($this, $agg$tmp16$byval_copy, $agg$tmp17$byval_copy) | 0;
- }
- STACKTOP = sp;
- return;
+ return $retval$5 | 0;
 }
 
 function _stbi__gif_header($s, $g, $comp, $is_info) {
@@ -36222,64 +35568,6 @@ function _fons__atlasInsertNode($atlas, $idx, $x, $y, $w) {
  $41 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
  return $41 | 0;
-}
-
-function __ZL10load_imagePhi($buffer_ptr, $fetched_size) {
- $buffer_ptr = $buffer_ptr | 0;
- $fetched_size = $fetched_size | 0;
- var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $__cntrl_3$i$i = 0, $agg$tmp = 0, $agg$tmp51 = 0, $agg$tmp51$byval_copy = 0, $bitmap = 0, $call = 0, $png_height = 0, $png_width = 0, $ref$tmp2 = 0, $ref$tmp3 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 944 | 0;
- $agg$tmp51$byval_copy = sp + 936 | 0;
- $png_width = sp + 932 | 0;
- $png_height = sp + 928 | 0;
- $bitmap = sp + 896 | 0;
- $ref$tmp2 = sp + 4 | 0;
- $ref$tmp3 = sp;
- $agg$tmp = sp + 892 | 0;
- $agg$tmp51 = sp + 888 | 0;
- $call = _stbi_load_from_memory($buffer_ptr, $fetched_size, $png_width, $png_height, sp + 924 | 0, 4) | 0;
- if ($call | 0) {
-  $0 = HEAP32[$png_width >> 2] | 0;
-  $1 = HEAP32[$png_height >> 2] | 0;
-  HEAP32[$agg$tmp51$byval_copy >> 2] = Math_imul($0 << 2, $1) | 0;
-  __ZN8DrBitmapC2EPKhRKibii($bitmap, $call, $agg$tmp51$byval_copy, 0, $0, $1);
-  HEAPF32[$ref$tmp3 >> 2] = .25;
-  __ZNSt3__210shared_ptrI7DrImageE11make_sharedIJRA7_KcR8DrBitmapfEEES2_DpOT_($ref$tmp2, 45495, $bitmap, $ref$tmp3);
-  $2 = HEAP32[$ref$tmp2 >> 2] | 0;
-  $__cntrl_3$i$i = $ref$tmp2 + 4 | 0;
-  $3 = HEAP32[$__cntrl_3$i$i >> 2] | 0;
-  HEAP32[$ref$tmp2 >> 2] = 0;
-  HEAP32[$__cntrl_3$i$i >> 2] = 0;
-  HEAP32[$agg$tmp51$byval_copy >> 2] = HEAP32[546687];
-  HEAP32[546687] = $2;
-  HEAP32[$agg$tmp51$byval_copy + 4 >> 2] = HEAP32[546688];
-  HEAP32[546688] = $3;
-  __ZNSt3__210shared_ptrI7DrImageED2Ev($agg$tmp51$byval_copy);
-  __ZNSt3__210shared_ptrI7DrImageED2Ev($ref$tmp2);
-  __Z13calculateMeshb(1);
-  _memset($ref$tmp2 | 0, 0, 884) | 0;
-  HEAP32[$ref$tmp2 + 12 >> 2] = HEAP32[(__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 8 >> 2];
-  HEAP32[$ref$tmp2 + 16 >> 2] = HEAP32[(__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 12 >> 2];
-  HEAP32[$ref$tmp2 + 32 >> 2] = 23;
-  HEAP32[$ref$tmp2 + 40 >> 2] = 2;
-  HEAP32[$ref$tmp2 + 44 >> 2] = 2;
-  HEAP32[$ref$tmp2 + 76 >> 2] = HEAP32[(__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) + 16 >> 2];
-  HEAP32[$ref$tmp2 + 80 >> 2] = __ZNK8DrBitmap4sizeEv(__ZNK7DrImage9getBitmapEv(HEAP32[546687] | 0) | 0) | 0;
-  if (HEAP8[2193732] | 0) {
-   HEAP32[$agg$tmp >> 2] = HEAP32[15518];
-   HEAP32[$agg$tmp51$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
-   _sg_uninit_image($agg$tmp51$byval_copy) | 0;
-  }
-  HEAP32[$agg$tmp51 >> 2] = HEAP32[15518];
-  HEAP32[$agg$tmp51$byval_copy >> 2] = HEAP32[$agg$tmp51 >> 2];
-  _sg_init_image($agg$tmp51$byval_copy, $ref$tmp2);
-  HEAP8[2193732] = 1;
-  _stbi_image_free($call);
-  __ZN8DrBitmapD2Ev($bitmap);
- }
- STACKTOP = sp;
- return;
 }
 
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E18parseClassEnumTypeEv($this) {
@@ -36813,80 +36101,6 @@ function __ZN12_GLOBAL__N_116itanium_demangle13ParameterPackC2ENS0_9NodeArrayE($
  return;
 }
 
-function __ZNSt3__227__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_($__root, $__x) {
- $__root = $__root | 0;
- $__x = $__x | 0;
- var $$pre = 0, $$pre78 = 0, $0 = 0, $11 = 0, $2 = 0, $3 = 0, $5 = 0, $8 = 0, $__is_black_11 = 0, $__is_black_2 = 0, $__is_black_29$pre$phiZ2D = 0, $__is_black_41 = 0, $__is_black_41$sink = 0, $__is_black_61$pre$phiZ2D = 0, $__x$addr$069 = 0, $cmp = 0, label = 0;
- $cmp = ($__x | 0) == ($__root | 0);
- HEAP8[$__x + 12 >> 0] = $cmp & 1;
- L1 : do if (!$cmp) {
-  $__x$addr$069 = $__x;
-  while (1) {
-   $0 = HEAP32[$__x$addr$069 + 8 >> 2] | 0;
-   $__is_black_2 = $0 + 12 | 0;
-   if (HEAP8[$__is_black_2 >> 0] | 0) break L1;
-   $2 = HEAP32[$0 + 8 >> 2] | 0;
-   $3 = HEAP32[$2 >> 2] | 0;
-   if (($3 | 0) == ($0 | 0)) {
-    $5 = HEAP32[$2 + 4 >> 2] | 0;
-    if (!$5) {
-     label = 7;
-     break;
-    }
-    $__is_black_11 = $5 + 12 | 0;
-    if (!(HEAP8[$__is_black_11 >> 0] | 0)) $__is_black_41$sink = $__is_black_11; else {
-     label = 7;
-     break;
-    }
-   } else {
-    if (!$3) {
-     label = 12;
-     break;
-    }
-    $__is_black_41 = $3 + 12 | 0;
-    if (!(HEAP8[$__is_black_41 >> 0] | 0)) $__is_black_41$sink = $__is_black_41; else {
-     label = 12;
-     break;
-    }
-   }
-   HEAP8[$__is_black_2 >> 0] = 1;
-   HEAP8[$2 + 12 >> 0] = ($2 | 0) == ($__root | 0) & 1;
-   HEAP8[$__is_black_41$sink >> 0] = 1;
-   if (($2 | 0) == ($__root | 0)) break L1; else $__x$addr$069 = $2;
-  }
-  if ((label | 0) == 7) {
-   if ((HEAP32[$0 >> 2] | 0) == ($__x$addr$069 | 0)) {
-    $8 = $2;
-    $__is_black_29$pre$phiZ2D = $__is_black_2;
-   } else {
-    __ZNSt3__218__tree_left_rotateIPNS_16__tree_node_baseIPvEEEEvT_($0);
-    $$pre78 = HEAP32[$0 + 8 >> 2] | 0;
-    $8 = HEAP32[$$pre78 + 8 >> 2] | 0;
-    $__is_black_29$pre$phiZ2D = $$pre78 + 12 | 0;
-   }
-   HEAP8[$__is_black_29$pre$phiZ2D >> 0] = 1;
-   HEAP8[$8 + 12 >> 0] = 0;
-   __ZNSt3__219__tree_right_rotateIPNS_16__tree_node_baseIPvEEEEvT_($8);
-   break;
-  } else if ((label | 0) == 12) {
-   if ((HEAP32[$0 >> 2] | 0) == ($__x$addr$069 | 0)) {
-    __ZNSt3__219__tree_right_rotateIPNS_16__tree_node_baseIPvEEEEvT_($0);
-    $$pre = HEAP32[$0 + 8 >> 2] | 0;
-    $11 = HEAP32[$$pre + 8 >> 2] | 0;
-    $__is_black_61$pre$phiZ2D = $$pre + 12 | 0;
-   } else {
-    $11 = $2;
-    $__is_black_61$pre$phiZ2D = $__is_black_2;
-   }
-   HEAP8[$__is_black_61$pre$phiZ2D >> 0] = 1;
-   HEAP8[$11 + 12 >> 0] = 0;
-   __ZNSt3__218__tree_left_rotateIPNS_16__tree_node_baseIPvEEEEvT_($11);
-   break;
-  }
- } while (0);
- return;
-}
-
 function __sg_validate_pipeline_desc($desc) {
  $desc = $desc | 0;
  var $a_desc = 0, $attr_index = 0, $attrs_cont = 0, $buf_index = 0, $call38 = 0, $desc$addr = 0, $l_desc = 0, $layout = 0, $shd = 0, label = 0, sp = 0;
@@ -36946,70 +36160,6 @@ function __sg_validate_pipeline_desc($desc) {
   return $call38 | 0;
  }
  return 0;
-}
-
-function __ZN7meshoptL23calculateSortOrderRadixEPjPKfPtm($sort_order, $sort_data, $sort_keys, $cluster_count) {
- $sort_order = $sort_order | 0;
- $sort_data = $sort_data | 0;
- $sort_keys = $sort_keys | 0;
- $cluster_count = $cluster_count | 0;
- var $1 = 0.0, $5 = 0, $7 = 0, $8 = 0, $arrayidx18 = 0, $arrayidx28 = 0, $arrayidx41 = 0, $cmp45 = 0, $histogram = 0, $histogram_sum$039 = 0, $i$046 = 0, $i12$042 = 0, $i2$044 = 0, $i23$040 = 0, $i34$038 = 0, $sort_data_max$047 = 0.0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 8192 | 0;
- $histogram = sp;
- $cmp45 = ($cluster_count | 0) == 0;
- if ($cmp45) label = 6; else {
-  $i$046 = 0;
-  $sort_data_max$047 = 1.0000000474974513e-03;
-  do {
-   $1 = +Math_abs(+(+HEAPF32[$sort_data + ($i$046 << 2) >> 2]));
-   $sort_data_max$047 = $sort_data_max$047 < $1 ? $1 : $sort_data_max$047;
-   $i$046 = $i$046 + 1 | 0;
-  } while (($i$046 | 0) != ($cluster_count | 0));
-  if ($cmp45) label = 6; else {
-   $i2$044 = 0;
-   do {
-    HEAP16[$sort_keys + ($i2$044 << 1) >> 1] = (__Z21meshopt_quantizeUnormfi(.5 - +HEAPF32[$sort_data + ($i2$044 << 2) >> 2] / $sort_data_max$047 * .5, 11) | 0) & 2047;
-    $i2$044 = $i2$044 + 1 | 0;
-   } while (($i2$044 | 0) != ($cluster_count | 0));
-   _memset($histogram | 0, 0, 8192) | 0;
-   if ($cmp45) $8 = $histogram; else {
-    $i12$042 = 0;
-    do {
-     $arrayidx18 = $histogram + ((HEAPU16[$sort_keys + ($i12$042 << 1) >> 1] | 0) << 2) | 0;
-     HEAP32[$arrayidx18 >> 2] = (HEAP32[$arrayidx18 >> 2] | 0) + 1;
-     $i12$042 = $i12$042 + 1 | 0;
-    } while (($i12$042 | 0) != ($cluster_count | 0));
-    $8 = $histogram;
-   }
-  }
- }
- if ((label | 0) == 6) {
-  _memset($histogram | 0, 0, 8192) | 0;
-  $8 = $histogram;
- }
- $histogram_sum$039 = 0;
- $i23$040 = 0;
- do {
-  $arrayidx28 = $histogram + ($i23$040 << 2) | 0;
-  $5 = HEAP32[$arrayidx28 >> 2] | 0;
-  HEAP32[$arrayidx28 >> 2] = $histogram_sum$039;
-  $histogram_sum$039 = $5 + $histogram_sum$039 | 0;
-  $i23$040 = $i23$040 + 1 | 0;
- } while (($i23$040 | 0) != 2048);
- if (($histogram_sum$039 | 0) != ($cluster_count | 0)) ___assert_fail(46360, 46089, 126, 46391);
- if (!$cmp45) {
-  $i34$038 = 0;
-  do {
-   $arrayidx41 = $histogram + ((HEAPU16[$sort_keys + ($i34$038 << 1) >> 1] | 0) << 2) | 0;
-   $7 = HEAP32[$arrayidx41 >> 2] | 0;
-   HEAP32[$arrayidx41 >> 2] = $7 + 1;
-   HEAP32[$sort_order + ($7 << 2) >> 2] = $i34$038;
-   $i34$038 = $i34$038 + 1 | 0;
-  } while (($i34$038 | 0) != ($cluster_count | 0));
- }
- STACKTOP = sp;
- return;
 }
 
 function __sgl_vtx($x, $y, $z, $u, $v, $rgba) {
@@ -37426,173 +36576,6 @@ function ___embind_register_native_and_builtin_types() {
  return;
 }
 
-function _meshopt_optimizeVertexFetch($destination, $indices, $index_count, $vertices, $vertex_count, $vertex_size) {
- $destination = $destination | 0;
- $indices = $indices | 0;
- $index_count = $index_count | 0;
- $vertices = $vertices | 0;
- $vertex_count = $vertex_count | 0;
- $vertex_size = $vertex_size | 0;
- var $1 = 0, $2 = 0, $3 = 0, $allocator = 0, $arrayidx = 0, $arrayidx17 = 0, $call = 0, $call9 = 0, $i$043 = 0, $mul = 0, $next_vertex$0$lcssa45 = 0, $next_vertex$042 = 0, $next_vertex$1 = 0, $vertices$addr$0 = 0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 112 | 0;
- $allocator = sp;
- if (($index_count >>> 0) % 3 | 0 | 0) ___assert_fail(47099, 47120, 33, 47254);
- if (($vertex_size + -1 | 0) >>> 0 >= 256) ___assert_fail(47282, 47120, 34, 47254);
- __ZN17meshopt_AllocatorC2Ev($allocator);
- if (($destination | 0) == ($vertices | 0)) {
-  $mul = Math_imul($vertex_size, $vertex_count) | 0;
-  $call = __ZN17meshopt_Allocator8allocateIhEEPT_m($allocator, $mul) | 0;
-  _memcpy($call | 0, $destination | 0, $mul | 0) | 0;
-  $vertices$addr$0 = $call;
- } else $vertices$addr$0 = $vertices;
- $call9 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
- _memset($call9 | 0, -1, $vertex_count << 2 | 0) | 0;
- if (!$index_count) $next_vertex$0$lcssa45 = 0; else {
-  $i$043 = 0;
-  $next_vertex$042 = 0;
-  while (1) {
-   $arrayidx = $indices + ($i$043 << 2) | 0;
-   $1 = HEAP32[$arrayidx >> 2] | 0;
-   if ($1 >>> 0 >= $vertex_count >>> 0) {
-    label = 11;
-    break;
-   }
-   $arrayidx17 = $call9 + ($1 << 2) | 0;
-   $2 = HEAP32[$arrayidx17 >> 2] | 0;
-   if (($2 | 0) == -1) {
-    _memcpy($destination + (Math_imul($next_vertex$042, $vertex_size) | 0) | 0, $vertices$addr$0 + (Math_imul($1, $vertex_size) | 0) | 0, $vertex_size | 0) | 0;
-    HEAP32[$arrayidx17 >> 2] = $next_vertex$042;
-    $3 = $next_vertex$042;
-    $next_vertex$1 = $next_vertex$042 + 1 | 0;
-   } else {
-    $3 = $2;
-    $next_vertex$1 = $next_vertex$042;
-   }
-   HEAP32[$arrayidx >> 2] = $3;
-   $i$043 = $i$043 + 1 | 0;
-   if ($i$043 >>> 0 >= $index_count >>> 0) break; else $next_vertex$042 = $next_vertex$1;
-  }
-  if ((label | 0) == 11) ___assert_fail(47205, 47120, 55, 47254);
-  if ($next_vertex$1 >>> 0 > $vertex_count >>> 0) ___assert_fail(47226, 47120, 71, 47254); else $next_vertex$0$lcssa45 = $next_vertex$1;
- }
- __ZN17meshopt_AllocatorD2Ev($allocator);
- STACKTOP = sp;
- return $next_vertex$0$lcssa45 | 0;
-}
-
-function __ZNSt3__26vectorINS0_INS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEEENS2_IS6_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS6_RS7_EE($this, $__v) {
- $this = $this | 0;
- $__v = $__v | 0;
- var $$pre$phi15Z2D = 0, $$pre$phiZ2D = 0, $0 = 0, $1 = 0, $10 = 0, $11 = 0, $13 = 0, $3 = 0, $9 = 0, $__begin_2 = 0, $__end1$addr$04$i = 0, $__end_ = 0, $__end_$i$i$i$i$i = 0, $__end_$i$i$i$i$i$i = 0, $__end_6 = 0, $__value_$i$i$i = 0, $__value_$i$i$i6 = 0, $__value_$i$i$i8$i$i$i$i$i = 0, $__value_$i$i$i9$i$i$i$i$i = 0, $add$ptr$i = 0, $__end1$addr$04$i$looptemp = 0;
- $0 = HEAP32[$this >> 2] | 0;
- $__end_ = $this + 4 | 0;
- $1 = HEAP32[$__end_ >> 2] | 0;
- $__begin_2 = $__v + 4 | 0;
- if (($1 | 0) == ($0 | 0)) {
-  $$pre$phi15Z2D = $__begin_2;
-  $$pre$phiZ2D = $this;
-  $10 = $0;
-  $9 = HEAP32[$__begin_2 >> 2] | 0;
- } else {
-  $3 = HEAP32[$__begin_2 >> 2] | 0;
-  $__end1$addr$04$i = $1;
-  do {
-   $add$ptr$i = $3 + -12 | 0;
-   $__end1$addr$04$i$looptemp = $__end1$addr$04$i;
-   $__end1$addr$04$i = $__end1$addr$04$i + -12 | 0;
-   HEAP32[$add$ptr$i >> 2] = 0;
-   $__end_$i$i$i$i$i$i = $3 + -8 | 0;
-   HEAP32[$__end_$i$i$i$i$i$i >> 2] = 0;
-   $__value_$i$i$i9$i$i$i$i$i = $3 + -4 | 0;
-   HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = 0;
-   HEAP32[$add$ptr$i >> 2] = HEAP32[$__end1$addr$04$i >> 2];
-   $__end_$i$i$i$i$i = $__end1$addr$04$i$looptemp + -8 | 0;
-   HEAP32[$__end_$i$i$i$i$i$i >> 2] = HEAP32[$__end_$i$i$i$i$i >> 2];
-   $__value_$i$i$i8$i$i$i$i$i = $__end1$addr$04$i$looptemp + -4 | 0;
-   HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = HEAP32[$__value_$i$i$i8$i$i$i$i$i >> 2];
-   HEAP32[$__value_$i$i$i8$i$i$i$i$i >> 2] = 0;
-   HEAP32[$__end_$i$i$i$i$i >> 2] = 0;
-   HEAP32[$__end1$addr$04$i >> 2] = 0;
-   $3 = (HEAP32[$__begin_2 >> 2] | 0) + -12 | 0;
-   HEAP32[$__begin_2 >> 2] = $3;
-  } while (($__end1$addr$04$i | 0) != ($0 | 0));
-  $$pre$phi15Z2D = $__begin_2;
-  $$pre$phiZ2D = $this;
-  $10 = HEAP32[$this >> 2] | 0;
-  $9 = $3;
- }
- HEAP32[$$pre$phiZ2D >> 2] = $9;
- HEAP32[$$pre$phi15Z2D >> 2] = $10;
- $__end_6 = $__v + 8 | 0;
- $11 = HEAP32[$__end_ >> 2] | 0;
- HEAP32[$__end_ >> 2] = HEAP32[$__end_6 >> 2];
- HEAP32[$__end_6 >> 2] = $11;
- $__value_$i$i$i6 = $this + 8 | 0;
- $__value_$i$i$i = $__v + 12 | 0;
- $13 = HEAP32[$__value_$i$i$i6 >> 2] | 0;
- HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
- HEAP32[$__value_$i$i$i >> 2] = $13;
- HEAP32[$__v >> 2] = HEAP32[$$pre$phi15Z2D >> 2];
- return;
-}
-
-function __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS4_RS5_EE($this, $__v) {
- $this = $this | 0;
- $__v = $__v | 0;
- var $$pre$phi15Z2D = 0, $$pre$phiZ2D = 0, $0 = 0, $1 = 0, $10 = 0, $11 = 0, $13 = 0, $3 = 0, $9 = 0, $__begin_2 = 0, $__end1$addr$04$i = 0, $__end_ = 0, $__end_$i$i$i$i$i = 0, $__end_$i$i$i$i$i$i = 0, $__end_6 = 0, $__value_$i$i$i = 0, $__value_$i$i$i6 = 0, $__value_$i$i$i8$i$i$i$i$i = 0, $__value_$i$i$i9$i$i$i$i$i = 0, $add$ptr$i = 0, $__end1$addr$04$i$looptemp = 0;
- $0 = HEAP32[$this >> 2] | 0;
- $__end_ = $this + 4 | 0;
- $1 = HEAP32[$__end_ >> 2] | 0;
- $__begin_2 = $__v + 4 | 0;
- if (($1 | 0) == ($0 | 0)) {
-  $$pre$phi15Z2D = $__begin_2;
-  $$pre$phiZ2D = $this;
-  $10 = $0;
-  $9 = HEAP32[$__begin_2 >> 2] | 0;
- } else {
-  $3 = HEAP32[$__begin_2 >> 2] | 0;
-  $__end1$addr$04$i = $1;
-  do {
-   $add$ptr$i = $3 + -12 | 0;
-   $__end1$addr$04$i$looptemp = $__end1$addr$04$i;
-   $__end1$addr$04$i = $__end1$addr$04$i + -12 | 0;
-   HEAP32[$add$ptr$i >> 2] = 0;
-   $__end_$i$i$i$i$i$i = $3 + -8 | 0;
-   HEAP32[$__end_$i$i$i$i$i$i >> 2] = 0;
-   $__value_$i$i$i9$i$i$i$i$i = $3 + -4 | 0;
-   HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = 0;
-   HEAP32[$add$ptr$i >> 2] = HEAP32[$__end1$addr$04$i >> 2];
-   $__end_$i$i$i$i$i = $__end1$addr$04$i$looptemp + -8 | 0;
-   HEAP32[$__end_$i$i$i$i$i$i >> 2] = HEAP32[$__end_$i$i$i$i$i >> 2];
-   $__value_$i$i$i8$i$i$i$i$i = $__end1$addr$04$i$looptemp + -4 | 0;
-   HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = HEAP32[$__value_$i$i$i8$i$i$i$i$i >> 2];
-   HEAP32[$__value_$i$i$i8$i$i$i$i$i >> 2] = 0;
-   HEAP32[$__end_$i$i$i$i$i >> 2] = 0;
-   HEAP32[$__end1$addr$04$i >> 2] = 0;
-   $3 = (HEAP32[$__begin_2 >> 2] | 0) + -12 | 0;
-   HEAP32[$__begin_2 >> 2] = $3;
-  } while (($__end1$addr$04$i | 0) != ($0 | 0));
-  $$pre$phi15Z2D = $__begin_2;
-  $$pre$phiZ2D = $this;
-  $10 = HEAP32[$this >> 2] | 0;
-  $9 = $3;
- }
- HEAP32[$$pre$phiZ2D >> 2] = $9;
- HEAP32[$$pre$phi15Z2D >> 2] = $10;
- $__end_6 = $__v + 8 | 0;
- $11 = HEAP32[$__end_ >> 2] | 0;
- HEAP32[$__end_ >> 2] = HEAP32[$__end_6 >> 2];
- HEAP32[$__end_6 >> 2] = $11;
- $__value_$i$i$i6 = $this + 8 | 0;
- $__value_$i$i$i = $__v + 12 | 0;
- $13 = HEAP32[$__value_$i$i$i6 >> 2] | 0;
- HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
- HEAP32[$__value_$i$i$i >> 2] = $13;
- HEAP32[$__v >> 2] = HEAP32[$$pre$phi15Z2D >> 2];
- return;
-}
-
 function __sfetch_item_init($item, $slot_id, $request) {
  $item = $item | 0;
  $slot_id = $slot_id | 0;
@@ -37802,6 +36785,62 @@ function _stbi__resample_row_h_2($out, $in_near, $in_far, $w, $hs) {
  return $43 | 0;
 }
 
+function __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6assignINS_21__list_const_iteratorIS1_PvEEEEvT_S9_PNS_9enable_ifIXsr19__is_input_iteratorIS9_EE5valueEvE4typeE($this, $__f, $__l, $0) {
+ $this = $this | 0;
+ $__f = $__f | 0;
+ $__l = $__l | 0;
+ $0 = $0 | 0;
+ var $$pre = 0, $1 = 0, $12 = 0, $2 = 0, $4 = 0, $5 = 0, $6 = 0, $7 = 0, $9 = 0, $__i$sroa$0$0 = 0, $__i$sroa$0$0$in$in = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $agg$tmp12 = 0, $agg$tmp13 = 0, $agg$tmp16 = 0, $agg$tmp16$byval_copy = 0, $agg$tmp17 = 0, $agg$tmp17$byval_copy = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 32 | 0;
+ $agg$tmp17$byval_copy = sp + 28 | 0;
+ $agg$tmp16$byval_copy = sp + 24 | 0;
+ $agg$tmp$byval_copy = sp + 16 | 0;
+ $agg$tmp = sp + 20 | 0;
+ $agg$tmp12 = sp + 12 | 0;
+ $agg$tmp13 = sp + 8 | 0;
+ $agg$tmp16 = sp + 4 | 0;
+ $agg$tmp17 = sp;
+ $1 = $this;
+ $2 = HEAP32[$__l >> 2] | 0;
+ $$pre = HEAP32[$__f >> 2] | 0;
+ $4 = $2;
+ $12 = $$pre;
+ $5 = $$pre;
+ $7 = $$pre;
+ $__i$sroa$0$0$in$in = $this + 4 | 0;
+ while (1) {
+  $__i$sroa$0$0 = HEAP32[$__i$sroa$0$0$in$in >> 2] | 0;
+  if (($5 | 0) == ($2 | 0)) break;
+  $6 = $__i$sroa$0$0;
+  if (($this | 0) == ($6 | 0)) break;
+  __ZN8TPPLPolyaSERKS_($__i$sroa$0$0 + 8 | 0, $7 + 8 | 0) | 0;
+  $9 = HEAP32[$5 + 4 >> 2] | 0;
+  HEAP32[$__f >> 2] = $9;
+  $12 = $9;
+  $5 = $9;
+  $7 = $9;
+  $__i$sroa$0$0$in$in = $6 + 4 | 0;
+ }
+ if (($this | 0) == ($__i$sroa$0$0 | 0)) {
+  HEAP32[$agg$tmp >> 2] = $1;
+  HEAP32[$agg$tmp12 >> 2] = $12;
+  HEAP32[$agg$tmp13 >> 2] = $4;
+  HEAP32[$agg$tmp$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
+  HEAP32[$agg$tmp16$byval_copy >> 2] = HEAP32[$agg$tmp12 >> 2];
+  HEAP32[$agg$tmp17$byval_copy >> 2] = HEAP32[$agg$tmp13 >> 2];
+  __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6insertINS_21__list_const_iteratorIS1_PvEEEENS_15__list_iteratorIS1_S7_EES8_T_SB_PNS_9enable_ifIXsr19__is_input_iteratorISB_EE5valueEvE4typeE($this, $agg$tmp$byval_copy, $agg$tmp16$byval_copy, $agg$tmp17$byval_copy, 0) | 0;
+ } else {
+  HEAP32[$agg$tmp16 >> 2] = $__i$sroa$0$0;
+  HEAP32[$agg$tmp17 >> 2] = $1;
+  HEAP32[$agg$tmp16$byval_copy >> 2] = HEAP32[$agg$tmp16 >> 2];
+  HEAP32[$agg$tmp17$byval_copy >> 2] = HEAP32[$agg$tmp17 >> 2];
+  __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE5eraseENS_21__list_const_iteratorIS1_PvEES7_($this, $agg$tmp16$byval_copy, $agg$tmp17$byval_copy) | 0;
+ }
+ STACKTOP = sp;
+ return;
+}
+
 function _sfetch_send($request) {
  $request = $request | 0;
  var $26 = 0, $ctx = 0, $invalid_handle = 0, $request$addr = 0, $retval = 0, $slot_id = 0, sp = 0;
@@ -37854,6 +36893,76 @@ function _sfetch_send($request) {
   return $26 | 0;
  }
  return 0;
+}
+
+function __ZNSt3__227__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_($__root, $__x) {
+ $__root = $__root | 0;
+ $__x = $__x | 0;
+ var $$pre = 0, $$pre74 = 0, $0 = 0, $11 = 0, $2 = 0, $3 = 0, $5 = 0, $8 = 0, $__is_black_11 = 0, $__is_black_2 = 0, $__is_black_29$pre$phiZ2D = 0, $__is_black_41 = 0, $__is_black_41$sink = 0, $__is_black_61$pre$phiZ2D = 0, $__x$addr$0 = 0, label = 0;
+ HEAP8[$__x + 12 >> 0] = ($__x | 0) == ($__root | 0) & 1;
+ $__x$addr$0 = $__x;
+ while (1) {
+  if (($__x$addr$0 | 0) == ($__root | 0)) break;
+  $0 = HEAP32[$__x$addr$0 + 8 >> 2] | 0;
+  $__is_black_2 = $0 + 12 | 0;
+  if (HEAP8[$__is_black_2 >> 0] | 0) break;
+  $2 = HEAP32[$0 + 8 >> 2] | 0;
+  $3 = HEAP32[$2 >> 2] | 0;
+  if (($3 | 0) == ($0 | 0)) {
+   $5 = HEAP32[$2 + 4 >> 2] | 0;
+   if (!$5) {
+    label = 7;
+    break;
+   }
+   $__is_black_11 = $5 + 12 | 0;
+   if (!(HEAP8[$__is_black_11 >> 0] | 0)) $__is_black_41$sink = $__is_black_11; else {
+    label = 7;
+    break;
+   }
+  } else {
+   if (!$3) {
+    label = 12;
+    break;
+   }
+   $__is_black_41 = $3 + 12 | 0;
+   if (!(HEAP8[$__is_black_41 >> 0] | 0)) $__is_black_41$sink = $__is_black_41; else {
+    label = 12;
+    break;
+   }
+  }
+  HEAP8[$__is_black_2 >> 0] = 1;
+  HEAP8[$2 + 12 >> 0] = ($2 | 0) == ($__root | 0) & 1;
+  HEAP8[$__is_black_41$sink >> 0] = 1;
+  $__x$addr$0 = $2;
+ }
+ if ((label | 0) == 7) {
+  if ((HEAP32[$0 >> 2] | 0) == ($__x$addr$0 | 0)) {
+   $8 = $2;
+   $__is_black_29$pre$phiZ2D = $__is_black_2;
+  } else {
+   __ZNSt3__218__tree_left_rotateIPNS_16__tree_node_baseIPvEEEEvT_($0);
+   $$pre74 = HEAP32[$0 + 8 >> 2] | 0;
+   $8 = HEAP32[$$pre74 + 8 >> 2] | 0;
+   $__is_black_29$pre$phiZ2D = $$pre74 + 12 | 0;
+  }
+  HEAP8[$__is_black_29$pre$phiZ2D >> 0] = 1;
+  HEAP8[$8 + 12 >> 0] = 0;
+  __ZNSt3__219__tree_right_rotateIPNS_16__tree_node_baseIPvEEEEvT_($8);
+ } else if ((label | 0) == 12) {
+  if ((HEAP32[$0 >> 2] | 0) == ($__x$addr$0 | 0)) {
+   __ZNSt3__219__tree_right_rotateIPNS_16__tree_node_baseIPvEEEEvT_($0);
+   $$pre = HEAP32[$0 + 8 >> 2] | 0;
+   $11 = HEAP32[$$pre + 8 >> 2] | 0;
+   $__is_black_61$pre$phiZ2D = $$pre + 12 | 0;
+  } else {
+   $11 = $2;
+   $__is_black_61$pre$phiZ2D = $__is_black_2;
+  }
+  HEAP8[$__is_black_61$pre$phiZ2D >> 0] = 1;
+  HEAP8[$11 + 12 >> 0] = 0;
+  __ZNSt3__218__tree_left_rotateIPNS_16__tree_node_baseIPvEEEEvT_($11);
+ }
+ return;
 }
 
 function _stbi__hdr_convert($output, $input, $req_comp) {
@@ -37925,61 +37034,6 @@ function _stbi__hdr_convert($output, $input, $req_comp) {
   return;
  }
  HEAPF32[(HEAP32[$output$addr >> 2] | 0) + 12 >> 2] = 1.0;
- STACKTOP = sp;
- return;
-}
-
-function __ZN13TPPLPartition12UpdateVertexEPNS_15PartitionVertexES1_l($this, $v, $vertices, $numvertices) {
- $this = $this | 0;
- $v = $v | 0;
- $vertices = $vertices | 0;
- $numvertices = $numvertices | 0;
- var $0 = 0, $1 = 0, $3 = 0.0, $4 = 0.0, $i$056 = 0, $isConvex = 0, $isEar = 0, $p = 0, $p15 = 0, $p2 = 0, $p3 = 0, $ref$tmp = 0, $ref$tmp4 = 0, $vec1$sroa$0$0$copyload = 0.0, $vec1$sroa$4$0$copyload = 0.0, $y24 = 0, $y38 = 0, $y53 = 0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 48 | 0;
- $ref$tmp = sp + 24 | 0;
- $ref$tmp4 = sp;
- $0 = HEAP32[$v + 40 >> 2] | 0;
- $1 = HEAP32[$v + 44 >> 2] | 0;
- $p = $0 + 8 | 0;
- $p2 = $v + 8 | 0;
- $p3 = $1 + 8 | 0;
- $isConvex = $v + 1 | 0;
- HEAP8[$isConvex >> 0] = (__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $p, $p2, $p3) | 0) & 1;
- __ZNK9TPPLPointmiERKS_($ref$tmp4, $p, $p2);
- __ZN13TPPLPartition9NormalizeERK9TPPLPoint($ref$tmp, 0, $ref$tmp4);
- $vec1$sroa$0$0$copyload = +HEAPF64[$ref$tmp >> 3];
- $vec1$sroa$4$0$copyload = +HEAPF64[$ref$tmp + 8 >> 3];
- __ZNK9TPPLPointmiERKS_($ref$tmp4, $p3, $p2);
- __ZN13TPPLPartition9NormalizeERK9TPPLPoint($ref$tmp, 0, $ref$tmp4);
- HEAPF64[$v + 32 >> 3] = $vec1$sroa$0$0$copyload * +HEAPF64[$ref$tmp >> 3] + $vec1$sroa$4$0$copyload * +HEAPF64[$ref$tmp + 8 >> 3];
- $isEar = $v + 2 | 0;
- L1 : do if (!(HEAP8[$isConvex >> 0] | 0)) HEAP8[$isEar >> 0] = 0; else {
-  HEAP8[$isEar >> 0] = 1;
-  if (($numvertices | 0) > 0) {
-   $3 = +HEAPF64[$p2 >> 3];
-   $y24 = $v + 16 | 0;
-   $y38 = $0 + 16 | 0;
-   $y53 = $1 + 16 | 0;
-   $i$056 = 0;
-   L5 : while (1) {
-    $p15 = $vertices + ($i$056 * 48 | 0) + 8 | 0;
-    $4 = +HEAPF64[$p15 >> 3];
-    if ($4 == $3) {
-     if (!(+HEAPF64[$vertices + ($i$056 * 48 | 0) + 16 >> 3] == +HEAPF64[$y24 >> 3])) label = 6;
-    } else label = 6;
-    do if ((label | 0) == 6) {
-     label = 0;
-     if ($4 == +HEAPF64[$p >> 3]) if (+HEAPF64[$vertices + ($i$056 * 48 | 0) + 16 >> 3] == +HEAPF64[$y38 >> 3]) break;
-     if ($4 == +HEAPF64[$p3 >> 3]) if (+HEAPF64[$vertices + ($i$056 * 48 | 0) + 16 >> 3] == +HEAPF64[$y53 >> 3]) break;
-     if (__ZN13TPPLPartition8IsInsideER9TPPLPointS1_S1_S1_(0, $p, $p2, $p3, $p15) | 0) break L5;
-    } while (0);
-    $i$056 = $i$056 + 1 | 0;
-    if (($i$056 | 0) >= ($numvertices | 0)) break L1;
-   }
-   HEAP8[$isEar >> 0] = 0;
-  }
- } while (0);
  STACKTOP = sp;
  return;
 }
@@ -38351,51 +37405,6 @@ function _fons__atlasRectFits($atlas, $i, $w, $h) {
  return 0;
 }
 
-function __ZN6DrMesh23initializeExtrudedImageEP7DrImagei($this, $image, $quality) {
- $this = $this | 0;
- $image = $image | 0;
- $quality = $quality | 0;
- var $$in = 0, $0 = 0, $1 = 0, $3 = 0, $5 = 0, $8 = 0, $9 = 0, $__begin$sroa$0$037 = 0, $__begin_$i30 = 0, $__end_$i = 0, $add = 0, $arrayidx$i = 0, $arrayidx$i31 = 0, $call9 = 0, $cond = 0.0, $m_outline_processed = 0, $m_poly_list = 0, $or$cond = 0, $poly_number$041 = 0, $wireframe = 0;
- $0 = HEAP32[(__ZNK7DrImage9getBitmapEv($image) | 0) + 8 >> 2] | 0;
- $1 = HEAP32[(__ZNK7DrImage9getBitmapEv($image) | 0) + 12 >> 2] | 0;
- $m_poly_list = $image + 40 | 0;
- $__end_$i = $image + 44 | 0;
- $3 = HEAP32[$m_poly_list >> 2] | 0;
- if (((HEAP32[$__end_$i >> 2] | 0) - $3 | 0) > 0) {
-  $or$cond = ($0 | 0) < 1 | ($1 | 0) < 1;
-  $__begin_$i30 = $image + 52 | 0;
-  $m_outline_processed = $image + 65 | 0;
-  $wireframe = $this + 24 | 0;
-  $add = (($quality | 0) / 3 | 0) + 1 | 0;
-  $$in = $3;
-  $poly_number$041 = 0;
-  do {
-   if (!$or$cond) {
-    $arrayidx$i = $$in + ($poly_number$041 * 12 | 0) | 0;
-    $5 = HEAP32[$__begin_$i30 >> 2] | 0;
-    $arrayidx$i31 = $5 + ($poly_number$041 * 12 | 0) | 0;
-    $cond = (HEAP8[$m_outline_processed >> 0] | 0) == 0 ? 0.0 : .875;
-    $call9 = __ZNK7DrImage9getBitmapEv($image) | 0;
-    __ZN6DrMesh15triangulateFaceERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEERKNS1_IS5_NS3_IS5_EEEERK8DrBitmapb14Trianglulationd($this, $arrayidx$i, $arrayidx$i31, $call9, (HEAP8[$wireframe >> 0] | 0) != 0, 1, $cond);
-    __ZN6DrMesh18extrudeFacePolygonERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEiiib($this, $arrayidx$i, $0, $1, $add, 0);
-    $8 = HEAP32[$arrayidx$i31 >> 2] | 0;
-    $9 = HEAP32[$5 + ($poly_number$041 * 12 | 0) + 4 >> 2] | 0;
-    if (($8 | 0) != ($9 | 0)) {
-     $__begin$sroa$0$037 = $8;
-     do {
-      __ZN6DrMesh18extrudeFacePolygonERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEiiib($this, $__begin$sroa$0$037, $0, $1, $add, 0);
-      $__begin$sroa$0$037 = $__begin$sroa$0$037 + 12 | 0;
-     } while (($__begin$sroa$0$037 | 0) != ($9 | 0));
-    }
-   }
-   $poly_number$041 = $poly_number$041 + 1 | 0;
-   $$in = HEAP32[$m_poly_list >> 2] | 0;
-  } while (($poly_number$041 | 0) < (((HEAP32[$__end_$i >> 2] | 0) - $$in | 0) / 12 | 0 | 0));
- }
- __ZN6DrMesh12optimizeMeshEv($this);
- return;
-}
-
 function _stbtt_GetGlyphBox($info, $glyph_index, $x0, $y0, $x1, $y1) {
  $info = $info | 0;
  $glyph_index = $glyph_index | 0;
@@ -38453,110 +37462,58 @@ function _stbtt_GetGlyphBox($info, $glyph_index, $x0, $y0, $x1, $y1) {
  return $29 | 0;
 }
 
-function __ZN2Dr22BlackAndWhiteFromAlphaERK8DrBitmapdb13Bitmap_Format($agg$result, $bitmap, $alpha_tolerance, $inverse, $desired_format) {
- $agg$result = $agg$result | 0;
- $bitmap = $bitmap | 0;
- $alpha_tolerance = +$alpha_tolerance;
- $inverse = $inverse | 0;
- $desired_format = $desired_format | 0;
- var $0 = 0, $1 = 0, $2 = 0, $5 = 0, $6 = 0, $7 = 0, $agg$tmp = 0, $cmp7 = 0, $color1 = 0, $color2 = 0, $cond$lvalue2D = 0, $conv = 0, $height = 0, $ref$tmp = 0, $tmpcast$byval_copy = 0, $width = 0, $x$019 = 0, $y$017 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 32 | 0;
- $tmpcast$byval_copy = sp + 16 | 0;
- $color1 = sp + 12 | 0;
- $color2 = sp + 8 | 0;
- $agg$tmp = sp;
- $ref$tmp = sp + 4 | 0;
- __ZN7DrColorC2Ej($color1, 0);
- __ZN7DrColorC2Ej($color2, -1);
- if ($inverse) __ZN2Dr4SwapI7DrColorEEvRT_S3_($color1, $color2);
- __ZN8DrBitmapC2ERKS_13Bitmap_Format($agg$result, $bitmap, $desired_format);
- $conv = ~~($alpha_tolerance * 255.0);
- $width = $bitmap + 8 | 0;
- $0 = HEAP32[$width >> 2] | 0;
- if (($0 | 0) > 0) {
-  $height = $bitmap + 12 | 0;
-  $1 = HEAP32[$height >> 2] | 0;
-  $6 = $0;
-  $x$019 = 0;
-  while (1) {
-   if (($1 | 0) > 0) {
-    $y$017 = 0;
-    do {
-     __ZNK8DrBitmap8getPixelEii($ref$tmp, $bitmap, $x$019, $y$017);
-     $cmp7 = (HEAPU8[(__ZNK7DrColor5alphaEv($ref$tmp) | 0) >> 0] | 0 | 0) < ($conv | 0);
-     $cond$lvalue2D = $cmp7 ? $color1 : $color2;
-     HEAP32[$agg$tmp >> 2] = HEAPU8[$cond$lvalue2D >> 0] | HEAPU8[$cond$lvalue2D + 1 >> 0] << 8 | HEAPU8[$cond$lvalue2D + 2 >> 0] << 16 | HEAPU8[$cond$lvalue2D + 3 >> 0] << 24;
-     HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
-     HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
-     HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
-     HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
-     __ZN8DrBitmap8setPixelEii7DrColor($agg$result, $x$019, $y$017, $tmpcast$byval_copy);
-     $y$017 = $y$017 + 1 | 0;
-     $5 = HEAP32[$height >> 2] | 0;
-    } while (($y$017 | 0) < ($5 | 0));
-    $2 = HEAP32[$width >> 2] | 0;
-    $7 = $5;
-   } else {
-    $2 = $6;
-    $7 = $1;
-   }
-   $x$019 = $x$019 + 1 | 0;
-   if (($x$019 | 0) >= ($2 | 0)) break; else {
-    $1 = $7;
-    $6 = $2;
-   }
-  }
- }
- STACKTOP = sp;
- return;
-}
-
-function __ZN6DrMesh18extrudeFacePolygonERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEiiib($this, $outline_points, $width, $height, $steps, $reverse) {
+function __ZN13TPPLPartition12UpdateVertexEPNS_15PartitionVertexES1_l($this, $v, $vertices, $numvertices) {
  $this = $this | 0;
- $outline_points = $outline_points | 0;
- $width = $width | 0;
- $height = $height | 0;
- $steps = $steps | 0;
- $reverse = $reverse | 0;
- var $$in = 0, $1 = 0, $2 = 0.0, $3 = 0.0, $4 = 0, $5 = 0.0, $6 = 0.0, $7 = 0.0, $8 = 0.0, $__end_$i = 0, $conv = 0.0, $conv15 = 0.0, $conv2 = 0.0, $conv20 = 0.0, $conv33 = 0.0, $conv38 = 0.0, $conv39 = 0.0, $conv43 = 0.0, $div48 = 0.0, $div50 = 0.0, $i$088 = 0, $spec$select = 0, $sub$ptr$div$i89 = 0, $sub$ptr$sub$i85 = 0, $x1$0 = 0.0, $x2$0 = 0.0, $y1$0 = 0.0, $y2$0 = 0.0, $i$088$looptemp = 0;
- $conv = +($width | 0);
- $conv2 = +($height | 0);
- $__end_$i = $outline_points + 4 | 0;
- $1 = HEAP32[$outline_points >> 2] | 0;
- $sub$ptr$sub$i85 = (HEAP32[$__end_$i >> 2] | 0) - $1 | 0;
- if (($sub$ptr$sub$i85 | 0) > 0) {
-  $conv39 = $conv * .5;
-  $conv43 = $conv2 * .5;
-  $div48 = 1.0 / +($width | 0);
-  $div50 = 1.0 / +($height | 0);
-  $2 = -$div48;
-  $3 = -$div50;
-  $$in = $1;
-  $i$088 = 0;
-  $sub$ptr$div$i89 = $sub$ptr$sub$i85 >>> 4;
-  do {
-   $4 = $$in;
-   $i$088$looptemp = $i$088;
-   $i$088 = $i$088 + 1 | 0;
-   $spec$select = ($i$088 | 0) < ($sub$ptr$div$i89 | 0) ? $i$088 : 0;
-   $5 = +HEAPF64[$4 + ($spec$select << 4) >> 3];
-   $6 = +HEAPF64[$4 + ($spec$select << 4) + 8 >> 3];
-   $conv15 = $5 / $conv;
-   $conv20 = $6 / $conv2;
-   $7 = +HEAPF64[$4 + ($i$088$looptemp << 4) >> 3];
-   $8 = +HEAPF64[$4 + ($i$088$looptemp << 4) + 8 >> 3];
-   $conv33 = $7 / $conv;
-   $conv38 = $8 / $conv2;
-   $x1$0 = $5 - $conv39 + ($conv15 > .5 ? $2 : $div48);
-   $x2$0 = $7 - $conv39 + ($conv33 > .5 ? $2 : $div48);
-   $y1$0 = $conv2 - $6 - $conv43 + ($conv20 > .5 ? $3 : $div50);
-   $y2$0 = $conv2 - $8 - $conv43 + ($conv38 > .5 ? $3 : $div50);
-   if ($reverse) __ZN6DrMesh7extrudeEffffffffi($this, $x2$0, $y2$0, $conv33, $conv38, $x1$0, $y1$0, $conv15, $conv20, $steps); else __ZN6DrMesh7extrudeEffffffffi($this, $x1$0, $y1$0, $conv15, $conv20, $x2$0, $y2$0, $conv33, $conv38, $steps);
-   $$in = HEAP32[$outline_points >> 2] | 0;
-   $sub$ptr$div$i89 = (HEAP32[$__end_$i >> 2] | 0) - $$in >> 4;
-  } while (($i$088 | 0) < ($sub$ptr$div$i89 | 0));
- }
+ $v = $v | 0;
+ $vertices = $vertices | 0;
+ $numvertices = $numvertices | 0;
+ var $0 = 0, $1 = 0, $3 = 0.0, $i$0 = 0, $isConvex = 0, $isEar = 0, $p = 0, $p15 = 0, $p2 = 0, $p3 = 0, $ref$tmp = 0, $ref$tmp4 = 0, $vec1$sroa$0$0$copyload = 0.0, $vec1$sroa$4$0$copyload = 0.0, $y24 = 0, $y38 = 0, $y53 = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 48 | 0;
+ $ref$tmp = sp + 24 | 0;
+ $ref$tmp4 = sp;
+ $0 = HEAP32[$v + 40 >> 2] | 0;
+ $1 = HEAP32[$v + 44 >> 2] | 0;
+ $p = $0 + 8 | 0;
+ $p2 = $v + 8 | 0;
+ $p3 = $1 + 8 | 0;
+ $isConvex = $v + 1 | 0;
+ HEAP8[$isConvex >> 0] = (__ZN13TPPLPartition8IsConvexER9TPPLPointS1_S1_(0, $p, $p2, $p3) | 0) & 1;
+ __ZNK9TPPLPointmiERKS_($ref$tmp4, $p, $p2);
+ __ZN13TPPLPartition9NormalizeERK9TPPLPoint($ref$tmp, 0, $ref$tmp4);
+ $vec1$sroa$0$0$copyload = +HEAPF64[$ref$tmp >> 3];
+ $vec1$sroa$4$0$copyload = +HEAPF64[$ref$tmp + 8 >> 3];
+ __ZNK9TPPLPointmiERKS_($ref$tmp4, $p3, $p2);
+ __ZN13TPPLPartition9NormalizeERK9TPPLPoint($ref$tmp, 0, $ref$tmp4);
+ HEAPF64[$v + 32 >> 3] = $vec1$sroa$0$0$copyload * +HEAPF64[$ref$tmp >> 3] + $vec1$sroa$4$0$copyload * +HEAPF64[$ref$tmp + 8 >> 3];
+ $isEar = $v + 2 | 0;
+ L1 : do if (!(HEAP8[$isConvex >> 0] | 0)) label = 12; else {
+  HEAP8[$isEar >> 0] = 1;
+  $y24 = $v + 16 | 0;
+  $y38 = $0 + 16 | 0;
+  $y53 = $1 + 16 | 0;
+  $i$0 = 0;
+  while (1) {
+   if (($i$0 | 0) >= ($numvertices | 0)) break L1;
+   $p15 = $vertices + ($i$0 * 48 | 0) + 8 | 0;
+   $3 = +HEAPF64[$p15 >> 3];
+   if ($3 == +HEAPF64[$p2 >> 3]) {
+    if (!(+HEAPF64[$vertices + ($i$0 * 48 | 0) + 16 >> 3] == +HEAPF64[$y24 >> 3])) label = 6;
+   } else label = 6;
+   do if ((label | 0) == 6) {
+    label = 0;
+    if ($3 == +HEAPF64[$p >> 3]) if (+HEAPF64[$vertices + ($i$0 * 48 | 0) + 16 >> 3] == +HEAPF64[$y38 >> 3]) break;
+    if ($3 == +HEAPF64[$p3 >> 3]) if (+HEAPF64[$vertices + ($i$0 * 48 | 0) + 16 >> 3] == +HEAPF64[$y53 >> 3]) break;
+    if (__ZN13TPPLPartition8IsInsideER9TPPLPointS1_S1_S1_(0, $p, $p2, $p3, $p15) | 0) {
+     label = 12;
+     break L1;
+    }
+   } while (0);
+   $i$0 = $i$0 + 1 | 0;
+  }
+ } while (0);
+ if ((label | 0) == 12) HEAP8[$isEar >> 0] = 0;
+ STACKTOP = sp;
  return;
 }
 
@@ -38738,6 +37695,62 @@ function _stbtt__new_active($hh, $e, $off_x, $start_point, $userdata) {
  return $39 | 0;
 }
 
+function _meshopt_optimizeVertexFetch($destination, $indices, $index_count, $vertices, $vertex_count, $vertex_size) {
+ $destination = $destination | 0;
+ $indices = $indices | 0;
+ $index_count = $index_count | 0;
+ $vertices = $vertices | 0;
+ $vertex_count = $vertex_count | 0;
+ $vertex_size = $vertex_size | 0;
+ var $1 = 0, $2 = 0, $3 = 0, $allocator = 0, $arrayidx = 0, $arrayidx17 = 0, $call = 0, $call9 = 0, $i$0 = 0, $mul = 0, $next_vertex$0 = 0, $next_vertex$1 = 0, $vertices$addr$0 = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 112 | 0;
+ $allocator = sp;
+ if (($index_count >>> 0) % 3 | 0 | 0) ___assert_fail(47099, 47120, 33, 47254);
+ if (($vertex_size + -1 | 0) >>> 0 >= 256) ___assert_fail(47282, 47120, 34, 47254);
+ __ZN17meshopt_AllocatorC2Ev($allocator);
+ if (($destination | 0) == ($vertices | 0)) {
+  $mul = Math_imul($vertex_size, $vertex_count) | 0;
+  $call = __ZN17meshopt_Allocator8allocateIhEEPT_m($allocator, $mul) | 0;
+  _memcpy($call | 0, $destination | 0, $mul | 0) | 0;
+  $vertices$addr$0 = $call;
+ } else $vertices$addr$0 = $vertices;
+ $call9 = __ZN17meshopt_Allocator8allocateIjEEPT_m($allocator, $vertex_count) | 0;
+ _memset($call9 | 0, -1, $vertex_count << 2 | 0) | 0;
+ $i$0 = 0;
+ $next_vertex$0 = 0;
+ while (1) {
+  if ($i$0 >>> 0 >= $index_count >>> 0) break;
+  $arrayidx = $indices + ($i$0 << 2) | 0;
+  $1 = HEAP32[$arrayidx >> 2] | 0;
+  if ($1 >>> 0 >= $vertex_count >>> 0) {
+   label = 11;
+   break;
+  }
+  $arrayidx17 = $call9 + ($1 << 2) | 0;
+  $2 = HEAP32[$arrayidx17 >> 2] | 0;
+  if (($2 | 0) == -1) {
+   _memcpy($destination + (Math_imul($next_vertex$0, $vertex_size) | 0) | 0, $vertices$addr$0 + (Math_imul($1, $vertex_size) | 0) | 0, $vertex_size | 0) | 0;
+   HEAP32[$arrayidx17 >> 2] = $next_vertex$0;
+   $3 = $next_vertex$0;
+   $next_vertex$1 = $next_vertex$0 + 1 | 0;
+  } else {
+   $3 = $2;
+   $next_vertex$1 = $next_vertex$0;
+  }
+  HEAP32[$arrayidx >> 2] = $3;
+  $i$0 = $i$0 + 1 | 0;
+  $next_vertex$0 = $next_vertex$1;
+ }
+ if ((label | 0) == 11) ___assert_fail(47205, 47120, 55, 47254);
+ if ($next_vertex$0 >>> 0 > $vertex_count >>> 0) ___assert_fail(47226, 47120, 71, 47254); else {
+  __ZN17meshopt_AllocatorD2Ev($allocator);
+  STACKTOP = sp;
+  return $next_vertex$0 | 0;
+ }
+ return 0;
+}
+
 function __sg_pipeline_common_init($cmn, $desc) {
  $cmn = $cmn | 0;
  $desc = $desc | 0;
@@ -38808,6 +37821,55 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  }
  STACKTOP = sp;
  return $retval$1 | 0;
+}
+
+function __Z24averageTransparentPixelsRK8DrBitmapRK8DrPointFRKd($bitmap, $at_point, $alpha_tolerance) {
+ $bitmap = $bitmap | 0;
+ $at_point = $at_point | 0;
+ $alpha_tolerance = $alpha_tolerance | 0;
+ var $call = 0, $call43 = 0.0, $call8 = 0, $cond18 = 0, $cond24 = 0, $cond34 = 0, $height = 0, $ref$tmp = 0, $ref$tmp1 = 0, $ref$tmp2 = 0, $sub11 = 0, $sub26 = 0, $total_count$0 = 0.0, $total_count$1 = 0.0, $transparent_count$0 = 0.0, $transparent_count$1 = 0.0, $width = 0, $x35$0 = 0, $y37$0 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 16 | 0;
+ $ref$tmp = sp + 8 | 0;
+ $ref$tmp1 = sp + 4 | 0;
+ $ref$tmp2 = sp;
+ HEAP32[$ref$tmp >> 2] = ~~+_llvm_round_f64(+(+HEAPF64[$at_point >> 3]));
+ HEAP32[$ref$tmp1 >> 2] = 0;
+ $width = $bitmap + 8 | 0;
+ HEAP32[$ref$tmp2 >> 2] = (HEAP32[$width >> 2] | 0) + -1;
+ $call = __ZN2Dr5ClampIiEET_RKS1_S3_S3_($ref$tmp, $ref$tmp1, $ref$tmp2) | 0;
+ HEAP32[$ref$tmp >> 2] = ~~+_llvm_round_f64(+(+HEAPF64[$at_point + 8 >> 3]));
+ HEAP32[$ref$tmp1 >> 2] = 0;
+ $height = $bitmap + 12 | 0;
+ HEAP32[$ref$tmp2 >> 2] = (HEAP32[$height >> 2] | 0) + -1;
+ $call8 = __ZN2Dr5ClampIiEET_RKS1_S3_S3_($ref$tmp, $ref$tmp1, $ref$tmp2) | 0;
+ $sub11 = (HEAP32[$width >> 2] | 0) + -1 | 0;
+ $cond18 = ($call | 0) < ($sub11 | 0) ? $call + 1 | 0 : $sub11;
+ $cond24 = ($call8 | 0) > 0 ? $call8 + -1 | 0 : 0;
+ $sub26 = (HEAP32[$height >> 2] | 0) + -1 | 0;
+ $cond34 = ($call8 | 0) < ($sub26 | 0) ? $call8 + 1 | 0 : $sub26;
+ $total_count$0 = 0.0;
+ $transparent_count$0 = 0.0;
+ $x35$0 = ($call | 0) > 0 ? $call + -1 | 0 : 0;
+ while (1) {
+  if (($x35$0 | 0) > ($cond18 | 0)) break;
+  $total_count$1 = $total_count$0;
+  $transparent_count$1 = $transparent_count$0;
+  $y37$0 = $cond24;
+  while (1) {
+   if (($y37$0 | 0) > ($cond34 | 0)) break;
+   __ZNK8DrBitmap8getPixelEii($ref$tmp, $bitmap, $x35$0, $y37$0);
+   $call43 = +__ZNK7DrColor6alphaFEv($ref$tmp);
+   $total_count$1 = $total_count$1 + 1.0;
+   $transparent_count$1 = $call43 < +HEAPF64[$alpha_tolerance >> 3] ? $transparent_count$1 + 1.0 : $transparent_count$1;
+   $y37$0 = $y37$0 + 1 | 0;
+  }
+  $total_count$0 = $total_count$1;
+  $transparent_count$0 = $transparent_count$1;
+  $x35$0 = $x35$0 + 1 | 0;
+ }
+ STACKTOP = sp;
+ return +($transparent_count$0 / $total_count$0);
 }
 
 function __ZNK8DrBitmap7polygonEv($agg$result, $this) {
@@ -38954,67 +38016,6 @@ function __sapp_emsc_keytable_init() {
  HEAP32[15162] = 93;
  HEAP32[15163] = 39;
  HEAP32[15165] = 343;
- return;
-}
-
-function __ZN8DrBitmapC2ERKS_13Bitmap_Format($this, $bitmap, $desired_format) {
- $this = $this | 0;
- $bitmap = $bitmap | 0;
- $desired_format = $desired_format | 0;
- var $12 = 0, $13 = 0, $14 = 0, $15 = 0, $16 = 0, $17 = 0, $5 = 0, $6 = 0, $8 = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $channels = 0, $data = 0, $height = 0, $mul = 0, $width = 0, $x$025 = 0, $y$023 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 16 | 0;
- $agg$tmp$byval_copy = sp + 4 | 0;
- $agg$tmp = sp;
- $width = $bitmap + 8 | 0;
- $height = $bitmap + 12 | 0;
- __ZN8DrBitmapC2Eii13Bitmap_Format($this, HEAP32[$width >> 2] | 0, HEAP32[$height >> 2] | 0, $desired_format);
- if ((HEAP32[$bitmap >> 2] | 0) == (HEAP32[$this >> 2] | 0)) {
-  $channels = $bitmap + 4 | 0;
-  HEAP32[$this + 4 >> 2] = HEAP32[$channels >> 2];
-  $5 = HEAP32[$width >> 2] | 0;
-  HEAP32[$this + 8 >> 2] = $5;
-  $6 = HEAP32[$height >> 2] | 0;
-  HEAP32[$this + 12 >> 2] = $6;
-  $data = $this + 16 | 0;
-  $mul = Math_imul($6, $5) | 0;
-  __ZNSt3__26vectorIhNS_9allocatorIhEEE6resizeEm($data, Math_imul($mul, HEAP32[$channels >> 2] | 0) | 0);
-  $8 = HEAP32[$data >> 2] | 0;
-  _memcpy($8 | 0, HEAP32[$bitmap + 16 >> 2] | 0, (HEAP32[$this + 20 >> 2] | 0) - $8 | 0) | 0;
- } else {
-  $12 = HEAP32[$width >> 2] | 0;
-  if (($12 | 0) > 0) {
-   $13 = HEAP32[$height >> 2] | 0;
-   $16 = $12;
-   $x$025 = 0;
-   while (1) {
-    if (($13 | 0) > 0) {
-     $y$023 = 0;
-     do {
-      __ZNK8DrBitmap8getPixelEii($agg$tmp, $bitmap, $x$025, $y$023);
-      HEAP8[$agg$tmp$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
-      HEAP8[$agg$tmp$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
-      HEAP8[$agg$tmp$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
-      HEAP8[$agg$tmp$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
-      __ZN8DrBitmap8setPixelEii7DrColor($this, $x$025, $y$023, $agg$tmp$byval_copy);
-      $y$023 = $y$023 + 1 | 0;
-      $15 = HEAP32[$height >> 2] | 0;
-     } while (($y$023 | 0) < ($15 | 0));
-     $14 = HEAP32[$width >> 2] | 0;
-     $17 = $15;
-    } else {
-     $14 = $16;
-     $17 = $13;
-    }
-    $x$025 = $x$025 + 1 | 0;
-    if (($x$025 | 0) >= ($14 | 0)) break; else {
-     $13 = $17;
-     $16 = $14;
-    }
-   }
-  }
- }
- STACKTOP = sp;
  return;
 }
 
@@ -39166,7 +38167,6 @@ function ___vfprintf_internal($f, $fmt, $ap, $fmt_fp, $pop_arg_long_double) {
  STACKTOP = sp;
  return $retval$0 | 0;
 }
-
 function _stbi__pnm_info($s, $x, $y, $comp) {
  $s = $s | 0;
  $x = $x | 0;
@@ -39935,6 +38935,46 @@ function __sg_image_common_init($cmn, $desc) {
  return;
 }
 
+function __ZN6DrMesh23initializeExtrudedImageEP7DrImagei($this, $image, $quality) {
+ $this = $this | 0;
+ $image = $image | 0;
+ $quality = $quality | 0;
+ var $0 = 0, $1 = 0, $3 = 0, $5 = 0, $9 = 0, $__begin$sroa$0$0 = 0, $__begin_$i30 = 0, $__end_$i = 0, $add = 0, $arrayidx$i = 0, $arrayidx$i31 = 0, $call9 = 0, $cond = 0.0, $m_outline_processed = 0, $m_poly_list = 0, $or$cond = 0, $poly_number$0 = 0, $wireframe = 0;
+ $0 = HEAP32[(__ZNK7DrImage9getBitmapEv($image) | 0) + 8 >> 2] | 0;
+ $1 = HEAP32[(__ZNK7DrImage9getBitmapEv($image) | 0) + 12 >> 2] | 0;
+ $m_poly_list = $image + 40 | 0;
+ $__end_$i = $image + 44 | 0;
+ $or$cond = ($0 | 0) < 1 | ($1 | 0) < 1;
+ $__begin_$i30 = $image + 52 | 0;
+ $m_outline_processed = $image + 65 | 0;
+ $wireframe = $this + 24 | 0;
+ $add = (($quality | 0) / 3 | 0) + 1 | 0;
+ $poly_number$0 = 0;
+ while (1) {
+  $3 = HEAP32[$m_poly_list >> 2] | 0;
+  if (($poly_number$0 | 0) >= (((HEAP32[$__end_$i >> 2] | 0) - $3 | 0) / 12 | 0 | 0)) break;
+  L4 : do if (!$or$cond) {
+   $arrayidx$i = $3 + ($poly_number$0 * 12 | 0) | 0;
+   $5 = HEAP32[$__begin_$i30 >> 2] | 0;
+   $arrayidx$i31 = $5 + ($poly_number$0 * 12 | 0) | 0;
+   $cond = (HEAP8[$m_outline_processed >> 0] | 0) == 0 ? 0.0 : .875;
+   $call9 = __ZNK7DrImage9getBitmapEv($image) | 0;
+   __ZN6DrMesh15triangulateFaceERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEERKNS1_IS5_NS3_IS5_EEEERK8DrBitmapb14Trianglulationd($this, $arrayidx$i, $arrayidx$i31, $call9, (HEAP8[$wireframe >> 0] | 0) != 0, 1, $cond);
+   __ZN6DrMesh18extrudeFacePolygonERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEiiib($this, $arrayidx$i, $0, $1, $add, 0);
+   $9 = HEAP32[$5 + ($poly_number$0 * 12 | 0) + 4 >> 2] | 0;
+   $__begin$sroa$0$0 = HEAP32[$arrayidx$i31 >> 2] | 0;
+   while (1) {
+    if (($__begin$sroa$0$0 | 0) == ($9 | 0)) break L4;
+    __ZN6DrMesh18extrudeFacePolygonERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEiiib($this, $__begin$sroa$0$0, $0, $1, $add, 0);
+    $__begin$sroa$0$0 = $__begin$sroa$0$0 + 12 | 0;
+   }
+  } while (0);
+  $poly_number$0 = $poly_number$0 + 1 | 0;
+ }
+ __ZN6DrMesh12optimizeMeshEv($this);
+ return;
+}
+
 function __sg_row_pitch($fmt, $width, $row_align) {
  $fmt = $fmt | 0;
  $width = $width | 0;
@@ -40050,6 +39090,61 @@ function __ZN13TPPLPartition10IntersectsER9TPPLPointS1_S1_S1_($this, $p11, $p12,
  } while (0);
  STACKTOP = sp;
  return $retval$1 | 0;
+}
+
+function __ZN7meshoptL23calculateSortOrderRadixEPjPKfPtm($sort_order, $sort_data, $sort_keys, $cluster_count) {
+ $sort_order = $sort_order | 0;
+ $sort_data = $sort_data | 0;
+ $sort_keys = $sort_keys | 0;
+ $cluster_count = $cluster_count | 0;
+ var $1 = 0.0, $5 = 0, $7 = 0, $arrayidx18 = 0, $arrayidx28 = 0, $arrayidx41 = 0, $histogram = 0, $histogram_sum$0 = 0, $i$0 = 0, $i12$0 = 0, $i2$0 = 0, $i23$0 = 0, $i34$0 = 0, $sort_data_max$0 = 0.0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 8192 | 0;
+ $histogram = sp;
+ $i$0 = 0;
+ $sort_data_max$0 = 1.0000000474974513e-03;
+ while (1) {
+  if (($i$0 | 0) == ($cluster_count | 0)) break;
+  $1 = +Math_abs(+(+HEAPF32[$sort_data + ($i$0 << 2) >> 2]));
+  $i$0 = $i$0 + 1 | 0;
+  $sort_data_max$0 = $sort_data_max$0 < $1 ? $1 : $sort_data_max$0;
+ }
+ $i2$0 = 0;
+ while (1) {
+  if (($i2$0 | 0) == ($cluster_count | 0)) break;
+  HEAP16[$sort_keys + ($i2$0 << 1) >> 1] = (__Z21meshopt_quantizeUnormfi(.5 - +HEAPF32[$sort_data + ($i2$0 << 2) >> 2] / $sort_data_max$0 * .5, 11) | 0) & 2047;
+  $i2$0 = $i2$0 + 1 | 0;
+ }
+ _memset($histogram | 0, 0, 8192) | 0;
+ $i12$0 = 0;
+ while (1) {
+  if (($i12$0 | 0) == ($cluster_count | 0)) break;
+  $arrayidx18 = $histogram + ((HEAPU16[$sort_keys + ($i12$0 << 1) >> 1] | 0) << 2) | 0;
+  HEAP32[$arrayidx18 >> 2] = (HEAP32[$arrayidx18 >> 2] | 0) + 1;
+  $i12$0 = $i12$0 + 1 | 0;
+ }
+ $histogram_sum$0 = 0;
+ $i23$0 = 0;
+ while (1) {
+  if (($i23$0 | 0) == 2048) break;
+  $arrayidx28 = $histogram + ($i23$0 << 2) | 0;
+  $5 = HEAP32[$arrayidx28 >> 2] | 0;
+  HEAP32[$arrayidx28 >> 2] = $histogram_sum$0;
+  $histogram_sum$0 = $5 + $histogram_sum$0 | 0;
+  $i23$0 = $i23$0 + 1 | 0;
+ }
+ if (($histogram_sum$0 | 0) != ($cluster_count | 0)) ___assert_fail(46360, 46089, 126, 46391);
+ $i34$0 = 0;
+ while (1) {
+  if (($i34$0 | 0) == ($cluster_count | 0)) break;
+  $arrayidx41 = $histogram + ((HEAPU16[$sort_keys + ($i34$0 << 1) >> 1] | 0) << 2) | 0;
+  $7 = HEAP32[$arrayidx41 >> 2] | 0;
+  HEAP32[$arrayidx41 >> 2] = $7 + 1;
+  HEAP32[$sort_order + ($7 << 2) >> 2] = $i34$0;
+  $i34$0 = $i34$0 + 1 | 0;
+ }
+ STACKTOP = sp;
+ return;
 }
 
 function _fons__blurCols($dst, $w, $h, $dstStride, $alpha) {
@@ -40282,6 +39377,51 @@ function _stbtt__hheap_alloc($hh, $size, $userdata) {
  return $29 | 0;
 }
 
+function __ZNSt3__26vectorINS0_INS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEEENS2_IS6_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS6_RS7_EE($this, $__v) {
+ $this = $this | 0;
+ $__v = $__v | 0;
+ var $0 = 0, $11 = 0, $2 = 0, $7 = 0, $9 = 0, $__begin_2 = 0, $__end1$addr$0$i = 0, $__end_ = 0, $__end_$i$i$i$i$i = 0, $__end_$i$i$i$i$i$i = 0, $__end_6 = 0, $__value_$i$i$i = 0, $__value_$i$i$i6 = 0, $__value_$i$i$i8$i$i$i$i$i = 0, $__value_$i$i$i9$i$i$i$i$i = 0, $add$ptr$i = 0, $incdec$ptr$i = 0;
+ $0 = HEAP32[$this >> 2] | 0;
+ $__end_ = $this + 4 | 0;
+ $__begin_2 = $__v + 4 | 0;
+ $__end1$addr$0$i = HEAP32[$__end_ >> 2] | 0;
+ while (1) {
+  if (($__end1$addr$0$i | 0) == ($0 | 0)) break;
+  $2 = HEAP32[$__begin_2 >> 2] | 0;
+  $add$ptr$i = $2 + -12 | 0;
+  $incdec$ptr$i = $__end1$addr$0$i + -12 | 0;
+  HEAP32[$add$ptr$i >> 2] = 0;
+  $__end_$i$i$i$i$i$i = $2 + -8 | 0;
+  HEAP32[$__end_$i$i$i$i$i$i >> 2] = 0;
+  $__value_$i$i$i9$i$i$i$i$i = $2 + -4 | 0;
+  HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = 0;
+  HEAP32[$add$ptr$i >> 2] = HEAP32[$incdec$ptr$i >> 2];
+  $__end_$i$i$i$i$i = $__end1$addr$0$i + -8 | 0;
+  HEAP32[$__end_$i$i$i$i$i$i >> 2] = HEAP32[$__end_$i$i$i$i$i >> 2];
+  $__value_$i$i$i8$i$i$i$i$i = $__end1$addr$0$i + -4 | 0;
+  HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = HEAP32[$__value_$i$i$i8$i$i$i$i$i >> 2];
+  HEAP32[$__value_$i$i$i8$i$i$i$i$i >> 2] = 0;
+  HEAP32[$__end_$i$i$i$i$i >> 2] = 0;
+  HEAP32[$incdec$ptr$i >> 2] = 0;
+  HEAP32[$__begin_2 >> 2] = (HEAP32[$__begin_2 >> 2] | 0) + -12;
+  $__end1$addr$0$i = $incdec$ptr$i;
+ }
+ $7 = HEAP32[$this >> 2] | 0;
+ HEAP32[$this >> 2] = HEAP32[$__begin_2 >> 2];
+ HEAP32[$__begin_2 >> 2] = $7;
+ $__end_6 = $__v + 8 | 0;
+ $9 = HEAP32[$__end_ >> 2] | 0;
+ HEAP32[$__end_ >> 2] = HEAP32[$__end_6 >> 2];
+ HEAP32[$__end_6 >> 2] = $9;
+ $__value_$i$i$i6 = $this + 8 | 0;
+ $__value_$i$i$i = $__v + 12 | 0;
+ $11 = HEAP32[$__value_$i$i$i6 >> 2] | 0;
+ HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
+ HEAP32[$__value_$i$i$i >> 2] = $11;
+ HEAP32[$__v >> 2] = HEAP32[$__begin_2 >> 2];
+ return;
+}
+
 function __sg_image_desc_defaults($agg$result, $desc) {
  $agg$result = $agg$result | 0;
  $desc = $desc | 0;
@@ -40314,6 +39454,51 @@ function __sg_image_desc_defaults($agg$result, $desc) {
  HEAPF32[$def + 72 >> 2] = +HEAPF32[$def + 72 >> 2] == 0.0 ? 3402823466385288598117041.0e14 : +HEAPF32[$def + 72 >> 2];
  _memcpy($agg$result | 0, $def | 0, 884) | 0;
  STACKTOP = sp;
+ return;
+}
+
+function __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS4_RS5_EE($this, $__v) {
+ $this = $this | 0;
+ $__v = $__v | 0;
+ var $0 = 0, $11 = 0, $2 = 0, $7 = 0, $9 = 0, $__begin_2 = 0, $__end1$addr$0$i = 0, $__end_ = 0, $__end_$i$i$i$i$i = 0, $__end_$i$i$i$i$i$i = 0, $__end_6 = 0, $__value_$i$i$i = 0, $__value_$i$i$i6 = 0, $__value_$i$i$i8$i$i$i$i$i = 0, $__value_$i$i$i9$i$i$i$i$i = 0, $add$ptr$i = 0, $incdec$ptr$i = 0;
+ $0 = HEAP32[$this >> 2] | 0;
+ $__end_ = $this + 4 | 0;
+ $__begin_2 = $__v + 4 | 0;
+ $__end1$addr$0$i = HEAP32[$__end_ >> 2] | 0;
+ while (1) {
+  if (($__end1$addr$0$i | 0) == ($0 | 0)) break;
+  $2 = HEAP32[$__begin_2 >> 2] | 0;
+  $add$ptr$i = $2 + -12 | 0;
+  $incdec$ptr$i = $__end1$addr$0$i + -12 | 0;
+  HEAP32[$add$ptr$i >> 2] = 0;
+  $__end_$i$i$i$i$i$i = $2 + -8 | 0;
+  HEAP32[$__end_$i$i$i$i$i$i >> 2] = 0;
+  $__value_$i$i$i9$i$i$i$i$i = $2 + -4 | 0;
+  HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = 0;
+  HEAP32[$add$ptr$i >> 2] = HEAP32[$incdec$ptr$i >> 2];
+  $__end_$i$i$i$i$i = $__end1$addr$0$i + -8 | 0;
+  HEAP32[$__end_$i$i$i$i$i$i >> 2] = HEAP32[$__end_$i$i$i$i$i >> 2];
+  $__value_$i$i$i8$i$i$i$i$i = $__end1$addr$0$i + -4 | 0;
+  HEAP32[$__value_$i$i$i9$i$i$i$i$i >> 2] = HEAP32[$__value_$i$i$i8$i$i$i$i$i >> 2];
+  HEAP32[$__value_$i$i$i8$i$i$i$i$i >> 2] = 0;
+  HEAP32[$__end_$i$i$i$i$i >> 2] = 0;
+  HEAP32[$incdec$ptr$i >> 2] = 0;
+  HEAP32[$__begin_2 >> 2] = (HEAP32[$__begin_2 >> 2] | 0) + -12;
+  $__end1$addr$0$i = $incdec$ptr$i;
+ }
+ $7 = HEAP32[$this >> 2] | 0;
+ HEAP32[$this >> 2] = HEAP32[$__begin_2 >> 2];
+ HEAP32[$__begin_2 >> 2] = $7;
+ $__end_6 = $__v + 8 | 0;
+ $9 = HEAP32[$__end_ >> 2] | 0;
+ HEAP32[$__end_ >> 2] = HEAP32[$__end_6 >> 2];
+ HEAP32[$__end_6 >> 2] = $9;
+ $__value_$i$i$i6 = $this + 8 | 0;
+ $__value_$i$i$i = $__v + 12 | 0;
+ $11 = HEAP32[$__value_$i$i$i6 >> 2] | 0;
+ HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
+ HEAP32[$__value_$i$i$i >> 2] = $11;
+ HEAP32[$__v >> 2] = HEAP32[$__begin_2 >> 2];
  return;
 }
 
@@ -40547,59 +39732,6 @@ function _fons__allocFont($stash) {
  $31 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
  return $31 | 0;
-}
-
-function __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6insertINS_21__list_const_iteratorIS1_PvEEEENS_15__list_iteratorIS1_S7_EES8_T_SB_PNS_9enable_ifIXsr19__is_input_iteratorISB_EE5valueEvE4typeE($this, $__p, $__f, $__l, $0) {
- $this = $this | 0;
- $__p = $__p | 0;
- $__f = $__f | 0;
- $__l = $__l | 0;
- $0 = $0 | 0;
- var $$cast = 0, $$in = 0, $$pre$phiZ2D = 0, $1 = 0, $12 = 0, $13 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $8 = 0, $__ds$0$lcssa = 0, $__ds$075 = 0, $__e$sroa$0$0$lcssa = 0, $__e$sroa$0$074 = 0, $__value_$i$i$i21 = 0, $call$i$i$i$i = 0, $__e$sroa$0$074$looptemp = 0;
- $1 = HEAP32[$__p >> 2] | 0;
- $2 = HEAP32[$__f >> 2] | 0;
- $3 = HEAP32[$__l >> 2] | 0;
- if (($2 | 0) == ($3 | 0)) $$pre$phiZ2D = $1; else {
-  $call$i$i$i$i = __Znwm(20) | 0;
-  HEAP32[$call$i$i$i$i >> 2] = 0;
-  __ZN8TPPLPolyC2ERKS_($call$i$i$i$i + 8 | 0, $2 + 8 | 0);
-  $4 = $call$i$i$i$i;
-  $5 = HEAP32[$2 + 4 >> 2] | 0;
-  HEAP32[$__f >> 2] = $5;
-  $$cast = $5;
-  if (($3 | 0) == ($$cast | 0)) {
-   $__ds$0$lcssa = 1;
-   $__e$sroa$0$0$lcssa = $4;
-  } else {
-   $$in = $5;
-   $8 = $$cast;
-   $__ds$075 = 1;
-   $__e$sroa$0$074 = $4;
-   do {
-    $__e$sroa$0$074$looptemp = $__e$sroa$0$074;
-    $__e$sroa$0$074 = __Znwm(20) | 0;
-    __ZN8TPPLPolyC2ERKS_($__e$sroa$0$074 + 8 | 0, $$in + 8 | 0);
-    HEAP32[$__e$sroa$0$074$looptemp + 4 >> 2] = $__e$sroa$0$074;
-    HEAP32[$__e$sroa$0$074 >> 2] = $__e$sroa$0$074$looptemp;
-    $$in = HEAP32[$8 + 4 >> 2] | 0;
-    HEAP32[$__f >> 2] = $$in;
-    $__ds$075 = $__ds$075 + 1 | 0;
-    $8 = $$in;
-   } while (($3 | 0) != ($8 | 0));
-   $__ds$0$lcssa = $__ds$075;
-   $__e$sroa$0$0$lcssa = $__e$sroa$0$074;
-  }
-  $12 = $__e$sroa$0$0$lcssa;
-  $13 = HEAP32[$1 >> 2] | 0;
-  HEAP32[$13 + 4 >> 2] = $call$i$i$i$i;
-  HEAP32[$call$i$i$i$i >> 2] = $13;
-  HEAP32[$1 >> 2] = $12;
-  HEAP32[$12 + 4 >> 2] = $1;
-  $__value_$i$i$i21 = $this + 8 | 0;
-  HEAP32[$__value_$i$i$i21 >> 2] = (HEAP32[$__value_$i$i$i21 >> 2] | 0) + $__ds$0$lcssa;
-  $$pre$phiZ2D = $call$i$i$i$i;
- }
- return $$pre$phiZ2D | 0;
 }
 
 function _stbi__load_and_postprocess_8bit($s, $x, $y, $comp, $req_comp) {
@@ -41052,58 +40184,47 @@ function __sg_gl_teximage_format($fmt) {
  return HEAP32[$retval >> 2] | 0;
 }
 
-function __ZN2Dr24DifferenceBetween2AnglesEdd($angle1, $angle2) {
- $angle1 = +$angle1;
- $angle2 = +$angle2;
- var $add = 0.0, $add4 = 0.0, $angle1$addr$0$lcssa = 0.0, $angle1$addr$029 = 0.0, $angle1$addr$1$lcssa = 0.0, $angle1$addr$123 = 0.0, $angle2$addr$0$lcssa = 0.0, $angle2$addr$026 = 0.0, $angle2$addr$1$lcssa = 0.0, $angle2$addr$121 = 0.0, $diff$0 = 0.0, $sub = 0.0, $sub13 = 0.0, $sub16 = 0.0, $sub21 = 0.0;
- if ($angle1 < 0.0) {
-  $angle1$addr$029 = $angle1;
-  while (1) {
-   $add = $angle1$addr$029 + 360.0;
-   if ($add < 0.0) $angle1$addr$029 = $add; else {
-    $angle1$addr$0$lcssa = $add;
-    break;
-   }
-  }
- } else $angle1$addr$0$lcssa = $angle1;
- if ($angle2 < 0.0) {
-  $angle2$addr$026 = $angle2;
-  while (1) {
-   $add4 = $angle2$addr$026 + 360.0;
-   if ($add4 < 0.0) $angle2$addr$026 = $add4; else {
-    $angle2$addr$0$lcssa = $add4;
-    break;
-   }
-  }
- } else $angle2$addr$0$lcssa = $angle2;
- if (!($angle1$addr$0$lcssa >= 360.0)) $angle1$addr$1$lcssa = $angle1$addr$0$lcssa; else {
-  $angle1$addr$123 = $angle1$addr$0$lcssa;
-  while (1) {
-   $sub = $angle1$addr$123 + -360.0;
-   if (!($sub >= 360.0)) {
-    $angle1$addr$1$lcssa = $sub;
-    break;
-   } else $angle1$addr$123 = $sub;
-  }
+function __ZN6DrMesh18extrudeFacePolygonERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEEiiib($this, $outline_points, $width, $height, $steps, $reverse) {
+ $this = $this | 0;
+ $outline_points = $outline_points | 0;
+ $width = $width | 0;
+ $height = $height | 0;
+ $steps = $steps | 0;
+ $reverse = $reverse | 0;
+ var $0 = 0.0, $1 = 0.0, $3 = 0, $4 = 0, $5 = 0.0, $6 = 0.0, $7 = 0.0, $8 = 0.0, $__end_$i = 0, $add = 0, $conv = 0.0, $conv15 = 0.0, $conv2 = 0.0, $conv20 = 0.0, $conv33 = 0.0, $conv38 = 0.0, $conv39 = 0.0, $conv43 = 0.0, $div48 = 0.0, $div50 = 0.0, $i$0 = 0, $spec$select = 0, $sub$ptr$div$i = 0, $x1$0 = 0.0, $x2$0 = 0.0, $y1$0 = 0.0, $y2$0 = 0.0;
+ $conv = +($width | 0);
+ $conv2 = +($height | 0);
+ $__end_$i = $outline_points + 4 | 0;
+ $conv39 = $conv * .5;
+ $conv43 = $conv2 * .5;
+ $div48 = 1.0 / +($width | 0);
+ $div50 = 1.0 / +($height | 0);
+ $0 = -$div48;
+ $1 = -$div50;
+ $i$0 = 0;
+ while (1) {
+  $3 = HEAP32[$outline_points >> 2] | 0;
+  $sub$ptr$div$i = (HEAP32[$__end_$i >> 2] | 0) - $3 >> 4;
+  $4 = $3;
+  if (($i$0 | 0) >= ($sub$ptr$div$i | 0)) break;
+  $add = $i$0 + 1 | 0;
+  $spec$select = ($add | 0) < ($sub$ptr$div$i | 0) ? $add : 0;
+  $5 = +HEAPF64[$4 + ($spec$select << 4) >> 3];
+  $6 = +HEAPF64[$4 + ($spec$select << 4) + 8 >> 3];
+  $conv15 = $5 / $conv;
+  $conv20 = $6 / $conv2;
+  $7 = +HEAPF64[$4 + ($i$0 << 4) >> 3];
+  $8 = +HEAPF64[$4 + ($i$0 << 4) + 8 >> 3];
+  $conv33 = $7 / $conv;
+  $conv38 = $8 / $conv2;
+  $x1$0 = $5 - $conv39 + ($conv15 > .5 ? $0 : $div48);
+  $x2$0 = $7 - $conv39 + ($conv33 > .5 ? $0 : $div48);
+  $y1$0 = $conv2 - $6 - $conv43 + ($conv20 > .5 ? $1 : $div50);
+  $y2$0 = $conv2 - $8 - $conv43 + ($conv38 > .5 ? $1 : $div50);
+  if ($reverse) __ZN6DrMesh7extrudeEffffffffi($this, $x2$0, $y2$0, $conv33, $conv38, $x1$0, $y1$0, $conv15, $conv20, $steps); else __ZN6DrMesh7extrudeEffffffffi($this, $x1$0, $y1$0, $conv15, $conv20, $x2$0, $y2$0, $conv33, $conv38, $steps);
+  $i$0 = $add;
  }
- if (!($angle2$addr$0$lcssa >= 360.0)) $angle2$addr$1$lcssa = $angle2$addr$0$lcssa; else {
-  $angle2$addr$121 = $angle2$addr$0$lcssa;
-  while (1) {
-   $sub13 = $angle2$addr$121 + -360.0;
-   if (!($sub13 >= 360.0)) {
-    $angle2$addr$1$lcssa = $sub13;
-    break;
-   } else $angle2$addr$121 = $sub13;
-  }
- }
- if ($angle1$addr$1$lcssa > $angle2$addr$1$lcssa) {
-  $sub16 = $angle1$addr$1$lcssa - $angle2$addr$1$lcssa;
-  if ($sub16 > 180.0) $diff$0 = $angle2$addr$1$lcssa - ($angle1$addr$1$lcssa + -360.0); else $diff$0 = $sub16;
- } else {
-  $sub21 = $angle2$addr$1$lcssa - $angle1$addr$1$lcssa;
-  if ($sub21 > 180.0) $diff$0 = $angle1$addr$1$lcssa - ($angle2$addr$1$lcssa + -360.0); else $diff$0 = $sub21;
- }
- return +$diff$0;
+ return;
 }
 
 function __sgl_ortho($dst, $left, $right, $bottom, $top, $znear, $zfar) {
@@ -41400,6 +40521,50 @@ function _fons__allocAtlas($w, $h, $nnodes) {
  return $28 | 0;
 }
 
+function __ZN2Dr22BlackAndWhiteFromAlphaERK8DrBitmapdb13Bitmap_Format($agg$result, $bitmap, $alpha_tolerance, $inverse, $desired_format) {
+ $agg$result = $agg$result | 0;
+ $bitmap = $bitmap | 0;
+ $alpha_tolerance = +$alpha_tolerance;
+ $inverse = $inverse | 0;
+ $desired_format = $desired_format | 0;
+ var $agg$tmp = 0, $cmp7 = 0, $color1 = 0, $color2 = 0, $cond$lvalue2D = 0, $conv = 0, $height = 0, $ref$tmp = 0, $tmpcast$byval_copy = 0, $width = 0, $x$0 = 0, $y$0 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 32 | 0;
+ $tmpcast$byval_copy = sp + 16 | 0;
+ $color1 = sp + 12 | 0;
+ $color2 = sp + 8 | 0;
+ $agg$tmp = sp;
+ $ref$tmp = sp + 4 | 0;
+ __ZN7DrColorC2Ej($color1, 0);
+ __ZN7DrColorC2Ej($color2, -1);
+ if ($inverse) __ZN2Dr4SwapI7DrColorEEvRT_S3_($color1, $color2);
+ __ZN8DrBitmapC2ERKS_13Bitmap_Format($agg$result, $bitmap, $desired_format);
+ $conv = ~~($alpha_tolerance * 255.0);
+ $width = $bitmap + 8 | 0;
+ $height = $bitmap + 12 | 0;
+ $x$0 = 0;
+ while (1) {
+  if (($x$0 | 0) >= (HEAP32[$width >> 2] | 0)) break;
+  $y$0 = 0;
+  while (1) {
+   if (($y$0 | 0) >= (HEAP32[$height >> 2] | 0)) break;
+   __ZNK8DrBitmap8getPixelEii($ref$tmp, $bitmap, $x$0, $y$0);
+   $cmp7 = (HEAPU8[(__ZNK7DrColor5alphaEv($ref$tmp) | 0) >> 0] | 0 | 0) < ($conv | 0);
+   $cond$lvalue2D = $cmp7 ? $color1 : $color2;
+   HEAP32[$agg$tmp >> 2] = HEAPU8[$cond$lvalue2D >> 0] | HEAPU8[$cond$lvalue2D + 1 >> 0] << 8 | HEAPU8[$cond$lvalue2D + 2 >> 0] << 16 | HEAPU8[$cond$lvalue2D + 3 >> 0] << 24;
+   HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
+   HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
+   __ZN8DrBitmap8setPixelEii7DrColor($agg$result, $x$0, $y$0, $tmpcast$byval_copy);
+   $y$0 = $y$0 + 1 | 0;
+  }
+  $x$0 = $x$0 + 1 | 0;
+ }
+ STACKTOP = sp;
+ return;
+}
+
 function _stbi__compute_transparency($z, $tc, $out_n) {
  $z = $z | 0;
  $tc = $tc | 0;
@@ -41681,6 +40846,52 @@ function _stbi__build_fast_ac($fast_ac, $h) {
   }
   HEAP32[$i >> 2] = (HEAP32[$i >> 2] | 0) + 1;
  }
+ STACKTOP = sp;
+ return;
+}
+
+function __ZN8DrBitmapC2ERKS_13Bitmap_Format($this, $bitmap, $desired_format) {
+ $this = $this | 0;
+ $bitmap = $bitmap | 0;
+ $desired_format = $desired_format | 0;
+ var $5 = 0, $6 = 0, $8 = 0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $channels = 0, $data = 0, $height = 0, $mul = 0, $width = 0, $x$0 = 0, $y$0 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 16 | 0;
+ $agg$tmp$byval_copy = sp + 4 | 0;
+ $agg$tmp = sp;
+ $width = $bitmap + 8 | 0;
+ $height = $bitmap + 12 | 0;
+ __ZN8DrBitmapC2Eii13Bitmap_Format($this, HEAP32[$width >> 2] | 0, HEAP32[$height >> 2] | 0, $desired_format);
+ L1 : do if ((HEAP32[$bitmap >> 2] | 0) == (HEAP32[$this >> 2] | 0)) {
+  $channels = $bitmap + 4 | 0;
+  HEAP32[$this + 4 >> 2] = HEAP32[$channels >> 2];
+  $5 = HEAP32[$width >> 2] | 0;
+  HEAP32[$this + 8 >> 2] = $5;
+  $6 = HEAP32[$height >> 2] | 0;
+  HEAP32[$this + 12 >> 2] = $6;
+  $data = $this + 16 | 0;
+  $mul = Math_imul($6, $5) | 0;
+  __ZNSt3__26vectorIhNS_9allocatorIhEEE6resizeEm($data, Math_imul($mul, HEAP32[$channels >> 2] | 0) | 0);
+  $8 = HEAP32[$data >> 2] | 0;
+  _memcpy($8 | 0, HEAP32[$bitmap + 16 >> 2] | 0, (HEAP32[$this + 20 >> 2] | 0) - $8 | 0) | 0;
+ } else {
+  $x$0 = 0;
+  while (1) {
+   if (($x$0 | 0) >= (HEAP32[$width >> 2] | 0)) break L1;
+   $y$0 = 0;
+   while (1) {
+    if (($y$0 | 0) >= (HEAP32[$height >> 2] | 0)) break;
+    __ZNK8DrBitmap8getPixelEii($agg$tmp, $bitmap, $x$0, $y$0);
+    HEAP8[$agg$tmp$byval_copy >> 0] = HEAP8[$agg$tmp >> 0] | 0;
+    HEAP8[$agg$tmp$byval_copy + 1 >> 0] = HEAP8[$agg$tmp + 1 >> 0] | 0;
+    HEAP8[$agg$tmp$byval_copy + 2 >> 0] = HEAP8[$agg$tmp + 2 >> 0] | 0;
+    HEAP8[$agg$tmp$byval_copy + 3 >> 0] = HEAP8[$agg$tmp + 3 >> 0] | 0;
+    __ZN8DrBitmap8setPixelEii7DrColor($this, $x$0, $y$0, $agg$tmp$byval_copy);
+    $y$0 = $y$0 + 1 | 0;
+   }
+   $x$0 = $x$0 + 1 | 0;
+  }
+ } while (0);
  STACKTOP = sp;
  return;
 }
@@ -42754,6 +41965,50 @@ function _stbtt__csctx_rccurve_to($ctx, $dx1, $dy1, $dx2, $dy2, $dx3, $dy3) {
  return;
 }
 
+function __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE6insertINS_21__list_const_iteratorIS1_PvEEEENS_15__list_iteratorIS1_S7_EES8_T_SB_PNS_9enable_ifIXsr19__is_input_iteratorISB_EE5valueEvE4typeE($this, $__p, $__f, $__l, $0) {
+ $this = $this | 0;
+ $__p = $__p | 0;
+ $__f = $__f | 0;
+ $__l = $__l | 0;
+ $0 = $0 | 0;
+ var $$in = 0, $$pre$phiZ2D = 0, $1 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $7 = 0, $8 = 0, $__ds$0 = 0, $__e$sroa$0$0$in = 0, $__value_$i$i$i21 = 0, $call$i$i$i$i = 0, $call$i$i$i44 = 0;
+ $1 = HEAP32[$__p >> 2] | 0;
+ $2 = HEAP32[$__f >> 2] | 0;
+ $3 = HEAP32[$__l >> 2] | 0;
+ if (($2 | 0) == ($3 | 0)) $$pre$phiZ2D = $1; else {
+  $call$i$i$i$i = __Znwm(20) | 0;
+  HEAP32[$call$i$i$i$i >> 2] = 0;
+  __ZN8TPPLPolyC2ERKS_($call$i$i$i$i + 8 | 0, $2 + 8 | 0);
+  $4 = HEAP32[$2 + 4 >> 2] | 0;
+  HEAP32[$__f >> 2] = $4;
+  $$in = $4;
+  $__ds$0 = 1;
+  $__e$sroa$0$0$in = $call$i$i$i$i;
+  while (1) {
+   $5 = $$in;
+   if (($3 | 0) == ($5 | 0)) break;
+   $call$i$i$i44 = __Znwm(20) | 0;
+   __ZN8TPPLPolyC2ERKS_($call$i$i$i44 + 8 | 0, $$in + 8 | 0);
+   HEAP32[$__e$sroa$0$0$in + 4 >> 2] = $call$i$i$i44;
+   HEAP32[$call$i$i$i44 >> 2] = $__e$sroa$0$0$in;
+   $7 = HEAP32[$5 + 4 >> 2] | 0;
+   HEAP32[$__f >> 2] = $7;
+   $$in = $7;
+   $__ds$0 = $__ds$0 + 1 | 0;
+   $__e$sroa$0$0$in = $call$i$i$i44;
+  }
+  $8 = HEAP32[$1 >> 2] | 0;
+  HEAP32[$8 + 4 >> 2] = $call$i$i$i$i;
+  HEAP32[$call$i$i$i$i >> 2] = $8;
+  HEAP32[$1 >> 2] = $__e$sroa$0$0$in;
+  HEAP32[$__e$sroa$0$0$in + 4 >> 2] = $1;
+  $__value_$i$i$i21 = $this + 8 | 0;
+  HEAP32[$__value_$i$i$i21 >> 2] = (HEAP32[$__value_$i$i$i21 >> 2] | 0) + $__ds$0;
+  $$pre$phiZ2D = $call$i$i$i$i;
+ }
+ return $$pre$phiZ2D | 0;
+}
+
 function __sapp_emsc_wheel_cb($emsc_type, $emsc_event, $user_data) {
  $emsc_type = $emsc_type | 0;
  $emsc_event = $emsc_event | 0;
@@ -43580,54 +42835,6 @@ function __sg_slot_alloc($pool, $slot, $slot_index) {
  return 0;
 }
 
-function __ZNSt3__218__insertion_sort_3IRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__first, $__last, $__comp) {
- $__first = $__first | 0;
- $__last = $__last | 0;
- $__comp = $__comp | 0;
- var $0 = 0, $1 = 0, $2 = 0, $__i$026 = 0, $__j$025 = 0, $__j$025$phi = 0, $__j$1 = 0, $__j$1$phi = 0, $__k$0 = 0, $__k$0$lcssa = 0, $add$ptr = 0, $add$ptr2 = 0, $incdec$ptr = 0, $incdec$ptr9 = 0;
- $add$ptr = $__first + 8 | 0;
- __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first, $__first + 4 | 0, $add$ptr, $__comp) | 0;
- $add$ptr2 = $__first + 12 | 0;
- if (($add$ptr2 | 0) != ($__last | 0)) {
-  $__i$026 = $add$ptr2;
-  $__j$025 = $add$ptr;
-  while (1) {
-   $0 = HEAP32[$__i$026 >> 2] | 0;
-   $1 = HEAP32[$__j$025 >> 2] | 0;
-   if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $0, $1) | 0) {
-    $2 = $1;
-    $__j$1 = $__i$026;
-    $__k$0 = $__j$025;
-    while (1) {
-     HEAP32[$__j$1 >> 2] = $2;
-     if (($__k$0 | 0) == ($__first | 0)) {
-      $__k$0$lcssa = $__first;
-      break;
-     }
-     $incdec$ptr = $__k$0 + -4 | 0;
-     $2 = HEAP32[$incdec$ptr >> 2] | 0;
-     if (!(__ZN13TPPLPartition12VertexSorterclEll($__comp, $0, $2) | 0)) {
-      $__k$0$lcssa = $__k$0;
-      break;
-     } else {
-      $__j$1$phi = $__k$0;
-      $__k$0 = $incdec$ptr;
-      $__j$1 = $__j$1$phi;
-     }
-    }
-    HEAP32[$__k$0$lcssa >> 2] = $0;
-   }
-   $incdec$ptr9 = $__i$026 + 4 | 0;
-   if (($incdec$ptr9 | 0) == ($__last | 0)) break; else {
-    $__j$025$phi = $__i$026;
-    $__i$026 = $incdec$ptr9;
-    $__j$025 = $__j$025$phi;
-   }
-  }
- }
- return;
-}
-
 function _stbi__gif_load($s, $x, $y, $comp, $req_comp, $ri) {
  $s = $s | 0;
  $x = $x | 0;
@@ -43894,48 +43101,6 @@ function _stbtt__dict_get($agg$result, $b, $key) {
   STACKTOP = sp;
   return;
  }
-}
-
-function __ZNSt3__26vectorI8DrBitmapNS_9allocatorIS1_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS1_RS3_EE($this, $__v) {
- $this = $this | 0;
- $__v = $__v | 0;
- var $$pre$phi11Z2D = 0, $$pre$phiZ2D = 0, $0 = 0, $1 = 0, $10 = 0, $3 = 0, $6 = 0, $7 = 0, $8 = 0, $__begin_2 = 0, $__end1$addr$04$i = 0, $__end_ = 0, $__end_6 = 0, $__value_$i$i$i = 0, $__value_$i$i$i6 = 0;
- $0 = HEAP32[$this >> 2] | 0;
- $__end_ = $this + 4 | 0;
- $1 = HEAP32[$__end_ >> 2] | 0;
- $__begin_2 = $__v + 4 | 0;
- if (($1 | 0) == ($0 | 0)) {
-  $$pre$phi11Z2D = $__begin_2;
-  $$pre$phiZ2D = $this;
-  $6 = HEAP32[$__begin_2 >> 2] | 0;
-  $7 = $0;
- } else {
-  $3 = HEAP32[$__begin_2 >> 2] | 0;
-  $__end1$addr$04$i = $1;
-  do {
-   $__end1$addr$04$i = $__end1$addr$04$i + -28 | 0;
-   __ZN8DrBitmapC2ERKS_13Bitmap_Format($3 + -28 | 0, $__end1$addr$04$i, 4);
-   $3 = (HEAP32[$__begin_2 >> 2] | 0) + -28 | 0;
-   HEAP32[$__begin_2 >> 2] = $3;
-  } while (($__end1$addr$04$i | 0) != ($0 | 0));
-  $$pre$phi11Z2D = $__begin_2;
-  $$pre$phiZ2D = $this;
-  $6 = $3;
-  $7 = HEAP32[$this >> 2] | 0;
- }
- HEAP32[$$pre$phiZ2D >> 2] = $6;
- HEAP32[$$pre$phi11Z2D >> 2] = $7;
- $__end_6 = $__v + 8 | 0;
- $8 = HEAP32[$__end_ >> 2] | 0;
- HEAP32[$__end_ >> 2] = HEAP32[$__end_6 >> 2];
- HEAP32[$__end_6 >> 2] = $8;
- $__value_$i$i$i6 = $this + 8 | 0;
- $__value_$i$i$i = $__v + 12 | 0;
- $10 = HEAP32[$__value_$i$i$i6 >> 2] | 0;
- HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
- HEAP32[$__value_$i$i$i >> 2] = $10;
- HEAP32[$__v >> 2] = HEAP32[$$pre$phi11Z2D >> 2];
- return;
 }
 
 function ___fwritex($s, $l, $f) {
@@ -44278,48 +43443,6 @@ function __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE21__pus
   STACKTOP = sp;
   return;
  }
-}
-
-function __ZNSt3__26vectorI6DrRectNS_9allocatorIS1_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS1_RS3_EE($this, $__v) {
- $this = $this | 0;
- $__v = $__v | 0;
- var $$pre$phi11Z2D = 0, $$pre$phiZ2D = 0, $0 = 0, $1 = 0, $10 = 0, $3 = 0, $6 = 0, $7 = 0, $8 = 0, $__begin_2 = 0, $__end1$addr$04$i = 0, $__end_ = 0, $__end_6 = 0, $__value_$i$i$i = 0, $__value_$i$i$i6 = 0;
- $0 = HEAP32[$this >> 2] | 0;
- $__end_ = $this + 4 | 0;
- $1 = HEAP32[$__end_ >> 2] | 0;
- $__begin_2 = $__v + 4 | 0;
- if (($1 | 0) == ($0 | 0)) {
-  $$pre$phi11Z2D = $__begin_2;
-  $$pre$phiZ2D = $this;
-  $6 = HEAP32[$__begin_2 >> 2] | 0;
-  $7 = $0;
- } else {
-  $3 = HEAP32[$__begin_2 >> 2] | 0;
-  $__end1$addr$04$i = $1;
-  do {
-   $__end1$addr$04$i = $__end1$addr$04$i + -16 | 0;
-   __ZN6DrRectC2ERKS_($3 + -16 | 0, $__end1$addr$04$i);
-   $3 = (HEAP32[$__begin_2 >> 2] | 0) + -16 | 0;
-   HEAP32[$__begin_2 >> 2] = $3;
-  } while (($__end1$addr$04$i | 0) != ($0 | 0));
-  $$pre$phi11Z2D = $__begin_2;
-  $$pre$phiZ2D = $this;
-  $6 = $3;
-  $7 = HEAP32[$this >> 2] | 0;
- }
- HEAP32[$$pre$phiZ2D >> 2] = $6;
- HEAP32[$$pre$phi11Z2D >> 2] = $7;
- $__end_6 = $__v + 8 | 0;
- $8 = HEAP32[$__end_ >> 2] | 0;
- HEAP32[$__end_ >> 2] = HEAP32[$__end_6 >> 2];
- HEAP32[$__end_6 >> 2] = $8;
- $__value_$i$i$i6 = $this + 8 | 0;
- $__value_$i$i$i = $__v + 12 | 0;
- $10 = HEAP32[$__value_$i$i$i6 >> 2] | 0;
- HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
- HEAP32[$__value_$i$i$i >> 2] = $10;
- HEAP32[$__v >> 2] = HEAP32[$$pre$phi11Z2D >> 2];
- return;
 }
 
 function __sfetch_ring_init($rb, $num_slots) {
@@ -44897,51 +44020,6 @@ function _HMM_MultiplyMat4($agg$result, $Left, $Right) {
  return;
 }
 
-function __ZNSt3__218__insertion_sort_3IR7comparePmEEvT0_S4_T_($__first, $__last, $__comp) {
- $__first = $__first | 0;
- $__last = $__last | 0;
- $__comp = $__comp | 0;
- var $2 = 0, $__i$026 = 0, $__j$025 = 0, $__j$025$phi = 0, $__j$1 = 0, $__j$1$phi = 0, $__k$0 = 0, $__k$0$lcssa = 0, $add$ptr = 0, $add$ptr2 = 0, $incdec$ptr = 0, $incdec$ptr9 = 0;
- $add$ptr = $__first + 8 | 0;
- __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first, $__first + 4 | 0, $add$ptr, $__comp) | 0;
- $add$ptr2 = $__first + 12 | 0;
- if (($add$ptr2 | 0) != ($__last | 0)) {
-  $__i$026 = $add$ptr2;
-  $__j$025 = $add$ptr;
-  while (1) {
-   if (__ZN7compareclEmm($__comp, HEAP32[$__i$026 >> 2] | 0, HEAP32[$__j$025 >> 2] | 0) | 0) {
-    $2 = HEAP32[$__i$026 >> 2] | 0;
-    $__j$1 = $__i$026;
-    $__k$0 = $__j$025;
-    while (1) {
-     HEAP32[$__j$1 >> 2] = HEAP32[$__k$0 >> 2];
-     if (($__k$0 | 0) == ($__first | 0)) {
-      $__k$0$lcssa = $__first;
-      break;
-     }
-     $incdec$ptr = $__k$0 + -4 | 0;
-     if (__ZN7compareclEmm($__comp, $2, HEAP32[$incdec$ptr >> 2] | 0) | 0) {
-      $__j$1$phi = $__k$0;
-      $__k$0 = $incdec$ptr;
-      $__j$1 = $__j$1$phi;
-     } else {
-      $__k$0$lcssa = $__k$0;
-      break;
-     }
-    }
-    HEAP32[$__k$0$lcssa >> 2] = $2;
-   }
-   $incdec$ptr9 = $__i$026 + 4 | 0;
-   if (($incdec$ptr9 | 0) == ($__last | 0)) break; else {
-    $__j$025$phi = $__i$026;
-    $__i$026 = $incdec$ptr9;
-    $__j$025 = $__j$025$phi;
-   }
-  }
- }
- return;
-}
-
 function _fonsPushState($stash) {
  $stash = $stash | 0;
  var $2 = 0, $arrayidx = 0, $arrayidx10 = 0, $nstates12 = 0, $stash$addr = 0, sp = 0;
@@ -45115,6 +44193,47 @@ function __ZNSt3__27__sort5IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_S5_S5_
   } else $__r$0 = $inc;
  } else $__r$0 = $call;
  return $__r$0 | 0;
+}
+
+function _meshopt_remapVertexBuffer($destination, $vertices, $vertex_count, $vertex_size, $remap) {
+ $destination = $destination | 0;
+ $vertices = $vertices | 0;
+ $vertex_count = $vertex_count | 0;
+ $vertex_size = $vertex_size | 0;
+ $remap = $remap | 0;
+ var $1 = 0, $allocator = 0, $call = 0, $i$0 = 0, $mul = 0, $vertices$addr$0 = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 112 | 0;
+ $allocator = sp;
+ if (($vertex_size + -1 | 0) >>> 0 >= 256) ___assert_fail(47282, 45771, 291, 45994);
+ __ZN17meshopt_AllocatorC2Ev($allocator);
+ if (($destination | 0) == ($vertices | 0)) {
+  $mul = Math_imul($vertex_size, $vertex_count) | 0;
+  $call = __ZN17meshopt_Allocator8allocateIhEEPT_m($allocator, $mul) | 0;
+  _memcpy($call | 0, $destination | 0, $mul | 0) | 0;
+  $vertices$addr$0 = $call;
+ } else $vertices$addr$0 = $vertices;
+ $i$0 = 0;
+ while (1) {
+  if ($i$0 >>> 0 >= $vertex_count >>> 0) {
+   label = 7;
+   break;
+  }
+  $1 = HEAP32[$remap + ($i$0 << 2) >> 2] | 0;
+  if (($1 | 0) != -1) {
+   if ($1 >>> 0 >= $vertex_count >>> 0) {
+    label = 10;
+    break;
+   }
+   _memcpy($destination + (Math_imul($1, $vertex_size) | 0) | 0, $vertices$addr$0 + (Math_imul($i$0, $vertex_size) | 0) | 0, $vertex_size | 0) | 0;
+  }
+  $i$0 = $i$0 + 1 | 0;
+ }
+ if ((label | 0) == 7) {
+  __ZN17meshopt_AllocatorD2Ev($allocator);
+  STACKTOP = sp;
+  return;
+ } else if ((label | 0) == 10) ___assert_fail(46020, 45771, 307, 45994);
 }
 
 function __ZNSt3__210shared_ptrI7DrImageE11make_sharedIJRA7_KcR8DrBitmapfEEES2_DpOT_($agg$result, $__args, $__args1, $__args3) {
@@ -45348,40 +44467,6 @@ function __ZN12_GLOBAL__N_116itanium_demangle19parse_discriminatorEPKcS2_($first
   }
  } while (0);
  return $first$addr$2 | 0;
-}
-
-function __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE5eraseENS_21__tree_const_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEE($this, $__p) {
- $this = $this | 0;
- $__p = $__p | 0;
- var $0 = 0, $2 = 0, $3 = 0, $4 = 0, $5 = 0, $7 = 0, $8 = 0, $__parent_$i410$i$i$i = 0, $__value_$i$i$i4$i = 0, $__x$addr$0$i$i$i$i = 0, $retval$0$i$i$i = 0;
- $0 = HEAP32[$__p >> 2] | 0;
- $2 = HEAP32[$0 + 4 >> 2] | 0;
- if (!$2) {
-  $4 = $0 + 8 | 0;
-  $5 = HEAP32[$4 >> 2] | 0;
-  if ((HEAP32[$5 >> 2] | 0) == ($0 | 0)) $retval$0$i$i$i = $5; else {
-   $__parent_$i410$i$i$i = $4;
-   do {
-    $7 = HEAP32[$__parent_$i410$i$i$i >> 2] | 0;
-    $__parent_$i410$i$i$i = $7 + 8 | 0;
-    $8 = HEAP32[$__parent_$i410$i$i$i >> 2] | 0;
-   } while ((HEAP32[$8 >> 2] | 0) != ($7 | 0));
-   $retval$0$i$i$i = $8;
-  }
- } else {
-  $__x$addr$0$i$i$i$i = $2;
-  while (1) {
-   $3 = HEAP32[$__x$addr$0$i$i$i$i >> 2] | 0;
-   if (!$3) break; else $__x$addr$0$i$i$i$i = $3;
-  }
-  $retval$0$i$i$i = $__x$addr$0$i$i$i$i;
- }
- if ((HEAP32[$this >> 2] | 0) == ($0 | 0)) HEAP32[$this >> 2] = $retval$0$i$i$i;
- $__value_$i$i$i4$i = $this + 8 | 0;
- HEAP32[$__value_$i$i$i4$i >> 2] = (HEAP32[$__value_$i$i$i4$i >> 2] | 0) + -1;
- __ZNSt3__213__tree_removeIPNS_16__tree_node_baseIPvEEEEvT_S5_(HEAP32[$this + 4 >> 2] | 0, $0);
- __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($0, 72);
- return $retval$0$i$i$i | 0;
 }
 
 function _stbi__grow_buffer_unsafe($j) {
@@ -45849,42 +44934,6 @@ function _stbi__readval($s, $channel, $dest) {
  return 0;
 }
 
-function _meshopt_remapVertexBuffer($destination, $vertices, $vertex_count, $vertex_size, $remap) {
- $destination = $destination | 0;
- $vertices = $vertices | 0;
- $vertex_count = $vertex_count | 0;
- $vertex_size = $vertex_size | 0;
- $remap = $remap | 0;
- var $1 = 0, $allocator = 0, $call = 0, $i$026 = 0, $mul = 0, $vertices$addr$0 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 112 | 0;
- $allocator = sp;
- if (($vertex_size + -1 | 0) >>> 0 >= 256) ___assert_fail(47282, 45771, 291, 45994);
- __ZN17meshopt_AllocatorC2Ev($allocator);
- if (($destination | 0) == ($vertices | 0)) {
-  $mul = Math_imul($vertex_size, $vertex_count) | 0;
-  $call = __ZN17meshopt_Allocator8allocateIhEEPT_m($allocator, $mul) | 0;
-  _memcpy($call | 0, $destination | 0, $mul | 0) | 0;
-  $vertices$addr$0 = $call;
- } else $vertices$addr$0 = $vertices;
- L7 : do if ($vertex_count | 0) {
-  $i$026 = 0;
-  while (1) {
-   $1 = HEAP32[$remap + ($i$026 << 2) >> 2] | 0;
-   if (($1 | 0) != -1) {
-    if ($1 >>> 0 >= $vertex_count >>> 0) break;
-    _memcpy($destination + (Math_imul($1, $vertex_size) | 0) | 0, $vertices$addr$0 + (Math_imul($i$026, $vertex_size) | 0) | 0, $vertex_size | 0) | 0;
-   }
-   $i$026 = $i$026 + 1 | 0;
-   if ($i$026 >>> 0 >= $vertex_count >>> 0) break L7;
-  }
-  ___assert_fail(46020, 45771, 307, 45994);
- } while (0);
- __ZN17meshopt_AllocatorD2Ev($allocator);
- STACKTOP = sp;
- return;
-}
-
 function __ZNK12_GLOBAL__N_116itanium_demangle13ReferenceType10printRightERNS_12OutputStreamE($this, $s) {
  $this = $this | 0;
  $s = $s | 0;
@@ -45943,37 +44992,6 @@ function __ZNK12_GLOBAL__N_116itanium_demangle10DeleteExpr9printLeftERNS_12Outpu
  __ZNK12_GLOBAL__N_116itanium_demangle4Node5printERNS_12OutputStreamE(HEAP32[$this + 8 >> 2] | 0, $S);
  STACKTOP = sp;
  return;
-}
-
-function __ZN7meshoptL22generateHardBoundariesEPjPKjmmjS0_($destination, $indices, $index_count, $vertex_count, $cache_timestamps) {
- $destination = $destination | 0;
- $indices = $indices | 0;
- $index_count = $index_count | 0;
- $vertex_count = $vertex_count | 0;
- $cache_timestamps = $cache_timestamps | 0;
- var $div = 0, $i$02 = 0, $mul1 = 0, $result$0$lcssa5 = 0, $result$03 = 0, $result$1 = 0, $timestamp = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 16 | 0;
- $timestamp = sp;
- _memset($cache_timestamps | 0, 0, $vertex_count << 2 | 0) | 0;
- HEAP32[$timestamp >> 2] = 17;
- $div = ($index_count >>> 0) / 3 | 0;
- if ($index_count >>> 0 > 2) {
-  $i$02 = 0;
-  $result$03 = 0;
-  while (1) {
-   $mul1 = $i$02 * 3 | 0;
-   if (($i$02 | 0) == 0 | (__ZN7meshoptL11updateCacheEjjjjPjRj(HEAP32[$indices + ($mul1 << 2) >> 2] | 0, HEAP32[$indices + ($mul1 + 1 << 2) >> 2] | 0, HEAP32[$indices + ($mul1 + 2 << 2) >> 2] | 0, $cache_timestamps, $timestamp) | 0) == 3) {
-    HEAP32[$destination + ($result$03 << 2) >> 2] = $i$02;
-    $result$1 = $result$03 + 1 | 0;
-   } else $result$1 = $result$03;
-   $i$02 = $i$02 + 1 | 0;
-   if ($i$02 >>> 0 >= $div >>> 0) break; else $result$03 = $result$1;
-  }
-  if ($result$1 >>> 0 > $div >>> 0) ___assert_fail(46625, 46089, 185, 46651); else $result$0$lcssa5 = $result$1;
- } else $result$0$lcssa5 = 0;
- STACKTOP = sp;
- return $result$0$lcssa5 | 0;
 }
 
 function __ZNSt3__27__sort5IR7comparePmEEjT0_S4_S4_S4_S4_T_($__x1, $__x2, $__x3, $__x4, $__x5, $__c) {
@@ -46082,43 +45100,6 @@ function _fons__tmpalloc($size, $up) {
  return $21 | 0;
 }
 
-function __ZN13TPPLPartition16Triangulate_MONOEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $triangles) {
- $this = $this | 0;
- $inpolys = $inpolys | 0;
- $triangles = $triangles | 0;
- var $0 = 0, $1 = 0, $__next_$i$i$i = 0, $iter$sroa$0$011 = 0, $iter$sroa$0$09 = 0, $monotone = 0, $retval$0 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 16 | 0;
- $monotone = sp;
- HEAP32[$monotone >> 2] = $monotone;
- $__next_$i$i$i = $monotone + 4 | 0;
- HEAP32[$__next_$i$i$i >> 2] = $monotone;
- HEAP32[$monotone + 8 >> 2] = 0;
- L1 : do if (!(__ZN13TPPLPartition17MonotonePartitionEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $monotone) | 0)) $retval$0 = 0; else {
-  $iter$sroa$0$09 = HEAP32[$__next_$i$i$i >> 2] | 0;
-  $0 = $iter$sroa$0$09;
-  if (($monotone | 0) == ($0 | 0)) $retval$0 = 1; else {
-   $1 = $0;
-   $iter$sroa$0$011 = $iter$sroa$0$09;
-   while (1) {
-    if (!(__ZN13TPPLPartition19TriangulateMonotoneEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE(0, $iter$sroa$0$011 + 8 | 0, $triangles) | 0)) {
-     $retval$0 = 0;
-     break L1;
-    }
-    $iter$sroa$0$011 = HEAP32[$1 + 4 >> 2] | 0;
-    $1 = $iter$sroa$0$011;
-    if (($monotone | 0) == ($1 | 0)) {
-     $retval$0 = 1;
-     break;
-    }
-   }
-  }
- } while (0);
- __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($monotone);
- STACKTOP = sp;
- return $retval$0 | 0;
-}
-
 function __ZNK10__cxxabiv117__class_type_info16search_below_dstEPNS_19__dynamic_cast_infoEPKvib($this, $info, $current_ptr, $path_below, $use_strcmp) {
  $this = $this | 0;
  $info = $info | 0;
@@ -46211,43 +45192,6 @@ function _fons__tt_renderGlyphBitmap($font, $output, $outWidth, $outHeight, $out
  return;
 }
 
-function __ZN13TPPLPartition14Triangulate_ECEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $triangles) {
- $this = $this | 0;
- $inpolys = $inpolys | 0;
- $triangles = $triangles | 0;
- var $0 = 0, $1 = 0, $__next_$i$i$i = 0, $iter$sroa$0$011 = 0, $iter$sroa$0$09 = 0, $outpolys = 0, $retval$0 = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 16 | 0;
- $outpolys = sp;
- HEAP32[$outpolys >> 2] = $outpolys;
- $__next_$i$i$i = $outpolys + 4 | 0;
- HEAP32[$__next_$i$i$i >> 2] = $outpolys;
- HEAP32[$outpolys + 8 >> 2] = 0;
- L1 : do if (!(__ZN13TPPLPartition11RemoveHolesEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $outpolys) | 0)) $retval$0 = 0; else {
-  $iter$sroa$0$09 = HEAP32[$__next_$i$i$i >> 2] | 0;
-  $0 = $iter$sroa$0$09;
-  if (($outpolys | 0) == ($0 | 0)) $retval$0 = 1; else {
-   $1 = $0;
-   $iter$sroa$0$011 = $iter$sroa$0$09;
-   while (1) {
-    if (!(__ZN13TPPLPartition14Triangulate_ECEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE(0, $iter$sroa$0$011 + 8 | 0, $triangles) | 0)) {
-     $retval$0 = 0;
-     break L1;
-    }
-    $iter$sroa$0$011 = HEAP32[$1 + 4 >> 2] | 0;
-    $1 = $iter$sroa$0$011;
-    if (($outpolys | 0) == ($1 | 0)) {
-     $retval$0 = 1;
-     break;
-    }
-   }
-  }
- } while (0);
- __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($outpolys);
- STACKTOP = sp;
- return $retval$0 | 0;
-}
-
 function __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEmc($this, $__n, $__c) {
  $this = $this | 0;
  $__n = $__n | 0;
@@ -46279,6 +45223,39 @@ function __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6append
  }
  STACKTOP = sp;
  return $this | 0;
+}
+
+function __ZN10DrPolygonF24ensureWindingOrientationERNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE19Winding_Orientation($points, $direction_desired) {
+ $points = $points | 0;
+ $direction_desired = $direction_desired | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $__t$i$i$i$i = 0, $call = 0, $incdec$ptr$i4$i$i = 0, label = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 16 | 0;
+ $__t$i$i$i$i = sp;
+ $call = __ZN10DrPolygonF22findWindingOrientationERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE($points) | 0;
+ if (($direction_desired | 0) == 1 & ($call | 0) == 0) label = 3; else if (($direction_desired | 0) == 0 & ($call | 0) == 1) label = 3;
+ L3 : do if ((label | 0) == 3) {
+  $0 = HEAP32[$points >> 2] | 0;
+  $1 = HEAP32[$points + 4 >> 2] | 0;
+  if (($0 | 0) != ($1 | 0)) {
+   $2 = $1;
+   $3 = $0;
+   while (1) {
+    $incdec$ptr$i4$i$i = $2 + -16 | 0;
+    if ($3 >>> 0 >= $incdec$ptr$i4$i$i >>> 0) break L3;
+    HEAP32[$__t$i$i$i$i >> 2] = HEAP32[$3 >> 2];
+    HEAP32[$__t$i$i$i$i + 4 >> 2] = HEAP32[$3 + 4 >> 2];
+    HEAP32[$__t$i$i$i$i + 8 >> 2] = HEAP32[$3 + 8 >> 2];
+    HEAP32[$__t$i$i$i$i + 12 >> 2] = HEAP32[$3 + 12 >> 2];
+    __ZN8DrPointFaSERKS_($3, $incdec$ptr$i4$i$i) | 0;
+    __ZN8DrPointFaSERKS_($incdec$ptr$i4$i$i, $__t$i$i$i$i) | 0;
+    $2 = $incdec$ptr$i4$i$i;
+    $3 = $3 + 16 | 0;
+   }
+  }
+ } while (0);
+ STACKTOP = sp;
+ return;
 }
 
 function _stbi__extend_receive($j, $n) {
@@ -46330,40 +45307,6 @@ function __ZNSt3__26vectorI6DrRectNS_9allocatorIS1_EEE21__push_back_slow_pathIRK
   STACKTOP = sp;
   return;
  }
-}
-
-function __ZN10DrPolygonF24ensureWindingOrientationERNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE19Winding_Orientation($points, $direction_desired) {
- $points = $points | 0;
- $direction_desired = $direction_desired | 0;
- var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $__t$i$i$i$i = 0, $call = 0, $incdec$ptr$i49$i$i = 0, label = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 16 | 0;
- $__t$i$i$i$i = sp;
- $call = __ZN10DrPolygonF22findWindingOrientationERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE($points) | 0;
- if (($direction_desired | 0) == 1 & ($call | 0) == 0) label = 3; else if (($direction_desired | 0) == 0 & ($call | 0) == 1) label = 3;
- if ((label | 0) == 3) {
-  $0 = HEAP32[$points >> 2] | 0;
-  $1 = HEAP32[$points + 4 >> 2] | 0;
-  if (($0 | 0) != ($1 | 0)) {
-   $incdec$ptr$i49$i$i = $1 + -16 | 0;
-   if ($0 >>> 0 < $incdec$ptr$i49$i$i >>> 0) {
-    $2 = $0;
-    $3 = $incdec$ptr$i49$i$i;
-    do {
-     HEAP32[$__t$i$i$i$i >> 2] = HEAP32[$2 >> 2];
-     HEAP32[$__t$i$i$i$i + 4 >> 2] = HEAP32[$2 + 4 >> 2];
-     HEAP32[$__t$i$i$i$i + 8 >> 2] = HEAP32[$2 + 8 >> 2];
-     HEAP32[$__t$i$i$i$i + 12 >> 2] = HEAP32[$2 + 12 >> 2];
-     __ZN8DrPointFaSERKS_($2, $3) | 0;
-     __ZN8DrPointFaSERKS_($3, $__t$i$i$i$i) | 0;
-     $2 = $2 + 16 | 0;
-     $3 = $3 + -16 | 0;
-    } while ($2 >>> 0 < $3 >>> 0);
-   }
-  }
- }
- STACKTOP = sp;
- return;
 }
 
 function _stbtt_MakeGlyphBitmap($info, $output, $out_w, $out_h, $out_stride, $scale_x, $scale_y, $glyph) {
@@ -46422,6 +45365,49 @@ function __ZNSt3__26vectorI6DrRectNS_9allocatorIS1_EEE21__push_back_slow_pathIS1
   STACKTOP = sp;
   return;
  }
+}
+
+function __ZNSt3__218__insertion_sort_3IRN13TPPLPartition12VertexSorterEPlEEvT0_S5_T_($__first, $__last, $__comp) {
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ $__comp = $__comp | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__i$0 = 0, $__j$0 = 0, $__j$0$phi = 0, $__j$1 = 0, $__j$1$phi = 0, $__k$0 = 0, $__k$0$lcssa = 0, $add$ptr = 0, $incdec$ptr = 0;
+ $add$ptr = $__first + 8 | 0;
+ __ZNSt3__27__sort3IRN13TPPLPartition12VertexSorterEPlEEjT0_S5_S5_T_($__first, $__first + 4 | 0, $add$ptr, $__comp) | 0;
+ $__i$0 = $__first + 12 | 0;
+ $__j$0 = $add$ptr;
+ while (1) {
+  if (($__i$0 | 0) == ($__last | 0)) break;
+  $0 = HEAP32[$__i$0 >> 2] | 0;
+  $1 = HEAP32[$__j$0 >> 2] | 0;
+  if (__ZN13TPPLPartition12VertexSorterclEll($__comp, $0, $1) | 0) {
+   $2 = $1;
+   $__j$1 = $__i$0;
+   $__k$0 = $__j$0;
+   while (1) {
+    HEAP32[$__j$1 >> 2] = $2;
+    if (($__k$0 | 0) == ($__first | 0)) {
+     $__k$0$lcssa = $__first;
+     break;
+    }
+    $incdec$ptr = $__k$0 + -4 | 0;
+    $2 = HEAP32[$incdec$ptr >> 2] | 0;
+    if (!(__ZN13TPPLPartition12VertexSorterclEll($__comp, $0, $2) | 0)) {
+     $__k$0$lcssa = $__k$0;
+     break;
+    } else {
+     $__j$1$phi = $__k$0;
+     $__k$0 = $incdec$ptr;
+     $__j$1 = $__j$1$phi;
+    }
+   }
+   HEAP32[$__k$0$lcssa >> 2] = $0;
+  }
+  $__j$0$phi = $__i$0;
+  $__i$0 = $__i$0 + 4 | 0;
+  $__j$0 = $__j$0$phi;
+ }
+ return;
 }
 
 function __ZNSt3__26vectorI6VertexNS_9allocatorIS1_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS1_RS3_EE($this, $__v) {
@@ -46611,6 +45597,41 @@ function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE26__swap_out_circular_bu
  HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
  HEAP32[$__value_$i$i$i >> 2] = $8;
  HEAP32[$__v >> 2] = HEAP32[$$pre$phiZ2D >> 2];
+ return;
+}
+
+function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE12__move_rangeEPS1_S5_S5_($this, $__from_s, $__from_e, $__to) {
+ $this = $this | 0;
+ $__from_s = $__from_s | 0;
+ $__from_e = $__from_e | 0;
+ $__to = $__to | 0;
+ var $$in = 0, $0 = 0, $__end_ = 0, $__i$0 = 0, $__last$addr$0$i$i = 0, $__result$addr$0$i$i = 0, $add$ptr = 0, $incdec$ptr$i$i = 0, $incdec$ptr1$i$i = 0, $incdec$ptr6 = 0;
+ $__end_ = $this + 4 | 0;
+ $0 = HEAP32[$__end_ >> 2] | 0;
+ $add$ptr = $__from_s + ($0 - $__to >> 4 << 4) | 0;
+ $$in = $0;
+ $__i$0 = $add$ptr;
+ while (1) {
+  if ($__i$0 >>> 0 >= $__from_e >>> 0) break;
+  HEAP32[$$in >> 2] = HEAP32[$__i$0 >> 2];
+  HEAP32[$$in + 4 >> 2] = HEAP32[$__i$0 + 4 >> 2];
+  HEAP32[$$in + 8 >> 2] = HEAP32[$__i$0 + 8 >> 2];
+  HEAP32[$$in + 12 >> 2] = HEAP32[$__i$0 + 12 >> 2];
+  $incdec$ptr6 = (HEAP32[$__end_ >> 2] | 0) + 16 | 0;
+  HEAP32[$__end_ >> 2] = $incdec$ptr6;
+  $$in = $incdec$ptr6;
+  $__i$0 = $__i$0 + 16 | 0;
+ }
+ $__last$addr$0$i$i = $add$ptr;
+ $__result$addr$0$i$i = $0;
+ while (1) {
+  if (($__last$addr$0$i$i | 0) == ($__from_s | 0)) break;
+  $incdec$ptr$i$i = $__last$addr$0$i$i + -16 | 0;
+  $incdec$ptr1$i$i = $__result$addr$0$i$i + -16 | 0;
+  __ZN8DrPointFaSERKS_($incdec$ptr1$i$i, $incdec$ptr$i$i) | 0;
+  $__last$addr$0$i$i = $incdec$ptr$i$i;
+  $__result$addr$0$i$i = $incdec$ptr1$i$i;
+ }
  return;
 }
 
@@ -46869,41 +45890,6 @@ function __ZNSt3__26vectorIhNS_9allocatorIhEEE26__swap_out_circular_bufferERNS_1
  HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
  HEAP32[$__value_$i$i$i >> 2] = $8;
  HEAP32[$__v >> 2] = HEAP32[$$pre$phiZ2D >> 2];
- return;
-}
-
-function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE12__move_rangeEPS1_S5_S5_($this, $__from_s, $__from_e, $__to) {
- $this = $this | 0;
- $__from_s = $__from_s | 0;
- $__from_e = $__from_e | 0;
- $__to = $__to | 0;
- var $$in = 0, $0 = 0, $__end_ = 0, $__i$011 = 0, $__last$addr$04$i$i = 0, $__result$addr$05$i$i = 0, $add$ptr = 0, $sub$ptr$sub = 0;
- $__end_ = $this + 4 | 0;
- $0 = HEAP32[$__end_ >> 2] | 0;
- $sub$ptr$sub = $0 - $__to | 0;
- $add$ptr = $__from_s + ($sub$ptr$sub >> 4 << 4) | 0;
- if ($add$ptr >>> 0 < $__from_e >>> 0) {
-  $$in = $0;
-  $__i$011 = $add$ptr;
-  do {
-   HEAP32[$$in >> 2] = HEAP32[$__i$011 >> 2];
-   HEAP32[$$in + 4 >> 2] = HEAP32[$__i$011 + 4 >> 2];
-   HEAP32[$$in + 8 >> 2] = HEAP32[$__i$011 + 8 >> 2];
-   HEAP32[$$in + 12 >> 2] = HEAP32[$__i$011 + 12 >> 2];
-   $__i$011 = $__i$011 + 16 | 0;
-   $$in = (HEAP32[$__end_ >> 2] | 0) + 16 | 0;
-   HEAP32[$__end_ >> 2] = $$in;
-  } while ($__i$011 >>> 0 < $__from_e >>> 0);
- }
- if ($sub$ptr$sub | 0) {
-  $__last$addr$04$i$i = $add$ptr;
-  $__result$addr$05$i$i = $0;
-  do {
-   $__last$addr$04$i$i = $__last$addr$04$i$i + -16 | 0;
-   $__result$addr$05$i$i = $__result$addr$05$i$i + -16 | 0;
-   __ZN8DrPointFaSERKS_($__result$addr$05$i$i, $__last$addr$04$i$i) | 0;
-  } while (($__last$addr$04$i$i | 0) != ($__from_s | 0));
- }
  return;
 }
 
@@ -47509,6 +46495,37 @@ function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle14In
  return $call | 0;
 }
 
+function __ZNSt3__26vectorI8DrBitmapNS_9allocatorIS1_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS1_RS3_EE($this, $__v) {
+ $this = $this | 0;
+ $__v = $__v | 0;
+ var $0 = 0, $4 = 0, $6 = 0, $8 = 0, $__begin_2 = 0, $__end1$addr$0$i = 0, $__end_ = 0, $__end_6 = 0, $__value_$i$i$i = 0, $__value_$i$i$i6 = 0, $incdec$ptr$i = 0;
+ $0 = HEAP32[$this >> 2] | 0;
+ $__end_ = $this + 4 | 0;
+ $__begin_2 = $__v + 4 | 0;
+ $__end1$addr$0$i = HEAP32[$__end_ >> 2] | 0;
+ while (1) {
+  if (($__end1$addr$0$i | 0) == ($0 | 0)) break;
+  $incdec$ptr$i = $__end1$addr$0$i + -28 | 0;
+  __ZN8DrBitmapC2ERKS_13Bitmap_Format((HEAP32[$__begin_2 >> 2] | 0) + -28 | 0, $incdec$ptr$i, 4);
+  HEAP32[$__begin_2 >> 2] = (HEAP32[$__begin_2 >> 2] | 0) + -28;
+  $__end1$addr$0$i = $incdec$ptr$i;
+ }
+ $4 = HEAP32[$this >> 2] | 0;
+ HEAP32[$this >> 2] = HEAP32[$__begin_2 >> 2];
+ HEAP32[$__begin_2 >> 2] = $4;
+ $__end_6 = $__v + 8 | 0;
+ $6 = HEAP32[$__end_ >> 2] | 0;
+ HEAP32[$__end_ >> 2] = HEAP32[$__end_6 >> 2];
+ HEAP32[$__end_6 >> 2] = $6;
+ $__value_$i$i$i6 = $this + 8 | 0;
+ $__value_$i$i$i = $__v + 12 | 0;
+ $8 = HEAP32[$__value_$i$i$i6 >> 2] | 0;
+ HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
+ HEAP32[$__value_$i$i$i >> 2] = $8;
+ HEAP32[$__v >> 2] = HEAP32[$__begin_2 >> 2];
+ return;
+}
+
 function __ZNK12_GLOBAL__N_116itanium_demangle10BracedExpr9printLeftERNS_12OutputStreamE($this, $S) {
  $this = $this | 0;
  $S = $S | 0;
@@ -47812,6 +46829,37 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  return;
 }
 
+function __ZNSt3__26vectorI6DrRectNS_9allocatorIS1_EEE26__swap_out_circular_bufferERNS_14__split_bufferIS1_RS3_EE($this, $__v) {
+ $this = $this | 0;
+ $__v = $__v | 0;
+ var $0 = 0, $4 = 0, $6 = 0, $8 = 0, $__begin_2 = 0, $__end1$addr$0$i = 0, $__end_ = 0, $__end_6 = 0, $__value_$i$i$i = 0, $__value_$i$i$i6 = 0, $incdec$ptr$i = 0;
+ $0 = HEAP32[$this >> 2] | 0;
+ $__end_ = $this + 4 | 0;
+ $__begin_2 = $__v + 4 | 0;
+ $__end1$addr$0$i = HEAP32[$__end_ >> 2] | 0;
+ while (1) {
+  if (($__end1$addr$0$i | 0) == ($0 | 0)) break;
+  $incdec$ptr$i = $__end1$addr$0$i + -16 | 0;
+  __ZN6DrRectC2ERKS_((HEAP32[$__begin_2 >> 2] | 0) + -16 | 0, $incdec$ptr$i);
+  HEAP32[$__begin_2 >> 2] = (HEAP32[$__begin_2 >> 2] | 0) + -16;
+  $__end1$addr$0$i = $incdec$ptr$i;
+ }
+ $4 = HEAP32[$this >> 2] | 0;
+ HEAP32[$this >> 2] = HEAP32[$__begin_2 >> 2];
+ HEAP32[$__begin_2 >> 2] = $4;
+ $__end_6 = $__v + 8 | 0;
+ $6 = HEAP32[$__end_ >> 2] | 0;
+ HEAP32[$__end_ >> 2] = HEAP32[$__end_6 >> 2];
+ HEAP32[$__end_6 >> 2] = $6;
+ $__value_$i$i$i6 = $this + 8 | 0;
+ $__value_$i$i$i = $__v + 12 | 0;
+ $8 = HEAP32[$__value_$i$i$i6 >> 2] | 0;
+ HEAP32[$__value_$i$i$i6 >> 2] = HEAP32[$__value_$i$i$i >> 2];
+ HEAP32[$__value_$i$i$i >> 2] = $8;
+ HEAP32[$__v >> 2] = HEAP32[$__begin_2 >> 2];
+ return;
+}
+
 function __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($this, $p1, $p2, $p3) {
  $this = $this | 0;
  $p1 = $p1 | 0;
@@ -47841,6 +46889,38 @@ function __ZN8TPPLPoly8TriangleER9TPPLPointS1_S1_($this, $p1, $p2, $p3) {
  HEAP32[$arrayidx5 + 16 >> 2] = HEAP32[$p3 + 16 >> 2];
  HEAP32[$arrayidx5 + 20 >> 2] = HEAP32[$p3 + 20 >> 2];
  return;
+}
+
+function __ZN13TPPLPartition16Triangulate_MONOEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $triangles) {
+ $this = $this | 0;
+ $inpolys = $inpolys | 0;
+ $triangles = $triangles | 0;
+ var $0 = 0, $__next_$i$i$i = 0, $iter$sroa$0$0 = 0, $iter$sroa$0$0$in$in = 0, $monotone = 0, $retval$0 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 16 | 0;
+ $monotone = sp;
+ HEAP32[$monotone >> 2] = $monotone;
+ $__next_$i$i$i = $monotone + 4 | 0;
+ HEAP32[$__next_$i$i$i >> 2] = $monotone;
+ HEAP32[$monotone + 8 >> 2] = 0;
+ L1 : do if (!(__ZN13TPPLPartition17MonotonePartitionEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $monotone) | 0)) $retval$0 = 0; else {
+  $iter$sroa$0$0$in$in = $__next_$i$i$i;
+  while (1) {
+   $iter$sroa$0$0 = HEAP32[$iter$sroa$0$0$in$in >> 2] | 0;
+   $0 = $iter$sroa$0$0;
+   if (($monotone | 0) == ($0 | 0)) {
+    $retval$0 = 1;
+    break L1;
+   }
+   if (!(__ZN13TPPLPartition19TriangulateMonotoneEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE(0, $iter$sroa$0$0 + 8 | 0, $triangles) | 0)) {
+    $retval$0 = 0;
+    break;
+   } else $iter$sroa$0$0$in$in = $0 + 4 | 0;
+  }
+ } while (0);
+ __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($monotone);
+ STACKTOP = sp;
+ return $retval$0 | 0;
 }
 
 function __sfons_render_delete($user_ptr) {
@@ -47916,6 +46996,38 @@ function _stbi__jpeg_reset($j) {
  return;
 }
 
+function __ZN7meshoptL22generateHardBoundariesEPjPKjmmjS0_($destination, $indices, $index_count, $vertex_count, $cache_timestamps) {
+ $destination = $destination | 0;
+ $indices = $indices | 0;
+ $index_count = $index_count | 0;
+ $vertex_count = $vertex_count | 0;
+ $cache_timestamps = $cache_timestamps | 0;
+ var $div = 0, $i$0 = 0, $mul1 = 0, $result$0 = 0, $result$1 = 0, $timestamp = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 16 | 0;
+ $timestamp = sp;
+ _memset($cache_timestamps | 0, 0, $vertex_count << 2 | 0) | 0;
+ HEAP32[$timestamp >> 2] = 17;
+ $div = ($index_count >>> 0) / 3 | 0;
+ $i$0 = 0;
+ $result$0 = 0;
+ while (1) {
+  if ($i$0 >>> 0 >= $div >>> 0) break;
+  $mul1 = $i$0 * 3 | 0;
+  if (($i$0 | 0) == 0 | (__ZN7meshoptL11updateCacheEjjjjPjRj(HEAP32[$indices + ($mul1 << 2) >> 2] | 0, HEAP32[$indices + ($mul1 + 1 << 2) >> 2] | 0, HEAP32[$indices + ($mul1 + 2 << 2) >> 2] | 0, $cache_timestamps, $timestamp) | 0) == 3) {
+   HEAP32[$destination + ($result$0 << 2) >> 2] = $i$0;
+   $result$1 = $result$0 + 1 | 0;
+  } else $result$1 = $result$0;
+  $i$0 = $i$0 + 1 | 0;
+  $result$0 = $result$1;
+ }
+ if ($result$0 >>> 0 > $div >>> 0) ___assert_fail(46625, 46089, 185, 46651); else {
+  STACKTOP = sp;
+  return $result$0 | 0;
+ }
+ return 0;
+}
+
 function __sg_pool_alloc_index($pool) {
  $pool = $pool | 0;
  var $15 = 0, $6 = 0, $dec = 0, $pool$addr = 0, $queue_top6 = 0, $retval = 0, $slot_index = 0, sp = 0;
@@ -47944,6 +47056,38 @@ function __sg_pool_alloc_index($pool) {
  $15 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
  return $15 | 0;
+}
+
+function __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE5eraseENS_21__tree_const_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEE($this, $__p) {
+ $this = $this | 0;
+ $__p = $__p | 0;
+ var $0 = 0, $2 = 0, $3 = 0, $4 = 0, $__value_$i$i$i4$i = 0, $__x$addr$0$i$i$i = 0, $__x$addr$0$i$i$i$i = 0, $retval$0$i$i$i = 0;
+ $0 = HEAP32[$__p >> 2] | 0;
+ $2 = HEAP32[$0 + 4 >> 2] | 0;
+ L1 : do if (!$2) {
+  $__x$addr$0$i$i$i = $0;
+  while (1) {
+   $4 = HEAP32[$__x$addr$0$i$i$i + 8 >> 2] | 0;
+   if ((HEAP32[$4 >> 2] | 0) == ($__x$addr$0$i$i$i | 0)) {
+    $retval$0$i$i$i = $4;
+    break L1;
+   }
+   $__x$addr$0$i$i$i = $4;
+  }
+ } else {
+  $__x$addr$0$i$i$i$i = $2;
+  while (1) {
+   $3 = HEAP32[$__x$addr$0$i$i$i$i >> 2] | 0;
+   if (!$3) break; else $__x$addr$0$i$i$i$i = $3;
+  }
+  $retval$0$i$i$i = $__x$addr$0$i$i$i$i;
+ } while (0);
+ if ((HEAP32[$this >> 2] | 0) == ($0 | 0)) HEAP32[$this >> 2] = $retval$0$i$i$i;
+ $__value_$i$i$i4$i = $this + 8 | 0;
+ HEAP32[$__value_$i$i$i4$i >> 2] = (HEAP32[$__value_$i$i$i4$i >> 2] | 0) + -1;
+ __ZNSt3__213__tree_removeIPNS_16__tree_node_baseIPvEEEEvT_S5_(HEAP32[$this + 4 >> 2] | 0, $0);
+ __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($0, 72);
+ return $retval$0$i$i$i | 0;
 }
 
 function _stbi__tga_get_comp($bits_per_pixel, $is_grey, $is_rgb16) {
@@ -48083,6 +47227,38 @@ function __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__x, $__y, $__z, $__c) {
  return $retval$0 | 0;
 }
 
+function __ZN13TPPLPartition14Triangulate_ECEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $triangles) {
+ $this = $this | 0;
+ $inpolys = $inpolys | 0;
+ $triangles = $triangles | 0;
+ var $0 = 0, $__next_$i$i$i = 0, $iter$sroa$0$0 = 0, $iter$sroa$0$0$in$in = 0, $outpolys = 0, $retval$0 = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 16 | 0;
+ $outpolys = sp;
+ HEAP32[$outpolys >> 2] = $outpolys;
+ $__next_$i$i$i = $outpolys + 4 | 0;
+ HEAP32[$__next_$i$i$i >> 2] = $outpolys;
+ HEAP32[$outpolys + 8 >> 2] = 0;
+ L1 : do if (!(__ZN13TPPLPartition11RemoveHolesEPNSt3__24listI8TPPLPolyNS0_9allocatorIS2_EEEES6_($this, $inpolys, $outpolys) | 0)) $retval$0 = 0; else {
+  $iter$sroa$0$0$in$in = $__next_$i$i$i;
+  while (1) {
+   $iter$sroa$0$0 = HEAP32[$iter$sroa$0$0$in$in >> 2] | 0;
+   $0 = $iter$sroa$0$0;
+   if (($outpolys | 0) == ($0 | 0)) {
+    $retval$0 = 1;
+    break L1;
+   }
+   if (!(__ZN13TPPLPartition14Triangulate_ECEP8TPPLPolyPNSt3__24listIS0_NS2_9allocatorIS0_EEEE(0, $iter$sroa$0$0 + 8 | 0, $triangles) | 0)) {
+    $retval$0 = 0;
+    break;
+   } else $iter$sroa$0$0$in$in = $0 + 4 | 0;
+  }
+ } while (0);
+ __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEED2Ev($outpolys);
+ STACKTOP = sp;
+ return $retval$0 | 0;
+}
+
 function __sg_gl_blend_factor($f) {
  $f = $f | 0;
  var $f$addr = 0, $retval = 0, sp = 0;
@@ -48172,6 +47348,46 @@ function __sg_gl_blend_factor($f) {
  } while (0);
  STACKTOP = sp;
  return HEAP32[$retval >> 2] | 0;
+}
+
+function __ZNSt3__218__insertion_sort_3IR7comparePmEEvT0_S4_T_($__first, $__last, $__comp) {
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ $__comp = $__comp | 0;
+ var $2 = 0, $__i$0 = 0, $__j$0 = 0, $__j$0$phi = 0, $__j$1 = 0, $__j$1$phi = 0, $__k$0 = 0, $__k$0$lcssa = 0, $add$ptr = 0, $incdec$ptr = 0;
+ $add$ptr = $__first + 8 | 0;
+ __ZNSt3__27__sort3IR7comparePmEEjT0_S4_S4_T_($__first, $__first + 4 | 0, $add$ptr, $__comp) | 0;
+ $__i$0 = $__first + 12 | 0;
+ $__j$0 = $add$ptr;
+ while (1) {
+  if (($__i$0 | 0) == ($__last | 0)) break;
+  if (__ZN7compareclEmm($__comp, HEAP32[$__i$0 >> 2] | 0, HEAP32[$__j$0 >> 2] | 0) | 0) {
+   $2 = HEAP32[$__i$0 >> 2] | 0;
+   $__j$1 = $__i$0;
+   $__k$0 = $__j$0;
+   while (1) {
+    HEAP32[$__j$1 >> 2] = HEAP32[$__k$0 >> 2];
+    if (($__k$0 | 0) == ($__first | 0)) {
+     $__k$0$lcssa = $__first;
+     break;
+    }
+    $incdec$ptr = $__k$0 + -4 | 0;
+    if (__ZN7compareclEmm($__comp, $2, HEAP32[$incdec$ptr >> 2] | 0) | 0) {
+     $__j$1$phi = $__k$0;
+     $__k$0 = $incdec$ptr;
+     $__j$1 = $__j$1$phi;
+    } else {
+     $__k$0$lcssa = $__k$0;
+     break;
+    }
+   }
+   HEAP32[$__k$0$lcssa >> 2] = $2;
+  }
+  $__j$0$phi = $__i$0;
+  $__i$0 = $__i$0 + 4 | 0;
+  $__j$0 = $__j$0$phi;
+ }
+ return;
 }
 
 function _stbtt_GetGlyphBitmapBox($font, $glyph, $scale_x, $scale_y, $ix0, $iy0, $ix1, $iy1) {
@@ -48993,43 +48209,6 @@ function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle10Ve
  return $call | 0;
 }
 
-function __ZN7meshoptL10hashLookupIjNS_12VertexHasherEEEPT_S3_mRKT0_RKS2_S8_($table, $buckets, $hash, $key, $empty) {
- $table = $table | 0;
- $buckets = $buckets | 0;
- $hash = $hash | 0;
- $key = $key | 0;
- $empty = $empty | 0;
- var $1 = 0, $add = 0, $arrayidx = 0, $bucket$024 = 0, $call$pn = 0, $probe$023 = 0, $sub = 0, label = 0;
- if (!$buckets) ___assert_fail(45910, 45771, 139, 45922);
- $sub = $buckets + -1 | 0;
- if ($sub & $buckets | 0) ___assert_fail(45933, 45771, 140, 45922);
- $call$pn = __ZNK7meshopt12VertexHasher4hashEj($hash, HEAP32[$key >> 2] | 0) | 0;
- $probe$023 = 0;
- while (1) {
-  $bucket$024 = $call$pn & $sub;
-  $arrayidx = $table + ($bucket$024 << 2) | 0;
-  $1 = HEAP32[$arrayidx >> 2] | 0;
-  if (($1 | 0) == (HEAP32[$empty >> 2] | 0)) {
-   label = 10;
-   break;
-  }
-  if (__ZNK7meshopt12VertexHasher5equalEjj($hash, $1, HEAP32[$key >> 2] | 0) | 0) {
-   label = 10;
-   break;
-  }
-  $add = $probe$023 + 1 | 0;
-  if ($add >>> 0 > $sub >>> 0) {
-   label = 9;
-   break;
-  } else {
-   $call$pn = $add + $bucket$024 | 0;
-   $probe$023 = $add;
-  }
- }
- if ((label | 0) == 9) ___assert_fail(45964, 45771, 159, 45922); else if ((label | 0) == 10) return $arrayidx | 0;
- return 0;
-}
-
 function _stbtt__cff_get_index($agg$result, $b) {
  $agg$result = $agg$result | 0;
  $b = $b | 0;
@@ -49239,6 +48418,42 @@ function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle13En
  __ZN12_GLOBAL__N_116itanium_demangle13EnclosingExprC2ENS_10StringViewEPNS0_4NodeES2_($call, $agg$tmp$byval_copy, $0, $agg$tmp8$byval_copy);
  STACKTOP = sp;
  return $call | 0;
+}
+
+function __ZN7meshoptL10hashLookupIjNS_12VertexHasherEEEPT_S3_mRKT0_RKS2_S8_($table, $buckets, $hash, $key, $empty) {
+ $table = $table | 0;
+ $buckets = $buckets | 0;
+ $hash = $hash | 0;
+ $key = $key | 0;
+ $empty = $empty | 0;
+ var $1 = 0, $add = 0, $arrayidx = 0, $bucket$0 = 0, $call$pn = 0, $probe$0 = 0, $sub = 0, label = 0;
+ if (!$buckets) ___assert_fail(45910, 45771, 139, 45922);
+ $sub = $buckets + -1 | 0;
+ if ($sub & $buckets | 0) ___assert_fail(45933, 45771, 140, 45922);
+ $call$pn = __ZNK7meshopt12VertexHasher4hashEj($hash, HEAP32[$key >> 2] | 0) | 0;
+ $probe$0 = 0;
+ while (1) {
+  $bucket$0 = $call$pn & $sub;
+  if ($probe$0 >>> 0 > $sub >>> 0) {
+   label = 10;
+   break;
+  }
+  $arrayidx = $table + ($bucket$0 << 2) | 0;
+  $1 = HEAP32[$arrayidx >> 2] | 0;
+  if (($1 | 0) == (HEAP32[$empty >> 2] | 0)) {
+   label = 11;
+   break;
+  }
+  if (__ZNK7meshopt12VertexHasher5equalEjj($hash, $1, HEAP32[$key >> 2] | 0) | 0) {
+   label = 11;
+   break;
+  }
+  $add = $probe$0 + 1 | 0;
+  $call$pn = $add + $bucket$0 | 0;
+  $probe$0 = $add;
+ }
+ if ((label | 0) == 10) ___assert_fail(45964, 45771, 159, 45922); else if ((label | 0) == 11) return $arrayidx | 0;
+ return 0;
 }
 
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E12parseAbiTagsEPNS0_4NodeE($this, $N) {
@@ -49723,6 +48938,40 @@ function __saudio_emsc_pull($num_frames) {
  return $15 | 0;
 }
 
+function __ZN2Dr24DifferenceBetween2AnglesEdd($angle1, $angle2) {
+ $angle1 = +$angle1;
+ $angle2 = +$angle2;
+ var $angle1$addr$0 = 0.0, $angle1$addr$1 = 0.0, $angle2$addr$0 = 0.0, $angle2$addr$1 = 0.0, $diff$0 = 0.0, $sub16 = 0.0, $sub21 = 0.0;
+ $angle1$addr$0 = $angle1;
+ while (1) {
+  if (!($angle1$addr$0 < 0.0)) break;
+  $angle1$addr$0 = $angle1$addr$0 + 360.0;
+ }
+ $angle2$addr$0 = $angle2;
+ while (1) {
+  if (!($angle2$addr$0 < 0.0)) break;
+  $angle2$addr$0 = $angle2$addr$0 + 360.0;
+ }
+ $angle1$addr$1 = $angle1$addr$0;
+ while (1) {
+  if (!($angle1$addr$1 >= 360.0)) break;
+  $angle1$addr$1 = $angle1$addr$1 + -360.0;
+ }
+ $angle2$addr$1 = $angle2$addr$0;
+ while (1) {
+  if (!($angle2$addr$1 >= 360.0)) break;
+  $angle2$addr$1 = $angle2$addr$1 + -360.0;
+ }
+ if ($angle1$addr$1 > $angle2$addr$1) {
+  $sub16 = $angle1$addr$1 - $angle2$addr$1;
+  if ($sub16 > 180.0) $diff$0 = $angle2$addr$1 - ($angle1$addr$1 + -360.0); else $diff$0 = $sub16;
+ } else {
+  $sub21 = $angle2$addr$1 - $angle1$addr$1;
+  if ($sub21 > 180.0) $diff$0 = $angle1$addr$1 - ($angle2$addr$1 + -360.0); else $diff$0 = $sub21;
+ }
+ return +$diff$0;
+}
+
 function _stbtt__get_subr($agg$result, $idx, $n) {
  $agg$result = $agg$result | 0;
  $idx = $idx | 0;
@@ -50147,30 +49396,6 @@ function __ZNK12_GLOBAL__N_116itanium_demangle8CallExpr9printLeftERNS_12OutputSt
  __ZN12_GLOBAL__N_112OutputStreampLENS_10StringViewE($S, $agg$tmp2$byval_copy);
  STACKTOP = sp;
  return;
-}
-
-function __ZN10DrPolygonF22findWindingOrientationERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE($points) {
- $points = $points | 0;
- var $1 = 0, $2 = 0, $add10 = 0.0, $area$0$lcssa = 0.0, $area$030 = 0.0, $i1$029 = 0, $spec$select = 0, $sub$ptr$div$i27 = 0, $sub$ptr$sub$i26 = 0, $i1$029$looptemp = 0;
- $1 = HEAP32[$points >> 2] | 0;
- $sub$ptr$sub$i26 = (HEAP32[$points + 4 >> 2] | 0) - $1 | 0;
- $2 = $1;
- if (!$sub$ptr$sub$i26) $area$0$lcssa = 0.0; else {
-  $sub$ptr$div$i27 = $sub$ptr$sub$i26 >> 4;
-  $area$030 = 0.0;
-  $i1$029 = 0;
-  while (1) {
-   $i1$029$looptemp = $i1$029;
-   $i1$029 = $i1$029 + 1 | 0;
-   $spec$select = ($i1$029 | 0) == ($sub$ptr$div$i27 | 0) ? 0 : $i1$029;
-   $add10 = $area$030 + (+HEAPF64[$2 + ($i1$029$looptemp << 4) >> 3] * +HEAPF64[$2 + ($spec$select << 4) + 8 >> 3] - +HEAPF64[$2 + ($i1$029$looptemp << 4) + 8 >> 3] * +HEAPF64[$2 + ($spec$select << 4) >> 3]);
-   if ($i1$029 >>> 0 >= $sub$ptr$div$i27 >>> 0) {
-    $area$0$lcssa = $add10;
-    break;
-   } else $area$030 = $add10;
-  }
- }
- return ($area$0$lcssa > 0.0 ? 1 : $area$0$lcssa < 0.0 ? 0 : 2) | 0;
 }
 
 function _stbi__hdr_test_core($s, $signature) {
@@ -51020,28 +50245,6 @@ function __sfetch_pool_item_lookup($pool, $slot_id) {
  return $10 | 0;
 }
 
-function __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE13__lower_boundIS2_EENS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEERKT_SD_PNS_15__tree_end_nodeIPNS_16__tree_node_baseISB_EEEE($this, $__v, $__root, $__result) {
- $this = $this | 0;
- $__v = $__v | 0;
- $__root = $__root | 0;
- $__result = $__result | 0;
- var $__result$addr$0$lcssa = 0, $__result$addr$06 = 0, $__result$addr$1 = 0, $__root$addr$05 = 0, $call$i = 0;
- if (!$__root) $__result$addr$0$lcssa = $__result; else {
-  $__result$addr$06 = $__result;
-  $__root$addr$05 = $__root;
-  while (1) {
-   $call$i = __ZNK13TPPLPartition12ScanLineEdgeltERKS0_($__root$addr$05 + 16 | 0, $__v) | 0;
-   $__result$addr$1 = $call$i ? $__result$addr$06 : $__root$addr$05;
-   $__root$addr$05 = HEAP32[($call$i ? $__root$addr$05 + 4 | 0 : $__root$addr$05) >> 2] | 0;
-   if (!$__root$addr$05) {
-    $__result$addr$0$lcssa = $__result$addr$1;
-    break;
-   } else $__result$addr$06 = $__result$addr$1;
-  }
- }
- return $__result$addr$0$lcssa | 0;
-}
-
 function _stbtt__csctx_rmove_to($ctx, $dx, $dy) {
  $ctx = $ctx | 0;
  $dx = +$dx;
@@ -51721,6 +50924,7 @@ function __ZNK12_GLOBAL__N_116itanium_demangle13FunctionParam9printLeftERNS_12Ou
  STACKTOP = sp;
  return;
 }
+
 function _stbtt_setvertex($v, $type, $x, $y, $cx, $cy) {
  $v = $v | 0;
  $type = $type | 0;
@@ -51801,7 +51005,6 @@ function __sg_buffer_common_init($cmn, $desc) {
  STACKTOP = sp;
  return;
 }
-
 function __sfetch_ring_count($rb) {
  $rb = $rb | 0;
  var $8 = 0, $9 = 0, $count = 0, $rb$addr = 0, sp = 0;
@@ -52208,6 +51411,31 @@ function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle22El
  __ZN12_GLOBAL__N_116itanium_demangle22ElaboratedTypeSpefTypeC2ENS_10StringViewEPNS0_4NodeE($call, $tmpcast$byval_copy, $10);
  STACKTOP = sp;
  return $call | 0;
+}
+
+function __ZN8DrBitmapC2Eii13Bitmap_Format($this, $width_, $height_, $desired_format) {
+ $this = $this | 0;
+ $width_ = $width_ | 0;
+ $height_ = $height_ | 0;
+ $desired_format = $desired_format | 0;
+ var $1 = 0, $3 = 0, $__n$addr$0$i$i$i$i = 0, $agg$tmp1$sroa$0$0$i$i$i = 0, $data = 0, $mul = 0;
+ __ZN8DrBitmapC2E13Bitmap_Format($this, $desired_format);
+ HEAP32[$this + 8 >> 2] = $width_;
+ HEAP32[$this + 12 >> 2] = $height_;
+ $data = $this + 16 | 0;
+ $mul = Math_imul($height_, $width_) | 0;
+ __ZNSt3__26vectorIhNS_9allocatorIhEEE6resizeEm($data, Math_imul($mul, HEAP32[$this + 4 >> 2] | 0) | 0);
+ $1 = HEAP32[$data >> 2] | 0;
+ $__n$addr$0$i$i$i$i = (HEAP32[$this + 20 >> 2] | 0) - $1 | 0;
+ $agg$tmp1$sroa$0$0$i$i$i = $1;
+ while (1) {
+  if (($__n$addr$0$i$i$i$i | 0) <= 0) break;
+  $3 = $agg$tmp1$sroa$0$0$i$i$i;
+  HEAP8[$3 >> 0] = 0;
+  $__n$addr$0$i$i$i$i = $__n$addr$0$i$i$i$i + -1 | 0;
+  $agg$tmp1$sroa$0$0$i$i$i = $3 + 1 | 0;
+ }
+ return;
 }
 
 function _stbi__png_load($s, $x, $y, $comp, $req_comp, $ri) {
@@ -52707,32 +51935,6 @@ function __sg_surface_pitch($fmt, $width, $height, $row_align) {
  return $mul | 0;
 }
 
-function __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESB_SB_($this, $__first, $__last) {
- $this = $this | 0;
- $__first = $__first | 0;
- $__last = $__last | 0;
- var $0 = 0, $1 = 0, $6 = 0, $7 = 0, $8 = 0, $__end_ = 0;
- $0 = HEAP32[$__first >> 2] | 0;
- $1 = HEAP32[$__last >> 2] | 0;
- if (($0 | 0) != ($1 | 0)) {
-  $__end_ = $this + 8 | 0;
-  $6 = (($1 + -16 - $0 | 0) >>> 4) + 1 | 0;
-  $7 = HEAP32[$__end_ >> 2] | 0;
-  $8 = $0;
-  do {
-   HEAP32[$7 >> 2] = HEAP32[$8 >> 2];
-   HEAP32[$7 + 4 >> 2] = HEAP32[$8 + 4 >> 2];
-   HEAP32[$7 + 8 >> 2] = HEAP32[$8 + 8 >> 2];
-   HEAP32[$7 + 12 >> 2] = HEAP32[$8 + 12 >> 2];
-   $7 = (HEAP32[$__end_ >> 2] | 0) + 16 | 0;
-   HEAP32[$__end_ >> 2] = $7;
-   $8 = $8 + 16 | 0;
-  } while (($8 | 0) != ($1 | 0));
-  HEAP32[$__first >> 2] = $0 + ($6 << 4);
- }
- return;
-}
-
 function __ZNSt3__214__split_bufferI6VertexRNS_9allocatorIS1_EEEC2EmmS4_($this, $__cap, $__start, $__a) {
  $this = $this | 0;
  $__cap = $__cap | 0;
@@ -52896,6 +52098,33 @@ function __sg_reset_buffer($buf) {
   STACKTOP = sp;
   return;
  } else ___assert_fail(29867, 21600, 12827, 38816);
+}
+
+function __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE5eraseENS_21__list_const_iteratorIS1_PvEES7_($this, $__f, $__l) {
+ $this = $this | 0;
+ $__f = $__f | 0;
+ $__l = $__l | 0;
+ var $0 = 0, $1 = 0, $4 = 0, $7 = 0, $8 = 0, $__next_$i = 0, $__value_$i$i$i = 0;
+ $0 = HEAP32[$__f >> 2] | 0;
+ $1 = HEAP32[$__l >> 2] | 0;
+ L1 : do if (($0 | 0) != ($1 | 0)) {
+  $__next_$i = (HEAP32[$1 >> 2] | 0) + 4 | 0;
+  $4 = HEAP32[$0 >> 2] | 0;
+  HEAP32[$4 + 4 >> 2] = HEAP32[$__next_$i >> 2];
+  HEAP32[HEAP32[$__next_$i >> 2] >> 2] = $4;
+  $__value_$i$i$i = $this + 8 | 0;
+  $7 = $0;
+  while (1) {
+   if (($7 | 0) == ($1 | 0)) break L1;
+   $8 = HEAP32[$7 + 4 >> 2] | 0;
+   HEAP32[$__f >> 2] = $8;
+   HEAP32[$__value_$i$i$i >> 2] = (HEAP32[$__value_$i$i$i >> 2] | 0) + -1;
+   __ZN8TPPLPolyD2Ev($7 + 8 | 0);
+   __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($7, 20);
+   $7 = $8;
+  }
+ } while (0);
+ return $1 | 0;
 }
 
 function _sgl_ortho($l, $r, $b, $t, $n, $f) {
@@ -53678,32 +52907,6 @@ function __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allo
  return;
 }
 
-function __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE5eraseENS_21__list_const_iteratorIS1_PvEES7_($this, $__f, $__l) {
- $this = $this | 0;
- $__f = $__f | 0;
- $__l = $__l | 0;
- var $0 = 0, $1 = 0, $4 = 0, $7 = 0, $8 = 0, $__next_$i = 0, $__value_$i$i$i = 0;
- $0 = HEAP32[$__f >> 2] | 0;
- $1 = HEAP32[$__l >> 2] | 0;
- if (($0 | 0) != ($1 | 0)) {
-  $__next_$i = (HEAP32[$1 >> 2] | 0) + 4 | 0;
-  $4 = HEAP32[$0 >> 2] | 0;
-  HEAP32[$4 + 4 >> 2] = HEAP32[$__next_$i >> 2];
-  HEAP32[HEAP32[$__next_$i >> 2] >> 2] = $4;
-  $__value_$i$i$i = $this + 8 | 0;
-  $7 = $0;
-  do {
-   $8 = HEAP32[$7 + 4 >> 2] | 0;
-   HEAP32[$__f >> 2] = $8;
-   HEAP32[$__value_$i$i$i >> 2] = (HEAP32[$__value_$i$i$i >> 2] | 0) + -1;
-   __ZN8TPPLPolyD2Ev($7 + 8 | 0);
-   __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($7, 20);
-   $7 = $8;
-  } while (($1 | 0) != ($7 | 0));
- }
- return $1 | 0;
-}
-
 function __sg_lookup_pipeline($p, $pip_id) {
  $p = $p | 0;
  $pip_id = $pip_id | 0;
@@ -53904,30 +53107,6 @@ function _stbi__malloc_mad2($a, $b, $add) {
  return 0;
 }
 
-function __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEE5clearEv($this) {
- $this = $this | 0;
- var $1 = 0, $4 = 0, $__f$016 = 0, $__next_$i = 0, $__value_$i$i$i$i = 0, $__f$016$looptemp = 0;
- $__value_$i$i$i$i = $this + 8 | 0;
- if (HEAP32[$__value_$i$i$i$i >> 2] | 0) {
-  $1 = HEAP32[$this + 4 >> 2] | 0;
-  $__next_$i = (HEAP32[$this >> 2] | 0) + 4 | 0;
-  $4 = HEAP32[$1 >> 2] | 0;
-  HEAP32[$4 + 4 >> 2] = HEAP32[$__next_$i >> 2];
-  HEAP32[HEAP32[$__next_$i >> 2] >> 2] = $4;
-  HEAP32[$__value_$i$i$i$i >> 2] = 0;
-  if (($1 | 0) != ($this | 0)) {
-   $__f$016 = $1;
-   do {
-    $__f$016$looptemp = $__f$016;
-    $__f$016 = HEAP32[$__f$016 + 4 >> 2] | 0;
-    __ZN8TPPLPolyD2Ev($__f$016$looptemp + 8 | 0);
-    __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($__f$016$looptemp, 20);
-   } while (($__f$016 | 0) != ($this | 0));
-  }
- }
- return;
-}
-
 function _stbi__check_png_header($s) {
  $s = $s | 0;
  var $5 = 0, $conv = 0, $i = 0, $retval = 0, $s$addr = 0, label = 0, sp = 0;
@@ -53973,6 +53152,29 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  $add$ptr = (__ZN12_GLOBAL__N_116itanium_demangle14PODSmallVectorIPNS0_4NodeELm32EE5beginEv($Names) | 0) + ($FromPosition << 2) | 0;
  __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E13makeNodeArrayIPPNS0_4NodeEEENS0_9NodeArrayET_SB_($agg$result, $this, $add$ptr, __ZN12_GLOBAL__N_116itanium_demangle14PODSmallVectorIPNS0_4NodeELm32EE3endEv($Names) | 0);
  __ZN12_GLOBAL__N_116itanium_demangle14PODSmallVectorIPNS0_4NodeELm32EE8dropBackEm($Names, $FromPosition);
+ return;
+}
+
+function __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESB_SB_($this, $__first, $__last) {
+ $this = $this | 0;
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_ = 0, $incdec$ptr$i = 0;
+ $0 = HEAP32[$__last >> 2] | 0;
+ $__end_ = $this + 8 | 0;
+ $1 = HEAP32[$__first >> 2] | 0;
+ while (1) {
+  if (($1 | 0) == ($0 | 0)) break;
+  $2 = HEAP32[$__end_ >> 2] | 0;
+  HEAP32[$2 >> 2] = HEAP32[$1 >> 2];
+  HEAP32[$2 + 4 >> 2] = HEAP32[$1 + 4 >> 2];
+  HEAP32[$2 + 8 >> 2] = HEAP32[$1 + 8 >> 2];
+  HEAP32[$2 + 12 >> 2] = HEAP32[$1 + 12 >> 2];
+  HEAP32[$__end_ >> 2] = (HEAP32[$__end_ >> 2] | 0) + 16;
+  $incdec$ptr$i = $1 + 16 | 0;
+  HEAP32[$__first >> 2] = $incdec$ptr$i;
+  $1 = $incdec$ptr$i;
+ }
  return;
 }
 
@@ -54063,27 +53265,6 @@ function __sapp_emsc_webgl_context_cb($emsc_type, $reserved, $user_data) {
  __sapp_call_event(58728) | 0;
  STACKTOP = sp;
  return 1;
-}
-
-function __ZNSt3__213__vector_baseINS_6vectorINS1_I8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEEENS3_IS7_EEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $3 = 0, $__end_$i$i = 0, $__soon_to_be_end$06$i$i = 0;
- $0 = HEAP32[$this >> 2] | 0;
- if ($0 | 0) {
-  $__end_$i$i = $this + 4 | 0;
-  $1 = HEAP32[$__end_$i$i >> 2] | 0;
-  if (($1 | 0) == ($0 | 0)) $3 = $0; else {
-   $__soon_to_be_end$06$i$i = $1;
-   do {
-    $__soon_to_be_end$06$i$i = $__soon_to_be_end$06$i$i + -12 | 0;
-    __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($__soon_to_be_end$06$i$i);
-   } while (($__soon_to_be_end$06$i$i | 0) != ($0 | 0));
-   $3 = HEAP32[$this >> 2] | 0;
-  }
-  HEAP32[$__end_$i$i >> 2] = $0;
-  __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($3, (HEAP32[$this + 8 >> 2] | 0) - $3 | 0);
- }
- return;
 }
 
 function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle21StructuredBindingNameEJNS2_9NodeArrayEEEEPT_DpOT0_($this, $args) {
@@ -54312,31 +53493,6 @@ function __sg_gl_cache_restore_texture_binding($slot_index) {
  return;
 }
 
-function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPKS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESB_SB_m($this, $__first, $__last, $__n) {
- $this = $this | 0;
- $__first = $__first | 0;
- $__last = $__last | 0;
- $__n = $__n | 0;
- var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $__end_ = 0;
- $0 = HEAP32[$__first >> 2] | 0;
- $1 = HEAP32[$__last >> 2] | 0;
- $__end_ = $this + 4 | 0;
- if (($1 | 0) != ($0 | 0)) {
-  $2 = HEAP32[$__end_ >> 2] | 0;
-  $3 = $0;
-  do {
-   HEAP32[$2 >> 2] = HEAP32[$3 >> 2];
-   HEAP32[$2 + 4 >> 2] = HEAP32[$3 + 4 >> 2];
-   HEAP32[$2 + 8 >> 2] = HEAP32[$3 + 8 >> 2];
-   HEAP32[$2 + 12 >> 2] = HEAP32[$3 + 12 >> 2];
-   $3 = $3 + 16 | 0;
-   $2 = (HEAP32[$__end_ >> 2] | 0) + 16 | 0;
-   HEAP32[$__end_ >> 2] = $2;
-  } while (($3 | 0) != ($1 | 0));
- }
- return;
-}
-
 function __ZNK12_GLOBAL__N_116itanium_demangle22ElaboratedTypeSpefType9printLeftERNS_12OutputStreamE($this, $S) {
  $this = $this | 0;
  $S = $S | 0;
@@ -54376,31 +53532,6 @@ function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle20Po
  __ZN12_GLOBAL__N_116itanium_demangle20PostfixQualifiedTypeC2EPNS0_4NodeENS_10StringViewE($call, $0, $agg$tmp$byval_copy);
  STACKTOP = sp;
  return $call | 0;
-}
-
-function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $__first, $__last, $__n) {
- $this = $this | 0;
- $__first = $__first | 0;
- $__last = $__last | 0;
- $__n = $__n | 0;
- var $0 = 0, $1 = 0, $2 = 0, $3 = 0, $__end_ = 0;
- $0 = HEAP32[$__first >> 2] | 0;
- $1 = HEAP32[$__last >> 2] | 0;
- $__end_ = $this + 4 | 0;
- if (($1 | 0) != ($0 | 0)) {
-  $2 = HEAP32[$__end_ >> 2] | 0;
-  $3 = $0;
-  do {
-   HEAP32[$2 >> 2] = HEAP32[$3 >> 2];
-   HEAP32[$2 + 4 >> 2] = HEAP32[$3 + 4 >> 2];
-   HEAP32[$2 + 8 >> 2] = HEAP32[$3 + 8 >> 2];
-   HEAP32[$2 + 12 >> 2] = HEAP32[$3 + 12 >> 2];
-   $3 = $3 + 16 | 0;
-   $2 = (HEAP32[$__end_ >> 2] | 0) + 16 | 0;
-   HEAP32[$__end_ >> 2] = $2;
-  } while (($3 | 0) != ($1 | 0));
- }
- return;
 }
 
 function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle15UnnamedTypeNameEJRNS_10StringViewEEEEPT_DpOT0_($this, $args) {
@@ -54480,25 +53611,22 @@ function __sg_gl_compare_func($cmp) {
  return HEAP32[$retval >> 2] | 0;
 }
 
-function __ZNSt3__210__list_impIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE5clearEv($this) {
+function __ZNSt3__213__vector_baseINS_6vectorINS1_I8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEEENS3_IS7_EEED2Ev($this) {
  $this = $this | 0;
- var $1 = 0, $4 = 0, $__f$016 = 0, $__next_$i = 0, $__value_$i$i$i$i = 0, $__f$016$looptemp = 0;
- $__value_$i$i$i$i = $this + 8 | 0;
- if (HEAP32[$__value_$i$i$i$i >> 2] | 0) {
-  $1 = HEAP32[$this + 4 >> 2] | 0;
-  $__next_$i = (HEAP32[$this >> 2] | 0) + 4 | 0;
-  $4 = HEAP32[$1 >> 2] | 0;
-  HEAP32[$4 + 4 >> 2] = HEAP32[$__next_$i >> 2];
-  HEAP32[HEAP32[$__next_$i >> 2] >> 2] = $4;
-  HEAP32[$__value_$i$i$i$i >> 2] = 0;
-  if (($1 | 0) != ($this | 0)) {
-   $__f$016 = $1;
-   do {
-    $__f$016$looptemp = $__f$016;
-    $__f$016 = HEAP32[$__f$016 + 4 >> 2] | 0;
-    __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($__f$016$looptemp, 16);
-   } while (($__f$016 | 0) != ($this | 0));
+ var $0 = 0, $2 = 0, $__end_$i$i = 0, $__soon_to_be_end$0$i$i = 0, $incdec$ptr$i$i = 0;
+ $0 = HEAP32[$this >> 2] | 0;
+ if ($0 | 0) {
+  $__end_$i$i = $this + 4 | 0;
+  $__soon_to_be_end$0$i$i = HEAP32[$__end_$i$i >> 2] | 0;
+  while (1) {
+   if (($__soon_to_be_end$0$i$i | 0) == ($0 | 0)) break;
+   $incdec$ptr$i$i = $__soon_to_be_end$0$i$i + -12 | 0;
+   __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($incdec$ptr$i$i);
+   $__soon_to_be_end$0$i$i = $incdec$ptr$i$i;
   }
+  HEAP32[$__end_$i$i >> 2] = $0;
+  $2 = HEAP32[$this >> 2] | 0;
+  __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 8 >> 2] | 0) - $2 | 0);
  }
  return;
 }
@@ -54743,6 +53871,32 @@ function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle12En
  __ZN12_GLOBAL__N_116itanium_demangle12EnableIfAttrC2ENS0_9NodeArrayE($call, $tmpcast$byval_copy);
  STACKTOP = sp;
  return $call | 0;
+}
+
+function _meshopt_remapIndexBuffer($destination, $indices, $index_count, $remap) {
+ $destination = $destination | 0;
+ $indices = $indices | 0;
+ $index_count = $index_count | 0;
+ $remap = $remap | 0;
+ var $1 = 0, $cond = 0, $i$0 = 0, $tobool = 0, label = 0;
+ if (($index_count >>> 0) % 3 | 0 | 0) ___assert_fail(47099, 45771, 316, 46044);
+ $tobool = ($indices | 0) == 0;
+ $i$0 = 0;
+ while (1) {
+  if ($i$0 >>> 0 >= $index_count >>> 0) {
+   label = 5;
+   break;
+  }
+  if ($tobool) $cond = $i$0; else $cond = HEAP32[$indices + ($i$0 << 2) >> 2] | 0;
+  $1 = HEAP32[$remap + ($cond << 2) >> 2] | 0;
+  if (($1 | 0) == -1) {
+   label = 9;
+   break;
+  }
+  HEAP32[$destination + ($i$0 << 2) >> 2] = $1;
+  $i$0 = $i$0 + 1 | 0;
+ }
+ if ((label | 0) == 5) return; else if ((label | 0) == 9) ___assert_fail(46069, 45771, 321, 46044);
 }
 
 function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle11SpecialNameEJRA41_KcRPNS2_4NodeEEEEPT_DpOT0_($this, $args, $args1) {
@@ -55243,47 +54397,6 @@ function __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE11__val
  }
 }
 
-function __ZNSt3__214__split_bufferINS_6vectorINS1_I8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEEERNS3_IS7_EEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $2 = 0, $4 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) {
-  $2 = $1;
-  do {
-   $incdec$ptr$i$i$i = $2 + -12 | 0;
-   HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
-   __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($incdec$ptr$i$i$i);
-   $2 = HEAP32[$__end_$i$i$i >> 2] | 0;
-  } while (($2 | 0) != ($0 | 0));
- }
- $4 = HEAP32[$this >> 2] | 0;
- if ($4 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($4, (HEAP32[$this + 12 >> 2] | 0) - $4 | 0);
- return;
-}
-
-function __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $3 = 0, $__end_$i$i = 0, $__soon_to_be_end$06$i$i = 0;
- $0 = HEAP32[$this >> 2] | 0;
- if ($0 | 0) {
-  $__end_$i$i = $this + 4 | 0;
-  $1 = HEAP32[$__end_$i$i >> 2] | 0;
-  if (($1 | 0) == ($0 | 0)) $3 = $0; else {
-   $__soon_to_be_end$06$i$i = $1;
-   do {
-    $__soon_to_be_end$06$i$i = $__soon_to_be_end$06$i$i + -12 | 0;
-    __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($__soon_to_be_end$06$i$i);
-   } while (($__soon_to_be_end$06$i$i | 0) != ($0 | 0));
-   $3 = HEAP32[$this >> 2] | 0;
-  }
-  HEAP32[$__end_$i$i >> 2] = $0;
-  __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($3, (HEAP32[$this + 8 >> 2] | 0) - $3 | 0);
- }
- return;
-}
-
 function __ZNK12_GLOBAL__N_116itanium_demangle20PostfixQualifiedType9printLeftERNS_12OutputStreamE($this, $s) {
  $this = $this | 0;
  $s = $s | 0;
@@ -55356,6 +54469,24 @@ function __sg_apply_scissor_rect($x, $y, $w, $h, $origin_top_left) {
  return;
 }
 
+function __ZN10DrPolygonF22findWindingOrientationERKNSt3__26vectorI8DrPointFNS0_9allocatorIS2_EEEE($points) {
+ $points = $points | 0;
+ var $$cast = 0, $1 = 0, $add = 0, $area$0 = 0.0, $i1$0 = 0, $spec$select = 0, $sub$ptr$div$i = 0;
+ $1 = HEAP32[$points >> 2] | 0;
+ $sub$ptr$div$i = (HEAP32[$points + 4 >> 2] | 0) - $1 >> 4;
+ $$cast = $1;
+ $area$0 = 0.0;
+ $i1$0 = 0;
+ while (1) {
+  if (($i1$0 | 0) == ($sub$ptr$div$i | 0)) break;
+  $add = $i1$0 + 1 | 0;
+  $spec$select = ($add | 0) == ($sub$ptr$div$i | 0) ? 0 : $add;
+  $area$0 = $area$0 + (+HEAPF64[$$cast + ($i1$0 << 4) >> 3] * +HEAPF64[$$cast + ($spec$select << 4) + 8 >> 3] - +HEAPF64[$$cast + ($i1$0 << 4) + 8 >> 3] * +HEAPF64[$$cast + ($spec$select << 4) >> 3]);
+  $i1$0 = $add;
+ }
+ return ($area$0 > 0.0 ? 1 : $area$0 < 0.0 ? 0 : 2) | 0;
+}
+
 function __sg_uninit_pipeline($pip_id) {
  $pip_id = $pip_id | 0;
  var $$pre_trunc = 0, $7 = 0, $pip = 0, $retval = 0, sp = 0;
@@ -55402,27 +54533,21 @@ function __saudio_ring_count($ring) {
  return 0;
 }
 
-function _meshopt_remapIndexBuffer($destination, $indices, $index_count, $remap) {
- $destination = $destination | 0;
- $indices = $indices | 0;
- $index_count = $index_count | 0;
- $remap = $remap | 0;
- var $1 = 0, $cond = 0, $i$012 = 0, $tobool = 0;
- if (($index_count >>> 0) % 3 | 0 | 0) ___assert_fail(47099, 45771, 316, 46044);
- L4 : do if ($index_count | 0) {
-  $tobool = ($indices | 0) == 0;
-  $i$012 = 0;
-  while (1) {
-   if ($tobool) $cond = $i$012; else $cond = HEAP32[$indices + ($i$012 << 2) >> 2] | 0;
-   $1 = HEAP32[$remap + ($cond << 2) >> 2] | 0;
-   if (($1 | 0) == -1) break;
-   HEAP32[$destination + ($i$012 << 2) >> 2] = $1;
-   $i$012 = $i$012 + 1 | 0;
-   if ($i$012 >>> 0 >= $index_count >>> 0) break L4;
-  }
-  ___assert_fail(46069, 45771, 321, 46044);
- } while (0);
- return;
+function __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE13__lower_boundIS2_EENS_15__tree_iteratorIS2_PNS_11__tree_nodeIS2_PvEElEERKT_SD_PNS_15__tree_end_nodeIPNS_16__tree_node_baseISB_EEEE($this, $__v, $__root, $__result) {
+ $this = $this | 0;
+ $__v = $__v | 0;
+ $__root = $__root | 0;
+ $__result = $__result | 0;
+ var $__result$addr$0 = 0, $__root$addr$0 = 0, $call$i = 0;
+ $__result$addr$0 = $__result;
+ $__root$addr$0 = $__root;
+ while (1) {
+  if (!$__root$addr$0) break;
+  $call$i = __ZNK13TPPLPartition12ScanLineEdgeltERKS0_($__root$addr$0 + 16 | 0, $__v) | 0;
+  $__result$addr$0 = $call$i ? $__result$addr$0 : $__root$addr$0;
+  $__root$addr$0 = HEAP32[($call$i ? $__root$addr$0 + 4 | 0 : $__root$addr$0) >> 2] | 0;
+ }
+ return $__result$addr$0 | 0;
 }
 
 function __sg_apply_viewport($x, $y, $w, $h, $origin_top_left) {
@@ -55522,6 +54647,26 @@ function __sg_lookup_buffer($p, $buf_id) {
  $7 = HEAP32[$retval >> 2] | 0;
  STACKTOP = sp;
  return $7 | 0;
+}
+
+function __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $2 = 0, $__end_$i$i = 0, $__soon_to_be_end$0$i$i = 0, $incdec$ptr$i$i = 0;
+ $0 = HEAP32[$this >> 2] | 0;
+ if ($0 | 0) {
+  $__end_$i$i = $this + 4 | 0;
+  $__soon_to_be_end$0$i$i = HEAP32[$__end_$i$i >> 2] | 0;
+  while (1) {
+   if (($__soon_to_be_end$0$i$i | 0) == ($0 | 0)) break;
+   $incdec$ptr$i$i = $__soon_to_be_end$0$i$i + -12 | 0;
+   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($incdec$ptr$i$i);
+   $__soon_to_be_end$0$i$i = $incdec$ptr$i$i;
+  }
+  HEAP32[$__end_$i$i >> 2] = $0;
+  $2 = HEAP32[$this >> 2] | 0;
+  __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 8 >> 2] | 0) - $2 | 0);
+ }
+ return;
 }
 
 function __sg_uninit_shader($shd_id) {
@@ -55673,6 +54818,29 @@ function __sg_gl_cubeface_target($face_index) {
  }
  STACKTOP = sp;
  return HEAP32[$retval >> 2] | 0;
+}
+
+function __ZNSt3__210__list_impI8TPPLPolyNS_9allocatorIS1_EEE5clearEv($this) {
+ $this = $this | 0;
+ var $1 = 0, $4 = 0, $7 = 0, $__f$0 = 0, $__next_$i = 0, $__value_$i$i$i$i = 0;
+ $__value_$i$i$i$i = $this + 8 | 0;
+ L1 : do if (HEAP32[$__value_$i$i$i$i >> 2] | 0) {
+  $1 = HEAP32[$this + 4 >> 2] | 0;
+  $__next_$i = (HEAP32[$this >> 2] | 0) + 4 | 0;
+  $4 = HEAP32[$1 >> 2] | 0;
+  HEAP32[$4 + 4 >> 2] = HEAP32[$__next_$i >> 2];
+  HEAP32[HEAP32[$__next_$i >> 2] >> 2] = $4;
+  HEAP32[$__value_$i$i$i$i >> 2] = 0;
+  $__f$0 = $1;
+  while (1) {
+   if (($__f$0 | 0) == ($this | 0)) break L1;
+   $7 = HEAP32[$__f$0 + 4 >> 2] | 0;
+   __ZN8TPPLPolyD2Ev($__f$0 + 8 | 0);
+   __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($__f$0, 20);
+   $__f$0 = $7;
+  }
+ } while (0);
+ return;
 }
 
 function __ZNK12_GLOBAL__N_116itanium_demangle13QualifiedName9printLeftERNS_12OutputStreamE($this, $S) {
@@ -55855,6 +55023,28 @@ function __ZNK12_GLOBAL__N_116itanium_demangle11SpecialName9printLeftERNS_12Outp
  return;
 }
 
+function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPKS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESB_SB_m($this, $__first, $__last, $__n) {
+ $this = $this | 0;
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ $__n = $__n | 0;
+ var $1 = 0, $2 = 0, $3 = 0, $__end_ = 0;
+ $1 = HEAP32[$__last >> 2] | 0;
+ $__end_ = $this + 4 | 0;
+ $2 = HEAP32[$__first >> 2] | 0;
+ while (1) {
+  if (($2 | 0) == ($1 | 0)) break;
+  $3 = HEAP32[$__end_ >> 2] | 0;
+  HEAP32[$3 >> 2] = HEAP32[$2 >> 2];
+  HEAP32[$3 + 4 >> 2] = HEAP32[$2 + 4 >> 2];
+  HEAP32[$3 + 8 >> 2] = HEAP32[$2 + 8 >> 2];
+  HEAP32[$3 + 12 >> 2] = HEAP32[$2 + 12 >> 2];
+  HEAP32[$__end_ >> 2] = (HEAP32[$__end_ >> 2] | 0) + 16;
+  $2 = $2 + 16 | 0;
+ }
+ return;
+}
+
 function __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE16__construct_nodeIJRKS2_EEENS_10unique_ptrINS_11__tree_nodeIS2_PvEENS_22__tree_node_destructorINS5_ISE_EEEEEEDpOT_($agg$result, $this, $__args) {
  $agg$result = $agg$result | 0;
  $this = $this | 0;
@@ -55891,64 +55081,24 @@ function __ZNK10__cxxabiv120__si_class_type_info16search_above_dstEPNS_19__dynam
  return;
 }
 
-function __ZN8DrBitmapC2Eii13Bitmap_Format($this, $width_, $height_, $desired_format) {
- $this = $this | 0;
- $width_ = $width_ | 0;
- $height_ = $height_ | 0;
- $desired_format = $desired_format | 0;
- var $1 = 0, $2 = 0, $3 = 0, $5 = 0, $data = 0, $mul = 0;
- __ZN8DrBitmapC2E13Bitmap_Format($this, $desired_format);
- HEAP32[$this + 8 >> 2] = $width_;
- HEAP32[$this + 12 >> 2] = $height_;
- $data = $this + 16 | 0;
- $mul = Math_imul($height_, $width_) | 0;
- __ZNSt3__26vectorIhNS_9allocatorIhEEE6resizeEm($data, Math_imul($mul, HEAP32[$this + 4 >> 2] | 0) | 0);
- $1 = HEAP32[$data >> 2] | 0;
- $2 = HEAP32[$this + 20 >> 2] | 0;
- $3 = $1;
- if (($2 - $3 | 0) > 0) {
-  $5 = $3 + -1 - $2 | 0;
-  _memset($1 | 0, 0, $2 + (($5 | 0) > -2 ? $5 : -2) + 2 - $3 | 0) | 0;
- }
- return;
-}
-
-function __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE18__construct_at_endIPKS4_EENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESB_SB_m($this, $__first, $__last, $__n) {
+function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE18__construct_at_endINS_11__wrap_iterIPS1_EEEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $__first, $__last, $__n) {
  $this = $this | 0;
  $__first = $__first | 0;
  $__last = $__last | 0;
  $__n = $__n | 0;
- var $0 = 0, $__begin1$addr$05$i = 0, $__end_ = 0;
+ var $1 = 0, $2 = 0, $3 = 0, $__end_ = 0;
+ $1 = HEAP32[$__last >> 2] | 0;
  $__end_ = $this + 4 | 0;
- if (($__first | 0) != ($__last | 0)) {
-  $0 = HEAP32[$__end_ >> 2] | 0;
-  $__begin1$addr$05$i = $__first;
-  do {
-   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($0, $__begin1$addr$05$i);
-   $__begin1$addr$05$i = $__begin1$addr$05$i + 12 | 0;
-   $0 = (HEAP32[$__end_ >> 2] | 0) + 12 | 0;
-   HEAP32[$__end_ >> 2] = $0;
-  } while (($__begin1$addr$05$i | 0) != ($__last | 0));
- }
- return;
-}
-
-function __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE18__construct_at_endIPS4_EENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $__first, $__last, $__n) {
- $this = $this | 0;
- $__first = $__first | 0;
- $__last = $__last | 0;
- $__n = $__n | 0;
- var $0 = 0, $__begin1$addr$05$i = 0, $__end_ = 0;
- $__end_ = $this + 4 | 0;
- if (($__first | 0) != ($__last | 0)) {
-  $0 = HEAP32[$__end_ >> 2] | 0;
-  $__begin1$addr$05$i = $__first;
-  do {
-   __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_($0, $__begin1$addr$05$i);
-   $__begin1$addr$05$i = $__begin1$addr$05$i + 12 | 0;
-   $0 = (HEAP32[$__end_ >> 2] | 0) + 12 | 0;
-   HEAP32[$__end_ >> 2] = $0;
-  } while (($__begin1$addr$05$i | 0) != ($__last | 0));
+ $2 = HEAP32[$__first >> 2] | 0;
+ while (1) {
+  if (($2 | 0) == ($1 | 0)) break;
+  $3 = HEAP32[$__end_ >> 2] | 0;
+  HEAP32[$3 >> 2] = HEAP32[$2 >> 2];
+  HEAP32[$3 + 4 >> 2] = HEAP32[$2 + 4 >> 2];
+  HEAP32[$3 + 8 >> 2] = HEAP32[$2 + 8 >> 2];
+  HEAP32[$3 + 12 >> 2] = HEAP32[$2 + 12 >> 2];
+  HEAP32[$__end_ >> 2] = (HEAP32[$__end_ >> 2] | 0) + 16;
+  $2 = $2 + 16 | 0;
  }
  return;
 }
@@ -55972,51 +55122,26 @@ function __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEE11__vallocateEm($this, $
  }
 }
 
-function __ZNSt3__214__split_bufferINS_6vectorI8DrPointFNS_9allocatorIS2_EEEERNS3_IS5_EEED2Ev($this) {
+function __ZNSt3__210__list_impIN13TPPLPartition8DiagonalENS_9allocatorIS2_EEE5clearEv($this) {
  $this = $this | 0;
- var $0 = 0, $1 = 0, $2 = 0, $4 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) {
-  $2 = $1;
-  do {
-   $incdec$ptr$i$i$i = $2 + -12 | 0;
-   HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
-   __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($incdec$ptr$i$i$i);
-   $2 = HEAP32[$__end_$i$i$i >> 2] | 0;
-  } while (($2 | 0) != ($0 | 0));
- }
- $4 = HEAP32[$this >> 2] | 0;
- if ($4 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($4, (HEAP32[$this + 12 >> 2] | 0) - $4 | 0);
+ var $1 = 0, $4 = 0, $7 = 0, $__f$0 = 0, $__next_$i = 0, $__value_$i$i$i$i = 0;
+ $__value_$i$i$i$i = $this + 8 | 0;
+ L1 : do if (HEAP32[$__value_$i$i$i$i >> 2] | 0) {
+  $1 = HEAP32[$this + 4 >> 2] | 0;
+  $__next_$i = (HEAP32[$this >> 2] | 0) + 4 | 0;
+  $4 = HEAP32[$1 >> 2] | 0;
+  HEAP32[$4 + 4 >> 2] = HEAP32[$__next_$i >> 2];
+  HEAP32[HEAP32[$__next_$i >> 2] >> 2] = $4;
+  HEAP32[$__value_$i$i$i$i >> 2] = 0;
+  $__f$0 = $1;
+  while (1) {
+   if (($__f$0 | 0) == ($this | 0)) break L1;
+   $7 = HEAP32[$__f$0 + 4 >> 2] | 0;
+   __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($__f$0, 16);
+   $__f$0 = $7;
+  }
+ } while (0);
  return;
-}
-
-function __ZN2Dr19EqualizeAngle0to360IfEET_RKS1_($angle) {
- $angle = $angle | 0;
- var $0 = 0.0, $add = 0.0, $equalized$0$lcssa = 0.0, $equalized$08 = 0.0, $equalized$1$lcssa = 0.0, $equalized$16 = 0.0, $sub = 0.0;
- $0 = +HEAPF32[$angle >> 2];
- if ($0 < 0.0) {
-  $equalized$08 = $0;
-  while (1) {
-   $add = $equalized$08 + 360.0;
-   if ($add < 0.0) $equalized$08 = $add; else {
-    $equalized$0$lcssa = $add;
-    break;
-   }
-  }
- } else $equalized$0$lcssa = $0;
- if ($equalized$0$lcssa > 360.0) {
-  $equalized$16 = $equalized$0$lcssa;
-  while (1) {
-   $sub = $equalized$16 + -360.0;
-   if ($sub > 360.0) $equalized$16 = $sub; else {
-    $equalized$1$lcssa = $sub;
-    break;
-   }
-  }
- } else $equalized$1$lcssa = $equalized$0$lcssa;
- return +$equalized$1$lcssa;
 }
 
 function _stbi__pnm_getinteger($s, $c) {
@@ -56163,31 +55288,6 @@ function _fons__tt_loadFont($context, $font, $data, $dataSize) {
  HEAP32[$stbError >> 2] = _stbtt_InitFont(HEAP32[$font$addr >> 2] | 0, HEAP32[$data$addr >> 2] | 0, 0) | 0;
  STACKTOP = sp;
  return HEAP32[$stbError >> 2] | 0;
-}
-
-function __ZN7meshoptL11hashUpdate4EjPKhm($h, $key, $len) {
- $h = $h | 0;
- $key = $key | 0;
- $len = $len | 0;
- var $h$addr$0$lcssa = 0, $h$addr$015 = 0, $key$addr$014 = 0, $len$addr$013 = 0, $mul = 0, $xor3 = 0;
- if ($len >>> 0 > 3) {
-  $h$addr$015 = $h;
-  $key$addr$014 = $key;
-  $len$addr$013 = $len;
-  while (1) {
-   $mul = Math_imul(HEAP32[$key$addr$014 >> 2] | 0, 1540483477) | 0;
-   $xor3 = (Math_imul($mul >>> 24 ^ $mul, 1540483477) | 0) ^ (Math_imul($h$addr$015, 1540483477) | 0);
-   $len$addr$013 = $len$addr$013 + -4 | 0;
-   if ($len$addr$013 >>> 0 <= 3) {
-    $h$addr$0$lcssa = $xor3;
-    break;
-   } else {
-    $h$addr$015 = $xor3;
-    $key$addr$014 = $key$addr$014 + 4 | 0;
-   }
-  }
- } else $h$addr$0$lcssa = $h;
- return $h$addr$0$lcssa | 0;
 }
 
 function _stbi__mad2sizes_valid($a, $b, $add) {
@@ -56419,27 +55519,6 @@ function _stbtt__buf_get($b, $n) {
  }
  STACKTOP = sp;
  return $4 | 0;
-}
-
-function __ZNSt3__213__vector_baseI8DrBitmapNS_9allocatorIS1_EEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $3 = 0, $__end_$i$i = 0, $__soon_to_be_end$06$i$i = 0;
- $0 = HEAP32[$this >> 2] | 0;
- if ($0 | 0) {
-  $__end_$i$i = $this + 4 | 0;
-  $1 = HEAP32[$__end_$i$i >> 2] | 0;
-  if (($1 | 0) == ($0 | 0)) $3 = $0; else {
-   $__soon_to_be_end$06$i$i = $1;
-   do {
-    $__soon_to_be_end$06$i$i = $__soon_to_be_end$06$i$i + -28 | 0;
-    __ZN8DrBitmapD2Ev($__soon_to_be_end$06$i$i);
-   } while (($__soon_to_be_end$06$i$i | 0) != ($0 | 0));
-   $3 = HEAP32[$this >> 2] | 0;
-  }
-  HEAP32[$__end_$i$i >> 2] = $0;
-  __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($3, (HEAP32[$this + 8 >> 2] | 0) - $3 | 0);
- }
- return;
 }
 
 function __sapp_emsc_frame($time, $userData) {
@@ -56775,6 +55854,26 @@ function __ZN6DrRect6adjustEiiii($this, $adjust_left, $adjust_top, $adjust_right
  return;
 }
 
+function __ZNSt3__213__vector_baseI8DrBitmapNS_9allocatorIS1_EEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $2 = 0, $__end_$i$i = 0, $__soon_to_be_end$0$i$i = 0, $incdec$ptr$i$i = 0;
+ $0 = HEAP32[$this >> 2] | 0;
+ if ($0 | 0) {
+  $__end_$i$i = $this + 4 | 0;
+  $__soon_to_be_end$0$i$i = HEAP32[$__end_$i$i >> 2] | 0;
+  while (1) {
+   if (($__soon_to_be_end$0$i$i | 0) == ($0 | 0)) break;
+   $incdec$ptr$i$i = $__soon_to_be_end$0$i$i + -28 | 0;
+   __ZN8DrBitmapD2Ev($incdec$ptr$i$i);
+   $__soon_to_be_end$0$i$i = $incdec$ptr$i$i;
+  }
+  HEAP32[$__end_$i$i >> 2] = $0;
+  $2 = HEAP32[$this >> 2] | 0;
+  __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 8 >> 2] | 0) - $2 | 0);
+ }
+ return;
+}
+
 function __sapp_emsc_end_drop($x, $y) {
  $x = $x | 0;
  $y = $y | 0;
@@ -56825,6 +55924,23 @@ function __saudio_ring_enqueue($ring, $val) {
   STACKTOP = sp;
   return;
  }
+}
+
+function __ZNSt3__214__split_bufferINS_6vectorINS1_I8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEEERNS3_IS7_EEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ while (1) {
+  $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -12 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  __ZNSt3__213__vector_baseINS_6vectorI8DrPointFNS_9allocatorIS2_EEEENS3_IS5_EEED2Ev($incdec$ptr$i$i$i);
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
 }
 
 function _stbi__bitcount($a) {
@@ -57454,26 +56570,6 @@ function __ZNKSt3__212_GLOBAL__N_114initial_stringINS_12basic_stringIcNS_11char_
  return;
 }
 
-function __ZNSt3__214__split_bufferI8DrBitmapRNS_9allocatorIS1_EEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $2 = 0, $4 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) {
-  $2 = $1;
-  do {
-   $incdec$ptr$i$i$i = $2 + -28 | 0;
-   HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
-   __ZN8DrBitmapD2Ev($incdec$ptr$i$i$i);
-   $2 = HEAP32[$__end_$i$i$i >> 2] | 0;
-  } while (($2 | 0) != ($0 | 0));
- }
- $4 = HEAP32[$this >> 2] | 0;
- if ($4 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($4, (HEAP32[$this + 12 >> 2] | 0) - $4 | 0);
- return;
-}
-
 function __sg_gl_filter($f) {
  $f = $f | 0;
  var $f$addr = 0, $retval = 0, sp = 0;
@@ -57611,6 +56707,23 @@ function __sfetch_path_copy($dst, $src) {
  return;
 }
 
+function __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE18__construct_at_endIPKS4_EENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESB_SB_m($this, $__first, $__last, $__n) {
+ $this = $this | 0;
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ $__n = $__n | 0;
+ var $__begin1$addr$0$i = 0, $__end_ = 0;
+ $__end_ = $this + 4 | 0;
+ $__begin1$addr$0$i = $__first;
+ while (1) {
+  if (($__begin1$addr$0$i | 0) == ($__last | 0)) break;
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_(HEAP32[$__end_ >> 2] | 0, $__begin1$addr$0$i);
+  HEAP32[$__end_ >> 2] = (HEAP32[$__end_ >> 2] | 0) + 12;
+  $__begin1$addr$0$i = $__begin1$addr$0$i + 12 | 0;
+ }
+ return;
+}
+
 function __ZNK12_GLOBAL__N_116itanium_demangle8DtorName9printLeftERNS_12OutputStreamE($this, $S) {
  $this = $this | 0;
  $S = $S | 0;
@@ -57643,6 +56756,23 @@ function __ZNK12_GLOBAL__N_116itanium_demangle22ConversionOperatorType9printLeft
  __ZN12_GLOBAL__N_112OutputStreampLENS_10StringViewE($S, $agg$tmp$byval_copy);
  __ZNK12_GLOBAL__N_116itanium_demangle4Node5printERNS_12OutputStreamE(HEAP32[$this + 8 >> 2] | 0, $S);
  STACKTOP = sp;
+ return;
+}
+
+function __ZNSt3__26vectorINS0_I8DrPointFNS_9allocatorIS1_EEEENS2_IS4_EEE18__construct_at_endIPS4_EENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeESA_SA_m($this, $__first, $__last, $__n) {
+ $this = $this | 0;
+ $__first = $__first | 0;
+ $__last = $__last | 0;
+ $__n = $__n | 0;
+ var $__begin1$addr$0$i = 0, $__end_ = 0;
+ $__end_ = $this + 4 | 0;
+ $__begin1$addr$0$i = $__first;
+ while (1) {
+  if (($__begin1$addr$0$i | 0) == ($__last | 0)) break;
+  __ZNSt3__26vectorI8DrPointFNS_9allocatorIS1_EEEC2ERKS4_(HEAP32[$__end_ >> 2] | 0, $__begin1$addr$0$i);
+  HEAP32[$__end_ >> 2] = (HEAP32[$__end_ >> 2] | 0) + 12;
+  $__begin1$addr$0$i = $__begin1$addr$0$i + 12 | 0;
+ }
  return;
 }
 
@@ -57754,6 +56884,23 @@ function __ZNK12_GLOBAL__N_116itanium_demangle15LiteralOperator9printLeftERNS_12
  __ZN12_GLOBAL__N_112OutputStreampLENS_10StringViewE($S, $agg$tmp$byval_copy);
  __ZNK12_GLOBAL__N_116itanium_demangle4Node5printERNS_12OutputStreamE(HEAP32[$this + 8 >> 2] | 0, $S);
  STACKTOP = sp;
+ return;
+}
+
+function __ZNSt3__214__split_bufferINS_6vectorI8DrPointFNS_9allocatorIS2_EEEERNS3_IS5_EEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ while (1) {
+  $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -12 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  __ZNSt3__213__vector_baseI8DrPointFNS_9allocatorIS1_EEED2Ev($incdec$ptr$i$i$i);
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
  return;
 }
 
@@ -58413,30 +57560,6 @@ function __ZN13TPPLPartition6InConeER9TPPLPointS1_S1_S1_($this, $p1, $p2, $p3, $
  return $retval$0 | 0;
 }
 
-function __ZN7meshoptL22getNextTriangleDeadEndERjPKhm($input_cursor, $emitted_flags, $face_count) {
- $input_cursor = $input_cursor | 0;
- $emitted_flags = $emitted_flags | 0;
- $face_count = $face_count | 0;
- var $0 = 0, $1 = 0, $retval$0 = 0;
- $0 = HEAP32[$input_cursor >> 2] | 0;
- L1 : do if ($0 >>> 0 < $face_count >>> 0) {
-  $1 = $0;
-  while (1) {
-   if (!(HEAP8[$emitted_flags + $1 >> 0] | 0)) {
-    $retval$0 = $1;
-    break L1;
-   }
-   $1 = $1 + 1 | 0;
-   HEAP32[$input_cursor >> 2] = $1;
-   if ($1 >>> 0 >= $face_count >>> 0) {
-    $retval$0 = -1;
-    break;
-   }
-  }
- } else $retval$0 = -1; while (0);
- return $retval$0 | 0;
-}
-
 function __ZN12_GLOBAL__N_116itanium_demangle14IntegerLiteralC2ENS_10StringViewES2_($this, $Type_, $Value_) {
  $this = $this | 0;
  $Type_ = $Type_ | 0;
@@ -58882,6 +58005,23 @@ function __ZN12_GLOBAL__N_112OutputStream4growEm($this, $N) {
  return;
 }
 
+function __ZNSt3__214__split_bufferI8DrBitmapRNS_9allocatorIS1_EEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ while (1) {
+  $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -28 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  __ZN8DrBitmapD2Ev($incdec$ptr$i$i$i);
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
+}
+
 function __ZNK12_GLOBAL__N_116itanium_demangle13ParameterPack10printRightERNS_12OutputStreamE($this, $S) {
  $this = $this | 0;
  $S = $S | 0;
@@ -59086,6 +58226,74 @@ function __ZNSt3__24listI8TPPLPolyNS_9allocatorIS1_EEE9push_backERKS1_($this, $_
  return;
 }
 
+function __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -16 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  $1 = $incdec$ptr$i$i$i;
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
+}
+
+function __ZNSt3__214__split_bufferI7DrPointRNS_9allocatorIS1_EEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -8 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  $1 = $incdec$ptr$i$i$i;
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
+}
+
+function __ZNSt3__214__split_bufferI6VertexRNS_9allocatorIS1_EEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -44 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  $1 = $incdec$ptr$i$i$i;
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
+}
+
+function __ZNSt3__214__split_bufferI6DrRectRNS_9allocatorIS1_EEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -16 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  $1 = $incdec$ptr$i$i$i;
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
+}
+
 function __ZN12_GLOBAL__N_122initializeOutputStreamEPcPmRNS_12OutputStreamEm($Buf, $N, $S) {
  $Buf = $Buf | 0;
  $N = $N | 0;
@@ -59276,6 +58484,74 @@ function _stbi__hdr_test($s) {
  $5 = HEAP32[$r >> 2] | 0;
  STACKTOP = sp;
  return $5 | 0;
+}
+
+function __ZNSt3__214__split_bufferImRNS_9allocatorImEEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -4 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  $1 = $incdec$ptr$i$i$i;
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
+}
+
+function __ZNSt3__214__split_bufferIjRNS_9allocatorIjEEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -4 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  $1 = $incdec$ptr$i$i$i;
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
+}
+
+function __ZNSt3__214__split_bufferIhRNS_9allocatorIhEEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -1 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  $1 = $incdec$ptr$i$i$i;
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
+}
+
+function __ZNSt3__214__split_bufferIdRNS_9allocatorIdEEED2Ev($this) {
+ $this = $this | 0;
+ var $0 = 0, $1 = 0, $2 = 0, $__end_$i$i$i = 0, $incdec$ptr$i$i$i = 0;
+ $0 = HEAP32[$this + 4 >> 2] | 0;
+ $__end_$i$i$i = $this + 8 | 0;
+ $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
+ while (1) {
+  if (($1 | 0) == ($0 | 0)) break;
+  $incdec$ptr$i$i$i = $1 + -8 | 0;
+  HEAP32[$__end_$i$i$i >> 2] = $incdec$ptr$i$i$i;
+  $1 = $incdec$ptr$i$i$i;
+ }
+ $2 = HEAP32[$this >> 2] | 0;
+ if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
+ return;
 }
 
 function __ZNSt3__214__split_bufferIhRNS_9allocatorIhEEEC2EmmS3_($this, $__cap, $__start, $__a) {
@@ -59751,6 +59027,24 @@ function __ZN2Dr26CalcRotationAngleInDegreesE8DrPointFS0_($center_point, $target
  return +($add < 0.0 ? $add + 360.0 : $add);
 }
 
+function __ZN7meshoptL11hashUpdate4EjPKhm($h, $key, $len) {
+ $h = $h | 0;
+ $key = $key | 0;
+ $len = $len | 0;
+ var $h$addr$0 = 0, $key$addr$0 = 0, $len$addr$0 = 0, $mul = 0;
+ $h$addr$0 = $h;
+ $key$addr$0 = $key;
+ $len$addr$0 = $len;
+ while (1) {
+  if ($len$addr$0 >>> 0 <= 3) break;
+  $mul = Math_imul(HEAP32[$key$addr$0 >> 2] | 0, 1540483477) | 0;
+  $h$addr$0 = (Math_imul($mul >>> 24 ^ $mul, 1540483477) | 0) ^ (Math_imul($h$addr$0, 1540483477) | 0);
+  $key$addr$0 = $key$addr$0 + 4 | 0;
+  $len$addr$0 = $len$addr$0 + -4 | 0;
+ }
+ return $h$addr$0 | 0;
+}
+
 function __sgl_reset_pipeline($pip) {
  $pip = $pip | 0;
  var $1 = 0, $pip$addr = 0, sp = 0;
@@ -59831,6 +59125,28 @@ function __ZNK10__cxxabiv117__class_type_info29process_static_type_below_dstEPNS
   if ((HEAP32[$path_dynamic_ptr_to_static_ptr >> 2] | 0) != 1) HEAP32[$path_dynamic_ptr_to_static_ptr >> 2] = $path_below;
  }
  return;
+}
+
+function __ZN7meshoptL22getNextTriangleDeadEndERjPKhm($input_cursor, $emitted_flags, $face_count) {
+ $input_cursor = $input_cursor | 0;
+ $emitted_flags = $emitted_flags | 0;
+ $face_count = $face_count | 0;
+ var $0 = 0, $inc = 0, $retval$0 = 0;
+ $0 = HEAP32[$input_cursor >> 2] | 0;
+ while (1) {
+  if ($0 >>> 0 >= $face_count >>> 0) {
+   $retval$0 = -1;
+   break;
+  }
+  if (!(HEAP8[$emitted_flags + $0 >> 0] | 0)) {
+   $retval$0 = $0;
+   break;
+  }
+  $inc = $0 + 1 | 0;
+  HEAP32[$input_cursor >> 2] = $inc;
+  $0 = $inc;
+ }
+ return $retval$0 | 0;
 }
 
 function _stbi__jpeg_test($s) {
@@ -60197,18 +59513,6 @@ function __sg_gl_supported_texture_format($fmt) {
  return 0;
 }
 
-function __ZNSt3__214__split_bufferI6VertexRNS_9allocatorIS1_EEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $6 = 0, $__end_$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) HEAP32[$__end_$i$i$i >> 2] = $1 + (~((($1 + -44 - $0 | 0) >>> 0) / 44 | 0) * 44 | 0);
- $6 = HEAP32[$this >> 2] | 0;
- if ($6 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($6, (HEAP32[$this + 12 >> 2] | 0) - $6 | 0);
- return;
-}
-
 function _stbi__bit_reverse($v, $bits) {
  $v = $v | 0;
  $bits = $bits | 0;
@@ -60519,42 +59823,6 @@ function __ZNSt3__26vectorIhNS_9allocatorIhEEE6resizeEm($this, $__sz) {
  $sub$ptr$sub$i = (HEAP32[$__end_$i >> 2] | 0) - $1 | 0;
  $2 = $1;
  if ($sub$ptr$sub$i >>> 0 < $__sz >>> 0) __ZNSt3__26vectorIhNS_9allocatorIhEEE8__appendEm($this, $__sz - $sub$ptr$sub$i | 0); else if ($sub$ptr$sub$i >>> 0 > $__sz >>> 0) HEAP32[$__end_$i >> 2] = $2 + $__sz;
- return;
-}
-
-function __ZNSt3__214__split_bufferI8DrPointFRNS_9allocatorIS1_EEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $6 = 0, $__end_$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) HEAP32[$__end_$i$i$i >> 2] = $1 + (~(($1 + -16 - $0 | 0) >>> 4) << 4);
- $6 = HEAP32[$this >> 2] | 0;
- if ($6 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($6, (HEAP32[$this + 12 >> 2] | 0) - $6 | 0);
- return;
-}
-
-function __ZNSt3__214__split_bufferI7DrPointRNS_9allocatorIS1_EEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $6 = 0, $__end_$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) HEAP32[$__end_$i$i$i >> 2] = $1 + (~(($1 + -8 - $0 | 0) >>> 3) << 3);
- $6 = HEAP32[$this >> 2] | 0;
- if ($6 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($6, (HEAP32[$this + 12 >> 2] | 0) - $6 | 0);
- return;
-}
-
-function __ZNSt3__214__split_bufferI6DrRectRNS_9allocatorIS1_EEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $6 = 0, $__end_$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) HEAP32[$__end_$i$i$i >> 2] = $1 + (~(($1 + -16 - $0 | 0) >>> 4) << 4);
- $6 = HEAP32[$this >> 2] | 0;
- if ($6 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($6, (HEAP32[$this + 12 >> 2] | 0) - $6 | 0);
  return;
 }
 
@@ -60881,42 +60149,6 @@ function __sapp_emsc_begin_drop($num) {
  HEAP32[14745] = HEAP32[$num$addr >> 2];
  __sapp_clear_drop_buffer();
  STACKTOP = sp;
- return;
-}
-
-function __ZNSt3__214__split_bufferImRNS_9allocatorImEEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $6 = 0, $__end_$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) HEAP32[$__end_$i$i$i >> 2] = $1 + (~(($1 + -4 - $0 | 0) >>> 2) << 2);
- $6 = HEAP32[$this >> 2] | 0;
- if ($6 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($6, (HEAP32[$this + 12 >> 2] | 0) - $6 | 0);
- return;
-}
-
-function __ZNSt3__214__split_bufferIjRNS_9allocatorIjEEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $6 = 0, $__end_$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) HEAP32[$__end_$i$i$i >> 2] = $1 + (~(($1 + -4 - $0 | 0) >>> 2) << 2);
- $6 = HEAP32[$this >> 2] | 0;
- if ($6 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($6, (HEAP32[$this + 12 >> 2] | 0) - $6 | 0);
- return;
-}
-
-function __ZNSt3__214__split_bufferIdRNS_9allocatorIdEEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $1 = 0, $6 = 0, $__end_$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- $1 = HEAP32[$__end_$i$i$i >> 2] | 0;
- if (($1 | 0) != ($0 | 0)) HEAP32[$__end_$i$i$i >> 2] = $1 + (~(($1 + -8 - $0 | 0) >>> 3) << 3);
- $6 = HEAP32[$this >> 2] | 0;
- if ($6 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($6, (HEAP32[$this + 12 >> 2] | 0) - $6 | 0);
  return;
 }
 
@@ -62125,17 +61357,6 @@ function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14Mang
  return __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle9ArrayTypeEJRPNS2_4NodeERNS2_12NodeOrStringEEEEPT_DpOT0_($this + 368 | 0, $args, $args1) | 0;
 }
 
-function __ZNSt3__214__split_bufferIhRNS_9allocatorIhEEED2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $2 = 0, $__end_$i$i$i = 0;
- $0 = HEAP32[$this + 4 >> 2] | 0;
- $__end_$i$i$i = $this + 8 | 0;
- if ((HEAP32[$__end_$i$i$i >> 2] | 0) != ($0 | 0)) HEAP32[$__end_$i$i$i >> 2] = $0;
- $2 = HEAP32[$this >> 2] | 0;
- if ($2 | 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm($2, (HEAP32[$this + 12 >> 2] | 0) - $2 | 0);
- return;
-}
-
 function __ZN12_GLOBAL__N_116DefaultAllocator8makeNodeINS_16itanium_demangle10NestedNameEJRPNS2_4NodeES6_EEEPT_DpOT0_($this, $args, $args1) {
  $this = $this | 0;
  $args = $args | 0;
@@ -62637,7 +61858,7 @@ function __ZNSt3__218__libcpp_refstringD2Ev($this) {
  $this = $this | 0;
  var $1 = 0, $call2 = 0, $count = 0;
  if (__ZNKSt3__218__libcpp_refstring15__uses_refcountEv($this) | 0) {
-  $call2 = __ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_2087(HEAP32[$this >> 2] | 0) | 0;
+  $call2 = __ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_2089(HEAP32[$this >> 2] | 0) | 0;
   $count = $call2 + 8 | 0;
   $1 = HEAP32[$count >> 2] | 0;
   HEAP32[$count >> 2] = $1 + -1;
@@ -63147,6 +62368,22 @@ function _stbi__get32be($s) {
  $add = $shl + (_stbi__get16be(HEAP32[$s$addr >> 2] | 0) | 0) | 0;
  STACKTOP = sp;
  return $add | 0;
+}
+
+function __ZN2Dr19EqualizeAngle0to360IfEET_RKS1_($angle) {
+ $angle = $angle | 0;
+ var $equalized$0 = 0.0, $equalized$1 = 0.0;
+ $equalized$0 = +HEAPF32[$angle >> 2];
+ while (1) {
+  if (!($equalized$0 < 0.0)) break;
+  $equalized$0 = $equalized$0 + 360.0;
+ }
+ $equalized$1 = $equalized$0;
+ while (1) {
+  if (!($equalized$1 > 360.0)) break;
+  $equalized$1 = $equalized$1 + -360.0;
+ }
+ return +$equalized$1;
 }
 
 function __ZN12_GLOBAL__N_116itanium_demangle22AbstractManglingParserINS0_14ManglingParserINS_16DefaultAllocatorEEES3_E4makeINS0_21StructuredBindingNameEJNS0_9NodeArrayEEEEPNS0_4NodeEDpOT0_($this, $args) {
@@ -65128,6 +64365,20 @@ function __ZN12_GLOBAL__N_116itanium_demangle22ConversionOperatorTypeC2EPKNS0_4N
  return;
 }
 
+function __ZN2Dr13RoundPowerOf2IfEEiT_($number) {
+ $number = +$number;
+ var $i$0 = 0, $or = 0, $vi$0 = 0;
+ $i$0 = 0;
+ $vi$0 = (~~$number >>> 0) + -1 | 0;
+ while (1) {
+  if (($i$0 | 0) == 5) break;
+  $or = $vi$0 >>> (1 << $i$0) | $vi$0;
+  $i$0 = $i$0 + 1 | 0;
+  $vi$0 = $or;
+ }
+ return $vi$0 + 1 | 0;
+}
+
 function __ZNK12_GLOBAL__N_116itanium_demangle20NameWithTemplateArgs11getBaseNameEv($agg$result, $this) {
  $agg$result = $agg$result | 0;
  $this = $this | 0;
@@ -65318,6 +64569,18 @@ function __sg_create_context($ctx) {
  return $call | 0;
 }
 
+function __sapp_call_frame() {
+ if (!(HEAP8[58680] & 1)) return;
+ if (HEAP8[58681] & 1) return;
+ if (HEAP32[14645] | 0) {
+  FUNCTION_TABLE_v[HEAP32[58580 >> 2] & 7]();
+  return;
+ }
+ if (!(HEAP32[14651] | 0)) return;
+ FUNCTION_TABLE_vi[HEAP32[58604 >> 2] & 127](HEAP32[14649] | 0);
+ return;
+}
+
 function __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEED2Ev($this) {
  $this = $this | 0;
  __ZNSt3__26__treeIN13TPPLPartition12ScanLineEdgeENS_4lessIS2_EENS_9allocatorIS2_EEE7destroyEPNS_11__tree_nodeIS2_PvEE($this, HEAP32[$this + 4 >> 2] | 0);
@@ -65336,17 +64599,6 @@ function __ZNK12_GLOBAL__N_116itanium_demangle10NestedName11getBaseNameEv($agg$r
  var $0 = 0;
  $0 = HEAP32[$this + 12 >> 2] | 0;
  FUNCTION_TABLE_vii[HEAP32[(HEAP32[$0 >> 2] | 0) + 24 >> 2] & 127]($agg$result, $0);
- return;
-}
-function __sapp_call_frame() {
- if (!(HEAP8[58680] & 1)) return;
- if (HEAP8[58681] & 1) return;
- if (HEAP32[14645] | 0) {
-  FUNCTION_TABLE_v[HEAP32[58580 >> 2] & 7]();
-  return;
- }
- if (!(HEAP32[14651] | 0)) return;
- FUNCTION_TABLE_vi[HEAP32[58604 >> 2] & 127](HEAP32[14649] | 0);
  return;
 }
 
@@ -65403,36 +64655,10 @@ function __ZNK12_GLOBAL__N_116itanium_demangle19PointerToMemberType19hasRHSCompo
  return __ZNK12_GLOBAL__N_116itanium_demangle4Node15hasRHSComponentERNS_12OutputStreamE(HEAP32[$this + 12 >> 2] | 0, $S) | 0;
 }
 
-function __ZN17meshopt_AllocatorD2Ev($this) {
- $this = $this | 0;
- var $0 = 0, $i$06 = 0;
- $0 = HEAP32[$this + 96 >> 2] | 0;
- if ($0 | 0) {
-  $i$06 = $0;
-  do {
-   $i$06 = $i$06 + -1 | 0;
-   __ZdlPv(HEAP32[$this + ($i$06 << 2) >> 2] | 0);
-  } while (($i$06 | 0) != 0);
- }
- return;
-}
-
 function __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($this) {
  $this = $this | 0;
  if ((HEAP8[$this + 11 >> 0] | 0) < 0) __ZNSt3__217_DeallocateCaller27__do_deallocate_handle_sizeEPvm(HEAP32[$this >> 2] | 0, HEAP32[$this + 8 >> 2] & 2147483647);
  return;
-}
-
-function __ZN2Dr13RoundPowerOf2IfEEiT_($number) {
- $number = +$number;
- var $i$08 = 0, $vi$07 = 0;
- $i$08 = 0;
- $vi$07 = (~~$number >>> 0) + -1 | 0;
- do {
-  $vi$07 = $vi$07 >>> (1 << $i$08) | $vi$07;
-  $i$08 = $i$08 + 1 | 0;
- } while (($i$08 | 0) != 5);
- return $vi$07 + 1 | 0;
 }
 
 function __ZN12_GLOBAL__N_116itanium_demangle9NodeArrayC2EPPNS0_4NodeEm($this, $Elements_, $NumElements_) {
@@ -65712,6 +64938,19 @@ function __ZN53EmscriptenBindingInitializer_native_and_builtin_typesC2Ev($this) 
  HEAP32[sp >> 2] = $this;
  ___embind_register_native_and_builtin_types();
  STACKTOP = sp;
+ return;
+}
+
+function __ZN17meshopt_AllocatorD2Ev($this) {
+ $this = $this | 0;
+ var $i$0 = 0, $sub = 0;
+ $i$0 = HEAP32[$this + 96 >> 2] | 0;
+ while (1) {
+  if (!$i$0) break;
+  $sub = $i$0 + -1 | 0;
+  __ZdlPv(HEAP32[$this + ($sub << 2) >> 2] | 0);
+  $i$0 = $sub;
+ }
  return;
 }
 
@@ -66542,19 +65781,18 @@ function _strtol($s, $p, $base) {
  return $0 | 0;
 }
 
+function __ZN6DrRect6bottomEv($this) {
+ $this = $this | 0;
+ var $0 = 0;
+ $0 = HEAP32[$this + 12 >> 2] | 0;
+ return (HEAP32[$this + 4 >> 2] | 0) + (($0 | 0) > 0 ? $0 + -1 | 0 : 0) | 0;
+}
 function __ZN12_GLOBAL__N_116itanium_demangle12NodeOrStringC2EPNS0_4NodeE($this, $N) {
  $this = $this | 0;
  $N = $N | 0;
  HEAP32[$this >> 2] = $N;
  HEAP32[$this + 4 >> 2] = 0;
  return;
-}
-
-function __ZN6DrRect6bottomEv($this) {
- $this = $this | 0;
- var $0 = 0;
- $0 = HEAP32[$this + 12 >> 2] | 0;
- return (HEAP32[$this + 4 >> 2] | 0) + (($0 | 0) > 0 ? $0 + -1 | 0 : 0) | 0;
 }
 
 function _strchr($s, $c) {
@@ -67453,7 +66691,7 @@ function _sapp_wgpu_get_render_view() {
  return 0;
 }
 
-function __ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_2087($data_) {
+function __ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_2089($data_) {
  $data_ = $data_ | 0;
  return $data_ + -12 | 0;
 }
@@ -67674,7 +66912,7 @@ function __ZN12_GLOBAL__N_116itanium_demangle16FloatLiteralImplIdED0Ev($this) {
  return;
 }
 
-function ___cxx_global_var_init_1157() {
+function ___cxx_global_var_init_1159() {
  __ZN53EmscriptenBindingInitializer_native_and_builtin_typesC2Ev(2193745);
  return;
 }
@@ -68497,10 +67735,6 @@ function __ZN10DrPolygonF6pointsEv($this) {
  $this = $this | 0;
  return $this | 0;
 }
-function globalCtors() {
- __GLOBAL__sub_I_main_cpp();
- __GLOBAL__sub_I_bind_cpp();
-}
 
 function __sgl_matrix_projection() {
  return 2170124 + (HEAP32[541505] << 6) | 0;
@@ -68549,7 +67783,7 @@ function ___cxx_global_var_init_3() {
 }
 
 function __GLOBAL__sub_I_bind_cpp() {
- ___cxx_global_var_init_1157();
+ ___cxx_global_var_init_1159();
  return;
 }
 
@@ -68928,11 +68162,13 @@ var FUNCTION_TABLE_viiii = [b12,__ZNK10__cxxabiv117__class_type_info27has_unambi
 var FUNCTION_TABLE_viiiii = [b13,__ZNK10__cxxabiv117__class_type_info16search_below_dstEPNS_19__dynamic_cast_infoEPKvib,__ZNK10__cxxabiv120__si_class_type_info16search_below_dstEPNS_19__dynamic_cast_infoEPKvib,__ZNK10__cxxabiv121__vmi_class_type_info16search_below_dstEPNS_19__dynamic_cast_infoEPKvib,__sfons_render_draw,b13,b13,b13];
 var FUNCTION_TABLE_viiiiii = [b14,__ZNK10__cxxabiv117__class_type_info16search_above_dstEPNS_19__dynamic_cast_infoEPKvS4_ib,__ZNK10__cxxabiv120__si_class_type_info16search_above_dstEPNS_19__dynamic_cast_infoEPKvS4_ib,__ZNK10__cxxabiv121__vmi_class_type_info16search_above_dstEPNS_19__dynamic_cast_infoEPKvS4_ib,_stbi__YCbCr_to_RGB_row,b14,b14,b14];
 
-  return { __ZSt18uncaught_exceptionv: __ZSt18uncaught_exceptionv, ___cxa_can_catch: ___cxa_can_catch, ___cxa_demangle: ___cxa_demangle, ___cxa_is_pointer_type: ___cxa_is_pointer_type, ___em_js__get_canvas_height: ___em_js__get_canvas_height, ___em_js__get_canvas_width: ___em_js__get_canvas_width, ___em_js__sapp_js_add_beforeunload_listener: ___em_js__sapp_js_add_beforeunload_listener, ___em_js__sapp_js_add_clipboard_listener: ___em_js__sapp_js_add_clipboard_listener, ___em_js__sapp_js_add_dragndrop_listeners: ___em_js__sapp_js_add_dragndrop_listeners, ___em_js__sapp_js_create_textfield: ___em_js__sapp_js_create_textfield, ___em_js__sapp_js_dropped_file_size: ___em_js__sapp_js_dropped_file_size, ___em_js__sapp_js_exit_pointerlock: ___em_js__sapp_js_exit_pointerlock, ___em_js__sapp_js_fetch_dropped_file: ___em_js__sapp_js_fetch_dropped_file, ___em_js__sapp_js_focus_textfield: ___em_js__sapp_js_focus_textfield, ___em_js__sapp_js_pointer_init: ___em_js__sapp_js_pointer_init, ___em_js__sapp_js_remove_beforeunload_listener: ___em_js__sapp_js_remove_beforeunload_listener, ___em_js__sapp_js_remove_clipboard_listener: ___em_js__sapp_js_remove_clipboard_listener, ___em_js__sapp_js_remove_dragndrop_listeners: ___em_js__sapp_js_remove_dragndrop_listeners, ___em_js__sapp_js_request_pointerlock: ___em_js__sapp_js_request_pointerlock, ___em_js__sapp_js_unfocus_textfield: ___em_js__sapp_js_unfocus_textfield, ___em_js__sapp_js_write_clipboard: ___em_js__sapp_js_write_clipboard, ___em_js__saudio_js_buffer_frames: ___em_js__saudio_js_buffer_frames, ___em_js__saudio_js_init: ___em_js__saudio_js_init, ___em_js__saudio_js_sample_rate: ___em_js__saudio_js_sample_rate, ___em_js__saudio_js_shutdown: ___em_js__saudio_js_shutdown, ___em_js__sfetch_js_send_get_request: ___em_js__sfetch_js_send_get_request, ___em_js__sfetch_js_send_head_request: ___em_js__sfetch_js_send_head_request, ___em_js__stm_js_perfnow: ___em_js__stm_js_perfnow, ___embind_register_native_and_builtin_types: ___embind_register_native_and_builtin_types, ___errno_location: ___errno_location, ___getTypeName: ___getTypeName, ___muldi3: ___muldi3, ___udivdi3: ___udivdi3, __sapp_emsc_begin_drop: __sapp_emsc_begin_drop, __sapp_emsc_drop: __sapp_emsc_drop, __sapp_emsc_end_drop: __sapp_emsc_end_drop, __sapp_emsc_invoke_fetch_cb: __sapp_emsc_invoke_fetch_cb, __sapp_emsc_notify_keyboard_hidden: __sapp_emsc_notify_keyboard_hidden, __sapp_emsc_onpaste: __sapp_emsc_onpaste, __sapp_html5_get_ask_leave_site: __sapp_html5_get_ask_leave_site, __saudio_emsc_pull: __saudio_emsc_pull, __sfetch_emsc_failed_buffer_too_small: __sfetch_emsc_failed_buffer_too_small, __sfetch_emsc_failed_http_status: __sfetch_emsc_failed_http_status, __sfetch_emsc_get_response: __sfetch_emsc_get_response, __sfetch_emsc_head_response: __sfetch_emsc_head_response, _bitshift64Lshr: _bitshift64Lshr, _bitshift64Shl: _bitshift64Shl, _free: _free, _i64Add: _i64Add, _i64Subtract: _i64Subtract, _llvm_round_f64: _llvm_round_f64, _main: _main, _malloc: _malloc, _memcpy: _memcpy, _memmove: _memmove, _memset: _memset, _round: _round, _sbrk: _sbrk, dynCall_i: dynCall_i, dynCall_idi: dynCall_idi, dynCall_ii: dynCall_ii, dynCall_iidiiii: dynCall_iidiiii, dynCall_iii: dynCall_iii, dynCall_iiii: dynCall_iiii, dynCall_iiiii: dynCall_iiiii, dynCall_iiiiii: dynCall_iiiiii, dynCall_v: dynCall_v, dynCall_vi: dynCall_vi, dynCall_vii: dynCall_vii, dynCall_viii: dynCall_viii, dynCall_viiii: dynCall_viiii, dynCall_viiiii: dynCall_viiiii, dynCall_viiiiii: dynCall_viiiiii, establishStackSpace: establishStackSpace, globalCtors: globalCtors, stackAlloc: stackAlloc, stackRestore: stackRestore, stackSave: stackSave };
+  return { __GLOBAL__sub_I_bind_cpp: __GLOBAL__sub_I_bind_cpp, __GLOBAL__sub_I_main_cpp: __GLOBAL__sub_I_main_cpp, __ZSt18uncaught_exceptionv: __ZSt18uncaught_exceptionv, ___cxa_can_catch: ___cxa_can_catch, ___cxa_demangle: ___cxa_demangle, ___cxa_is_pointer_type: ___cxa_is_pointer_type, ___em_js__get_canvas_height: ___em_js__get_canvas_height, ___em_js__get_canvas_width: ___em_js__get_canvas_width, ___em_js__sapp_js_add_beforeunload_listener: ___em_js__sapp_js_add_beforeunload_listener, ___em_js__sapp_js_add_clipboard_listener: ___em_js__sapp_js_add_clipboard_listener, ___em_js__sapp_js_add_dragndrop_listeners: ___em_js__sapp_js_add_dragndrop_listeners, ___em_js__sapp_js_create_textfield: ___em_js__sapp_js_create_textfield, ___em_js__sapp_js_dropped_file_size: ___em_js__sapp_js_dropped_file_size, ___em_js__sapp_js_exit_pointerlock: ___em_js__sapp_js_exit_pointerlock, ___em_js__sapp_js_fetch_dropped_file: ___em_js__sapp_js_fetch_dropped_file, ___em_js__sapp_js_focus_textfield: ___em_js__sapp_js_focus_textfield, ___em_js__sapp_js_pointer_init: ___em_js__sapp_js_pointer_init, ___em_js__sapp_js_remove_beforeunload_listener: ___em_js__sapp_js_remove_beforeunload_listener, ___em_js__sapp_js_remove_clipboard_listener: ___em_js__sapp_js_remove_clipboard_listener, ___em_js__sapp_js_remove_dragndrop_listeners: ___em_js__sapp_js_remove_dragndrop_listeners, ___em_js__sapp_js_request_pointerlock: ___em_js__sapp_js_request_pointerlock, ___em_js__sapp_js_unfocus_textfield: ___em_js__sapp_js_unfocus_textfield, ___em_js__sapp_js_write_clipboard: ___em_js__sapp_js_write_clipboard, ___em_js__saudio_js_buffer_frames: ___em_js__saudio_js_buffer_frames, ___em_js__saudio_js_init: ___em_js__saudio_js_init, ___em_js__saudio_js_sample_rate: ___em_js__saudio_js_sample_rate, ___em_js__saudio_js_shutdown: ___em_js__saudio_js_shutdown, ___em_js__sfetch_js_send_get_request: ___em_js__sfetch_js_send_get_request, ___em_js__sfetch_js_send_head_request: ___em_js__sfetch_js_send_head_request, ___em_js__stm_js_perfnow: ___em_js__stm_js_perfnow, ___embind_register_native_and_builtin_types: ___embind_register_native_and_builtin_types, ___errno_location: ___errno_location, ___getTypeName: ___getTypeName, ___muldi3: ___muldi3, ___udivdi3: ___udivdi3, __sapp_emsc_begin_drop: __sapp_emsc_begin_drop, __sapp_emsc_drop: __sapp_emsc_drop, __sapp_emsc_end_drop: __sapp_emsc_end_drop, __sapp_emsc_invoke_fetch_cb: __sapp_emsc_invoke_fetch_cb, __sapp_emsc_notify_keyboard_hidden: __sapp_emsc_notify_keyboard_hidden, __sapp_emsc_onpaste: __sapp_emsc_onpaste, __sapp_html5_get_ask_leave_site: __sapp_html5_get_ask_leave_site, __saudio_emsc_pull: __saudio_emsc_pull, __sfetch_emsc_failed_buffer_too_small: __sfetch_emsc_failed_buffer_too_small, __sfetch_emsc_failed_http_status: __sfetch_emsc_failed_http_status, __sfetch_emsc_get_response: __sfetch_emsc_get_response, __sfetch_emsc_head_response: __sfetch_emsc_head_response, _bitshift64Lshr: _bitshift64Lshr, _bitshift64Shl: _bitshift64Shl, _free: _free, _i64Add: _i64Add, _i64Subtract: _i64Subtract, _llvm_round_f64: _llvm_round_f64, _main: _main, _malloc: _malloc, _memcpy: _memcpy, _memmove: _memmove, _memset: _memset, _round: _round, _sbrk: _sbrk, dynCall_i: dynCall_i, dynCall_idi: dynCall_idi, dynCall_ii: dynCall_ii, dynCall_iidiiii: dynCall_iidiiii, dynCall_iii: dynCall_iii, dynCall_iiii: dynCall_iiii, dynCall_iiiii: dynCall_iiiii, dynCall_iiiiii: dynCall_iiiiii, dynCall_v: dynCall_v, dynCall_vi: dynCall_vi, dynCall_vii: dynCall_vii, dynCall_viii: dynCall_viii, dynCall_viiii: dynCall_viiii, dynCall_viiiii: dynCall_viiiii, dynCall_viiiiii: dynCall_viiiiii, establishStackSpace: establishStackSpace, stackAlloc: stackAlloc, stackRestore: stackRestore, stackSave: stackSave };
 })
 // EMSCRIPTEN_END_ASM
 (asmGlobalArg, asmLibraryArg, buffer);
 
+var __GLOBAL__sub_I_bind_cpp = Module["__GLOBAL__sub_I_bind_cpp"] = asm["__GLOBAL__sub_I_bind_cpp"];
+var __GLOBAL__sub_I_main_cpp = Module["__GLOBAL__sub_I_main_cpp"] = asm["__GLOBAL__sub_I_main_cpp"];
 var __ZSt18uncaught_exceptionv = Module["__ZSt18uncaught_exceptionv"] = asm["__ZSt18uncaught_exceptionv"];
 var ___cxa_can_catch = Module["___cxa_can_catch"] = asm["___cxa_can_catch"];
 var ___cxa_demangle = Module["___cxa_demangle"] = asm["___cxa_demangle"];
@@ -68992,7 +68228,6 @@ var _memset = Module["_memset"] = asm["_memset"];
 var _round = Module["_round"] = asm["_round"];
 var _sbrk = Module["_sbrk"] = asm["_sbrk"];
 var establishStackSpace = Module["establishStackSpace"] = asm["establishStackSpace"];
-var globalCtors = Module["globalCtors"] = asm["globalCtors"];
 var stackAlloc = Module["stackAlloc"] = asm["stackAlloc"];
 var stackRestore = Module["stackRestore"] = asm["stackRestore"];
 var stackSave = Module["stackSave"] = asm["stackSave"];
@@ -69325,6 +68560,7 @@ run();
 
 
 // {{MODULE_ADDITIONS}}
+
 
 
 
