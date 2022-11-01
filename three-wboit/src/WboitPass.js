@@ -72,14 +72,20 @@ class WboitPass extends Pass {
         const gl = renderer.getContext();
         const currentTarget = renderer.getRenderTarget();
 
-        // const targetTypes = [ THREE.FloatType, THREE.HalfFloatType, THREE.UnsignedIntType, THREE.UnsignedByteType ]
-        const targetTypes = [ THREE.UnsignedByteType ]
+        const targetTypes = [ THREE.FloatType, THREE.HalfFloatType, THREE.UnsignedIntType, THREE.UnsignedByteType ];
 
         let targetType;
 
         for ( let i = 0; i < targetTypes.length; i ++ ) {
 
-            const testTarget = new THREE.WebGLRenderTarget( 1, 1, { type: targetTypes[ i ] } );
+            const testTarget = new THREE.WebGLRenderTarget( 16, 16, {
+                minFilter: THREE.NearestFilter,
+                magFilter: THREE.NearestFilter,
+                type: targetTypes[ i ],
+                format: THREE.RGBAFormat,
+                stencilBuffer: false,
+                depthBuffer: true,
+            } );
 
             renderer.setRenderTarget( testTarget );
 
