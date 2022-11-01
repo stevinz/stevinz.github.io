@@ -72,7 +72,8 @@ class WboitPass extends Pass {
         const gl = renderer.getContext();
         const currentTarget = renderer.getRenderTarget();
 
-        const targetTypes = [ THREE.FloatType, THREE.HalfFloatType, THREE.UnsignedIntType, THREE.UnsignedByteType ]
+        // const targetTypes = [ THREE.FloatType, THREE.HalfFloatType, THREE.UnsignedIntType, THREE.UnsignedByteType ]
+        const targetTypes = [ THREE.UnsignedByteType ]
 
         let targetType;
 
