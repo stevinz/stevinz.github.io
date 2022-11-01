@@ -62,7 +62,7 @@ class WboitPass extends Pass {
         this._depthWriteCache = new Map();
         this._visibilityCache = new Map();
 
-        // Render Target Type
+        // Find Best Render Target Type
 
         const size = renderer.getSize( new THREE.Vector2() );
         const pixelRatio = renderer.getPixelRatio();
@@ -70,15 +70,21 @@ class WboitPass extends Pass {
         const effectiveHeight = size.height * pixelRatio;
 
         const gl = renderer.getContext();
-        const currentTarget = renderer.getRenderTarget();
 
+        const oldTarget = renderer.getRenderTarget();
+        const oldClearAlpha = renderer.getClearAlpha();
+        renderer.getClearColor( this._oldClearColor );
+
+        const glTypes = [ gl.FLOAT, gl.FLOAT, gl.UNSIGNED_INT, gl.UNSIGNED_BYTE ];
         const targetTypes = [ THREE.FloatType, THREE.HalfFloatType, THREE.UnsignedIntType, THREE.UnsignedByteType ];
+        const targetBuffers = [ new Float32Array( 4 ), new Float32Array( 4 ), new Uint32Array( 4 ), new Uint8Array( 4 ) ];
+        const targetDivisor = [ 1, 1, 255, 255 ];
 
         let targetType;
 
         for ( let i = 0; i < targetTypes.length; i ++ ) {
 
-            const testTarget = new THREE.WebGLRenderTarget( 16, 16, {
+            const testTarget = new THREE.WebGLRenderTarget( 8, 8, {
                 minFilter: THREE.NearestFilter,
                 magFilter: THREE.NearestFilter,
                 type: targetTypes[ i ],
@@ -88,8 +94,18 @@ class WboitPass extends Pass {
             } );
 
             renderer.setRenderTarget( testTarget );
+            renderer.setClearColor( _clearColorOne, 1.0 );
+            renderer.clearColor();
 
-            if ( gl.checkFramebufferStatus( gl.FRAMEBUFFER ) === gl.FRAMEBUFFER_COMPLETE ) {
+            gl.readPixels( 0, 0, 1, 1, gl.RGBA, glTypes[ i ], targetBuffers[ i ] );
+            const rgba = Array.apply( [], targetBuffers[ i ] );
+            rgba[ 0 ] /= targetDivisor[ i ];
+            rgba[ 1 ] /= targetDivisor[ i ];
+            rgba[ 2 ] /= targetDivisor[ i ];
+            rgba[ 3 ] /= targetDivisor[ i ];
+
+            if ( gl.checkFramebufferStatus( gl.FRAMEBUFFER ) === gl.FRAMEBUFFER_COMPLETE &&
+                rgba[ 0 ] === 1 && rgba[ 1 ] === 1 && rgba[ 2 ] === 1 && rgba[ 3 ] === 1 ) {
                 targetType = targetTypes[ i ];
                 testTarget.dispose();
                 console.log( `Framebuffer Type: ${ i }` );
@@ -100,7 +116,8 @@ class WboitPass extends Pass {
 
         }
 
-        renderer.setRenderTarget( currentTarget );
+        renderer.setRenderTarget( oldTarget );
+        renderer.setClearColor( this._oldClearColor, oldClearAlpha );
 
         // Render Targets
 
