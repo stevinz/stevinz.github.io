@@ -28,6 +28,7 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 
 import { CopyShader } from 'three/addons/shaders/CopyShader.js';
 import { WboitCompositeShader } from './shaders/WboitCompositeShader.js';
+import { WboitTestShader } from './shaders/WboitTestShader.js';
 import { WboitStages } from './materials/MeshWboitMaterial.js';
 
 const _clearColorZero = new THREE.Color( 0.0, 0.0, 0.0 );
@@ -62,6 +63,37 @@ class WboitPass extends Pass {
         this._depthWriteCache = new Map();
         this._visibilityCache = new Map();
 
+        // Passes
+
+        this.blendPass = new ShaderPass( CopyShader );
+        this.blendPass.material.depthTest = false;
+        this.blendPass.material.depthWrite = false;
+        this.blendPass.material.blending = THREE.CustomBlending;
+        this.blendPass.material.blendEquation = THREE.AddEquation;
+        this.blendPass.material.blendSrc = THREE.SrcAlphaFactor;
+        this.blendPass.material.blendDst = THREE.OneMinusSrcAlphaFactor;
+
+        this.copyPass = new ShaderPass( CopyShader );
+        this.copyPass.material.depthTest = false;
+        this.copyPass.material.depthWrite = false;
+        this.copyPass.material.blending = THREE.CustomBlending;
+        this.copyPass.material.blendEquation = THREE.AddEquation;
+        this.copyPass.material.blendSrc = THREE.OneFactor;
+        this.copyPass.material.blendDst = THREE.ZeroFactor;
+
+        this.compositePass = new ShaderPass( WboitCompositeShader );
+        this.compositePass.material.transparent = true;
+        this.compositePass.material.blending = THREE.CustomBlending;
+        this.compositePass.material.blendEquation = THREE.AddEquation;
+        this.compositePass.material.blendSrc = THREE.OneMinusSrcAlphaFactor;
+        this.compositePass.material.blendDst = THREE.SrcAlphaFactor;
+
+        this.testPass = new ShaderPass( WboitTestShader );
+        this.testPass.material.blending = THREE.CustomBlending;
+        this.testPass.material.blendEquation = THREE.AddEquation;
+        this.testPass.material.blendSrc = THREE.OneFactor;
+        this.testPass.material.blendDst = THREE.ZeroFactor;
+
         // Find Best Render Target Type
 
         const size = renderer.getSize( new THREE.Vector2() );
@@ -75,8 +107,8 @@ class WboitPass extends Pass {
         const oldClearAlpha = renderer.getClearAlpha();
         renderer.getClearColor( this._oldClearColor );
 
-        const glTypes = [ gl.FLOAT, gl.FLOAT, gl.UNSIGNED_INT, gl.UNSIGNED_BYTE ];
         const targetTypes = [ THREE.FloatType, THREE.HalfFloatType, THREE.UnsignedIntType, THREE.UnsignedByteType ];
+        const targetGlTypes = [ gl.FLOAT, gl.HALF_FLOAT, gl.UNSIGNED_INT, gl.UNSIGNED_BYTE ];
         const targetBuffers = [ new Float32Array( 4 ), new Float32Array( 4 ), new Uint32Array( 4 ), new Uint8Array( 4 ) ];
         const targetDivisor = [ 1, 1, 255, 255 ];
 
@@ -93,11 +125,9 @@ class WboitPass extends Pass {
                 depthBuffer: true,
             } );
 
-            renderer.setRenderTarget( testTarget );
-            renderer.setClearColor( _clearColorOne, 1.0 );
-            renderer.clearColor();
+            this.testPass.render( renderer, testTarget );
 
-            gl.readPixels( 0, 0, 1, 1, gl.RGBA, glTypes[ i ], targetBuffers[ i ] );
+            gl.readPixels( 0, 0, 1, 1, gl.RGBA, targetGlTypes[ i ], targetBuffers[ i ] );
             const rgba = Array.apply( [], targetBuffers[ i ] );
             rgba[ 0 ] /= targetDivisor[ i ];
             rgba[ 1 ] /= targetDivisor[ i ];
@@ -139,41 +169,17 @@ class WboitPass extends Pass {
             depthBuffer: false,
         } );
 
-        // Passes
-
-        this.blendPass = new ShaderPass( CopyShader );
-        this.blendPass.material.depthTest = false;
-        this.blendPass.material.depthWrite = false;
-        this.blendPass.material.blending = THREE.CustomBlending;
-        this.blendPass.material.blendEquation = THREE.AddEquation;
-        this.blendPass.material.blendSrc = THREE.SrcAlphaFactor;
-        this.blendPass.material.blendDst = THREE.OneMinusSrcAlphaFactor;
-
-        this.copyPass = new ShaderPass( CopyShader );
-        this.copyPass.material.depthTest = false;
-        this.copyPass.material.depthWrite = false;
-        this.copyPass.material.blending = THREE.CustomBlending;
-        this.copyPass.material.blendEquation = THREE.AddEquation;
-        this.copyPass.material.blendSrc = THREE.OneFactor;
-        this.copyPass.material.blendDst = THREE.ZeroFactor;
-
-        this.compositePass = new ShaderPass( WboitCompositeShader );
-        this.compositePass.material.transparent = true;
-        this.compositePass.material.blending = THREE.CustomBlending;
-        this.compositePass.material.blendEquation = THREE.AddEquation;
-        this.compositePass.material.blendSrc = THREE.OneMinusSrcAlphaFactor;
-        this.compositePass.material.blendDst = THREE.SrcAlphaFactor;
-
     }
 
     dispose() {
 
-        this.baseTarget.dispose();
-        this.accumulationTarget.dispose();
-
         this.blendPass.dispose();
         this.copyPass.dispose();
         this.compositePass.dispose();
+        this.testPass.dispose();
+
+        this.baseTarget.dispose();
+        this.accumulationTarget.dispose();
 
     }
 
