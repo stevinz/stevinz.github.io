@@ -86,9 +86,9 @@ class WboitPass extends Pass {
 
         const testPass = new ShaderPass( FillShader );
         const testR = 1.0;
-        const testG = 0.0;
-        const testB = 0.0;
-        const testA = 0.5;
+        const testG = 1.0;
+        const testB = 1.0;
+        const testA = 0.0;
         testPass.material.uniforms[ 'color' ].value = new THREE.Color( testR, testG, testB );
         testPass.material.uniforms[ 'opacity' ].value = testA;
         testPass.material.blending = THREE.CustomBlending;
@@ -109,10 +109,10 @@ class WboitPass extends Pass {
         const oldClearAlpha = renderer.getClearAlpha();
         renderer.getClearColor( this._oldClearColor );
 
-        const targetTypes = [ THREE.FloatType, THREE.HalfFloatType, THREE.UnsignedIntType, THREE.UnsignedByteType ];
-        const targetGlTypes = [ gl.FLOAT, gl.HALF_FLOAT, gl.UNSIGNED_INT, gl.UNSIGNED_BYTE ];
-        const targetBuffers = [ new Float32Array( 4 ), new Uint16Array( 4 ), new Uint32Array( 4 ), new Uint8Array( 4 ) ];
-        const targetDivisor = [ 1, 1, 255, 255 ];
+        const targetTypes = [ THREE.FloatType, THREE.HalfFloatType, THREE.UnsignedByteType ];
+        const targetGlTypes = [ gl.FLOAT, gl.HALF_FLOAT, gl.UNSIGNED_BYTE ];
+        const targetBuffers = [ new Float32Array( 4 ), new Uint16Array( 4 ), new Uint8Array( 4 ) ];
+        const targetDivisor = [ 1, 15360, 255 ];
 
         let targetType;
 
@@ -133,11 +133,16 @@ class WboitPass extends Pass {
             testPass.render( renderer, testTarget );
 
             gl.readPixels( 0, 0, 1, 1, gl.RGBA, targetGlTypes[ i ], targetBuffers[ i ] );
+
+            console.log( targetBuffers[ i ] );
+
             const rgba = Array.apply( [], targetBuffers[ i ] );
             rgba[ 0 ] /= targetDivisor[ i ];
             rgba[ 1 ] /= targetDivisor[ i ];
             rgba[ 2 ] /= targetDivisor[ i ];
             rgba[ 3 ] /= targetDivisor[ i ];
+
+            console.log( rgba );
 
             function fuzzyCompare( a, b, epsilon = 0.01 ) { return Math.abs( a - b ) < epsilon; }
 
