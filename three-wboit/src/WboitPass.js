@@ -111,17 +111,13 @@ class WboitPass extends Pass {
 
         const targetTypes = [ THREE.FloatType, THREE.HalfFloatType, THREE.UnsignedIntType, THREE.UnsignedByteType ];
         const targetGlTypes = [ gl.FLOAT, gl.HALF_FLOAT, gl.UNSIGNED_INT, gl.UNSIGNED_BYTE ];
-        const targetBuffers = [ new Float32Array( 4 ), new Float32Array( 4 ), new Uint32Array( 4 ), new Uint8Array( 4 ) ];
+        const targetBuffers = [ new Float32Array( 4 ), new Uint16Array( 4 ), new Uint32Array( 4 ), new Uint8Array( 4 ) ];
         const targetDivisor = [ 1, 1, 255, 255 ];
-
-        console.log( gl.getExtension( 'EXT_color_buffer_float' ) );
-        console.log( `WebGL2: ${ renderer.capabilities.isWebGL2 }`);
 
         let targetType;
 
-        // see:
-        // https://stackoverflow.com/questions/40206965/how-common-is-support-for-webgl-float-texture-rendering
-        // https://stackoverflow.com/questions/70489767/why-cant-i-render-to-a-floating-point-texture-in-webgl
+        // gl.getExtension( 'EXT_color_buffer_float' ) lacking support, see:
+        // https://stackoverflow.com/questions/28827511/webgl-ios-render-to-floating-point-texture
 
         for ( let i = 0; i < targetTypes.length; i ++ ) {
 
@@ -155,6 +151,7 @@ class WboitPass extends Pass {
             testTarget.dispose();
 
             if ( complete ) {
+                console.log( `Type from array index: ${ i }`);
                 targetType = targetTypes[ i ];
                 break;
             }
