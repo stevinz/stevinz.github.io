@@ -6,11 +6,11 @@
     <title>2D to 3D Extrusion</title>
     <style>
       /* Canvas MUST NOT have any border or padding, or mouse coords will be wrong */
-      #canvas { 
+      #canvas {
         display: block;
         margin: 10px;
-        border: 0px none; 
-        background-color: black; 
+        border: 0px none;
+        background-color: black;
       }
 
       #wrapper {
@@ -24,23 +24,23 @@
         justify-content: center;
       }
 
-      #about { 
+      #about {
         display: block;
         margin: auto;
-        border: 0px none; 
+        border: 0px none;
         width:  660px;
         text-align: center;
         justify-content: center;
-        background-color: transparent; 
+        background-color: transparent;
       }
     </style>
   </head>
   <body>
-    
+
     <div class="emscripten" id="wrapper">
       <canvas width=640 height=480 class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
     </div>
-            
+
     <div class="emscripten" id="about">
       <br>
       <b>Instructions</b><br>
@@ -57,9 +57,9 @@
 
     <br>
     <div class="emscripten" id="about">
-      <a href="assets/blob.png"><img src="assets/blob.png" height=128 width=128></a>
-      <a href="assets/shapes.png"><img src="assets/shapes.png" height=128 width=128></a>
-      <a href="assets/craft.png"><img src="assets/craft.png" height=128 width=128></a>
+      <a href="assets/blob.png"><img draggable="true" src="assets/blob.png" height=128 width=128></a>
+      <a href="assets/shapes.png"><img draggable="true" src="assets/shapes.png" height=128 width=128></a>
+      <a href="assets/craft.png"><img draggable="true" src="assets/craft.png" height=128 width=128></a>
     </div>
 
     <script type='text/javascript'>
@@ -74,7 +74,7 @@
                   const newWidth = canvasWrapper.clientWidth;
                   const newHeight = canvasWrapper.clientHeight;
                   if ((width != newWidth - border_width) || (height != newHeight - border_width)) {
-                    width  = newWidth - border_width; 
+                    width  = newWidth - border_width;
                     height = newHeight - border_width;
                     canvas.width = width;
                     canvas.height = height;
@@ -90,7 +90,7 @@
             })()
         };
     </script>
-        
+
     <script>
 var ASSERTIONS = 0;
 // Copyright 2017 The Emscripten Authors.  All rights reserved.
@@ -231,7 +231,7 @@ function intArrayToString(array) {
           document.body.appendChild(script);
 
 </script>
-    
+
   </body>
 </html>
 
