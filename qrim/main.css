@@ -1,0 +1,64 @@
+
+.Background {
+    background-color: rgba(var(--triadic1), 0.25);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.Info {
+    position: absolute;
+    top: 1em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    color: rgb(var(--text));
+    z-index: 10000;
+}
+
+.Info a {
+    color: rgb(var(--icon));
+}
+
+.Contain {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    min-width: 80%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.Spacer {
+    pointer-events: none;
+    height: 30%;
+}
+
+.Row {
+    display: flex;
+}
+
+#Text {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.QRCode {
+    display: flex;
+    flex: auto;
+    padding: 2em;
+    justify-content: center;
+}
+
+.QRCode img {
+    max-width: 100%;
+    object-fit: contain;
+    margin: auto;
+}
