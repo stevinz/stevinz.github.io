@@ -7,11 +7,11 @@
 		<link rel='stylesheet' href='./main.css' type='text/css'>
 	</head>
 	<body>
-		<div class="Info">Qrim (QR Image Imaker) - <a hrtef='https://github.com/stevinz/qrim'>GitHub Repository</a></div>
+		<div class="Info">Qrim (QR Image Maker) - <a href='https://github.com/stevinz/qrim'>GitHub</a></div>
 		<div class="Background"></div>
 		<div class="Contain">
 			<div class="Spacer"></div>
-			<input id="Text" type="text" value="Enter Text Here! 🤪">
+			<input id="Text" type="text" placeholder="Enter UTF8 Text! 🤪" value="">
 			<div class="Row">
 				<span class="QRCode" id="Code1"></span>
 				<span class="QRCode" id="Code2"></span>
@@ -32,9 +32,9 @@
 			const code3 = document.getElementById('Code3');
 
 			// Init QRCodes
-			const qr1 = new QRCode(code1, { text: textBox.value });
-			const qr2 = new QRCode(code2, { text: textBox.value, style: QRCode.Styles.Blob, });
-			const qr3 = new QRCode(code3, { text: textBox.value, style: QRCode.Styles.Dots, });
+			const qr1 = new QRCode(code1, { text: 'temp' });
+			const qr2 = new QRCode(code2, { text: 'temp', style: QRCode.Styles.Blob, });
+			const qr3 = new QRCode(code3, { text: 'temp', style: QRCode.Styles.Dots, });
 
 			// Gui params
 			const params = {
@@ -48,7 +48,7 @@
 
 			// Gui (Gooey)
 			const gui = new Gooey();
-            const folder1 = gui.addFolder('Qrim Options');
+            const folder1 = gui.addFolder('Options');
 			folder1.addColor(params, 'colorDark').onChange(miniUpdate).onFinishChange(updateCodes);
 			folder1.addColor(params, 'colorLight').onChange(miniUpdate).onFinishChange(updateCodes);
             folder1.add(params, 'size', 64, 1024, 64, 0).onChange(miniUpdate).onFinishChange(updateCodes);
